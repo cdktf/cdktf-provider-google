@@ -4,7 +4,7 @@
 
 ### StorageBucketAcl <a name="StorageBucketAcl" id="@cdktf/provider-google.storageBucketAcl.StorageBucketAcl"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/storage_bucket_acl google_storage_bucket_acl}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/storage_bucket_acl google_storage_bucket_acl}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.storageBucketAcl.StorageBucketAcl.Initializer"></a>
 
@@ -42,7 +42,7 @@ storageBucketAcl.StorageBucketAcl(
 | <code><a href="#@cdktf/provider-google.storageBucketAcl.StorageBucketAcl.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.storageBucketAcl.StorageBucketAcl.Initializer.parameter.bucket">bucket</a></code> | <code>str</code> | The name of the bucket it applies to. |
 | <code><a href="#@cdktf/provider-google.storageBucketAcl.StorageBucketAcl.Initializer.parameter.defaultAcl">default_acl</a></code> | <code>str</code> | Configure this ACL to be the default ACL. |
-| <code><a href="#@cdktf/provider-google.storageBucketAcl.StorageBucketAcl.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/storage_bucket_acl#id StorageBucketAcl#id}. |
+| <code><a href="#@cdktf/provider-google.storageBucketAcl.StorageBucketAcl.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/storage_bucket_acl#id StorageBucketAcl#id}. |
 | <code><a href="#@cdktf/provider-google.storageBucketAcl.StorageBucketAcl.Initializer.parameter.predefinedAcl">predefined_acl</a></code> | <code>str</code> | The canned GCS ACL to apply. Must be set if role_entity is not. |
 | <code><a href="#@cdktf/provider-google.storageBucketAcl.StorageBucketAcl.Initializer.parameter.roleEntity">role_entity</a></code> | <code>typing.List[str]</code> | List of role/entity pairs in the form ROLE:entity. |
 
@@ -114,7 +114,7 @@ Must be unique amongst siblings in the same scope
 
 The name of the bucket it applies to.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/storage_bucket_acl#bucket StorageBucketAcl#bucket}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/storage_bucket_acl#bucket StorageBucketAcl#bucket}
 
 ---
 
@@ -124,7 +124,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Configure this ACL to be the default ACL.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/storage_bucket_acl#default_acl StorageBucketAcl#default_acl}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/storage_bucket_acl#default_acl StorageBucketAcl#default_acl}
 
 ---
 
@@ -132,7 +132,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/storage_bucket_acl#id StorageBucketAcl#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/storage_bucket_acl#id StorageBucketAcl#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -145,7 +145,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 The canned GCS ACL to apply. Must be set if role_entity is not.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/storage_bucket_acl#predefined_acl StorageBucketAcl#predefined_acl}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/storage_bucket_acl#predefined_acl StorageBucketAcl#predefined_acl}
 
 ---
 
@@ -157,7 +157,7 @@ List of role/entity pairs in the form ROLE:entity.
 
 See GCS Bucket ACL documentation  for more details. Must be set if predefined_acl is not.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/storage_bucket_acl#role_entity StorageBucketAcl#role_entity}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/storage_bucket_acl#role_entity StorageBucketAcl#role_entity}
 
 ---
 
@@ -658,7 +658,7 @@ The construct id used in the generated config for the StorageBucketAcl to import
 
 The id of the existing StorageBucketAcl that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/storage_bucket_acl#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/storage_bucket_acl#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -999,7 +999,7 @@ storageBucketAcl.StorageBucketAclConfig(
 | <code><a href="#@cdktf/provider-google.storageBucketAcl.StorageBucketAclConfig.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.storageBucketAcl.StorageBucketAclConfig.property.bucket">bucket</a></code> | <code>str</code> | The name of the bucket it applies to. |
 | <code><a href="#@cdktf/provider-google.storageBucketAcl.StorageBucketAclConfig.property.defaultAcl">default_acl</a></code> | <code>str</code> | Configure this ACL to be the default ACL. |
-| <code><a href="#@cdktf/provider-google.storageBucketAcl.StorageBucketAclConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/storage_bucket_acl#id StorageBucketAcl#id}. |
+| <code><a href="#@cdktf/provider-google.storageBucketAcl.StorageBucketAclConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/storage_bucket_acl#id StorageBucketAcl#id}. |
 | <code><a href="#@cdktf/provider-google.storageBucketAcl.StorageBucketAclConfig.property.predefinedAcl">predefined_acl</a></code> | <code>str</code> | The canned GCS ACL to apply. Must be set if role_entity is not. |
 | <code><a href="#@cdktf/provider-google.storageBucketAcl.StorageBucketAclConfig.property.roleEntity">role_entity</a></code> | <code>typing.List[str]</code> | List of role/entity pairs in the form ROLE:entity. |
 
@@ -1085,7 +1085,7 @@ bucket: str
 
 The name of the bucket it applies to.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/storage_bucket_acl#bucket StorageBucketAcl#bucket}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/storage_bucket_acl#bucket StorageBucketAcl#bucket}
 
 ---
 
@@ -1099,7 +1099,7 @@ default_acl: str
 
 Configure this ACL to be the default ACL.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/storage_bucket_acl#default_acl StorageBucketAcl#default_acl}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/storage_bucket_acl#default_acl StorageBucketAcl#default_acl}
 
 ---
 
@@ -1111,7 +1111,7 @@ id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/storage_bucket_acl#id StorageBucketAcl#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/storage_bucket_acl#id StorageBucketAcl#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1128,7 +1128,7 @@ predefined_acl: str
 
 The canned GCS ACL to apply. Must be set if role_entity is not.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/storage_bucket_acl#predefined_acl StorageBucketAcl#predefined_acl}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/storage_bucket_acl#predefined_acl StorageBucketAcl#predefined_acl}
 
 ---
 
@@ -1144,7 +1144,7 @@ List of role/entity pairs in the form ROLE:entity.
 
 See GCS Bucket ACL documentation  for more details. Must be set if predefined_acl is not.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/storage_bucket_acl#role_entity StorageBucketAcl#role_entity}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/storage_bucket_acl#role_entity StorageBucketAcl#role_entity}
 
 ---
 

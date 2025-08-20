@@ -4,7 +4,7 @@
 
 ### IamWorkforcePoolIamMember <a name="IamWorkforcePoolIamMember" id="@cdktf/provider-google.iamWorkforcePoolIamMember.IamWorkforcePoolIamMember"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/iam_workforce_pool_iam_member google_iam_workforce_pool_iam_member}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/iam_workforce_pool_iam_member google_iam_workforce_pool_iam_member}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.iamWorkforcePoolIamMember.IamWorkforcePoolIamMember.Initializer"></a>
 
@@ -501,7 +501,7 @@ The construct id used in the generated config for the IamWorkforcePoolIamMember 
 
 The id of the existing IamWorkforcePoolIamMember that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/iam_workforce_pool_iam_member#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/iam_workforce_pool_iam_member#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -853,9 +853,9 @@ const iamWorkforcePoolIamMemberCondition: iamWorkforcePoolIamMember.IamWorkforce
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.iamWorkforcePoolIamMember.IamWorkforcePoolIamMemberCondition.property.expression">expression</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/iam_workforce_pool_iam_member#expression IamWorkforcePoolIamMember#expression}. |
-| <code><a href="#@cdktf/provider-google.iamWorkforcePoolIamMember.IamWorkforcePoolIamMemberCondition.property.title">title</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/iam_workforce_pool_iam_member#title IamWorkforcePoolIamMember#title}. |
-| <code><a href="#@cdktf/provider-google.iamWorkforcePoolIamMember.IamWorkforcePoolIamMemberCondition.property.description">description</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/iam_workforce_pool_iam_member#description IamWorkforcePoolIamMember#description}. |
+| <code><a href="#@cdktf/provider-google.iamWorkforcePoolIamMember.IamWorkforcePoolIamMemberCondition.property.expression">expression</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/iam_workforce_pool_iam_member#expression IamWorkforcePoolIamMember#expression}. |
+| <code><a href="#@cdktf/provider-google.iamWorkforcePoolIamMember.IamWorkforcePoolIamMemberCondition.property.title">title</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/iam_workforce_pool_iam_member#title IamWorkforcePoolIamMember#title}. |
+| <code><a href="#@cdktf/provider-google.iamWorkforcePoolIamMember.IamWorkforcePoolIamMemberCondition.property.description">description</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/iam_workforce_pool_iam_member#description IamWorkforcePoolIamMember#description}. |
 
 ---
 
@@ -867,7 +867,7 @@ public readonly expression: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/iam_workforce_pool_iam_member#expression IamWorkforcePoolIamMember#expression}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/iam_workforce_pool_iam_member#expression IamWorkforcePoolIamMember#expression}.
 
 ---
 
@@ -879,7 +879,7 @@ public readonly title: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/iam_workforce_pool_iam_member#title IamWorkforcePoolIamMember#title}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/iam_workforce_pool_iam_member#title IamWorkforcePoolIamMember#title}.
 
 ---
 
@@ -891,7 +891,7 @@ public readonly description: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/iam_workforce_pool_iam_member#description IamWorkforcePoolIamMember#description}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/iam_workforce_pool_iam_member#description IamWorkforcePoolIamMember#description}.
 
 ---
 
@@ -916,12 +916,12 @@ const iamWorkforcePoolIamMemberConfig: iamWorkforcePoolIamMember.IamWorkforcePoo
 | <code><a href="#@cdktf/provider-google.iamWorkforcePoolIamMember.IamWorkforcePoolIamMemberConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.iamWorkforcePoolIamMember.IamWorkforcePoolIamMemberConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.iamWorkforcePoolIamMember.IamWorkforcePoolIamMemberConfig.property.provisioners">provisioners</a></code> | <code>cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.iamWorkforcePoolIamMember.IamWorkforcePoolIamMemberConfig.property.member">member</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/iam_workforce_pool_iam_member#member IamWorkforcePoolIamMember#member}. |
-| <code><a href="#@cdktf/provider-google.iamWorkforcePoolIamMember.IamWorkforcePoolIamMemberConfig.property.role">role</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/iam_workforce_pool_iam_member#role IamWorkforcePoolIamMember#role}. |
-| <code><a href="#@cdktf/provider-google.iamWorkforcePoolIamMember.IamWorkforcePoolIamMemberConfig.property.workforcePoolId">workforcePoolId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/iam_workforce_pool_iam_member#workforce_pool_id IamWorkforcePoolIamMember#workforce_pool_id}. |
+| <code><a href="#@cdktf/provider-google.iamWorkforcePoolIamMember.IamWorkforcePoolIamMemberConfig.property.member">member</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/iam_workforce_pool_iam_member#member IamWorkforcePoolIamMember#member}. |
+| <code><a href="#@cdktf/provider-google.iamWorkforcePoolIamMember.IamWorkforcePoolIamMemberConfig.property.role">role</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/iam_workforce_pool_iam_member#role IamWorkforcePoolIamMember#role}. |
+| <code><a href="#@cdktf/provider-google.iamWorkforcePoolIamMember.IamWorkforcePoolIamMemberConfig.property.workforcePoolId">workforcePoolId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/iam_workforce_pool_iam_member#workforce_pool_id IamWorkforcePoolIamMember#workforce_pool_id}. |
 | <code><a href="#@cdktf/provider-google.iamWorkforcePoolIamMember.IamWorkforcePoolIamMemberConfig.property.condition">condition</a></code> | <code><a href="#@cdktf/provider-google.iamWorkforcePoolIamMember.IamWorkforcePoolIamMemberCondition">IamWorkforcePoolIamMemberCondition</a></code> | condition block. |
-| <code><a href="#@cdktf/provider-google.iamWorkforcePoolIamMember.IamWorkforcePoolIamMemberConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/iam_workforce_pool_iam_member#id IamWorkforcePoolIamMember#id}. |
-| <code><a href="#@cdktf/provider-google.iamWorkforcePoolIamMember.IamWorkforcePoolIamMemberConfig.property.location">location</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/iam_workforce_pool_iam_member#location IamWorkforcePoolIamMember#location}. |
+| <code><a href="#@cdktf/provider-google.iamWorkforcePoolIamMember.IamWorkforcePoolIamMemberConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/iam_workforce_pool_iam_member#id IamWorkforcePoolIamMember#id}. |
+| <code><a href="#@cdktf/provider-google.iamWorkforcePoolIamMember.IamWorkforcePoolIamMemberConfig.property.location">location</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/iam_workforce_pool_iam_member#location IamWorkforcePoolIamMember#location}. |
 
 ---
 
@@ -1003,7 +1003,7 @@ public readonly member: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/iam_workforce_pool_iam_member#member IamWorkforcePoolIamMember#member}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/iam_workforce_pool_iam_member#member IamWorkforcePoolIamMember#member}.
 
 ---
 
@@ -1015,7 +1015,7 @@ public readonly role: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/iam_workforce_pool_iam_member#role IamWorkforcePoolIamMember#role}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/iam_workforce_pool_iam_member#role IamWorkforcePoolIamMember#role}.
 
 ---
 
@@ -1027,7 +1027,7 @@ public readonly workforcePoolId: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/iam_workforce_pool_iam_member#workforce_pool_id IamWorkforcePoolIamMember#workforce_pool_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/iam_workforce_pool_iam_member#workforce_pool_id IamWorkforcePoolIamMember#workforce_pool_id}.
 
 ---
 
@@ -1041,7 +1041,7 @@ public readonly condition: IamWorkforcePoolIamMemberCondition;
 
 condition block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/iam_workforce_pool_iam_member#condition IamWorkforcePoolIamMember#condition}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/iam_workforce_pool_iam_member#condition IamWorkforcePoolIamMember#condition}
 
 ---
 
@@ -1053,7 +1053,7 @@ public readonly id: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/iam_workforce_pool_iam_member#id IamWorkforcePoolIamMember#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/iam_workforce_pool_iam_member#id IamWorkforcePoolIamMember#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1068,7 +1068,7 @@ public readonly location: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/iam_workforce_pool_iam_member#location IamWorkforcePoolIamMember#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/iam_workforce_pool_iam_member#location IamWorkforcePoolIamMember#location}.
 
 ---
 
