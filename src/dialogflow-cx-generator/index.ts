@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/dialogflow_cx_generator
+// https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/dialogflow_cx_generator
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,11 +15,11 @@ export interface DialogflowCxGeneratorConfig extends cdktf.TerraformMetaArgument
   /**
   * The human-readable name of the generator, unique within the agent.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/dialogflow_cx_generator#display_name DialogflowCxGenerator#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/dialogflow_cx_generator#display_name DialogflowCxGenerator#display_name}
   */
   readonly displayName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/dialogflow_cx_generator#id DialogflowCxGenerator#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/dialogflow_cx_generator#id DialogflowCxGenerator#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -30,44 +30,44 @@ export interface DialogflowCxGeneratorConfig extends cdktf.TerraformMetaArgument
   * * Generator.prompt_text.text
   * If not specified, the agent's default language is used.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/dialogflow_cx_generator#language_code DialogflowCxGenerator#language_code}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/dialogflow_cx_generator#language_code DialogflowCxGenerator#language_code}
   */
   readonly languageCode?: string;
   /**
   * The agent to create a Generator for.
   * Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/dialogflow_cx_generator#parent DialogflowCxGenerator#parent}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/dialogflow_cx_generator#parent DialogflowCxGenerator#parent}
   */
   readonly parent?: string;
   /**
   * llm_model_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/dialogflow_cx_generator#llm_model_settings DialogflowCxGenerator#llm_model_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/dialogflow_cx_generator#llm_model_settings DialogflowCxGenerator#llm_model_settings}
   */
   readonly llmModelSettings?: DialogflowCxGeneratorLlmModelSettings;
   /**
   * model_parameter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/dialogflow_cx_generator#model_parameter DialogflowCxGenerator#model_parameter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/dialogflow_cx_generator#model_parameter DialogflowCxGenerator#model_parameter}
   */
   readonly modelParameter?: DialogflowCxGeneratorModelParameter;
   /**
   * placeholders block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/dialogflow_cx_generator#placeholders DialogflowCxGenerator#placeholders}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/dialogflow_cx_generator#placeholders DialogflowCxGenerator#placeholders}
   */
   readonly placeholders?: DialogflowCxGeneratorPlaceholders[] | cdktf.IResolvable;
   /**
   * prompt_text block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/dialogflow_cx_generator#prompt_text DialogflowCxGenerator#prompt_text}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/dialogflow_cx_generator#prompt_text DialogflowCxGenerator#prompt_text}
   */
   readonly promptText: DialogflowCxGeneratorPromptText;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/dialogflow_cx_generator#timeouts DialogflowCxGenerator#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/dialogflow_cx_generator#timeouts DialogflowCxGenerator#timeouts}
   */
   readonly timeouts?: DialogflowCxGeneratorTimeouts;
 }
@@ -75,13 +75,13 @@ export interface DialogflowCxGeneratorLlmModelSettings {
   /**
   * The selected LLM model.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/dialogflow_cx_generator#model DialogflowCxGenerator#model}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/dialogflow_cx_generator#model DialogflowCxGenerator#model}
   */
   readonly model?: string;
   /**
   * The custom prompt to use.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/dialogflow_cx_generator#prompt_text DialogflowCxGenerator#prompt_text}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/dialogflow_cx_generator#prompt_text DialogflowCxGenerator#prompt_text}
   */
   readonly promptText?: string;
 }
@@ -196,21 +196,21 @@ export interface DialogflowCxGeneratorModelParameter {
   /**
   * The maximum number of tokens to generate.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/dialogflow_cx_generator#max_decode_steps DialogflowCxGenerator#max_decode_steps}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/dialogflow_cx_generator#max_decode_steps DialogflowCxGenerator#max_decode_steps}
   */
   readonly maxDecodeSteps?: number;
   /**
   * The temperature used for sampling. Temperature sampling occurs after both topP and topK have been applied.
   * Valid range: [0.0, 1.0] Low temperature = less random. High temperature = more random.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/dialogflow_cx_generator#temperature DialogflowCxGenerator#temperature}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/dialogflow_cx_generator#temperature DialogflowCxGenerator#temperature}
   */
   readonly temperature?: number;
   /**
   * If set, the sampling process in each step is limited to the topK tokens with highest probabilities.
   * Valid range: [1, 40] or 1000+. Small topK = less random. Large topK = more random.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/dialogflow_cx_generator#top_k DialogflowCxGenerator#top_k}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/dialogflow_cx_generator#top_k DialogflowCxGenerator#top_k}
   */
   readonly topK?: number;
   /**
@@ -218,7 +218,7 @@ export interface DialogflowCxGeneratorModelParameter {
   * If both topP and topK are set, topP will be used for further refining candidates selected with topK.
   * Valid range: (0.0, 1.0]. Small topP = less random. Large topP = more random.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/dialogflow_cx_generator#top_p DialogflowCxGenerator#top_p}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/dialogflow_cx_generator#top_p DialogflowCxGenerator#top_p}
   */
   readonly topP?: number;
 }
@@ -391,7 +391,7 @@ export interface DialogflowCxGeneratorPlaceholders {
   /**
   * Unique ID used to map custom placeholder to parameters in fulfillment.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/dialogflow_cx_generator#id DialogflowCxGenerator#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/dialogflow_cx_generator#id DialogflowCxGenerator#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -400,7 +400,7 @@ export interface DialogflowCxGeneratorPlaceholders {
   /**
   * Custom placeholder value in the prompt text.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/dialogflow_cx_generator#name DialogflowCxGenerator#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/dialogflow_cx_generator#name DialogflowCxGenerator#name}
   */
   readonly name?: string;
 }
@@ -547,7 +547,7 @@ export interface DialogflowCxGeneratorPromptText {
   /**
   * Text input which can be used for prompt or banned phrases.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/dialogflow_cx_generator#text DialogflowCxGenerator#text}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/dialogflow_cx_generator#text DialogflowCxGenerator#text}
   */
   readonly text?: string;
 }
@@ -631,15 +631,15 @@ export class DialogflowCxGeneratorPromptTextOutputReference extends cdktf.Comple
 }
 export interface DialogflowCxGeneratorTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/dialogflow_cx_generator#create DialogflowCxGenerator#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/dialogflow_cx_generator#create DialogflowCxGenerator#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/dialogflow_cx_generator#delete DialogflowCxGenerator#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/dialogflow_cx_generator#delete DialogflowCxGenerator#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/dialogflow_cx_generator#update DialogflowCxGenerator#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/dialogflow_cx_generator#update DialogflowCxGenerator#update}
   */
   readonly update?: string;
 }
@@ -791,7 +791,7 @@ export class DialogflowCxGeneratorTimeoutsOutputReference extends cdktf.ComplexO
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/dialogflow_cx_generator google_dialogflow_cx_generator}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/dialogflow_cx_generator google_dialogflow_cx_generator}
 */
 export class DialogflowCxGenerator extends cdktf.TerraformResource {
 
@@ -807,7 +807,7 @@ export class DialogflowCxGenerator extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a DialogflowCxGenerator resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DialogflowCxGenerator to import
-  * @param importFromId The id of the existing DialogflowCxGenerator that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/dialogflow_cx_generator#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DialogflowCxGenerator that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/dialogflow_cx_generator#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DialogflowCxGenerator to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -819,7 +819,7 @@ export class DialogflowCxGenerator extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/dialogflow_cx_generator google_dialogflow_cx_generator} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/dialogflow_cx_generator google_dialogflow_cx_generator} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -830,7 +830,7 @@ export class DialogflowCxGenerator extends cdktf.TerraformResource {
       terraformResourceType: 'google_dialogflow_cx_generator',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.48.0',
+        providerVersion: '6.49.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,

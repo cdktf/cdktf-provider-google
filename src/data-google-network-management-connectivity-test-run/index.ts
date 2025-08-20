@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/data-sources/network_management_connectivity_test_run
+// https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/data-sources/network_management_connectivity_test_run
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,7 +13,7 @@ import * as cdktf from 'cdktf';
 
 export interface DataGoogleNetworkManagementConnectivityTestRunConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/data-sources/network_management_connectivity_test_run#id DataGoogleNetworkManagementConnectivityTestRun#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/data-sources/network_management_connectivity_test_run#id DataGoogleNetworkManagementConnectivityTestRun#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -22,11 +22,11 @@ export interface DataGoogleNetworkManagementConnectivityTestRunConfig extends cd
   /**
   * Unique name for the connectivity test.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/data-sources/network_management_connectivity_test_run#name DataGoogleNetworkManagementConnectivityTestRun#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/data-sources/network_management_connectivity_test_run#name DataGoogleNetworkManagementConnectivityTestRun#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/data-sources/network_management_connectivity_test_run#project DataGoogleNetworkManagementConnectivityTestRun#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/data-sources/network_management_connectivity_test_run#project DataGoogleNetworkManagementConnectivityTestRun#project}
   */
   readonly project?: string;
 }
@@ -405,7 +405,7 @@ export class DataGoogleNetworkManagementConnectivityTestRunReachabilityDetailsLi
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/data-sources/network_management_connectivity_test_run google_network_management_connectivity_test_run}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/data-sources/network_management_connectivity_test_run google_network_management_connectivity_test_run}
 */
 export class DataGoogleNetworkManagementConnectivityTestRun extends cdktf.TerraformDataSource {
 
@@ -421,7 +421,7 @@ export class DataGoogleNetworkManagementConnectivityTestRun extends cdktf.Terraf
   * Generates CDKTF code for importing a DataGoogleNetworkManagementConnectivityTestRun resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DataGoogleNetworkManagementConnectivityTestRun to import
-  * @param importFromId The id of the existing DataGoogleNetworkManagementConnectivityTestRun that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/data-sources/network_management_connectivity_test_run#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DataGoogleNetworkManagementConnectivityTestRun that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/data-sources/network_management_connectivity_test_run#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DataGoogleNetworkManagementConnectivityTestRun to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -433,7 +433,7 @@ export class DataGoogleNetworkManagementConnectivityTestRun extends cdktf.Terraf
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/data-sources/network_management_connectivity_test_run google_network_management_connectivity_test_run} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/data-sources/network_management_connectivity_test_run google_network_management_connectivity_test_run} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -444,7 +444,7 @@ export class DataGoogleNetworkManagementConnectivityTestRun extends cdktf.Terraf
       terraformResourceType: 'google_network_management_connectivity_test_run',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.48.0',
+        providerVersion: '6.49.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,

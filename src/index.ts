@@ -523,6 +523,7 @@ export * as developerConnectConnection from './developer-connect-connection';
 export * as developerConnectGitRepositoryLink from './developer-connect-git-repository-link';
 export * as developerConnectInsightsConfig from './developer-connect-insights-config';
 export * as dialogflowAgent from './dialogflow-agent';
+export * as dialogflowConversationProfile from './dialogflow-conversation-profile';
 export * as dialogflowCxAgent from './dialogflow-cx-agent';
 export * as dialogflowCxEntityType from './dialogflow-cx-entity-type';
 export * as dialogflowCxEnvironment from './dialogflow-cx-environment';
@@ -1121,6 +1122,8 @@ export * as dataGoogleArtifactRegistryPackage from './data-google-artifact-regis
 export * as dataGoogleArtifactRegistryRepositories from './data-google-artifact-registry-repositories';
 export * as dataGoogleArtifactRegistryRepository from './data-google-artifact-registry-repository';
 export * as dataGoogleArtifactRegistryRepositoryIamPolicy from './data-google-artifact-registry-repository-iam-policy';
+export * as dataGoogleArtifactRegistryTag from './data-google-artifact-registry-tag';
+export * as dataGoogleArtifactRegistryTags from './data-google-artifact-registry-tags';
 export * as dataGoogleArtifactRegistryVersion from './data-google-artifact-registry-version';
 export * as dataGoogleBackupDrBackup from './data-google-backup-dr-backup';
 export * as dataGoogleBackupDrBackupPlan from './data-google-backup-dr-backup-plan';
