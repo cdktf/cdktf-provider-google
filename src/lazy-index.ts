@@ -523,6 +523,7 @@ Object.defineProperty(exports, 'developerConnectConnection', { get: function () 
 Object.defineProperty(exports, 'developerConnectGitRepositoryLink', { get: function () { return require('./developer-connect-git-repository-link'); } });
 Object.defineProperty(exports, 'developerConnectInsightsConfig', { get: function () { return require('./developer-connect-insights-config'); } });
 Object.defineProperty(exports, 'dialogflowAgent', { get: function () { return require('./dialogflow-agent'); } });
+Object.defineProperty(exports, 'dialogflowConversationProfile', { get: function () { return require('./dialogflow-conversation-profile'); } });
 Object.defineProperty(exports, 'dialogflowCxAgent', { get: function () { return require('./dialogflow-cx-agent'); } });
 Object.defineProperty(exports, 'dialogflowCxEntityType', { get: function () { return require('./dialogflow-cx-entity-type'); } });
 Object.defineProperty(exports, 'dialogflowCxEnvironment', { get: function () { return require('./dialogflow-cx-environment'); } });
@@ -1121,6 +1122,8 @@ Object.defineProperty(exports, 'dataGoogleArtifactRegistryPackage', { get: funct
 Object.defineProperty(exports, 'dataGoogleArtifactRegistryRepositories', { get: function () { return require('./data-google-artifact-registry-repositories'); } });
 Object.defineProperty(exports, 'dataGoogleArtifactRegistryRepository', { get: function () { return require('./data-google-artifact-registry-repository'); } });
 Object.defineProperty(exports, 'dataGoogleArtifactRegistryRepositoryIamPolicy', { get: function () { return require('./data-google-artifact-registry-repository-iam-policy'); } });
+Object.defineProperty(exports, 'dataGoogleArtifactRegistryTag', { get: function () { return require('./data-google-artifact-registry-tag'); } });
+Object.defineProperty(exports, 'dataGoogleArtifactRegistryTags', { get: function () { return require('./data-google-artifact-registry-tags'); } });
 Object.defineProperty(exports, 'dataGoogleArtifactRegistryVersion', { get: function () { return require('./data-google-artifact-registry-version'); } });
 Object.defineProperty(exports, 'dataGoogleBackupDrBackup', { get: function () { return require('./data-google-backup-dr-backup'); } });
 Object.defineProperty(exports, 'dataGoogleBackupDrBackupPlan', { get: function () { return require('./data-google-backup-dr-backup-plan'); } });

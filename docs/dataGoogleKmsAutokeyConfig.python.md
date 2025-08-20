@@ -4,7 +4,7 @@
 
 ### DataGoogleKmsAutokeyConfig <a name="DataGoogleKmsAutokeyConfig" id="@cdktf/provider-google.dataGoogleKmsAutokeyConfig.DataGoogleKmsAutokeyConfig"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/data-sources/kms_autokey_config google_kms_autokey_config}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/data-sources/kms_autokey_config google_kms_autokey_config}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleKmsAutokeyConfig.DataGoogleKmsAutokeyConfig.Initializer"></a>
 
@@ -38,7 +38,7 @@ dataGoogleKmsAutokeyConfig.DataGoogleKmsAutokeyConfig(
 | <code><a href="#@cdktf/provider-google.dataGoogleKmsAutokeyConfig.DataGoogleKmsAutokeyConfig.Initializer.parameter.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleKmsAutokeyConfig.DataGoogleKmsAutokeyConfig.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleKmsAutokeyConfig.DataGoogleKmsAutokeyConfig.Initializer.parameter.folder">folder</a></code> | <code>str</code> | The folder for which to retrieve config. |
-| <code><a href="#@cdktf/provider-google.dataGoogleKmsAutokeyConfig.DataGoogleKmsAutokeyConfig.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/data-sources/kms_autokey_config#id DataGoogleKmsAutokeyConfig#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleKmsAutokeyConfig.DataGoogleKmsAutokeyConfig.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/data-sources/kms_autokey_config#id DataGoogleKmsAutokeyConfig#id}. |
 
 ---
 
@@ -108,7 +108,7 @@ Must be unique amongst siblings in the same scope
 
 The folder for which to retrieve config.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/data-sources/kms_autokey_config#folder DataGoogleKmsAutokeyConfig#folder}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/data-sources/kms_autokey_config#folder DataGoogleKmsAutokeyConfig#folder}
 
 ---
 
@@ -116,7 +116,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/data-sources/kms_autokey_config#id DataGoogleKmsAutokeyConfig#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/data-sources/kms_autokey_config#id DataGoogleKmsAutokeyConfig#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -485,7 +485,7 @@ The construct id used in the generated config for the DataGoogleKmsAutokeyConfig
 
 The id of the existing DataGoogleKmsAutokeyConfig that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/data-sources/kms_autokey_config#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/data-sources/kms_autokey_config#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -756,7 +756,7 @@ dataGoogleKmsAutokeyConfig.DataGoogleKmsAutokeyConfigConfig(
 | <code><a href="#@cdktf/provider-google.dataGoogleKmsAutokeyConfig.DataGoogleKmsAutokeyConfigConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleKmsAutokeyConfig.DataGoogleKmsAutokeyConfigConfig.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleKmsAutokeyConfig.DataGoogleKmsAutokeyConfigConfig.property.folder">folder</a></code> | <code>str</code> | The folder for which to retrieve config. |
-| <code><a href="#@cdktf/provider-google.dataGoogleKmsAutokeyConfig.DataGoogleKmsAutokeyConfigConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/data-sources/kms_autokey_config#id DataGoogleKmsAutokeyConfig#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleKmsAutokeyConfig.DataGoogleKmsAutokeyConfigConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/data-sources/kms_autokey_config#id DataGoogleKmsAutokeyConfig#id}. |
 
 ---
 
@@ -840,7 +840,7 @@ folder: str
 
 The folder for which to retrieve config.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/data-sources/kms_autokey_config#folder DataGoogleKmsAutokeyConfig#folder}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/data-sources/kms_autokey_config#folder DataGoogleKmsAutokeyConfig#folder}
 
 ---
 
@@ -852,7 +852,7 @@ id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/data-sources/kms_autokey_config#id DataGoogleKmsAutokeyConfig#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/data-sources/kms_autokey_config#id DataGoogleKmsAutokeyConfig#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.

@@ -4,7 +4,7 @@
 
 ### LoggingLogScope <a name="LoggingLogScope" id="@cdktf/provider-google.loggingLogScope.LoggingLogScope"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/logging_log_scope google_logging_log_scope}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/logging_log_scope google_logging_log_scope}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.loggingLogScope.LoggingLogScope.Initializer"></a>
 
@@ -45,7 +45,7 @@ loggingLogScope.LoggingLogScope(
 | <code><a href="#@cdktf/provider-google.loggingLogScope.LoggingLogScope.Initializer.parameter.name">name</a></code> | <code>str</code> | The resource name of the log scope. For example: \'projects/my-project/locations/global/logScopes/my-log-scope\'. |
 | <code><a href="#@cdktf/provider-google.loggingLogScope.LoggingLogScope.Initializer.parameter.resourceNames">resource_names</a></code> | <code>typing.List[str]</code> | Names of one or more parent resources : *  \'projects/[PROJECT_ID]\' May alternatively be one or more views : * \'projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]\' A log scope can include a maximum of 50 projects and a maximum of 100 resources in total. |
 | <code><a href="#@cdktf/provider-google.loggingLogScope.LoggingLogScope.Initializer.parameter.description">description</a></code> | <code>str</code> | Describes this log scopes. |
-| <code><a href="#@cdktf/provider-google.loggingLogScope.LoggingLogScope.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/logging_log_scope#id LoggingLogScope#id}. |
+| <code><a href="#@cdktf/provider-google.loggingLogScope.LoggingLogScope.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/logging_log_scope#id LoggingLogScope#id}. |
 | <code><a href="#@cdktf/provider-google.loggingLogScope.LoggingLogScope.Initializer.parameter.location">location</a></code> | <code>str</code> | The location of the resource. The only supported location is global so far. |
 | <code><a href="#@cdktf/provider-google.loggingLogScope.LoggingLogScope.Initializer.parameter.parent">parent</a></code> | <code>str</code> | The parent of the resource. |
 | <code><a href="#@cdktf/provider-google.loggingLogScope.LoggingLogScope.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-google.loggingLogScope.LoggingLogScopeTimeouts">LoggingLogScopeTimeouts</a></code> | timeouts block. |
@@ -118,7 +118,7 @@ Must be unique amongst siblings in the same scope
 
 The resource name of the log scope. For example: \'projects/my-project/locations/global/logScopes/my-log-scope\'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/logging_log_scope#name LoggingLogScope#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/logging_log_scope#name LoggingLogScope#name}
 
 ---
 
@@ -128,7 +128,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Names of one or more parent resources : *  \'projects/[PROJECT_ID]\' May alternatively be one or more views : * \'projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]\' A log scope can include a maximum of 50 projects and a maximum of 100 resources in total.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/logging_log_scope#resource_names LoggingLogScope#resource_names}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/logging_log_scope#resource_names LoggingLogScope#resource_names}
 
 ---
 
@@ -138,7 +138,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Describes this log scopes.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/logging_log_scope#description LoggingLogScope#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/logging_log_scope#description LoggingLogScope#description}
 
 ---
 
@@ -146,7 +146,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/logging_log_scope#id LoggingLogScope#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/logging_log_scope#id LoggingLogScope#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -159,7 +159,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 The location of the resource. The only supported location is global so far.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/logging_log_scope#location LoggingLogScope#location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/logging_log_scope#location LoggingLogScope#location}
 
 ---
 
@@ -169,7 +169,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 The parent of the resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/logging_log_scope#parent LoggingLogScope#parent}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/logging_log_scope#parent LoggingLogScope#parent}
 
 ---
 
@@ -179,7 +179,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/logging_log_scope#timeouts LoggingLogScope#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/logging_log_scope#timeouts LoggingLogScope#timeouts}
 
 ---
 
@@ -558,7 +558,7 @@ def put_timeouts(
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/logging_log_scope#create LoggingLogScope#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/logging_log_scope#create LoggingLogScope#create}.
 
 ---
 
@@ -566,7 +566,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/logging_log_scope#delete LoggingLogScope#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/logging_log_scope#delete LoggingLogScope#delete}.
 
 ---
 
@@ -574,7 +574,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/logging_log_scope#update LoggingLogScope#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/logging_log_scope#update LoggingLogScope#update}.
 
 ---
 
@@ -722,7 +722,7 @@ The construct id used in the generated config for the LoggingLogScope to import.
 
 The id of the existing LoggingLogScope that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/logging_log_scope#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/logging_log_scope#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -1132,7 +1132,7 @@ loggingLogScope.LoggingLogScopeConfig(
 | <code><a href="#@cdktf/provider-google.loggingLogScope.LoggingLogScopeConfig.property.name">name</a></code> | <code>str</code> | The resource name of the log scope. For example: \'projects/my-project/locations/global/logScopes/my-log-scope\'. |
 | <code><a href="#@cdktf/provider-google.loggingLogScope.LoggingLogScopeConfig.property.resourceNames">resource_names</a></code> | <code>typing.List[str]</code> | Names of one or more parent resources : *  \'projects/[PROJECT_ID]\' May alternatively be one or more views : * \'projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]\' A log scope can include a maximum of 50 projects and a maximum of 100 resources in total. |
 | <code><a href="#@cdktf/provider-google.loggingLogScope.LoggingLogScopeConfig.property.description">description</a></code> | <code>str</code> | Describes this log scopes. |
-| <code><a href="#@cdktf/provider-google.loggingLogScope.LoggingLogScopeConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/logging_log_scope#id LoggingLogScope#id}. |
+| <code><a href="#@cdktf/provider-google.loggingLogScope.LoggingLogScopeConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/logging_log_scope#id LoggingLogScope#id}. |
 | <code><a href="#@cdktf/provider-google.loggingLogScope.LoggingLogScopeConfig.property.location">location</a></code> | <code>str</code> | The location of the resource. The only supported location is global so far. |
 | <code><a href="#@cdktf/provider-google.loggingLogScope.LoggingLogScopeConfig.property.parent">parent</a></code> | <code>str</code> | The parent of the resource. |
 | <code><a href="#@cdktf/provider-google.loggingLogScope.LoggingLogScopeConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-google.loggingLogScope.LoggingLogScopeTimeouts">LoggingLogScopeTimeouts</a></code> | timeouts block. |
@@ -1219,7 +1219,7 @@ name: str
 
 The resource name of the log scope. For example: \'projects/my-project/locations/global/logScopes/my-log-scope\'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/logging_log_scope#name LoggingLogScope#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/logging_log_scope#name LoggingLogScope#name}
 
 ---
 
@@ -1233,7 +1233,7 @@ resource_names: typing.List[str]
 
 Names of one or more parent resources : *  \'projects/[PROJECT_ID]\' May alternatively be one or more views : * \'projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]\' A log scope can include a maximum of 50 projects and a maximum of 100 resources in total.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/logging_log_scope#resource_names LoggingLogScope#resource_names}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/logging_log_scope#resource_names LoggingLogScope#resource_names}
 
 ---
 
@@ -1247,7 +1247,7 @@ description: str
 
 Describes this log scopes.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/logging_log_scope#description LoggingLogScope#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/logging_log_scope#description LoggingLogScope#description}
 
 ---
 
@@ -1259,7 +1259,7 @@ id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/logging_log_scope#id LoggingLogScope#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/logging_log_scope#id LoggingLogScope#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1276,7 +1276,7 @@ location: str
 
 The location of the resource. The only supported location is global so far.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/logging_log_scope#location LoggingLogScope#location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/logging_log_scope#location LoggingLogScope#location}
 
 ---
 
@@ -1290,7 +1290,7 @@ parent: str
 
 The parent of the resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/logging_log_scope#parent LoggingLogScope#parent}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/logging_log_scope#parent LoggingLogScope#parent}
 
 ---
 
@@ -1304,7 +1304,7 @@ timeouts: LoggingLogScopeTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/logging_log_scope#timeouts LoggingLogScope#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/logging_log_scope#timeouts LoggingLogScope#timeouts}
 
 ---
 
@@ -1326,9 +1326,9 @@ loggingLogScope.LoggingLogScopeTimeouts(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.loggingLogScope.LoggingLogScopeTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/logging_log_scope#create LoggingLogScope#create}. |
-| <code><a href="#@cdktf/provider-google.loggingLogScope.LoggingLogScopeTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/logging_log_scope#delete LoggingLogScope#delete}. |
-| <code><a href="#@cdktf/provider-google.loggingLogScope.LoggingLogScopeTimeouts.property.update">update</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/logging_log_scope#update LoggingLogScope#update}. |
+| <code><a href="#@cdktf/provider-google.loggingLogScope.LoggingLogScopeTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/logging_log_scope#create LoggingLogScope#create}. |
+| <code><a href="#@cdktf/provider-google.loggingLogScope.LoggingLogScopeTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/logging_log_scope#delete LoggingLogScope#delete}. |
+| <code><a href="#@cdktf/provider-google.loggingLogScope.LoggingLogScopeTimeouts.property.update">update</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/logging_log_scope#update LoggingLogScope#update}. |
 
 ---
 
@@ -1340,7 +1340,7 @@ create: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/logging_log_scope#create LoggingLogScope#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/logging_log_scope#create LoggingLogScope#create}.
 
 ---
 
@@ -1352,7 +1352,7 @@ delete: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/logging_log_scope#delete LoggingLogScope#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/logging_log_scope#delete LoggingLogScope#delete}.
 
 ---
 
@@ -1364,7 +1364,7 @@ update: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/logging_log_scope#update LoggingLogScope#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/logging_log_scope#update LoggingLogScope#update}.
 
 ---
 

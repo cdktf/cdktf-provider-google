@@ -1,3 +1,3 @@
 # `google_storage_insights_dataset_config`
 
-Refer to the Terraform Registry for docs: [`google_storage_insights_dataset_config`](https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/storage_insights_dataset_config).
+Refer to the Terraform Registry for docs: [`google_storage_insights_dataset_config`](https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/storage_insights_dataset_config).

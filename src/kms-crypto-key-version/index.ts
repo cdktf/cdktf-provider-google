@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/kms_crypto_key_version
+// https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/kms_crypto_key_version
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -16,11 +16,11 @@ export interface KmsCryptoKeyVersionConfig extends cdktf.TerraformMetaArguments 
   * The name of the cryptoKey associated with the CryptoKeyVersions.
   * Format: ''projects/{{project}}/locations/{{location}}/keyRings/{{keyring}}/cryptoKeys/{{cryptoKey}}''
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/kms_crypto_key_version#crypto_key KmsCryptoKeyVersion#crypto_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/kms_crypto_key_version#crypto_key KmsCryptoKeyVersion#crypto_key}
   */
   readonly cryptoKey: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/kms_crypto_key_version#id KmsCryptoKeyVersion#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/kms_crypto_key_version#id KmsCryptoKeyVersion#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -30,19 +30,19 @@ export interface KmsCryptoKeyVersionConfig extends cdktf.TerraformMetaArguments 
   * The current state of the CryptoKeyVersion. Note: you can only specify this field to manually 'ENABLE' or 'DISABLE' the CryptoKeyVersion,
   * otherwise the value of this field is always retrieved automatically. Possible values: ["PENDING_GENERATION", "ENABLED", "DISABLED", "DESTROYED", "DESTROY_SCHEDULED", "PENDING_IMPORT", "IMPORT_FAILED"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/kms_crypto_key_version#state KmsCryptoKeyVersion#state}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/kms_crypto_key_version#state KmsCryptoKeyVersion#state}
   */
   readonly state?: string;
   /**
   * external_protection_level_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/kms_crypto_key_version#external_protection_level_options KmsCryptoKeyVersion#external_protection_level_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/kms_crypto_key_version#external_protection_level_options KmsCryptoKeyVersion#external_protection_level_options}
   */
   readonly externalProtectionLevelOptions?: KmsCryptoKeyVersionExternalProtectionLevelOptions;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/kms_crypto_key_version#timeouts KmsCryptoKeyVersion#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/kms_crypto_key_version#timeouts KmsCryptoKeyVersion#timeouts}
   */
   readonly timeouts?: KmsCryptoKeyVersionTimeouts;
 }
@@ -307,13 +307,13 @@ export interface KmsCryptoKeyVersionExternalProtectionLevelOptions {
   /**
   * The path to the external key material on the EKM when using EkmConnection e.g., "v0/my/key". Set this field instead of externalKeyUri when using an EkmConnection.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/kms_crypto_key_version#ekm_connection_key_path KmsCryptoKeyVersion#ekm_connection_key_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/kms_crypto_key_version#ekm_connection_key_path KmsCryptoKeyVersion#ekm_connection_key_path}
   */
   readonly ekmConnectionKeyPath?: string;
   /**
   * The URI for an external resource that this CryptoKeyVersion represents.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/kms_crypto_key_version#external_key_uri KmsCryptoKeyVersion#external_key_uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/kms_crypto_key_version#external_key_uri KmsCryptoKeyVersion#external_key_uri}
   */
   readonly externalKeyUri?: string;
 }
@@ -426,15 +426,15 @@ export class KmsCryptoKeyVersionExternalProtectionLevelOptionsOutputReference ex
 }
 export interface KmsCryptoKeyVersionTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/kms_crypto_key_version#create KmsCryptoKeyVersion#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/kms_crypto_key_version#create KmsCryptoKeyVersion#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/kms_crypto_key_version#delete KmsCryptoKeyVersion#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/kms_crypto_key_version#delete KmsCryptoKeyVersion#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/kms_crypto_key_version#update KmsCryptoKeyVersion#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/kms_crypto_key_version#update KmsCryptoKeyVersion#update}
   */
   readonly update?: string;
 }
@@ -586,7 +586,7 @@ export class KmsCryptoKeyVersionTimeoutsOutputReference extends cdktf.ComplexObj
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/kms_crypto_key_version google_kms_crypto_key_version}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/kms_crypto_key_version google_kms_crypto_key_version}
 */
 export class KmsCryptoKeyVersion extends cdktf.TerraformResource {
 
@@ -602,7 +602,7 @@ export class KmsCryptoKeyVersion extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a KmsCryptoKeyVersion resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the KmsCryptoKeyVersion to import
-  * @param importFromId The id of the existing KmsCryptoKeyVersion that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/kms_crypto_key_version#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing KmsCryptoKeyVersion that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/kms_crypto_key_version#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the KmsCryptoKeyVersion to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -614,7 +614,7 @@ export class KmsCryptoKeyVersion extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/kms_crypto_key_version google_kms_crypto_key_version} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/kms_crypto_key_version google_kms_crypto_key_version} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -625,7 +625,7 @@ export class KmsCryptoKeyVersion extends cdktf.TerraformResource {
       terraformResourceType: 'google_kms_crypto_key_version',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.48.0',
+        providerVersion: '6.49.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,

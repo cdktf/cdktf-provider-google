@@ -4,7 +4,7 @@
 
 ### ParameterManagerRegionalParameter <a name="ParameterManagerRegionalParameter" id="@cdktf/provider-google.parameterManagerRegionalParameter.ParameterManagerRegionalParameter"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/parameter_manager_regional_parameter google_parameter_manager_regional_parameter}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/parameter_manager_regional_parameter google_parameter_manager_regional_parameter}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.parameterManagerRegionalParameter.ParameterManagerRegionalParameter.Initializer"></a>
 
@@ -522,7 +522,7 @@ The construct id used in the generated config for the ParameterManagerRegionalPa
 
 The id of the existing ParameterManagerRegionalParameter that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/parameter_manager_regional_parameter#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/parameter_manager_regional_parameter#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -999,10 +999,10 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v16/parametermanagerreg
 | <code><a href="#@cdktf/provider-google.parameterManagerRegionalParameter.ParameterManagerRegionalParameterConfig.property.location">Location</a></code> | <code>*string</code> | The location of the regional parameter. eg us-central1. |
 | <code><a href="#@cdktf/provider-google.parameterManagerRegionalParameter.ParameterManagerRegionalParameterConfig.property.parameterId">ParameterId</a></code> | <code>*string</code> | This must be unique within the project. |
 | <code><a href="#@cdktf/provider-google.parameterManagerRegionalParameter.ParameterManagerRegionalParameterConfig.property.format">Format</a></code> | <code>*string</code> | The format type of the regional parameter. Default value: "UNFORMATTED" Possible values: ["UNFORMATTED", "YAML", "JSON"]. |
-| <code><a href="#@cdktf/provider-google.parameterManagerRegionalParameter.ParameterManagerRegionalParameterConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/parameter_manager_regional_parameter#id ParameterManagerRegionalParameter#id}. |
+| <code><a href="#@cdktf/provider-google.parameterManagerRegionalParameter.ParameterManagerRegionalParameterConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/parameter_manager_regional_parameter#id ParameterManagerRegionalParameter#id}. |
 | <code><a href="#@cdktf/provider-google.parameterManagerRegionalParameter.ParameterManagerRegionalParameterConfig.property.kmsKey">KmsKey</a></code> | <code>*string</code> | The resource name of the Cloud KMS CryptoKey used to encrypt regional parameter version payload. Format 'projects/{{project}}/locations/{{location}}/keyRings/{{key_ring}}/cryptoKeys/{{crypto_key}}'. |
 | <code><a href="#@cdktf/provider-google.parameterManagerRegionalParameter.ParameterManagerRegionalParameterConfig.property.labels">Labels</a></code> | <code>*map[string]*string</code> | The labels assigned to this regional Parameter. |
-| <code><a href="#@cdktf/provider-google.parameterManagerRegionalParameter.ParameterManagerRegionalParameterConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/parameter_manager_regional_parameter#project ParameterManagerRegionalParameter#project}. |
+| <code><a href="#@cdktf/provider-google.parameterManagerRegionalParameter.ParameterManagerRegionalParameterConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/parameter_manager_regional_parameter#project ParameterManagerRegionalParameter#project}. |
 | <code><a href="#@cdktf/provider-google.parameterManagerRegionalParameter.ParameterManagerRegionalParameterConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-google.parameterManagerRegionalParameter.ParameterManagerRegionalParameterTimeouts">ParameterManagerRegionalParameterTimeouts</a></code> | timeouts block. |
 
 ---
@@ -1087,7 +1087,7 @@ Location *string
 
 The location of the regional parameter. eg us-central1.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/parameter_manager_regional_parameter#location ParameterManagerRegionalParameter#location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/parameter_manager_regional_parameter#location ParameterManagerRegionalParameter#location}
 
 ---
 
@@ -1101,7 +1101,7 @@ ParameterId *string
 
 This must be unique within the project.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/parameter_manager_regional_parameter#parameter_id ParameterManagerRegionalParameter#parameter_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/parameter_manager_regional_parameter#parameter_id ParameterManagerRegionalParameter#parameter_id}
 
 ---
 
@@ -1115,7 +1115,7 @@ Format *string
 
 The format type of the regional parameter. Default value: "UNFORMATTED" Possible values: ["UNFORMATTED", "YAML", "JSON"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/parameter_manager_regional_parameter#format ParameterManagerRegionalParameter#format}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/parameter_manager_regional_parameter#format ParameterManagerRegionalParameter#format}
 
 ---
 
@@ -1127,7 +1127,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/parameter_manager_regional_parameter#id ParameterManagerRegionalParameter#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/parameter_manager_regional_parameter#id ParameterManagerRegionalParameter#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1144,7 +1144,7 @@ KmsKey *string
 
 The resource name of the Cloud KMS CryptoKey used to encrypt regional parameter version payload. Format 'projects/{{project}}/locations/{{location}}/keyRings/{{key_ring}}/cryptoKeys/{{crypto_key}}'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/parameter_manager_regional_parameter#kms_key ParameterManagerRegionalParameter#kms_key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/parameter_manager_regional_parameter#kms_key ParameterManagerRegionalParameter#kms_key}
 
 ---
 
@@ -1172,7 +1172,7 @@ An object containing a list of "key": value pairs. Example:
 **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
 Please refer to the field 'effective_labels' for all of the labels present on the resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/parameter_manager_regional_parameter#labels ParameterManagerRegionalParameter#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/parameter_manager_regional_parameter#labels ParameterManagerRegionalParameter#labels}
 
 ---
 
@@ -1184,7 +1184,7 @@ Project *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/parameter_manager_regional_parameter#project ParameterManagerRegionalParameter#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/parameter_manager_regional_parameter#project ParameterManagerRegionalParameter#project}.
 
 ---
 
@@ -1198,7 +1198,7 @@ Timeouts ParameterManagerRegionalParameterTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/parameter_manager_regional_parameter#timeouts ParameterManagerRegionalParameter#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/parameter_manager_regional_parameter#timeouts ParameterManagerRegionalParameter#timeouts}
 
 ---
 
@@ -1233,9 +1233,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v16/parametermanagerreg
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.parameterManagerRegionalParameter.ParameterManagerRegionalParameterTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/parameter_manager_regional_parameter#create ParameterManagerRegionalParameter#create}. |
-| <code><a href="#@cdktf/provider-google.parameterManagerRegionalParameter.ParameterManagerRegionalParameterTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/parameter_manager_regional_parameter#delete ParameterManagerRegionalParameter#delete}. |
-| <code><a href="#@cdktf/provider-google.parameterManagerRegionalParameter.ParameterManagerRegionalParameterTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/parameter_manager_regional_parameter#update ParameterManagerRegionalParameter#update}. |
+| <code><a href="#@cdktf/provider-google.parameterManagerRegionalParameter.ParameterManagerRegionalParameterTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/parameter_manager_regional_parameter#create ParameterManagerRegionalParameter#create}. |
+| <code><a href="#@cdktf/provider-google.parameterManagerRegionalParameter.ParameterManagerRegionalParameterTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/parameter_manager_regional_parameter#delete ParameterManagerRegionalParameter#delete}. |
+| <code><a href="#@cdktf/provider-google.parameterManagerRegionalParameter.ParameterManagerRegionalParameterTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/parameter_manager_regional_parameter#update ParameterManagerRegionalParameter#update}. |
 
 ---
 
@@ -1247,7 +1247,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/parameter_manager_regional_parameter#create ParameterManagerRegionalParameter#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/parameter_manager_regional_parameter#create ParameterManagerRegionalParameter#create}.
 
 ---
 
@@ -1259,7 +1259,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/parameter_manager_regional_parameter#delete ParameterManagerRegionalParameter#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/parameter_manager_regional_parameter#delete ParameterManagerRegionalParameter#delete}.
 
 ---
 
@@ -1271,7 +1271,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/parameter_manager_regional_parameter#update ParameterManagerRegionalParameter#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/parameter_manager_regional_parameter#update ParameterManagerRegionalParameter#update}.
 
 ---
 
