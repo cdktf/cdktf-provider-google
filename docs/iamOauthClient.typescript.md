@@ -4,7 +4,7 @@
 
 ### IamOauthClient <a name="IamOauthClient" id="@cdktf/provider-google.iamOauthClient.IamOauthClient"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/iam_oauth_client google_iam_oauth_client}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.49.1/docs/resources/iam_oauth_client google_iam_oauth_client}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.iamOauthClient.IamOauthClient.Initializer"></a>
 
@@ -529,7 +529,7 @@ The construct id used in the generated config for the IamOauthClient to import.
 
 The id of the existing IamOauthClient that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/iam_oauth_client#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.49.1/docs/resources/iam_oauth_client#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -1062,8 +1062,8 @@ const iamOauthClientConfig: iamOauthClient.IamOauthClientConfig = { ... }
 | <code><a href="#@cdktf/provider-google.iamOauthClient.IamOauthClientConfig.property.description">description</a></code> | <code>string</code> | A user-specified description of the OauthClient. |
 | <code><a href="#@cdktf/provider-google.iamOauthClient.IamOauthClientConfig.property.disabled">disabled</a></code> | <code>boolean \| cdktf.IResolvable</code> | Whether the OauthClient is disabled. You cannot use a disabled OAuth client. |
 | <code><a href="#@cdktf/provider-google.iamOauthClient.IamOauthClientConfig.property.displayName">displayName</a></code> | <code>string</code> | A user-specified display name of the OauthClient. |
-| <code><a href="#@cdktf/provider-google.iamOauthClient.IamOauthClientConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/iam_oauth_client#id IamOauthClient#id}. |
-| <code><a href="#@cdktf/provider-google.iamOauthClient.IamOauthClientConfig.property.project">project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/iam_oauth_client#project IamOauthClient#project}. |
+| <code><a href="#@cdktf/provider-google.iamOauthClient.IamOauthClientConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.1/docs/resources/iam_oauth_client#id IamOauthClient#id}. |
+| <code><a href="#@cdktf/provider-google.iamOauthClient.IamOauthClientConfig.property.project">project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.1/docs/resources/iam_oauth_client#project IamOauthClient#project}. |
 | <code><a href="#@cdktf/provider-google.iamOauthClient.IamOauthClientConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-google.iamOauthClient.IamOauthClientTimeouts">IamOauthClientTimeouts</a></code> | timeouts block. |
 
 ---
@@ -1148,7 +1148,7 @@ public readonly allowedGrantTypes: string[];
 
 Required. The list of OAuth grant types is allowed for the OauthClient.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/iam_oauth_client#allowed_grant_types IamOauthClient#allowed_grant_types}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.1/docs/resources/iam_oauth_client#allowed_grant_types IamOauthClient#allowed_grant_types}
 
 ---
 
@@ -1162,7 +1162,7 @@ public readonly allowedRedirectUris: string[];
 
 Required. The list of redirect uris that is allowed to redirect back when authorization process is completed.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/iam_oauth_client#allowed_redirect_uris IamOauthClient#allowed_redirect_uris}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.1/docs/resources/iam_oauth_client#allowed_redirect_uris IamOauthClient#allowed_redirect_uris}
 
 ---
 
@@ -1186,7 +1186,7 @@ information on Google Cloud.
 * 'email': The OAuth client can read a federated identity's email address.
 * 'groups': The OAuth client can read a federated identity's groups.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/iam_oauth_client#allowed_scopes IamOauthClient#allowed_scopes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.1/docs/resources/iam_oauth_client#allowed_scopes IamOauthClient#allowed_scopes}
 
 ---
 
@@ -1200,7 +1200,7 @@ public readonly location: string;
 
 Resource ID segment making up resource 'name'. It identifies the resource within its parent collection as described in https://google.aip.dev/122.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/iam_oauth_client#location IamOauthClient#location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.1/docs/resources/iam_oauth_client#location IamOauthClient#location}
 
 ---
 
@@ -1220,7 +1220,7 @@ letters, digits, or hyphens. It must start with a letter, and cannot have a
 trailing hyphen. The prefix 'gcp-' is reserved for use by Google, and may
 not be specified.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/iam_oauth_client#oauth_client_id IamOauthClient#oauth_client_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.1/docs/resources/iam_oauth_client#oauth_client_id IamOauthClient#oauth_client_id}
 
 ---
 
@@ -1242,7 +1242,7 @@ CLIENT_TYPE_UNSPECIFIED
 PUBLIC_CLIENT
 CONFIDENTIAL_CLIENT
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/iam_oauth_client#client_type IamOauthClient#client_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.1/docs/resources/iam_oauth_client#client_type IamOauthClient#client_type}
 
 ---
 
@@ -1258,7 +1258,7 @@ A user-specified description of the OauthClient.
 
 Cannot exceed 256 characters.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/iam_oauth_client#description IamOauthClient#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.1/docs/resources/iam_oauth_client#description IamOauthClient#description}
 
 ---
 
@@ -1272,7 +1272,7 @@ public readonly disabled: boolean | IResolvable;
 
 Whether the OauthClient is disabled. You cannot use a disabled OAuth client.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/iam_oauth_client#disabled IamOauthClient#disabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.1/docs/resources/iam_oauth_client#disabled IamOauthClient#disabled}
 
 ---
 
@@ -1288,7 +1288,7 @@ A user-specified display name of the OauthClient.
 
 Cannot exceed 32 characters.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/iam_oauth_client#display_name IamOauthClient#display_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.1/docs/resources/iam_oauth_client#display_name IamOauthClient#display_name}
 
 ---
 
@@ -1300,7 +1300,7 @@ public readonly id: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/iam_oauth_client#id IamOauthClient#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.1/docs/resources/iam_oauth_client#id IamOauthClient#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1315,7 +1315,7 @@ public readonly project: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/iam_oauth_client#project IamOauthClient#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.1/docs/resources/iam_oauth_client#project IamOauthClient#project}.
 
 ---
 
@@ -1329,7 +1329,7 @@ public readonly timeouts: IamOauthClientTimeouts;
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/iam_oauth_client#timeouts IamOauthClient#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.1/docs/resources/iam_oauth_client#timeouts IamOauthClient#timeouts}
 
 ---
 
@@ -1347,9 +1347,9 @@ const iamOauthClientTimeouts: iamOauthClient.IamOauthClientTimeouts = { ... }
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.iamOauthClient.IamOauthClientTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/iam_oauth_client#create IamOauthClient#create}. |
-| <code><a href="#@cdktf/provider-google.iamOauthClient.IamOauthClientTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/iam_oauth_client#delete IamOauthClient#delete}. |
-| <code><a href="#@cdktf/provider-google.iamOauthClient.IamOauthClientTimeouts.property.update">update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/iam_oauth_client#update IamOauthClient#update}. |
+| <code><a href="#@cdktf/provider-google.iamOauthClient.IamOauthClientTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.1/docs/resources/iam_oauth_client#create IamOauthClient#create}. |
+| <code><a href="#@cdktf/provider-google.iamOauthClient.IamOauthClientTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.1/docs/resources/iam_oauth_client#delete IamOauthClient#delete}. |
+| <code><a href="#@cdktf/provider-google.iamOauthClient.IamOauthClientTimeouts.property.update">update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.1/docs/resources/iam_oauth_client#update IamOauthClient#update}. |
 
 ---
 
@@ -1361,7 +1361,7 @@ public readonly create: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/iam_oauth_client#create IamOauthClient#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.1/docs/resources/iam_oauth_client#create IamOauthClient#create}.
 
 ---
 
@@ -1373,7 +1373,7 @@ public readonly delete: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/iam_oauth_client#delete IamOauthClient#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.1/docs/resources/iam_oauth_client#delete IamOauthClient#delete}.
 
 ---
 
@@ -1385,7 +1385,7 @@ public readonly update: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/iam_oauth_client#update IamOauthClient#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.1/docs/resources/iam_oauth_client#update IamOauthClient#update}.
 
 ---
 

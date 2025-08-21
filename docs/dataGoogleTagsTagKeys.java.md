@@ -4,7 +4,7 @@
 
 ### DataGoogleTagsTagKeys <a name="DataGoogleTagsTagKeys" id="@cdktf/provider-google.dataGoogleTagsTagKeys.DataGoogleTagsTagKeys"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/data-sources/tags_tag_keys google_tags_tag_keys}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.49.1/docs/data-sources/tags_tag_keys google_tags_tag_keys}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleTagsTagKeys.DataGoogleTagsTagKeys.Initializer"></a>
 
@@ -39,8 +39,8 @@ DataGoogleTagsTagKeys.Builder.create(Construct scope, java.lang.String id)
 | <code><a href="#@cdktf/provider-google.dataGoogleTagsTagKeys.DataGoogleTagsTagKeys.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleTagsTagKeys.DataGoogleTagsTagKeys.Initializer.parameter.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleTagsTagKeys.DataGoogleTagsTagKeys.Initializer.parameter.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleTagsTagKeys.DataGoogleTagsTagKeys.Initializer.parameter.parent">parent</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/data-sources/tags_tag_keys#parent DataGoogleTagsTagKeys#parent}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleTagsTagKeys.DataGoogleTagsTagKeys.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/data-sources/tags_tag_keys#id DataGoogleTagsTagKeys#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleTagsTagKeys.DataGoogleTagsTagKeys.Initializer.parameter.parent">parent</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.1/docs/data-sources/tags_tag_keys#parent DataGoogleTagsTagKeys#parent}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleTagsTagKeys.DataGoogleTagsTagKeys.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.1/docs/data-sources/tags_tag_keys#id DataGoogleTagsTagKeys#id}. |
 
 ---
 
@@ -108,7 +108,7 @@ Must be unique amongst siblings in the same scope
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/data-sources/tags_tag_keys#parent DataGoogleTagsTagKeys#parent}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.1/docs/data-sources/tags_tag_keys#parent DataGoogleTagsTagKeys#parent}.
 
 ---
 
@@ -116,7 +116,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/data-sources/tags_tag_keys#id DataGoogleTagsTagKeys#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.1/docs/data-sources/tags_tag_keys#id DataGoogleTagsTagKeys#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -449,7 +449,7 @@ The construct id used in the generated config for the DataGoogleTagsTagKeys to i
 
 The id of the existing DataGoogleTagsTagKeys that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/data-sources/tags_tag_keys#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.49.1/docs/data-sources/tags_tag_keys#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -712,8 +712,8 @@ DataGoogleTagsTagKeysConfig.builder()
 | <code><a href="#@cdktf/provider-google.dataGoogleTagsTagKeys.DataGoogleTagsTagKeysConfig.property.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleTagsTagKeys.DataGoogleTagsTagKeysConfig.property.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleTagsTagKeys.DataGoogleTagsTagKeysConfig.property.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleTagsTagKeys.DataGoogleTagsTagKeysConfig.property.parent">parent</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/data-sources/tags_tag_keys#parent DataGoogleTagsTagKeys#parent}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleTagsTagKeys.DataGoogleTagsTagKeysConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/data-sources/tags_tag_keys#id DataGoogleTagsTagKeys#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleTagsTagKeys.DataGoogleTagsTagKeysConfig.property.parent">parent</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.1/docs/data-sources/tags_tag_keys#parent DataGoogleTagsTagKeys#parent}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleTagsTagKeys.DataGoogleTagsTagKeysConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.1/docs/data-sources/tags_tag_keys#id DataGoogleTagsTagKeys#id}. |
 
 ---
 
@@ -795,7 +795,7 @@ public java.lang.String getParent();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/data-sources/tags_tag_keys#parent DataGoogleTagsTagKeys#parent}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.1/docs/data-sources/tags_tag_keys#parent DataGoogleTagsTagKeys#parent}.
 
 ---
 
@@ -807,7 +807,7 @@ public java.lang.String getId();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/data-sources/tags_tag_keys#id DataGoogleTagsTagKeys#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.1/docs/data-sources/tags_tag_keys#id DataGoogleTagsTagKeys#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
