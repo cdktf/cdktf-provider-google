@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/cloud_run_v2_worker_pool_iam_member
+// https://registry.terraform.io/providers/hashicorp/google/6.49.1/docs/resources/cloud_run_v2_worker_pool_iam_member
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,50 +13,50 @@ import * as cdktf from 'cdktf';
 
 export interface CloudRunV2WorkerPoolIamMemberConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/cloud_run_v2_worker_pool_iam_member#id CloudRunV2WorkerPoolIamMember#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.1/docs/resources/cloud_run_v2_worker_pool_iam_member#id CloudRunV2WorkerPoolIamMember#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/cloud_run_v2_worker_pool_iam_member#location CloudRunV2WorkerPoolIamMember#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.1/docs/resources/cloud_run_v2_worker_pool_iam_member#location CloudRunV2WorkerPoolIamMember#location}
   */
   readonly location?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/cloud_run_v2_worker_pool_iam_member#member CloudRunV2WorkerPoolIamMember#member}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.1/docs/resources/cloud_run_v2_worker_pool_iam_member#member CloudRunV2WorkerPoolIamMember#member}
   */
   readonly member: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/cloud_run_v2_worker_pool_iam_member#name CloudRunV2WorkerPoolIamMember#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.1/docs/resources/cloud_run_v2_worker_pool_iam_member#name CloudRunV2WorkerPoolIamMember#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/cloud_run_v2_worker_pool_iam_member#project CloudRunV2WorkerPoolIamMember#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.1/docs/resources/cloud_run_v2_worker_pool_iam_member#project CloudRunV2WorkerPoolIamMember#project}
   */
   readonly project?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/cloud_run_v2_worker_pool_iam_member#role CloudRunV2WorkerPoolIamMember#role}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.1/docs/resources/cloud_run_v2_worker_pool_iam_member#role CloudRunV2WorkerPoolIamMember#role}
   */
   readonly role: string;
   /**
   * condition block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/cloud_run_v2_worker_pool_iam_member#condition CloudRunV2WorkerPoolIamMember#condition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.1/docs/resources/cloud_run_v2_worker_pool_iam_member#condition CloudRunV2WorkerPoolIamMember#condition}
   */
   readonly condition?: CloudRunV2WorkerPoolIamMemberCondition;
 }
 export interface CloudRunV2WorkerPoolIamMemberCondition {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/cloud_run_v2_worker_pool_iam_member#description CloudRunV2WorkerPoolIamMember#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.1/docs/resources/cloud_run_v2_worker_pool_iam_member#description CloudRunV2WorkerPoolIamMember#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/cloud_run_v2_worker_pool_iam_member#expression CloudRunV2WorkerPoolIamMember#expression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.1/docs/resources/cloud_run_v2_worker_pool_iam_member#expression CloudRunV2WorkerPoolIamMember#expression}
   */
   readonly expression: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/cloud_run_v2_worker_pool_iam_member#title CloudRunV2WorkerPoolIamMember#title}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.1/docs/resources/cloud_run_v2_worker_pool_iam_member#title CloudRunV2WorkerPoolIamMember#title}
   */
   readonly title: string;
 }
@@ -192,7 +192,7 @@ export class CloudRunV2WorkerPoolIamMemberConditionOutputReference extends cdktf
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/cloud_run_v2_worker_pool_iam_member google_cloud_run_v2_worker_pool_iam_member}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.49.1/docs/resources/cloud_run_v2_worker_pool_iam_member google_cloud_run_v2_worker_pool_iam_member}
 */
 export class CloudRunV2WorkerPoolIamMember extends cdktf.TerraformResource {
 
@@ -208,7 +208,7 @@ export class CloudRunV2WorkerPoolIamMember extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a CloudRunV2WorkerPoolIamMember resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the CloudRunV2WorkerPoolIamMember to import
-  * @param importFromId The id of the existing CloudRunV2WorkerPoolIamMember that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/cloud_run_v2_worker_pool_iam_member#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing CloudRunV2WorkerPoolIamMember that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.49.1/docs/resources/cloud_run_v2_worker_pool_iam_member#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the CloudRunV2WorkerPoolIamMember to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -220,7 +220,7 @@ export class CloudRunV2WorkerPoolIamMember extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/cloud_run_v2_worker_pool_iam_member google_cloud_run_v2_worker_pool_iam_member} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.49.1/docs/resources/cloud_run_v2_worker_pool_iam_member google_cloud_run_v2_worker_pool_iam_member} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -231,7 +231,7 @@ export class CloudRunV2WorkerPoolIamMember extends cdktf.TerraformResource {
       terraformResourceType: 'google_cloud_run_v2_worker_pool_iam_member',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.49.0',
+        providerVersion: '6.49.1',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,
