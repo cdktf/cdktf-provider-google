@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/apihub_plugin_instance
+// https://registry.terraform.io/providers/hashicorp/google/6.49.1/docs/resources/apihub_plugin_instance
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,17 +15,17 @@ export interface ApihubPluginInstanceConfig extends cdktf.TerraformMetaArguments
   /**
   * The display name for this plugin instance. Max length is 255 characters.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/apihub_plugin_instance#disable ApihubPluginInstance#disable}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.1/docs/resources/apihub_plugin_instance#disable ApihubPluginInstance#disable}
   */
   readonly disable?: boolean | cdktf.IResolvable;
   /**
   * The display name for this plugin instance. Max length is 255 characters.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/apihub_plugin_instance#display_name ApihubPluginInstance#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.1/docs/resources/apihub_plugin_instance#display_name ApihubPluginInstance#display_name}
   */
   readonly displayName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/apihub_plugin_instance#id ApihubPluginInstance#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.1/docs/resources/apihub_plugin_instance#id ApihubPluginInstance#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -34,13 +34,13 @@ export interface ApihubPluginInstanceConfig extends cdktf.TerraformMetaArguments
   /**
   * Resource ID segment making up resource 'name'. It identifies the resource within its parent collection as described in https://google.aip.dev/122.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/apihub_plugin_instance#location ApihubPluginInstance#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.1/docs/resources/apihub_plugin_instance#location ApihubPluginInstance#location}
   */
   readonly location: string;
   /**
   * Resource ID segment making up resource 'name'. It identifies the resource within its parent collection as described in https://google.aip.dev/122.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/apihub_plugin_instance#plugin ApihubPluginInstance#plugin}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.1/docs/resources/apihub_plugin_instance#plugin ApihubPluginInstance#plugin}
   */
   readonly plugin: string;
   /**
@@ -55,29 +55,29 @@ export interface ApihubPluginInstanceConfig extends cdktf.TerraformMetaArguments
   * This value should be 4-63 characters, and valid characters
   * are /a-z[0-9]-_/.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/apihub_plugin_instance#plugin_instance_id ApihubPluginInstance#plugin_instance_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.1/docs/resources/apihub_plugin_instance#plugin_instance_id ApihubPluginInstance#plugin_instance_id}
   */
   readonly pluginInstanceId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/apihub_plugin_instance#project ApihubPluginInstance#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.1/docs/resources/apihub_plugin_instance#project ApihubPluginInstance#project}
   */
   readonly project?: string;
   /**
   * actions block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/apihub_plugin_instance#actions ApihubPluginInstance#actions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.1/docs/resources/apihub_plugin_instance#actions ApihubPluginInstance#actions}
   */
   readonly actions?: ApihubPluginInstanceActions[] | cdktf.IResolvable;
   /**
   * auth_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/apihub_plugin_instance#auth_config ApihubPluginInstance#auth_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.1/docs/resources/apihub_plugin_instance#auth_config ApihubPluginInstance#auth_config}
   */
   readonly authConfig?: ApihubPluginInstanceAuthConfig;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/apihub_plugin_instance#timeouts ApihubPluginInstance#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.1/docs/resources/apihub_plugin_instance#timeouts ApihubPluginInstance#timeouts}
   */
   readonly timeouts?: ApihubPluginInstanceTimeouts;
 }
@@ -258,7 +258,7 @@ export interface ApihubPluginInstanceActionsCurationConfigCustomCuration {
   * curation resource in the format:
   * 'projects/{project}/locations/{location}/curations/{curation}'
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/apihub_plugin_instance#curation ApihubPluginInstance#curation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.1/docs/resources/apihub_plugin_instance#curation ApihubPluginInstance#curation}
   */
   readonly curation: string;
 }
@@ -344,13 +344,13 @@ export interface ApihubPluginInstanceActionsCurationConfig {
   * DEFAULT_CURATION_FOR_API_METADATA
   * CUSTOM_CURATION_FOR_API_METADATA
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/apihub_plugin_instance#curation_type ApihubPluginInstance#curation_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.1/docs/resources/apihub_plugin_instance#curation_type ApihubPluginInstance#curation_type}
   */
   readonly curationType?: string;
   /**
   * custom_curation block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/apihub_plugin_instance#custom_curation ApihubPluginInstance#custom_curation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.1/docs/resources/apihub_plugin_instance#custom_curation ApihubPluginInstance#custom_curation}
   */
   readonly customCuration?: ApihubPluginInstanceActionsCurationConfigCustomCuration;
 }
@@ -466,27 +466,27 @@ export interface ApihubPluginInstanceActions {
   * This should map to one of the action id specified
   * in actions_config in the plugin.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/apihub_plugin_instance#action_id ApihubPluginInstance#action_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.1/docs/resources/apihub_plugin_instance#action_id ApihubPluginInstance#action_id}
   */
   readonly actionId: string;
   /**
   * The schedule for this plugin instance action. This can only be set if the
   * plugin supports API_HUB_SCHEDULE_TRIGGER mode for this action.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/apihub_plugin_instance#schedule_cron_expression ApihubPluginInstance#schedule_cron_expression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.1/docs/resources/apihub_plugin_instance#schedule_cron_expression ApihubPluginInstance#schedule_cron_expression}
   */
   readonly scheduleCronExpression?: string;
   /**
   * The time zone for the schedule cron expression. If not provided, UTC will
   * be used.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/apihub_plugin_instance#schedule_time_zone ApihubPluginInstance#schedule_time_zone}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.1/docs/resources/apihub_plugin_instance#schedule_time_zone ApihubPluginInstance#schedule_time_zone}
   */
   readonly scheduleTimeZone?: string;
   /**
   * curation_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/apihub_plugin_instance#curation_config ApihubPluginInstance#curation_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.1/docs/resources/apihub_plugin_instance#curation_config ApihubPluginInstance#curation_config}
   */
   readonly curationConfig?: ApihubPluginInstanceActionsCurationConfig;
 }
@@ -700,7 +700,7 @@ export interface ApihubPluginInstanceAuthConfigApiKeyConfigApiKey {
   * The resource name of the secret version in the format,
   * format as: 'projects/* /secrets/* /versions/*'.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/apihub_plugin_instance#secret_version ApihubPluginInstance#secret_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.1/docs/resources/apihub_plugin_instance#secret_version ApihubPluginInstance#secret_version}
    *
   * Note: The above comment contained a comment block ending sequence (* followed by /). We have introduced a space between to prevent syntax errors. Please ignore the space.
   */
@@ -793,7 +793,7 @@ export interface ApihubPluginInstanceAuthConfigApiKeyConfig {
   * BODY
   * COOKIE
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/apihub_plugin_instance#http_element_location ApihubPluginInstance#http_element_location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.1/docs/resources/apihub_plugin_instance#http_element_location ApihubPluginInstance#http_element_location}
   */
   readonly httpElementLocation: string;
   /**
@@ -801,13 +801,13 @@ export interface ApihubPluginInstanceAuthConfigApiKeyConfig {
   * E.g. If the API request is "https://example.com/act?api_key=",
   * "api_key" would be the parameter name.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/apihub_plugin_instance#name ApihubPluginInstance#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.1/docs/resources/apihub_plugin_instance#name ApihubPluginInstance#name}
   */
   readonly name: string;
   /**
   * api_key block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/apihub_plugin_instance#api_key ApihubPluginInstance#api_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.1/docs/resources/apihub_plugin_instance#api_key ApihubPluginInstance#api_key}
   */
   readonly apiKey: ApihubPluginInstanceAuthConfigApiKeyConfigApiKey;
 }
@@ -945,7 +945,7 @@ export interface ApihubPluginInstanceAuthConfigGoogleServiceAccountConfig {
   * The 'iam.serviceAccounts.getAccessToken' permission should be granted on
   * this service account to the impersonator service account.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/apihub_plugin_instance#service_account ApihubPluginInstance#service_account}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.1/docs/resources/apihub_plugin_instance#service_account ApihubPluginInstance#service_account}
   */
   readonly serviceAccount: string;
 }
@@ -1029,7 +1029,7 @@ export interface ApihubPluginInstanceAuthConfigOauth2ClientCredentialsConfigClie
   * The resource name of the secret version in the format,
   * format as: 'projects/* /secrets/* /versions/*'.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/apihub_plugin_instance#secret_version ApihubPluginInstance#secret_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.1/docs/resources/apihub_plugin_instance#secret_version ApihubPluginInstance#secret_version}
    *
   * Note: The above comment contained a comment block ending sequence (* followed by /). We have introduced a space between to prevent syntax errors. Please ignore the space.
   */
@@ -1114,13 +1114,13 @@ export interface ApihubPluginInstanceAuthConfigOauth2ClientCredentialsConfig {
   /**
   * The client identifier.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/apihub_plugin_instance#client_id ApihubPluginInstance#client_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.1/docs/resources/apihub_plugin_instance#client_id ApihubPluginInstance#client_id}
   */
   readonly clientId: string;
   /**
   * client_secret block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/apihub_plugin_instance#client_secret ApihubPluginInstance#client_secret}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.1/docs/resources/apihub_plugin_instance#client_secret ApihubPluginInstance#client_secret}
   */
   readonly clientSecret: ApihubPluginInstanceAuthConfigOauth2ClientCredentialsConfigClientSecret;
 }
@@ -1230,7 +1230,7 @@ export interface ApihubPluginInstanceAuthConfigUserPasswordConfigPassword {
   * The resource name of the secret version in the format,
   * format as: 'projects/* /secrets/* /versions/*'.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/apihub_plugin_instance#secret_version ApihubPluginInstance#secret_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.1/docs/resources/apihub_plugin_instance#secret_version ApihubPluginInstance#secret_version}
    *
   * Note: The above comment contained a comment block ending sequence (* followed by /). We have introduced a space between to prevent syntax errors. Please ignore the space.
   */
@@ -1315,13 +1315,13 @@ export interface ApihubPluginInstanceAuthConfigUserPasswordConfig {
   /**
   * Username.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/apihub_plugin_instance#username ApihubPluginInstance#username}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.1/docs/resources/apihub_plugin_instance#username ApihubPluginInstance#username}
   */
   readonly username: string;
   /**
   * password block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/apihub_plugin_instance#password ApihubPluginInstance#password}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.1/docs/resources/apihub_plugin_instance#password ApihubPluginInstance#password}
   */
   readonly password: ApihubPluginInstanceAuthConfigUserPasswordConfigPassword;
 }
@@ -1436,31 +1436,31 @@ export interface ApihubPluginInstanceAuthConfig {
   * API_KEY
   * OAUTH2_CLIENT_CREDENTIALS
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/apihub_plugin_instance#auth_type ApihubPluginInstance#auth_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.1/docs/resources/apihub_plugin_instance#auth_type ApihubPluginInstance#auth_type}
   */
   readonly authType: string;
   /**
   * api_key_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/apihub_plugin_instance#api_key_config ApihubPluginInstance#api_key_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.1/docs/resources/apihub_plugin_instance#api_key_config ApihubPluginInstance#api_key_config}
   */
   readonly apiKeyConfig?: ApihubPluginInstanceAuthConfigApiKeyConfig;
   /**
   * google_service_account_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/apihub_plugin_instance#google_service_account_config ApihubPluginInstance#google_service_account_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.1/docs/resources/apihub_plugin_instance#google_service_account_config ApihubPluginInstance#google_service_account_config}
   */
   readonly googleServiceAccountConfig?: ApihubPluginInstanceAuthConfigGoogleServiceAccountConfig;
   /**
   * oauth2_client_credentials_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/apihub_plugin_instance#oauth2_client_credentials_config ApihubPluginInstance#oauth2_client_credentials_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.1/docs/resources/apihub_plugin_instance#oauth2_client_credentials_config ApihubPluginInstance#oauth2_client_credentials_config}
   */
   readonly oauth2ClientCredentialsConfig?: ApihubPluginInstanceAuthConfigOauth2ClientCredentialsConfig;
   /**
   * user_password_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/apihub_plugin_instance#user_password_config ApihubPluginInstance#user_password_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.1/docs/resources/apihub_plugin_instance#user_password_config ApihubPluginInstance#user_password_config}
   */
   readonly userPasswordConfig?: ApihubPluginInstanceAuthConfigUserPasswordConfig;
 }
@@ -1657,15 +1657,15 @@ export class ApihubPluginInstanceAuthConfigOutputReference extends cdktf.Complex
 }
 export interface ApihubPluginInstanceTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/apihub_plugin_instance#create ApihubPluginInstance#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.1/docs/resources/apihub_plugin_instance#create ApihubPluginInstance#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/apihub_plugin_instance#delete ApihubPluginInstance#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.1/docs/resources/apihub_plugin_instance#delete ApihubPluginInstance#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/apihub_plugin_instance#update ApihubPluginInstance#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.1/docs/resources/apihub_plugin_instance#update ApihubPluginInstance#update}
   */
   readonly update?: string;
 }
@@ -1817,7 +1817,7 @@ export class ApihubPluginInstanceTimeoutsOutputReference extends cdktf.ComplexOb
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/apihub_plugin_instance google_apihub_plugin_instance}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.49.1/docs/resources/apihub_plugin_instance google_apihub_plugin_instance}
 */
 export class ApihubPluginInstance extends cdktf.TerraformResource {
 
@@ -1833,7 +1833,7 @@ export class ApihubPluginInstance extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a ApihubPluginInstance resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the ApihubPluginInstance to import
-  * @param importFromId The id of the existing ApihubPluginInstance that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/apihub_plugin_instance#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing ApihubPluginInstance that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.49.1/docs/resources/apihub_plugin_instance#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the ApihubPluginInstance to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -1845,7 +1845,7 @@ export class ApihubPluginInstance extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/resources/apihub_plugin_instance google_apihub_plugin_instance} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.49.1/docs/resources/apihub_plugin_instance google_apihub_plugin_instance} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -1856,7 +1856,7 @@ export class ApihubPluginInstance extends cdktf.TerraformResource {
       terraformResourceType: 'google_apihub_plugin_instance',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.49.0',
+        providerVersion: '6.49.1',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,

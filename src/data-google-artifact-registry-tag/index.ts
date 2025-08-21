@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/data-sources/artifact_registry_tag
+// https://registry.terraform.io/providers/hashicorp/google/6.49.1/docs/data-sources/artifact_registry_tag
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,36 +13,36 @@ import * as cdktf from 'cdktf';
 
 export interface DataGoogleArtifactRegistryTagConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/data-sources/artifact_registry_tag#id DataGoogleArtifactRegistryTag#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.1/docs/data-sources/artifact_registry_tag#id DataGoogleArtifactRegistryTag#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/data-sources/artifact_registry_tag#location DataGoogleArtifactRegistryTag#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.1/docs/data-sources/artifact_registry_tag#location DataGoogleArtifactRegistryTag#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/data-sources/artifact_registry_tag#package_name DataGoogleArtifactRegistryTag#package_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.1/docs/data-sources/artifact_registry_tag#package_name DataGoogleArtifactRegistryTag#package_name}
   */
   readonly packageName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/data-sources/artifact_registry_tag#project DataGoogleArtifactRegistryTag#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.1/docs/data-sources/artifact_registry_tag#project DataGoogleArtifactRegistryTag#project}
   */
   readonly project?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/data-sources/artifact_registry_tag#repository_id DataGoogleArtifactRegistryTag#repository_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.1/docs/data-sources/artifact_registry_tag#repository_id DataGoogleArtifactRegistryTag#repository_id}
   */
   readonly repositoryId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/data-sources/artifact_registry_tag#tag_name DataGoogleArtifactRegistryTag#tag_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.1/docs/data-sources/artifact_registry_tag#tag_name DataGoogleArtifactRegistryTag#tag_name}
   */
   readonly tagName: string;
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/data-sources/artifact_registry_tag google_artifact_registry_tag}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.49.1/docs/data-sources/artifact_registry_tag google_artifact_registry_tag}
 */
 export class DataGoogleArtifactRegistryTag extends cdktf.TerraformDataSource {
 
@@ -58,7 +58,7 @@ export class DataGoogleArtifactRegistryTag extends cdktf.TerraformDataSource {
   * Generates CDKTF code for importing a DataGoogleArtifactRegistryTag resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DataGoogleArtifactRegistryTag to import
-  * @param importFromId The id of the existing DataGoogleArtifactRegistryTag that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/data-sources/artifact_registry_tag#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DataGoogleArtifactRegistryTag that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.49.1/docs/data-sources/artifact_registry_tag#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DataGoogleArtifactRegistryTag to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -70,7 +70,7 @@ export class DataGoogleArtifactRegistryTag extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.49.0/docs/data-sources/artifact_registry_tag google_artifact_registry_tag} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.49.1/docs/data-sources/artifact_registry_tag google_artifact_registry_tag} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -81,7 +81,7 @@ export class DataGoogleArtifactRegistryTag extends cdktf.TerraformDataSource {
       terraformResourceType: 'google_artifact_registry_tag',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.49.0',
+        providerVersion: '6.49.1',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,
