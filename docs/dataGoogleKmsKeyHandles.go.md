@@ -4,7 +4,7 @@
 
 ### DataGoogleKmsKeyHandles <a name="DataGoogleKmsKeyHandles" id="@cdktf/provider-google.dataGoogleKmsKeyHandles.DataGoogleKmsKeyHandles"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.49.1/docs/data-sources/kms_key_handles google_kms_key_handles}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/data-sources/kms_key_handles google_kms_key_handles}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleKmsKeyHandles.DataGoogleKmsKeyHandles.Initializer"></a>
 
@@ -379,7 +379,7 @@ The construct id used in the generated config for the DataGoogleKmsKeyHandles to
 
 The id of the existing DataGoogleKmsKeyHandles that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.49.1/docs/data-sources/kms_key_handles#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/data-sources/kms_key_handles#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -686,7 +686,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v16/datagooglekmskeyhan
 | <code><a href="#@cdktf/provider-google.dataGoogleKmsKeyHandles.DataGoogleKmsKeyHandlesConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleKmsKeyHandles.DataGoogleKmsKeyHandlesConfig.property.location">Location</a></code> | <code>*string</code> | The canonical id for the location. For example: "us-east1". |
 | <code><a href="#@cdktf/provider-google.dataGoogleKmsKeyHandles.DataGoogleKmsKeyHandlesConfig.property.resourceTypeSelector">ResourceTypeSelector</a></code> | <code>*string</code> | The resource_type_selector argument is used to add a filter query parameter that limits which key handles are retrieved by the data source: ?filter=resource_type_selector="{{resource_type_selector}}". Example values: * resource_type_selector="{SERVICE}.googleapis.com/{TYPE}". [See the documentation about using filters](https://cloud.google.com/kms/docs/reference/rest/v1/projects.locations.keyHandles/list). |
-| <code><a href="#@cdktf/provider-google.dataGoogleKmsKeyHandles.DataGoogleKmsKeyHandlesConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.1/docs/data-sources/kms_key_handles#id DataGoogleKmsKeyHandles#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleKmsKeyHandles.DataGoogleKmsKeyHandlesConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/data-sources/kms_key_handles#id DataGoogleKmsKeyHandles#id}. |
 | <code><a href="#@cdktf/provider-google.dataGoogleKmsKeyHandles.DataGoogleKmsKeyHandlesConfig.property.project">Project</a></code> | <code>*string</code> | Project ID of the project. |
 
 ---
@@ -771,7 +771,7 @@ Location *string
 
 The canonical id for the location. For example: "us-east1".
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.1/docs/data-sources/kms_key_handles#location DataGoogleKmsKeyHandles#location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/data-sources/kms_key_handles#location DataGoogleKmsKeyHandles#location}
 
 ---
 
@@ -785,7 +785,7 @@ ResourceTypeSelector *string
 
 The resource_type_selector argument is used to add a filter query parameter that limits which key handles are retrieved by the data source: ?filter=resource_type_selector="{{resource_type_selector}}". Example values: * resource_type_selector="{SERVICE}.googleapis.com/{TYPE}". [See the documentation about using filters](https://cloud.google.com/kms/docs/reference/rest/v1/projects.locations.keyHandles/list).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.1/docs/data-sources/kms_key_handles#resource_type_selector DataGoogleKmsKeyHandles#resource_type_selector}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/data-sources/kms_key_handles#resource_type_selector DataGoogleKmsKeyHandles#resource_type_selector}
 
 ---
 
@@ -797,7 +797,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.1/docs/data-sources/kms_key_handles#id DataGoogleKmsKeyHandles#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/data-sources/kms_key_handles#id DataGoogleKmsKeyHandles#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -814,7 +814,7 @@ Project *string
 
 Project ID of the project.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.1/docs/data-sources/kms_key_handles#project DataGoogleKmsKeyHandles#project}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/data-sources/kms_key_handles#project DataGoogleKmsKeyHandles#project}
 
 ---
 
