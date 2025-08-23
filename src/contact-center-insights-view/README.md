@@ -1,3 +1,3 @@
 # `google_contact_center_insights_view`
 
-Refer to the Terraform Registry for docs: [`google_contact_center_insights_view`](https://registry.terraform.io/providers/hashicorp/google/6.49.1/docs/resources/contact_center_insights_view).
+Refer to the Terraform Registry for docs: [`google_contact_center_insights_view`](https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/contact_center_insights_view).

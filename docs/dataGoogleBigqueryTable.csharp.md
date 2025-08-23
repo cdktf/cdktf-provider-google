@@ -4,7 +4,7 @@
 
 ### DataGoogleBigqueryTable <a name="DataGoogleBigqueryTable" id="@cdktf/provider-google.dataGoogleBigqueryTable.DataGoogleBigqueryTable"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.49.1/docs/data-sources/bigquery_table google_bigquery_table}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/data-sources/bigquery_table google_bigquery_table}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleBigqueryTable.DataGoogleBigqueryTable.Initializer"></a>
 
@@ -379,7 +379,7 @@ The construct id used in the generated config for the DataGoogleBigqueryTable to
 
 The id of the existing DataGoogleBigqueryTable that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.49.1/docs/data-sources/bigquery_table#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/data-sources/bigquery_table#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -1084,7 +1084,7 @@ new DataGoogleBigqueryTableConfig {
 | <code><a href="#@cdktf/provider-google.dataGoogleBigqueryTable.DataGoogleBigqueryTableConfig.property.provisioners">Provisioners</a></code> | <code>object[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleBigqueryTable.DataGoogleBigqueryTableConfig.property.datasetId">DatasetId</a></code> | <code>string</code> | The dataset ID to create the table in. Changing this forces a new resource to be created. |
 | <code><a href="#@cdktf/provider-google.dataGoogleBigqueryTable.DataGoogleBigqueryTableConfig.property.tableId">TableId</a></code> | <code>string</code> | A unique ID for the resource. Changing this forces a new resource to be created. |
-| <code><a href="#@cdktf/provider-google.dataGoogleBigqueryTable.DataGoogleBigqueryTableConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.1/docs/data-sources/bigquery_table#id DataGoogleBigqueryTable#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleBigqueryTable.DataGoogleBigqueryTableConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/data-sources/bigquery_table#id DataGoogleBigqueryTable#id}. |
 | <code><a href="#@cdktf/provider-google.dataGoogleBigqueryTable.DataGoogleBigqueryTableConfig.property.project">Project</a></code> | <code>string</code> | The ID of the project in which the resource belongs. |
 
 ---
@@ -1169,7 +1169,7 @@ public string DatasetId { get; set; }
 
 The dataset ID to create the table in. Changing this forces a new resource to be created.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.1/docs/data-sources/bigquery_table#dataset_id DataGoogleBigqueryTable#dataset_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/data-sources/bigquery_table#dataset_id DataGoogleBigqueryTable#dataset_id}
 
 ---
 
@@ -1183,7 +1183,7 @@ public string TableId { get; set; }
 
 A unique ID for the resource. Changing this forces a new resource to be created.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.1/docs/data-sources/bigquery_table#table_id DataGoogleBigqueryTable#table_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/data-sources/bigquery_table#table_id DataGoogleBigqueryTable#table_id}
 
 ---
 
@@ -1195,7 +1195,7 @@ public string Id { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.1/docs/data-sources/bigquery_table#id DataGoogleBigqueryTable#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/data-sources/bigquery_table#id DataGoogleBigqueryTable#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1212,7 +1212,7 @@ public string Project { get; set; }
 
 The ID of the project in which the resource belongs.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.1/docs/data-sources/bigquery_table#project DataGoogleBigqueryTable#project}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/data-sources/bigquery_table#project DataGoogleBigqueryTable#project}
 
 ---
 

@@ -4,7 +4,7 @@
 
 ### SpannerInstancePartition <a name="SpannerInstancePartition" id="@cdktf/provider-google.spannerInstancePartition.SpannerInstancePartition"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.49.1/docs/resources/spanner_instance_partition google_spanner_instance_partition}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/spanner_instance_partition google_spanner_instance_partition}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.spannerInstancePartition.SpannerInstancePartition.Initializer"></a>
 
@@ -515,7 +515,7 @@ The construct id used in the generated config for the SpannerInstancePartition t
 
 The id of the existing SpannerInstancePartition that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.49.1/docs/resources/spanner_instance_partition#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/spanner_instance_partition#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -944,10 +944,10 @@ const spannerInstancePartitionConfig: spannerInstancePartition.SpannerInstancePa
 | <code><a href="#@cdktf/provider-google.spannerInstancePartition.SpannerInstancePartitionConfig.property.displayName">displayName</a></code> | <code>string</code> | The descriptive name for this instance partition as it appears in UIs. |
 | <code><a href="#@cdktf/provider-google.spannerInstancePartition.SpannerInstancePartitionConfig.property.instance">instance</a></code> | <code>string</code> | The instance to create the instance partition in. |
 | <code><a href="#@cdktf/provider-google.spannerInstancePartition.SpannerInstancePartitionConfig.property.name">name</a></code> | <code>string</code> | A unique identifier for the instance partition, which cannot be changed after the instance partition is created. |
-| <code><a href="#@cdktf/provider-google.spannerInstancePartition.SpannerInstancePartitionConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.1/docs/resources/spanner_instance_partition#id SpannerInstancePartition#id}. |
+| <code><a href="#@cdktf/provider-google.spannerInstancePartition.SpannerInstancePartitionConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/spanner_instance_partition#id SpannerInstancePartition#id}. |
 | <code><a href="#@cdktf/provider-google.spannerInstancePartition.SpannerInstancePartitionConfig.property.nodeCount">nodeCount</a></code> | <code>number</code> | The number of nodes allocated to this instance partition. |
 | <code><a href="#@cdktf/provider-google.spannerInstancePartition.SpannerInstancePartitionConfig.property.processingUnits">processingUnits</a></code> | <code>number</code> | The number of processing units allocated to this instance partition. Exactly one of either node_count or processing_units must be present. |
-| <code><a href="#@cdktf/provider-google.spannerInstancePartition.SpannerInstancePartitionConfig.property.project">project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.1/docs/resources/spanner_instance_partition#project SpannerInstancePartition#project}. |
+| <code><a href="#@cdktf/provider-google.spannerInstancePartition.SpannerInstancePartitionConfig.property.project">project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/spanner_instance_partition#project SpannerInstancePartition#project}. |
 | <code><a href="#@cdktf/provider-google.spannerInstancePartition.SpannerInstancePartitionConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-google.spannerInstancePartition.SpannerInstancePartitionTimeouts">SpannerInstancePartitionTimeouts</a></code> | timeouts block. |
 
 ---
@@ -1032,7 +1032,7 @@ public readonly config: string;
 
 The name of the instance partition's configuration (similar to a region) which defines the geographic placement and replication of data in this instance partition.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.1/docs/resources/spanner_instance_partition#config SpannerInstancePartition#config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/spanner_instance_partition#config SpannerInstancePartition#config}
 
 ---
 
@@ -1048,7 +1048,7 @@ The descriptive name for this instance partition as it appears in UIs.
 
 Must be unique per project and between 4 and 30 characters in length.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.1/docs/resources/spanner_instance_partition#display_name SpannerInstancePartition#display_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/spanner_instance_partition#display_name SpannerInstancePartition#display_name}
 
 ---
 
@@ -1062,7 +1062,7 @@ public readonly instance: string;
 
 The instance to create the instance partition in.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.1/docs/resources/spanner_instance_partition#instance SpannerInstancePartition#instance}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/spanner_instance_partition#instance SpannerInstancePartition#instance}
 
 ---
 
@@ -1079,7 +1079,7 @@ A unique identifier for the instance partition, which cannot be changed after th
 The name must be between 2 and 64 characters
 and match the regular expression [a-z][a-z0-9\\-]{0,61}[a-z0-9].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.1/docs/resources/spanner_instance_partition#name SpannerInstancePartition#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/spanner_instance_partition#name SpannerInstancePartition#name}
 
 ---
 
@@ -1091,7 +1091,7 @@ public readonly id: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.1/docs/resources/spanner_instance_partition#id SpannerInstancePartition#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/spanner_instance_partition#id SpannerInstancePartition#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1112,7 +1112,7 @@ One node equals
 1000 processing units. Exactly one of either node_count or processing_units
 must be present.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.1/docs/resources/spanner_instance_partition#node_count SpannerInstancePartition#node_count}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/spanner_instance_partition#node_count SpannerInstancePartition#node_count}
 
 ---
 
@@ -1126,7 +1126,7 @@ public readonly processingUnits: number;
 
 The number of processing units allocated to this instance partition. Exactly one of either node_count or processing_units must be present.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.1/docs/resources/spanner_instance_partition#processing_units SpannerInstancePartition#processing_units}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/spanner_instance_partition#processing_units SpannerInstancePartition#processing_units}
 
 ---
 
@@ -1138,7 +1138,7 @@ public readonly project: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.1/docs/resources/spanner_instance_partition#project SpannerInstancePartition#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/spanner_instance_partition#project SpannerInstancePartition#project}.
 
 ---
 
@@ -1152,7 +1152,7 @@ public readonly timeouts: SpannerInstancePartitionTimeouts;
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.1/docs/resources/spanner_instance_partition#timeouts SpannerInstancePartition#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/spanner_instance_partition#timeouts SpannerInstancePartition#timeouts}
 
 ---
 
@@ -1170,9 +1170,9 @@ const spannerInstancePartitionTimeouts: spannerInstancePartition.SpannerInstance
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.spannerInstancePartition.SpannerInstancePartitionTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.1/docs/resources/spanner_instance_partition#create SpannerInstancePartition#create}. |
-| <code><a href="#@cdktf/provider-google.spannerInstancePartition.SpannerInstancePartitionTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.1/docs/resources/spanner_instance_partition#delete SpannerInstancePartition#delete}. |
-| <code><a href="#@cdktf/provider-google.spannerInstancePartition.SpannerInstancePartitionTimeouts.property.update">update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.1/docs/resources/spanner_instance_partition#update SpannerInstancePartition#update}. |
+| <code><a href="#@cdktf/provider-google.spannerInstancePartition.SpannerInstancePartitionTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/spanner_instance_partition#create SpannerInstancePartition#create}. |
+| <code><a href="#@cdktf/provider-google.spannerInstancePartition.SpannerInstancePartitionTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/spanner_instance_partition#delete SpannerInstancePartition#delete}. |
+| <code><a href="#@cdktf/provider-google.spannerInstancePartition.SpannerInstancePartitionTimeouts.property.update">update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/spanner_instance_partition#update SpannerInstancePartition#update}. |
 
 ---
 
@@ -1184,7 +1184,7 @@ public readonly create: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.1/docs/resources/spanner_instance_partition#create SpannerInstancePartition#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/spanner_instance_partition#create SpannerInstancePartition#create}.
 
 ---
 
@@ -1196,7 +1196,7 @@ public readonly delete: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.1/docs/resources/spanner_instance_partition#delete SpannerInstancePartition#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/spanner_instance_partition#delete SpannerInstancePartition#delete}.
 
 ---
 
@@ -1208,7 +1208,7 @@ public readonly update: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.1/docs/resources/spanner_instance_partition#update SpannerInstancePartition#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/spanner_instance_partition#update SpannerInstancePartition#update}.
 
 ---
 
