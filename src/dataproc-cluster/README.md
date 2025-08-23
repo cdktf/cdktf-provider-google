@@ -1,3 +1,3 @@
 # `google_dataproc_cluster`
 
-Refer to the Terraform Registry for docs: [`google_dataproc_cluster`](https://registry.terraform.io/providers/hashicorp/google/6.49.1/docs/resources/dataproc_cluster).
+Refer to the Terraform Registry for docs: [`google_dataproc_cluster`](https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/dataproc_cluster).

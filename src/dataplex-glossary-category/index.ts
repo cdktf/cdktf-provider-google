@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/6.49.1/docs/resources/dataplex_glossary_category
+// https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/dataplex_glossary_category
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,29 +15,29 @@ export interface DataplexGlossaryCategoryConfig extends cdktf.TerraformMetaArgum
   /**
   * The category id for creation.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.1/docs/resources/dataplex_glossary_category#category_id DataplexGlossaryCategory#category_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/dataplex_glossary_category#category_id DataplexGlossaryCategory#category_id}
   */
   readonly categoryId?: string;
   /**
   * The user-mutable description of the GlossaryCategory.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.1/docs/resources/dataplex_glossary_category#description DataplexGlossaryCategory#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/dataplex_glossary_category#description DataplexGlossaryCategory#description}
   */
   readonly description?: string;
   /**
   * User friendly display name of the GlossaryCategory. This is user-mutable. This will be same as the categoryId, if not specified.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.1/docs/resources/dataplex_glossary_category#display_name DataplexGlossaryCategory#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/dataplex_glossary_category#display_name DataplexGlossaryCategory#display_name}
   */
   readonly displayName?: string;
   /**
   * The glossary id for creation.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.1/docs/resources/dataplex_glossary_category#glossary_id DataplexGlossaryCategory#glossary_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/dataplex_glossary_category#glossary_id DataplexGlossaryCategory#glossary_id}
   */
   readonly glossaryId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.1/docs/resources/dataplex_glossary_category#id DataplexGlossaryCategory#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/dataplex_glossary_category#id DataplexGlossaryCategory#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -50,43 +50,43 @@ export interface DataplexGlossaryCategoryConfig extends cdktf.TerraformMetaArgum
   * **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
   * Please refer to the field 'effective_labels' for all of the labels present on the resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.1/docs/resources/dataplex_glossary_category#labels DataplexGlossaryCategory#labels}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/dataplex_glossary_category#labels DataplexGlossaryCategory#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
   * The location where the glossary category should reside.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.1/docs/resources/dataplex_glossary_category#location DataplexGlossaryCategory#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/dataplex_glossary_category#location DataplexGlossaryCategory#location}
   */
   readonly location: string;
   /**
   * The immediate parent of the GlossaryCategory in the resource-hierarchy. It can either be a Glossary or a Category. Format: projects/{projectId}/locations/{locationId}/glossaries/{glossaryId} OR projects/{projectId}/locations/{locationId}/glossaries/{glossaryId}/categories/{categoryId}
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.1/docs/resources/dataplex_glossary_category#parent DataplexGlossaryCategory#parent}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/dataplex_glossary_category#parent DataplexGlossaryCategory#parent}
   */
   readonly parent: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.1/docs/resources/dataplex_glossary_category#project DataplexGlossaryCategory#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/dataplex_glossary_category#project DataplexGlossaryCategory#project}
   */
   readonly project?: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.1/docs/resources/dataplex_glossary_category#timeouts DataplexGlossaryCategory#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/dataplex_glossary_category#timeouts DataplexGlossaryCategory#timeouts}
   */
   readonly timeouts?: DataplexGlossaryCategoryTimeouts;
 }
 export interface DataplexGlossaryCategoryTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.1/docs/resources/dataplex_glossary_category#create DataplexGlossaryCategory#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/dataplex_glossary_category#create DataplexGlossaryCategory#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.1/docs/resources/dataplex_glossary_category#delete DataplexGlossaryCategory#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/dataplex_glossary_category#delete DataplexGlossaryCategory#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.1/docs/resources/dataplex_glossary_category#update DataplexGlossaryCategory#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/dataplex_glossary_category#update DataplexGlossaryCategory#update}
   */
   readonly update?: string;
 }
@@ -238,7 +238,7 @@ export class DataplexGlossaryCategoryTimeoutsOutputReference extends cdktf.Compl
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.49.1/docs/resources/dataplex_glossary_category google_dataplex_glossary_category}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/dataplex_glossary_category google_dataplex_glossary_category}
 */
 export class DataplexGlossaryCategory extends cdktf.TerraformResource {
 
@@ -254,7 +254,7 @@ export class DataplexGlossaryCategory extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a DataplexGlossaryCategory resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DataplexGlossaryCategory to import
-  * @param importFromId The id of the existing DataplexGlossaryCategory that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.49.1/docs/resources/dataplex_glossary_category#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DataplexGlossaryCategory that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/dataplex_glossary_category#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DataplexGlossaryCategory to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -266,7 +266,7 @@ export class DataplexGlossaryCategory extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.49.1/docs/resources/dataplex_glossary_category google_dataplex_glossary_category} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/dataplex_glossary_category google_dataplex_glossary_category} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -277,7 +277,7 @@ export class DataplexGlossaryCategory extends cdktf.TerraformResource {
       terraformResourceType: 'google_dataplex_glossary_category',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.49.1',
+        providerVersion: '6.49.2',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,
