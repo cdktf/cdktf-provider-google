@@ -1,3 +1,3 @@
 # `google_gke_backup_restore_channel`
 
-Refer to the Terraform Registry for docs: [`google_gke_backup_restore_channel`](https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/gke_backup_restore_channel).
+Refer to the Terraform Registry for docs: [`google_gke_backup_restore_channel`](https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/gke_backup_restore_channel).

@@ -1,3 +1,3 @@
 # `google_document_ai_processor_default_version`
 
-Refer to the Terraform Registry for docs: [`google_document_ai_processor_default_version`](https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/document_ai_processor_default_version).
+Refer to the Terraform Registry for docs: [`google_document_ai_processor_default_version`](https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/document_ai_processor_default_version).

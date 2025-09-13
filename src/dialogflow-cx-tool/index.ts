@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/dialogflow_cx_tool
+// https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_cx_tool
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,17 +15,17 @@ export interface DialogflowCxToolConfig extends cdktf.TerraformMetaArguments {
   /**
   * High level description of the Tool and its usage.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/dialogflow_cx_tool#description DialogflowCxTool#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_cx_tool#description DialogflowCxTool#description}
   */
   readonly description: string;
   /**
   * The human-readable name of the tool, unique within the agent.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/dialogflow_cx_tool#display_name DialogflowCxTool#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_cx_tool#display_name DialogflowCxTool#display_name}
   */
   readonly displayName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/dialogflow_cx_tool#id DialogflowCxTool#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_cx_tool#id DialogflowCxTool#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -35,31 +35,31 @@ export interface DialogflowCxToolConfig extends cdktf.TerraformMetaArguments {
   * The agent to create a Tool for.
   * Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/dialogflow_cx_tool#parent DialogflowCxTool#parent}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_cx_tool#parent DialogflowCxTool#parent}
   */
   readonly parent?: string;
   /**
   * data_store_spec block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/dialogflow_cx_tool#data_store_spec DialogflowCxTool#data_store_spec}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_cx_tool#data_store_spec DialogflowCxTool#data_store_spec}
   */
   readonly dataStoreSpec?: DialogflowCxToolDataStoreSpec;
   /**
   * function_spec block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/dialogflow_cx_tool#function_spec DialogflowCxTool#function_spec}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_cx_tool#function_spec DialogflowCxTool#function_spec}
   */
   readonly functionSpec?: DialogflowCxToolFunctionSpec;
   /**
   * open_api_spec block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/dialogflow_cx_tool#open_api_spec DialogflowCxTool#open_api_spec}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_cx_tool#open_api_spec DialogflowCxTool#open_api_spec}
   */
   readonly openApiSpec?: DialogflowCxToolOpenApiSpec;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/dialogflow_cx_tool#timeouts DialogflowCxTool#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_cx_tool#timeouts DialogflowCxTool#timeouts}
   */
   readonly timeouts?: DialogflowCxToolTimeouts;
 }
@@ -67,21 +67,21 @@ export interface DialogflowCxToolDataStoreSpecDataStoreConnections {
   /**
   * The full name of the referenced data store. Formats: projects/{project}/locations/{location}/collections/{collection}/dataStores/{dataStore} projects/{project}/locations/{location}/dataStores/{dataStore}
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/dialogflow_cx_tool#data_store DialogflowCxTool#data_store}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_cx_tool#data_store DialogflowCxTool#data_store}
   */
   readonly dataStore?: string;
   /**
   * The type of the connected data store.
   * See [DataStoreType](https://cloud.google.com/dialogflow/cx/docs/reference/rest/v3/DataStoreConnection#datastoretype) for valid values.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/dialogflow_cx_tool#data_store_type DialogflowCxTool#data_store_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_cx_tool#data_store_type DialogflowCxTool#data_store_type}
   */
   readonly dataStoreType?: string;
   /**
   * The document processing mode for the data store connection. Should only be set for PUBLIC_WEB and UNSTRUCTURED data stores. If not set it is considered as DOCUMENTS, as this is the legacy mode.
   * See [DocumentProcessingMode](https://cloud.google.com/dialogflow/cx/docs/reference/rest/v3/DataStoreConnection#documentprocessingmode) for valid values.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/dialogflow_cx_tool#document_processing_mode DialogflowCxTool#document_processing_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_cx_tool#document_processing_mode DialogflowCxTool#document_processing_mode}
   */
   readonly documentProcessingMode?: string;
 }
@@ -306,13 +306,13 @@ export interface DialogflowCxToolDataStoreSpec {
   /**
   * data_store_connections block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/dialogflow_cx_tool#data_store_connections DialogflowCxTool#data_store_connections}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_cx_tool#data_store_connections DialogflowCxTool#data_store_connections}
   */
   readonly dataStoreConnections: DialogflowCxToolDataStoreSpecDataStoreConnections[] | cdktf.IResolvable;
   /**
   * fallback_prompt block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/dialogflow_cx_tool#fallback_prompt DialogflowCxTool#fallback_prompt}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_cx_tool#fallback_prompt DialogflowCxTool#fallback_prompt}
   */
   readonly fallbackPrompt: DialogflowCxToolDataStoreSpecFallbackPrompt;
 }
@@ -422,14 +422,14 @@ export interface DialogflowCxToolFunctionSpec {
   * Optional. The JSON schema is encapsulated in a [google.protobuf.Struct](https://protobuf.dev/reference/protobuf/google.protobuf/#struct) to describe the input of the function.
   * This input is a JSON object that contains the function's parameters as properties of the object
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/dialogflow_cx_tool#input_schema DialogflowCxTool#input_schema}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_cx_tool#input_schema DialogflowCxTool#input_schema}
   */
   readonly inputSchema?: string;
   /**
   * Optional. The JSON schema is encapsulated in a [google.protobuf.Struct](https://protobuf.dev/reference/protobuf/google.protobuf/#struct) to describe the output of the function.
   * This output is a JSON object that contains the function's parameters as properties of the object
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/dialogflow_cx_tool#output_schema DialogflowCxTool#output_schema}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_cx_tool#output_schema DialogflowCxTool#output_schema}
   */
   readonly outputSchema?: string;
 }
@@ -544,21 +544,21 @@ export interface DialogflowCxToolOpenApiSpecAuthenticationApiKeyConfig {
   /**
   * Optional. The API key. If the 'secretVersionForApiKey'' field is set, this field will be ignored.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/dialogflow_cx_tool#api_key DialogflowCxTool#api_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_cx_tool#api_key DialogflowCxTool#api_key}
   */
   readonly apiKey?: string;
   /**
   * The parameter name or the header name of the API key.
   * E.g., If the API request is "https://example.com/act?X-Api-Key=", "X-Api-Key" would be the parameter name.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/dialogflow_cx_tool#key_name DialogflowCxTool#key_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_cx_tool#key_name DialogflowCxTool#key_name}
   */
   readonly keyName: string;
   /**
   * Key location in the request.
   * See [RequestLocation](https://cloud.google.com/dialogflow/cx/docs/reference/rest/v3/projects.locations.agents.tools#requestlocation) for valid values.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/dialogflow_cx_tool#request_location DialogflowCxTool#request_location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_cx_tool#request_location DialogflowCxTool#request_location}
   */
   readonly requestLocation: string;
   /**
@@ -566,7 +566,7 @@ export interface DialogflowCxToolOpenApiSpecAuthenticationApiKeyConfig {
   * If this field is set, the apiKey field will be ignored.
   * Format: projects/{project}/secrets/{secret}/versions/{version}
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/dialogflow_cx_tool#secret_version_for_api_key DialogflowCxTool#secret_version_for_api_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_cx_tool#secret_version_for_api_key DialogflowCxTool#secret_version_for_api_key}
   */
   readonly secretVersionForApiKey?: string;
 }
@@ -734,14 +734,14 @@ export interface DialogflowCxToolOpenApiSpecAuthenticationBearerTokenConfig {
   * Optional. The name of the SecretManager secret version resource storing the Bearer token. If this field is set, the 'token' field will be ignored.
   * Format: projects/{project}/secrets/{secret}/versions/{version}
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/dialogflow_cx_tool#secret_version_for_token DialogflowCxTool#secret_version_for_token}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_cx_tool#secret_version_for_token DialogflowCxTool#secret_version_for_token}
   */
   readonly secretVersionForToken?: string;
   /**
   * Optional. The text token appended to the text Bearer to the request Authorization header.
   * [Session parameters reference](https://cloud.google.com/dialogflow/cx/docs/concept/parameter#session-ref) can be used to pass the token dynamically, e.g. '$session.params.parameter-id'.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/dialogflow_cx_tool#token DialogflowCxTool#token}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_cx_tool#token DialogflowCxTool#token}
   */
   readonly token?: string;
 }
@@ -856,26 +856,26 @@ export interface DialogflowCxToolOpenApiSpecAuthenticationOauthConfig {
   /**
   * The client ID from the OAuth provider.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/dialogflow_cx_tool#client_id DialogflowCxTool#client_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_cx_tool#client_id DialogflowCxTool#client_id}
   */
   readonly clientId: string;
   /**
   * Optional. The client secret from the OAuth provider. If the 'secretVersionForClientSecret' field is set, this field will be ignored.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/dialogflow_cx_tool#client_secret DialogflowCxTool#client_secret}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_cx_tool#client_secret DialogflowCxTool#client_secret}
   */
   readonly clientSecret?: string;
   /**
   * OAuth grant types.
   * See [OauthGrantType](https://cloud.google.com/dialogflow/cx/docs/reference/rest/v3/projects.locations.agents.tools#oauthgranttype) for valid values
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/dialogflow_cx_tool#oauth_grant_type DialogflowCxTool#oauth_grant_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_cx_tool#oauth_grant_type DialogflowCxTool#oauth_grant_type}
   */
   readonly oauthGrantType: string;
   /**
   * Optional. The OAuth scopes to grant.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/dialogflow_cx_tool#scopes DialogflowCxTool#scopes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_cx_tool#scopes DialogflowCxTool#scopes}
   */
   readonly scopes?: string[];
   /**
@@ -883,13 +883,13 @@ export interface DialogflowCxToolOpenApiSpecAuthenticationOauthConfig {
   * If this field is set, the clientSecret field will be ignored.
   * Format: projects/{project}/secrets/{secret}/versions/{version}
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/dialogflow_cx_tool#secret_version_for_client_secret DialogflowCxTool#secret_version_for_client_secret}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_cx_tool#secret_version_for_client_secret DialogflowCxTool#secret_version_for_client_secret}
   */
   readonly secretVersionForClientSecret?: string;
   /**
   * The token endpoint in the OAuth provider to exchange for an access token.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/dialogflow_cx_tool#token_endpoint DialogflowCxTool#token_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_cx_tool#token_endpoint DialogflowCxTool#token_endpoint}
   */
   readonly tokenEndpoint: string;
 }
@@ -1113,7 +1113,7 @@ export interface DialogflowCxToolOpenApiSpecAuthenticationServiceAgentAuthConfig
   * The generated token is sent in the Authorization header.
   * See [ServiceAgentAuth](https://cloud.google.com/dialogflow/cx/docs/reference/rest/v3/projects.locations.agents.tools#serviceagentauth) for valid values.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/dialogflow_cx_tool#service_agent_auth DialogflowCxTool#service_agent_auth}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_cx_tool#service_agent_auth DialogflowCxTool#service_agent_auth}
   */
   readonly serviceAgentAuth?: string;
 }
@@ -1199,25 +1199,25 @@ export interface DialogflowCxToolOpenApiSpecAuthentication {
   /**
   * api_key_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/dialogflow_cx_tool#api_key_config DialogflowCxTool#api_key_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_cx_tool#api_key_config DialogflowCxTool#api_key_config}
   */
   readonly apiKeyConfig?: DialogflowCxToolOpenApiSpecAuthenticationApiKeyConfig;
   /**
   * bearer_token_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/dialogflow_cx_tool#bearer_token_config DialogflowCxTool#bearer_token_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_cx_tool#bearer_token_config DialogflowCxTool#bearer_token_config}
   */
   readonly bearerTokenConfig?: DialogflowCxToolOpenApiSpecAuthenticationBearerTokenConfig;
   /**
   * oauth_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/dialogflow_cx_tool#oauth_config DialogflowCxTool#oauth_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_cx_tool#oauth_config DialogflowCxTool#oauth_config}
   */
   readonly oauthConfig?: DialogflowCxToolOpenApiSpecAuthenticationOauthConfig;
   /**
   * service_agent_auth_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/dialogflow_cx_tool#service_agent_auth_config DialogflowCxTool#service_agent_auth_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_cx_tool#service_agent_auth_config DialogflowCxTool#service_agent_auth_config}
   */
   readonly serviceAgentAuthConfig?: DialogflowCxToolOpenApiSpecAuthenticationServiceAgentAuthConfig;
 }
@@ -1391,7 +1391,7 @@ export interface DialogflowCxToolOpenApiSpecServiceDirectoryConfig {
   * The name of [Service Directory](https://cloud.google.com/service-directory/docs) service.
   * Format: projects/<ProjectID>/locations/<LocationID>/namespaces/<NamespaceID>/services/<ServiceID>. LocationID of the service directory must be the same as the location of the agent.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/dialogflow_cx_tool#service DialogflowCxTool#service}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_cx_tool#service DialogflowCxTool#service}
   */
   readonly service: string;
 }
@@ -1484,13 +1484,13 @@ export interface DialogflowCxToolOpenApiSpecTlsConfigCaCerts {
   * ```
   * A base64-encoded string.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/dialogflow_cx_tool#cert DialogflowCxTool#cert}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_cx_tool#cert DialogflowCxTool#cert}
   */
   readonly cert: string;
   /**
   * The name of the allowed custom CA certificates. This can be used to disambiguate the custom CA certificates.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/dialogflow_cx_tool#display_name DialogflowCxTool#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_cx_tool#display_name DialogflowCxTool#display_name}
   */
   readonly displayName: string;
 }
@@ -1631,7 +1631,7 @@ export interface DialogflowCxToolOpenApiSpecTlsConfig {
   /**
   * ca_certs block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/dialogflow_cx_tool#ca_certs DialogflowCxTool#ca_certs}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_cx_tool#ca_certs DialogflowCxTool#ca_certs}
   */
   readonly caCerts: DialogflowCxToolOpenApiSpecTlsConfigCaCerts[] | cdktf.IResolvable;
 }
@@ -1715,25 +1715,25 @@ export interface DialogflowCxToolOpenApiSpec {
   * The OpenAPI schema specified as a text.
   * This field is part of a union field 'schema': only one of 'textSchema' may be set.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/dialogflow_cx_tool#text_schema DialogflowCxTool#text_schema}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_cx_tool#text_schema DialogflowCxTool#text_schema}
   */
   readonly textSchema: string;
   /**
   * authentication block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/dialogflow_cx_tool#authentication DialogflowCxTool#authentication}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_cx_tool#authentication DialogflowCxTool#authentication}
   */
   readonly authentication?: DialogflowCxToolOpenApiSpecAuthentication;
   /**
   * service_directory_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/dialogflow_cx_tool#service_directory_config DialogflowCxTool#service_directory_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_cx_tool#service_directory_config DialogflowCxTool#service_directory_config}
   */
   readonly serviceDirectoryConfig?: DialogflowCxToolOpenApiSpecServiceDirectoryConfig;
   /**
   * tls_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/dialogflow_cx_tool#tls_config DialogflowCxTool#tls_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_cx_tool#tls_config DialogflowCxTool#tls_config}
   */
   readonly tlsConfig?: DialogflowCxToolOpenApiSpecTlsConfig;
 }
@@ -1901,15 +1901,15 @@ export class DialogflowCxToolOpenApiSpecOutputReference extends cdktf.ComplexObj
 }
 export interface DialogflowCxToolTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/dialogflow_cx_tool#create DialogflowCxTool#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_cx_tool#create DialogflowCxTool#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/dialogflow_cx_tool#delete DialogflowCxTool#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_cx_tool#delete DialogflowCxTool#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/dialogflow_cx_tool#update DialogflowCxTool#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_cx_tool#update DialogflowCxTool#update}
   */
   readonly update?: string;
 }
@@ -2061,7 +2061,7 @@ export class DialogflowCxToolTimeoutsOutputReference extends cdktf.ComplexObject
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/dialogflow_cx_tool google_dialogflow_cx_tool}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_cx_tool google_dialogflow_cx_tool}
 */
 export class DialogflowCxTool extends cdktf.TerraformResource {
 
@@ -2077,7 +2077,7 @@ export class DialogflowCxTool extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a DialogflowCxTool resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DialogflowCxTool to import
-  * @param importFromId The id of the existing DialogflowCxTool that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/dialogflow_cx_tool#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DialogflowCxTool that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_cx_tool#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DialogflowCxTool to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -2089,7 +2089,7 @@ export class DialogflowCxTool extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/dialogflow_cx_tool google_dialogflow_cx_tool} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_cx_tool google_dialogflow_cx_tool} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -2100,7 +2100,7 @@ export class DialogflowCxTool extends cdktf.TerraformResource {
       terraformResourceType: 'google_dialogflow_cx_tool',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.49.2',
+        providerVersion: '6.49.3',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,

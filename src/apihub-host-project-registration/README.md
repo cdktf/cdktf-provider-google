@@ -1,3 +1,3 @@
 # `google_apihub_host_project_registration`
 
-Refer to the Terraform Registry for docs: [`google_apihub_host_project_registration`](https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/apihub_host_project_registration).
+Refer to the Terraform Registry for docs: [`google_apihub_host_project_registration`](https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/apihub_host_project_registration).

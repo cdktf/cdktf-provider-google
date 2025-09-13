@@ -1,3 +1,3 @@
 # `google_lustre_instance`
 
-Refer to the Terraform Registry for docs: [`google_lustre_instance`](https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/lustre_instance).
+Refer to the Terraform Registry for docs: [`google_lustre_instance`](https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/lustre_instance).

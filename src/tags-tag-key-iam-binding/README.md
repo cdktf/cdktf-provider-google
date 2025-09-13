@@ -1,3 +1,3 @@
 # `google_tags_tag_key_iam_binding`
 
-Refer to the Terraform Registry for docs: [`google_tags_tag_key_iam_binding`](https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/tags_tag_key_iam_binding).
+Refer to the Terraform Registry for docs: [`google_tags_tag_key_iam_binding`](https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/tags_tag_key_iam_binding).
