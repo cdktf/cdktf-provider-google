@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/compute_storage_pool_iam_binding
+// https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/compute_storage_pool_iam_binding
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,50 +13,50 @@ import * as cdktf from 'cdktf';
 
 export interface ComputeStoragePoolIamBindingConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/compute_storage_pool_iam_binding#id ComputeStoragePoolIamBinding#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/compute_storage_pool_iam_binding#id ComputeStoragePoolIamBinding#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/compute_storage_pool_iam_binding#members ComputeStoragePoolIamBinding#members}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/compute_storage_pool_iam_binding#members ComputeStoragePoolIamBinding#members}
   */
   readonly members: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/compute_storage_pool_iam_binding#name ComputeStoragePoolIamBinding#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/compute_storage_pool_iam_binding#name ComputeStoragePoolIamBinding#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/compute_storage_pool_iam_binding#project ComputeStoragePoolIamBinding#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/compute_storage_pool_iam_binding#project ComputeStoragePoolIamBinding#project}
   */
   readonly project?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/compute_storage_pool_iam_binding#role ComputeStoragePoolIamBinding#role}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/compute_storage_pool_iam_binding#role ComputeStoragePoolIamBinding#role}
   */
   readonly role: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/compute_storage_pool_iam_binding#zone ComputeStoragePoolIamBinding#zone}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/compute_storage_pool_iam_binding#zone ComputeStoragePoolIamBinding#zone}
   */
   readonly zone?: string;
   /**
   * condition block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/compute_storage_pool_iam_binding#condition ComputeStoragePoolIamBinding#condition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/compute_storage_pool_iam_binding#condition ComputeStoragePoolIamBinding#condition}
   */
   readonly condition?: ComputeStoragePoolIamBindingCondition;
 }
 export interface ComputeStoragePoolIamBindingCondition {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/compute_storage_pool_iam_binding#description ComputeStoragePoolIamBinding#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/compute_storage_pool_iam_binding#description ComputeStoragePoolIamBinding#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/compute_storage_pool_iam_binding#expression ComputeStoragePoolIamBinding#expression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/compute_storage_pool_iam_binding#expression ComputeStoragePoolIamBinding#expression}
   */
   readonly expression: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/compute_storage_pool_iam_binding#title ComputeStoragePoolIamBinding#title}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/compute_storage_pool_iam_binding#title ComputeStoragePoolIamBinding#title}
   */
   readonly title: string;
 }
@@ -192,7 +192,7 @@ export class ComputeStoragePoolIamBindingConditionOutputReference extends cdktf.
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/compute_storage_pool_iam_binding google_compute_storage_pool_iam_binding}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/compute_storage_pool_iam_binding google_compute_storage_pool_iam_binding}
 */
 export class ComputeStoragePoolIamBinding extends cdktf.TerraformResource {
 
@@ -208,7 +208,7 @@ export class ComputeStoragePoolIamBinding extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a ComputeStoragePoolIamBinding resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the ComputeStoragePoolIamBinding to import
-  * @param importFromId The id of the existing ComputeStoragePoolIamBinding that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/compute_storage_pool_iam_binding#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing ComputeStoragePoolIamBinding that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/compute_storage_pool_iam_binding#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the ComputeStoragePoolIamBinding to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -220,7 +220,7 @@ export class ComputeStoragePoolIamBinding extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/compute_storage_pool_iam_binding google_compute_storage_pool_iam_binding} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/compute_storage_pool_iam_binding google_compute_storage_pool_iam_binding} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -231,7 +231,7 @@ export class ComputeStoragePoolIamBinding extends cdktf.TerraformResource {
       terraformResourceType: 'google_compute_storage_pool_iam_binding',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.49.2',
+        providerVersion: '6.49.3',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,

@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/compute_router_nat
+// https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/compute_router_nat
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -17,14 +17,14 @@ export interface ComputeRouterNatConfig extends cdktf.TerraformMetaArguments {
   * Must be one of: PREMIUM, STANDARD. If not specified, then the current
   * project-level default tier is used. Possible values: ["PREMIUM", "STANDARD"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/compute_router_nat#auto_network_tier ComputeRouterNat#auto_network_tier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/compute_router_nat#auto_network_tier ComputeRouterNat#auto_network_tier}
   */
   readonly autoNetworkTier?: string;
   /**
   * A list of URLs of the IP resources to be drained. These IPs must be
   * valid static external IPs that have been assigned to the NAT.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/compute_router_nat#drain_nat_ips ComputeRouterNat#drain_nat_ips}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/compute_router_nat#drain_nat_ips ComputeRouterNat#drain_nat_ips}
   */
   readonly drainNatIps?: string[];
   /**
@@ -36,14 +36,14 @@ export interface ComputeRouterNatConfig extends cdktf.TerraformMetaArguments {
   * 
   * Mutually exclusive with enableEndpointIndependentMapping.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/compute_router_nat#enable_dynamic_port_allocation ComputeRouterNat#enable_dynamic_port_allocation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/compute_router_nat#enable_dynamic_port_allocation ComputeRouterNat#enable_dynamic_port_allocation}
   */
   readonly enableDynamicPortAllocation?: boolean | cdktf.IResolvable;
   /**
   * Enable endpoint independent mapping.
   * For more information see the [official documentation](https://cloud.google.com/nat/docs/overview#specs-rfcs).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/compute_router_nat#enable_endpoint_independent_mapping ComputeRouterNat#enable_endpoint_independent_mapping}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/compute_router_nat#enable_endpoint_independent_mapping ComputeRouterNat#enable_endpoint_independent_mapping}
   */
   readonly enableEndpointIndependentMapping?: boolean | cdktf.IResolvable;
   /**
@@ -52,17 +52,17 @@ export interface ComputeRouterNatConfig extends cdktf.TerraformMetaArguments {
   *       'ENDPOINT_TYPE_VM', 'ENDPOINT_TYPE_SWG',
   *       'ENDPOINT_TYPE_MANAGED_PROXY_LB'.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/compute_router_nat#endpoint_types ComputeRouterNat#endpoint_types}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/compute_router_nat#endpoint_types ComputeRouterNat#endpoint_types}
   */
   readonly endpointTypes?: string[];
   /**
   * Timeout (in seconds) for ICMP connections. Defaults to 30s if not set.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/compute_router_nat#icmp_idle_timeout_sec ComputeRouterNat#icmp_idle_timeout_sec}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/compute_router_nat#icmp_idle_timeout_sec ComputeRouterNat#icmp_idle_timeout_sec}
   */
   readonly icmpIdleTimeoutSec?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/compute_router_nat#id ComputeRouterNat#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/compute_router_nat#id ComputeRouterNat#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -72,27 +72,27 @@ export interface ComputeRouterNatConfig extends cdktf.TerraformMetaArguments {
   * Self-links of NAT IPs to be used as initial value for creation alongside a RouterNatAddress resource.
   * Conflicts with natIps and drainNatIps. Only valid if natIpAllocateOption is set to MANUAL_ONLY.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/compute_router_nat#initial_nat_ips ComputeRouterNat#initial_nat_ips}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/compute_router_nat#initial_nat_ips ComputeRouterNat#initial_nat_ips}
   */
   readonly initialNatIps?: string[];
   /**
   * Maximum number of ports allocated to a VM from this NAT.
   * This field can only be set when enableDynamicPortAllocation is enabled.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/compute_router_nat#max_ports_per_vm ComputeRouterNat#max_ports_per_vm}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/compute_router_nat#max_ports_per_vm ComputeRouterNat#max_ports_per_vm}
   */
   readonly maxPortsPerVm?: number;
   /**
   * Minimum number of ports allocated to a VM from this NAT. Defaults to 64 for static port allocation and 32 dynamic port allocation if not set.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/compute_router_nat#min_ports_per_vm ComputeRouterNat#min_ports_per_vm}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/compute_router_nat#min_ports_per_vm ComputeRouterNat#min_ports_per_vm}
   */
   readonly minPortsPerVm?: number;
   /**
   * Name of the NAT service. The name must be 1-63 characters long and
   * comply with RFC1035.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/compute_router_nat#name ComputeRouterNat#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/compute_router_nat#name ComputeRouterNat#name}
   */
   readonly name: string;
   /**
@@ -100,7 +100,7 @@ export interface ComputeRouterNatConfig extends cdktf.TerraformMetaArguments {
   * 'AUTO_ONLY' for only allowing NAT IPs allocated by Google Cloud
   * Platform, or 'MANUAL_ONLY' for only user-allocated NAT IP addresses. Possible values: ["MANUAL_ONLY", "AUTO_ONLY"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/compute_router_nat#nat_ip_allocate_option ComputeRouterNat#nat_ip_allocate_option}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/compute_router_nat#nat_ip_allocate_option ComputeRouterNat#nat_ip_allocate_option}
   */
   readonly natIpAllocateOption?: string;
   /**
@@ -110,23 +110,23 @@ export interface ComputeRouterNatConfig extends cdktf.TerraformMetaArguments {
   * the access level resource for the address resource must have a 'lifecycle' block with 'create_before_destroy = true' so
   * the number of resources can be increased/decreased without triggering the 'resourceInUseByAnotherResource' error.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/compute_router_nat#nat_ips ComputeRouterNat#nat_ips}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/compute_router_nat#nat_ips ComputeRouterNat#nat_ips}
   */
   readonly natIps?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/compute_router_nat#project ComputeRouterNat#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/compute_router_nat#project ComputeRouterNat#project}
   */
   readonly project?: string;
   /**
   * Region where the router and NAT reside.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/compute_router_nat#region ComputeRouterNat#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/compute_router_nat#region ComputeRouterNat#region}
   */
   readonly region?: string;
   /**
   * The name of the Cloud Router in which this NAT will be configured.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/compute_router_nat#router ComputeRouterNat#router}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/compute_router_nat#router ComputeRouterNat#router}
   */
   readonly router: string;
   /**
@@ -141,7 +141,7 @@ export interface ComputeRouterNatConfig extends cdktf.TerraformMetaArguments {
   * ALL_SUBNETWORKS_ALL_PRIMARY_IP_RANGES, then there should not be any
   * other RouterNat section in any Router for this network in this region. Possible values: ["ALL_SUBNETWORKS_ALL_IP_RANGES", "ALL_SUBNETWORKS_ALL_PRIMARY_IP_RANGES", "LIST_OF_SUBNETWORKS"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/compute_router_nat#source_subnetwork_ip_ranges_to_nat ComputeRouterNat#source_subnetwork_ip_ranges_to_nat}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/compute_router_nat#source_subnetwork_ip_ranges_to_nat ComputeRouterNat#source_subnetwork_ip_ranges_to_nat}
   */
   readonly sourceSubnetworkIpRangesToNat: string;
   /**
@@ -151,28 +151,28 @@ export interface ComputeRouterNatConfig extends cdktf.TerraformMetaArguments {
   * Note that if this field contains NAT64_ALL_V6_SUBNETWORKS no other Router.Nat section in this region can also enable NAT64 for any Subnetworks in this network.
   * Other Router.Nat sections can still be present to enable NAT44 only. Possible values: ["ALL_IPV6_SUBNETWORKS", "LIST_OF_IPV6_SUBNETWORKS"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/compute_router_nat#source_subnetwork_ip_ranges_to_nat64 ComputeRouterNat#source_subnetwork_ip_ranges_to_nat64}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/compute_router_nat#source_subnetwork_ip_ranges_to_nat64 ComputeRouterNat#source_subnetwork_ip_ranges_to_nat64}
   */
   readonly sourceSubnetworkIpRangesToNat64?: string;
   /**
   * Timeout (in seconds) for TCP established connections.
   * Defaults to 1200s if not set.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/compute_router_nat#tcp_established_idle_timeout_sec ComputeRouterNat#tcp_established_idle_timeout_sec}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/compute_router_nat#tcp_established_idle_timeout_sec ComputeRouterNat#tcp_established_idle_timeout_sec}
   */
   readonly tcpEstablishedIdleTimeoutSec?: number;
   /**
   * Timeout (in seconds) for TCP connections that are in TIME_WAIT state.
   * Defaults to 120s if not set.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/compute_router_nat#tcp_time_wait_timeout_sec ComputeRouterNat#tcp_time_wait_timeout_sec}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/compute_router_nat#tcp_time_wait_timeout_sec ComputeRouterNat#tcp_time_wait_timeout_sec}
   */
   readonly tcpTimeWaitTimeoutSec?: number;
   /**
   * Timeout (in seconds) for TCP transitory connections.
   * Defaults to 30s if not set.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/compute_router_nat#tcp_transitory_idle_timeout_sec ComputeRouterNat#tcp_transitory_idle_timeout_sec}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/compute_router_nat#tcp_transitory_idle_timeout_sec ComputeRouterNat#tcp_transitory_idle_timeout_sec}
   */
   readonly tcpTransitoryIdleTimeoutSec?: number;
   /**
@@ -181,43 +181,43 @@ export interface ComputeRouterNatConfig extends cdktf.TerraformMetaArguments {
   * If 'PUBLIC' NAT used for public IP translation.
   * If 'PRIVATE' NAT used for private IP translation. Default value: "PUBLIC" Possible values: ["PUBLIC", "PRIVATE"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/compute_router_nat#type ComputeRouterNat#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/compute_router_nat#type ComputeRouterNat#type}
   */
   readonly type?: string;
   /**
   * Timeout (in seconds) for UDP connections. Defaults to 30s if not set.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/compute_router_nat#udp_idle_timeout_sec ComputeRouterNat#udp_idle_timeout_sec}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/compute_router_nat#udp_idle_timeout_sec ComputeRouterNat#udp_idle_timeout_sec}
   */
   readonly udpIdleTimeoutSec?: number;
   /**
   * log_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/compute_router_nat#log_config ComputeRouterNat#log_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/compute_router_nat#log_config ComputeRouterNat#log_config}
   */
   readonly logConfig?: ComputeRouterNatLogConfig;
   /**
   * nat64_subnetwork block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/compute_router_nat#nat64_subnetwork ComputeRouterNat#nat64_subnetwork}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/compute_router_nat#nat64_subnetwork ComputeRouterNat#nat64_subnetwork}
   */
   readonly nat64Subnetwork?: ComputeRouterNatNat64Subnetwork[] | cdktf.IResolvable;
   /**
   * rules block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/compute_router_nat#rules ComputeRouterNat#rules}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/compute_router_nat#rules ComputeRouterNat#rules}
   */
   readonly rules?: ComputeRouterNatRules[] | cdktf.IResolvable;
   /**
   * subnetwork block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/compute_router_nat#subnetwork ComputeRouterNat#subnetwork}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/compute_router_nat#subnetwork ComputeRouterNat#subnetwork}
   */
   readonly subnetwork?: ComputeRouterNatSubnetwork[] | cdktf.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/compute_router_nat#timeouts ComputeRouterNat#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/compute_router_nat#timeouts ComputeRouterNat#timeouts}
   */
   readonly timeouts?: ComputeRouterNatTimeouts;
 }
@@ -225,13 +225,13 @@ export interface ComputeRouterNatLogConfig {
   /**
   * Indicates whether or not to export logs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/compute_router_nat#enable ComputeRouterNat#enable}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/compute_router_nat#enable ComputeRouterNat#enable}
   */
   readonly enable: boolean | cdktf.IResolvable;
   /**
   * Specifies the desired filtering of logs on this NAT. Possible values: ["ERRORS_ONLY", "TRANSLATIONS_ONLY", "ALL"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/compute_router_nat#filter ComputeRouterNat#filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/compute_router_nat#filter ComputeRouterNat#filter}
   */
   readonly filter: string;
 }
@@ -340,7 +340,7 @@ export interface ComputeRouterNatNat64Subnetwork {
   /**
   * Self-link of the subnetwork resource that will use NAT64
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/compute_router_nat#name ComputeRouterNat#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/compute_router_nat#name ComputeRouterNat#name}
   */
   readonly name: string;
 }
@@ -457,7 +457,7 @@ export interface ComputeRouterNatRulesAction {
   * These IP addresses must be valid static external IP addresses assigned to the project.
   * This field is used for public NAT.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/compute_router_nat#source_nat_active_ips ComputeRouterNat#source_nat_active_ips}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/compute_router_nat#source_nat_active_ips ComputeRouterNat#source_nat_active_ips}
   */
   readonly sourceNatActiveIps?: string[];
   /**
@@ -465,7 +465,7 @@ export interface ComputeRouterNatRulesAction {
   * These subnetworks must have purpose set to PRIVATE_NAT.
   * This field is used for private NAT.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/compute_router_nat#source_nat_active_ranges ComputeRouterNat#source_nat_active_ranges}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/compute_router_nat#source_nat_active_ranges ComputeRouterNat#source_nat_active_ranges}
   */
   readonly sourceNatActiveRanges?: string[];
   /**
@@ -474,7 +474,7 @@ export interface ComputeRouterNatRulesAction {
   * These IPs should be used for updating/patching a NAT rule only.
   * This field is used for public NAT.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/compute_router_nat#source_nat_drain_ips ComputeRouterNat#source_nat_drain_ips}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/compute_router_nat#source_nat_drain_ips ComputeRouterNat#source_nat_drain_ips}
   */
   readonly sourceNatDrainIps?: string[];
   /**
@@ -482,7 +482,7 @@ export interface ComputeRouterNatRulesAction {
   * This is only supported on patch/update, and these subnetworks must have previously been used as active ranges in this NAT Rule.
   * This field is used for private NAT.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/compute_router_nat#source_nat_drain_ranges ComputeRouterNat#source_nat_drain_ranges}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/compute_router_nat#source_nat_drain_ranges ComputeRouterNat#source_nat_drain_ranges}
   */
   readonly sourceNatDrainRanges?: string[];
 }
@@ -655,7 +655,7 @@ export interface ComputeRouterNatRules {
   /**
   * An optional description of this rule.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/compute_router_nat#description ComputeRouterNat#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/compute_router_nat#description ComputeRouterNat#description}
   */
   readonly description?: string;
   /**
@@ -672,20 +672,20 @@ export interface ComputeRouterNatRules {
   * 
   * "nexthop.hub == 'https://networkconnectivity.googleapis.com/v1alpha1/projects/my-project/global/hub/hub-1'"
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/compute_router_nat#match ComputeRouterNat#match}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/compute_router_nat#match ComputeRouterNat#match}
   */
   readonly match: string;
   /**
   * An integer uniquely identifying a rule in the list.
   * The rule number must be a positive value between 0 and 65000, and must be unique among rules within a NAT.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/compute_router_nat#rule_number ComputeRouterNat#rule_number}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/compute_router_nat#rule_number ComputeRouterNat#rule_number}
   */
   readonly ruleNumber: number;
   /**
   * action block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/compute_router_nat#action ComputeRouterNat#action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/compute_router_nat#action ComputeRouterNat#action}
   */
   readonly action?: ComputeRouterNatRulesAction;
 }
@@ -884,7 +884,7 @@ export interface ComputeRouterNatSubnetwork {
   /**
   * Self-link of subnetwork to NAT
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/compute_router_nat#name ComputeRouterNat#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/compute_router_nat#name ComputeRouterNat#name}
   */
   readonly name: string;
   /**
@@ -893,7 +893,7 @@ export interface ComputeRouterNatSubnetwork {
   * 'LIST_OF_SECONDARY_IP_RANGES' is one of the values in
   * sourceIpRangesToNat
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/compute_router_nat#secondary_ip_range_names ComputeRouterNat#secondary_ip_range_names}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/compute_router_nat#secondary_ip_range_names ComputeRouterNat#secondary_ip_range_names}
   */
   readonly secondaryIpRangeNames?: string[];
   /**
@@ -902,7 +902,7 @@ export interface ComputeRouterNatSubnetwork {
   * 'ALL_IP_RANGES', 'LIST_OF_SECONDARY_IP_RANGES',
   * 'PRIMARY_IP_RANGE'.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/compute_router_nat#source_ip_ranges_to_nat ComputeRouterNat#source_ip_ranges_to_nat}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/compute_router_nat#source_ip_ranges_to_nat ComputeRouterNat#source_ip_ranges_to_nat}
   */
   readonly sourceIpRangesToNat: string[];
 }
@@ -1070,15 +1070,15 @@ export class ComputeRouterNatSubnetworkList extends cdktf.ComplexList {
 }
 export interface ComputeRouterNatTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/compute_router_nat#create ComputeRouterNat#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/compute_router_nat#create ComputeRouterNat#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/compute_router_nat#delete ComputeRouterNat#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/compute_router_nat#delete ComputeRouterNat#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/compute_router_nat#update ComputeRouterNat#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/compute_router_nat#update ComputeRouterNat#update}
   */
   readonly update?: string;
 }
@@ -1230,7 +1230,7 @@ export class ComputeRouterNatTimeoutsOutputReference extends cdktf.ComplexObject
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/compute_router_nat google_compute_router_nat}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/compute_router_nat google_compute_router_nat}
 */
 export class ComputeRouterNat extends cdktf.TerraformResource {
 
@@ -1246,7 +1246,7 @@ export class ComputeRouterNat extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a ComputeRouterNat resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the ComputeRouterNat to import
-  * @param importFromId The id of the existing ComputeRouterNat that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/compute_router_nat#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing ComputeRouterNat that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/compute_router_nat#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the ComputeRouterNat to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -1258,7 +1258,7 @@ export class ComputeRouterNat extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/compute_router_nat google_compute_router_nat} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/compute_router_nat google_compute_router_nat} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -1269,7 +1269,7 @@ export class ComputeRouterNat extends cdktf.TerraformResource {
       terraformResourceType: 'google_compute_router_nat',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.49.2',
+        providerVersion: '6.49.3',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,

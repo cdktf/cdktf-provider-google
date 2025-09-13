@@ -1,3 +1,3 @@
 # `google_chronicle_data_access_label`
 
-Refer to the Terraform Registry for docs: [`google_chronicle_data_access_label`](https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/chronicle_data_access_label).
+Refer to the Terraform Registry for docs: [`google_chronicle_data_access_label`](https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/chronicle_data_access_label).

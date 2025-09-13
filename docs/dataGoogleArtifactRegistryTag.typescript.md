@@ -4,7 +4,7 @@
 
 ### DataGoogleArtifactRegistryTag <a name="DataGoogleArtifactRegistryTag" id="@cdktf/provider-google.dataGoogleArtifactRegistryTag.DataGoogleArtifactRegistryTag"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/data-sources/artifact_registry_tag google_artifact_registry_tag}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/data-sources/artifact_registry_tag google_artifact_registry_tag}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleArtifactRegistryTag.DataGoogleArtifactRegistryTag.Initializer"></a>
 
@@ -379,7 +379,7 @@ The construct id used in the generated config for the DataGoogleArtifactRegistry
 
 The id of the existing DataGoogleArtifactRegistryTag that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/data-sources/artifact_registry_tag#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/data-sources/artifact_registry_tag#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -727,12 +727,12 @@ const dataGoogleArtifactRegistryTagConfig: dataGoogleArtifactRegistryTag.DataGoo
 | <code><a href="#@cdktf/provider-google.dataGoogleArtifactRegistryTag.DataGoogleArtifactRegistryTagConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleArtifactRegistryTag.DataGoogleArtifactRegistryTagConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleArtifactRegistryTag.DataGoogleArtifactRegistryTagConfig.property.provisioners">provisioners</a></code> | <code>cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleArtifactRegistryTag.DataGoogleArtifactRegistryTagConfig.property.location">location</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/data-sources/artifact_registry_tag#location DataGoogleArtifactRegistryTag#location}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleArtifactRegistryTag.DataGoogleArtifactRegistryTagConfig.property.packageName">packageName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/data-sources/artifact_registry_tag#package_name DataGoogleArtifactRegistryTag#package_name}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleArtifactRegistryTag.DataGoogleArtifactRegistryTagConfig.property.repositoryId">repositoryId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/data-sources/artifact_registry_tag#repository_id DataGoogleArtifactRegistryTag#repository_id}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleArtifactRegistryTag.DataGoogleArtifactRegistryTagConfig.property.tagName">tagName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/data-sources/artifact_registry_tag#tag_name DataGoogleArtifactRegistryTag#tag_name}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleArtifactRegistryTag.DataGoogleArtifactRegistryTagConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/data-sources/artifact_registry_tag#id DataGoogleArtifactRegistryTag#id}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleArtifactRegistryTag.DataGoogleArtifactRegistryTagConfig.property.project">project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/data-sources/artifact_registry_tag#project DataGoogleArtifactRegistryTag#project}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleArtifactRegistryTag.DataGoogleArtifactRegistryTagConfig.property.location">location</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/data-sources/artifact_registry_tag#location DataGoogleArtifactRegistryTag#location}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleArtifactRegistryTag.DataGoogleArtifactRegistryTagConfig.property.packageName">packageName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/data-sources/artifact_registry_tag#package_name DataGoogleArtifactRegistryTag#package_name}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleArtifactRegistryTag.DataGoogleArtifactRegistryTagConfig.property.repositoryId">repositoryId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/data-sources/artifact_registry_tag#repository_id DataGoogleArtifactRegistryTag#repository_id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleArtifactRegistryTag.DataGoogleArtifactRegistryTagConfig.property.tagName">tagName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/data-sources/artifact_registry_tag#tag_name DataGoogleArtifactRegistryTag#tag_name}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleArtifactRegistryTag.DataGoogleArtifactRegistryTagConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/data-sources/artifact_registry_tag#id DataGoogleArtifactRegistryTag#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleArtifactRegistryTag.DataGoogleArtifactRegistryTagConfig.property.project">project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/data-sources/artifact_registry_tag#project DataGoogleArtifactRegistryTag#project}. |
 
 ---
 
@@ -814,7 +814,7 @@ public readonly location: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/data-sources/artifact_registry_tag#location DataGoogleArtifactRegistryTag#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/data-sources/artifact_registry_tag#location DataGoogleArtifactRegistryTag#location}.
 
 ---
 
@@ -826,7 +826,7 @@ public readonly packageName: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/data-sources/artifact_registry_tag#package_name DataGoogleArtifactRegistryTag#package_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/data-sources/artifact_registry_tag#package_name DataGoogleArtifactRegistryTag#package_name}.
 
 ---
 
@@ -838,7 +838,7 @@ public readonly repositoryId: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/data-sources/artifact_registry_tag#repository_id DataGoogleArtifactRegistryTag#repository_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/data-sources/artifact_registry_tag#repository_id DataGoogleArtifactRegistryTag#repository_id}.
 
 ---
 
@@ -850,7 +850,7 @@ public readonly tagName: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/data-sources/artifact_registry_tag#tag_name DataGoogleArtifactRegistryTag#tag_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/data-sources/artifact_registry_tag#tag_name DataGoogleArtifactRegistryTag#tag_name}.
 
 ---
 
@@ -862,7 +862,7 @@ public readonly id: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/data-sources/artifact_registry_tag#id DataGoogleArtifactRegistryTag#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/data-sources/artifact_registry_tag#id DataGoogleArtifactRegistryTag#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -877,7 +877,7 @@ public readonly project: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/data-sources/artifact_registry_tag#project DataGoogleArtifactRegistryTag#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/data-sources/artifact_registry_tag#project DataGoogleArtifactRegistryTag#project}.
 
 ---
 

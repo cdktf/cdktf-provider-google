@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/cloud_run_v2_worker_pool
+// https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/cloud_run_v2_worker_pool
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -23,26 +23,26 @@ export interface CloudRunV2WorkerPoolConfig extends cdktf.TerraformMetaArguments
   * **Note**: This field is non-authoritative, and will only manage the annotations present in your configuration.
   * Please refer to the field 'effective_annotations' for all of the annotations present on the resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/cloud_run_v2_worker_pool#annotations CloudRunV2WorkerPool#annotations}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/cloud_run_v2_worker_pool#annotations CloudRunV2WorkerPool#annotations}
   */
   readonly annotations?: { [key: string]: string };
   /**
   * Arbitrary identifier for the API client.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/cloud_run_v2_worker_pool#client CloudRunV2WorkerPool#client}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/cloud_run_v2_worker_pool#client CloudRunV2WorkerPool#client}
   */
   readonly client?: string;
   /**
   * Arbitrary version identifier for the API client.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/cloud_run_v2_worker_pool#client_version CloudRunV2WorkerPool#client_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/cloud_run_v2_worker_pool#client_version CloudRunV2WorkerPool#client_version}
   */
   readonly clientVersion?: string;
   /**
   * One or more custom audiences that you want this worker pool to support. Specify each custom audience as the full URL in a string. The custom audiences are encoded in the token and used to authenticate requests.
   * For more information, see https://cloud.google.com/run/docs/configuring/custom-audiences.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/cloud_run_v2_worker_pool#custom_audiences CloudRunV2WorkerPool#custom_audiences}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/cloud_run_v2_worker_pool#custom_audiences CloudRunV2WorkerPool#custom_audiences}
   */
   readonly customAudiences?: string[];
   /**
@@ -53,17 +53,17 @@ export interface CloudRunV2WorkerPoolConfig extends cdktf.TerraformMetaArguments
   * or 'terraform destroy' that would delete the WorkerPool will fail.
   * When the field is set to false, deleting the WorkerPool is allowed.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/cloud_run_v2_worker_pool#deletion_protection CloudRunV2WorkerPool#deletion_protection}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/cloud_run_v2_worker_pool#deletion_protection CloudRunV2WorkerPool#deletion_protection}
   */
   readonly deletionProtection?: boolean | cdktf.IResolvable;
   /**
   * User-provided description of the WorkerPool. This field currently has a 512-character limit.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/cloud_run_v2_worker_pool#description CloudRunV2WorkerPool#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/cloud_run_v2_worker_pool#description CloudRunV2WorkerPool#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/cloud_run_v2_worker_pool#id CloudRunV2WorkerPool#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/cloud_run_v2_worker_pool#id CloudRunV2WorkerPool#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -79,7 +79,7 @@ export interface CloudRunV2WorkerPoolConfig extends cdktf.TerraformMetaArguments
   * **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
   * Please refer to the field 'effective_labels' for all of the labels present on the resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/cloud_run_v2_worker_pool#labels CloudRunV2WorkerPool#labels}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/cloud_run_v2_worker_pool#labels CloudRunV2WorkerPool#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
@@ -88,53 +88,53 @@ export interface CloudRunV2WorkerPoolConfig extends cdktf.TerraformMetaArguments
   * 
   * For example, if ALPHA is provided as input, but only BETA and GA-level features are used, this field will be BETA on output. Possible values: ["UNIMPLEMENTED", "PRELAUNCH", "EARLY_ACCESS", "ALPHA", "BETA", "GA", "DEPRECATED"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/cloud_run_v2_worker_pool#launch_stage CloudRunV2WorkerPool#launch_stage}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/cloud_run_v2_worker_pool#launch_stage CloudRunV2WorkerPool#launch_stage}
   */
   readonly launchStage?: string;
   /**
   * The location of the cloud run worker pool
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/cloud_run_v2_worker_pool#location CloudRunV2WorkerPool#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/cloud_run_v2_worker_pool#location CloudRunV2WorkerPool#location}
   */
   readonly location: string;
   /**
   * Name of the WorkerPool.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/cloud_run_v2_worker_pool#name CloudRunV2WorkerPool#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/cloud_run_v2_worker_pool#name CloudRunV2WorkerPool#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/cloud_run_v2_worker_pool#project CloudRunV2WorkerPool#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/cloud_run_v2_worker_pool#project CloudRunV2WorkerPool#project}
   */
   readonly project?: string;
   /**
   * binary_authorization block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/cloud_run_v2_worker_pool#binary_authorization CloudRunV2WorkerPool#binary_authorization}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/cloud_run_v2_worker_pool#binary_authorization CloudRunV2WorkerPool#binary_authorization}
   */
   readonly binaryAuthorization?: CloudRunV2WorkerPoolBinaryAuthorization;
   /**
   * instance_splits block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/cloud_run_v2_worker_pool#instance_splits CloudRunV2WorkerPool#instance_splits}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/cloud_run_v2_worker_pool#instance_splits CloudRunV2WorkerPool#instance_splits}
   */
   readonly instanceSplits?: CloudRunV2WorkerPoolInstanceSplits[] | cdktf.IResolvable;
   /**
   * scaling block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/cloud_run_v2_worker_pool#scaling CloudRunV2WorkerPool#scaling}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/cloud_run_v2_worker_pool#scaling CloudRunV2WorkerPool#scaling}
   */
   readonly scaling?: CloudRunV2WorkerPoolScaling;
   /**
   * template block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/cloud_run_v2_worker_pool#template CloudRunV2WorkerPool#template}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/cloud_run_v2_worker_pool#template CloudRunV2WorkerPool#template}
   */
   readonly template: CloudRunV2WorkerPoolTemplate;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/cloud_run_v2_worker_pool#timeouts CloudRunV2WorkerPool#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/cloud_run_v2_worker_pool#timeouts CloudRunV2WorkerPool#timeouts}
   */
   readonly timeouts?: CloudRunV2WorkerPoolTimeouts;
 }
@@ -447,19 +447,19 @@ export interface CloudRunV2WorkerPoolBinaryAuthorization {
   /**
   * If present, indicates to use Breakglass using this justification. If useDefault is False, then it must be empty. For more information on breakglass, see https://cloud.google.com/binary-authorization/docs/using-breakglass
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/cloud_run_v2_worker_pool#breakglass_justification CloudRunV2WorkerPool#breakglass_justification}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/cloud_run_v2_worker_pool#breakglass_justification CloudRunV2WorkerPool#breakglass_justification}
   */
   readonly breakglassJustification?: string;
   /**
   * The path to a binary authorization policy. Format: projects/{project}/platforms/cloudRun/{policy-name}
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/cloud_run_v2_worker_pool#policy CloudRunV2WorkerPool#policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/cloud_run_v2_worker_pool#policy CloudRunV2WorkerPool#policy}
   */
   readonly policy?: string;
   /**
   * If True, indicates to use the default project's binary authorization policy. If False, binary authorization will be disabled.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/cloud_run_v2_worker_pool#use_default CloudRunV2WorkerPool#use_default}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/cloud_run_v2_worker_pool#use_default CloudRunV2WorkerPool#use_default}
   */
   readonly useDefault?: boolean | cdktf.IResolvable;
 }
@@ -603,19 +603,19 @@ export interface CloudRunV2WorkerPoolInstanceSplits {
   /**
   * Specifies percent of the instance split to this Revision. This defaults to zero if unspecified.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/cloud_run_v2_worker_pool#percent CloudRunV2WorkerPool#percent}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/cloud_run_v2_worker_pool#percent CloudRunV2WorkerPool#percent}
   */
   readonly percent?: number;
   /**
   * Revision to which to assign this portion of instances, if split allocation is by revision.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/cloud_run_v2_worker_pool#revision CloudRunV2WorkerPool#revision}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/cloud_run_v2_worker_pool#revision CloudRunV2WorkerPool#revision}
   */
   readonly revision?: string;
   /**
   * The allocation type for this instance split. Possible values: ["INSTANCE_SPLIT_ALLOCATION_TYPE_LATEST", "INSTANCE_SPLIT_ALLOCATION_TYPE_REVISION"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/cloud_run_v2_worker_pool#type CloudRunV2WorkerPool#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/cloud_run_v2_worker_pool#type CloudRunV2WorkerPool#type}
   */
   readonly type?: string;
 }
@@ -791,25 +791,25 @@ export interface CloudRunV2WorkerPoolScaling {
   /**
   * The total number of instances in manual scaling mode.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/cloud_run_v2_worker_pool#manual_instance_count CloudRunV2WorkerPool#manual_instance_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/cloud_run_v2_worker_pool#manual_instance_count CloudRunV2WorkerPool#manual_instance_count}
   */
   readonly manualInstanceCount?: number;
   /**
   * The maximum count of instances distributed among revisions based on the specified instance split percentages.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/cloud_run_v2_worker_pool#max_instance_count CloudRunV2WorkerPool#max_instance_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/cloud_run_v2_worker_pool#max_instance_count CloudRunV2WorkerPool#max_instance_count}
   */
   readonly maxInstanceCount?: number;
   /**
   * The minimum count of instances distributed among revisions based on the specified instance split percentages.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/cloud_run_v2_worker_pool#min_instance_count CloudRunV2WorkerPool#min_instance_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/cloud_run_v2_worker_pool#min_instance_count CloudRunV2WorkerPool#min_instance_count}
   */
   readonly minInstanceCount?: number;
   /**
   * The scaling mode for the worker pool. It defaults to MANUAL. Possible values: ["AUTOMATIC", "MANUAL"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/cloud_run_v2_worker_pool#scaling_mode CloudRunV2WorkerPool#scaling_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/cloud_run_v2_worker_pool#scaling_mode CloudRunV2WorkerPool#scaling_mode}
   */
   readonly scalingMode?: string;
 }
@@ -982,13 +982,13 @@ export interface CloudRunV2WorkerPoolTemplateContainersEnvValueSourceSecretKeyRe
   /**
   * The name of the secret in Cloud Secret Manager. Format: {secretName} if the secret is in the same project. projects/{project}/secrets/{secretName} if the secret is in a different project.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/cloud_run_v2_worker_pool#secret CloudRunV2WorkerPool#secret}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/cloud_run_v2_worker_pool#secret CloudRunV2WorkerPool#secret}
   */
   readonly secret: string;
   /**
   * The Cloud Secret Manager secret version. Can be 'latest' for the latest value or an integer for a specific version.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/cloud_run_v2_worker_pool#version CloudRunV2WorkerPool#version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/cloud_run_v2_worker_pool#version CloudRunV2WorkerPool#version}
   */
   readonly version?: string;
 }
@@ -1100,7 +1100,7 @@ export interface CloudRunV2WorkerPoolTemplateContainersEnvValueSource {
   /**
   * secret_key_ref block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/cloud_run_v2_worker_pool#secret_key_ref CloudRunV2WorkerPool#secret_key_ref}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/cloud_run_v2_worker_pool#secret_key_ref CloudRunV2WorkerPool#secret_key_ref}
   */
   readonly secretKeyRef?: CloudRunV2WorkerPoolTemplateContainersEnvValueSourceSecretKeyRef;
 }
@@ -1186,19 +1186,19 @@ export interface CloudRunV2WorkerPoolTemplateContainersEnv {
   /**
   * Name of the environment variable. Must be a C_IDENTIFIER, and may not exceed 32768 characters.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/cloud_run_v2_worker_pool#name CloudRunV2WorkerPool#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/cloud_run_v2_worker_pool#name CloudRunV2WorkerPool#name}
   */
   readonly name: string;
   /**
   * Literal value of the environment variable. Defaults to "" and the maximum allowed length is 32768 characters. Variable references are not supported in Cloud Run.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/cloud_run_v2_worker_pool#value CloudRunV2WorkerPool#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/cloud_run_v2_worker_pool#value CloudRunV2WorkerPool#value}
   */
   readonly value?: string;
   /**
   * value_source block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/cloud_run_v2_worker_pool#value_source CloudRunV2WorkerPool#value_source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/cloud_run_v2_worker_pool#value_source CloudRunV2WorkerPool#value_source}
   */
   readonly valueSource?: CloudRunV2WorkerPoolTemplateContainersEnvValueSource;
 }
@@ -1371,7 +1371,7 @@ export interface CloudRunV2WorkerPoolTemplateContainersResources {
   /**
   * Only memory, CPU, and nvidia.com/gpu are supported. Use key 'cpu' for CPU limit, 'memory' for memory limit, 'nvidia.com/gpu' for gpu limit. Note: The only supported values for CPU are '1', '2', '4', and '8'. Setting 4 CPU requires at least 2Gi of memory. The values of the map is string form of the 'quantity' k8s type: https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apimachinery/pkg/api/resource/quantity.go
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/cloud_run_v2_worker_pool#limits CloudRunV2WorkerPool#limits}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/cloud_run_v2_worker_pool#limits CloudRunV2WorkerPool#limits}
   */
   readonly limits?: { [key: string]: string };
 }
@@ -1457,13 +1457,13 @@ export interface CloudRunV2WorkerPoolTemplateContainersVolumeMounts {
   /**
   * Path within the container at which the volume should be mounted. Must not contain ':'. For Cloud SQL volumes, it can be left empty, or must otherwise be /cloudsql. All instances defined in the Volume will be available as /cloudsql/[instance]. For more information on Cloud SQL volumes, visit https://cloud.google.com/sql/docs/mysql/connect-run
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/cloud_run_v2_worker_pool#mount_path CloudRunV2WorkerPool#mount_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/cloud_run_v2_worker_pool#mount_path CloudRunV2WorkerPool#mount_path}
   */
   readonly mountPath: string;
   /**
   * This must match the Name of a Volume.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/cloud_run_v2_worker_pool#name CloudRunV2WorkerPool#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/cloud_run_v2_worker_pool#name CloudRunV2WorkerPool#name}
   */
   readonly name: string;
 }
@@ -1604,55 +1604,55 @@ export interface CloudRunV2WorkerPoolTemplateContainers {
   /**
   * Arguments to the entrypoint. The docker image's CMD is used if this is not provided. Variable references are not supported in Cloud Run.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/cloud_run_v2_worker_pool#args CloudRunV2WorkerPool#args}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/cloud_run_v2_worker_pool#args CloudRunV2WorkerPool#args}
   */
   readonly args?: string[];
   /**
   * Entrypoint array. Not executed within a shell. The docker image's ENTRYPOINT is used if this is not provided. Variable references $(VAR_NAME) are expanded using the container's environment. If a variable cannot be resolved, the reference in the input string will be unchanged. The $(VAR_NAME) syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped references will never be expanded, regardless of whether the variable exists or not. More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/cloud_run_v2_worker_pool#command CloudRunV2WorkerPool#command}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/cloud_run_v2_worker_pool#command CloudRunV2WorkerPool#command}
   */
   readonly command?: string[];
   /**
   * Containers which should be started before this container. If specified the container will wait to start until all containers with the listed names are healthy.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/cloud_run_v2_worker_pool#depends_on CloudRunV2WorkerPool#depends_on}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/cloud_run_v2_worker_pool#depends_on CloudRunV2WorkerPool#depends_on}
   */
   readonly dependsOn?: string[];
   /**
   * URL of the Container image in Google Container Registry or Google Artifact Registry. More info: https://kubernetes.io/docs/concepts/containers/images
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/cloud_run_v2_worker_pool#image CloudRunV2WorkerPool#image}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/cloud_run_v2_worker_pool#image CloudRunV2WorkerPool#image}
   */
   readonly image: string;
   /**
   * Name of the container specified as a DNS_LABEL.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/cloud_run_v2_worker_pool#name CloudRunV2WorkerPool#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/cloud_run_v2_worker_pool#name CloudRunV2WorkerPool#name}
   */
   readonly name?: string;
   /**
   * Container's working directory. If not specified, the container runtime's default will be used, which might be configured in the container image.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/cloud_run_v2_worker_pool#working_dir CloudRunV2WorkerPool#working_dir}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/cloud_run_v2_worker_pool#working_dir CloudRunV2WorkerPool#working_dir}
   */
   readonly workingDir?: string;
   /**
   * env block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/cloud_run_v2_worker_pool#env CloudRunV2WorkerPool#env}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/cloud_run_v2_worker_pool#env CloudRunV2WorkerPool#env}
   */
   readonly env?: CloudRunV2WorkerPoolTemplateContainersEnv[] | cdktf.IResolvable;
   /**
   * resources block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/cloud_run_v2_worker_pool#resources CloudRunV2WorkerPool#resources}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/cloud_run_v2_worker_pool#resources CloudRunV2WorkerPool#resources}
   */
   readonly resources?: CloudRunV2WorkerPoolTemplateContainersResources;
   /**
   * volume_mounts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/cloud_run_v2_worker_pool#volume_mounts CloudRunV2WorkerPool#volume_mounts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/cloud_run_v2_worker_pool#volume_mounts CloudRunV2WorkerPool#volume_mounts}
   */
   readonly volumeMounts?: CloudRunV2WorkerPoolTemplateContainersVolumeMounts[] | cdktf.IResolvable;
 }
@@ -1999,7 +1999,7 @@ export interface CloudRunV2WorkerPoolTemplateNodeSelector {
   /**
   * The GPU to attach to an instance. See https://cloud.google.com/run/docs/configuring/services/gpu for configuring GPU.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/cloud_run_v2_worker_pool#accelerator CloudRunV2WorkerPool#accelerator}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/cloud_run_v2_worker_pool#accelerator CloudRunV2WorkerPool#accelerator}
   */
   readonly accelerator: string;
 }
@@ -2082,7 +2082,7 @@ export interface CloudRunV2WorkerPoolTemplateVolumesCloudSqlInstance {
   /**
   * The Cloud SQL instance connection names, as can be found in https://console.cloud.google.com/sql/instances. Visit https://cloud.google.com/sql/docs/mysql/connect-run for more information on how to connect Cloud SQL and Cloud Run. Format: {project}:{location}:{instance}
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/cloud_run_v2_worker_pool#instances CloudRunV2WorkerPool#instances}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/cloud_run_v2_worker_pool#instances CloudRunV2WorkerPool#instances}
   */
   readonly instances?: string[];
 }
@@ -2168,13 +2168,13 @@ export interface CloudRunV2WorkerPoolTemplateVolumesEmptyDir {
   /**
   * The different types of medium supported for EmptyDir. Default value: "MEMORY" Possible values: ["MEMORY"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/cloud_run_v2_worker_pool#medium CloudRunV2WorkerPool#medium}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/cloud_run_v2_worker_pool#medium CloudRunV2WorkerPool#medium}
   */
   readonly medium?: string;
   /**
   * Limit on the storage usable by this EmptyDir volume. The size limit is also applicable for memory medium. The maximum usage on memory medium EmptyDir would be the minimum value between the SizeLimit specified here and the sum of memory limits of all containers in a pod. This field's values are of the 'Quantity' k8s type: https://kubernetes.io/docs/reference/kubernetes-api/common-definitions/quantity/. The default is nil which means that the limit is undefined. More info: https://kubernetes.io/docs/concepts/storage/volumes/#emptydir.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/cloud_run_v2_worker_pool#size_limit CloudRunV2WorkerPool#size_limit}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/cloud_run_v2_worker_pool#size_limit CloudRunV2WorkerPool#size_limit}
   */
   readonly sizeLimit?: string;
 }
@@ -2289,13 +2289,13 @@ export interface CloudRunV2WorkerPoolTemplateVolumesGcs {
   /**
   * GCS Bucket name
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/cloud_run_v2_worker_pool#bucket CloudRunV2WorkerPool#bucket}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/cloud_run_v2_worker_pool#bucket CloudRunV2WorkerPool#bucket}
   */
   readonly bucket: string;
   /**
   * If true, mount the GCS bucket as read-only
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/cloud_run_v2_worker_pool#read_only CloudRunV2WorkerPool#read_only}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/cloud_run_v2_worker_pool#read_only CloudRunV2WorkerPool#read_only}
   */
   readonly readOnly?: boolean | cdktf.IResolvable;
 }
@@ -2407,19 +2407,19 @@ export interface CloudRunV2WorkerPoolTemplateVolumesNfs {
   /**
   * Path that is exported by the NFS server.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/cloud_run_v2_worker_pool#path CloudRunV2WorkerPool#path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/cloud_run_v2_worker_pool#path CloudRunV2WorkerPool#path}
   */
   readonly path: string;
   /**
   * If true, mount the NFS volume as read only
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/cloud_run_v2_worker_pool#read_only CloudRunV2WorkerPool#read_only}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/cloud_run_v2_worker_pool#read_only CloudRunV2WorkerPool#read_only}
   */
   readonly readOnly?: boolean | cdktf.IResolvable;
   /**
   * Hostname or IP address of the NFS server
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/cloud_run_v2_worker_pool#server CloudRunV2WorkerPool#server}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/cloud_run_v2_worker_pool#server CloudRunV2WorkerPool#server}
   */
   readonly server: string;
 }
@@ -2557,19 +2557,19 @@ export interface CloudRunV2WorkerPoolTemplateVolumesSecretItems {
   /**
   * Integer octal mode bits to use on this file, must be a value between 01 and 0777 (octal). If 0 or not set, the Volume's default mode will be used.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/cloud_run_v2_worker_pool#mode CloudRunV2WorkerPool#mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/cloud_run_v2_worker_pool#mode CloudRunV2WorkerPool#mode}
   */
   readonly mode?: number;
   /**
   * The relative path of the secret in the container.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/cloud_run_v2_worker_pool#path CloudRunV2WorkerPool#path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/cloud_run_v2_worker_pool#path CloudRunV2WorkerPool#path}
   */
   readonly path: string;
   /**
   * The Cloud Secret Manager secret version. Can be 'latest' for the latest value or an integer for a specific version
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/cloud_run_v2_worker_pool#version CloudRunV2WorkerPool#version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/cloud_run_v2_worker_pool#version CloudRunV2WorkerPool#version}
   */
   readonly version?: string;
 }
@@ -2742,19 +2742,19 @@ export interface CloudRunV2WorkerPoolTemplateVolumesSecret {
   /**
   * Integer representation of mode bits to use on created files by default. Must be a value between 0000 and 0777 (octal), defaulting to 0444. Directories within the path are not affected by this setting.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/cloud_run_v2_worker_pool#default_mode CloudRunV2WorkerPool#default_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/cloud_run_v2_worker_pool#default_mode CloudRunV2WorkerPool#default_mode}
   */
   readonly defaultMode?: number;
   /**
   * The name of the secret in Cloud Secret Manager. Format: {secret} if the secret is in the same project. projects/{project}/secrets/{secret} if the secret is in a different project.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/cloud_run_v2_worker_pool#secret CloudRunV2WorkerPool#secret}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/cloud_run_v2_worker_pool#secret CloudRunV2WorkerPool#secret}
   */
   readonly secret: string;
   /**
   * items block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/cloud_run_v2_worker_pool#items CloudRunV2WorkerPool#items}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/cloud_run_v2_worker_pool#items CloudRunV2WorkerPool#items}
   */
   readonly items?: CloudRunV2WorkerPoolTemplateVolumesSecretItems[] | cdktf.IResolvable;
 }
@@ -2895,37 +2895,37 @@ export interface CloudRunV2WorkerPoolTemplateVolumes {
   /**
   * Volume's name.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/cloud_run_v2_worker_pool#name CloudRunV2WorkerPool#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/cloud_run_v2_worker_pool#name CloudRunV2WorkerPool#name}
   */
   readonly name: string;
   /**
   * cloud_sql_instance block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/cloud_run_v2_worker_pool#cloud_sql_instance CloudRunV2WorkerPool#cloud_sql_instance}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/cloud_run_v2_worker_pool#cloud_sql_instance CloudRunV2WorkerPool#cloud_sql_instance}
   */
   readonly cloudSqlInstance?: CloudRunV2WorkerPoolTemplateVolumesCloudSqlInstance;
   /**
   * empty_dir block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/cloud_run_v2_worker_pool#empty_dir CloudRunV2WorkerPool#empty_dir}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/cloud_run_v2_worker_pool#empty_dir CloudRunV2WorkerPool#empty_dir}
   */
   readonly emptyDir?: CloudRunV2WorkerPoolTemplateVolumesEmptyDir;
   /**
   * gcs block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/cloud_run_v2_worker_pool#gcs CloudRunV2WorkerPool#gcs}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/cloud_run_v2_worker_pool#gcs CloudRunV2WorkerPool#gcs}
   */
   readonly gcs?: CloudRunV2WorkerPoolTemplateVolumesGcs;
   /**
   * nfs block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/cloud_run_v2_worker_pool#nfs CloudRunV2WorkerPool#nfs}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/cloud_run_v2_worker_pool#nfs CloudRunV2WorkerPool#nfs}
   */
   readonly nfs?: CloudRunV2WorkerPoolTemplateVolumesNfs;
   /**
   * secret block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/cloud_run_v2_worker_pool#secret CloudRunV2WorkerPool#secret}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/cloud_run_v2_worker_pool#secret CloudRunV2WorkerPool#secret}
   */
   readonly secret?: CloudRunV2WorkerPoolTemplateVolumesSecret;
 }
@@ -3187,7 +3187,7 @@ export interface CloudRunV2WorkerPoolTemplateVpcAccessNetworkInterfaces {
   * network and subnetwork are specified, the given VPC subnetwork must belong to the given VPC network. If network is not specified, it will be
   * looked up from the subnetwork.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/cloud_run_v2_worker_pool#network CloudRunV2WorkerPool#network}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/cloud_run_v2_worker_pool#network CloudRunV2WorkerPool#network}
   */
   readonly network?: string;
   /**
@@ -3195,13 +3195,13 @@ export interface CloudRunV2WorkerPoolTemplateVpcAccessNetworkInterfaces {
   * network and subnetwork are specified, the given VPC subnetwork must belong to the given VPC network. If subnetwork is not specified, the
   * subnetwork with the same name with the network will be used.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/cloud_run_v2_worker_pool#subnetwork CloudRunV2WorkerPool#subnetwork}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/cloud_run_v2_worker_pool#subnetwork CloudRunV2WorkerPool#subnetwork}
   */
   readonly subnetwork?: string;
   /**
   * Network tags applied to this Cloud Run WorkerPool.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/cloud_run_v2_worker_pool#tags CloudRunV2WorkerPool#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/cloud_run_v2_worker_pool#tags CloudRunV2WorkerPool#tags}
   */
   readonly tags?: string[];
 }
@@ -3377,13 +3377,13 @@ export interface CloudRunV2WorkerPoolTemplateVpcAccess {
   /**
   * Traffic VPC egress settings. Possible values: ["ALL_TRAFFIC", "PRIVATE_RANGES_ONLY"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/cloud_run_v2_worker_pool#egress CloudRunV2WorkerPool#egress}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/cloud_run_v2_worker_pool#egress CloudRunV2WorkerPool#egress}
   */
   readonly egress?: string;
   /**
   * network_interfaces block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/cloud_run_v2_worker_pool#network_interfaces CloudRunV2WorkerPool#network_interfaces}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/cloud_run_v2_worker_pool#network_interfaces CloudRunV2WorkerPool#network_interfaces}
   */
   readonly networkInterfaces?: CloudRunV2WorkerPoolTemplateVpcAccessNetworkInterfaces[] | cdktf.IResolvable;
 }
@@ -3503,19 +3503,19 @@ export interface CloudRunV2WorkerPoolTemplate {
   * 
   * This field follows Kubernetes annotations' namespacing, limits, and rules.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/cloud_run_v2_worker_pool#annotations CloudRunV2WorkerPool#annotations}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/cloud_run_v2_worker_pool#annotations CloudRunV2WorkerPool#annotations}
   */
   readonly annotations?: { [key: string]: string };
   /**
   * A reference to a customer managed encryption key (CMEK) to use to encrypt this container image. For more information, go to https://cloud.google.com/run/docs/securing/using-cmek
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/cloud_run_v2_worker_pool#encryption_key CloudRunV2WorkerPool#encryption_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/cloud_run_v2_worker_pool#encryption_key CloudRunV2WorkerPool#encryption_key}
   */
   readonly encryptionKey?: string;
   /**
   * The action to take if the encryption key is revoked. Possible values: ["PREVENT_NEW", "SHUTDOWN"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/cloud_run_v2_worker_pool#encryption_key_revocation_action CloudRunV2WorkerPool#encryption_key_revocation_action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/cloud_run_v2_worker_pool#encryption_key_revocation_action CloudRunV2WorkerPool#encryption_key_revocation_action}
   */
   readonly encryptionKeyRevocationAction?: string;
   /**
@@ -3523,13 +3523,13 @@ export interface CloudRunV2WorkerPoolTemplate {
   * 
   * A duration in seconds with up to nine fractional digits, ending with 's'. Example: "3.5s".
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/cloud_run_v2_worker_pool#encryption_key_shutdown_duration CloudRunV2WorkerPool#encryption_key_shutdown_duration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/cloud_run_v2_worker_pool#encryption_key_shutdown_duration CloudRunV2WorkerPool#encryption_key_shutdown_duration}
   */
   readonly encryptionKeyShutdownDuration?: string;
   /**
   * True if GPU zonal redundancy is disabled on this revision.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/cloud_run_v2_worker_pool#gpu_zonal_redundancy_disabled CloudRunV2WorkerPool#gpu_zonal_redundancy_disabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/cloud_run_v2_worker_pool#gpu_zonal_redundancy_disabled CloudRunV2WorkerPool#gpu_zonal_redundancy_disabled}
   */
   readonly gpuZonalRedundancyDisabled?: boolean | cdktf.IResolvable;
   /**
@@ -3539,43 +3539,43 @@ export interface CloudRunV2WorkerPoolTemplate {
   * Cloud Run API v2 does not support labels with 'run.googleapis.com', 'cloud.googleapis.com', 'serving.knative.dev', or 'autoscaling.knative.dev' namespaces, and they will be rejected.
   * All system labels in v1 now have a corresponding field in v2 WorkerPoolRevisionTemplate.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/cloud_run_v2_worker_pool#labels CloudRunV2WorkerPool#labels}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/cloud_run_v2_worker_pool#labels CloudRunV2WorkerPool#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
   * The unique name for the revision. If this field is omitted, it will be automatically generated based on the WorkerPool name.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/cloud_run_v2_worker_pool#revision CloudRunV2WorkerPool#revision}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/cloud_run_v2_worker_pool#revision CloudRunV2WorkerPool#revision}
   */
   readonly revision?: string;
   /**
   * Email address of the IAM service account associated with the revision of the WorkerPool. The service account represents the identity of the running revision, and determines what permissions the revision has. If not provided, the revision will use the project's default service account.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/cloud_run_v2_worker_pool#service_account CloudRunV2WorkerPool#service_account}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/cloud_run_v2_worker_pool#service_account CloudRunV2WorkerPool#service_account}
   */
   readonly serviceAccount?: string;
   /**
   * containers block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/cloud_run_v2_worker_pool#containers CloudRunV2WorkerPool#containers}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/cloud_run_v2_worker_pool#containers CloudRunV2WorkerPool#containers}
   */
   readonly containers?: CloudRunV2WorkerPoolTemplateContainers[] | cdktf.IResolvable;
   /**
   * node_selector block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/cloud_run_v2_worker_pool#node_selector CloudRunV2WorkerPool#node_selector}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/cloud_run_v2_worker_pool#node_selector CloudRunV2WorkerPool#node_selector}
   */
   readonly nodeSelector?: CloudRunV2WorkerPoolTemplateNodeSelector;
   /**
   * volumes block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/cloud_run_v2_worker_pool#volumes CloudRunV2WorkerPool#volumes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/cloud_run_v2_worker_pool#volumes CloudRunV2WorkerPool#volumes}
   */
   readonly volumes?: CloudRunV2WorkerPoolTemplateVolumes[] | cdktf.IResolvable;
   /**
   * vpc_access block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/cloud_run_v2_worker_pool#vpc_access CloudRunV2WorkerPool#vpc_access}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/cloud_run_v2_worker_pool#vpc_access CloudRunV2WorkerPool#vpc_access}
   */
   readonly vpcAccess?: CloudRunV2WorkerPoolTemplateVpcAccess;
 }
@@ -3978,15 +3978,15 @@ export class CloudRunV2WorkerPoolTemplateOutputReference extends cdktf.ComplexOb
 }
 export interface CloudRunV2WorkerPoolTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/cloud_run_v2_worker_pool#create CloudRunV2WorkerPool#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/cloud_run_v2_worker_pool#create CloudRunV2WorkerPool#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/cloud_run_v2_worker_pool#delete CloudRunV2WorkerPool#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/cloud_run_v2_worker_pool#delete CloudRunV2WorkerPool#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/cloud_run_v2_worker_pool#update CloudRunV2WorkerPool#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/cloud_run_v2_worker_pool#update CloudRunV2WorkerPool#update}
   */
   readonly update?: string;
 }
@@ -4138,7 +4138,7 @@ export class CloudRunV2WorkerPoolTimeoutsOutputReference extends cdktf.ComplexOb
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/cloud_run_v2_worker_pool google_cloud_run_v2_worker_pool}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/cloud_run_v2_worker_pool google_cloud_run_v2_worker_pool}
 */
 export class CloudRunV2WorkerPool extends cdktf.TerraformResource {
 
@@ -4154,7 +4154,7 @@ export class CloudRunV2WorkerPool extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a CloudRunV2WorkerPool resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the CloudRunV2WorkerPool to import
-  * @param importFromId The id of the existing CloudRunV2WorkerPool that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/cloud_run_v2_worker_pool#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing CloudRunV2WorkerPool that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/cloud_run_v2_worker_pool#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the CloudRunV2WorkerPool to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -4166,7 +4166,7 @@ export class CloudRunV2WorkerPool extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.49.2/docs/resources/cloud_run_v2_worker_pool google_cloud_run_v2_worker_pool} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/cloud_run_v2_worker_pool google_cloud_run_v2_worker_pool} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -4177,7 +4177,7 @@ export class CloudRunV2WorkerPool extends cdktf.TerraformResource {
       terraformResourceType: 'google_cloud_run_v2_worker_pool',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.49.2',
+        providerVersion: '6.49.3',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,
