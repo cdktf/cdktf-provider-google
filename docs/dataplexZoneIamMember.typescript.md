@@ -4,7 +4,7 @@
 
 ### DataplexZoneIamMember <a name="DataplexZoneIamMember" id="@cdktf/provider-google.dataplexZoneIamMember.DataplexZoneIamMember"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dataplex_zone_iam_member google_dataplex_zone_iam_member}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/dataplex_zone_iam_member google_dataplex_zone_iam_member}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataplexZoneIamMember.DataplexZoneIamMember.Initializer"></a>
 
@@ -508,7 +508,7 @@ The construct id used in the generated config for the DataplexZoneIamMember to i
 
 The id of the existing DataplexZoneIamMember that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dataplex_zone_iam_member#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/dataplex_zone_iam_member#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -904,9 +904,9 @@ const dataplexZoneIamMemberCondition: dataplexZoneIamMember.DataplexZoneIamMembe
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.dataplexZoneIamMember.DataplexZoneIamMemberCondition.property.expression">expression</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dataplex_zone_iam_member#expression DataplexZoneIamMember#expression}. |
-| <code><a href="#@cdktf/provider-google.dataplexZoneIamMember.DataplexZoneIamMemberCondition.property.title">title</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dataplex_zone_iam_member#title DataplexZoneIamMember#title}. |
-| <code><a href="#@cdktf/provider-google.dataplexZoneIamMember.DataplexZoneIamMemberCondition.property.description">description</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dataplex_zone_iam_member#description DataplexZoneIamMember#description}. |
+| <code><a href="#@cdktf/provider-google.dataplexZoneIamMember.DataplexZoneIamMemberCondition.property.expression">expression</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/dataplex_zone_iam_member#expression DataplexZoneIamMember#expression}. |
+| <code><a href="#@cdktf/provider-google.dataplexZoneIamMember.DataplexZoneIamMemberCondition.property.title">title</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/dataplex_zone_iam_member#title DataplexZoneIamMember#title}. |
+| <code><a href="#@cdktf/provider-google.dataplexZoneIamMember.DataplexZoneIamMemberCondition.property.description">description</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/dataplex_zone_iam_member#description DataplexZoneIamMember#description}. |
 
 ---
 
@@ -918,7 +918,7 @@ public readonly expression: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dataplex_zone_iam_member#expression DataplexZoneIamMember#expression}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/dataplex_zone_iam_member#expression DataplexZoneIamMember#expression}.
 
 ---
 
@@ -930,7 +930,7 @@ public readonly title: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dataplex_zone_iam_member#title DataplexZoneIamMember#title}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/dataplex_zone_iam_member#title DataplexZoneIamMember#title}.
 
 ---
 
@@ -942,7 +942,7 @@ public readonly description: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dataplex_zone_iam_member#description DataplexZoneIamMember#description}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/dataplex_zone_iam_member#description DataplexZoneIamMember#description}.
 
 ---
 
@@ -967,14 +967,14 @@ const dataplexZoneIamMemberConfig: dataplexZoneIamMember.DataplexZoneIamMemberCo
 | <code><a href="#@cdktf/provider-google.dataplexZoneIamMember.DataplexZoneIamMemberConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataplexZoneIamMember.DataplexZoneIamMemberConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataplexZoneIamMember.DataplexZoneIamMemberConfig.property.provisioners">provisioners</a></code> | <code>cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataplexZoneIamMember.DataplexZoneIamMemberConfig.property.dataplexZone">dataplexZone</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dataplex_zone_iam_member#dataplex_zone DataplexZoneIamMember#dataplex_zone}. |
-| <code><a href="#@cdktf/provider-google.dataplexZoneIamMember.DataplexZoneIamMemberConfig.property.lake">lake</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dataplex_zone_iam_member#lake DataplexZoneIamMember#lake}. |
-| <code><a href="#@cdktf/provider-google.dataplexZoneIamMember.DataplexZoneIamMemberConfig.property.member">member</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dataplex_zone_iam_member#member DataplexZoneIamMember#member}. |
-| <code><a href="#@cdktf/provider-google.dataplexZoneIamMember.DataplexZoneIamMemberConfig.property.role">role</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dataplex_zone_iam_member#role DataplexZoneIamMember#role}. |
+| <code><a href="#@cdktf/provider-google.dataplexZoneIamMember.DataplexZoneIamMemberConfig.property.dataplexZone">dataplexZone</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/dataplex_zone_iam_member#dataplex_zone DataplexZoneIamMember#dataplex_zone}. |
+| <code><a href="#@cdktf/provider-google.dataplexZoneIamMember.DataplexZoneIamMemberConfig.property.lake">lake</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/dataplex_zone_iam_member#lake DataplexZoneIamMember#lake}. |
+| <code><a href="#@cdktf/provider-google.dataplexZoneIamMember.DataplexZoneIamMemberConfig.property.member">member</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/dataplex_zone_iam_member#member DataplexZoneIamMember#member}. |
+| <code><a href="#@cdktf/provider-google.dataplexZoneIamMember.DataplexZoneIamMemberConfig.property.role">role</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/dataplex_zone_iam_member#role DataplexZoneIamMember#role}. |
 | <code><a href="#@cdktf/provider-google.dataplexZoneIamMember.DataplexZoneIamMemberConfig.property.condition">condition</a></code> | <code><a href="#@cdktf/provider-google.dataplexZoneIamMember.DataplexZoneIamMemberCondition">DataplexZoneIamMemberCondition</a></code> | condition block. |
-| <code><a href="#@cdktf/provider-google.dataplexZoneIamMember.DataplexZoneIamMemberConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dataplex_zone_iam_member#id DataplexZoneIamMember#id}. |
-| <code><a href="#@cdktf/provider-google.dataplexZoneIamMember.DataplexZoneIamMemberConfig.property.location">location</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dataplex_zone_iam_member#location DataplexZoneIamMember#location}. |
-| <code><a href="#@cdktf/provider-google.dataplexZoneIamMember.DataplexZoneIamMemberConfig.property.project">project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dataplex_zone_iam_member#project DataplexZoneIamMember#project}. |
+| <code><a href="#@cdktf/provider-google.dataplexZoneIamMember.DataplexZoneIamMemberConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/dataplex_zone_iam_member#id DataplexZoneIamMember#id}. |
+| <code><a href="#@cdktf/provider-google.dataplexZoneIamMember.DataplexZoneIamMemberConfig.property.location">location</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/dataplex_zone_iam_member#location DataplexZoneIamMember#location}. |
+| <code><a href="#@cdktf/provider-google.dataplexZoneIamMember.DataplexZoneIamMemberConfig.property.project">project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/dataplex_zone_iam_member#project DataplexZoneIamMember#project}. |
 
 ---
 
@@ -1056,7 +1056,7 @@ public readonly dataplexZone: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dataplex_zone_iam_member#dataplex_zone DataplexZoneIamMember#dataplex_zone}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/dataplex_zone_iam_member#dataplex_zone DataplexZoneIamMember#dataplex_zone}.
 
 ---
 
@@ -1068,7 +1068,7 @@ public readonly lake: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dataplex_zone_iam_member#lake DataplexZoneIamMember#lake}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/dataplex_zone_iam_member#lake DataplexZoneIamMember#lake}.
 
 ---
 
@@ -1080,7 +1080,7 @@ public readonly member: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dataplex_zone_iam_member#member DataplexZoneIamMember#member}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/dataplex_zone_iam_member#member DataplexZoneIamMember#member}.
 
 ---
 
@@ -1092,7 +1092,7 @@ public readonly role: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dataplex_zone_iam_member#role DataplexZoneIamMember#role}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/dataplex_zone_iam_member#role DataplexZoneIamMember#role}.
 
 ---
 
@@ -1106,7 +1106,7 @@ public readonly condition: DataplexZoneIamMemberCondition;
 
 condition block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dataplex_zone_iam_member#condition DataplexZoneIamMember#condition}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/dataplex_zone_iam_member#condition DataplexZoneIamMember#condition}
 
 ---
 
@@ -1118,7 +1118,7 @@ public readonly id: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dataplex_zone_iam_member#id DataplexZoneIamMember#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/dataplex_zone_iam_member#id DataplexZoneIamMember#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1133,7 +1133,7 @@ public readonly location: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dataplex_zone_iam_member#location DataplexZoneIamMember#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/dataplex_zone_iam_member#location DataplexZoneIamMember#location}.
 
 ---
 
@@ -1145,7 +1145,7 @@ public readonly project: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dataplex_zone_iam_member#project DataplexZoneIamMember#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/dataplex_zone_iam_member#project DataplexZoneIamMember#project}.
 
 ---
 

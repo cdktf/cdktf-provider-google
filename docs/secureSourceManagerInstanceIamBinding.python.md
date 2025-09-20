@@ -4,7 +4,7 @@
 
 ### SecureSourceManagerInstanceIamBinding <a name="SecureSourceManagerInstanceIamBinding" id="@cdktf/provider-google.secureSourceManagerInstanceIamBinding.SecureSourceManagerInstanceIamBinding"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/secure_source_manager_instance_iam_binding google_secure_source_manager_instance_iam_binding}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/secure_source_manager_instance_iam_binding google_secure_source_manager_instance_iam_binding}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.secureSourceManagerInstanceIamBinding.SecureSourceManagerInstanceIamBinding.Initializer"></a>
 
@@ -42,13 +42,13 @@ secureSourceManagerInstanceIamBinding.SecureSourceManagerInstanceIamBinding(
 | <code><a href="#@cdktf/provider-google.secureSourceManagerInstanceIamBinding.SecureSourceManagerInstanceIamBinding.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.secureSourceManagerInstanceIamBinding.SecureSourceManagerInstanceIamBinding.Initializer.parameter.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.secureSourceManagerInstanceIamBinding.SecureSourceManagerInstanceIamBinding.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.secureSourceManagerInstanceIamBinding.SecureSourceManagerInstanceIamBinding.Initializer.parameter.instanceId">instance_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/secure_source_manager_instance_iam_binding#instance_id SecureSourceManagerInstanceIamBinding#instance_id}. |
-| <code><a href="#@cdktf/provider-google.secureSourceManagerInstanceIamBinding.SecureSourceManagerInstanceIamBinding.Initializer.parameter.members">members</a></code> | <code>typing.List[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/secure_source_manager_instance_iam_binding#members SecureSourceManagerInstanceIamBinding#members}. |
-| <code><a href="#@cdktf/provider-google.secureSourceManagerInstanceIamBinding.SecureSourceManagerInstanceIamBinding.Initializer.parameter.role">role</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/secure_source_manager_instance_iam_binding#role SecureSourceManagerInstanceIamBinding#role}. |
+| <code><a href="#@cdktf/provider-google.secureSourceManagerInstanceIamBinding.SecureSourceManagerInstanceIamBinding.Initializer.parameter.instanceId">instance_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/secure_source_manager_instance_iam_binding#instance_id SecureSourceManagerInstanceIamBinding#instance_id}. |
+| <code><a href="#@cdktf/provider-google.secureSourceManagerInstanceIamBinding.SecureSourceManagerInstanceIamBinding.Initializer.parameter.members">members</a></code> | <code>typing.List[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/secure_source_manager_instance_iam_binding#members SecureSourceManagerInstanceIamBinding#members}. |
+| <code><a href="#@cdktf/provider-google.secureSourceManagerInstanceIamBinding.SecureSourceManagerInstanceIamBinding.Initializer.parameter.role">role</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/secure_source_manager_instance_iam_binding#role SecureSourceManagerInstanceIamBinding#role}. |
 | <code><a href="#@cdktf/provider-google.secureSourceManagerInstanceIamBinding.SecureSourceManagerInstanceIamBinding.Initializer.parameter.condition">condition</a></code> | <code><a href="#@cdktf/provider-google.secureSourceManagerInstanceIamBinding.SecureSourceManagerInstanceIamBindingCondition">SecureSourceManagerInstanceIamBindingCondition</a></code> | condition block. |
-| <code><a href="#@cdktf/provider-google.secureSourceManagerInstanceIamBinding.SecureSourceManagerInstanceIamBinding.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/secure_source_manager_instance_iam_binding#id SecureSourceManagerInstanceIamBinding#id}. |
-| <code><a href="#@cdktf/provider-google.secureSourceManagerInstanceIamBinding.SecureSourceManagerInstanceIamBinding.Initializer.parameter.location">location</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/secure_source_manager_instance_iam_binding#location SecureSourceManagerInstanceIamBinding#location}. |
-| <code><a href="#@cdktf/provider-google.secureSourceManagerInstanceIamBinding.SecureSourceManagerInstanceIamBinding.Initializer.parameter.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/secure_source_manager_instance_iam_binding#project SecureSourceManagerInstanceIamBinding#project}. |
+| <code><a href="#@cdktf/provider-google.secureSourceManagerInstanceIamBinding.SecureSourceManagerInstanceIamBinding.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/secure_source_manager_instance_iam_binding#id SecureSourceManagerInstanceIamBinding#id}. |
+| <code><a href="#@cdktf/provider-google.secureSourceManagerInstanceIamBinding.SecureSourceManagerInstanceIamBinding.Initializer.parameter.location">location</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/secure_source_manager_instance_iam_binding#location SecureSourceManagerInstanceIamBinding#location}. |
+| <code><a href="#@cdktf/provider-google.secureSourceManagerInstanceIamBinding.SecureSourceManagerInstanceIamBinding.Initializer.parameter.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/secure_source_manager_instance_iam_binding#project SecureSourceManagerInstanceIamBinding#project}. |
 
 ---
 
@@ -116,7 +116,7 @@ Must be unique amongst siblings in the same scope
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/secure_source_manager_instance_iam_binding#instance_id SecureSourceManagerInstanceIamBinding#instance_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/secure_source_manager_instance_iam_binding#instance_id SecureSourceManagerInstanceIamBinding#instance_id}.
 
 ---
 
@@ -124,7 +124,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* typing.List[str]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/secure_source_manager_instance_iam_binding#members SecureSourceManagerInstanceIamBinding#members}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/secure_source_manager_instance_iam_binding#members SecureSourceManagerInstanceIamBinding#members}.
 
 ---
 
@@ -132,7 +132,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/secure_source_manager_instance_iam_binding#role SecureSourceManagerInstanceIamBinding#role}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/secure_source_manager_instance_iam_binding#role SecureSourceManagerInstanceIamBinding#role}.
 
 ---
 
@@ -142,7 +142,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 condition block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/secure_source_manager_instance_iam_binding#condition SecureSourceManagerInstanceIamBinding#condition}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/secure_source_manager_instance_iam_binding#condition SecureSourceManagerInstanceIamBinding#condition}
 
 ---
 
@@ -150,7 +150,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/secure_source_manager_instance_iam_binding#id SecureSourceManagerInstanceIamBinding#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/secure_source_manager_instance_iam_binding#id SecureSourceManagerInstanceIamBinding#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -161,7 +161,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/secure_source_manager_instance_iam_binding#location SecureSourceManagerInstanceIamBinding#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/secure_source_manager_instance_iam_binding#location SecureSourceManagerInstanceIamBinding#location}.
 
 ---
 
@@ -169,7 +169,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/secure_source_manager_instance_iam_binding#project SecureSourceManagerInstanceIamBinding#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/secure_source_manager_instance_iam_binding#project SecureSourceManagerInstanceIamBinding#project}.
 
 ---
 
@@ -547,7 +547,7 @@ def put_condition(
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/secure_source_manager_instance_iam_binding#expression SecureSourceManagerInstanceIamBinding#expression}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/secure_source_manager_instance_iam_binding#expression SecureSourceManagerInstanceIamBinding#expression}.
 
 ---
 
@@ -555,7 +555,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/secure_source_manager_instance_iam_binding#title SecureSourceManagerInstanceIamBinding#title}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/secure_source_manager_instance_iam_binding#title SecureSourceManagerInstanceIamBinding#title}.
 
 ---
 
@@ -563,7 +563,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/secure_source_manager_instance_iam_binding#description SecureSourceManagerInstanceIamBinding#description}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/secure_source_manager_instance_iam_binding#description SecureSourceManagerInstanceIamBinding#description}.
 
 ---
 
@@ -705,7 +705,7 @@ The construct id used in the generated config for the SecureSourceManagerInstanc
 
 The id of the existing SecureSourceManagerInstanceIamBinding that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/secure_source_manager_instance_iam_binding#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/secure_source_manager_instance_iam_binding#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -1083,9 +1083,9 @@ secureSourceManagerInstanceIamBinding.SecureSourceManagerInstanceIamBindingCondi
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.secureSourceManagerInstanceIamBinding.SecureSourceManagerInstanceIamBindingCondition.property.expression">expression</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/secure_source_manager_instance_iam_binding#expression SecureSourceManagerInstanceIamBinding#expression}. |
-| <code><a href="#@cdktf/provider-google.secureSourceManagerInstanceIamBinding.SecureSourceManagerInstanceIamBindingCondition.property.title">title</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/secure_source_manager_instance_iam_binding#title SecureSourceManagerInstanceIamBinding#title}. |
-| <code><a href="#@cdktf/provider-google.secureSourceManagerInstanceIamBinding.SecureSourceManagerInstanceIamBindingCondition.property.description">description</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/secure_source_manager_instance_iam_binding#description SecureSourceManagerInstanceIamBinding#description}. |
+| <code><a href="#@cdktf/provider-google.secureSourceManagerInstanceIamBinding.SecureSourceManagerInstanceIamBindingCondition.property.expression">expression</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/secure_source_manager_instance_iam_binding#expression SecureSourceManagerInstanceIamBinding#expression}. |
+| <code><a href="#@cdktf/provider-google.secureSourceManagerInstanceIamBinding.SecureSourceManagerInstanceIamBindingCondition.property.title">title</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/secure_source_manager_instance_iam_binding#title SecureSourceManagerInstanceIamBinding#title}. |
+| <code><a href="#@cdktf/provider-google.secureSourceManagerInstanceIamBinding.SecureSourceManagerInstanceIamBindingCondition.property.description">description</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/secure_source_manager_instance_iam_binding#description SecureSourceManagerInstanceIamBinding#description}. |
 
 ---
 
@@ -1097,7 +1097,7 @@ expression: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/secure_source_manager_instance_iam_binding#expression SecureSourceManagerInstanceIamBinding#expression}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/secure_source_manager_instance_iam_binding#expression SecureSourceManagerInstanceIamBinding#expression}.
 
 ---
 
@@ -1109,7 +1109,7 @@ title: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/secure_source_manager_instance_iam_binding#title SecureSourceManagerInstanceIamBinding#title}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/secure_source_manager_instance_iam_binding#title SecureSourceManagerInstanceIamBinding#title}.
 
 ---
 
@@ -1121,7 +1121,7 @@ description: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/secure_source_manager_instance_iam_binding#description SecureSourceManagerInstanceIamBinding#description}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/secure_source_manager_instance_iam_binding#description SecureSourceManagerInstanceIamBinding#description}.
 
 ---
 
@@ -1161,13 +1161,13 @@ secureSourceManagerInstanceIamBinding.SecureSourceManagerInstanceIamBindingConfi
 | <code><a href="#@cdktf/provider-google.secureSourceManagerInstanceIamBinding.SecureSourceManagerInstanceIamBindingConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.secureSourceManagerInstanceIamBinding.SecureSourceManagerInstanceIamBindingConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.secureSourceManagerInstanceIamBinding.SecureSourceManagerInstanceIamBindingConfig.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.secureSourceManagerInstanceIamBinding.SecureSourceManagerInstanceIamBindingConfig.property.instanceId">instance_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/secure_source_manager_instance_iam_binding#instance_id SecureSourceManagerInstanceIamBinding#instance_id}. |
-| <code><a href="#@cdktf/provider-google.secureSourceManagerInstanceIamBinding.SecureSourceManagerInstanceIamBindingConfig.property.members">members</a></code> | <code>typing.List[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/secure_source_manager_instance_iam_binding#members SecureSourceManagerInstanceIamBinding#members}. |
-| <code><a href="#@cdktf/provider-google.secureSourceManagerInstanceIamBinding.SecureSourceManagerInstanceIamBindingConfig.property.role">role</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/secure_source_manager_instance_iam_binding#role SecureSourceManagerInstanceIamBinding#role}. |
+| <code><a href="#@cdktf/provider-google.secureSourceManagerInstanceIamBinding.SecureSourceManagerInstanceIamBindingConfig.property.instanceId">instance_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/secure_source_manager_instance_iam_binding#instance_id SecureSourceManagerInstanceIamBinding#instance_id}. |
+| <code><a href="#@cdktf/provider-google.secureSourceManagerInstanceIamBinding.SecureSourceManagerInstanceIamBindingConfig.property.members">members</a></code> | <code>typing.List[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/secure_source_manager_instance_iam_binding#members SecureSourceManagerInstanceIamBinding#members}. |
+| <code><a href="#@cdktf/provider-google.secureSourceManagerInstanceIamBinding.SecureSourceManagerInstanceIamBindingConfig.property.role">role</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/secure_source_manager_instance_iam_binding#role SecureSourceManagerInstanceIamBinding#role}. |
 | <code><a href="#@cdktf/provider-google.secureSourceManagerInstanceIamBinding.SecureSourceManagerInstanceIamBindingConfig.property.condition">condition</a></code> | <code><a href="#@cdktf/provider-google.secureSourceManagerInstanceIamBinding.SecureSourceManagerInstanceIamBindingCondition">SecureSourceManagerInstanceIamBindingCondition</a></code> | condition block. |
-| <code><a href="#@cdktf/provider-google.secureSourceManagerInstanceIamBinding.SecureSourceManagerInstanceIamBindingConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/secure_source_manager_instance_iam_binding#id SecureSourceManagerInstanceIamBinding#id}. |
-| <code><a href="#@cdktf/provider-google.secureSourceManagerInstanceIamBinding.SecureSourceManagerInstanceIamBindingConfig.property.location">location</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/secure_source_manager_instance_iam_binding#location SecureSourceManagerInstanceIamBinding#location}. |
-| <code><a href="#@cdktf/provider-google.secureSourceManagerInstanceIamBinding.SecureSourceManagerInstanceIamBindingConfig.property.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/secure_source_manager_instance_iam_binding#project SecureSourceManagerInstanceIamBinding#project}. |
+| <code><a href="#@cdktf/provider-google.secureSourceManagerInstanceIamBinding.SecureSourceManagerInstanceIamBindingConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/secure_source_manager_instance_iam_binding#id SecureSourceManagerInstanceIamBinding#id}. |
+| <code><a href="#@cdktf/provider-google.secureSourceManagerInstanceIamBinding.SecureSourceManagerInstanceIamBindingConfig.property.location">location</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/secure_source_manager_instance_iam_binding#location SecureSourceManagerInstanceIamBinding#location}. |
+| <code><a href="#@cdktf/provider-google.secureSourceManagerInstanceIamBinding.SecureSourceManagerInstanceIamBindingConfig.property.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/secure_source_manager_instance_iam_binding#project SecureSourceManagerInstanceIamBinding#project}. |
 
 ---
 
@@ -1249,7 +1249,7 @@ instance_id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/secure_source_manager_instance_iam_binding#instance_id SecureSourceManagerInstanceIamBinding#instance_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/secure_source_manager_instance_iam_binding#instance_id SecureSourceManagerInstanceIamBinding#instance_id}.
 
 ---
 
@@ -1261,7 +1261,7 @@ members: typing.List[str]
 
 - *Type:* typing.List[str]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/secure_source_manager_instance_iam_binding#members SecureSourceManagerInstanceIamBinding#members}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/secure_source_manager_instance_iam_binding#members SecureSourceManagerInstanceIamBinding#members}.
 
 ---
 
@@ -1273,7 +1273,7 @@ role: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/secure_source_manager_instance_iam_binding#role SecureSourceManagerInstanceIamBinding#role}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/secure_source_manager_instance_iam_binding#role SecureSourceManagerInstanceIamBinding#role}.
 
 ---
 
@@ -1287,7 +1287,7 @@ condition: SecureSourceManagerInstanceIamBindingCondition
 
 condition block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/secure_source_manager_instance_iam_binding#condition SecureSourceManagerInstanceIamBinding#condition}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/secure_source_manager_instance_iam_binding#condition SecureSourceManagerInstanceIamBinding#condition}
 
 ---
 
@@ -1299,7 +1299,7 @@ id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/secure_source_manager_instance_iam_binding#id SecureSourceManagerInstanceIamBinding#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/secure_source_manager_instance_iam_binding#id SecureSourceManagerInstanceIamBinding#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1314,7 +1314,7 @@ location: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/secure_source_manager_instance_iam_binding#location SecureSourceManagerInstanceIamBinding#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/secure_source_manager_instance_iam_binding#location SecureSourceManagerInstanceIamBinding#location}.
 
 ---
 
@@ -1326,7 +1326,7 @@ project: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/secure_source_manager_instance_iam_binding#project SecureSourceManagerInstanceIamBinding#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/secure_source_manager_instance_iam_binding#project SecureSourceManagerInstanceIamBinding#project}.
 
 ---
 

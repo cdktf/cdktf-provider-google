@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/vmwareengine_private_cloud
+// https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/vmwareengine_private_cloud
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,17 +15,17 @@ export interface VmwareenginePrivateCloudConfig extends cdktf.TerraformMetaArgum
   /**
   * The number of hours to delay this request. You can set this value to an hour between 0 to 8, where setting it to 0 starts the deletion request immediately. If no value is set, a default value is set at the API Level.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/vmwareengine_private_cloud#deletion_delay_hours VmwareenginePrivateCloud#deletion_delay_hours}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/vmwareengine_private_cloud#deletion_delay_hours VmwareenginePrivateCloud#deletion_delay_hours}
   */
   readonly deletionDelayHours?: number;
   /**
   * User-provided description for this private cloud.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/vmwareengine_private_cloud#description VmwareenginePrivateCloud#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/vmwareengine_private_cloud#description VmwareenginePrivateCloud#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/vmwareengine_private_cloud#id VmwareenginePrivateCloud#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/vmwareengine_private_cloud#id VmwareenginePrivateCloud#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -34,47 +34,47 @@ export interface VmwareenginePrivateCloudConfig extends cdktf.TerraformMetaArgum
   /**
   * The location where the PrivateCloud should reside.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/vmwareengine_private_cloud#location VmwareenginePrivateCloud#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/vmwareengine_private_cloud#location VmwareenginePrivateCloud#location}
   */
   readonly location: string;
   /**
   * The ID of the PrivateCloud.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/vmwareengine_private_cloud#name VmwareenginePrivateCloud#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/vmwareengine_private_cloud#name VmwareenginePrivateCloud#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/vmwareengine_private_cloud#project VmwareenginePrivateCloud#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/vmwareengine_private_cloud#project VmwareenginePrivateCloud#project}
   */
   readonly project?: string;
   /**
   * While set true, deletion_delay_hours value will be sent in the request even for zero value of the field. This field is only useful for setting 0 value to the deletion_delay_hours field. It can be used both alone and together with deletion_delay_hours.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/vmwareengine_private_cloud#send_deletion_delay_hours_if_zero VmwareenginePrivateCloud#send_deletion_delay_hours_if_zero}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/vmwareengine_private_cloud#send_deletion_delay_hours_if_zero VmwareenginePrivateCloud#send_deletion_delay_hours_if_zero}
   */
   readonly sendDeletionDelayHoursIfZero?: boolean | cdktf.IResolvable;
   /**
   * Initial type of the private cloud. Possible values: ["STANDARD", "TIME_LIMITED", "STRETCHED"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/vmwareengine_private_cloud#type VmwareenginePrivateCloud#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/vmwareengine_private_cloud#type VmwareenginePrivateCloud#type}
   */
   readonly type?: string;
   /**
   * management_cluster block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/vmwareengine_private_cloud#management_cluster VmwareenginePrivateCloud#management_cluster}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/vmwareengine_private_cloud#management_cluster VmwareenginePrivateCloud#management_cluster}
   */
   readonly managementCluster: VmwareenginePrivateCloudManagementCluster;
   /**
   * network_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/vmwareengine_private_cloud#network_config VmwareenginePrivateCloud#network_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/vmwareengine_private_cloud#network_config VmwareenginePrivateCloud#network_config}
   */
   readonly networkConfig: VmwareenginePrivateCloudNetworkConfig;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/vmwareengine_private_cloud#timeouts VmwareenginePrivateCloud#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/vmwareengine_private_cloud#timeouts VmwareenginePrivateCloud#timeouts}
   */
   readonly timeouts?: VmwareenginePrivateCloudTimeouts;
 }
@@ -352,13 +352,13 @@ export interface VmwareenginePrivateCloudManagementClusterAutoscalingSettingsAut
   /**
   * The utilization triggering the scale-in operation in percent.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/vmwareengine_private_cloud#scale_in VmwareenginePrivateCloud#scale_in}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/vmwareengine_private_cloud#scale_in VmwareenginePrivateCloud#scale_in}
   */
   readonly scaleIn: number;
   /**
   * The utilization triggering the scale-out operation in percent.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/vmwareengine_private_cloud#scale_out VmwareenginePrivateCloud#scale_out}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/vmwareengine_private_cloud#scale_out VmwareenginePrivateCloud#scale_out}
   */
   readonly scaleOut: number;
 }
@@ -467,13 +467,13 @@ export interface VmwareenginePrivateCloudManagementClusterAutoscalingSettingsAut
   /**
   * The utilization triggering the scale-in operation in percent.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/vmwareengine_private_cloud#scale_in VmwareenginePrivateCloud#scale_in}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/vmwareengine_private_cloud#scale_in VmwareenginePrivateCloud#scale_in}
   */
   readonly scaleIn: number;
   /**
   * The utilization triggering the scale-out operation in percent.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/vmwareengine_private_cloud#scale_out VmwareenginePrivateCloud#scale_out}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/vmwareengine_private_cloud#scale_out VmwareenginePrivateCloud#scale_out}
   */
   readonly scaleOut: number;
 }
@@ -582,13 +582,13 @@ export interface VmwareenginePrivateCloudManagementClusterAutoscalingSettingsAut
   /**
   * The utilization triggering the scale-in operation in percent.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/vmwareengine_private_cloud#scale_in VmwareenginePrivateCloud#scale_in}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/vmwareengine_private_cloud#scale_in VmwareenginePrivateCloud#scale_in}
   */
   readonly scaleIn: number;
   /**
   * The utilization triggering the scale-out operation in percent.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/vmwareengine_private_cloud#scale_out VmwareenginePrivateCloud#scale_out}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/vmwareengine_private_cloud#scale_out VmwareenginePrivateCloud#scale_out}
   */
   readonly scaleOut: number;
 }
@@ -695,38 +695,38 @@ export class VmwareenginePrivateCloudManagementClusterAutoscalingSettingsAutosca
 }
 export interface VmwareenginePrivateCloudManagementClusterAutoscalingSettingsAutoscalingPolicies {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/vmwareengine_private_cloud#autoscale_policy_id VmwareenginePrivateCloud#autoscale_policy_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/vmwareengine_private_cloud#autoscale_policy_id VmwareenginePrivateCloud#autoscale_policy_id}
   */
   readonly autoscalePolicyId: string;
   /**
   * The canonical identifier of the node type to add or remove.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/vmwareengine_private_cloud#node_type_id VmwareenginePrivateCloud#node_type_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/vmwareengine_private_cloud#node_type_id VmwareenginePrivateCloud#node_type_id}
   */
   readonly nodeTypeId: string;
   /**
   * Number of nodes to add to a cluster during a scale-out operation.
   * Must be divisible by 2 for stretched clusters.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/vmwareengine_private_cloud#scale_out_size VmwareenginePrivateCloud#scale_out_size}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/vmwareengine_private_cloud#scale_out_size VmwareenginePrivateCloud#scale_out_size}
   */
   readonly scaleOutSize: number;
   /**
   * consumed_memory_thresholds block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/vmwareengine_private_cloud#consumed_memory_thresholds VmwareenginePrivateCloud#consumed_memory_thresholds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/vmwareengine_private_cloud#consumed_memory_thresholds VmwareenginePrivateCloud#consumed_memory_thresholds}
   */
   readonly consumedMemoryThresholds?: VmwareenginePrivateCloudManagementClusterAutoscalingSettingsAutoscalingPoliciesConsumedMemoryThresholds;
   /**
   * cpu_thresholds block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/vmwareengine_private_cloud#cpu_thresholds VmwareenginePrivateCloud#cpu_thresholds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/vmwareengine_private_cloud#cpu_thresholds VmwareenginePrivateCloud#cpu_thresholds}
   */
   readonly cpuThresholds?: VmwareenginePrivateCloudManagementClusterAutoscalingSettingsAutoscalingPoliciesCpuThresholds;
   /**
   * storage_thresholds block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/vmwareengine_private_cloud#storage_thresholds VmwareenginePrivateCloud#storage_thresholds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/vmwareengine_private_cloud#storage_thresholds VmwareenginePrivateCloud#storage_thresholds}
   */
   readonly storageThresholds?: VmwareenginePrivateCloudManagementClusterAutoscalingSettingsAutoscalingPoliciesStorageThresholds;
 }
@@ -984,27 +984,27 @@ export interface VmwareenginePrivateCloudManagementClusterAutoscalingSettings {
   * Cool down period must be in whole minutes (for example, 30m, 31m, 50m).
   * Mandatory for successful addition of autoscaling settings in cluster.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/vmwareengine_private_cloud#cool_down_period VmwareenginePrivateCloud#cool_down_period}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/vmwareengine_private_cloud#cool_down_period VmwareenginePrivateCloud#cool_down_period}
   */
   readonly coolDownPeriod?: string;
   /**
   * Maximum number of nodes of any type in a cluster.
   * Mandatory for successful addition of autoscaling settings in cluster.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/vmwareengine_private_cloud#max_cluster_node_count VmwareenginePrivateCloud#max_cluster_node_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/vmwareengine_private_cloud#max_cluster_node_count VmwareenginePrivateCloud#max_cluster_node_count}
   */
   readonly maxClusterNodeCount?: number;
   /**
   * Minimum number of nodes of any type in a cluster.
   * Mandatory for successful addition of autoscaling settings in cluster.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/vmwareengine_private_cloud#min_cluster_node_count VmwareenginePrivateCloud#min_cluster_node_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/vmwareengine_private_cloud#min_cluster_node_count VmwareenginePrivateCloud#min_cluster_node_count}
   */
   readonly minClusterNodeCount?: number;
   /**
   * autoscaling_policies block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/vmwareengine_private_cloud#autoscaling_policies VmwareenginePrivateCloud#autoscaling_policies}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/vmwareengine_private_cloud#autoscaling_policies VmwareenginePrivateCloud#autoscaling_policies}
   */
   readonly autoscalingPolicies: VmwareenginePrivateCloudManagementClusterAutoscalingSettingsAutoscalingPolicies[] | cdktf.IResolvable;
 }
@@ -1177,17 +1177,17 @@ export interface VmwareenginePrivateCloudManagementClusterNodeTypeConfigs {
   * If zero is provided max value from 'nodeType.availableCustomCoreCounts' will be used.
   * This cannot be changed once the PrivateCloud is created.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/vmwareengine_private_cloud#custom_core_count VmwareenginePrivateCloud#custom_core_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/vmwareengine_private_cloud#custom_core_count VmwareenginePrivateCloud#custom_core_count}
   */
   readonly customCoreCount?: number;
   /**
   * The number of nodes of this type in the cluster.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/vmwareengine_private_cloud#node_count VmwareenginePrivateCloud#node_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/vmwareengine_private_cloud#node_count VmwareenginePrivateCloud#node_count}
   */
   readonly nodeCount: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/vmwareengine_private_cloud#node_type_id VmwareenginePrivateCloud#node_type_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/vmwareengine_private_cloud#node_type_id VmwareenginePrivateCloud#node_type_id}
   */
   readonly nodeTypeId: string;
 }
@@ -1358,14 +1358,14 @@ export interface VmwareenginePrivateCloudManagementClusterStretchedClusterConfig
   * Zone that will remain operational when connection between the two zones is lost.
   * Specify the zone in the following format: projects/{project}/locations/{location}.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/vmwareengine_private_cloud#preferred_location VmwareenginePrivateCloud#preferred_location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/vmwareengine_private_cloud#preferred_location VmwareenginePrivateCloud#preferred_location}
   */
   readonly preferredLocation?: string;
   /**
   * Additional zone for a higher level of availability and load balancing.
   * Specify the zone in the following format: projects/{project}/locations/{location}.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/vmwareengine_private_cloud#secondary_location VmwareenginePrivateCloud#secondary_location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/vmwareengine_private_cloud#secondary_location VmwareenginePrivateCloud#secondary_location}
   */
   readonly secondaryLocation?: string;
 }
@@ -1485,25 +1485,25 @@ export interface VmwareenginePrivateCloudManagementCluster {
   *   * Not formatted as a UUID
   *   * Complies with RFC 1034 (https://datatracker.ietf.org/doc/html/rfc1034) (section 3.5)
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/vmwareengine_private_cloud#cluster_id VmwareenginePrivateCloud#cluster_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/vmwareengine_private_cloud#cluster_id VmwareenginePrivateCloud#cluster_id}
   */
   readonly clusterId: string;
   /**
   * autoscaling_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/vmwareengine_private_cloud#autoscaling_settings VmwareenginePrivateCloud#autoscaling_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/vmwareengine_private_cloud#autoscaling_settings VmwareenginePrivateCloud#autoscaling_settings}
   */
   readonly autoscalingSettings?: VmwareenginePrivateCloudManagementClusterAutoscalingSettings;
   /**
   * node_type_configs block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/vmwareengine_private_cloud#node_type_configs VmwareenginePrivateCloud#node_type_configs}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/vmwareengine_private_cloud#node_type_configs VmwareenginePrivateCloud#node_type_configs}
   */
   readonly nodeTypeConfigs?: VmwareenginePrivateCloudManagementClusterNodeTypeConfigs[] | cdktf.IResolvable;
   /**
   * stretched_cluster_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/vmwareengine_private_cloud#stretched_cluster_config VmwareenginePrivateCloud#stretched_cluster_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/vmwareengine_private_cloud#stretched_cluster_config VmwareenginePrivateCloud#stretched_cluster_config}
   */
   readonly stretchedClusterConfig?: VmwareenginePrivateCloudManagementClusterStretchedClusterConfig;
 }
@@ -1673,7 +1673,7 @@ export interface VmwareenginePrivateCloudNetworkConfig {
   /**
   * Management CIDR used by VMware management appliances.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/vmwareengine_private_cloud#management_cidr VmwareenginePrivateCloud#management_cidr}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/vmwareengine_private_cloud#management_cidr VmwareenginePrivateCloud#management_cidr}
   */
   readonly managementCidr: string;
   /**
@@ -1681,7 +1681,7 @@ export interface VmwareenginePrivateCloudNetworkConfig {
   * Specify the name in the following form: projects/{project}/locations/{location}/vmwareEngineNetworks/{vmwareEngineNetworkId}
   * where {project} can either be a project number or a project ID.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/vmwareengine_private_cloud#vmware_engine_network VmwareenginePrivateCloud#vmware_engine_network}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/vmwareengine_private_cloud#vmware_engine_network VmwareenginePrivateCloud#vmware_engine_network}
   */
   readonly vmwareEngineNetwork?: string;
 }
@@ -1806,15 +1806,15 @@ export class VmwareenginePrivateCloudNetworkConfigOutputReference extends cdktf.
 }
 export interface VmwareenginePrivateCloudTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/vmwareengine_private_cloud#create VmwareenginePrivateCloud#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/vmwareengine_private_cloud#create VmwareenginePrivateCloud#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/vmwareengine_private_cloud#delete VmwareenginePrivateCloud#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/vmwareengine_private_cloud#delete VmwareenginePrivateCloud#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/vmwareengine_private_cloud#update VmwareenginePrivateCloud#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/vmwareengine_private_cloud#update VmwareenginePrivateCloud#update}
   */
   readonly update?: string;
 }
@@ -1966,7 +1966,7 @@ export class VmwareenginePrivateCloudTimeoutsOutputReference extends cdktf.Compl
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/vmwareengine_private_cloud google_vmwareengine_private_cloud}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/vmwareengine_private_cloud google_vmwareengine_private_cloud}
 */
 export class VmwareenginePrivateCloud extends cdktf.TerraformResource {
 
@@ -1982,7 +1982,7 @@ export class VmwareenginePrivateCloud extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a VmwareenginePrivateCloud resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the VmwareenginePrivateCloud to import
-  * @param importFromId The id of the existing VmwareenginePrivateCloud that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/vmwareengine_private_cloud#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing VmwareenginePrivateCloud that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/vmwareengine_private_cloud#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the VmwareenginePrivateCloud to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -1994,7 +1994,7 @@ export class VmwareenginePrivateCloud extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/vmwareengine_private_cloud google_vmwareengine_private_cloud} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/vmwareengine_private_cloud google_vmwareengine_private_cloud} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -2005,7 +2005,7 @@ export class VmwareenginePrivateCloud extends cdktf.TerraformResource {
       terraformResourceType: 'google_vmwareengine_private_cloud',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.49.3',
+        providerVersion: '6.50.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,

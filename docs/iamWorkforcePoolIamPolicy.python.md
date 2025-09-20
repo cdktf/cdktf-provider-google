@@ -4,7 +4,7 @@
 
 ### IamWorkforcePoolIamPolicy <a name="IamWorkforcePoolIamPolicy" id="@cdktf/provider-google.iamWorkforcePoolIamPolicy.IamWorkforcePoolIamPolicy"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/iam_workforce_pool_iam_policy google_iam_workforce_pool_iam_policy}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/iam_workforce_pool_iam_policy google_iam_workforce_pool_iam_policy}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.iamWorkforcePoolIamPolicy.IamWorkforcePoolIamPolicy.Initializer"></a>
 
@@ -39,10 +39,10 @@ iamWorkforcePoolIamPolicy.IamWorkforcePoolIamPolicy(
 | <code><a href="#@cdktf/provider-google.iamWorkforcePoolIamPolicy.IamWorkforcePoolIamPolicy.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.iamWorkforcePoolIamPolicy.IamWorkforcePoolIamPolicy.Initializer.parameter.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.iamWorkforcePoolIamPolicy.IamWorkforcePoolIamPolicy.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.iamWorkforcePoolIamPolicy.IamWorkforcePoolIamPolicy.Initializer.parameter.policyData">policy_data</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/iam_workforce_pool_iam_policy#policy_data IamWorkforcePoolIamPolicy#policy_data}. |
-| <code><a href="#@cdktf/provider-google.iamWorkforcePoolIamPolicy.IamWorkforcePoolIamPolicy.Initializer.parameter.workforcePoolId">workforce_pool_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/iam_workforce_pool_iam_policy#workforce_pool_id IamWorkforcePoolIamPolicy#workforce_pool_id}. |
-| <code><a href="#@cdktf/provider-google.iamWorkforcePoolIamPolicy.IamWorkforcePoolIamPolicy.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/iam_workforce_pool_iam_policy#id IamWorkforcePoolIamPolicy#id}. |
-| <code><a href="#@cdktf/provider-google.iamWorkforcePoolIamPolicy.IamWorkforcePoolIamPolicy.Initializer.parameter.location">location</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/iam_workforce_pool_iam_policy#location IamWorkforcePoolIamPolicy#location}. |
+| <code><a href="#@cdktf/provider-google.iamWorkforcePoolIamPolicy.IamWorkforcePoolIamPolicy.Initializer.parameter.policyData">policy_data</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/iam_workforce_pool_iam_policy#policy_data IamWorkforcePoolIamPolicy#policy_data}. |
+| <code><a href="#@cdktf/provider-google.iamWorkforcePoolIamPolicy.IamWorkforcePoolIamPolicy.Initializer.parameter.workforcePoolId">workforce_pool_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/iam_workforce_pool_iam_policy#workforce_pool_id IamWorkforcePoolIamPolicy#workforce_pool_id}. |
+| <code><a href="#@cdktf/provider-google.iamWorkforcePoolIamPolicy.IamWorkforcePoolIamPolicy.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/iam_workforce_pool_iam_policy#id IamWorkforcePoolIamPolicy#id}. |
+| <code><a href="#@cdktf/provider-google.iamWorkforcePoolIamPolicy.IamWorkforcePoolIamPolicy.Initializer.parameter.location">location</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/iam_workforce_pool_iam_policy#location IamWorkforcePoolIamPolicy#location}. |
 
 ---
 
@@ -110,7 +110,7 @@ Must be unique amongst siblings in the same scope
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/iam_workforce_pool_iam_policy#policy_data IamWorkforcePoolIamPolicy#policy_data}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/iam_workforce_pool_iam_policy#policy_data IamWorkforcePoolIamPolicy#policy_data}.
 
 ---
 
@@ -118,7 +118,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/iam_workforce_pool_iam_policy#workforce_pool_id IamWorkforcePoolIamPolicy#workforce_pool_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/iam_workforce_pool_iam_policy#workforce_pool_id IamWorkforcePoolIamPolicy#workforce_pool_id}.
 
 ---
 
@@ -126,7 +126,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/iam_workforce_pool_iam_policy#id IamWorkforcePoolIamPolicy#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/iam_workforce_pool_iam_policy#id IamWorkforcePoolIamPolicy#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -137,7 +137,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/iam_workforce_pool_iam_policy#location IamWorkforcePoolIamPolicy#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/iam_workforce_pool_iam_policy#location IamWorkforcePoolIamPolicy#location}.
 
 ---
 
@@ -624,7 +624,7 @@ The construct id used in the generated config for the IamWorkforcePoolIamPolicy 
 
 The id of the existing IamWorkforcePoolIamPolicy that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/iam_workforce_pool_iam_policy#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/iam_workforce_pool_iam_policy#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -951,10 +951,10 @@ iamWorkforcePoolIamPolicy.IamWorkforcePoolIamPolicyConfig(
 | <code><a href="#@cdktf/provider-google.iamWorkforcePoolIamPolicy.IamWorkforcePoolIamPolicyConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.iamWorkforcePoolIamPolicy.IamWorkforcePoolIamPolicyConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.iamWorkforcePoolIamPolicy.IamWorkforcePoolIamPolicyConfig.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.iamWorkforcePoolIamPolicy.IamWorkforcePoolIamPolicyConfig.property.policyData">policy_data</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/iam_workforce_pool_iam_policy#policy_data IamWorkforcePoolIamPolicy#policy_data}. |
-| <code><a href="#@cdktf/provider-google.iamWorkforcePoolIamPolicy.IamWorkforcePoolIamPolicyConfig.property.workforcePoolId">workforce_pool_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/iam_workforce_pool_iam_policy#workforce_pool_id IamWorkforcePoolIamPolicy#workforce_pool_id}. |
-| <code><a href="#@cdktf/provider-google.iamWorkforcePoolIamPolicy.IamWorkforcePoolIamPolicyConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/iam_workforce_pool_iam_policy#id IamWorkforcePoolIamPolicy#id}. |
-| <code><a href="#@cdktf/provider-google.iamWorkforcePoolIamPolicy.IamWorkforcePoolIamPolicyConfig.property.location">location</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/iam_workforce_pool_iam_policy#location IamWorkforcePoolIamPolicy#location}. |
+| <code><a href="#@cdktf/provider-google.iamWorkforcePoolIamPolicy.IamWorkforcePoolIamPolicyConfig.property.policyData">policy_data</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/iam_workforce_pool_iam_policy#policy_data IamWorkforcePoolIamPolicy#policy_data}. |
+| <code><a href="#@cdktf/provider-google.iamWorkforcePoolIamPolicy.IamWorkforcePoolIamPolicyConfig.property.workforcePoolId">workforce_pool_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/iam_workforce_pool_iam_policy#workforce_pool_id IamWorkforcePoolIamPolicy#workforce_pool_id}. |
+| <code><a href="#@cdktf/provider-google.iamWorkforcePoolIamPolicy.IamWorkforcePoolIamPolicyConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/iam_workforce_pool_iam_policy#id IamWorkforcePoolIamPolicy#id}. |
+| <code><a href="#@cdktf/provider-google.iamWorkforcePoolIamPolicy.IamWorkforcePoolIamPolicyConfig.property.location">location</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/iam_workforce_pool_iam_policy#location IamWorkforcePoolIamPolicy#location}. |
 
 ---
 
@@ -1036,7 +1036,7 @@ policy_data: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/iam_workforce_pool_iam_policy#policy_data IamWorkforcePoolIamPolicy#policy_data}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/iam_workforce_pool_iam_policy#policy_data IamWorkforcePoolIamPolicy#policy_data}.
 
 ---
 
@@ -1048,7 +1048,7 @@ workforce_pool_id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/iam_workforce_pool_iam_policy#workforce_pool_id IamWorkforcePoolIamPolicy#workforce_pool_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/iam_workforce_pool_iam_policy#workforce_pool_id IamWorkforcePoolIamPolicy#workforce_pool_id}.
 
 ---
 
@@ -1060,7 +1060,7 @@ id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/iam_workforce_pool_iam_policy#id IamWorkforcePoolIamPolicy#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/iam_workforce_pool_iam_policy#id IamWorkforcePoolIamPolicy#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1075,7 +1075,7 @@ location: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/iam_workforce_pool_iam_policy#location IamWorkforcePoolIamPolicy#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/iam_workforce_pool_iam_policy#location IamWorkforcePoolIamPolicy#location}.
 
 ---
 

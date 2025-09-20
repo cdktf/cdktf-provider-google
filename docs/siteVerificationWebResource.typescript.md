@@ -4,7 +4,7 @@
 
 ### SiteVerificationWebResource <a name="SiteVerificationWebResource" id="@cdktf/provider-google.siteVerificationWebResource.SiteVerificationWebResource"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/site_verification_web_resource google_site_verification_web_resource}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/site_verification_web_resource google_site_verification_web_resource}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.siteVerificationWebResource.SiteVerificationWebResource.Initializer"></a>
 
@@ -507,7 +507,7 @@ The construct id used in the generated config for the SiteVerificationWebResourc
 
 The id of the existing SiteVerificationWebResource that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/site_verification_web_resource#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/site_verification_web_resource#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -835,7 +835,7 @@ const siteVerificationWebResourceConfig: siteVerificationWebResource.SiteVerific
 | <code><a href="#@cdktf/provider-google.siteVerificationWebResource.SiteVerificationWebResourceConfig.property.provisioners">provisioners</a></code> | <code>cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.siteVerificationWebResource.SiteVerificationWebResourceConfig.property.site">site</a></code> | <code><a href="#@cdktf/provider-google.siteVerificationWebResource.SiteVerificationWebResourceSite">SiteVerificationWebResourceSite</a></code> | site block. |
 | <code><a href="#@cdktf/provider-google.siteVerificationWebResource.SiteVerificationWebResourceConfig.property.verificationMethod">verificationMethod</a></code> | <code>string</code> | The verification method for the Site Verification system to use to verify this site or domain. |
-| <code><a href="#@cdktf/provider-google.siteVerificationWebResource.SiteVerificationWebResourceConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/site_verification_web_resource#id SiteVerificationWebResource#id}. |
+| <code><a href="#@cdktf/provider-google.siteVerificationWebResource.SiteVerificationWebResourceConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/site_verification_web_resource#id SiteVerificationWebResource#id}. |
 | <code><a href="#@cdktf/provider-google.siteVerificationWebResource.SiteVerificationWebResourceConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-google.siteVerificationWebResource.SiteVerificationWebResourceTimeouts">SiteVerificationWebResourceTimeouts</a></code> | timeouts block. |
 
 ---
@@ -920,7 +920,7 @@ public readonly site: SiteVerificationWebResourceSite;
 
 site block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/site_verification_web_resource#site SiteVerificationWebResource#site}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/site_verification_web_resource#site SiteVerificationWebResource#site}
 
 ---
 
@@ -936,7 +936,7 @@ The verification method for the Site Verification system to use to verify this s
 
 Possible values: ["ANALYTICS", "DNS_CNAME", "DNS_TXT", "FILE", "META", "TAG_MANAGER"]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/site_verification_web_resource#verification_method SiteVerificationWebResource#verification_method}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/site_verification_web_resource#verification_method SiteVerificationWebResource#verification_method}
 
 ---
 
@@ -948,7 +948,7 @@ public readonly id: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/site_verification_web_resource#id SiteVerificationWebResource#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/site_verification_web_resource#id SiteVerificationWebResource#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -965,7 +965,7 @@ public readonly timeouts: SiteVerificationWebResourceTimeouts;
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/site_verification_web_resource#timeouts SiteVerificationWebResource#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/site_verification_web_resource#timeouts SiteVerificationWebResource#timeouts}
 
 ---
 
@@ -1001,7 +1001,7 @@ The site identifier.
 If the type is set to SITE, the identifier is a URL. If the type is
 set to INET_DOMAIN, the identifier is a domain name.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/site_verification_web_resource#identifier SiteVerificationWebResource#identifier}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/site_verification_web_resource#identifier SiteVerificationWebResource#identifier}
 
 ---
 
@@ -1015,7 +1015,7 @@ public readonly type: string;
 
 The type of resource to be verified. Possible values: ["INET_DOMAIN", "SITE"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/site_verification_web_resource#type SiteVerificationWebResource#type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/site_verification_web_resource#type SiteVerificationWebResource#type}
 
 ---
 
@@ -1033,8 +1033,8 @@ const siteVerificationWebResourceTimeouts: siteVerificationWebResource.SiteVerif
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.siteVerificationWebResource.SiteVerificationWebResourceTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/site_verification_web_resource#create SiteVerificationWebResource#create}. |
-| <code><a href="#@cdktf/provider-google.siteVerificationWebResource.SiteVerificationWebResourceTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/site_verification_web_resource#delete SiteVerificationWebResource#delete}. |
+| <code><a href="#@cdktf/provider-google.siteVerificationWebResource.SiteVerificationWebResourceTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/site_verification_web_resource#create SiteVerificationWebResource#create}. |
+| <code><a href="#@cdktf/provider-google.siteVerificationWebResource.SiteVerificationWebResourceTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/site_verification_web_resource#delete SiteVerificationWebResource#delete}. |
 
 ---
 
@@ -1046,7 +1046,7 @@ public readonly create: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/site_verification_web_resource#create SiteVerificationWebResource#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/site_verification_web_resource#create SiteVerificationWebResource#create}.
 
 ---
 
@@ -1058,7 +1058,7 @@ public readonly delete: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/site_verification_web_resource#delete SiteVerificationWebResource#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/site_verification_web_resource#delete SiteVerificationWebResource#delete}.
 
 ---
 

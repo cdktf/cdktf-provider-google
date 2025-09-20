@@ -4,7 +4,7 @@
 
 ### DataGoogleStorageBuckets <a name="DataGoogleStorageBuckets" id="@cdktf/provider-google.dataGoogleStorageBuckets.DataGoogleStorageBuckets"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/data-sources/storage_buckets google_storage_buckets}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/data-sources/storage_buckets google_storage_buckets}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleStorageBuckets.DataGoogleStorageBuckets.Initializer"></a>
 
@@ -386,7 +386,7 @@ The construct id used in the generated config for the DataGoogleStorageBuckets t
 
 The id of the existing DataGoogleStorageBuckets that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/data-sources/storage_buckets#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/data-sources/storage_buckets#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -681,9 +681,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v16/datagooglestoragebu
 | <code><a href="#@cdktf/provider-google.dataGoogleStorageBuckets.DataGoogleStorageBucketsConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleStorageBuckets.DataGoogleStorageBucketsConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleStorageBuckets.DataGoogleStorageBucketsConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleStorageBuckets.DataGoogleStorageBucketsConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/data-sources/storage_buckets#id DataGoogleStorageBuckets#id}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleStorageBuckets.DataGoogleStorageBucketsConfig.property.prefix">Prefix</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/data-sources/storage_buckets#prefix DataGoogleStorageBuckets#prefix}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleStorageBuckets.DataGoogleStorageBucketsConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/data-sources/storage_buckets#project DataGoogleStorageBuckets#project}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleStorageBuckets.DataGoogleStorageBucketsConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/data-sources/storage_buckets#id DataGoogleStorageBuckets#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleStorageBuckets.DataGoogleStorageBucketsConfig.property.prefix">Prefix</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/data-sources/storage_buckets#prefix DataGoogleStorageBuckets#prefix}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleStorageBuckets.DataGoogleStorageBucketsConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/data-sources/storage_buckets#project DataGoogleStorageBuckets#project}. |
 
 ---
 
@@ -765,7 +765,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/data-sources/storage_buckets#id DataGoogleStorageBuckets#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/data-sources/storage_buckets#id DataGoogleStorageBuckets#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -780,7 +780,7 @@ Prefix *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/data-sources/storage_buckets#prefix DataGoogleStorageBuckets#prefix}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/data-sources/storage_buckets#prefix DataGoogleStorageBuckets#prefix}.
 
 ---
 
@@ -792,7 +792,7 @@ Project *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/data-sources/storage_buckets#project DataGoogleStorageBuckets#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/data-sources/storage_buckets#project DataGoogleStorageBuckets#project}.
 
 ---
 
