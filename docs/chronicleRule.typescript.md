@@ -4,7 +4,7 @@
 
 ### ChronicleRule <a name="ChronicleRule" id="@cdktf/provider-google.chronicleRule.ChronicleRule"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/chronicle_rule google_chronicle_rule}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/chronicle_rule google_chronicle_rule}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.chronicleRule.ChronicleRule.Initializer"></a>
 
@@ -536,7 +536,7 @@ The construct id used in the generated config for the ChronicleRule to import.
 
 The id of the existing ChronicleRule that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/chronicle_rule#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/chronicle_rule#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -1163,8 +1163,8 @@ const chronicleRuleConfig: chronicleRule.ChronicleRuleConfig = { ... }
 | <code><a href="#@cdktf/provider-google.chronicleRule.ChronicleRuleConfig.property.location">location</a></code> | <code>string</code> | The location of the resource. |
 | <code><a href="#@cdktf/provider-google.chronicleRule.ChronicleRuleConfig.property.deletionPolicy">deletionPolicy</a></code> | <code>string</code> | Policy to determine if the rule should be deleted forcefully. |
 | <code><a href="#@cdktf/provider-google.chronicleRule.ChronicleRuleConfig.property.etag">etag</a></code> | <code>string</code> | The etag for this rule. |
-| <code><a href="#@cdktf/provider-google.chronicleRule.ChronicleRuleConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/chronicle_rule#id ChronicleRule#id}. |
-| <code><a href="#@cdktf/provider-google.chronicleRule.ChronicleRuleConfig.property.project">project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/chronicle_rule#project ChronicleRule#project}. |
+| <code><a href="#@cdktf/provider-google.chronicleRule.ChronicleRuleConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/chronicle_rule#id ChronicleRule#id}. |
+| <code><a href="#@cdktf/provider-google.chronicleRule.ChronicleRuleConfig.property.project">project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/chronicle_rule#project ChronicleRule#project}. |
 | <code><a href="#@cdktf/provider-google.chronicleRule.ChronicleRuleConfig.property.ruleId">ruleId</a></code> | <code>string</code> | Rule Id is the ID of the Rule. |
 | <code><a href="#@cdktf/provider-google.chronicleRule.ChronicleRuleConfig.property.scope">scope</a></code> | <code>string</code> | Resource name of the DataAccessScope bound to this rule. |
 | <code><a href="#@cdktf/provider-google.chronicleRule.ChronicleRuleConfig.property.text">text</a></code> | <code>string</code> | The YARA-L content of the rule. Populated in FULL view. |
@@ -1252,7 +1252,7 @@ public readonly instance: string;
 
 The unique identifier for the Chronicle instance, which is the same as the customer ID.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/chronicle_rule#instance ChronicleRule#instance}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/chronicle_rule#instance ChronicleRule#instance}
 
 ---
 
@@ -1268,7 +1268,7 @@ The location of the resource.
 
 This is the geographical region where the Chronicle instance resides, such as "us" or "europe-west2".
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/chronicle_rule#location ChronicleRule#location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/chronicle_rule#location ChronicleRule#location}
 
 ---
 
@@ -1289,7 +1289,7 @@ associated detections. Regardless of this field's value, the rule
 deployment associated with this rule will also be deleted.
 Possible values: DEFAULT, FORCE
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/chronicle_rule#deletion_policy ChronicleRule#deletion_policy}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/chronicle_rule#deletion_policy ChronicleRule#deletion_policy}
 
 ---
 
@@ -1308,7 +1308,7 @@ matches the server-computed value, and will fail with an ABORTED error
 otherwise.
 Populated in BASIC view and FULL view.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/chronicle_rule#etag ChronicleRule#etag}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/chronicle_rule#etag ChronicleRule#etag}
 
 ---
 
@@ -1320,7 +1320,7 @@ public readonly id: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/chronicle_rule#id ChronicleRule#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/chronicle_rule#id ChronicleRule#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1335,7 +1335,7 @@ public readonly project: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/chronicle_rule#project ChronicleRule#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/chronicle_rule#project ChronicleRule#project}.
 
 ---
 
@@ -1349,7 +1349,7 @@ public readonly ruleId: string;
 
 Rule Id is the ID of the Rule.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/chronicle_rule#rule_id ChronicleRule#rule_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/chronicle_rule#rule_id ChronicleRule#rule_id}
 
 ---
 
@@ -1370,7 +1370,7 @@ both the user's and the rule's scopes.
 The scope should be in the format:
 "projects/{project}/locations/{location}/instances/{instance}/dataAccessScopes/{scope}".
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/chronicle_rule#scope ChronicleRule#scope}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/chronicle_rule#scope ChronicleRule#scope}
 
 ---
 
@@ -1384,7 +1384,7 @@ public readonly text: string;
 
 The YARA-L content of the rule. Populated in FULL view.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/chronicle_rule#text ChronicleRule#text}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/chronicle_rule#text ChronicleRule#text}
 
 ---
 
@@ -1398,7 +1398,7 @@ public readonly timeouts: ChronicleRuleTimeouts;
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/chronicle_rule#timeouts ChronicleRule#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/chronicle_rule#timeouts ChronicleRule#timeouts}
 
 ---
 
@@ -1427,9 +1427,9 @@ const chronicleRuleTimeouts: chronicleRule.ChronicleRuleTimeouts = { ... }
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.chronicleRule.ChronicleRuleTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/chronicle_rule#create ChronicleRule#create}. |
-| <code><a href="#@cdktf/provider-google.chronicleRule.ChronicleRuleTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/chronicle_rule#delete ChronicleRule#delete}. |
-| <code><a href="#@cdktf/provider-google.chronicleRule.ChronicleRuleTimeouts.property.update">update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/chronicle_rule#update ChronicleRule#update}. |
+| <code><a href="#@cdktf/provider-google.chronicleRule.ChronicleRuleTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/chronicle_rule#create ChronicleRule#create}. |
+| <code><a href="#@cdktf/provider-google.chronicleRule.ChronicleRuleTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/chronicle_rule#delete ChronicleRule#delete}. |
+| <code><a href="#@cdktf/provider-google.chronicleRule.ChronicleRuleTimeouts.property.update">update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/chronicle_rule#update ChronicleRule#update}. |
 
 ---
 
@@ -1441,7 +1441,7 @@ public readonly create: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/chronicle_rule#create ChronicleRule#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/chronicle_rule#create ChronicleRule#create}.
 
 ---
 
@@ -1453,7 +1453,7 @@ public readonly delete: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/chronicle_rule#delete ChronicleRule#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/chronicle_rule#delete ChronicleRule#delete}.
 
 ---
 
@@ -1465,7 +1465,7 @@ public readonly update: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/chronicle_rule#update ChronicleRule#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/chronicle_rule#update ChronicleRule#update}.
 
 ---
 
