@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/apigee_security_action
+// https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/apigee_security_action
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -19,19 +19,19 @@ export interface ApigeeSecurityActionConfig extends cdktf.TerraformMetaArguments
   * There can be at most 100 enabled actions with proxies set in an env.
   * Several other restrictions apply on conditions and are detailed later.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/apigee_security_action#api_proxies ApigeeSecurityAction#api_proxies}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/apigee_security_action#api_proxies ApigeeSecurityAction#api_proxies}
   */
   readonly apiProxies?: string[];
   /**
   * An optional user provided description of the SecurityAction.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/apigee_security_action#description ApigeeSecurityAction#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/apigee_security_action#description ApigeeSecurityAction#description}
   */
   readonly description?: string;
   /**
   * The Apigee environment that this security action applies to.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/apigee_security_action#env_id ApigeeSecurityAction#env_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/apigee_security_action#env_id ApigeeSecurityAction#env_id}
   */
   readonly envId: string;
   /**
@@ -40,11 +40,11 @@ export interface ApigeeSecurityActionConfig extends cdktf.TerraformMetaArguments
   * fractional digits. Offsets other than "Z" are also accepted.
   * Examples: "2014-10-02T15:01:23Z", "2014-10-02T15:01:23.045123456Z" or "2014-10-02T15:01:23+05:30".
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/apigee_security_action#expire_time ApigeeSecurityAction#expire_time}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/apigee_security_action#expire_time ApigeeSecurityAction#expire_time}
   */
   readonly expireTime?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/apigee_security_action#id ApigeeSecurityAction#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/apigee_security_action#id ApigeeSecurityAction#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -53,57 +53,57 @@ export interface ApigeeSecurityActionConfig extends cdktf.TerraformMetaArguments
   /**
   * The organization that this security action applies to.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/apigee_security_action#org_id ApigeeSecurityAction#org_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/apigee_security_action#org_id ApigeeSecurityAction#org_id}
   */
   readonly orgId: string;
   /**
   * The ID to use for the SecurityAction, which will become the final component of the action's resource name.
   * This value should be 0-61 characters, and valid format is (^a-z?$).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/apigee_security_action#security_action_id ApigeeSecurityAction#security_action_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/apigee_security_action#security_action_id ApigeeSecurityAction#security_action_id}
   */
   readonly securityActionId: string;
   /**
   * Only an ENABLED SecurityAction is enforced. An ENABLED SecurityAction past its expiration time will not be enforced. Possible values: ["ENABLED", "DISABLED"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/apigee_security_action#state ApigeeSecurityAction#state}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/apigee_security_action#state ApigeeSecurityAction#state}
   */
   readonly state: string;
   /**
   * The TTL for this SecurityAction.
   * A duration in seconds with up to nine fractional digits, ending with 's'. Example: "3.5s".
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/apigee_security_action#ttl ApigeeSecurityAction#ttl}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/apigee_security_action#ttl ApigeeSecurityAction#ttl}
   */
   readonly ttl?: string;
   /**
   * allow block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/apigee_security_action#allow ApigeeSecurityAction#allow}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/apigee_security_action#allow ApigeeSecurityAction#allow}
   */
   readonly allow?: ApigeeSecurityActionAllow;
   /**
   * condition_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/apigee_security_action#condition_config ApigeeSecurityAction#condition_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/apigee_security_action#condition_config ApigeeSecurityAction#condition_config}
   */
   readonly conditionConfig: ApigeeSecurityActionConditionConfig;
   /**
   * deny block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/apigee_security_action#deny ApigeeSecurityAction#deny}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/apigee_security_action#deny ApigeeSecurityAction#deny}
   */
   readonly deny?: ApigeeSecurityActionDeny;
   /**
   * flag block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/apigee_security_action#flag ApigeeSecurityAction#flag}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/apigee_security_action#flag ApigeeSecurityAction#flag}
   */
   readonly flag?: ApigeeSecurityActionFlag;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/apigee_security_action#timeouts ApigeeSecurityAction#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/apigee_security_action#timeouts ApigeeSecurityAction#timeouts}
   */
   readonly timeouts?: ApigeeSecurityActionTimeouts;
 }
@@ -160,26 +160,26 @@ export interface ApigeeSecurityActionConditionConfig {
   /**
   * A list of accessTokens. Limit 1000 per action.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/apigee_security_action#access_tokens ApigeeSecurityAction#access_tokens}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/apigee_security_action#access_tokens ApigeeSecurityAction#access_tokens}
   */
   readonly accessTokens?: string[];
   /**
   * A list of API keys. Limit 1000 per action.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/apigee_security_action#api_keys ApigeeSecurityAction#api_keys}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/apigee_security_action#api_keys ApigeeSecurityAction#api_keys}
   */
   readonly apiKeys?: string[];
   /**
   * A list of API Products. Limit 1000 per action.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/apigee_security_action#api_products ApigeeSecurityAction#api_products}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/apigee_security_action#api_products ApigeeSecurityAction#api_products}
   */
   readonly apiProducts?: string[];
   /**
   * A list of ASN numbers to act on, e.g. 23. https://en.wikipedia.org/wiki/Autonomous_system_(Internet)
   * This uses int64 instead of uint32 because of https://linter.aip.dev/141/forbidden-types.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/apigee_security_action#asns ApigeeSecurityAction#asns}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/apigee_security_action#asns ApigeeSecurityAction#asns}
   */
   readonly asns?: string[];
   /**
@@ -187,44 +187,44 @@ export interface ApigeeSecurityActionConditionConfig {
   * OAuth Abuser, Robot Abuser, TorListRule, Advanced Anomaly Detection, Advanced API Scraper,
   * Search Engine Crawlers, Public Clouds, Public Cloud AWS, Public Cloud Azure, and Public Cloud Google.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/apigee_security_action#bot_reasons ApigeeSecurityAction#bot_reasons}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/apigee_security_action#bot_reasons ApigeeSecurityAction#bot_reasons}
   */
   readonly botReasons?: string[];
   /**
   * A list of developer apps. Limit 1000 per action.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/apigee_security_action#developer_apps ApigeeSecurityAction#developer_apps}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/apigee_security_action#developer_apps ApigeeSecurityAction#developer_apps}
   */
   readonly developerApps?: string[];
   /**
   * A list of developers. Limit 1000 per action.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/apigee_security_action#developers ApigeeSecurityAction#developers}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/apigee_security_action#developers ApigeeSecurityAction#developers}
   */
   readonly developers?: string[];
   /**
   * Act only on particular HTTP methods. E.g. A read-only API can block POST/PUT/DELETE methods.
   * Accepted values are: GET, HEAD, POST, PUT, DELETE, CONNECT, OPTIONS, TRACE and PATCH.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/apigee_security_action#http_methods ApigeeSecurityAction#http_methods}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/apigee_security_action#http_methods ApigeeSecurityAction#http_methods}
   */
   readonly httpMethods?: string[];
   /**
   * A list of IP addresses. This could be either IPv4 or IPv6. Limited to 100 per action.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/apigee_security_action#ip_address_ranges ApigeeSecurityAction#ip_address_ranges}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/apigee_security_action#ip_address_ranges ApigeeSecurityAction#ip_address_ranges}
   */
   readonly ipAddressRanges?: string[];
   /**
   * A list of countries/region codes to act on, e.g. US. This follows https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/apigee_security_action#region_codes ApigeeSecurityAction#region_codes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/apigee_security_action#region_codes ApigeeSecurityAction#region_codes}
   */
   readonly regionCodes?: string[];
   /**
   * A list of user agents to deny. We look for exact matches. Limit 50 per action.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/apigee_security_action#user_agents ApigeeSecurityAction#user_agents}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/apigee_security_action#user_agents ApigeeSecurityAction#user_agents}
   */
   readonly userAgents?: string[];
 }
@@ -600,7 +600,7 @@ export interface ApigeeSecurityActionDeny {
   /**
   * The HTTP response code if the Action = DENY.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/apigee_security_action#response_code ApigeeSecurityAction#response_code}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/apigee_security_action#response_code ApigeeSecurityAction#response_code}
   */
   readonly responseCode?: number;
 }
@@ -686,13 +686,13 @@ export interface ApigeeSecurityActionFlagHeaders {
   /**
   * The header name to be sent to the target.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/apigee_security_action#name ApigeeSecurityAction#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/apigee_security_action#name ApigeeSecurityAction#name}
   */
   readonly name?: string;
   /**
   * The header value to be sent to the target.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/apigee_security_action#value ApigeeSecurityAction#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/apigee_security_action#value ApigeeSecurityAction#value}
   */
   readonly value?: string;
 }
@@ -839,7 +839,7 @@ export interface ApigeeSecurityActionFlag {
   /**
   * headers block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/apigee_security_action#headers ApigeeSecurityAction#headers}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/apigee_security_action#headers ApigeeSecurityAction#headers}
   */
   readonly headers?: ApigeeSecurityActionFlagHeaders[] | cdktf.IResolvable;
 }
@@ -923,11 +923,11 @@ export class ApigeeSecurityActionFlagOutputReference extends cdktf.ComplexObject
 }
 export interface ApigeeSecurityActionTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/apigee_security_action#create ApigeeSecurityAction#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/apigee_security_action#create ApigeeSecurityAction#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/apigee_security_action#delete ApigeeSecurityAction#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/apigee_security_action#delete ApigeeSecurityAction#delete}
   */
   readonly delete?: string;
 }
@@ -1050,7 +1050,7 @@ export class ApigeeSecurityActionTimeoutsOutputReference extends cdktf.ComplexOb
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/apigee_security_action google_apigee_security_action}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/apigee_security_action google_apigee_security_action}
 */
 export class ApigeeSecurityAction extends cdktf.TerraformResource {
 
@@ -1066,7 +1066,7 @@ export class ApigeeSecurityAction extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a ApigeeSecurityAction resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the ApigeeSecurityAction to import
-  * @param importFromId The id of the existing ApigeeSecurityAction that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/apigee_security_action#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing ApigeeSecurityAction that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/apigee_security_action#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the ApigeeSecurityAction to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -1078,7 +1078,7 @@ export class ApigeeSecurityAction extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/apigee_security_action google_apigee_security_action} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/apigee_security_action google_apigee_security_action} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -1089,7 +1089,7 @@ export class ApigeeSecurityAction extends cdktf.TerraformResource {
       terraformResourceType: 'google_apigee_security_action',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.49.3',
+        providerVersion: '6.50.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,

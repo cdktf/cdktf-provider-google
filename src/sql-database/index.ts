@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/sql_database
+// https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/sql_database
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -19,7 +19,7 @@ export interface SqlDatabaseConfig extends cdktf.TerraformMetaArguments {
   * for more details and supported values. Postgres databases only support
   * a value of 'UTF8' at creation time.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/sql_database#charset SqlDatabase#charset}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/sql_database#charset SqlDatabase#charset}
   */
   readonly charset?: string;
   /**
@@ -29,7 +29,7 @@ export interface SqlDatabaseConfig extends cdktf.TerraformMetaArguments {
   * for more details and supported values. Postgres databases only support
   * a value of 'en_US.UTF8' at creation time.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/sql_database#collation SqlDatabase#collation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/sql_database#collation SqlDatabase#collation}
   */
   readonly collation?: string;
   /**
@@ -38,11 +38,11 @@ export interface SqlDatabaseConfig extends cdktf.TerraformMetaArguments {
   * deleted from the API if there are users other than cloudsqlsuperuser with access. Possible
   * values are: "ABANDON", "DELETE". Defaults to "DELETE".
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/sql_database#deletion_policy SqlDatabase#deletion_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/sql_database#deletion_policy SqlDatabase#deletion_policy}
   */
   readonly deletionPolicy?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/sql_database#id SqlDatabase#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/sql_database#id SqlDatabase#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -52,38 +52,38 @@ export interface SqlDatabaseConfig extends cdktf.TerraformMetaArguments {
   * The name of the Cloud SQL instance. This does not include the project
   * ID.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/sql_database#instance SqlDatabase#instance}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/sql_database#instance SqlDatabase#instance}
   */
   readonly instance: string;
   /**
   * The name of the database in the Cloud SQL instance.
   * This does not include the project ID or instance name.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/sql_database#name SqlDatabase#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/sql_database#name SqlDatabase#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/sql_database#project SqlDatabase#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/sql_database#project SqlDatabase#project}
   */
   readonly project?: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/sql_database#timeouts SqlDatabase#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/sql_database#timeouts SqlDatabase#timeouts}
   */
   readonly timeouts?: SqlDatabaseTimeouts;
 }
 export interface SqlDatabaseTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/sql_database#create SqlDatabase#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/sql_database#create SqlDatabase#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/sql_database#delete SqlDatabase#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/sql_database#delete SqlDatabase#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/sql_database#update SqlDatabase#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/sql_database#update SqlDatabase#update}
   */
   readonly update?: string;
 }
@@ -235,7 +235,7 @@ export class SqlDatabaseTimeoutsOutputReference extends cdktf.ComplexObject {
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/sql_database google_sql_database}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/sql_database google_sql_database}
 */
 export class SqlDatabase extends cdktf.TerraformResource {
 
@@ -251,7 +251,7 @@ export class SqlDatabase extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a SqlDatabase resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the SqlDatabase to import
-  * @param importFromId The id of the existing SqlDatabase that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/sql_database#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing SqlDatabase that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/sql_database#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the SqlDatabase to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -263,7 +263,7 @@ export class SqlDatabase extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/sql_database google_sql_database} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/sql_database google_sql_database} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -274,7 +274,7 @@ export class SqlDatabase extends cdktf.TerraformResource {
       terraformResourceType: 'google_sql_database',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.49.3',
+        providerVersion: '6.50.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,

@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/firebase_app_check_debug_token
+// https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/firebase_app_check_debug_token
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -18,24 +18,24 @@ export interface FirebaseAppCheckDebugTokenConfig extends cdktf.TerraformMetaArg
   * [Apple App](https://firebase.google.com/docs/reference/firebase-management/rest/v1beta1/projects.iosApps#IosApp.FIELDS.app_id),
   * or [Android App](https://firebase.google.com/docs/reference/firebase-management/rest/v1beta1/projects.androidApps#AndroidApp.FIELDS.app_id)
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/firebase_app_check_debug_token#app_id FirebaseAppCheckDebugToken#app_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/firebase_app_check_debug_token#app_id FirebaseAppCheckDebugToken#app_id}
   */
   readonly appId: string;
   /**
   * A human readable display name used to identify this debug token.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/firebase_app_check_debug_token#display_name FirebaseAppCheckDebugToken#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/firebase_app_check_debug_token#display_name FirebaseAppCheckDebugToken#display_name}
   */
   readonly displayName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/firebase_app_check_debug_token#id FirebaseAppCheckDebugToken#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/firebase_app_check_debug_token#id FirebaseAppCheckDebugToken#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/firebase_app_check_debug_token#project FirebaseAppCheckDebugToken#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/firebase_app_check_debug_token#project FirebaseAppCheckDebugToken#project}
   */
   readonly project?: string;
   /**
@@ -48,27 +48,27 @@ export interface FirebaseAppCheckDebugTokenConfig extends cdktf.TerraformMetaArg
   * 
   * For security reasons, this field will never be populated in any response.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/firebase_app_check_debug_token#token FirebaseAppCheckDebugToken#token}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/firebase_app_check_debug_token#token FirebaseAppCheckDebugToken#token}
   */
   readonly token: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/firebase_app_check_debug_token#timeouts FirebaseAppCheckDebugToken#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/firebase_app_check_debug_token#timeouts FirebaseAppCheckDebugToken#timeouts}
   */
   readonly timeouts?: FirebaseAppCheckDebugTokenTimeouts;
 }
 export interface FirebaseAppCheckDebugTokenTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/firebase_app_check_debug_token#create FirebaseAppCheckDebugToken#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/firebase_app_check_debug_token#create FirebaseAppCheckDebugToken#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/firebase_app_check_debug_token#delete FirebaseAppCheckDebugToken#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/firebase_app_check_debug_token#delete FirebaseAppCheckDebugToken#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/firebase_app_check_debug_token#update FirebaseAppCheckDebugToken#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/firebase_app_check_debug_token#update FirebaseAppCheckDebugToken#update}
   */
   readonly update?: string;
 }
@@ -220,7 +220,7 @@ export class FirebaseAppCheckDebugTokenTimeoutsOutputReference extends cdktf.Com
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/firebase_app_check_debug_token google_firebase_app_check_debug_token}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/firebase_app_check_debug_token google_firebase_app_check_debug_token}
 */
 export class FirebaseAppCheckDebugToken extends cdktf.TerraformResource {
 
@@ -236,7 +236,7 @@ export class FirebaseAppCheckDebugToken extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a FirebaseAppCheckDebugToken resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the FirebaseAppCheckDebugToken to import
-  * @param importFromId The id of the existing FirebaseAppCheckDebugToken that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/firebase_app_check_debug_token#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing FirebaseAppCheckDebugToken that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/firebase_app_check_debug_token#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the FirebaseAppCheckDebugToken to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -248,7 +248,7 @@ export class FirebaseAppCheckDebugToken extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/firebase_app_check_debug_token google_firebase_app_check_debug_token} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/firebase_app_check_debug_token google_firebase_app_check_debug_token} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -259,7 +259,7 @@ export class FirebaseAppCheckDebugToken extends cdktf.TerraformResource {
       terraformResourceType: 'google_firebase_app_check_debug_token',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.49.3',
+        providerVersion: '6.50.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,

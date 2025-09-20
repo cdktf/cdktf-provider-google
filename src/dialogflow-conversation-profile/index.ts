@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_conversation_profile
+// https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/dialogflow_conversation_profile
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,11 +15,11 @@ export interface DialogflowConversationProfileConfig extends cdktf.TerraformMeta
   /**
   * Required. Human readable name for this profile. Max length 1024 bytes.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_conversation_profile#display_name DialogflowConversationProfile#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/dialogflow_conversation_profile#display_name DialogflowConversationProfile#display_name}
   */
   readonly displayName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_conversation_profile#id DialogflowConversationProfile#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/dialogflow_conversation_profile#id DialogflowConversationProfile#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -28,83 +28,83 @@ export interface DialogflowConversationProfileConfig extends cdktf.TerraformMeta
   /**
   * Language code for the conversation profile. This should be a BCP-47 language tag.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_conversation_profile#language_code DialogflowConversationProfile#language_code}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/dialogflow_conversation_profile#language_code DialogflowConversationProfile#language_code}
   */
   readonly languageCode?: string;
   /**
   * desc
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_conversation_profile#location DialogflowConversationProfile#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/dialogflow_conversation_profile#location DialogflowConversationProfile#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_conversation_profile#project DialogflowConversationProfile#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/dialogflow_conversation_profile#project DialogflowConversationProfile#project}
   */
   readonly project?: string;
   /**
   * Name of the CX SecuritySettings reference for the agent.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_conversation_profile#security_settings DialogflowConversationProfile#security_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/dialogflow_conversation_profile#security_settings DialogflowConversationProfile#security_settings}
   */
   readonly securitySettings?: string;
   /**
   * The time zone of this conversational profile.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_conversation_profile#time_zone DialogflowConversationProfile#time_zone}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/dialogflow_conversation_profile#time_zone DialogflowConversationProfile#time_zone}
   */
   readonly timeZone?: string;
   /**
   * automated_agent_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_conversation_profile#automated_agent_config DialogflowConversationProfile#automated_agent_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/dialogflow_conversation_profile#automated_agent_config DialogflowConversationProfile#automated_agent_config}
   */
   readonly automatedAgentConfig?: DialogflowConversationProfileAutomatedAgentConfig;
   /**
   * human_agent_assistant_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_conversation_profile#human_agent_assistant_config DialogflowConversationProfile#human_agent_assistant_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/dialogflow_conversation_profile#human_agent_assistant_config DialogflowConversationProfile#human_agent_assistant_config}
   */
   readonly humanAgentAssistantConfig?: DialogflowConversationProfileHumanAgentAssistantConfig;
   /**
   * human_agent_handoff_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_conversation_profile#human_agent_handoff_config DialogflowConversationProfile#human_agent_handoff_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/dialogflow_conversation_profile#human_agent_handoff_config DialogflowConversationProfile#human_agent_handoff_config}
   */
   readonly humanAgentHandoffConfig?: DialogflowConversationProfileHumanAgentHandoffConfig;
   /**
   * logging_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_conversation_profile#logging_config DialogflowConversationProfile#logging_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/dialogflow_conversation_profile#logging_config DialogflowConversationProfile#logging_config}
   */
   readonly loggingConfig?: DialogflowConversationProfileLoggingConfig;
   /**
   * new_message_event_notification_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_conversation_profile#new_message_event_notification_config DialogflowConversationProfile#new_message_event_notification_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/dialogflow_conversation_profile#new_message_event_notification_config DialogflowConversationProfile#new_message_event_notification_config}
   */
   readonly newMessageEventNotificationConfig?: DialogflowConversationProfileNewMessageEventNotificationConfig;
   /**
   * notification_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_conversation_profile#notification_config DialogflowConversationProfile#notification_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/dialogflow_conversation_profile#notification_config DialogflowConversationProfile#notification_config}
   */
   readonly notificationConfig?: DialogflowConversationProfileNotificationConfig;
   /**
   * stt_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_conversation_profile#stt_config DialogflowConversationProfile#stt_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/dialogflow_conversation_profile#stt_config DialogflowConversationProfile#stt_config}
   */
   readonly sttConfig?: DialogflowConversationProfileSttConfig;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_conversation_profile#timeouts DialogflowConversationProfile#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/dialogflow_conversation_profile#timeouts DialogflowConversationProfile#timeouts}
   */
   readonly timeouts?: DialogflowConversationProfileTimeouts;
   /**
   * tts_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_conversation_profile#tts_config DialogflowConversationProfile#tts_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/dialogflow_conversation_profile#tts_config DialogflowConversationProfile#tts_config}
   */
   readonly ttsConfig?: DialogflowConversationProfileTtsConfig;
 }
@@ -113,13 +113,13 @@ export interface DialogflowConversationProfileAutomatedAgentConfig {
   * ID of the Dialogflow agent environment to use.
   * Expects the format "projects/<Project ID>/locations/<Location ID>/agent/environments/<EnvironmentID>"
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_conversation_profile#agent DialogflowConversationProfile#agent}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/dialogflow_conversation_profile#agent DialogflowConversationProfile#agent}
   */
   readonly agent: string;
   /**
   * Configure lifetime of the Dialogflow session.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_conversation_profile#session_ttl DialogflowConversationProfile#session_ttl}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/dialogflow_conversation_profile#session_ttl DialogflowConversationProfile#session_ttl}
   */
   readonly sessionTtl?: string;
 }
@@ -231,13 +231,13 @@ export interface DialogflowConversationProfileHumanAgentAssistantConfigEndUserSu
   /**
   * Version of current baseline model. It will be ignored if model is set. Valid versions are: Article Suggestion baseline model: - 0.9 - 1.0 (default) Summarization baseline model: - 1.0
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_conversation_profile#baseline_model_version DialogflowConversationProfile#baseline_model_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/dialogflow_conversation_profile#baseline_model_version DialogflowConversationProfile#baseline_model_version}
   */
   readonly baselineModelVersion?: string;
   /**
   * Conversation model resource name. Format: projects/<Project ID>/conversationModels/<Model ID>.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_conversation_profile#model DialogflowConversationProfile#model}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/dialogflow_conversation_profile#model DialogflowConversationProfile#model}
   */
   readonly model?: string;
 }
@@ -352,7 +352,7 @@ export interface DialogflowConversationProfileHumanAgentAssistantConfigEndUserSu
   /**
   * Number of recent non-small-talk sentences to use as context for article and FAQ suggestion
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_conversation_profile#recent_sentences_count DialogflowConversationProfile#recent_sentences_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/dialogflow_conversation_profile#recent_sentences_count DialogflowConversationProfile#recent_sentences_count}
   */
   readonly recentSentencesCount?: number;
 }
@@ -438,19 +438,19 @@ export interface DialogflowConversationProfileHumanAgentAssistantConfigEndUserSu
   /**
   * If set to true, the last message from virtual agent (hand off message) and the message before it (trigger message of hand off) are dropped.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_conversation_profile#drop_handoff_messages DialogflowConversationProfile#drop_handoff_messages}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/dialogflow_conversation_profile#drop_handoff_messages DialogflowConversationProfile#drop_handoff_messages}
   */
   readonly dropHandoffMessages?: boolean | cdktf.IResolvable;
   /**
   * If set to true, all messages from ivr stage are dropped.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_conversation_profile#drop_ivr_messages DialogflowConversationProfile#drop_ivr_messages}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/dialogflow_conversation_profile#drop_ivr_messages DialogflowConversationProfile#drop_ivr_messages}
   */
   readonly dropIvrMessages?: boolean | cdktf.IResolvable;
   /**
   * If set to true, all messages from virtual agent are dropped.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_conversation_profile#drop_virtual_agent_messages DialogflowConversationProfile#drop_virtual_agent_messages}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/dialogflow_conversation_profile#drop_virtual_agent_messages DialogflowConversationProfile#drop_virtual_agent_messages}
   */
   readonly dropVirtualAgentMessages?: boolean | cdktf.IResolvable;
 }
@@ -594,7 +594,7 @@ export interface DialogflowConversationProfileHumanAgentAssistantConfigEndUserSu
   /**
   * The name of a dialogflow virtual agent used for intent detection and suggestion triggered by human agent. Format: projects/<Project ID>/locations/<Location ID>/agent.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_conversation_profile#agent DialogflowConversationProfile#agent}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/dialogflow_conversation_profile#agent DialogflowConversationProfile#agent}
   */
   readonly agent?: string;
 }
@@ -680,13 +680,13 @@ export interface DialogflowConversationProfileHumanAgentAssistantConfigEndUserSu
   /**
   * he name of a Dialogflow virtual agent used for end user side intent detection and suggestion. Format: projects/<Project ID>/locations/<Location ID>/agent.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_conversation_profile#agent DialogflowConversationProfile#agent}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/dialogflow_conversation_profile#agent DialogflowConversationProfile#agent}
   */
   readonly agent: string;
   /**
   * human_agent_side_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_conversation_profile#human_agent_side_config DialogflowConversationProfile#human_agent_side_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/dialogflow_conversation_profile#human_agent_side_config DialogflowConversationProfile#human_agent_side_config}
   */
   readonly humanAgentSideConfig?: DialogflowConversationProfileHumanAgentAssistantConfigEndUserSuggestionConfigFeatureConfigsQueryConfigDialogflowQuerySourceHumanAgentSideConfig;
 }
@@ -798,7 +798,7 @@ export interface DialogflowConversationProfileHumanAgentAssistantConfigEndUserSu
   /**
   * Knowledge documents to query from. Format: projects/<Project ID>/locations/<Location ID>/knowledgeBases/<KnowledgeBase ID>/documents/<Document ID>.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_conversation_profile#documents DialogflowConversationProfile#documents}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/dialogflow_conversation_profile#documents DialogflowConversationProfile#documents}
   */
   readonly documents: string[];
 }
@@ -881,7 +881,7 @@ export interface DialogflowConversationProfileHumanAgentAssistantConfigEndUserSu
   /**
   * Knowledge bases to query. Format: projects/<Project ID>/locations/<Location ID>/knowledgeBases/<Knowledge Base ID>.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_conversation_profile#knowledge_bases DialogflowConversationProfile#knowledge_bases}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/dialogflow_conversation_profile#knowledge_bases DialogflowConversationProfile#knowledge_bases}
   */
   readonly knowledgeBases: string[];
 }
@@ -965,7 +965,7 @@ export interface DialogflowConversationProfileHumanAgentAssistantConfigEndUserSu
   * The selected sections chosen to return when requesting a summary of a conversation
   * If not provided the default selection will be "{SITUATION, ACTION, RESULT}". Possible values: ["SECTION_TYPE_UNSPECIFIED", "SITUATION", "ACTION", "RESOLUTION", "REASON_FOR_CANCELLATION", "CUSTOMER_SATISFACTION", "ENTITIES"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_conversation_profile#section_types DialogflowConversationProfile#section_types}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/dialogflow_conversation_profile#section_types DialogflowConversationProfile#section_types}
   */
   readonly sectionTypes?: string[];
 }
@@ -1052,43 +1052,43 @@ export interface DialogflowConversationProfileHumanAgentAssistantConfigEndUserSu
   * Confidence threshold of query result.
   * This feature is only supported for types: ARTICLE_SUGGESTION, FAQ, SMART_REPLY, SMART_COMPOSE, KNOWLEDGE_SEARCH, KNOWLEDGE_ASSIST, ENTITY_EXTRACTION.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_conversation_profile#confidence_threshold DialogflowConversationProfile#confidence_threshold}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/dialogflow_conversation_profile#confidence_threshold DialogflowConversationProfile#confidence_threshold}
   */
   readonly confidenceThreshold?: number;
   /**
   * Maximum number of results to return.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_conversation_profile#max_results DialogflowConversationProfile#max_results}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/dialogflow_conversation_profile#max_results DialogflowConversationProfile#max_results}
   */
   readonly maxResults?: number;
   /**
   * context_filter_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_conversation_profile#context_filter_settings DialogflowConversationProfile#context_filter_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/dialogflow_conversation_profile#context_filter_settings DialogflowConversationProfile#context_filter_settings}
   */
   readonly contextFilterSettings?: DialogflowConversationProfileHumanAgentAssistantConfigEndUserSuggestionConfigFeatureConfigsQueryConfigContextFilterSettings;
   /**
   * dialogflow_query_source block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_conversation_profile#dialogflow_query_source DialogflowConversationProfile#dialogflow_query_source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/dialogflow_conversation_profile#dialogflow_query_source DialogflowConversationProfile#dialogflow_query_source}
   */
   readonly dialogflowQuerySource?: DialogflowConversationProfileHumanAgentAssistantConfigEndUserSuggestionConfigFeatureConfigsQueryConfigDialogflowQuerySource;
   /**
   * document_query_source block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_conversation_profile#document_query_source DialogflowConversationProfile#document_query_source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/dialogflow_conversation_profile#document_query_source DialogflowConversationProfile#document_query_source}
   */
   readonly documentQuerySource?: DialogflowConversationProfileHumanAgentAssistantConfigEndUserSuggestionConfigFeatureConfigsQueryConfigDocumentQuerySource;
   /**
   * knowledge_base_query_source block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_conversation_profile#knowledge_base_query_source DialogflowConversationProfile#knowledge_base_query_source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/dialogflow_conversation_profile#knowledge_base_query_source DialogflowConversationProfile#knowledge_base_query_source}
   */
   readonly knowledgeBaseQuerySource?: DialogflowConversationProfileHumanAgentAssistantConfigEndUserSuggestionConfigFeatureConfigsQueryConfigKnowledgeBaseQuerySource;
   /**
   * sections block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_conversation_profile#sections DialogflowConversationProfile#sections}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/dialogflow_conversation_profile#sections DialogflowConversationProfile#sections}
   */
   readonly sections?: DialogflowConversationProfileHumanAgentAssistantConfigEndUserSuggestionConfigFeatureConfigsQueryConfigSections;
 }
@@ -1348,7 +1348,7 @@ export interface DialogflowConversationProfileHumanAgentAssistantConfigEndUserSu
   /**
   * Type of Human Agent Assistant API feature to request.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_conversation_profile#type DialogflowConversationProfile#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/dialogflow_conversation_profile#type DialogflowConversationProfile#type}
   */
   readonly type?: string;
 }
@@ -1434,13 +1434,13 @@ export interface DialogflowConversationProfileHumanAgentAssistantConfigEndUserSu
   /**
   * Do not trigger if last utterance is small talk.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_conversation_profile#no_small_talk DialogflowConversationProfile#no_small_talk}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/dialogflow_conversation_profile#no_small_talk DialogflowConversationProfile#no_small_talk}
   */
   readonly noSmallTalk?: boolean | cdktf.IResolvable;
   /**
   * Only trigger suggestion if participant role of last utterance is END_USER.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_conversation_profile#only_end_user DialogflowConversationProfile#only_end_user}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/dialogflow_conversation_profile#only_end_user DialogflowConversationProfile#only_end_user}
   */
   readonly onlyEndUser?: boolean | cdktf.IResolvable;
 }
@@ -1556,65 +1556,65 @@ export interface DialogflowConversationProfileHumanAgentAssistantConfigEndUserSu
   * Disable the logging of search queries sent by human agents. It can prevent those queries from being stored at answer records.
   * This feature is only supported for types: KNOWLEDGE_SEARCH.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_conversation_profile#disable_agent_query_logging DialogflowConversationProfile#disable_agent_query_logging}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/dialogflow_conversation_profile#disable_agent_query_logging DialogflowConversationProfile#disable_agent_query_logging}
   */
   readonly disableAgentQueryLogging?: boolean | cdktf.IResolvable;
   /**
   * Enable including conversation context during query answer generation.
   * This feature is only supported for types: KNOWLEDGE_SEARCH.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_conversation_profile#enable_conversation_augmented_query DialogflowConversationProfile#enable_conversation_augmented_query}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/dialogflow_conversation_profile#enable_conversation_augmented_query DialogflowConversationProfile#enable_conversation_augmented_query}
   */
   readonly enableConversationAugmentedQuery?: boolean | cdktf.IResolvable;
   /**
   * Automatically iterates all participants and tries to compile suggestions.
   * This feature is only supported for types: ARTICLE_SUGGESTION, FAQ, DIALOGFLOW_ASSIST, KNOWLEDGE_ASSIST.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_conversation_profile#enable_event_based_suggestion DialogflowConversationProfile#enable_event_based_suggestion}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/dialogflow_conversation_profile#enable_event_based_suggestion DialogflowConversationProfile#enable_event_based_suggestion}
   */
   readonly enableEventBasedSuggestion?: boolean | cdktf.IResolvable;
   /**
   * Enable query suggestion only.
   * This feature is only supported for types: KNOWLEDGE_ASSIST
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_conversation_profile#enable_query_suggestion_only DialogflowConversationProfile#enable_query_suggestion_only}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/dialogflow_conversation_profile#enable_query_suggestion_only DialogflowConversationProfile#enable_query_suggestion_only}
   */
   readonly enableQuerySuggestionOnly?: boolean | cdktf.IResolvable;
   /**
   * Enable query suggestion even if we can't find its answer. By default, queries are suggested only if we find its answer.
   * This feature is only supported for types: KNOWLEDGE_ASSIST.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_conversation_profile#enable_query_suggestion_when_no_answer DialogflowConversationProfile#enable_query_suggestion_when_no_answer}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/dialogflow_conversation_profile#enable_query_suggestion_when_no_answer DialogflowConversationProfile#enable_query_suggestion_when_no_answer}
   */
   readonly enableQuerySuggestionWhenNoAnswer?: boolean | cdktf.IResolvable;
   /**
   * conversation_model_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_conversation_profile#conversation_model_config DialogflowConversationProfile#conversation_model_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/dialogflow_conversation_profile#conversation_model_config DialogflowConversationProfile#conversation_model_config}
   */
   readonly conversationModelConfig?: DialogflowConversationProfileHumanAgentAssistantConfigEndUserSuggestionConfigFeatureConfigsConversationModelConfig;
   /**
   * conversation_process_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_conversation_profile#conversation_process_config DialogflowConversationProfile#conversation_process_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/dialogflow_conversation_profile#conversation_process_config DialogflowConversationProfile#conversation_process_config}
   */
   readonly conversationProcessConfig?: DialogflowConversationProfileHumanAgentAssistantConfigEndUserSuggestionConfigFeatureConfigsConversationProcessConfig;
   /**
   * query_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_conversation_profile#query_config DialogflowConversationProfile#query_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/dialogflow_conversation_profile#query_config DialogflowConversationProfile#query_config}
   */
   readonly queryConfig?: DialogflowConversationProfileHumanAgentAssistantConfigEndUserSuggestionConfigFeatureConfigsQueryConfig;
   /**
   * suggestion_feature block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_conversation_profile#suggestion_feature DialogflowConversationProfile#suggestion_feature}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/dialogflow_conversation_profile#suggestion_feature DialogflowConversationProfile#suggestion_feature}
   */
   readonly suggestionFeature?: DialogflowConversationProfileHumanAgentAssistantConfigEndUserSuggestionConfigFeatureConfigsSuggestionFeature;
   /**
   * suggestion_trigger_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_conversation_profile#suggestion_trigger_settings DialogflowConversationProfile#suggestion_trigger_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/dialogflow_conversation_profile#suggestion_trigger_settings DialogflowConversationProfile#suggestion_trigger_settings}
   */
   readonly suggestionTriggerSettings?: DialogflowConversationProfileHumanAgentAssistantConfigEndUserSuggestionConfigFeatureConfigsSuggestionTriggerSettings;
 }
@@ -1993,13 +1993,13 @@ export interface DialogflowConversationProfileHumanAgentAssistantConfigEndUserSu
   /**
   * When disableHighLatencyFeaturesSyncDelivery is true and using the AnalyzeContent API, we will not deliver the responses from high latency features in the API response. The humanAgentAssistantConfig.notification_config must be configured and enableEventBasedSuggestion must be set to true to receive the responses from high latency features in Pub/Sub. High latency feature(s): KNOWLEDGE_ASSIST
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_conversation_profile#disable_high_latency_features_sync_delivery DialogflowConversationProfile#disable_high_latency_features_sync_delivery}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/dialogflow_conversation_profile#disable_high_latency_features_sync_delivery DialogflowConversationProfile#disable_high_latency_features_sync_delivery}
   */
   readonly disableHighLatencyFeaturesSyncDelivery?: boolean | cdktf.IResolvable;
   /**
   * List of various generator resource names used in the conversation profile.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_conversation_profile#generators DialogflowConversationProfile#generators}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/dialogflow_conversation_profile#generators DialogflowConversationProfile#generators}
   */
   readonly generators?: string[];
   /**
@@ -2007,13 +2007,13 @@ export interface DialogflowConversationProfileHumanAgentAssistantConfigEndUserSu
   * 
   * If groupSuggestionResponses set to true. All the suggestions to the same participant based on the same context will be grouped into a single Pub/Sub event or StreamingAnalyzeContentResponse.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_conversation_profile#group_suggestion_responses DialogflowConversationProfile#group_suggestion_responses}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/dialogflow_conversation_profile#group_suggestion_responses DialogflowConversationProfile#group_suggestion_responses}
   */
   readonly groupSuggestionResponses?: boolean | cdktf.IResolvable;
   /**
   * feature_configs block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_conversation_profile#feature_configs DialogflowConversationProfile#feature_configs}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/dialogflow_conversation_profile#feature_configs DialogflowConversationProfile#feature_configs}
   */
   readonly featureConfigs?: DialogflowConversationProfileHumanAgentAssistantConfigEndUserSuggestionConfigFeatureConfigs[] | cdktf.IResolvable;
 }
@@ -2186,13 +2186,13 @@ export interface DialogflowConversationProfileHumanAgentAssistantConfigHumanAgen
   /**
   * Version of current baseline model. It will be ignored if model is set. Valid versions are: Article Suggestion baseline model: - 0.9 - 1.0 (default) Summarization baseline model: - 1.0
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_conversation_profile#baseline_model_version DialogflowConversationProfile#baseline_model_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/dialogflow_conversation_profile#baseline_model_version DialogflowConversationProfile#baseline_model_version}
   */
   readonly baselineModelVersion?: string;
   /**
   * Conversation model resource name. Format: projects/<Project ID>/conversationModels/<Model ID>.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_conversation_profile#model DialogflowConversationProfile#model}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/dialogflow_conversation_profile#model DialogflowConversationProfile#model}
   */
   readonly model?: string;
 }
@@ -2307,7 +2307,7 @@ export interface DialogflowConversationProfileHumanAgentAssistantConfigHumanAgen
   /**
   * Number of recent non-small-talk sentences to use as context for article and FAQ suggestion
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_conversation_profile#recent_sentences_count DialogflowConversationProfile#recent_sentences_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/dialogflow_conversation_profile#recent_sentences_count DialogflowConversationProfile#recent_sentences_count}
   */
   readonly recentSentencesCount?: number;
 }
@@ -2393,19 +2393,19 @@ export interface DialogflowConversationProfileHumanAgentAssistantConfigHumanAgen
   /**
   * If set to true, the last message from virtual agent (hand off message) and the message before it (trigger message of hand off) are dropped.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_conversation_profile#drop_handoff_messages DialogflowConversationProfile#drop_handoff_messages}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/dialogflow_conversation_profile#drop_handoff_messages DialogflowConversationProfile#drop_handoff_messages}
   */
   readonly dropHandoffMessages?: boolean | cdktf.IResolvable;
   /**
   * If set to true, all messages from ivr stage are dropped.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_conversation_profile#drop_ivr_messages DialogflowConversationProfile#drop_ivr_messages}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/dialogflow_conversation_profile#drop_ivr_messages DialogflowConversationProfile#drop_ivr_messages}
   */
   readonly dropIvrMessages?: boolean | cdktf.IResolvable;
   /**
   * If set to true, all messages from virtual agent are dropped.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_conversation_profile#drop_virtual_agent_messages DialogflowConversationProfile#drop_virtual_agent_messages}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/dialogflow_conversation_profile#drop_virtual_agent_messages DialogflowConversationProfile#drop_virtual_agent_messages}
   */
   readonly dropVirtualAgentMessages?: boolean | cdktf.IResolvable;
 }
@@ -2549,7 +2549,7 @@ export interface DialogflowConversationProfileHumanAgentAssistantConfigHumanAgen
   /**
   * The name of a dialogflow virtual agent used for intent detection and suggestion triggered by human agent. Format: projects/<Project ID>/locations/<Location ID>/agent.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_conversation_profile#agent DialogflowConversationProfile#agent}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/dialogflow_conversation_profile#agent DialogflowConversationProfile#agent}
   */
   readonly agent?: string;
 }
@@ -2635,13 +2635,13 @@ export interface DialogflowConversationProfileHumanAgentAssistantConfigHumanAgen
   /**
   * he name of a Dialogflow virtual agent used for end user side intent detection and suggestion. Format: projects/<Project ID>/locations/<Location ID>/agent.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_conversation_profile#agent DialogflowConversationProfile#agent}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/dialogflow_conversation_profile#agent DialogflowConversationProfile#agent}
   */
   readonly agent: string;
   /**
   * human_agent_side_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_conversation_profile#human_agent_side_config DialogflowConversationProfile#human_agent_side_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/dialogflow_conversation_profile#human_agent_side_config DialogflowConversationProfile#human_agent_side_config}
   */
   readonly humanAgentSideConfig?: DialogflowConversationProfileHumanAgentAssistantConfigHumanAgentSuggestionConfigFeatureConfigsQueryConfigDialogflowQuerySourceHumanAgentSideConfig;
 }
@@ -2754,7 +2754,7 @@ export interface DialogflowConversationProfileHumanAgentAssistantConfigHumanAgen
   * The selected sections chosen to return when requesting a summary of a conversation
   * If not provided the default selection will be "{SITUATION, ACTION, RESULT}". Possible values: ["SECTION_TYPE_UNSPECIFIED", "SITUATION", "ACTION", "RESOLUTION", "REASON_FOR_CANCELLATION", "CUSTOMER_SATISFACTION", "ENTITIES"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_conversation_profile#section_types DialogflowConversationProfile#section_types}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/dialogflow_conversation_profile#section_types DialogflowConversationProfile#section_types}
   */
   readonly sectionTypes?: string[];
 }
@@ -2841,31 +2841,31 @@ export interface DialogflowConversationProfileHumanAgentAssistantConfigHumanAgen
   * Confidence threshold of query result.
   * This feature is only supported for types: ARTICLE_SUGGESTION, FAQ, SMART_REPLY, SMART_COMPOSE, KNOWLEDGE_SEARCH, KNOWLEDGE_ASSIST, ENTITY_EXTRACTION.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_conversation_profile#confidence_threshold DialogflowConversationProfile#confidence_threshold}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/dialogflow_conversation_profile#confidence_threshold DialogflowConversationProfile#confidence_threshold}
   */
   readonly confidenceThreshold?: number;
   /**
   * Maximum number of results to return.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_conversation_profile#max_results DialogflowConversationProfile#max_results}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/dialogflow_conversation_profile#max_results DialogflowConversationProfile#max_results}
   */
   readonly maxResults?: number;
   /**
   * context_filter_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_conversation_profile#context_filter_settings DialogflowConversationProfile#context_filter_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/dialogflow_conversation_profile#context_filter_settings DialogflowConversationProfile#context_filter_settings}
   */
   readonly contextFilterSettings?: DialogflowConversationProfileHumanAgentAssistantConfigHumanAgentSuggestionConfigFeatureConfigsQueryConfigContextFilterSettings;
   /**
   * dialogflow_query_source block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_conversation_profile#dialogflow_query_source DialogflowConversationProfile#dialogflow_query_source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/dialogflow_conversation_profile#dialogflow_query_source DialogflowConversationProfile#dialogflow_query_source}
   */
   readonly dialogflowQuerySource?: DialogflowConversationProfileHumanAgentAssistantConfigHumanAgentSuggestionConfigFeatureConfigsQueryConfigDialogflowQuerySource;
   /**
   * sections block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_conversation_profile#sections DialogflowConversationProfile#sections}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/dialogflow_conversation_profile#sections DialogflowConversationProfile#sections}
   */
   readonly sections?: DialogflowConversationProfileHumanAgentAssistantConfigHumanAgentSuggestionConfigFeatureConfigsQueryConfigSections;
 }
@@ -3067,7 +3067,7 @@ export interface DialogflowConversationProfileHumanAgentAssistantConfigHumanAgen
   /**
   * Type of Human Agent Assistant API feature to request.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_conversation_profile#type DialogflowConversationProfile#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/dialogflow_conversation_profile#type DialogflowConversationProfile#type}
   */
   readonly type?: string;
 }
@@ -3153,13 +3153,13 @@ export interface DialogflowConversationProfileHumanAgentAssistantConfigHumanAgen
   /**
   * Do not trigger if last utterance is small talk.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_conversation_profile#no_small_talk DialogflowConversationProfile#no_small_talk}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/dialogflow_conversation_profile#no_small_talk DialogflowConversationProfile#no_small_talk}
   */
   readonly noSmallTalk?: boolean | cdktf.IResolvable;
   /**
   * Only trigger suggestion if participant role of last utterance is END_USER.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_conversation_profile#only_end_user DialogflowConversationProfile#only_end_user}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/dialogflow_conversation_profile#only_end_user DialogflowConversationProfile#only_end_user}
   */
   readonly onlyEndUser?: boolean | cdktf.IResolvable;
 }
@@ -3275,65 +3275,65 @@ export interface DialogflowConversationProfileHumanAgentAssistantConfigHumanAgen
   * Disable the logging of search queries sent by human agents. It can prevent those queries from being stored at answer records.
   * This feature is only supported for types: KNOWLEDGE_SEARCH.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_conversation_profile#disable_agent_query_logging DialogflowConversationProfile#disable_agent_query_logging}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/dialogflow_conversation_profile#disable_agent_query_logging DialogflowConversationProfile#disable_agent_query_logging}
   */
   readonly disableAgentQueryLogging?: boolean | cdktf.IResolvable;
   /**
   * Enable including conversation context during query answer generation.
   * This feature is only supported for types: KNOWLEDGE_SEARCH.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_conversation_profile#enable_conversation_augmented_query DialogflowConversationProfile#enable_conversation_augmented_query}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/dialogflow_conversation_profile#enable_conversation_augmented_query DialogflowConversationProfile#enable_conversation_augmented_query}
   */
   readonly enableConversationAugmentedQuery?: boolean | cdktf.IResolvable;
   /**
   * Automatically iterates all participants and tries to compile suggestions.
   * This feature is only supported for types: ARTICLE_SUGGESTION, FAQ, DIALOGFLOW_ASSIST, KNOWLEDGE_ASSIST.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_conversation_profile#enable_event_based_suggestion DialogflowConversationProfile#enable_event_based_suggestion}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/dialogflow_conversation_profile#enable_event_based_suggestion DialogflowConversationProfile#enable_event_based_suggestion}
   */
   readonly enableEventBasedSuggestion?: boolean | cdktf.IResolvable;
   /**
   * Enable query suggestion only.
   * This feature is only supported for types: KNOWLEDGE_ASSIST
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_conversation_profile#enable_query_suggestion_only DialogflowConversationProfile#enable_query_suggestion_only}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/dialogflow_conversation_profile#enable_query_suggestion_only DialogflowConversationProfile#enable_query_suggestion_only}
   */
   readonly enableQuerySuggestionOnly?: boolean | cdktf.IResolvable;
   /**
   * Enable query suggestion even if we can't find its answer. By default, queries are suggested only if we find its answer.
   * This feature is only supported for types: KNOWLEDGE_ASSIST.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_conversation_profile#enable_query_suggestion_when_no_answer DialogflowConversationProfile#enable_query_suggestion_when_no_answer}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/dialogflow_conversation_profile#enable_query_suggestion_when_no_answer DialogflowConversationProfile#enable_query_suggestion_when_no_answer}
   */
   readonly enableQuerySuggestionWhenNoAnswer?: boolean | cdktf.IResolvable;
   /**
   * conversation_model_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_conversation_profile#conversation_model_config DialogflowConversationProfile#conversation_model_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/dialogflow_conversation_profile#conversation_model_config DialogflowConversationProfile#conversation_model_config}
   */
   readonly conversationModelConfig?: DialogflowConversationProfileHumanAgentAssistantConfigHumanAgentSuggestionConfigFeatureConfigsConversationModelConfig;
   /**
   * conversation_process_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_conversation_profile#conversation_process_config DialogflowConversationProfile#conversation_process_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/dialogflow_conversation_profile#conversation_process_config DialogflowConversationProfile#conversation_process_config}
   */
   readonly conversationProcessConfig?: DialogflowConversationProfileHumanAgentAssistantConfigHumanAgentSuggestionConfigFeatureConfigsConversationProcessConfig;
   /**
   * query_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_conversation_profile#query_config DialogflowConversationProfile#query_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/dialogflow_conversation_profile#query_config DialogflowConversationProfile#query_config}
   */
   readonly queryConfig?: DialogflowConversationProfileHumanAgentAssistantConfigHumanAgentSuggestionConfigFeatureConfigsQueryConfig;
   /**
   * suggestion_feature block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_conversation_profile#suggestion_feature DialogflowConversationProfile#suggestion_feature}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/dialogflow_conversation_profile#suggestion_feature DialogflowConversationProfile#suggestion_feature}
   */
   readonly suggestionFeature?: DialogflowConversationProfileHumanAgentAssistantConfigHumanAgentSuggestionConfigFeatureConfigsSuggestionFeature;
   /**
   * suggestion_trigger_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_conversation_profile#suggestion_trigger_settings DialogflowConversationProfile#suggestion_trigger_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/dialogflow_conversation_profile#suggestion_trigger_settings DialogflowConversationProfile#suggestion_trigger_settings}
   */
   readonly suggestionTriggerSettings?: DialogflowConversationProfileHumanAgentAssistantConfigHumanAgentSuggestionConfigFeatureConfigsSuggestionTriggerSettings;
 }
@@ -3712,13 +3712,13 @@ export interface DialogflowConversationProfileHumanAgentAssistantConfigHumanAgen
   /**
   * When disableHighLatencyFeaturesSyncDelivery is true and using the AnalyzeContent API, we will not deliver the responses from high latency features in the API response. The humanAgentAssistantConfig.notification_config must be configured and enableEventBasedSuggestion must be set to true to receive the responses from high latency features in Pub/Sub. High latency feature(s): KNOWLEDGE_ASSIST
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_conversation_profile#disable_high_latency_features_sync_delivery DialogflowConversationProfile#disable_high_latency_features_sync_delivery}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/dialogflow_conversation_profile#disable_high_latency_features_sync_delivery DialogflowConversationProfile#disable_high_latency_features_sync_delivery}
   */
   readonly disableHighLatencyFeaturesSyncDelivery?: boolean | cdktf.IResolvable;
   /**
   * List of various generator resource names used in the conversation profile.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_conversation_profile#generators DialogflowConversationProfile#generators}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/dialogflow_conversation_profile#generators DialogflowConversationProfile#generators}
   */
   readonly generators?: string[];
   /**
@@ -3726,13 +3726,13 @@ export interface DialogflowConversationProfileHumanAgentAssistantConfigHumanAgen
   * 
   * If groupSuggestionResponses set to true. All the suggestions to the same participant based on the same context will be grouped into a single Pub/Sub event or StreamingAnalyzeContentResponse.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_conversation_profile#group_suggestion_responses DialogflowConversationProfile#group_suggestion_responses}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/dialogflow_conversation_profile#group_suggestion_responses DialogflowConversationProfile#group_suggestion_responses}
   */
   readonly groupSuggestionResponses?: boolean | cdktf.IResolvable;
   /**
   * feature_configs block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_conversation_profile#feature_configs DialogflowConversationProfile#feature_configs}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/dialogflow_conversation_profile#feature_configs DialogflowConversationProfile#feature_configs}
   */
   readonly featureConfigs?: DialogflowConversationProfileHumanAgentAssistantConfigHumanAgentSuggestionConfigFeatureConfigs[] | cdktf.IResolvable;
 }
@@ -3905,13 +3905,13 @@ export interface DialogflowConversationProfileHumanAgentAssistantConfigMessageAn
   /**
   * Enable entity extraction in conversation messages on agent assist stage.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_conversation_profile#enable_entity_extraction DialogflowConversationProfile#enable_entity_extraction}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/dialogflow_conversation_profile#enable_entity_extraction DialogflowConversationProfile#enable_entity_extraction}
   */
   readonly enableEntityExtraction?: boolean | cdktf.IResolvable;
   /**
   * Enable sentiment analysis in conversation messages on agent assist stage. Sentiment analysis inspects user input and identifies the prevailing subjective opinion, especially to determine a user's attitude as positive, negative, or neutral.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_conversation_profile#enable_sentiment_analysis DialogflowConversationProfile#enable_sentiment_analysis}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/dialogflow_conversation_profile#enable_sentiment_analysis DialogflowConversationProfile#enable_sentiment_analysis}
   */
   readonly enableSentimentAnalysis?: boolean | cdktf.IResolvable;
 }
@@ -4026,13 +4026,13 @@ export interface DialogflowConversationProfileHumanAgentAssistantConfigNotificat
   /**
   * Format of the message Possible values: ["MESSAGE_FORMAT_UNSPECIFIED", "PROTO", "JSON"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_conversation_profile#message_format DialogflowConversationProfile#message_format}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/dialogflow_conversation_profile#message_format DialogflowConversationProfile#message_format}
   */
   readonly messageFormat?: string;
   /**
   * Name of the Pub/Sub topic to publish conversation events
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_conversation_profile#topic DialogflowConversationProfile#topic}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/dialogflow_conversation_profile#topic DialogflowConversationProfile#topic}
   */
   readonly topic?: string;
 }
@@ -4147,25 +4147,25 @@ export interface DialogflowConversationProfileHumanAgentAssistantConfig {
   /**
   * end_user_suggestion_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_conversation_profile#end_user_suggestion_config DialogflowConversationProfile#end_user_suggestion_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/dialogflow_conversation_profile#end_user_suggestion_config DialogflowConversationProfile#end_user_suggestion_config}
   */
   readonly endUserSuggestionConfig?: DialogflowConversationProfileHumanAgentAssistantConfigEndUserSuggestionConfig;
   /**
   * human_agent_suggestion_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_conversation_profile#human_agent_suggestion_config DialogflowConversationProfile#human_agent_suggestion_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/dialogflow_conversation_profile#human_agent_suggestion_config DialogflowConversationProfile#human_agent_suggestion_config}
   */
   readonly humanAgentSuggestionConfig?: DialogflowConversationProfileHumanAgentAssistantConfigHumanAgentSuggestionConfig;
   /**
   * message_analysis_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_conversation_profile#message_analysis_config DialogflowConversationProfile#message_analysis_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/dialogflow_conversation_profile#message_analysis_config DialogflowConversationProfile#message_analysis_config}
   */
   readonly messageAnalysisConfig?: DialogflowConversationProfileHumanAgentAssistantConfigMessageAnalysisConfig;
   /**
   * notification_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_conversation_profile#notification_config DialogflowConversationProfile#notification_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/dialogflow_conversation_profile#notification_config DialogflowConversationProfile#notification_config}
   */
   readonly notificationConfig?: DialogflowConversationProfileHumanAgentAssistantConfigNotificationConfig;
 }
@@ -4338,7 +4338,7 @@ export interface DialogflowConversationProfileHumanAgentHandoffConfigLivePersonC
   /**
   * Account number of the LivePerson account to connect.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_conversation_profile#account_number DialogflowConversationProfile#account_number}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/dialogflow_conversation_profile#account_number DialogflowConversationProfile#account_number}
   */
   readonly accountNumber: string;
 }
@@ -4421,7 +4421,7 @@ export interface DialogflowConversationProfileHumanAgentHandoffConfig {
   /**
   * live_person_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_conversation_profile#live_person_config DialogflowConversationProfile#live_person_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/dialogflow_conversation_profile#live_person_config DialogflowConversationProfile#live_person_config}
   */
   readonly livePersonConfig?: DialogflowConversationProfileHumanAgentHandoffConfigLivePersonConfig;
 }
@@ -4507,7 +4507,7 @@ export interface DialogflowConversationProfileLoggingConfig {
   /**
   * Whether to log conversation events
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_conversation_profile#enable_stackdriver_logging DialogflowConversationProfile#enable_stackdriver_logging}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/dialogflow_conversation_profile#enable_stackdriver_logging DialogflowConversationProfile#enable_stackdriver_logging}
   */
   readonly enableStackdriverLogging?: boolean | cdktf.IResolvable;
 }
@@ -4593,13 +4593,13 @@ export interface DialogflowConversationProfileNewMessageEventNotificationConfig 
   /**
   * Format of the message Possible values: ["MESSAGE_FORMAT_UNSPECIFIED", "PROTO", "JSON"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_conversation_profile#message_format DialogflowConversationProfile#message_format}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/dialogflow_conversation_profile#message_format DialogflowConversationProfile#message_format}
   */
   readonly messageFormat?: string;
   /**
   * Name of the Pub/Sub topic to publish conversation events
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_conversation_profile#topic DialogflowConversationProfile#topic}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/dialogflow_conversation_profile#topic DialogflowConversationProfile#topic}
   */
   readonly topic?: string;
 }
@@ -4714,13 +4714,13 @@ export interface DialogflowConversationProfileNotificationConfig {
   /**
   * Format of the message Possible values: ["MESSAGE_FORMAT_UNSPECIFIED", "PROTO", "JSON"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_conversation_profile#message_format DialogflowConversationProfile#message_format}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/dialogflow_conversation_profile#message_format DialogflowConversationProfile#message_format}
   */
   readonly messageFormat?: string;
   /**
   * Name of the Pub/Sub topic to publish conversation events
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_conversation_profile#topic DialogflowConversationProfile#topic}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/dialogflow_conversation_profile#topic DialogflowConversationProfile#topic}
   */
   readonly topic?: string;
 }
@@ -4835,44 +4835,44 @@ export interface DialogflowConversationProfileSttConfig {
   /**
   * Audio encoding of the audio content to process. Possible values: ["AUDIO_ENCODING_UNSPECIFIED", "AUDIO_ENCODING_LINEAR_16", "AUDIO_ENCODING_FLAC", "AUDIO_ENCODING_MULAW", "AUDIO_ENCODING_AMR", "AUDIO_ENCODING_AMR_WB", "AUDIO_ENCODING_OGG_OPUS", "AUDIOENCODING_SPEEX_WITH_HEADER_BYTE"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_conversation_profile#audio_encoding DialogflowConversationProfile#audio_encoding}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/dialogflow_conversation_profile#audio_encoding DialogflowConversationProfile#audio_encoding}
   */
   readonly audioEncoding?: string;
   /**
   * If true, Dialogflow returns SpeechWordInfo in StreamingRecognitionResult with information about the recognized speech words.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_conversation_profile#enable_word_info DialogflowConversationProfile#enable_word_info}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/dialogflow_conversation_profile#enable_word_info DialogflowConversationProfile#enable_word_info}
   */
   readonly enableWordInfo?: boolean | cdktf.IResolvable;
   /**
   * The language of the supplied audio.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_conversation_profile#language_code DialogflowConversationProfile#language_code}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/dialogflow_conversation_profile#language_code DialogflowConversationProfile#language_code}
   */
   readonly languageCode?: string;
   /**
   * Which Speech model to select.
   * Leave this field unspecified to use Agent Speech settings for model selection.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_conversation_profile#model DialogflowConversationProfile#model}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/dialogflow_conversation_profile#model DialogflowConversationProfile#model}
   */
   readonly model?: string;
   /**
   * Sample rate (in Hertz) of the audio content sent in the query.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_conversation_profile#sample_rate_hertz DialogflowConversationProfile#sample_rate_hertz}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/dialogflow_conversation_profile#sample_rate_hertz DialogflowConversationProfile#sample_rate_hertz}
   */
   readonly sampleRateHertz?: number;
   /**
   * The speech model used in speech to text. Possible values: ["SPEECH_MODEL_VARIANT_UNSPECIFIED", "USE_BEST_AVAILABLE", "USE_STANDARD", "USE_ENHANCED"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_conversation_profile#speech_model_variant DialogflowConversationProfile#speech_model_variant}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/dialogflow_conversation_profile#speech_model_variant DialogflowConversationProfile#speech_model_variant}
   */
   readonly speechModelVariant?: string;
   /**
   * Use timeout based endpointing, interpreting endpointer sensitivy as seconds of timeout value.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_conversation_profile#use_timeout_based_endpointing DialogflowConversationProfile#use_timeout_based_endpointing}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/dialogflow_conversation_profile#use_timeout_based_endpointing DialogflowConversationProfile#use_timeout_based_endpointing}
   */
   readonly useTimeoutBasedEndpointing?: boolean | cdktf.IResolvable;
 }
@@ -5130,15 +5130,15 @@ export class DialogflowConversationProfileSttConfigOutputReference extends cdktf
 }
 export interface DialogflowConversationProfileTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_conversation_profile#create DialogflowConversationProfile#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/dialogflow_conversation_profile#create DialogflowConversationProfile#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_conversation_profile#delete DialogflowConversationProfile#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/dialogflow_conversation_profile#delete DialogflowConversationProfile#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_conversation_profile#update DialogflowConversationProfile#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/dialogflow_conversation_profile#update DialogflowConversationProfile#update}
   */
   readonly update?: string;
 }
@@ -5292,13 +5292,13 @@ export interface DialogflowConversationProfileTtsConfigVoice {
   /**
   * The name of the voice.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_conversation_profile#name DialogflowConversationProfile#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/dialogflow_conversation_profile#name DialogflowConversationProfile#name}
   */
   readonly name?: string;
   /**
   * The preferred gender of the voice. Possible values: ["SSML_VOICE_GENDER_UNSPECIFIED", "SSML_VOICE_GENDER_MALE", "SSML_VOICE_GENDER_FEMALE", "SSML_VOICE_GENDER_NEUTRAL"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_conversation_profile#ssml_gender DialogflowConversationProfile#ssml_gender}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/dialogflow_conversation_profile#ssml_gender DialogflowConversationProfile#ssml_gender}
   */
   readonly ssmlGender?: string;
 }
@@ -5413,31 +5413,31 @@ export interface DialogflowConversationProfileTtsConfig {
   /**
   * An identifier which selects 'audio effects' profiles that are applied on (post synthesized) text to speech. Effects are applied on top of each other in the order they are given.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_conversation_profile#effects_profile_id DialogflowConversationProfile#effects_profile_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/dialogflow_conversation_profile#effects_profile_id DialogflowConversationProfile#effects_profile_id}
   */
   readonly effectsProfileId?: string[];
   /**
   * Speaking pitch, in the range [-20.0, 20.0]. 20 means increase 20 semitones from the original pitch. -20 means decrease 20 semitones from the original pitch.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_conversation_profile#pitch DialogflowConversationProfile#pitch}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/dialogflow_conversation_profile#pitch DialogflowConversationProfile#pitch}
   */
   readonly pitch?: number;
   /**
   * Speaking rate/speed, in the range [0.25, 4.0].
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_conversation_profile#speaking_rate DialogflowConversationProfile#speaking_rate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/dialogflow_conversation_profile#speaking_rate DialogflowConversationProfile#speaking_rate}
   */
   readonly speakingRate?: number;
   /**
   * Volume gain (in dB) of the normal native volume supported by the specific voice.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_conversation_profile#volume_gain_db DialogflowConversationProfile#volume_gain_db}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/dialogflow_conversation_profile#volume_gain_db DialogflowConversationProfile#volume_gain_db}
   */
   readonly volumeGainDb?: number;
   /**
   * voice block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_conversation_profile#voice DialogflowConversationProfile#voice}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/dialogflow_conversation_profile#voice DialogflowConversationProfile#voice}
   */
   readonly voice?: DialogflowConversationProfileTtsConfigVoice;
 }
@@ -5637,7 +5637,7 @@ export class DialogflowConversationProfileTtsConfigOutputReference extends cdktf
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_conversation_profile google_dialogflow_conversation_profile}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/dialogflow_conversation_profile google_dialogflow_conversation_profile}
 */
 export class DialogflowConversationProfile extends cdktf.TerraformResource {
 
@@ -5653,7 +5653,7 @@ export class DialogflowConversationProfile extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a DialogflowConversationProfile resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DialogflowConversationProfile to import
-  * @param importFromId The id of the existing DialogflowConversationProfile that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_conversation_profile#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DialogflowConversationProfile that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/dialogflow_conversation_profile#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DialogflowConversationProfile to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -5665,7 +5665,7 @@ export class DialogflowConversationProfile extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/dialogflow_conversation_profile google_dialogflow_conversation_profile} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/dialogflow_conversation_profile google_dialogflow_conversation_profile} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -5676,7 +5676,7 @@ export class DialogflowConversationProfile extends cdktf.TerraformResource {
       terraformResourceType: 'google_dialogflow_conversation_profile',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.49.3',
+        providerVersion: '6.50.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,

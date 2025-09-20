@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/compute_instant_snapshot
+// https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/compute_instant_snapshot
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,11 +15,11 @@ export interface ComputeInstantSnapshotConfig extends cdktf.TerraformMetaArgumen
   /**
   * An optional description of this resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/compute_instant_snapshot#description ComputeInstantSnapshot#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/compute_instant_snapshot#description ComputeInstantSnapshot#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/compute_instant_snapshot#id ComputeInstantSnapshot#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/compute_instant_snapshot#id ComputeInstantSnapshot#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -31,7 +31,7 @@ export interface ComputeInstantSnapshotConfig extends cdktf.TerraformMetaArgumen
   * **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
   * Please refer to the field 'effective_labels' for all of the labels present on the resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/compute_instant_snapshot#labels ComputeInstantSnapshot#labels}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/compute_instant_snapshot#labels ComputeInstantSnapshot#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
@@ -43,43 +43,43 @@ export interface ComputeInstantSnapshotConfig extends cdktf.TerraformMetaArgumen
   * characters must be a dash, lowercase letter, or digit, except the last
   * character, which cannot be a dash.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/compute_instant_snapshot#name ComputeInstantSnapshot#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/compute_instant_snapshot#name ComputeInstantSnapshot#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/compute_instant_snapshot#project ComputeInstantSnapshot#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/compute_instant_snapshot#project ComputeInstantSnapshot#project}
   */
   readonly project?: string;
   /**
   * A reference to the disk used to create this instant snapshot.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/compute_instant_snapshot#source_disk ComputeInstantSnapshot#source_disk}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/compute_instant_snapshot#source_disk ComputeInstantSnapshot#source_disk}
   */
   readonly sourceDisk: string;
   /**
   * A reference to the zone where the disk is located.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/compute_instant_snapshot#zone ComputeInstantSnapshot#zone}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/compute_instant_snapshot#zone ComputeInstantSnapshot#zone}
   */
   readonly zone?: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/compute_instant_snapshot#timeouts ComputeInstantSnapshot#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/compute_instant_snapshot#timeouts ComputeInstantSnapshot#timeouts}
   */
   readonly timeouts?: ComputeInstantSnapshotTimeouts;
 }
 export interface ComputeInstantSnapshotTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/compute_instant_snapshot#create ComputeInstantSnapshot#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/compute_instant_snapshot#create ComputeInstantSnapshot#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/compute_instant_snapshot#delete ComputeInstantSnapshot#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/compute_instant_snapshot#delete ComputeInstantSnapshot#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/compute_instant_snapshot#update ComputeInstantSnapshot#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/compute_instant_snapshot#update ComputeInstantSnapshot#update}
   */
   readonly update?: string;
 }
@@ -231,7 +231,7 @@ export class ComputeInstantSnapshotTimeoutsOutputReference extends cdktf.Complex
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/compute_instant_snapshot google_compute_instant_snapshot}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/compute_instant_snapshot google_compute_instant_snapshot}
 */
 export class ComputeInstantSnapshot extends cdktf.TerraformResource {
 
@@ -247,7 +247,7 @@ export class ComputeInstantSnapshot extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a ComputeInstantSnapshot resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the ComputeInstantSnapshot to import
-  * @param importFromId The id of the existing ComputeInstantSnapshot that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/compute_instant_snapshot#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing ComputeInstantSnapshot that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/compute_instant_snapshot#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the ComputeInstantSnapshot to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -259,7 +259,7 @@ export class ComputeInstantSnapshot extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/resources/compute_instant_snapshot google_compute_instant_snapshot} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/compute_instant_snapshot google_compute_instant_snapshot} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -270,7 +270,7 @@ export class ComputeInstantSnapshot extends cdktf.TerraformResource {
       terraformResourceType: 'google_compute_instant_snapshot',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.49.3',
+        providerVersion: '6.50.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,

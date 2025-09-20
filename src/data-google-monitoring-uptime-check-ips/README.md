@@ -1,3 +1,3 @@
 # `data_google_monitoring_uptime_check_ips`
 
-Refer to the Terraform Registry for docs: [`data_google_monitoring_uptime_check_ips`](https://registry.terraform.io/providers/hashicorp/google/6.49.3/docs/data-sources/monitoring_uptime_check_ips).
+Refer to the Terraform Registry for docs: [`data_google_monitoring_uptime_check_ips`](https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/data-sources/monitoring_uptime_check_ips).
