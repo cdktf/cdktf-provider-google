@@ -14,17 +14,17 @@ from cdktf_cdktf_provider_google import apihub_plugin
 apihubPlugin.ApihubPlugin(
   scope: Construct,
   id: str,
-  connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection] = None,
-  count: typing.Union[typing.Union[int, float], TerraformCount] = None,
+  connection: SSHProvisionerConnection | WinrmProvisionerConnection = None,
+  count: typing.Union[int, float] | TerraformCount = None,
   depends_on: typing.List[ITerraformDependable] = None,
   for_each: ITerraformIterator = None,
   lifecycle: TerraformResourceLifecycle = None,
   provider: TerraformProvider = None,
-  provisioners: typing.List[typing.Union[FileProvisioner, LocalExecProvisioner, RemoteExecProvisioner]] = None,
+  provisioners: typing.List[FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner] = None,
   display_name: str,
   location: str,
   plugin_id: str,
-  actions_config: typing.Union[IResolvable, typing.List[ApihubPluginActionsConfig]] = None,
+  actions_config: IResolvable | typing.List[ApihubPluginActionsConfig] = None,
   config_template: ApihubPluginConfigTemplate = None,
   description: str = None,
   documentation: ApihubPluginDocumentation = None,
@@ -40,17 +40,17 @@ apihubPlugin.ApihubPlugin(
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPlugin.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | The scope in which to define this construct. |
 | <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPlugin.Initializer.parameter.id">id</a></code> | <code>str</code> | The scoped construct ID. |
-| <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPlugin.Initializer.parameter.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPlugin.Initializer.parameter.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPlugin.Initializer.parameter.connection">connection</a></code> | <code>cdktf.SSHProvisionerConnection \| cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPlugin.Initializer.parameter.count">count</a></code> | <code>typing.Union[int, float] \| cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPlugin.Initializer.parameter.dependsOn">depends_on</a></code> | <code>typing.List[cdktf.ITerraformDependable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPlugin.Initializer.parameter.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPlugin.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPlugin.Initializer.parameter.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPlugin.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPlugin.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPlugin.Initializer.parameter.displayName">display_name</a></code> | <code>str</code> | The display name of the plugin. Max length is 50 characters (Unicode code points). |
 | <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPlugin.Initializer.parameter.location">location</a></code> | <code>str</code> | Resource ID segment making up resource 'name'. It identifies the resource within its parent collection as described in https://google.aip.dev/122. |
 | <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPlugin.Initializer.parameter.pluginId">plugin_id</a></code> | <code>str</code> | The ID to use for the Plugin resource, which will become the final component of the Plugin's resource name. |
-| <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPlugin.Initializer.parameter.actionsConfig">actions_config</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginActionsConfig">ApihubPluginActionsConfig</a>]]</code> | actions_config block. |
+| <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPlugin.Initializer.parameter.actionsConfig">actions_config</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginActionsConfig">ApihubPluginActionsConfig</a>]</code> | actions_config block. |
 | <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPlugin.Initializer.parameter.configTemplate">config_template</a></code> | <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfigTemplate">ApihubPluginConfigTemplate</a></code> | config_template block. |
 | <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPlugin.Initializer.parameter.description">description</a></code> | <code>str</code> | The plugin description. Max length is 2000 characters (Unicode code points). |
 | <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPlugin.Initializer.parameter.documentation">documentation</a></code> | <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginDocumentation">ApihubPluginDocumentation</a></code> | documentation block. |
@@ -82,13 +82,13 @@ Must be unique amongst siblings in the same scope
 
 ##### `connection`<sup>Optional</sup> <a name="connection" id="@cdktf/provider-google.apihubPlugin.ApihubPlugin.Initializer.parameter.connection"></a>
 
-- *Type:* typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]
+- *Type:* cdktf.SSHProvisionerConnection | cdktf.WinrmProvisionerConnection
 
 ---
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.apihubPlugin.ApihubPlugin.Initializer.parameter.count"></a>
 
-- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
+- *Type:* typing.Union[int, float] | cdktf.TerraformCount
 
 ---
 
@@ -118,7 +118,7 @@ Must be unique amongst siblings in the same scope
 
 ##### `provisioners`<sup>Optional</sup> <a name="provisioners" id="@cdktf/provider-google.apihubPlugin.ApihubPlugin.Initializer.parameter.provisioners"></a>
 
-- *Type:* typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]
+- *Type:* typing.List[cdktf.FileProvisioner | cdktf.LocalExecProvisioner | cdktf.RemoteExecProvisioner]
 
 ---
 
@@ -167,7 +167,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `actions_config`<sup>Optional</sup> <a name="actions_config" id="@cdktf/provider-google.apihubPlugin.ApihubPlugin.Initializer.parameter.actionsConfig"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginActionsConfig">ApihubPluginActionsConfig</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginActionsConfig">ApihubPluginActionsConfig</a>]
 
 actions_config block.
 
@@ -520,7 +520,7 @@ def get_string_map_attribute(
 ##### `has_resource_move` <a name="has_resource_move" id="@cdktf/provider-google.apihubPlugin.ApihubPlugin.hasResourceMove"></a>
 
 ```python
-def has_resource_move() -> typing.Union[TerraformResourceMoveByTarget, TerraformResourceMoveById]
+def has_resource_move() -> TerraformResourceMoveByTarget | TerraformResourceMoveById
 ```
 
 ##### `import_from` <a name="import_from" id="@cdktf/provider-google.apihubPlugin.ApihubPlugin.importFrom"></a>
@@ -583,7 +583,7 @@ Full id of resource being moved from, e.g. "aws_s3_bucket.example".
 ```python
 def move_to(
   move_target: str,
-  index: typing.Union[str, typing.Union[int, float]] = None
+  index: str | typing.Union[int, float] = None
 ) -> None
 ```
 
@@ -599,7 +599,7 @@ The previously set user defined string set by .addMoveTarget() corresponding to 
 
 ###### `index`<sup>Optional</sup> <a name="index" id="@cdktf/provider-google.apihubPlugin.ApihubPlugin.moveTo.parameter.index"></a>
 
-- *Type:* typing.Union[str, typing.Union[int, float]]
+- *Type:* str | typing.Union[int, float]
 
 Optional The index corresponding to the key the resource is to appear in the foreach of a resource to move to.
 
@@ -627,13 +627,13 @@ Full id of resource to move to, e.g. "aws_s3_bucket.example".
 
 ```python
 def put_actions_config(
-  value: typing.Union[IResolvable, typing.List[ApihubPluginActionsConfig]]
+  value: IResolvable | typing.List[ApihubPluginActionsConfig]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.apihubPlugin.ApihubPlugin.putActionsConfig.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginActionsConfig">ApihubPluginActionsConfig</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginActionsConfig">ApihubPluginActionsConfig</a>]
 
 ---
 
@@ -641,14 +641,14 @@ def put_actions_config(
 
 ```python
 def put_config_template(
-  additional_config_template: typing.Union[IResolvable, typing.List[ApihubPluginConfigTemplateAdditionalConfigTemplate]] = None,
+  additional_config_template: IResolvable | typing.List[ApihubPluginConfigTemplateAdditionalConfigTemplate] = None,
   auth_config_template: ApihubPluginConfigTemplateAuthConfigTemplate = None
 ) -> None
 ```
 
 ###### `additional_config_template`<sup>Optional</sup> <a name="additional_config_template" id="@cdktf/provider-google.apihubPlugin.ApihubPlugin.putConfigTemplate.parameter.additionalConfigTemplate"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfigTemplateAdditionalConfigTemplate">ApihubPluginConfigTemplateAdditionalConfigTemplate</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfigTemplateAdditionalConfigTemplate">ApihubPluginConfigTemplateAdditionalConfigTemplate</a>]
 
 additional_config_template block.
 
@@ -921,13 +921,13 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.5
 | <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPlugin.property.terraformMetaArguments">terraform_meta_arguments</a></code> | <code>typing.Mapping[typing.Any]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPlugin.property.terraformResourceType">terraform_resource_type</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPlugin.property.terraformGeneratorMetadata">terraform_generator_metadata</a></code> | <code>cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPlugin.property.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPlugin.property.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPlugin.property.connection">connection</a></code> | <code>cdktf.SSHProvisionerConnection \| cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPlugin.property.count">count</a></code> | <code>typing.Union[int, float] \| cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPlugin.property.dependsOn">depends_on</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPlugin.property.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPlugin.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPlugin.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPlugin.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPlugin.property.provisioners">provisioners</a></code> | <code>typing.List[cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPlugin.property.actionsConfig">actions_config</a></code> | <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginActionsConfigList">ApihubPluginActionsConfigList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPlugin.property.configTemplate">config_template</a></code> | <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfigTemplateOutputReference">ApihubPluginConfigTemplateOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPlugin.property.createTime">create_time</a></code> | <code>str</code> | *No description.* |
@@ -938,7 +938,7 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.5
 | <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPlugin.property.state">state</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPlugin.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginTimeoutsOutputReference">ApihubPluginTimeoutsOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPlugin.property.updateTime">update_time</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPlugin.property.actionsConfigInput">actions_config_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginActionsConfig">ApihubPluginActionsConfig</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPlugin.property.actionsConfigInput">actions_config_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginActionsConfig">ApihubPluginActionsConfig</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPlugin.property.configTemplateInput">config_template_input</a></code> | <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfigTemplate">ApihubPluginConfigTemplate</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPlugin.property.descriptionInput">description_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPlugin.property.displayNameInput">display_name_input</a></code> | <code>str</code> | *No description.* |
@@ -949,7 +949,7 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.5
 | <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPlugin.property.pluginCategoryInput">plugin_category_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPlugin.property.pluginIdInput">plugin_id_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPlugin.property.projectInput">project_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPlugin.property.timeoutsInput">timeouts_input</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginTimeouts">ApihubPluginTimeouts</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPlugin.property.timeoutsInput">timeouts_input</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginTimeouts">ApihubPluginTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPlugin.property.description">description</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPlugin.property.displayName">display_name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPlugin.property.id">id</a></code> | <code>str</code> | *No description.* |
@@ -1035,20 +1035,20 @@ terraform_generator_metadata: TerraformProviderGeneratorMetadata
 ##### `connection`<sup>Optional</sup> <a name="connection" id="@cdktf/provider-google.apihubPlugin.ApihubPlugin.property.connection"></a>
 
 ```python
-connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection]
+connection: SSHProvisionerConnection | WinrmProvisionerConnection
 ```
 
-- *Type:* typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]
+- *Type:* cdktf.SSHProvisionerConnection | cdktf.WinrmProvisionerConnection
 
 ---
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.apihubPlugin.ApihubPlugin.property.count"></a>
 
 ```python
-count: typing.Union[typing.Union[int, float], TerraformCount]
+count: typing.Union[int, float] | TerraformCount
 ```
 
-- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
+- *Type:* typing.Union[int, float] | cdktf.TerraformCount
 
 ---
 
@@ -1095,10 +1095,10 @@ provider: TerraformProvider
 ##### `provisioners`<sup>Optional</sup> <a name="provisioners" id="@cdktf/provider-google.apihubPlugin.ApihubPlugin.property.provisioners"></a>
 
 ```python
-provisioners: typing.List[typing.Union[FileProvisioner, LocalExecProvisioner, RemoteExecProvisioner]]
+provisioners: typing.List[FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner]
 ```
 
-- *Type:* typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]
+- *Type:* typing.List[cdktf.FileProvisioner | cdktf.LocalExecProvisioner | cdktf.RemoteExecProvisioner]
 
 ---
 
@@ -1205,10 +1205,10 @@ update_time: str
 ##### `actions_config_input`<sup>Optional</sup> <a name="actions_config_input" id="@cdktf/provider-google.apihubPlugin.ApihubPlugin.property.actionsConfigInput"></a>
 
 ```python
-actions_config_input: typing.Union[IResolvable, typing.List[ApihubPluginActionsConfig]]
+actions_config_input: IResolvable | typing.List[ApihubPluginActionsConfig]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginActionsConfig">ApihubPluginActionsConfig</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginActionsConfig">ApihubPluginActionsConfig</a>]
 
 ---
 
@@ -1315,10 +1315,10 @@ project_input: str
 ##### `timeouts_input`<sup>Optional</sup> <a name="timeouts_input" id="@cdktf/provider-google.apihubPlugin.ApihubPlugin.property.timeoutsInput"></a>
 
 ```python
-timeouts_input: typing.Union[IResolvable, ApihubPluginTimeouts]
+timeouts_input: IResolvable | ApihubPluginTimeouts
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginTimeouts">ApihubPluginTimeouts</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginTimeouts">ApihubPluginTimeouts</a>
 
 ---
 
@@ -1505,17 +1505,17 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 from cdktf_cdktf_provider_google import apihub_plugin
 
 apihubPlugin.ApihubPluginConfig(
-  connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection] = None,
-  count: typing.Union[typing.Union[int, float], TerraformCount] = None,
+  connection: SSHProvisionerConnection | WinrmProvisionerConnection = None,
+  count: typing.Union[int, float] | TerraformCount = None,
   depends_on: typing.List[ITerraformDependable] = None,
   for_each: ITerraformIterator = None,
   lifecycle: TerraformResourceLifecycle = None,
   provider: TerraformProvider = None,
-  provisioners: typing.List[typing.Union[FileProvisioner, LocalExecProvisioner, RemoteExecProvisioner]] = None,
+  provisioners: typing.List[FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner] = None,
   display_name: str,
   location: str,
   plugin_id: str,
-  actions_config: typing.Union[IResolvable, typing.List[ApihubPluginActionsConfig]] = None,
+  actions_config: IResolvable | typing.List[ApihubPluginActionsConfig] = None,
   config_template: ApihubPluginConfigTemplate = None,
   description: str = None,
   documentation: ApihubPluginDocumentation = None,
@@ -1531,17 +1531,17 @@ apihubPlugin.ApihubPluginConfig(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfig.property.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfig.property.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfig.property.connection">connection</a></code> | <code>cdktf.SSHProvisionerConnection \| cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfig.property.count">count</a></code> | <code>typing.Union[int, float] \| cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfig.property.dependsOn">depends_on</a></code> | <code>typing.List[cdktf.ITerraformDependable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfig.property.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfig.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfig.property.provisioners">provisioners</a></code> | <code>typing.List[cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfig.property.displayName">display_name</a></code> | <code>str</code> | The display name of the plugin. Max length is 50 characters (Unicode code points). |
 | <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfig.property.location">location</a></code> | <code>str</code> | Resource ID segment making up resource 'name'. It identifies the resource within its parent collection as described in https://google.aip.dev/122. |
 | <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfig.property.pluginId">plugin_id</a></code> | <code>str</code> | The ID to use for the Plugin resource, which will become the final component of the Plugin's resource name. |
-| <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfig.property.actionsConfig">actions_config</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginActionsConfig">ApihubPluginActionsConfig</a>]]</code> | actions_config block. |
+| <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfig.property.actionsConfig">actions_config</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginActionsConfig">ApihubPluginActionsConfig</a>]</code> | actions_config block. |
 | <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfig.property.configTemplate">config_template</a></code> | <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfigTemplate">ApihubPluginConfigTemplate</a></code> | config_template block. |
 | <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfig.property.description">description</a></code> | <code>str</code> | The plugin description. Max length is 2000 characters (Unicode code points). |
 | <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfig.property.documentation">documentation</a></code> | <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginDocumentation">ApihubPluginDocumentation</a></code> | documentation block. |
@@ -1556,20 +1556,20 @@ apihubPlugin.ApihubPluginConfig(
 ##### `connection`<sup>Optional</sup> <a name="connection" id="@cdktf/provider-google.apihubPlugin.ApihubPluginConfig.property.connection"></a>
 
 ```python
-connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection]
+connection: SSHProvisionerConnection | WinrmProvisionerConnection
 ```
 
-- *Type:* typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]
+- *Type:* cdktf.SSHProvisionerConnection | cdktf.WinrmProvisionerConnection
 
 ---
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.apihubPlugin.ApihubPluginConfig.property.count"></a>
 
 ```python
-count: typing.Union[typing.Union[int, float], TerraformCount]
+count: typing.Union[int, float] | TerraformCount
 ```
 
-- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
+- *Type:* typing.Union[int, float] | cdktf.TerraformCount
 
 ---
 
@@ -1616,10 +1616,10 @@ provider: TerraformProvider
 ##### `provisioners`<sup>Optional</sup> <a name="provisioners" id="@cdktf/provider-google.apihubPlugin.ApihubPluginConfig.property.provisioners"></a>
 
 ```python
-provisioners: typing.List[typing.Union[FileProvisioner, LocalExecProvisioner, RemoteExecProvisioner]]
+provisioners: typing.List[FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner]
 ```
 
-- *Type:* typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]
+- *Type:* typing.List[cdktf.FileProvisioner | cdktf.LocalExecProvisioner | cdktf.RemoteExecProvisioner]
 
 ---
 
@@ -1681,10 +1681,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `actions_config`<sup>Optional</sup> <a name="actions_config" id="@cdktf/provider-google.apihubPlugin.ApihubPluginConfig.property.actionsConfig"></a>
 
 ```python
-actions_config: typing.Union[IResolvable, typing.List[ApihubPluginActionsConfig]]
+actions_config: IResolvable | typing.List[ApihubPluginActionsConfig]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginActionsConfig">ApihubPluginActionsConfig</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginActionsConfig">ApihubPluginActionsConfig</a>]
 
 actions_config block.
 
@@ -1811,7 +1811,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 from cdktf_cdktf_provider_google import apihub_plugin
 
 apihubPlugin.ApihubPluginConfigTemplate(
-  additional_config_template: typing.Union[IResolvable, typing.List[ApihubPluginConfigTemplateAdditionalConfigTemplate]] = None,
+  additional_config_template: IResolvable | typing.List[ApihubPluginConfigTemplateAdditionalConfigTemplate] = None,
   auth_config_template: ApihubPluginConfigTemplateAuthConfigTemplate = None
 )
 ```
@@ -1820,7 +1820,7 @@ apihubPlugin.ApihubPluginConfigTemplate(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfigTemplate.property.additionalConfigTemplate">additional_config_template</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfigTemplateAdditionalConfigTemplate">ApihubPluginConfigTemplateAdditionalConfigTemplate</a>]]</code> | additional_config_template block. |
+| <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfigTemplate.property.additionalConfigTemplate">additional_config_template</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfigTemplateAdditionalConfigTemplate">ApihubPluginConfigTemplateAdditionalConfigTemplate</a>]</code> | additional_config_template block. |
 | <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfigTemplate.property.authConfigTemplate">auth_config_template</a></code> | <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfigTemplateAuthConfigTemplate">ApihubPluginConfigTemplateAuthConfigTemplate</a></code> | auth_config_template block. |
 
 ---
@@ -1828,10 +1828,10 @@ apihubPlugin.ApihubPluginConfigTemplate(
 ##### `additional_config_template`<sup>Optional</sup> <a name="additional_config_template" id="@cdktf/provider-google.apihubPlugin.ApihubPluginConfigTemplate.property.additionalConfigTemplate"></a>
 
 ```python
-additional_config_template: typing.Union[IResolvable, typing.List[ApihubPluginConfigTemplateAdditionalConfigTemplate]]
+additional_config_template: IResolvable | typing.List[ApihubPluginConfigTemplateAdditionalConfigTemplate]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfigTemplateAdditionalConfigTemplate">ApihubPluginConfigTemplateAdditionalConfigTemplate</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfigTemplateAdditionalConfigTemplate">ApihubPluginConfigTemplateAdditionalConfigTemplate</a>]
 
 additional_config_template block.
 
@@ -1864,9 +1864,9 @@ apihubPlugin.ApihubPluginConfigTemplateAdditionalConfigTemplate(
   id: str,
   value_type: str,
   description: str = None,
-  enum_options: typing.Union[IResolvable, typing.List[ApihubPluginConfigTemplateAdditionalConfigTemplateEnumOptions]] = None,
-  multi_select_options: typing.Union[IResolvable, typing.List[ApihubPluginConfigTemplateAdditionalConfigTemplateMultiSelectOptions]] = None,
-  required: typing.Union[bool, IResolvable] = None,
+  enum_options: IResolvable | typing.List[ApihubPluginConfigTemplateAdditionalConfigTemplateEnumOptions] = None,
+  multi_select_options: IResolvable | typing.List[ApihubPluginConfigTemplateAdditionalConfigTemplateMultiSelectOptions] = None,
+  required: bool | IResolvable = None,
   validation_regex: str = None
 )
 ```
@@ -1878,9 +1878,9 @@ apihubPlugin.ApihubPluginConfigTemplateAdditionalConfigTemplate(
 | <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfigTemplateAdditionalConfigTemplate.property.id">id</a></code> | <code>str</code> | ID of the config variable. Must be unique within the configuration. |
 | <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfigTemplateAdditionalConfigTemplate.property.valueType">value_type</a></code> | <code>str</code> | Type of the parameter: string, int, bool etc. Possible values: VALUE_TYPE_UNSPECIFIED STRING INT BOOL SECRET ENUM MULTI_SELECT MULTI_STRING MULTI_INT. |
 | <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfigTemplateAdditionalConfigTemplate.property.description">description</a></code> | <code>str</code> | Description. |
-| <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfigTemplateAdditionalConfigTemplate.property.enumOptions">enum_options</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfigTemplateAdditionalConfigTemplateEnumOptions">ApihubPluginConfigTemplateAdditionalConfigTemplateEnumOptions</a>]]</code> | enum_options block. |
-| <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfigTemplateAdditionalConfigTemplate.property.multiSelectOptions">multi_select_options</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfigTemplateAdditionalConfigTemplateMultiSelectOptions">ApihubPluginConfigTemplateAdditionalConfigTemplateMultiSelectOptions</a>]]</code> | multi_select_options block. |
-| <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfigTemplateAdditionalConfigTemplate.property.required">required</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Flag represents that this 'ConfigVariable' must be provided for a PluginInstance. |
+| <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfigTemplateAdditionalConfigTemplate.property.enumOptions">enum_options</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfigTemplateAdditionalConfigTemplateEnumOptions">ApihubPluginConfigTemplateAdditionalConfigTemplateEnumOptions</a>]</code> | enum_options block. |
+| <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfigTemplateAdditionalConfigTemplate.property.multiSelectOptions">multi_select_options</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfigTemplateAdditionalConfigTemplateMultiSelectOptions">ApihubPluginConfigTemplateAdditionalConfigTemplateMultiSelectOptions</a>]</code> | multi_select_options block. |
+| <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfigTemplateAdditionalConfigTemplate.property.required">required</a></code> | <code>bool \| cdktf.IResolvable</code> | Flag represents that this 'ConfigVariable' must be provided for a PluginInstance. |
 | <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfigTemplateAdditionalConfigTemplate.property.validationRegex">validation_regex</a></code> | <code>str</code> | Regular expression in RE2 syntax used for validating the 'value' of a 'ConfigVariable'. |
 
 ---
@@ -1933,10 +1933,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `enum_options`<sup>Optional</sup> <a name="enum_options" id="@cdktf/provider-google.apihubPlugin.ApihubPluginConfigTemplateAdditionalConfigTemplate.property.enumOptions"></a>
 
 ```python
-enum_options: typing.Union[IResolvable, typing.List[ApihubPluginConfigTemplateAdditionalConfigTemplateEnumOptions]]
+enum_options: IResolvable | typing.List[ApihubPluginConfigTemplateAdditionalConfigTemplateEnumOptions]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfigTemplateAdditionalConfigTemplateEnumOptions">ApihubPluginConfigTemplateAdditionalConfigTemplateEnumOptions</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfigTemplateAdditionalConfigTemplateEnumOptions">ApihubPluginConfigTemplateAdditionalConfigTemplateEnumOptions</a>]
 
 enum_options block.
 
@@ -1947,10 +1947,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `multi_select_options`<sup>Optional</sup> <a name="multi_select_options" id="@cdktf/provider-google.apihubPlugin.ApihubPluginConfigTemplateAdditionalConfigTemplate.property.multiSelectOptions"></a>
 
 ```python
-multi_select_options: typing.Union[IResolvable, typing.List[ApihubPluginConfigTemplateAdditionalConfigTemplateMultiSelectOptions]]
+multi_select_options: IResolvable | typing.List[ApihubPluginConfigTemplateAdditionalConfigTemplateMultiSelectOptions]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfigTemplateAdditionalConfigTemplateMultiSelectOptions">ApihubPluginConfigTemplateAdditionalConfigTemplateMultiSelectOptions</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfigTemplateAdditionalConfigTemplateMultiSelectOptions">ApihubPluginConfigTemplateAdditionalConfigTemplateMultiSelectOptions</a>]
 
 multi_select_options block.
 
@@ -1961,10 +1961,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `required`<sup>Optional</sup> <a name="required" id="@cdktf/provider-google.apihubPlugin.ApihubPluginConfigTemplateAdditionalConfigTemplate.property.required"></a>
 
 ```python
-required: typing.Union[bool, IResolvable]
+required: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Flag represents that this 'ConfigVariable' must be provided for a PluginInstance.
 
@@ -2461,7 +2461,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginActionsConfigList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginActionsConfigList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginActionsConfigList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginActionsConfig">ApihubPluginActionsConfig</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginActionsConfigList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginActionsConfig">ApihubPluginActionsConfig</a>]</code> | *No description.* |
 
 ---
 
@@ -2492,10 +2492,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.apihubPlugin.ApihubPluginActionsConfigList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[ApihubPluginActionsConfig]]
+internal_value: IResolvable | typing.List[ApihubPluginActionsConfig]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginActionsConfig">ApihubPluginActionsConfig</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginActionsConfig">ApihubPluginActionsConfig</a>]
 
 ---
 
@@ -2763,7 +2763,7 @@ Returns a reversible string representation.
 | <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginActionsConfigOutputReference.property.displayName">display_name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginActionsConfigOutputReference.property.id">id</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginActionsConfigOutputReference.property.triggerMode">trigger_mode</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginActionsConfigOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginActionsConfig">ApihubPluginActionsConfig</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginActionsConfigOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginActionsConfig">ApihubPluginActionsConfig</a></code> | *No description.* |
 
 ---
 
@@ -2874,10 +2874,10 @@ trigger_mode: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.apihubPlugin.ApihubPluginActionsConfigOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, ApihubPluginActionsConfig]
+internal_value: IResolvable | ApihubPluginActionsConfig
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginActionsConfig">ApihubPluginActionsConfig</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginActionsConfig">ApihubPluginActionsConfig</a>
 
 ---
 
@@ -3013,7 +3013,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfigTemplateAdditionalConfigTemplateEnumOptionsList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfigTemplateAdditionalConfigTemplateEnumOptionsList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfigTemplateAdditionalConfigTemplateEnumOptionsList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfigTemplateAdditionalConfigTemplateEnumOptions">ApihubPluginConfigTemplateAdditionalConfigTemplateEnumOptions</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfigTemplateAdditionalConfigTemplateEnumOptionsList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfigTemplateAdditionalConfigTemplateEnumOptions">ApihubPluginConfigTemplateAdditionalConfigTemplateEnumOptions</a>]</code> | *No description.* |
 
 ---
 
@@ -3044,10 +3044,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.apihubPlugin.ApihubPluginConfigTemplateAdditionalConfigTemplateEnumOptionsList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[ApihubPluginConfigTemplateAdditionalConfigTemplateEnumOptions]]
+internal_value: IResolvable | typing.List[ApihubPluginConfigTemplateAdditionalConfigTemplateEnumOptions]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfigTemplateAdditionalConfigTemplateEnumOptions">ApihubPluginConfigTemplateAdditionalConfigTemplateEnumOptions</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfigTemplateAdditionalConfigTemplateEnumOptions">ApihubPluginConfigTemplateAdditionalConfigTemplateEnumOptions</a>]
 
 ---
 
@@ -3320,7 +3320,7 @@ def reset_description() -> None
 | <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfigTemplateAdditionalConfigTemplateEnumOptionsOutputReference.property.description">description</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfigTemplateAdditionalConfigTemplateEnumOptionsOutputReference.property.displayName">display_name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfigTemplateAdditionalConfigTemplateEnumOptionsOutputReference.property.id">id</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfigTemplateAdditionalConfigTemplateEnumOptionsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfigTemplateAdditionalConfigTemplateEnumOptions">ApihubPluginConfigTemplateAdditionalConfigTemplateEnumOptions</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfigTemplateAdditionalConfigTemplateEnumOptionsOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfigTemplateAdditionalConfigTemplateEnumOptions">ApihubPluginConfigTemplateAdditionalConfigTemplateEnumOptions</a></code> | *No description.* |
 
 ---
 
@@ -3411,10 +3411,10 @@ id: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.apihubPlugin.ApihubPluginConfigTemplateAdditionalConfigTemplateEnumOptionsOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, ApihubPluginConfigTemplateAdditionalConfigTemplateEnumOptions]
+internal_value: IResolvable | ApihubPluginConfigTemplateAdditionalConfigTemplateEnumOptions
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfigTemplateAdditionalConfigTemplateEnumOptions">ApihubPluginConfigTemplateAdditionalConfigTemplateEnumOptions</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfigTemplateAdditionalConfigTemplateEnumOptions">ApihubPluginConfigTemplateAdditionalConfigTemplateEnumOptions</a>
 
 ---
 
@@ -3550,7 +3550,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfigTemplateAdditionalConfigTemplateList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfigTemplateAdditionalConfigTemplateList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfigTemplateAdditionalConfigTemplateList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfigTemplateAdditionalConfigTemplate">ApihubPluginConfigTemplateAdditionalConfigTemplate</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfigTemplateAdditionalConfigTemplateList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfigTemplateAdditionalConfigTemplate">ApihubPluginConfigTemplateAdditionalConfigTemplate</a>]</code> | *No description.* |
 
 ---
 
@@ -3581,10 +3581,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.apihubPlugin.ApihubPluginConfigTemplateAdditionalConfigTemplateList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[ApihubPluginConfigTemplateAdditionalConfigTemplate]]
+internal_value: IResolvable | typing.List[ApihubPluginConfigTemplateAdditionalConfigTemplate]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfigTemplateAdditionalConfigTemplate">ApihubPluginConfigTemplateAdditionalConfigTemplate</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfigTemplateAdditionalConfigTemplate">ApihubPluginConfigTemplateAdditionalConfigTemplate</a>]
 
 ---
 
@@ -3720,7 +3720,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfigTemplateAdditionalConfigTemplateMultiSelectOptionsList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfigTemplateAdditionalConfigTemplateMultiSelectOptionsList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfigTemplateAdditionalConfigTemplateMultiSelectOptionsList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfigTemplateAdditionalConfigTemplateMultiSelectOptions">ApihubPluginConfigTemplateAdditionalConfigTemplateMultiSelectOptions</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfigTemplateAdditionalConfigTemplateMultiSelectOptionsList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfigTemplateAdditionalConfigTemplateMultiSelectOptions">ApihubPluginConfigTemplateAdditionalConfigTemplateMultiSelectOptions</a>]</code> | *No description.* |
 
 ---
 
@@ -3751,10 +3751,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.apihubPlugin.ApihubPluginConfigTemplateAdditionalConfigTemplateMultiSelectOptionsList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[ApihubPluginConfigTemplateAdditionalConfigTemplateMultiSelectOptions]]
+internal_value: IResolvable | typing.List[ApihubPluginConfigTemplateAdditionalConfigTemplateMultiSelectOptions]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfigTemplateAdditionalConfigTemplateMultiSelectOptions">ApihubPluginConfigTemplateAdditionalConfigTemplateMultiSelectOptions</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfigTemplateAdditionalConfigTemplateMultiSelectOptions">ApihubPluginConfigTemplateAdditionalConfigTemplateMultiSelectOptions</a>]
 
 ---
 
@@ -4027,7 +4027,7 @@ def reset_description() -> None
 | <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfigTemplateAdditionalConfigTemplateMultiSelectOptionsOutputReference.property.description">description</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfigTemplateAdditionalConfigTemplateMultiSelectOptionsOutputReference.property.displayName">display_name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfigTemplateAdditionalConfigTemplateMultiSelectOptionsOutputReference.property.id">id</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfigTemplateAdditionalConfigTemplateMultiSelectOptionsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfigTemplateAdditionalConfigTemplateMultiSelectOptions">ApihubPluginConfigTemplateAdditionalConfigTemplateMultiSelectOptions</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfigTemplateAdditionalConfigTemplateMultiSelectOptionsOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfigTemplateAdditionalConfigTemplateMultiSelectOptions">ApihubPluginConfigTemplateAdditionalConfigTemplateMultiSelectOptions</a></code> | *No description.* |
 
 ---
 
@@ -4118,10 +4118,10 @@ id: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.apihubPlugin.ApihubPluginConfigTemplateAdditionalConfigTemplateMultiSelectOptionsOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, ApihubPluginConfigTemplateAdditionalConfigTemplateMultiSelectOptions]
+internal_value: IResolvable | ApihubPluginConfigTemplateAdditionalConfigTemplateMultiSelectOptions
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfigTemplateAdditionalConfigTemplateMultiSelectOptions">ApihubPluginConfigTemplateAdditionalConfigTemplateMultiSelectOptions</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfigTemplateAdditionalConfigTemplateMultiSelectOptions">ApihubPluginConfigTemplateAdditionalConfigTemplateMultiSelectOptions</a>
 
 ---
 
@@ -4385,13 +4385,13 @@ Returns a reversible string representation.
 
 ```python
 def put_enum_options(
-  value: typing.Union[IResolvable, typing.List[ApihubPluginConfigTemplateAdditionalConfigTemplateEnumOptions]]
+  value: IResolvable | typing.List[ApihubPluginConfigTemplateAdditionalConfigTemplateEnumOptions]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.apihubPlugin.ApihubPluginConfigTemplateAdditionalConfigTemplateOutputReference.putEnumOptions.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfigTemplateAdditionalConfigTemplateEnumOptions">ApihubPluginConfigTemplateAdditionalConfigTemplateEnumOptions</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfigTemplateAdditionalConfigTemplateEnumOptions">ApihubPluginConfigTemplateAdditionalConfigTemplateEnumOptions</a>]
 
 ---
 
@@ -4399,13 +4399,13 @@ def put_enum_options(
 
 ```python
 def put_multi_select_options(
-  value: typing.Union[IResolvable, typing.List[ApihubPluginConfigTemplateAdditionalConfigTemplateMultiSelectOptions]]
+  value: IResolvable | typing.List[ApihubPluginConfigTemplateAdditionalConfigTemplateMultiSelectOptions]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.apihubPlugin.ApihubPluginConfigTemplateAdditionalConfigTemplateOutputReference.putMultiSelectOptions.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfigTemplateAdditionalConfigTemplateMultiSelectOptions">ApihubPluginConfigTemplateAdditionalConfigTemplateMultiSelectOptions</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfigTemplateAdditionalConfigTemplateMultiSelectOptions">ApihubPluginConfigTemplateAdditionalConfigTemplateMultiSelectOptions</a>]
 
 ---
 
@@ -4449,18 +4449,18 @@ def reset_validation_regex() -> None
 | <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfigTemplateAdditionalConfigTemplateOutputReference.property.enumOptions">enum_options</a></code> | <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfigTemplateAdditionalConfigTemplateEnumOptionsList">ApihubPluginConfigTemplateAdditionalConfigTemplateEnumOptionsList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfigTemplateAdditionalConfigTemplateOutputReference.property.multiSelectOptions">multi_select_options</a></code> | <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfigTemplateAdditionalConfigTemplateMultiSelectOptionsList">ApihubPluginConfigTemplateAdditionalConfigTemplateMultiSelectOptionsList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfigTemplateAdditionalConfigTemplateOutputReference.property.descriptionInput">description_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfigTemplateAdditionalConfigTemplateOutputReference.property.enumOptionsInput">enum_options_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfigTemplateAdditionalConfigTemplateEnumOptions">ApihubPluginConfigTemplateAdditionalConfigTemplateEnumOptions</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfigTemplateAdditionalConfigTemplateOutputReference.property.enumOptionsInput">enum_options_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfigTemplateAdditionalConfigTemplateEnumOptions">ApihubPluginConfigTemplateAdditionalConfigTemplateEnumOptions</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfigTemplateAdditionalConfigTemplateOutputReference.property.idInput">id_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfigTemplateAdditionalConfigTemplateOutputReference.property.multiSelectOptionsInput">multi_select_options_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfigTemplateAdditionalConfigTemplateMultiSelectOptions">ApihubPluginConfigTemplateAdditionalConfigTemplateMultiSelectOptions</a>]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfigTemplateAdditionalConfigTemplateOutputReference.property.requiredInput">required_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfigTemplateAdditionalConfigTemplateOutputReference.property.multiSelectOptionsInput">multi_select_options_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfigTemplateAdditionalConfigTemplateMultiSelectOptions">ApihubPluginConfigTemplateAdditionalConfigTemplateMultiSelectOptions</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfigTemplateAdditionalConfigTemplateOutputReference.property.requiredInput">required_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfigTemplateAdditionalConfigTemplateOutputReference.property.validationRegexInput">validation_regex_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfigTemplateAdditionalConfigTemplateOutputReference.property.valueTypeInput">value_type_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfigTemplateAdditionalConfigTemplateOutputReference.property.description">description</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfigTemplateAdditionalConfigTemplateOutputReference.property.id">id</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfigTemplateAdditionalConfigTemplateOutputReference.property.required">required</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfigTemplateAdditionalConfigTemplateOutputReference.property.required">required</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfigTemplateAdditionalConfigTemplateOutputReference.property.validationRegex">validation_regex</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfigTemplateAdditionalConfigTemplateOutputReference.property.valueType">value_type</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfigTemplateAdditionalConfigTemplateOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfigTemplateAdditionalConfigTemplate">ApihubPluginConfigTemplateAdditionalConfigTemplate</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfigTemplateAdditionalConfigTemplateOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfigTemplateAdditionalConfigTemplate">ApihubPluginConfigTemplateAdditionalConfigTemplate</a></code> | *No description.* |
 
 ---
 
@@ -4521,10 +4521,10 @@ description_input: str
 ##### `enum_options_input`<sup>Optional</sup> <a name="enum_options_input" id="@cdktf/provider-google.apihubPlugin.ApihubPluginConfigTemplateAdditionalConfigTemplateOutputReference.property.enumOptionsInput"></a>
 
 ```python
-enum_options_input: typing.Union[IResolvable, typing.List[ApihubPluginConfigTemplateAdditionalConfigTemplateEnumOptions]]
+enum_options_input: IResolvable | typing.List[ApihubPluginConfigTemplateAdditionalConfigTemplateEnumOptions]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfigTemplateAdditionalConfigTemplateEnumOptions">ApihubPluginConfigTemplateAdditionalConfigTemplateEnumOptions</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfigTemplateAdditionalConfigTemplateEnumOptions">ApihubPluginConfigTemplateAdditionalConfigTemplateEnumOptions</a>]
 
 ---
 
@@ -4541,20 +4541,20 @@ id_input: str
 ##### `multi_select_options_input`<sup>Optional</sup> <a name="multi_select_options_input" id="@cdktf/provider-google.apihubPlugin.ApihubPluginConfigTemplateAdditionalConfigTemplateOutputReference.property.multiSelectOptionsInput"></a>
 
 ```python
-multi_select_options_input: typing.Union[IResolvable, typing.List[ApihubPluginConfigTemplateAdditionalConfigTemplateMultiSelectOptions]]
+multi_select_options_input: IResolvable | typing.List[ApihubPluginConfigTemplateAdditionalConfigTemplateMultiSelectOptions]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfigTemplateAdditionalConfigTemplateMultiSelectOptions">ApihubPluginConfigTemplateAdditionalConfigTemplateMultiSelectOptions</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfigTemplateAdditionalConfigTemplateMultiSelectOptions">ApihubPluginConfigTemplateAdditionalConfigTemplateMultiSelectOptions</a>]
 
 ---
 
 ##### `required_input`<sup>Optional</sup> <a name="required_input" id="@cdktf/provider-google.apihubPlugin.ApihubPluginConfigTemplateAdditionalConfigTemplateOutputReference.property.requiredInput"></a>
 
 ```python
-required_input: typing.Union[bool, IResolvable]
+required_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -4601,10 +4601,10 @@ id: str
 ##### `required`<sup>Required</sup> <a name="required" id="@cdktf/provider-google.apihubPlugin.ApihubPluginConfigTemplateAdditionalConfigTemplateOutputReference.property.required"></a>
 
 ```python
-required: typing.Union[bool, IResolvable]
+required: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -4631,10 +4631,10 @@ value_type: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.apihubPlugin.ApihubPluginConfigTemplateAdditionalConfigTemplateOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, ApihubPluginConfigTemplateAdditionalConfigTemplate]
+internal_value: IResolvable | ApihubPluginConfigTemplateAdditionalConfigTemplate
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfigTemplateAdditionalConfigTemplate">ApihubPluginConfigTemplateAdditionalConfigTemplate</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfigTemplateAdditionalConfigTemplate">ApihubPluginConfigTemplateAdditionalConfigTemplate</a>
 
 ---
 
@@ -5518,13 +5518,13 @@ Returns a reversible string representation.
 
 ```python
 def put_additional_config_template(
-  value: typing.Union[IResolvable, typing.List[ApihubPluginConfigTemplateAdditionalConfigTemplate]]
+  value: IResolvable | typing.List[ApihubPluginConfigTemplateAdditionalConfigTemplate]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.apihubPlugin.ApihubPluginConfigTemplateOutputReference.putAdditionalConfigTemplate.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfigTemplateAdditionalConfigTemplate">ApihubPluginConfigTemplateAdditionalConfigTemplate</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfigTemplateAdditionalConfigTemplate">ApihubPluginConfigTemplateAdditionalConfigTemplate</a>]
 
 ---
 
@@ -5578,7 +5578,7 @@ def reset_auth_config_template() -> None
 | <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfigTemplateOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfigTemplateOutputReference.property.additionalConfigTemplate">additional_config_template</a></code> | <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfigTemplateAdditionalConfigTemplateList">ApihubPluginConfigTemplateAdditionalConfigTemplateList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfigTemplateOutputReference.property.authConfigTemplate">auth_config_template</a></code> | <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfigTemplateAuthConfigTemplateOutputReference">ApihubPluginConfigTemplateAuthConfigTemplateOutputReference</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfigTemplateOutputReference.property.additionalConfigTemplateInput">additional_config_template_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfigTemplateAdditionalConfigTemplate">ApihubPluginConfigTemplateAdditionalConfigTemplate</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfigTemplateOutputReference.property.additionalConfigTemplateInput">additional_config_template_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfigTemplateAdditionalConfigTemplate">ApihubPluginConfigTemplateAdditionalConfigTemplate</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfigTemplateOutputReference.property.authConfigTemplateInput">auth_config_template_input</a></code> | <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfigTemplateAuthConfigTemplate">ApihubPluginConfigTemplateAuthConfigTemplate</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfigTemplateOutputReference.property.internalValue">internal_value</a></code> | <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfigTemplate">ApihubPluginConfigTemplate</a></code> | *No description.* |
 
@@ -5631,10 +5631,10 @@ auth_config_template: ApihubPluginConfigTemplateAuthConfigTemplateOutputReferenc
 ##### `additional_config_template_input`<sup>Optional</sup> <a name="additional_config_template_input" id="@cdktf/provider-google.apihubPlugin.ApihubPluginConfigTemplateOutputReference.property.additionalConfigTemplateInput"></a>
 
 ```python
-additional_config_template_input: typing.Union[IResolvable, typing.List[ApihubPluginConfigTemplateAdditionalConfigTemplate]]
+additional_config_template_input: IResolvable | typing.List[ApihubPluginConfigTemplateAdditionalConfigTemplate]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfigTemplateAdditionalConfigTemplate">ApihubPluginConfigTemplateAdditionalConfigTemplate</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfigTemplateAdditionalConfigTemplate">ApihubPluginConfigTemplateAdditionalConfigTemplate</a>]
 
 ---
 
@@ -6518,7 +6518,7 @@ def reset_delete() -> None
 | <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginTimeoutsOutputReference.property.deleteInput">delete_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginTimeoutsOutputReference.property.create">create</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginTimeoutsOutputReference.property.delete">delete</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginTimeouts">ApihubPluginTimeouts</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginTimeouts">ApihubPluginTimeouts</a></code> | *No description.* |
 
 ---
 
@@ -6589,10 +6589,10 @@ delete: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.apihubPlugin.ApihubPluginTimeoutsOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, ApihubPluginTimeouts]
+internal_value: IResolvable | ApihubPluginTimeouts
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginTimeouts">ApihubPluginTimeouts</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginTimeouts">ApihubPluginTimeouts</a>
 
 ---
 

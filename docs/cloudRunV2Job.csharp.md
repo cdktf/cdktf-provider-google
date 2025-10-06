@@ -286,7 +286,7 @@ private System.Collections.Generic.IDictionary<string, string> GetStringMapAttri
 ##### `HasResourceMove` <a name="HasResourceMove" id="@cdktf/provider-google.cloudRunV2Job.CloudRunV2Job.hasResourceMove"></a>
 
 ```csharp
-private object HasResourceMove()
+private TerraformResourceMoveByTarget|TerraformResourceMoveById HasResourceMove()
 ```
 
 ##### `ImportFrom` <a name="ImportFrom" id="@cdktf/provider-google.cloudRunV2Job.CloudRunV2Job.importFrom"></a>
@@ -340,7 +340,7 @@ Full id of resource being moved from, e.g. "aws_s3_bucket.example".
 ##### `MoveTo` <a name="MoveTo" id="@cdktf/provider-google.cloudRunV2Job.CloudRunV2Job.moveTo"></a>
 
 ```csharp
-private void MoveTo(string MoveTarget, object Index = null)
+private void MoveTo(string MoveTarget, string|double Index = null)
 ```
 
 Moves this resource to the target resource given by moveTarget.
@@ -355,7 +355,7 @@ The previously set user defined string set by .addMoveTarget() corresponding to 
 
 ###### `Index`<sup>Optional</sup> <a name="Index" id="@cdktf/provider-google.cloudRunV2Job.CloudRunV2Job.moveTo.parameter.index"></a>
 
-- *Type:* object
+- *Type:* string|double
 
 Optional The index corresponding to the key the resource is to appear in the foreach of a resource to move to.
 
@@ -599,13 +599,13 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.5
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2Job.property.terraformMetaArguments">TerraformMetaArguments</a></code> | <code>System.Collections.Generic.IDictionary<string, object></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2Job.property.terraformResourceType">TerraformResourceType</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2Job.property.terraformGeneratorMetadata">TerraformGeneratorMetadata</a></code> | <code>HashiCorp.Cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2Job.property.connection">Connection</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2Job.property.count">Count</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2Job.property.connection">Connection</a></code> | <code>HashiCorp.Cdktf.SSHProvisionerConnection\|HashiCorp.Cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2Job.property.count">Count</a></code> | <code>double\|HashiCorp.Cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2Job.property.dependsOn">DependsOn</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2Job.property.forEach">ForEach</a></code> | <code>HashiCorp.Cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2Job.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2Job.property.provider">Provider</a></code> | <code>HashiCorp.Cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2Job.property.provisioners">Provisioners</a></code> | <code>object[]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2Job.property.provisioners">Provisioners</a></code> | <code>HashiCorp.Cdktf.FileProvisioner\|HashiCorp.Cdktf.LocalExecProvisioner\|HashiCorp.Cdktf.RemoteExecProvisioner[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2Job.property.binaryAuthorization">BinaryAuthorization</a></code> | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobBinaryAuthorizationOutputReference">CloudRunV2JobBinaryAuthorizationOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2Job.property.conditions">Conditions</a></code> | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobConditionsList">CloudRunV2JobConditionsList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2Job.property.createTime">CreateTime</a></code> | <code>string</code> | *No description.* |
@@ -631,7 +631,7 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.5
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2Job.property.binaryAuthorizationInput">BinaryAuthorizationInput</a></code> | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobBinaryAuthorization">CloudRunV2JobBinaryAuthorization</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2Job.property.clientInput">ClientInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2Job.property.clientVersionInput">ClientVersionInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2Job.property.deletionProtectionInput">DeletionProtectionInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2Job.property.deletionProtectionInput">DeletionProtectionInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2Job.property.idInput">IdInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2Job.property.labelsInput">LabelsInput</a></code> | <code>System.Collections.Generic.IDictionary<string, string></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2Job.property.launchStageInput">LaunchStageInput</a></code> | <code>string</code> | *No description.* |
@@ -639,11 +639,11 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.5
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2Job.property.nameInput">NameInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2Job.property.projectInput">ProjectInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2Job.property.templateInput">TemplateInput</a></code> | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplate">CloudRunV2JobTemplate</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2Job.property.timeoutsInput">TimeoutsInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2Job.property.timeoutsInput">TimeoutsInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTimeouts">CloudRunV2JobTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2Job.property.annotations">Annotations</a></code> | <code>System.Collections.Generic.IDictionary<string, string></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2Job.property.client">Client</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2Job.property.clientVersion">ClientVersion</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2Job.property.deletionProtection">DeletionProtection</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2Job.property.deletionProtection">DeletionProtection</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2Job.property.id">Id</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2Job.property.labels">Labels</a></code> | <code>System.Collections.Generic.IDictionary<string, string></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2Job.property.launchStage">LaunchStage</a></code> | <code>string</code> | *No description.* |
@@ -728,20 +728,20 @@ public TerraformProviderGeneratorMetadata TerraformGeneratorMetadata { get; }
 ##### `Connection`<sup>Optional</sup> <a name="Connection" id="@cdktf/provider-google.cloudRunV2Job.CloudRunV2Job.property.connection"></a>
 
 ```csharp
-public object Connection { get; }
+public SSHProvisionerConnection|WinrmProvisionerConnection Connection { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.SSHProvisionerConnection|HashiCorp.Cdktf.WinrmProvisionerConnection
 
 ---
 
 ##### `Count`<sup>Optional</sup> <a name="Count" id="@cdktf/provider-google.cloudRunV2Job.CloudRunV2Job.property.count"></a>
 
 ```csharp
-public object Count { get; }
+public double|TerraformCount Count { get; }
 ```
 
-- *Type:* object
+- *Type:* double|HashiCorp.Cdktf.TerraformCount
 
 ---
 
@@ -788,10 +788,10 @@ public TerraformProvider Provider { get; }
 ##### `Provisioners`<sup>Optional</sup> <a name="Provisioners" id="@cdktf/provider-google.cloudRunV2Job.CloudRunV2Job.property.provisioners"></a>
 
 ```csharp
-public object[] Provisioners { get; }
+public (FileProvisioner|LocalExecProvisioner|RemoteExecProvisioner)[] Provisioners { get; }
 ```
 
-- *Type:* object[]
+- *Type:* HashiCorp.Cdktf.FileProvisioner|HashiCorp.Cdktf.LocalExecProvisioner|HashiCorp.Cdktf.RemoteExecProvisioner[]
 
 ---
 
@@ -1048,10 +1048,10 @@ public string ClientVersionInput { get; }
 ##### `DeletionProtectionInput`<sup>Optional</sup> <a name="DeletionProtectionInput" id="@cdktf/provider-google.cloudRunV2Job.CloudRunV2Job.property.deletionProtectionInput"></a>
 
 ```csharp
-public object DeletionProtectionInput { get; }
+public bool|IResolvable DeletionProtectionInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -1128,10 +1128,10 @@ public CloudRunV2JobTemplate TemplateInput { get; }
 ##### `TimeoutsInput`<sup>Optional</sup> <a name="TimeoutsInput" id="@cdktf/provider-google.cloudRunV2Job.CloudRunV2Job.property.timeoutsInput"></a>
 
 ```csharp
-public object TimeoutsInput { get; }
+public IResolvable|CloudRunV2JobTimeouts TimeoutsInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTimeouts">CloudRunV2JobTimeouts</a>
 
 ---
 
@@ -1168,10 +1168,10 @@ public string ClientVersion { get; }
 ##### `DeletionProtection`<sup>Required</sup> <a name="DeletionProtection" id="@cdktf/provider-google.cloudRunV2Job.CloudRunV2Job.property.deletionProtection"></a>
 
 ```csharp
-public object DeletionProtection { get; }
+public bool|IResolvable DeletionProtection { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -1265,7 +1265,7 @@ using HashiCorp.Cdktf.Providers.Google;
 new CloudRunV2JobBinaryAuthorization {
     string BreakglassJustification = null,
     string Policy = null,
-    object UseDefault = null
+    bool|IResolvable UseDefault = null
 };
 ```
 
@@ -1275,7 +1275,7 @@ new CloudRunV2JobBinaryAuthorization {
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobBinaryAuthorization.property.breakglassJustification">BreakglassJustification</a></code> | <code>string</code> | If present, indicates to use Breakglass using this justification. |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobBinaryAuthorization.property.policy">Policy</a></code> | <code>string</code> | The path to a binary authorization policy. Format: projects/{project}/platforms/cloudRun/{policy-name}. |
-| <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobBinaryAuthorization.property.useDefault">UseDefault</a></code> | <code>object</code> | If True, indicates to use the default project's binary authorization policy. If False, binary authorization will be disabled. |
+| <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobBinaryAuthorization.property.useDefault">UseDefault</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | If True, indicates to use the default project's binary authorization policy. If False, binary authorization will be disabled. |
 
 ---
 
@@ -1312,10 +1312,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `UseDefault`<sup>Optional</sup> <a name="UseDefault" id="@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobBinaryAuthorization.property.useDefault"></a>
 
 ```csharp
-public object UseDefault { get; set; }
+public bool|IResolvable UseDefault { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 If True, indicates to use the default project's binary authorization policy. If False, binary authorization will be disabled.
 
@@ -1344,13 +1344,13 @@ new CloudRunV2JobConditions {
 using HashiCorp.Cdktf.Providers.Google;
 
 new CloudRunV2JobConfig {
-    object Connection = null,
-    object Count = null,
+    SSHProvisionerConnection|WinrmProvisionerConnection Connection = null,
+    double|TerraformCount Count = null,
     ITerraformDependable[] DependsOn = null,
     ITerraformIterator ForEach = null,
     TerraformResourceLifecycle Lifecycle = null,
     TerraformProvider Provider = null,
-    object[] Provisioners = null,
+    (FileProvisioner|LocalExecProvisioner|RemoteExecProvisioner)[] Provisioners = null,
     string Location,
     string Name,
     CloudRunV2JobTemplate Template,
@@ -1358,7 +1358,7 @@ new CloudRunV2JobConfig {
     CloudRunV2JobBinaryAuthorization BinaryAuthorization = null,
     string Client = null,
     string ClientVersion = null,
-    object DeletionProtection = null,
+    bool|IResolvable DeletionProtection = null,
     string Id = null,
     System.Collections.Generic.IDictionary<string, string> Labels = null,
     string LaunchStage = null,
@@ -1371,13 +1371,13 @@ new CloudRunV2JobConfig {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobConfig.property.connection">Connection</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobConfig.property.count">Count</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobConfig.property.connection">Connection</a></code> | <code>HashiCorp.Cdktf.SSHProvisionerConnection\|HashiCorp.Cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobConfig.property.count">Count</a></code> | <code>double\|HashiCorp.Cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobConfig.property.dependsOn">DependsOn</a></code> | <code>HashiCorp.Cdktf.ITerraformDependable[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobConfig.property.forEach">ForEach</a></code> | <code>HashiCorp.Cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobConfig.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobConfig.property.provider">Provider</a></code> | <code>HashiCorp.Cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobConfig.property.provisioners">Provisioners</a></code> | <code>object[]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobConfig.property.provisioners">Provisioners</a></code> | <code>HashiCorp.Cdktf.FileProvisioner\|HashiCorp.Cdktf.LocalExecProvisioner\|HashiCorp.Cdktf.RemoteExecProvisioner[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobConfig.property.location">Location</a></code> | <code>string</code> | The location of the cloud run job. |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobConfig.property.name">Name</a></code> | <code>string</code> | Name of the Job. |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobConfig.property.template">Template</a></code> | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplate">CloudRunV2JobTemplate</a></code> | template block. |
@@ -1385,7 +1385,7 @@ new CloudRunV2JobConfig {
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobConfig.property.binaryAuthorization">BinaryAuthorization</a></code> | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobBinaryAuthorization">CloudRunV2JobBinaryAuthorization</a></code> | binary_authorization block. |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobConfig.property.client">Client</a></code> | <code>string</code> | Arbitrary identifier for the API client. |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobConfig.property.clientVersion">ClientVersion</a></code> | <code>string</code> | Arbitrary version identifier for the API client. |
-| <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobConfig.property.deletionProtection">DeletionProtection</a></code> | <code>object</code> | Whether Terraform will be prevented from destroying the job. |
+| <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobConfig.property.deletionProtection">DeletionProtection</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Whether Terraform will be prevented from destroying the job. |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/cloud_run_v2_job#id CloudRunV2Job#id}. |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobConfig.property.labels">Labels</a></code> | <code>System.Collections.Generic.IDictionary<string, string></code> | Unstructured key value map that can be used to organize and categorize objects. |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobConfig.property.launchStage">LaunchStage</a></code> | <code>string</code> | The launch stage as defined by [Google Cloud Platform Launch Stages](https://cloud.google.com/products#product-launch-stages). Cloud Run supports ALPHA, BETA, and GA. If no value is specified, GA is assumed. Set the launch stage to a preview stage on input to allow use of preview features in that stage. On read (or output), describes whether the resource uses preview features. |
@@ -1397,20 +1397,20 @@ new CloudRunV2JobConfig {
 ##### `Connection`<sup>Optional</sup> <a name="Connection" id="@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobConfig.property.connection"></a>
 
 ```csharp
-public object Connection { get; set; }
+public SSHProvisionerConnection|WinrmProvisionerConnection Connection { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.SSHProvisionerConnection|HashiCorp.Cdktf.WinrmProvisionerConnection
 
 ---
 
 ##### `Count`<sup>Optional</sup> <a name="Count" id="@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobConfig.property.count"></a>
 
 ```csharp
-public object Count { get; set; }
+public double|TerraformCount Count { get; set; }
 ```
 
-- *Type:* object
+- *Type:* double|HashiCorp.Cdktf.TerraformCount
 
 ---
 
@@ -1457,10 +1457,10 @@ public TerraformProvider Provider { get; set; }
 ##### `Provisioners`<sup>Optional</sup> <a name="Provisioners" id="@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobConfig.property.provisioners"></a>
 
 ```csharp
-public object[] Provisioners { get; set; }
+public (FileProvisioner|LocalExecProvisioner|RemoteExecProvisioner)[] Provisioners { get; set; }
 ```
 
-- *Type:* object[]
+- *Type:* HashiCorp.Cdktf.FileProvisioner|HashiCorp.Cdktf.LocalExecProvisioner|HashiCorp.Cdktf.RemoteExecProvisioner[]
 
 ---
 
@@ -1575,10 +1575,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `DeletionProtection`<sup>Optional</sup> <a name="DeletionProtection" id="@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobConfig.property.deletionProtection"></a>
 
 ```csharp
-public object DeletionProtection { get; set; }
+public bool|IResolvable DeletionProtection { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Whether Terraform will be prevented from destroying the job.
 
@@ -1810,15 +1810,15 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 using HashiCorp.Cdktf.Providers.Google;
 
 new CloudRunV2JobTemplateTemplate {
-    object Containers = null,
+    IResolvable|CloudRunV2JobTemplateTemplateContainers[] Containers = null,
     string EncryptionKey = null,
     string ExecutionEnvironment = null,
-    object GpuZonalRedundancyDisabled = null,
+    bool|IResolvable GpuZonalRedundancyDisabled = null,
     double MaxRetries = null,
     CloudRunV2JobTemplateTemplateNodeSelector NodeSelector = null,
     string ServiceAccount = null,
     string Timeout = null,
-    object Volumes = null,
+    IResolvable|CloudRunV2JobTemplateTemplateVolumes[] Volumes = null,
     CloudRunV2JobTemplateTemplateVpcAccess VpcAccess = null
 };
 ```
@@ -1827,15 +1827,15 @@ new CloudRunV2JobTemplateTemplate {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplate.property.containers">Containers</a></code> | <code>object</code> | containers block. |
+| <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplate.property.containers">Containers</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainers">CloudRunV2JobTemplateTemplateContainers</a>[]</code> | containers block. |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplate.property.encryptionKey">EncryptionKey</a></code> | <code>string</code> | A reference to a customer managed encryption key (CMEK) to use to encrypt this container image. |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplate.property.executionEnvironment">ExecutionEnvironment</a></code> | <code>string</code> | The execution environment being used to host this Task. Possible values: ["EXECUTION_ENVIRONMENT_GEN1", "EXECUTION_ENVIRONMENT_GEN2"]. |
-| <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplate.property.gpuZonalRedundancyDisabled">GpuZonalRedundancyDisabled</a></code> | <code>object</code> | True if GPU zonal redundancy is disabled on this execution. |
+| <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplate.property.gpuZonalRedundancyDisabled">GpuZonalRedundancyDisabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | True if GPU zonal redundancy is disabled on this execution. |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplate.property.maxRetries">MaxRetries</a></code> | <code>double</code> | Number of retries allowed per Task, before marking this Task failed. Defaults to 3. Minimum value is 0. |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplate.property.nodeSelector">NodeSelector</a></code> | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateNodeSelector">CloudRunV2JobTemplateTemplateNodeSelector</a></code> | node_selector block. |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplate.property.serviceAccount">ServiceAccount</a></code> | <code>string</code> | Email address of the IAM service account associated with the Task of a Job. |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplate.property.timeout">Timeout</a></code> | <code>string</code> | Max allowed time duration the Task may be active before the system will actively try to mark it failed and kill associated containers. |
-| <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplate.property.volumes">Volumes</a></code> | <code>object</code> | volumes block. |
+| <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplate.property.volumes">Volumes</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateVolumes">CloudRunV2JobTemplateTemplateVolumes</a>[]</code> | volumes block. |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplate.property.vpcAccess">VpcAccess</a></code> | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateVpcAccess">CloudRunV2JobTemplateTemplateVpcAccess</a></code> | vpc_access block. |
 
 ---
@@ -1843,10 +1843,10 @@ new CloudRunV2JobTemplateTemplate {
 ##### `Containers`<sup>Optional</sup> <a name="Containers" id="@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplate.property.containers"></a>
 
 ```csharp
-public object Containers { get; set; }
+public IResolvable|CloudRunV2JobTemplateTemplateContainers[] Containers { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainers">CloudRunV2JobTemplateTemplateContainers</a>[]
 
 containers block.
 
@@ -1887,10 +1887,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `GpuZonalRedundancyDisabled`<sup>Optional</sup> <a name="GpuZonalRedundancyDisabled" id="@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplate.property.gpuZonalRedundancyDisabled"></a>
 
 ```csharp
-public object GpuZonalRedundancyDisabled { get; set; }
+public bool|IResolvable GpuZonalRedundancyDisabled { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 True if GPU zonal redundancy is disabled on this execution.
 
@@ -1963,10 +1963,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `Volumes`<sup>Optional</sup> <a name="Volumes" id="@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplate.property.volumes"></a>
 
 ```csharp
-public object Volumes { get; set; }
+public IResolvable|CloudRunV2JobTemplateTemplateVolumes[] Volumes { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateVolumes">CloudRunV2JobTemplateTemplateVolumes</a>[]
 
 volumes block.
 
@@ -2000,12 +2000,12 @@ new CloudRunV2JobTemplateTemplateContainers {
     string[] Args = null,
     string[] Command = null,
     string[] DependsOn = null,
-    object Env = null,
+    IResolvable|CloudRunV2JobTemplateTemplateContainersEnv[] Env = null,
     string Name = null,
-    object Ports = null,
+    IResolvable|CloudRunV2JobTemplateTemplateContainersPorts[] Ports = null,
     CloudRunV2JobTemplateTemplateContainersResources Resources = null,
     CloudRunV2JobTemplateTemplateContainersStartupProbe StartupProbe = null,
-    object VolumeMounts = null,
+    IResolvable|CloudRunV2JobTemplateTemplateContainersVolumeMounts[] VolumeMounts = null,
     string WorkingDir = null
 };
 ```
@@ -2018,12 +2018,12 @@ new CloudRunV2JobTemplateTemplateContainers {
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainers.property.args">Args</a></code> | <code>string[]</code> | Arguments to the entrypoint. |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainers.property.command">Command</a></code> | <code>string[]</code> | Entrypoint array. |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainers.property.dependsOn">DependsOn</a></code> | <code>string[]</code> | Names of the containers that must start before this container. |
-| <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainers.property.env">Env</a></code> | <code>object</code> | env block. |
+| <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainers.property.env">Env</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainersEnv">CloudRunV2JobTemplateTemplateContainersEnv</a>[]</code> | env block. |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainers.property.name">Name</a></code> | <code>string</code> | Name of the container specified as a DNS_LABEL. |
-| <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainers.property.ports">Ports</a></code> | <code>object</code> | ports block. |
+| <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainers.property.ports">Ports</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainersPorts">CloudRunV2JobTemplateTemplateContainersPorts</a>[]</code> | ports block. |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainers.property.resources">Resources</a></code> | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainersResources">CloudRunV2JobTemplateTemplateContainersResources</a></code> | resources block. |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainers.property.startupProbe">StartupProbe</a></code> | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainersStartupProbe">CloudRunV2JobTemplateTemplateContainersStartupProbe</a></code> | startup_probe block. |
-| <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainers.property.volumeMounts">VolumeMounts</a></code> | <code>object</code> | volume_mounts block. |
+| <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainers.property.volumeMounts">VolumeMounts</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainersVolumeMounts">CloudRunV2JobTemplateTemplateContainersVolumeMounts</a>[]</code> | volume_mounts block. |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainers.property.workingDir">WorkingDir</a></code> | <code>string</code> | Container's working directory. |
 
 ---
@@ -2091,10 +2091,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `Env`<sup>Optional</sup> <a name="Env" id="@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainers.property.env"></a>
 
 ```csharp
-public object Env { get; set; }
+public IResolvable|CloudRunV2JobTemplateTemplateContainersEnv[] Env { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainersEnv">CloudRunV2JobTemplateTemplateContainersEnv</a>[]
 
 env block.
 
@@ -2119,10 +2119,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `Ports`<sup>Optional</sup> <a name="Ports" id="@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainers.property.ports"></a>
 
 ```csharp
-public object Ports { get; set; }
+public IResolvable|CloudRunV2JobTemplateTemplateContainersPorts[] Ports { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainersPorts">CloudRunV2JobTemplateTemplateContainersPorts</a>[]
 
 ports block.
 
@@ -2161,10 +2161,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `VolumeMounts`<sup>Optional</sup> <a name="VolumeMounts" id="@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainers.property.volumeMounts"></a>
 
 ```csharp
-public object VolumeMounts { get; set; }
+public IResolvable|CloudRunV2JobTemplateTemplateContainersVolumeMounts[] VolumeMounts { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainersVolumeMounts">CloudRunV2JobTemplateTemplateContainersVolumeMounts</a>[]
 
 volume_mounts block.
 
@@ -2624,7 +2624,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 using HashiCorp.Cdktf.Providers.Google;
 
 new CloudRunV2JobTemplateTemplateContainersStartupProbeHttpGet {
-    object HttpHeaders = null,
+    IResolvable|CloudRunV2JobTemplateTemplateContainersStartupProbeHttpGetHttpHeaders[] HttpHeaders = null,
     string Path = null,
     double Port = null
 };
@@ -2634,7 +2634,7 @@ new CloudRunV2JobTemplateTemplateContainersStartupProbeHttpGet {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainersStartupProbeHttpGet.property.httpHeaders">HttpHeaders</a></code> | <code>object</code> | http_headers block. |
+| <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainersStartupProbeHttpGet.property.httpHeaders">HttpHeaders</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainersStartupProbeHttpGetHttpHeaders">CloudRunV2JobTemplateTemplateContainersStartupProbeHttpGetHttpHeaders</a>[]</code> | http_headers block. |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainersStartupProbeHttpGet.property.path">Path</a></code> | <code>string</code> | Path to access on the HTTP server. If set, it should not be empty string. |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainersStartupProbeHttpGet.property.port">Port</a></code> | <code>double</code> | Port number to access on the container. |
 
@@ -2643,10 +2643,10 @@ new CloudRunV2JobTemplateTemplateContainersStartupProbeHttpGet {
 ##### `HttpHeaders`<sup>Optional</sup> <a name="HttpHeaders" id="@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainersStartupProbeHttpGet.property.httpHeaders"></a>
 
 ```csharp
-public object HttpHeaders { get; set; }
+public IResolvable|CloudRunV2JobTemplateTemplateContainersStartupProbeHttpGetHttpHeaders[] HttpHeaders { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainersStartupProbeHttpGetHttpHeaders">CloudRunV2JobTemplateTemplateContainersStartupProbeHttpGetHttpHeaders</a>[]
 
 http_headers block.
 
@@ -3067,7 +3067,7 @@ using HashiCorp.Cdktf.Providers.Google;
 
 new CloudRunV2JobTemplateTemplateVolumesGcs {
     string Bucket,
-    object ReadOnly = null
+    bool|IResolvable ReadOnly = null
 };
 ```
 
@@ -3076,7 +3076,7 @@ new CloudRunV2JobTemplateTemplateVolumesGcs {
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateVolumesGcs.property.bucket">Bucket</a></code> | <code>string</code> | Name of the cloud storage bucket to back the volume. |
-| <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateVolumesGcs.property.readOnly">ReadOnly</a></code> | <code>object</code> | If true, mount this volume as read-only in all mounts. If false, mount this volume as read-write. |
+| <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateVolumesGcs.property.readOnly">ReadOnly</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | If true, mount this volume as read-only in all mounts. If false, mount this volume as read-write. |
 
 ---
 
@@ -3099,10 +3099,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `ReadOnly`<sup>Optional</sup> <a name="ReadOnly" id="@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateVolumesGcs.property.readOnly"></a>
 
 ```csharp
-public object ReadOnly { get; set; }
+public bool|IResolvable ReadOnly { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 If true, mount this volume as read-only in all mounts. If false, mount this volume as read-write.
 
@@ -3120,7 +3120,7 @@ using HashiCorp.Cdktf.Providers.Google;
 new CloudRunV2JobTemplateTemplateVolumesNfs {
     string Server,
     string Path = null,
-    object ReadOnly = null
+    bool|IResolvable ReadOnly = null
 };
 ```
 
@@ -3130,7 +3130,7 @@ new CloudRunV2JobTemplateTemplateVolumesNfs {
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateVolumesNfs.property.server">Server</a></code> | <code>string</code> | Hostname or IP address of the NFS server. |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateVolumesNfs.property.path">Path</a></code> | <code>string</code> | Path that is exported by the NFS server. |
-| <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateVolumesNfs.property.readOnly">ReadOnly</a></code> | <code>object</code> | If true, mount this volume as read-only in all mounts. |
+| <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateVolumesNfs.property.readOnly">ReadOnly</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | If true, mount this volume as read-only in all mounts. |
 
 ---
 
@@ -3165,10 +3165,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `ReadOnly`<sup>Optional</sup> <a name="ReadOnly" id="@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateVolumesNfs.property.readOnly"></a>
 
 ```csharp
-public object ReadOnly { get; set; }
+public bool|IResolvable ReadOnly { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 If true, mount this volume as read-only in all mounts.
 
@@ -3186,7 +3186,7 @@ using HashiCorp.Cdktf.Providers.Google;
 new CloudRunV2JobTemplateTemplateVolumesSecret {
     string Secret,
     double DefaultMode = null,
-    object Items = null
+    IResolvable|CloudRunV2JobTemplateTemplateVolumesSecretItems[] Items = null
 };
 ```
 
@@ -3196,7 +3196,7 @@ new CloudRunV2JobTemplateTemplateVolumesSecret {
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateVolumesSecret.property.secret">Secret</a></code> | <code>string</code> | The name of the secret in Cloud Secret Manager. |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateVolumesSecret.property.defaultMode">DefaultMode</a></code> | <code>double</code> | Integer representation of mode bits to use on created files by default. |
-| <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateVolumesSecret.property.items">Items</a></code> | <code>object</code> | items block. |
+| <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateVolumesSecret.property.items">Items</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateVolumesSecretItems">CloudRunV2JobTemplateTemplateVolumesSecretItems</a>[]</code> | items block. |
 
 ---
 
@@ -3235,10 +3235,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `Items`<sup>Optional</sup> <a name="Items" id="@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateVolumesSecret.property.items"></a>
 
 ```csharp
-public object Items { get; set; }
+public IResolvable|CloudRunV2JobTemplateTemplateVolumesSecretItems[] Items { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateVolumesSecretItems">CloudRunV2JobTemplateTemplateVolumesSecretItems</a>[]
 
 items block.
 
@@ -3326,7 +3326,7 @@ using HashiCorp.Cdktf.Providers.Google;
 new CloudRunV2JobTemplateTemplateVpcAccess {
     string Connector = null,
     string Egress = null,
-    object NetworkInterfaces = null
+    IResolvable|CloudRunV2JobTemplateTemplateVpcAccessNetworkInterfaces[] NetworkInterfaces = null
 };
 ```
 
@@ -3336,7 +3336,7 @@ new CloudRunV2JobTemplateTemplateVpcAccess {
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateVpcAccess.property.connector">Connector</a></code> | <code>string</code> | VPC Access connector name. Format: projects/{project}/locations/{location}/connectors/{connector}, where {project} can be project id or number. |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateVpcAccess.property.egress">Egress</a></code> | <code>string</code> | Traffic VPC egress settings. Possible values: ["ALL_TRAFFIC", "PRIVATE_RANGES_ONLY"]. |
-| <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateVpcAccess.property.networkInterfaces">NetworkInterfaces</a></code> | <code>object</code> | network_interfaces block. |
+| <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateVpcAccess.property.networkInterfaces">NetworkInterfaces</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateVpcAccessNetworkInterfaces">CloudRunV2JobTemplateTemplateVpcAccessNetworkInterfaces</a>[]</code> | network_interfaces block. |
 
 ---
 
@@ -3371,10 +3371,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `NetworkInterfaces`<sup>Optional</sup> <a name="NetworkInterfaces" id="@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateVpcAccess.property.networkInterfaces"></a>
 
 ```csharp
-public object NetworkInterfaces { get; set; }
+public IResolvable|CloudRunV2JobTemplateTemplateVpcAccessNetworkInterfaces[] NetworkInterfaces { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateVpcAccessNetworkInterfaces">CloudRunV2JobTemplateTemplateVpcAccessNetworkInterfaces</a>[]
 
 network_interfaces block.
 
@@ -3764,10 +3764,10 @@ private void ResetUseDefault()
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobBinaryAuthorizationOutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobBinaryAuthorizationOutputReference.property.breakglassJustificationInput">BreakglassJustificationInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobBinaryAuthorizationOutputReference.property.policyInput">PolicyInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobBinaryAuthorizationOutputReference.property.useDefaultInput">UseDefaultInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobBinaryAuthorizationOutputReference.property.useDefaultInput">UseDefaultInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobBinaryAuthorizationOutputReference.property.breakglassJustification">BreakglassJustification</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobBinaryAuthorizationOutputReference.property.policy">Policy</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobBinaryAuthorizationOutputReference.property.useDefault">UseDefault</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobBinaryAuthorizationOutputReference.property.useDefault">UseDefault</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobBinaryAuthorizationOutputReference.property.internalValue">InternalValue</a></code> | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobBinaryAuthorization">CloudRunV2JobBinaryAuthorization</a></code> | *No description.* |
 
 ---
@@ -3819,10 +3819,10 @@ public string PolicyInput { get; }
 ##### `UseDefaultInput`<sup>Optional</sup> <a name="UseDefaultInput" id="@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobBinaryAuthorizationOutputReference.property.useDefaultInput"></a>
 
 ```csharp
-public object UseDefaultInput { get; }
+public bool|IResolvable UseDefaultInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -3849,10 +3849,10 @@ public string Policy { get; }
 ##### `UseDefault`<sup>Required</sup> <a name="UseDefault" id="@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobBinaryAuthorizationOutputReference.property.useDefault"></a>
 
 ```csharp
-public object UseDefault { get; }
+public bool|IResolvable UseDefault { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -5341,7 +5341,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainersEnvList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainersEnvList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainersEnvList.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainersEnvList.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainersEnv">CloudRunV2JobTemplateTemplateContainersEnv</a>[]</code> | *No description.* |
 
 ---
 
@@ -5372,10 +5372,10 @@ public string Fqn { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainersEnvList.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|CloudRunV2JobTemplateTemplateContainersEnv[] InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainersEnv">CloudRunV2JobTemplateTemplateContainersEnv</a>[]
 
 ---
 
@@ -5641,7 +5641,7 @@ private void ResetValueSource()
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainersEnvOutputReference.property.valueSourceInput">ValueSourceInput</a></code> | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainersEnvValueSource">CloudRunV2JobTemplateTemplateContainersEnvValueSource</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainersEnvOutputReference.property.name">Name</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainersEnvOutputReference.property.value">Value</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainersEnvOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainersEnvOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainersEnv">CloudRunV2JobTemplateTemplateContainersEnv</a></code> | *No description.* |
 
 ---
 
@@ -5732,10 +5732,10 @@ public string Value { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainersEnvOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|CloudRunV2JobTemplateTemplateContainersEnv InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainersEnv">CloudRunV2JobTemplateTemplateContainersEnv</a>
 
 ---
 
@@ -6445,7 +6445,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainersList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainersList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainersList.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainersList.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainers">CloudRunV2JobTemplateTemplateContainers</a>[]</code> | *No description.* |
 
 ---
 
@@ -6476,10 +6476,10 @@ public string Fqn { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainersList.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|CloudRunV2JobTemplateTemplateContainers[] InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainers">CloudRunV2JobTemplateTemplateContainers</a>[]
 
 ---
 
@@ -6723,24 +6723,24 @@ Returns a reversible string representation.
 ##### `PutEnv` <a name="PutEnv" id="@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainersOutputReference.putEnv"></a>
 
 ```csharp
-private void PutEnv(object Value)
+private void PutEnv(IResolvable|CloudRunV2JobTemplateTemplateContainersEnv[] Value)
 ```
 
 ###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainersOutputReference.putEnv.parameter.value"></a>
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainersEnv">CloudRunV2JobTemplateTemplateContainersEnv</a>[]
 
 ---
 
 ##### `PutPorts` <a name="PutPorts" id="@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainersOutputReference.putPorts"></a>
 
 ```csharp
-private void PutPorts(object Value)
+private void PutPorts(IResolvable|CloudRunV2JobTemplateTemplateContainersPorts[] Value)
 ```
 
 ###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainersOutputReference.putPorts.parameter.value"></a>
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainersPorts">CloudRunV2JobTemplateTemplateContainersPorts</a>[]
 
 ---
 
@@ -6771,12 +6771,12 @@ private void PutStartupProbe(CloudRunV2JobTemplateTemplateContainersStartupProbe
 ##### `PutVolumeMounts` <a name="PutVolumeMounts" id="@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainersOutputReference.putVolumeMounts"></a>
 
 ```csharp
-private void PutVolumeMounts(object Value)
+private void PutVolumeMounts(IResolvable|CloudRunV2JobTemplateTemplateContainersVolumeMounts[] Value)
 ```
 
 ###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainersOutputReference.putVolumeMounts.parameter.value"></a>
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainersVolumeMounts">CloudRunV2JobTemplateTemplateContainersVolumeMounts</a>[]
 
 ---
 
@@ -6855,13 +6855,13 @@ private void ResetWorkingDir()
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainersOutputReference.property.argsInput">ArgsInput</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainersOutputReference.property.commandInput">CommandInput</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainersOutputReference.property.dependsOnInput">DependsOnInput</a></code> | <code>string[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainersOutputReference.property.envInput">EnvInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainersOutputReference.property.envInput">EnvInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainersEnv">CloudRunV2JobTemplateTemplateContainersEnv</a>[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainersOutputReference.property.imageInput">ImageInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainersOutputReference.property.nameInput">NameInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainersOutputReference.property.portsInput">PortsInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainersOutputReference.property.portsInput">PortsInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainersPorts">CloudRunV2JobTemplateTemplateContainersPorts</a>[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainersOutputReference.property.resourcesInput">ResourcesInput</a></code> | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainersResources">CloudRunV2JobTemplateTemplateContainersResources</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainersOutputReference.property.startupProbeInput">StartupProbeInput</a></code> | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainersStartupProbe">CloudRunV2JobTemplateTemplateContainersStartupProbe</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainersOutputReference.property.volumeMountsInput">VolumeMountsInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainersOutputReference.property.volumeMountsInput">VolumeMountsInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainersVolumeMounts">CloudRunV2JobTemplateTemplateContainersVolumeMounts</a>[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainersOutputReference.property.workingDirInput">WorkingDirInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainersOutputReference.property.args">Args</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainersOutputReference.property.command">Command</a></code> | <code>string[]</code> | *No description.* |
@@ -6869,7 +6869,7 @@ private void ResetWorkingDir()
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainersOutputReference.property.image">Image</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainersOutputReference.property.name">Name</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainersOutputReference.property.workingDir">WorkingDir</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainersOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainersOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainers">CloudRunV2JobTemplateTemplateContainers</a></code> | *No description.* |
 
 ---
 
@@ -6980,10 +6980,10 @@ public string[] DependsOnInput { get; }
 ##### `EnvInput`<sup>Optional</sup> <a name="EnvInput" id="@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainersOutputReference.property.envInput"></a>
 
 ```csharp
-public object EnvInput { get; }
+public IResolvable|CloudRunV2JobTemplateTemplateContainersEnv[] EnvInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainersEnv">CloudRunV2JobTemplateTemplateContainersEnv</a>[]
 
 ---
 
@@ -7010,10 +7010,10 @@ public string NameInput { get; }
 ##### `PortsInput`<sup>Optional</sup> <a name="PortsInput" id="@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainersOutputReference.property.portsInput"></a>
 
 ```csharp
-public object PortsInput { get; }
+public IResolvable|CloudRunV2JobTemplateTemplateContainersPorts[] PortsInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainersPorts">CloudRunV2JobTemplateTemplateContainersPorts</a>[]
 
 ---
 
@@ -7040,10 +7040,10 @@ public CloudRunV2JobTemplateTemplateContainersStartupProbe StartupProbeInput { g
 ##### `VolumeMountsInput`<sup>Optional</sup> <a name="VolumeMountsInput" id="@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainersOutputReference.property.volumeMountsInput"></a>
 
 ```csharp
-public object VolumeMountsInput { get; }
+public IResolvable|CloudRunV2JobTemplateTemplateContainersVolumeMounts[] VolumeMountsInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainersVolumeMounts">CloudRunV2JobTemplateTemplateContainersVolumeMounts</a>[]
 
 ---
 
@@ -7120,10 +7120,10 @@ public string WorkingDir { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainersOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|CloudRunV2JobTemplateTemplateContainers InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainers">CloudRunV2JobTemplateTemplateContainers</a>
 
 ---
 
@@ -7249,7 +7249,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainersPortsList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainersPortsList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainersPortsList.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainersPortsList.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainersPorts">CloudRunV2JobTemplateTemplateContainersPorts</a>[]</code> | *No description.* |
 
 ---
 
@@ -7280,10 +7280,10 @@ public string Fqn { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainersPortsList.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|CloudRunV2JobTemplateTemplateContainersPorts[] InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainersPorts">CloudRunV2JobTemplateTemplateContainersPorts</a>[]
 
 ---
 
@@ -7534,7 +7534,7 @@ private void ResetName()
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainersPortsOutputReference.property.nameInput">NameInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainersPortsOutputReference.property.containerPort">ContainerPort</a></code> | <code>double</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainersPortsOutputReference.property.name">Name</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainersPortsOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainersPortsOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainersPorts">CloudRunV2JobTemplateTemplateContainersPorts</a></code> | *No description.* |
 
 ---
 
@@ -7605,10 +7605,10 @@ public string Name { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainersPortsOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|CloudRunV2JobTemplateTemplateContainersPorts InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainersPorts">CloudRunV2JobTemplateTemplateContainersPorts</a>
 
 ---
 
@@ -8319,7 +8319,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainersStartupProbeHttpGetHttpHeadersList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainersStartupProbeHttpGetHttpHeadersList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainersStartupProbeHttpGetHttpHeadersList.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainersStartupProbeHttpGetHttpHeadersList.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainersStartupProbeHttpGetHttpHeaders">CloudRunV2JobTemplateTemplateContainersStartupProbeHttpGetHttpHeaders</a>[]</code> | *No description.* |
 
 ---
 
@@ -8350,10 +8350,10 @@ public string Fqn { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainersStartupProbeHttpGetHttpHeadersList.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|CloudRunV2JobTemplateTemplateContainersStartupProbeHttpGetHttpHeaders[] InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainersStartupProbeHttpGetHttpHeaders">CloudRunV2JobTemplateTemplateContainersStartupProbeHttpGetHttpHeaders</a>[]
 
 ---
 
@@ -8597,7 +8597,7 @@ private void ResetValue()
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainersStartupProbeHttpGetHttpHeadersOutputReference.property.valueInput">ValueInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainersStartupProbeHttpGetHttpHeadersOutputReference.property.name">Name</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainersStartupProbeHttpGetHttpHeadersOutputReference.property.value">Value</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainersStartupProbeHttpGetHttpHeadersOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainersStartupProbeHttpGetHttpHeadersOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainersStartupProbeHttpGetHttpHeaders">CloudRunV2JobTemplateTemplateContainersStartupProbeHttpGetHttpHeaders</a></code> | *No description.* |
 
 ---
 
@@ -8668,10 +8668,10 @@ public string Value { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainersStartupProbeHttpGetHttpHeadersOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|CloudRunV2JobTemplateTemplateContainersStartupProbeHttpGetHttpHeaders InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainersStartupProbeHttpGetHttpHeaders">CloudRunV2JobTemplateTemplateContainersStartupProbeHttpGetHttpHeaders</a>
 
 ---
 
@@ -8886,12 +8886,12 @@ Returns a reversible string representation.
 ##### `PutHttpHeaders` <a name="PutHttpHeaders" id="@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainersStartupProbeHttpGetOutputReference.putHttpHeaders"></a>
 
 ```csharp
-private void PutHttpHeaders(object Value)
+private void PutHttpHeaders(IResolvable|CloudRunV2JobTemplateTemplateContainersStartupProbeHttpGetHttpHeaders[] Value)
 ```
 
 ###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainersStartupProbeHttpGetOutputReference.putHttpHeaders.parameter.value"></a>
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainersStartupProbeHttpGetHttpHeaders">CloudRunV2JobTemplateTemplateContainersStartupProbeHttpGetHttpHeaders</a>[]
 
 ---
 
@@ -8921,7 +8921,7 @@ private void ResetPort()
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainersStartupProbeHttpGetOutputReference.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainersStartupProbeHttpGetOutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainersStartupProbeHttpGetOutputReference.property.httpHeaders">HttpHeaders</a></code> | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainersStartupProbeHttpGetHttpHeadersList">CloudRunV2JobTemplateTemplateContainersStartupProbeHttpGetHttpHeadersList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainersStartupProbeHttpGetOutputReference.property.httpHeadersInput">HttpHeadersInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainersStartupProbeHttpGetOutputReference.property.httpHeadersInput">HttpHeadersInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainersStartupProbeHttpGetHttpHeaders">CloudRunV2JobTemplateTemplateContainersStartupProbeHttpGetHttpHeaders</a>[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainersStartupProbeHttpGetOutputReference.property.pathInput">PathInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainersStartupProbeHttpGetOutputReference.property.portInput">PortInput</a></code> | <code>double</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainersStartupProbeHttpGetOutputReference.property.path">Path</a></code> | <code>string</code> | *No description.* |
@@ -8967,10 +8967,10 @@ public CloudRunV2JobTemplateTemplateContainersStartupProbeHttpGetHttpHeadersList
 ##### `HttpHeadersInput`<sup>Optional</sup> <a name="HttpHeadersInput" id="@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainersStartupProbeHttpGetOutputReference.property.httpHeadersInput"></a>
 
 ```csharp
-public object HttpHeadersInput { get; }
+public IResolvable|CloudRunV2JobTemplateTemplateContainersStartupProbeHttpGetHttpHeaders[] HttpHeadersInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainersStartupProbeHttpGetHttpHeaders">CloudRunV2JobTemplateTemplateContainersStartupProbeHttpGetHttpHeaders</a>[]
 
 ---
 
@@ -9915,7 +9915,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainersVolumeMountsList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainersVolumeMountsList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainersVolumeMountsList.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainersVolumeMountsList.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainersVolumeMounts">CloudRunV2JobTemplateTemplateContainersVolumeMounts</a>[]</code> | *No description.* |
 
 ---
 
@@ -9946,10 +9946,10 @@ public string Fqn { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainersVolumeMountsList.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|CloudRunV2JobTemplateTemplateContainersVolumeMounts[] InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainersVolumeMounts">CloudRunV2JobTemplateTemplateContainersVolumeMounts</a>[]
 
 ---
 
@@ -10186,7 +10186,7 @@ Returns a reversible string representation.
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainersVolumeMountsOutputReference.property.nameInput">NameInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainersVolumeMountsOutputReference.property.mountPath">MountPath</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainersVolumeMountsOutputReference.property.name">Name</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainersVolumeMountsOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainersVolumeMountsOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainersVolumeMounts">CloudRunV2JobTemplateTemplateContainersVolumeMounts</a></code> | *No description.* |
 
 ---
 
@@ -10257,10 +10257,10 @@ public string Name { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainersVolumeMountsOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|CloudRunV2JobTemplateTemplateContainersVolumeMounts InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainersVolumeMounts">CloudRunV2JobTemplateTemplateContainersVolumeMounts</a>
 
 ---
 
@@ -10756,12 +10756,12 @@ Returns a reversible string representation.
 ##### `PutContainers` <a name="PutContainers" id="@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateOutputReference.putContainers"></a>
 
 ```csharp
-private void PutContainers(object Value)
+private void PutContainers(IResolvable|CloudRunV2JobTemplateTemplateContainers[] Value)
 ```
 
 ###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateOutputReference.putContainers.parameter.value"></a>
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainers">CloudRunV2JobTemplateTemplateContainers</a>[]
 
 ---
 
@@ -10780,12 +10780,12 @@ private void PutNodeSelector(CloudRunV2JobTemplateTemplateNodeSelector Value)
 ##### `PutVolumes` <a name="PutVolumes" id="@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateOutputReference.putVolumes"></a>
 
 ```csharp
-private void PutVolumes(object Value)
+private void PutVolumes(IResolvable|CloudRunV2JobTemplateTemplateVolumes[] Value)
 ```
 
 ###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateOutputReference.putVolumes.parameter.value"></a>
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateVolumes">CloudRunV2JobTemplateTemplateVolumes</a>[]
 
 ---
 
@@ -10872,19 +10872,19 @@ private void ResetVpcAccess()
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateOutputReference.property.nodeSelector">NodeSelector</a></code> | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateNodeSelectorOutputReference">CloudRunV2JobTemplateTemplateNodeSelectorOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateOutputReference.property.volumes">Volumes</a></code> | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateVolumesList">CloudRunV2JobTemplateTemplateVolumesList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateOutputReference.property.vpcAccess">VpcAccess</a></code> | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateVpcAccessOutputReference">CloudRunV2JobTemplateTemplateVpcAccessOutputReference</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateOutputReference.property.containersInput">ContainersInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateOutputReference.property.containersInput">ContainersInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainers">CloudRunV2JobTemplateTemplateContainers</a>[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateOutputReference.property.encryptionKeyInput">EncryptionKeyInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateOutputReference.property.executionEnvironmentInput">ExecutionEnvironmentInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateOutputReference.property.gpuZonalRedundancyDisabledInput">GpuZonalRedundancyDisabledInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateOutputReference.property.gpuZonalRedundancyDisabledInput">GpuZonalRedundancyDisabledInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateOutputReference.property.maxRetriesInput">MaxRetriesInput</a></code> | <code>double</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateOutputReference.property.nodeSelectorInput">NodeSelectorInput</a></code> | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateNodeSelector">CloudRunV2JobTemplateTemplateNodeSelector</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateOutputReference.property.serviceAccountInput">ServiceAccountInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateOutputReference.property.timeoutInput">TimeoutInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateOutputReference.property.volumesInput">VolumesInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateOutputReference.property.volumesInput">VolumesInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateVolumes">CloudRunV2JobTemplateTemplateVolumes</a>[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateOutputReference.property.vpcAccessInput">VpcAccessInput</a></code> | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateVpcAccess">CloudRunV2JobTemplateTemplateVpcAccess</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateOutputReference.property.encryptionKey">EncryptionKey</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateOutputReference.property.executionEnvironment">ExecutionEnvironment</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateOutputReference.property.gpuZonalRedundancyDisabled">GpuZonalRedundancyDisabled</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateOutputReference.property.gpuZonalRedundancyDisabled">GpuZonalRedundancyDisabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateOutputReference.property.maxRetries">MaxRetries</a></code> | <code>double</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateOutputReference.property.serviceAccount">ServiceAccount</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateOutputReference.property.timeout">Timeout</a></code> | <code>string</code> | *No description.* |
@@ -10959,10 +10959,10 @@ public CloudRunV2JobTemplateTemplateVpcAccessOutputReference VpcAccess { get; }
 ##### `ContainersInput`<sup>Optional</sup> <a name="ContainersInput" id="@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateOutputReference.property.containersInput"></a>
 
 ```csharp
-public object ContainersInput { get; }
+public IResolvable|CloudRunV2JobTemplateTemplateContainers[] ContainersInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateContainers">CloudRunV2JobTemplateTemplateContainers</a>[]
 
 ---
 
@@ -10989,10 +10989,10 @@ public string ExecutionEnvironmentInput { get; }
 ##### `GpuZonalRedundancyDisabledInput`<sup>Optional</sup> <a name="GpuZonalRedundancyDisabledInput" id="@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateOutputReference.property.gpuZonalRedundancyDisabledInput"></a>
 
 ```csharp
-public object GpuZonalRedundancyDisabledInput { get; }
+public bool|IResolvable GpuZonalRedundancyDisabledInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -11039,10 +11039,10 @@ public string TimeoutInput { get; }
 ##### `VolumesInput`<sup>Optional</sup> <a name="VolumesInput" id="@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateOutputReference.property.volumesInput"></a>
 
 ```csharp
-public object VolumesInput { get; }
+public IResolvable|CloudRunV2JobTemplateTemplateVolumes[] VolumesInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateVolumes">CloudRunV2JobTemplateTemplateVolumes</a>[]
 
 ---
 
@@ -11079,10 +11079,10 @@ public string ExecutionEnvironment { get; }
 ##### `GpuZonalRedundancyDisabled`<sup>Required</sup> <a name="GpuZonalRedundancyDisabled" id="@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateOutputReference.property.gpuZonalRedundancyDisabled"></a>
 
 ```csharp
-public object GpuZonalRedundancyDisabled { get; }
+public bool|IResolvable GpuZonalRedundancyDisabled { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -11930,9 +11930,9 @@ private void ResetReadOnly()
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateVolumesGcsOutputReference.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateVolumesGcsOutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateVolumesGcsOutputReference.property.bucketInput">BucketInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateVolumesGcsOutputReference.property.readOnlyInput">ReadOnlyInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateVolumesGcsOutputReference.property.readOnlyInput">ReadOnlyInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateVolumesGcsOutputReference.property.bucket">Bucket</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateVolumesGcsOutputReference.property.readOnly">ReadOnly</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateVolumesGcsOutputReference.property.readOnly">ReadOnly</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateVolumesGcsOutputReference.property.internalValue">InternalValue</a></code> | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateVolumesGcs">CloudRunV2JobTemplateTemplateVolumesGcs</a></code> | *No description.* |
 
 ---
@@ -11974,10 +11974,10 @@ public string BucketInput { get; }
 ##### `ReadOnlyInput`<sup>Optional</sup> <a name="ReadOnlyInput" id="@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateVolumesGcsOutputReference.property.readOnlyInput"></a>
 
 ```csharp
-public object ReadOnlyInput { get; }
+public bool|IResolvable ReadOnlyInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -11994,10 +11994,10 @@ public string Bucket { get; }
 ##### `ReadOnly`<sup>Required</sup> <a name="ReadOnly" id="@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateVolumesGcsOutputReference.property.readOnly"></a>
 
 ```csharp
-public object ReadOnly { get; }
+public bool|IResolvable ReadOnly { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -12133,7 +12133,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateVolumesList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateVolumesList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateVolumesList.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateVolumesList.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateVolumes">CloudRunV2JobTemplateTemplateVolumes</a>[]</code> | *No description.* |
 
 ---
 
@@ -12164,10 +12164,10 @@ public string Fqn { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateVolumesList.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|CloudRunV2JobTemplateTemplateVolumes[] InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateVolumes">CloudRunV2JobTemplateTemplateVolumes</a>[]
 
 ---
 
@@ -12397,10 +12397,10 @@ private void ResetReadOnly()
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateVolumesNfsOutputReference.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateVolumesNfsOutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateVolumesNfsOutputReference.property.pathInput">PathInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateVolumesNfsOutputReference.property.readOnlyInput">ReadOnlyInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateVolumesNfsOutputReference.property.readOnlyInput">ReadOnlyInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateVolumesNfsOutputReference.property.serverInput">ServerInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateVolumesNfsOutputReference.property.path">Path</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateVolumesNfsOutputReference.property.readOnly">ReadOnly</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateVolumesNfsOutputReference.property.readOnly">ReadOnly</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateVolumesNfsOutputReference.property.server">Server</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateVolumesNfsOutputReference.property.internalValue">InternalValue</a></code> | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateVolumesNfs">CloudRunV2JobTemplateTemplateVolumesNfs</a></code> | *No description.* |
 
@@ -12443,10 +12443,10 @@ public string PathInput { get; }
 ##### `ReadOnlyInput`<sup>Optional</sup> <a name="ReadOnlyInput" id="@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateVolumesNfsOutputReference.property.readOnlyInput"></a>
 
 ```csharp
-public object ReadOnlyInput { get; }
+public bool|IResolvable ReadOnlyInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -12473,10 +12473,10 @@ public string Path { get; }
 ##### `ReadOnly`<sup>Required</sup> <a name="ReadOnly" id="@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateVolumesNfsOutputReference.property.readOnly"></a>
 
 ```csharp
-public object ReadOnly { get; }
+public bool|IResolvable ReadOnly { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -12841,7 +12841,7 @@ private void ResetSecret()
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateVolumesOutputReference.property.nfsInput">NfsInput</a></code> | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateVolumesNfs">CloudRunV2JobTemplateTemplateVolumesNfs</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateVolumesOutputReference.property.secretInput">SecretInput</a></code> | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateVolumesSecret">CloudRunV2JobTemplateTemplateVolumesSecret</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateVolumesOutputReference.property.name">Name</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateVolumesOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateVolumesOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateVolumes">CloudRunV2JobTemplateTemplateVolumes</a></code> | *No description.* |
 
 ---
 
@@ -12992,10 +12992,10 @@ public string Name { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateVolumesOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|CloudRunV2JobTemplateTemplateVolumes InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateVolumes">CloudRunV2JobTemplateTemplateVolumes</a>
 
 ---
 
@@ -13121,7 +13121,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateVolumesSecretItemsList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateVolumesSecretItemsList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateVolumesSecretItemsList.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateVolumesSecretItemsList.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateVolumesSecretItems">CloudRunV2JobTemplateTemplateVolumesSecretItems</a>[]</code> | *No description.* |
 
 ---
 
@@ -13152,10 +13152,10 @@ public string Fqn { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateVolumesSecretItemsList.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|CloudRunV2JobTemplateTemplateVolumesSecretItems[] InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateVolumesSecretItems">CloudRunV2JobTemplateTemplateVolumesSecretItems</a>[]
 
 ---
 
@@ -13401,7 +13401,7 @@ private void ResetMode()
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateVolumesSecretItemsOutputReference.property.mode">Mode</a></code> | <code>double</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateVolumesSecretItemsOutputReference.property.path">Path</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateVolumesSecretItemsOutputReference.property.version">Version</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateVolumesSecretItemsOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateVolumesSecretItemsOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateVolumesSecretItems">CloudRunV2JobTemplateTemplateVolumesSecretItems</a></code> | *No description.* |
 
 ---
 
@@ -13492,10 +13492,10 @@ public string Version { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateVolumesSecretItemsOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|CloudRunV2JobTemplateTemplateVolumesSecretItems InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateVolumesSecretItems">CloudRunV2JobTemplateTemplateVolumesSecretItems</a>
 
 ---
 
@@ -13709,12 +13709,12 @@ Returns a reversible string representation.
 ##### `PutItems` <a name="PutItems" id="@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateVolumesSecretOutputReference.putItems"></a>
 
 ```csharp
-private void PutItems(object Value)
+private void PutItems(IResolvable|CloudRunV2JobTemplateTemplateVolumesSecretItems[] Value)
 ```
 
 ###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateVolumesSecretOutputReference.putItems.parameter.value"></a>
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateVolumesSecretItems">CloudRunV2JobTemplateTemplateVolumesSecretItems</a>[]
 
 ---
 
@@ -13739,7 +13739,7 @@ private void ResetItems()
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateVolumesSecretOutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateVolumesSecretOutputReference.property.items">Items</a></code> | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateVolumesSecretItemsList">CloudRunV2JobTemplateTemplateVolumesSecretItemsList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateVolumesSecretOutputReference.property.defaultModeInput">DefaultModeInput</a></code> | <code>double</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateVolumesSecretOutputReference.property.itemsInput">ItemsInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateVolumesSecretOutputReference.property.itemsInput">ItemsInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateVolumesSecretItems">CloudRunV2JobTemplateTemplateVolumesSecretItems</a>[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateVolumesSecretOutputReference.property.secretInput">SecretInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateVolumesSecretOutputReference.property.defaultMode">DefaultMode</a></code> | <code>double</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateVolumesSecretOutputReference.property.secret">Secret</a></code> | <code>string</code> | *No description.* |
@@ -13794,10 +13794,10 @@ public double DefaultModeInput { get; }
 ##### `ItemsInput`<sup>Optional</sup> <a name="ItemsInput" id="@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateVolumesSecretOutputReference.property.itemsInput"></a>
 
 ```csharp
-public object ItemsInput { get; }
+public IResolvable|CloudRunV2JobTemplateTemplateVolumesSecretItems[] ItemsInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateVolumesSecretItems">CloudRunV2JobTemplateTemplateVolumesSecretItems</a>[]
 
 ---
 
@@ -13963,7 +13963,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateVpcAccessNetworkInterfacesList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateVpcAccessNetworkInterfacesList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateVpcAccessNetworkInterfacesList.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateVpcAccessNetworkInterfacesList.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateVpcAccessNetworkInterfaces">CloudRunV2JobTemplateTemplateVpcAccessNetworkInterfaces</a>[]</code> | *No description.* |
 
 ---
 
@@ -13994,10 +13994,10 @@ public string Fqn { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateVpcAccessNetworkInterfacesList.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|CloudRunV2JobTemplateTemplateVpcAccessNetworkInterfaces[] InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateVpcAccessNetworkInterfaces">CloudRunV2JobTemplateTemplateVpcAccessNetworkInterfaces</a>[]
 
 ---
 
@@ -14257,7 +14257,7 @@ private void ResetTags()
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateVpcAccessNetworkInterfacesOutputReference.property.network">Network</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateVpcAccessNetworkInterfacesOutputReference.property.subnetwork">Subnetwork</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateVpcAccessNetworkInterfacesOutputReference.property.tags">Tags</a></code> | <code>string[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateVpcAccessNetworkInterfacesOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateVpcAccessNetworkInterfacesOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateVpcAccessNetworkInterfaces">CloudRunV2JobTemplateTemplateVpcAccessNetworkInterfaces</a></code> | *No description.* |
 
 ---
 
@@ -14348,10 +14348,10 @@ public string[] Tags { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateVpcAccessNetworkInterfacesOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|CloudRunV2JobTemplateTemplateVpcAccessNetworkInterfaces InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateVpcAccessNetworkInterfaces">CloudRunV2JobTemplateTemplateVpcAccessNetworkInterfaces</a>
 
 ---
 
@@ -14566,12 +14566,12 @@ Returns a reversible string representation.
 ##### `PutNetworkInterfaces` <a name="PutNetworkInterfaces" id="@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateVpcAccessOutputReference.putNetworkInterfaces"></a>
 
 ```csharp
-private void PutNetworkInterfaces(object Value)
+private void PutNetworkInterfaces(IResolvable|CloudRunV2JobTemplateTemplateVpcAccessNetworkInterfaces[] Value)
 ```
 
 ###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateVpcAccessOutputReference.putNetworkInterfaces.parameter.value"></a>
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateVpcAccessNetworkInterfaces">CloudRunV2JobTemplateTemplateVpcAccessNetworkInterfaces</a>[]
 
 ---
 
@@ -14603,7 +14603,7 @@ private void ResetNetworkInterfaces()
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateVpcAccessOutputReference.property.networkInterfaces">NetworkInterfaces</a></code> | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateVpcAccessNetworkInterfacesList">CloudRunV2JobTemplateTemplateVpcAccessNetworkInterfacesList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateVpcAccessOutputReference.property.connectorInput">ConnectorInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateVpcAccessOutputReference.property.egressInput">EgressInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateVpcAccessOutputReference.property.networkInterfacesInput">NetworkInterfacesInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateVpcAccessOutputReference.property.networkInterfacesInput">NetworkInterfacesInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateVpcAccessNetworkInterfaces">CloudRunV2JobTemplateTemplateVpcAccessNetworkInterfaces</a>[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateVpcAccessOutputReference.property.connector">Connector</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateVpcAccessOutputReference.property.egress">Egress</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateVpcAccessOutputReference.property.internalValue">InternalValue</a></code> | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateVpcAccess">CloudRunV2JobTemplateTemplateVpcAccess</a></code> | *No description.* |
@@ -14667,10 +14667,10 @@ public string EgressInput { get; }
 ##### `NetworkInterfacesInput`<sup>Optional</sup> <a name="NetworkInterfacesInput" id="@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateVpcAccessOutputReference.property.networkInterfacesInput"></a>
 
 ```csharp
-public object NetworkInterfacesInput { get; }
+public IResolvable|CloudRunV2JobTemplateTemplateVpcAccessNetworkInterfaces[] NetworkInterfacesInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTemplateTemplateVpcAccessNetworkInterfaces">CloudRunV2JobTemplateTemplateVpcAccessNetworkInterfaces</a>[]
 
 ---
 
@@ -15446,7 +15446,7 @@ private void ResetUpdate()
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTimeoutsOutputReference.property.create">Create</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTimeoutsOutputReference.property.delete">Delete</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTimeoutsOutputReference.property.update">Update</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTimeoutsOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTimeoutsOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTimeouts">CloudRunV2JobTimeouts</a></code> | *No description.* |
 
 ---
 
@@ -15537,10 +15537,10 @@ public string Update { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTimeoutsOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|CloudRunV2JobTimeouts InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTimeouts">CloudRunV2JobTimeouts</a>
 
 ---
 

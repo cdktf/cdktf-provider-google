@@ -287,7 +287,7 @@ private System.Collections.Generic.IDictionary<string, string> GetStringMapAttri
 ##### `HasResourceMove` <a name="HasResourceMove" id="@cdktf/provider-google.datastreamStream.DatastreamStream.hasResourceMove"></a>
 
 ```csharp
-private object HasResourceMove()
+private TerraformResourceMoveByTarget|TerraformResourceMoveById HasResourceMove()
 ```
 
 ##### `ImportFrom` <a name="ImportFrom" id="@cdktf/provider-google.datastreamStream.DatastreamStream.importFrom"></a>
@@ -341,7 +341,7 @@ Full id of resource being moved from, e.g. "aws_s3_bucket.example".
 ##### `MoveTo` <a name="MoveTo" id="@cdktf/provider-google.datastreamStream.DatastreamStream.moveTo"></a>
 
 ```csharp
-private void MoveTo(string MoveTarget, object Index = null)
+private void MoveTo(string MoveTarget, string|double Index = null)
 ```
 
 Moves this resource to the target resource given by moveTarget.
@@ -356,7 +356,7 @@ The previously set user defined string set by .addMoveTarget() corresponding to 
 
 ###### `Index`<sup>Optional</sup> <a name="Index" id="@cdktf/provider-google.datastreamStream.DatastreamStream.moveTo.parameter.index"></a>
 
-- *Type:* object
+- *Type:* string|double
 
 Optional The index corresponding to the key the resource is to appear in the foreach of a resource to move to.
 
@@ -618,13 +618,13 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.5
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStream.property.terraformMetaArguments">TerraformMetaArguments</a></code> | <code>System.Collections.Generic.IDictionary<string, object></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStream.property.terraformResourceType">TerraformResourceType</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStream.property.terraformGeneratorMetadata">TerraformGeneratorMetadata</a></code> | <code>HashiCorp.Cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStream.property.connection">Connection</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStream.property.count">Count</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStream.property.connection">Connection</a></code> | <code>HashiCorp.Cdktf.SSHProvisionerConnection\|HashiCorp.Cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStream.property.count">Count</a></code> | <code>double\|HashiCorp.Cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStream.property.dependsOn">DependsOn</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStream.property.forEach">ForEach</a></code> | <code>HashiCorp.Cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStream.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStream.property.provider">Provider</a></code> | <code>HashiCorp.Cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStream.property.provisioners">Provisioners</a></code> | <code>object[]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStream.property.provisioners">Provisioners</a></code> | <code>HashiCorp.Cdktf.FileProvisioner\|HashiCorp.Cdktf.LocalExecProvisioner\|HashiCorp.Cdktf.RemoteExecProvisioner[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStream.property.backfillAll">BackfillAll</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOutputReference">DatastreamStreamBackfillAllOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStream.property.backfillNone">BackfillNone</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillNoneOutputReference">DatastreamStreamBackfillNoneOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStream.property.destinationConfig">DestinationConfig</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamDestinationConfigOutputReference">DatastreamStreamDestinationConfigOutputReference</a></code> | *No description.* |
@@ -636,7 +636,7 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.5
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStream.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamTimeoutsOutputReference">DatastreamStreamTimeoutsOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStream.property.backfillAllInput">BackfillAllInput</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAll">DatastreamStreamBackfillAll</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStream.property.backfillNoneInput">BackfillNoneInput</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillNone">DatastreamStreamBackfillNone</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStream.property.createWithoutValidationInput">CreateWithoutValidationInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStream.property.createWithoutValidationInput">CreateWithoutValidationInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStream.property.customerManagedEncryptionKeyInput">CustomerManagedEncryptionKeyInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStream.property.desiredStateInput">DesiredStateInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStream.property.destinationConfigInput">DestinationConfigInput</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamDestinationConfig">DatastreamStreamDestinationConfig</a></code> | *No description.* |
@@ -647,8 +647,8 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.5
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStream.property.projectInput">ProjectInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStream.property.sourceConfigInput">SourceConfigInput</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfig">DatastreamStreamSourceConfig</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStream.property.streamIdInput">StreamIdInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStream.property.timeoutsInput">TimeoutsInput</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStream.property.createWithoutValidation">CreateWithoutValidation</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStream.property.timeoutsInput">TimeoutsInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamTimeouts">DatastreamStreamTimeouts</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStream.property.createWithoutValidation">CreateWithoutValidation</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStream.property.customerManagedEncryptionKey">CustomerManagedEncryptionKey</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStream.property.desiredState">DesiredState</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStream.property.displayName">DisplayName</a></code> | <code>string</code> | *No description.* |
@@ -735,20 +735,20 @@ public TerraformProviderGeneratorMetadata TerraformGeneratorMetadata { get; }
 ##### `Connection`<sup>Optional</sup> <a name="Connection" id="@cdktf/provider-google.datastreamStream.DatastreamStream.property.connection"></a>
 
 ```csharp
-public object Connection { get; }
+public SSHProvisionerConnection|WinrmProvisionerConnection Connection { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.SSHProvisionerConnection|HashiCorp.Cdktf.WinrmProvisionerConnection
 
 ---
 
 ##### `Count`<sup>Optional</sup> <a name="Count" id="@cdktf/provider-google.datastreamStream.DatastreamStream.property.count"></a>
 
 ```csharp
-public object Count { get; }
+public double|TerraformCount Count { get; }
 ```
 
-- *Type:* object
+- *Type:* double|HashiCorp.Cdktf.TerraformCount
 
 ---
 
@@ -795,10 +795,10 @@ public TerraformProvider Provider { get; }
 ##### `Provisioners`<sup>Optional</sup> <a name="Provisioners" id="@cdktf/provider-google.datastreamStream.DatastreamStream.property.provisioners"></a>
 
 ```csharp
-public object[] Provisioners { get; }
+public (FileProvisioner|LocalExecProvisioner|RemoteExecProvisioner)[] Provisioners { get; }
 ```
 
-- *Type:* object[]
+- *Type:* HashiCorp.Cdktf.FileProvisioner|HashiCorp.Cdktf.LocalExecProvisioner|HashiCorp.Cdktf.RemoteExecProvisioner[]
 
 ---
 
@@ -915,10 +915,10 @@ public DatastreamStreamBackfillNone BackfillNoneInput { get; }
 ##### `CreateWithoutValidationInput`<sup>Optional</sup> <a name="CreateWithoutValidationInput" id="@cdktf/provider-google.datastreamStream.DatastreamStream.property.createWithoutValidationInput"></a>
 
 ```csharp
-public object CreateWithoutValidationInput { get; }
+public bool|IResolvable CreateWithoutValidationInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -1025,20 +1025,20 @@ public string StreamIdInput { get; }
 ##### `TimeoutsInput`<sup>Optional</sup> <a name="TimeoutsInput" id="@cdktf/provider-google.datastreamStream.DatastreamStream.property.timeoutsInput"></a>
 
 ```csharp
-public object TimeoutsInput { get; }
+public IResolvable|DatastreamStreamTimeouts TimeoutsInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamTimeouts">DatastreamStreamTimeouts</a>
 
 ---
 
 ##### `CreateWithoutValidation`<sup>Required</sup> <a name="CreateWithoutValidation" id="@cdktf/provider-google.datastreamStream.DatastreamStream.property.createWithoutValidation"></a>
 
 ```csharp
-public object CreateWithoutValidation { get; }
+public bool|IResolvable CreateWithoutValidation { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -1248,7 +1248,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 using HashiCorp.Cdktf.Providers.Google;
 
 new DatastreamStreamBackfillAllMysqlExcludedObjects {
-    object MysqlDatabases
+    IResolvable|DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabases[] MysqlDatabases
 };
 ```
 
@@ -1256,17 +1256,17 @@ new DatastreamStreamBackfillAllMysqlExcludedObjects {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjects.property.mysqlDatabases">MysqlDatabases</a></code> | <code>object</code> | mysql_databases block. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjects.property.mysqlDatabases">MysqlDatabases</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabases">DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabases</a>[]</code> | mysql_databases block. |
 
 ---
 
 ##### `MysqlDatabases`<sup>Required</sup> <a name="MysqlDatabases" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjects.property.mysqlDatabases"></a>
 
 ```csharp
-public object MysqlDatabases { get; set; }
+public IResolvable|DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabases[] MysqlDatabases { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabases">DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabases</a>[]
 
 mysql_databases block.
 
@@ -1283,7 +1283,7 @@ using HashiCorp.Cdktf.Providers.Google;
 
 new DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabases {
     string Database,
-    object MysqlTables = null
+    IResolvable|DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTables[] MysqlTables = null
 };
 ```
 
@@ -1292,7 +1292,7 @@ new DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabases {
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabases.property.database">Database</a></code> | <code>string</code> | Database name. |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabases.property.mysqlTables">MysqlTables</a></code> | <code>object</code> | mysql_tables block. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabases.property.mysqlTables">MysqlTables</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTables">DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTables</a>[]</code> | mysql_tables block. |
 
 ---
 
@@ -1313,10 +1313,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `MysqlTables`<sup>Optional</sup> <a name="MysqlTables" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabases.property.mysqlTables"></a>
 
 ```csharp
-public object MysqlTables { get; set; }
+public IResolvable|DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTables[] MysqlTables { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTables">DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTables</a>[]
 
 mysql_tables block.
 
@@ -1333,7 +1333,7 @@ using HashiCorp.Cdktf.Providers.Google;
 
 new DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTables {
     string Table,
-    object MysqlColumns = null
+    IResolvable|DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns[] MysqlColumns = null
 };
 ```
 
@@ -1342,7 +1342,7 @@ new DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTables {
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTables.property.table">Table</a></code> | <code>string</code> | Table name. |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTables.property.mysqlColumns">MysqlColumns</a></code> | <code>object</code> | mysql_columns block. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTables.property.mysqlColumns">MysqlColumns</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns">DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns</a>[]</code> | mysql_columns block. |
 
 ---
 
@@ -1363,10 +1363,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `MysqlColumns`<sup>Optional</sup> <a name="MysqlColumns" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTables.property.mysqlColumns"></a>
 
 ```csharp
-public object MysqlColumns { get; set; }
+public IResolvable|DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns[] MysqlColumns { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns">DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns</a>[]
 
 mysql_columns block.
 
@@ -1385,9 +1385,9 @@ new DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysq
     string Collation = null,
     string Column = null,
     string DataType = null,
-    object Nullable = null,
+    bool|IResolvable Nullable = null,
     double OrdinalPosition = null,
-    object PrimaryKey = null
+    bool|IResolvable PrimaryKey = null
 };
 ```
 
@@ -1398,9 +1398,9 @@ new DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysq
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns.property.collation">Collation</a></code> | <code>string</code> | Column collation. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns.property.column">Column</a></code> | <code>string</code> | Column name. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns.property.dataType">DataType</a></code> | <code>string</code> | The MySQL data type. Full data types list can be found here: https://dev.mysql.com/doc/refman/8.0/en/data-types.html. |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns.property.nullable">Nullable</a></code> | <code>object</code> | Whether or not the column can accept a null value. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns.property.nullable">Nullable</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Whether or not the column can accept a null value. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns.property.ordinalPosition">OrdinalPosition</a></code> | <code>double</code> | The ordinal position of the column in the table. |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns.property.primaryKey">PrimaryKey</a></code> | <code>object</code> | Whether or not the column represents a primary key. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns.property.primaryKey">PrimaryKey</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Whether or not the column represents a primary key. |
 
 ---
 
@@ -1449,10 +1449,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `Nullable`<sup>Optional</sup> <a name="Nullable" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns.property.nullable"></a>
 
 ```csharp
-public object Nullable { get; set; }
+public bool|IResolvable Nullable { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Whether or not the column can accept a null value.
 
@@ -1477,10 +1477,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `PrimaryKey`<sup>Optional</sup> <a name="PrimaryKey" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns.property.primaryKey"></a>
 
 ```csharp
-public object PrimaryKey { get; set; }
+public bool|IResolvable PrimaryKey { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Whether or not the column represents a primary key.
 
@@ -1496,7 +1496,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 using HashiCorp.Cdktf.Providers.Google;
 
 new DatastreamStreamBackfillAllOracleExcludedObjects {
-    object OracleSchemas
+    IResolvable|DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemas[] OracleSchemas
 };
 ```
 
@@ -1504,17 +1504,17 @@ new DatastreamStreamBackfillAllOracleExcludedObjects {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjects.property.oracleSchemas">OracleSchemas</a></code> | <code>object</code> | oracle_schemas block. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjects.property.oracleSchemas">OracleSchemas</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemas">DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemas</a>[]</code> | oracle_schemas block. |
 
 ---
 
 ##### `OracleSchemas`<sup>Required</sup> <a name="OracleSchemas" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjects.property.oracleSchemas"></a>
 
 ```csharp
-public object OracleSchemas { get; set; }
+public IResolvable|DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemas[] OracleSchemas { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemas">DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemas</a>[]
 
 oracle_schemas block.
 
@@ -1531,7 +1531,7 @@ using HashiCorp.Cdktf.Providers.Google;
 
 new DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemas {
     string Schema,
-    object OracleTables = null
+    IResolvable|DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTables[] OracleTables = null
 };
 ```
 
@@ -1540,7 +1540,7 @@ new DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemas {
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemas.property.schema">Schema</a></code> | <code>string</code> | Schema name. |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemas.property.oracleTables">OracleTables</a></code> | <code>object</code> | oracle_tables block. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemas.property.oracleTables">OracleTables</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTables">DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTables</a>[]</code> | oracle_tables block. |
 
 ---
 
@@ -1561,10 +1561,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `OracleTables`<sup>Optional</sup> <a name="OracleTables" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemas.property.oracleTables"></a>
 
 ```csharp
-public object OracleTables { get; set; }
+public IResolvable|DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTables[] OracleTables { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTables">DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTables</a>[]
 
 oracle_tables block.
 
@@ -1581,7 +1581,7 @@ using HashiCorp.Cdktf.Providers.Google;
 
 new DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTables {
     string Table,
-    object OracleColumns = null
+    IResolvable|DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumns[] OracleColumns = null
 };
 ```
 
@@ -1590,7 +1590,7 @@ new DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTables {
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTables.property.table">Table</a></code> | <code>string</code> | Table name. |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTables.property.oracleColumns">OracleColumns</a></code> | <code>object</code> | oracle_columns block. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTables.property.oracleColumns">OracleColumns</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumns">DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumns</a>[]</code> | oracle_columns block. |
 
 ---
 
@@ -1611,10 +1611,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `OracleColumns`<sup>Optional</sup> <a name="OracleColumns" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTables.property.oracleColumns"></a>
 
 ```csharp
-public object OracleColumns { get; set; }
+public IResolvable|DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumns[] OracleColumns { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumns">DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumns</a>[]
 
 oracle_columns block.
 
@@ -1680,7 +1680,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 using HashiCorp.Cdktf.Providers.Google;
 
 new DatastreamStreamBackfillAllPostgresqlExcludedObjects {
-    object PostgresqlSchemas
+    IResolvable|DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas[] PostgresqlSchemas
 };
 ```
 
@@ -1688,17 +1688,17 @@ new DatastreamStreamBackfillAllPostgresqlExcludedObjects {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjects.property.postgresqlSchemas">PostgresqlSchemas</a></code> | <code>object</code> | postgresql_schemas block. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjects.property.postgresqlSchemas">PostgresqlSchemas</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas">DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas</a>[]</code> | postgresql_schemas block. |
 
 ---
 
 ##### `PostgresqlSchemas`<sup>Required</sup> <a name="PostgresqlSchemas" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjects.property.postgresqlSchemas"></a>
 
 ```csharp
-public object PostgresqlSchemas { get; set; }
+public IResolvable|DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas[] PostgresqlSchemas { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas">DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas</a>[]
 
 postgresql_schemas block.
 
@@ -1715,7 +1715,7 @@ using HashiCorp.Cdktf.Providers.Google;
 
 new DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas {
     string Schema,
-    object PostgresqlTables = null
+    IResolvable|DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTables[] PostgresqlTables = null
 };
 ```
 
@@ -1724,7 +1724,7 @@ new DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas {
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas.property.schema">Schema</a></code> | <code>string</code> | Database name. |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas.property.postgresqlTables">PostgresqlTables</a></code> | <code>object</code> | postgresql_tables block. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas.property.postgresqlTables">PostgresqlTables</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTables">DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTables</a>[]</code> | postgresql_tables block. |
 
 ---
 
@@ -1745,10 +1745,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `PostgresqlTables`<sup>Optional</sup> <a name="PostgresqlTables" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas.property.postgresqlTables"></a>
 
 ```csharp
-public object PostgresqlTables { get; set; }
+public IResolvable|DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTables[] PostgresqlTables { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTables">DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTables</a>[]
 
 postgresql_tables block.
 
@@ -1765,7 +1765,7 @@ using HashiCorp.Cdktf.Providers.Google;
 
 new DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTables {
     string Table,
-    object PostgresqlColumns = null
+    IResolvable|DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns[] PostgresqlColumns = null
 };
 ```
 
@@ -1774,7 +1774,7 @@ new DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgre
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTables.property.table">Table</a></code> | <code>string</code> | Table name. |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTables.property.postgresqlColumns">PostgresqlColumns</a></code> | <code>object</code> | postgresql_columns block. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTables.property.postgresqlColumns">PostgresqlColumns</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns">DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns</a>[]</code> | postgresql_columns block. |
 
 ---
 
@@ -1795,10 +1795,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `PostgresqlColumns`<sup>Optional</sup> <a name="PostgresqlColumns" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTables.property.postgresqlColumns"></a>
 
 ```csharp
-public object PostgresqlColumns { get; set; }
+public IResolvable|DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns[] PostgresqlColumns { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns">DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns</a>[]
 
 postgresql_columns block.
 
@@ -1816,9 +1816,9 @@ using HashiCorp.Cdktf.Providers.Google;
 new DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns {
     string Column = null,
     string DataType = null,
-    object Nullable = null,
+    bool|IResolvable Nullable = null,
     double OrdinalPosition = null,
-    object PrimaryKey = null
+    bool|IResolvable PrimaryKey = null
 };
 ```
 
@@ -1828,9 +1828,9 @@ new DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgre
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns.property.column">Column</a></code> | <code>string</code> | Column name. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns.property.dataType">DataType</a></code> | <code>string</code> | The PostgreSQL data type. Full data types list can be found here: https://www.postgresql.org/docs/current/datatype.html. |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns.property.nullable">Nullable</a></code> | <code>object</code> | Whether or not the column can accept a null value. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns.property.nullable">Nullable</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Whether or not the column can accept a null value. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns.property.ordinalPosition">OrdinalPosition</a></code> | <code>double</code> | The ordinal position of the column in the table. |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns.property.primaryKey">PrimaryKey</a></code> | <code>object</code> | Whether or not the column represents a primary key. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns.property.primaryKey">PrimaryKey</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Whether or not the column represents a primary key. |
 
 ---
 
@@ -1865,10 +1865,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `Nullable`<sup>Optional</sup> <a name="Nullable" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns.property.nullable"></a>
 
 ```csharp
-public object Nullable { get; set; }
+public bool|IResolvable Nullable { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Whether or not the column can accept a null value.
 
@@ -1893,10 +1893,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `PrimaryKey`<sup>Optional</sup> <a name="PrimaryKey" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns.property.primaryKey"></a>
 
 ```csharp
-public object PrimaryKey { get; set; }
+public bool|IResolvable PrimaryKey { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Whether or not the column represents a primary key.
 
@@ -1912,7 +1912,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 using HashiCorp.Cdktf.Providers.Google;
 
 new DatastreamStreamBackfillAllSalesforceExcludedObjects {
-    object Objects
+    IResolvable|DatastreamStreamBackfillAllSalesforceExcludedObjectsObjects[] Objects
 };
 ```
 
@@ -1920,17 +1920,17 @@ new DatastreamStreamBackfillAllSalesforceExcludedObjects {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjects.property.objects">Objects</a></code> | <code>object</code> | objects block. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjects.property.objects">Objects</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjects">DatastreamStreamBackfillAllSalesforceExcludedObjectsObjects</a>[]</code> | objects block. |
 
 ---
 
 ##### `Objects`<sup>Required</sup> <a name="Objects" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjects.property.objects"></a>
 
 ```csharp
-public object Objects { get; set; }
+public IResolvable|DatastreamStreamBackfillAllSalesforceExcludedObjectsObjects[] Objects { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjects">DatastreamStreamBackfillAllSalesforceExcludedObjectsObjects</a>[]
 
 objects block.
 
@@ -1946,7 +1946,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 using HashiCorp.Cdktf.Providers.Google;
 
 new DatastreamStreamBackfillAllSalesforceExcludedObjectsObjects {
-    object Fields = null,
+    IResolvable|DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFields[] Fields = null,
     string ObjectName = null
 };
 ```
@@ -1955,7 +1955,7 @@ new DatastreamStreamBackfillAllSalesforceExcludedObjectsObjects {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjects.property.fields">Fields</a></code> | <code>object</code> | fields block. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjects.property.fields">Fields</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFields">DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFields</a>[]</code> | fields block. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjects.property.objectName">ObjectName</a></code> | <code>string</code> | Name of object in Salesforce Org. |
 
 ---
@@ -1963,10 +1963,10 @@ new DatastreamStreamBackfillAllSalesforceExcludedObjectsObjects {
 ##### `Fields`<sup>Optional</sup> <a name="Fields" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjects.property.fields"></a>
 
 ```csharp
-public object Fields { get; set; }
+public IResolvable|DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFields[] Fields { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFields">DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFields</a>[]
 
 fields block.
 
@@ -2030,7 +2030,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 using HashiCorp.Cdktf.Providers.Google;
 
 new DatastreamStreamBackfillAllSqlServerExcludedObjects {
-    object Schemas
+    IResolvable|DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemas[] Schemas
 };
 ```
 
@@ -2038,17 +2038,17 @@ new DatastreamStreamBackfillAllSqlServerExcludedObjects {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjects.property.schemas">Schemas</a></code> | <code>object</code> | schemas block. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjects.property.schemas">Schemas</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemas">DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemas</a>[]</code> | schemas block. |
 
 ---
 
 ##### `Schemas`<sup>Required</sup> <a name="Schemas" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjects.property.schemas"></a>
 
 ```csharp
-public object Schemas { get; set; }
+public IResolvable|DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemas[] Schemas { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemas">DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemas</a>[]
 
 schemas block.
 
@@ -2065,7 +2065,7 @@ using HashiCorp.Cdktf.Providers.Google;
 
 new DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemas {
     string Schema,
-    object Tables = null
+    IResolvable|DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTables[] Tables = null
 };
 ```
 
@@ -2074,7 +2074,7 @@ new DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemas {
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemas.property.schema">Schema</a></code> | <code>string</code> | Schema name. |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemas.property.tables">Tables</a></code> | <code>object</code> | tables block. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemas.property.tables">Tables</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTables">DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTables</a>[]</code> | tables block. |
 
 ---
 
@@ -2095,10 +2095,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `Tables`<sup>Optional</sup> <a name="Tables" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemas.property.tables"></a>
 
 ```csharp
-public object Tables { get; set; }
+public IResolvable|DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTables[] Tables { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTables">DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTables</a>[]
 
 tables block.
 
@@ -2115,7 +2115,7 @@ using HashiCorp.Cdktf.Providers.Google;
 
 new DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTables {
     string Table,
-    object Columns = null
+    IResolvable|DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumns[] Columns = null
 };
 ```
 
@@ -2124,7 +2124,7 @@ new DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTables {
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTables.property.table">Table</a></code> | <code>string</code> | Table name. |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTables.property.columns">Columns</a></code> | <code>object</code> | columns block. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTables.property.columns">Columns</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumns">DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumns</a>[]</code> | columns block. |
 
 ---
 
@@ -2145,10 +2145,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `Columns`<sup>Optional</sup> <a name="Columns" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTables.property.columns"></a>
 
 ```csharp
-public object Columns { get; set; }
+public IResolvable|DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumns[] Columns { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumns">DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumns</a>[]
 
 columns block.
 
@@ -2227,13 +2227,13 @@ new DatastreamStreamBackfillNone {
 using HashiCorp.Cdktf.Providers.Google;
 
 new DatastreamStreamConfig {
-    object Connection = null,
-    object Count = null,
+    SSHProvisionerConnection|WinrmProvisionerConnection Connection = null,
+    double|TerraformCount Count = null,
     ITerraformDependable[] DependsOn = null,
     ITerraformIterator ForEach = null,
     TerraformResourceLifecycle Lifecycle = null,
     TerraformProvider Provider = null,
-    object[] Provisioners = null,
+    (FileProvisioner|LocalExecProvisioner|RemoteExecProvisioner)[] Provisioners = null,
     DatastreamStreamDestinationConfig DestinationConfig,
     string DisplayName,
     string Location,
@@ -2241,7 +2241,7 @@ new DatastreamStreamConfig {
     string StreamId,
     DatastreamStreamBackfillAll BackfillAll = null,
     DatastreamStreamBackfillNone BackfillNone = null,
-    object CreateWithoutValidation = null,
+    bool|IResolvable CreateWithoutValidation = null,
     string CustomerManagedEncryptionKey = null,
     string DesiredState = null,
     string Id = null,
@@ -2255,13 +2255,13 @@ new DatastreamStreamConfig {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamConfig.property.connection">Connection</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamConfig.property.count">Count</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamConfig.property.connection">Connection</a></code> | <code>HashiCorp.Cdktf.SSHProvisionerConnection\|HashiCorp.Cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamConfig.property.count">Count</a></code> | <code>double\|HashiCorp.Cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamConfig.property.dependsOn">DependsOn</a></code> | <code>HashiCorp.Cdktf.ITerraformDependable[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamConfig.property.forEach">ForEach</a></code> | <code>HashiCorp.Cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamConfig.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamConfig.property.provider">Provider</a></code> | <code>HashiCorp.Cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamConfig.property.provisioners">Provisioners</a></code> | <code>object[]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamConfig.property.provisioners">Provisioners</a></code> | <code>HashiCorp.Cdktf.FileProvisioner\|HashiCorp.Cdktf.LocalExecProvisioner\|HashiCorp.Cdktf.RemoteExecProvisioner[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamConfig.property.destinationConfig">DestinationConfig</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamDestinationConfig">DatastreamStreamDestinationConfig</a></code> | destination_config block. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamConfig.property.displayName">DisplayName</a></code> | <code>string</code> | Display name. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamConfig.property.location">Location</a></code> | <code>string</code> | The name of the location this stream is located in. |
@@ -2269,7 +2269,7 @@ new DatastreamStreamConfig {
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamConfig.property.streamId">StreamId</a></code> | <code>string</code> | The stream identifier. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamConfig.property.backfillAll">BackfillAll</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAll">DatastreamStreamBackfillAll</a></code> | backfill_all block. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamConfig.property.backfillNone">BackfillNone</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillNone">DatastreamStreamBackfillNone</a></code> | backfill_none block. |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamConfig.property.createWithoutValidation">CreateWithoutValidation</a></code> | <code>object</code> | Create the stream without validating it. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamConfig.property.createWithoutValidation">CreateWithoutValidation</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Create the stream without validating it. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamConfig.property.customerManagedEncryptionKey">CustomerManagedEncryptionKey</a></code> | <code>string</code> | A reference to a KMS encryption key. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamConfig.property.desiredState">DesiredState</a></code> | <code>string</code> | Desired state of the Stream. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/datastream_stream#id DatastreamStream#id}. |
@@ -2282,20 +2282,20 @@ new DatastreamStreamConfig {
 ##### `Connection`<sup>Optional</sup> <a name="Connection" id="@cdktf/provider-google.datastreamStream.DatastreamStreamConfig.property.connection"></a>
 
 ```csharp
-public object Connection { get; set; }
+public SSHProvisionerConnection|WinrmProvisionerConnection Connection { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.SSHProvisionerConnection|HashiCorp.Cdktf.WinrmProvisionerConnection
 
 ---
 
 ##### `Count`<sup>Optional</sup> <a name="Count" id="@cdktf/provider-google.datastreamStream.DatastreamStreamConfig.property.count"></a>
 
 ```csharp
-public object Count { get; set; }
+public double|TerraformCount Count { get; set; }
 ```
 
-- *Type:* object
+- *Type:* double|HashiCorp.Cdktf.TerraformCount
 
 ---
 
@@ -2342,10 +2342,10 @@ public TerraformProvider Provider { get; set; }
 ##### `Provisioners`<sup>Optional</sup> <a name="Provisioners" id="@cdktf/provider-google.datastreamStream.DatastreamStreamConfig.property.provisioners"></a>
 
 ```csharp
-public object[] Provisioners { get; set; }
+public (FileProvisioner|LocalExecProvisioner|RemoteExecProvisioner)[] Provisioners { get; set; }
 ```
 
-- *Type:* object[]
+- *Type:* HashiCorp.Cdktf.FileProvisioner|HashiCorp.Cdktf.LocalExecProvisioner|HashiCorp.Cdktf.RemoteExecProvisioner[]
 
 ---
 
@@ -2450,10 +2450,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `CreateWithoutValidation`<sup>Optional</sup> <a name="CreateWithoutValidation" id="@cdktf/provider-google.datastreamStream.DatastreamStreamConfig.property.createWithoutValidation"></a>
 
 ```csharp
-public object CreateWithoutValidation { get; set; }
+public bool|IResolvable CreateWithoutValidation { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Create the stream without validating it.
 
@@ -3421,7 +3421,7 @@ new DatastreamStreamSourceConfigMysqlSourceConfigBinaryLogPosition {
 using HashiCorp.Cdktf.Providers.Google;
 
 new DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjects {
-    object MysqlDatabases
+    IResolvable|DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases[] MysqlDatabases
 };
 ```
 
@@ -3429,17 +3429,17 @@ new DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjects {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjects.property.mysqlDatabases">MysqlDatabases</a></code> | <code>object</code> | mysql_databases block. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjects.property.mysqlDatabases">MysqlDatabases</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases">DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases</a>[]</code> | mysql_databases block. |
 
 ---
 
 ##### `MysqlDatabases`<sup>Required</sup> <a name="MysqlDatabases" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjects.property.mysqlDatabases"></a>
 
 ```csharp
-public object MysqlDatabases { get; set; }
+public IResolvable|DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases[] MysqlDatabases { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases">DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases</a>[]
 
 mysql_databases block.
 
@@ -3456,7 +3456,7 @@ using HashiCorp.Cdktf.Providers.Google;
 
 new DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases {
     string Database,
-    object MysqlTables = null
+    IResolvable|DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTables[] MysqlTables = null
 };
 ```
 
@@ -3465,7 +3465,7 @@ new DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases {
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases.property.database">Database</a></code> | <code>string</code> | Database name. |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases.property.mysqlTables">MysqlTables</a></code> | <code>object</code> | mysql_tables block. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases.property.mysqlTables">MysqlTables</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTables">DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTables</a>[]</code> | mysql_tables block. |
 
 ---
 
@@ -3486,10 +3486,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `MysqlTables`<sup>Optional</sup> <a name="MysqlTables" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases.property.mysqlTables"></a>
 
 ```csharp
-public object MysqlTables { get; set; }
+public IResolvable|DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTables[] MysqlTables { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTables">DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTables</a>[]
 
 mysql_tables block.
 
@@ -3506,7 +3506,7 @@ using HashiCorp.Cdktf.Providers.Google;
 
 new DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTables {
     string Table,
-    object MysqlColumns = null
+    IResolvable|DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns[] MysqlColumns = null
 };
 ```
 
@@ -3515,7 +3515,7 @@ new DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMys
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTables.property.table">Table</a></code> | <code>string</code> | Table name. |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTables.property.mysqlColumns">MysqlColumns</a></code> | <code>object</code> | mysql_columns block. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTables.property.mysqlColumns">MysqlColumns</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns">DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns</a>[]</code> | mysql_columns block. |
 
 ---
 
@@ -3536,10 +3536,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `MysqlColumns`<sup>Optional</sup> <a name="MysqlColumns" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTables.property.mysqlColumns"></a>
 
 ```csharp
-public object MysqlColumns { get; set; }
+public IResolvable|DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns[] MysqlColumns { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns">DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns</a>[]
 
 mysql_columns block.
 
@@ -3558,9 +3558,9 @@ new DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMys
     string Collation = null,
     string Column = null,
     string DataType = null,
-    object Nullable = null,
+    bool|IResolvable Nullable = null,
     double OrdinalPosition = null,
-    object PrimaryKey = null
+    bool|IResolvable PrimaryKey = null
 };
 ```
 
@@ -3571,9 +3571,9 @@ new DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMys
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns.property.collation">Collation</a></code> | <code>string</code> | Column collation. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns.property.column">Column</a></code> | <code>string</code> | Column name. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns.property.dataType">DataType</a></code> | <code>string</code> | The MySQL data type. Full data types list can be found here: https://dev.mysql.com/doc/refman/8.0/en/data-types.html. |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns.property.nullable">Nullable</a></code> | <code>object</code> | Whether or not the column can accept a null value. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns.property.nullable">Nullable</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Whether or not the column can accept a null value. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns.property.ordinalPosition">OrdinalPosition</a></code> | <code>double</code> | The ordinal position of the column in the table. |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns.property.primaryKey">PrimaryKey</a></code> | <code>object</code> | Whether or not the column represents a primary key. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns.property.primaryKey">PrimaryKey</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Whether or not the column represents a primary key. |
 
 ---
 
@@ -3622,10 +3622,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `Nullable`<sup>Optional</sup> <a name="Nullable" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns.property.nullable"></a>
 
 ```csharp
-public object Nullable { get; set; }
+public bool|IResolvable Nullable { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Whether or not the column can accept a null value.
 
@@ -3650,10 +3650,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `PrimaryKey`<sup>Optional</sup> <a name="PrimaryKey" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns.property.primaryKey"></a>
 
 ```csharp
-public object PrimaryKey { get; set; }
+public bool|IResolvable PrimaryKey { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Whether or not the column represents a primary key.
 
@@ -3682,7 +3682,7 @@ new DatastreamStreamSourceConfigMysqlSourceConfigGtid {
 using HashiCorp.Cdktf.Providers.Google;
 
 new DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjects {
-    object MysqlDatabases
+    IResolvable|DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases[] MysqlDatabases
 };
 ```
 
@@ -3690,17 +3690,17 @@ new DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjects {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjects.property.mysqlDatabases">MysqlDatabases</a></code> | <code>object</code> | mysql_databases block. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjects.property.mysqlDatabases">MysqlDatabases</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases">DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases</a>[]</code> | mysql_databases block. |
 
 ---
 
 ##### `MysqlDatabases`<sup>Required</sup> <a name="MysqlDatabases" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjects.property.mysqlDatabases"></a>
 
 ```csharp
-public object MysqlDatabases { get; set; }
+public IResolvable|DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases[] MysqlDatabases { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases">DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases</a>[]
 
 mysql_databases block.
 
@@ -3717,7 +3717,7 @@ using HashiCorp.Cdktf.Providers.Google;
 
 new DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases {
     string Database,
-    object MysqlTables = null
+    IResolvable|DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTables[] MysqlTables = null
 };
 ```
 
@@ -3726,7 +3726,7 @@ new DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases {
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases.property.database">Database</a></code> | <code>string</code> | Database name. |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases.property.mysqlTables">MysqlTables</a></code> | <code>object</code> | mysql_tables block. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases.property.mysqlTables">MysqlTables</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTables">DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTables</a>[]</code> | mysql_tables block. |
 
 ---
 
@@ -3747,10 +3747,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `MysqlTables`<sup>Optional</sup> <a name="MysqlTables" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases.property.mysqlTables"></a>
 
 ```csharp
-public object MysqlTables { get; set; }
+public IResolvable|DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTables[] MysqlTables { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTables">DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTables</a>[]
 
 mysql_tables block.
 
@@ -3767,7 +3767,7 @@ using HashiCorp.Cdktf.Providers.Google;
 
 new DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTables {
     string Table,
-    object MysqlColumns = null
+    IResolvable|DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns[] MysqlColumns = null
 };
 ```
 
@@ -3776,7 +3776,7 @@ new DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMys
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTables.property.table">Table</a></code> | <code>string</code> | Table name. |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTables.property.mysqlColumns">MysqlColumns</a></code> | <code>object</code> | mysql_columns block. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTables.property.mysqlColumns">MysqlColumns</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns">DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns</a>[]</code> | mysql_columns block. |
 
 ---
 
@@ -3797,10 +3797,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `MysqlColumns`<sup>Optional</sup> <a name="MysqlColumns" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTables.property.mysqlColumns"></a>
 
 ```csharp
-public object MysqlColumns { get; set; }
+public IResolvable|DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns[] MysqlColumns { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns">DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns</a>[]
 
 mysql_columns block.
 
@@ -3819,9 +3819,9 @@ new DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMys
     string Collation = null,
     string Column = null,
     string DataType = null,
-    object Nullable = null,
+    bool|IResolvable Nullable = null,
     double OrdinalPosition = null,
-    object PrimaryKey = null
+    bool|IResolvable PrimaryKey = null
 };
 ```
 
@@ -3832,9 +3832,9 @@ new DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMys
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns.property.collation">Collation</a></code> | <code>string</code> | Column collation. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns.property.column">Column</a></code> | <code>string</code> | Column name. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns.property.dataType">DataType</a></code> | <code>string</code> | The MySQL data type. Full data types list can be found here: https://dev.mysql.com/doc/refman/8.0/en/data-types.html. |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns.property.nullable">Nullable</a></code> | <code>object</code> | Whether or not the column can accept a null value. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns.property.nullable">Nullable</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Whether or not the column can accept a null value. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns.property.ordinalPosition">OrdinalPosition</a></code> | <code>double</code> | The ordinal position of the column in the table. |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns.property.primaryKey">PrimaryKey</a></code> | <code>object</code> | Whether or not the column represents a primary key. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns.property.primaryKey">PrimaryKey</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Whether or not the column represents a primary key. |
 
 ---
 
@@ -3883,10 +3883,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `Nullable`<sup>Optional</sup> <a name="Nullable" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns.property.nullable"></a>
 
 ```csharp
-public object Nullable { get; set; }
+public bool|IResolvable Nullable { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Whether or not the column can accept a null value.
 
@@ -3911,10 +3911,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `PrimaryKey`<sup>Optional</sup> <a name="PrimaryKey" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns.property.primaryKey"></a>
 
 ```csharp
-public object PrimaryKey { get; set; }
+public bool|IResolvable PrimaryKey { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Whether or not the column represents a primary key.
 
@@ -4063,7 +4063,7 @@ new DatastreamStreamSourceConfigOracleSourceConfigDropLargeObjects {
 using HashiCorp.Cdktf.Providers.Google;
 
 new DatastreamStreamSourceConfigOracleSourceConfigExcludeObjects {
-    object OracleSchemas
+    IResolvable|DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas[] OracleSchemas
 };
 ```
 
@@ -4071,17 +4071,17 @@ new DatastreamStreamSourceConfigOracleSourceConfigExcludeObjects {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjects.property.oracleSchemas">OracleSchemas</a></code> | <code>object</code> | oracle_schemas block. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjects.property.oracleSchemas">OracleSchemas</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas">DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas</a>[]</code> | oracle_schemas block. |
 
 ---
 
 ##### `OracleSchemas`<sup>Required</sup> <a name="OracleSchemas" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjects.property.oracleSchemas"></a>
 
 ```csharp
-public object OracleSchemas { get; set; }
+public IResolvable|DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas[] OracleSchemas { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas">DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas</a>[]
 
 oracle_schemas block.
 
@@ -4098,7 +4098,7 @@ using HashiCorp.Cdktf.Providers.Google;
 
 new DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas {
     string Schema,
-    object OracleTables = null
+    IResolvable|DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTables[] OracleTables = null
 };
 ```
 
@@ -4107,7 +4107,7 @@ new DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas {
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas.property.schema">Schema</a></code> | <code>string</code> | Schema name. |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas.property.oracleTables">OracleTables</a></code> | <code>object</code> | oracle_tables block. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas.property.oracleTables">OracleTables</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTables">DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTables</a>[]</code> | oracle_tables block. |
 
 ---
 
@@ -4128,10 +4128,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `OracleTables`<sup>Optional</sup> <a name="OracleTables" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas.property.oracleTables"></a>
 
 ```csharp
-public object OracleTables { get; set; }
+public IResolvable|DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTables[] OracleTables { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTables">DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTables</a>[]
 
 oracle_tables block.
 
@@ -4148,7 +4148,7 @@ using HashiCorp.Cdktf.Providers.Google;
 
 new DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTables {
     string Table,
-    object OracleColumns = null
+    IResolvable|DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumns[] OracleColumns = null
 };
 ```
 
@@ -4157,7 +4157,7 @@ new DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOra
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTables.property.table">Table</a></code> | <code>string</code> | Table name. |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTables.property.oracleColumns">OracleColumns</a></code> | <code>object</code> | oracle_columns block. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTables.property.oracleColumns">OracleColumns</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumns">DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumns</a>[]</code> | oracle_columns block. |
 
 ---
 
@@ -4178,10 +4178,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `OracleColumns`<sup>Optional</sup> <a name="OracleColumns" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTables.property.oracleColumns"></a>
 
 ```csharp
-public object OracleColumns { get; set; }
+public IResolvable|DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumns[] OracleColumns { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumns">DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumns</a>[]
 
 oracle_columns block.
 
@@ -4247,7 +4247,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 using HashiCorp.Cdktf.Providers.Google;
 
 new DatastreamStreamSourceConfigOracleSourceConfigIncludeObjects {
-    object OracleSchemas
+    IResolvable|DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas[] OracleSchemas
 };
 ```
 
@@ -4255,17 +4255,17 @@ new DatastreamStreamSourceConfigOracleSourceConfigIncludeObjects {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjects.property.oracleSchemas">OracleSchemas</a></code> | <code>object</code> | oracle_schemas block. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjects.property.oracleSchemas">OracleSchemas</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas">DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas</a>[]</code> | oracle_schemas block. |
 
 ---
 
 ##### `OracleSchemas`<sup>Required</sup> <a name="OracleSchemas" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjects.property.oracleSchemas"></a>
 
 ```csharp
-public object OracleSchemas { get; set; }
+public IResolvable|DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas[] OracleSchemas { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas">DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas</a>[]
 
 oracle_schemas block.
 
@@ -4282,7 +4282,7 @@ using HashiCorp.Cdktf.Providers.Google;
 
 new DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas {
     string Schema,
-    object OracleTables = null
+    IResolvable|DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTables[] OracleTables = null
 };
 ```
 
@@ -4291,7 +4291,7 @@ new DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas {
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas.property.schema">Schema</a></code> | <code>string</code> | Schema name. |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas.property.oracleTables">OracleTables</a></code> | <code>object</code> | oracle_tables block. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas.property.oracleTables">OracleTables</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTables">DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTables</a>[]</code> | oracle_tables block. |
 
 ---
 
@@ -4312,10 +4312,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `OracleTables`<sup>Optional</sup> <a name="OracleTables" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas.property.oracleTables"></a>
 
 ```csharp
-public object OracleTables { get; set; }
+public IResolvable|DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTables[] OracleTables { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTables">DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTables</a>[]
 
 oracle_tables block.
 
@@ -4332,7 +4332,7 @@ using HashiCorp.Cdktf.Providers.Google;
 
 new DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTables {
     string Table,
-    object OracleColumns = null
+    IResolvable|DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumns[] OracleColumns = null
 };
 ```
 
@@ -4341,7 +4341,7 @@ new DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOra
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTables.property.table">Table</a></code> | <code>string</code> | Table name. |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTables.property.oracleColumns">OracleColumns</a></code> | <code>object</code> | oracle_columns block. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTables.property.oracleColumns">OracleColumns</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumns">DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumns</a>[]</code> | oracle_columns block. |
 
 ---
 
@@ -4362,10 +4362,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `OracleColumns`<sup>Optional</sup> <a name="OracleColumns" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTables.property.oracleColumns"></a>
 
 ```csharp
-public object OracleColumns { get; set; }
+public IResolvable|DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumns[] OracleColumns { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumns">DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumns</a>[]
 
 oracle_columns block.
 
@@ -4545,7 +4545,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 using HashiCorp.Cdktf.Providers.Google;
 
 new DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjects {
-    object PostgresqlSchemas
+    IResolvable|DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas[] PostgresqlSchemas
 };
 ```
 
@@ -4553,17 +4553,17 @@ new DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjects {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjects.property.postgresqlSchemas">PostgresqlSchemas</a></code> | <code>object</code> | postgresql_schemas block. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjects.property.postgresqlSchemas">PostgresqlSchemas</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas">DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas</a>[]</code> | postgresql_schemas block. |
 
 ---
 
 ##### `PostgresqlSchemas`<sup>Required</sup> <a name="PostgresqlSchemas" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjects.property.postgresqlSchemas"></a>
 
 ```csharp
-public object PostgresqlSchemas { get; set; }
+public IResolvable|DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas[] PostgresqlSchemas { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas">DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas</a>[]
 
 postgresql_schemas block.
 
@@ -4580,7 +4580,7 @@ using HashiCorp.Cdktf.Providers.Google;
 
 new DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas {
     string Schema,
-    object PostgresqlTables = null
+    IResolvable|DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTables[] PostgresqlTables = null
 };
 ```
 
@@ -4589,7 +4589,7 @@ new DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSc
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas.property.schema">Schema</a></code> | <code>string</code> | Database name. |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas.property.postgresqlTables">PostgresqlTables</a></code> | <code>object</code> | postgresql_tables block. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas.property.postgresqlTables">PostgresqlTables</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTables">DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTables</a>[]</code> | postgresql_tables block. |
 
 ---
 
@@ -4610,10 +4610,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `PostgresqlTables`<sup>Optional</sup> <a name="PostgresqlTables" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas.property.postgresqlTables"></a>
 
 ```csharp
-public object PostgresqlTables { get; set; }
+public IResolvable|DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTables[] PostgresqlTables { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTables">DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTables</a>[]
 
 postgresql_tables block.
 
@@ -4630,7 +4630,7 @@ using HashiCorp.Cdktf.Providers.Google;
 
 new DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTables {
     string Table,
-    object PostgresqlColumns = null
+    IResolvable|DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns[] PostgresqlColumns = null
 };
 ```
 
@@ -4639,7 +4639,7 @@ new DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSc
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTables.property.table">Table</a></code> | <code>string</code> | Table name. |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTables.property.postgresqlColumns">PostgresqlColumns</a></code> | <code>object</code> | postgresql_columns block. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTables.property.postgresqlColumns">PostgresqlColumns</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns">DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns</a>[]</code> | postgresql_columns block. |
 
 ---
 
@@ -4660,10 +4660,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `PostgresqlColumns`<sup>Optional</sup> <a name="PostgresqlColumns" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTables.property.postgresqlColumns"></a>
 
 ```csharp
-public object PostgresqlColumns { get; set; }
+public IResolvable|DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns[] PostgresqlColumns { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns">DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns</a>[]
 
 postgresql_columns block.
 
@@ -4681,9 +4681,9 @@ using HashiCorp.Cdktf.Providers.Google;
 new DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns {
     string Column = null,
     string DataType = null,
-    object Nullable = null,
+    bool|IResolvable Nullable = null,
     double OrdinalPosition = null,
-    object PrimaryKey = null
+    bool|IResolvable PrimaryKey = null
 };
 ```
 
@@ -4693,9 +4693,9 @@ new DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSc
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns.property.column">Column</a></code> | <code>string</code> | Column name. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns.property.dataType">DataType</a></code> | <code>string</code> | The PostgreSQL data type. Full data types list can be found here: https://www.postgresql.org/docs/current/datatype.html. |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns.property.nullable">Nullable</a></code> | <code>object</code> | Whether or not the column can accept a null value. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns.property.nullable">Nullable</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Whether or not the column can accept a null value. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns.property.ordinalPosition">OrdinalPosition</a></code> | <code>double</code> | The ordinal position of the column in the table. |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns.property.primaryKey">PrimaryKey</a></code> | <code>object</code> | Whether or not the column represents a primary key. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns.property.primaryKey">PrimaryKey</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Whether or not the column represents a primary key. |
 
 ---
 
@@ -4730,10 +4730,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `Nullable`<sup>Optional</sup> <a name="Nullable" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns.property.nullable"></a>
 
 ```csharp
-public object Nullable { get; set; }
+public bool|IResolvable Nullable { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Whether or not the column can accept a null value.
 
@@ -4758,10 +4758,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `PrimaryKey`<sup>Optional</sup> <a name="PrimaryKey" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns.property.primaryKey"></a>
 
 ```csharp
-public object PrimaryKey { get; set; }
+public bool|IResolvable PrimaryKey { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Whether or not the column represents a primary key.
 
@@ -4777,7 +4777,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 using HashiCorp.Cdktf.Providers.Google;
 
 new DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjects {
-    object PostgresqlSchemas
+    IResolvable|DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas[] PostgresqlSchemas
 };
 ```
 
@@ -4785,17 +4785,17 @@ new DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjects {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjects.property.postgresqlSchemas">PostgresqlSchemas</a></code> | <code>object</code> | postgresql_schemas block. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjects.property.postgresqlSchemas">PostgresqlSchemas</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas">DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas</a>[]</code> | postgresql_schemas block. |
 
 ---
 
 ##### `PostgresqlSchemas`<sup>Required</sup> <a name="PostgresqlSchemas" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjects.property.postgresqlSchemas"></a>
 
 ```csharp
-public object PostgresqlSchemas { get; set; }
+public IResolvable|DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas[] PostgresqlSchemas { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas">DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas</a>[]
 
 postgresql_schemas block.
 
@@ -4812,7 +4812,7 @@ using HashiCorp.Cdktf.Providers.Google;
 
 new DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas {
     string Schema,
-    object PostgresqlTables = null
+    IResolvable|DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTables[] PostgresqlTables = null
 };
 ```
 
@@ -4821,7 +4821,7 @@ new DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSc
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas.property.schema">Schema</a></code> | <code>string</code> | Database name. |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas.property.postgresqlTables">PostgresqlTables</a></code> | <code>object</code> | postgresql_tables block. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas.property.postgresqlTables">PostgresqlTables</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTables">DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTables</a>[]</code> | postgresql_tables block. |
 
 ---
 
@@ -4842,10 +4842,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `PostgresqlTables`<sup>Optional</sup> <a name="PostgresqlTables" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas.property.postgresqlTables"></a>
 
 ```csharp
-public object PostgresqlTables { get; set; }
+public IResolvable|DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTables[] PostgresqlTables { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTables">DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTables</a>[]
 
 postgresql_tables block.
 
@@ -4862,7 +4862,7 @@ using HashiCorp.Cdktf.Providers.Google;
 
 new DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTables {
     string Table,
-    object PostgresqlColumns = null
+    IResolvable|DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns[] PostgresqlColumns = null
 };
 ```
 
@@ -4871,7 +4871,7 @@ new DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSc
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTables.property.table">Table</a></code> | <code>string</code> | Table name. |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTables.property.postgresqlColumns">PostgresqlColumns</a></code> | <code>object</code> | postgresql_columns block. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTables.property.postgresqlColumns">PostgresqlColumns</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns">DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns</a>[]</code> | postgresql_columns block. |
 
 ---
 
@@ -4892,10 +4892,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `PostgresqlColumns`<sup>Optional</sup> <a name="PostgresqlColumns" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTables.property.postgresqlColumns"></a>
 
 ```csharp
-public object PostgresqlColumns { get; set; }
+public IResolvable|DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns[] PostgresqlColumns { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns">DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns</a>[]
 
 postgresql_columns block.
 
@@ -4913,9 +4913,9 @@ using HashiCorp.Cdktf.Providers.Google;
 new DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns {
     string Column = null,
     string DataType = null,
-    object Nullable = null,
+    bool|IResolvable Nullable = null,
     double OrdinalPosition = null,
-    object PrimaryKey = null
+    bool|IResolvable PrimaryKey = null
 };
 ```
 
@@ -4925,9 +4925,9 @@ new DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSc
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns.property.column">Column</a></code> | <code>string</code> | Column name. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns.property.dataType">DataType</a></code> | <code>string</code> | The PostgreSQL data type. Full data types list can be found here: https://www.postgresql.org/docs/current/datatype.html. |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns.property.nullable">Nullable</a></code> | <code>object</code> | Whether or not the column can accept a null value. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns.property.nullable">Nullable</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Whether or not the column can accept a null value. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns.property.ordinalPosition">OrdinalPosition</a></code> | <code>double</code> | The ordinal position of the column in the table. |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns.property.primaryKey">PrimaryKey</a></code> | <code>object</code> | Whether or not the column represents a primary key. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns.property.primaryKey">PrimaryKey</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Whether or not the column represents a primary key. |
 
 ---
 
@@ -4962,10 +4962,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `Nullable`<sup>Optional</sup> <a name="Nullable" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns.property.nullable"></a>
 
 ```csharp
-public object Nullable { get; set; }
+public bool|IResolvable Nullable { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Whether or not the column can accept a null value.
 
@@ -4990,10 +4990,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `PrimaryKey`<sup>Optional</sup> <a name="PrimaryKey" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns.property.primaryKey"></a>
 
 ```csharp
-public object PrimaryKey { get; set; }
+public bool|IResolvable PrimaryKey { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Whether or not the column represents a primary key.
 
@@ -5077,7 +5077,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 using HashiCorp.Cdktf.Providers.Google;
 
 new DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjects {
-    object Objects
+    IResolvable|DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjects[] Objects
 };
 ```
 
@@ -5085,17 +5085,17 @@ new DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjects {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjects.property.objects">Objects</a></code> | <code>object</code> | objects block. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjects.property.objects">Objects</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjects">DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjects</a>[]</code> | objects block. |
 
 ---
 
 ##### `Objects`<sup>Required</sup> <a name="Objects" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjects.property.objects"></a>
 
 ```csharp
-public object Objects { get; set; }
+public IResolvable|DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjects[] Objects { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjects">DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjects</a>[]
 
 objects block.
 
@@ -5111,7 +5111,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 using HashiCorp.Cdktf.Providers.Google;
 
 new DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjects {
-    object Fields = null,
+    IResolvable|DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFields[] Fields = null,
     string ObjectName = null
 };
 ```
@@ -5120,7 +5120,7 @@ new DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjects {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjects.property.fields">Fields</a></code> | <code>object</code> | fields block. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjects.property.fields">Fields</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFields">DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFields</a>[]</code> | fields block. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjects.property.objectName">ObjectName</a></code> | <code>string</code> | Name of object in Salesforce Org. |
 
 ---
@@ -5128,10 +5128,10 @@ new DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjects {
 ##### `Fields`<sup>Optional</sup> <a name="Fields" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjects.property.fields"></a>
 
 ```csharp
-public object Fields { get; set; }
+public IResolvable|DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFields[] Fields { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFields">DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFields</a>[]
 
 fields block.
 
@@ -5195,7 +5195,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 using HashiCorp.Cdktf.Providers.Google;
 
 new DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjects {
-    object Objects
+    IResolvable|DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjects[] Objects
 };
 ```
 
@@ -5203,17 +5203,17 @@ new DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjects {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjects.property.objects">Objects</a></code> | <code>object</code> | objects block. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjects.property.objects">Objects</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjects">DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjects</a>[]</code> | objects block. |
 
 ---
 
 ##### `Objects`<sup>Required</sup> <a name="Objects" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjects.property.objects"></a>
 
 ```csharp
-public object Objects { get; set; }
+public IResolvable|DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjects[] Objects { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjects">DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjects</a>[]
 
 objects block.
 
@@ -5229,7 +5229,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 using HashiCorp.Cdktf.Providers.Google;
 
 new DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjects {
-    object Fields = null,
+    IResolvable|DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFields[] Fields = null,
     string ObjectName = null
 };
 ```
@@ -5238,7 +5238,7 @@ new DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjects {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjects.property.fields">Fields</a></code> | <code>object</code> | fields block. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjects.property.fields">Fields</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFields">DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFields</a>[]</code> | fields block. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjects.property.objectName">ObjectName</a></code> | <code>string</code> | Name of object in Salesforce Org. |
 
 ---
@@ -5246,10 +5246,10 @@ new DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjects {
 ##### `Fields`<sup>Optional</sup> <a name="Fields" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjects.property.fields"></a>
 
 ```csharp
-public object Fields { get; set; }
+public IResolvable|DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFields[] Fields { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFields">DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFields</a>[]
 
 fields block.
 
@@ -5440,7 +5440,7 @@ new DatastreamStreamSourceConfigSqlServerSourceConfigChangeTables {
 using HashiCorp.Cdktf.Providers.Google;
 
 new DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjects {
-    object Schemas
+    IResolvable|DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemas[] Schemas
 };
 ```
 
@@ -5448,17 +5448,17 @@ new DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjects {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjects.property.schemas">Schemas</a></code> | <code>object</code> | schemas block. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjects.property.schemas">Schemas</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemas">DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemas</a>[]</code> | schemas block. |
 
 ---
 
 ##### `Schemas`<sup>Required</sup> <a name="Schemas" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjects.property.schemas"></a>
 
 ```csharp
-public object Schemas { get; set; }
+public IResolvable|DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemas[] Schemas { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemas">DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemas</a>[]
 
 schemas block.
 
@@ -5475,7 +5475,7 @@ using HashiCorp.Cdktf.Providers.Google;
 
 new DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemas {
     string Schema,
-    object Tables = null
+    IResolvable|DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTables[] Tables = null
 };
 ```
 
@@ -5484,7 +5484,7 @@ new DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemas {
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemas.property.schema">Schema</a></code> | <code>string</code> | Schema name. |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemas.property.tables">Tables</a></code> | <code>object</code> | tables block. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemas.property.tables">Tables</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTables">DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTables</a>[]</code> | tables block. |
 
 ---
 
@@ -5505,10 +5505,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `Tables`<sup>Optional</sup> <a name="Tables" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemas.property.tables"></a>
 
 ```csharp
-public object Tables { get; set; }
+public IResolvable|DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTables[] Tables { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTables">DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTables</a>[]
 
 tables block.
 
@@ -5525,7 +5525,7 @@ using HashiCorp.Cdktf.Providers.Google;
 
 new DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTables {
     string Table,
-    object Columns = null
+    IResolvable|DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumns[] Columns = null
 };
 ```
 
@@ -5534,7 +5534,7 @@ new DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTables
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTables.property.table">Table</a></code> | <code>string</code> | Table name. |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTables.property.columns">Columns</a></code> | <code>object</code> | columns block. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTables.property.columns">Columns</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumns">DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumns</a>[]</code> | columns block. |
 
 ---
 
@@ -5555,10 +5555,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `Columns`<sup>Optional</sup> <a name="Columns" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTables.property.columns"></a>
 
 ```csharp
-public object Columns { get; set; }
+public IResolvable|DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumns[] Columns { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumns">DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumns</a>[]
 
 columns block.
 
@@ -5624,7 +5624,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 using HashiCorp.Cdktf.Providers.Google;
 
 new DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjects {
-    object Schemas
+    IResolvable|DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemas[] Schemas
 };
 ```
 
@@ -5632,17 +5632,17 @@ new DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjects {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjects.property.schemas">Schemas</a></code> | <code>object</code> | schemas block. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjects.property.schemas">Schemas</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemas">DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemas</a>[]</code> | schemas block. |
 
 ---
 
 ##### `Schemas`<sup>Required</sup> <a name="Schemas" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjects.property.schemas"></a>
 
 ```csharp
-public object Schemas { get; set; }
+public IResolvable|DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemas[] Schemas { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemas">DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemas</a>[]
 
 schemas block.
 
@@ -5659,7 +5659,7 @@ using HashiCorp.Cdktf.Providers.Google;
 
 new DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemas {
     string Schema,
-    object Tables = null
+    IResolvable|DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTables[] Tables = null
 };
 ```
 
@@ -5668,7 +5668,7 @@ new DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemas {
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemas.property.schema">Schema</a></code> | <code>string</code> | Schema name. |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemas.property.tables">Tables</a></code> | <code>object</code> | tables block. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemas.property.tables">Tables</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTables">DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTables</a>[]</code> | tables block. |
 
 ---
 
@@ -5689,10 +5689,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `Tables`<sup>Optional</sup> <a name="Tables" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemas.property.tables"></a>
 
 ```csharp
-public object Tables { get; set; }
+public IResolvable|DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTables[] Tables { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTables">DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTables</a>[]
 
 tables block.
 
@@ -5709,7 +5709,7 @@ using HashiCorp.Cdktf.Providers.Google;
 
 new DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTables {
     string Table,
-    object Columns = null
+    IResolvable|DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumns[] Columns = null
 };
 ```
 
@@ -5718,7 +5718,7 @@ new DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTables
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTables.property.table">Table</a></code> | <code>string</code> | Table name. |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTables.property.columns">Columns</a></code> | <code>object</code> | columns block. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTables.property.columns">Columns</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumns">DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumns</a>[]</code> | columns block. |
 
 ---
 
@@ -5739,10 +5739,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `Columns`<sup>Optional</sup> <a name="Columns" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTables.property.columns"></a>
 
 ```csharp
-public object Columns { get; set; }
+public IResolvable|DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumns[] Columns { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumns">DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumns</a>[]
 
 columns block.
 
@@ -5996,7 +5996,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesList.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesList.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabases">DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabases</a>[]</code> | *No description.* |
 
 ---
 
@@ -6027,10 +6027,10 @@ public string Fqn { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesList.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabases[] InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabases">DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabases</a>[]
 
 ---
 
@@ -6156,7 +6156,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesList.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesList.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTables">DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTables</a>[]</code> | *No description.* |
 
 ---
 
@@ -6187,10 +6187,10 @@ public string Fqn { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesList.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTables[] InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTables">DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTables</a>[]
 
 ---
 
@@ -6316,7 +6316,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumnsList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumnsList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumnsList.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumnsList.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns">DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns</a>[]</code> | *No description.* |
 
 ---
 
@@ -6347,10 +6347,10 @@ public string Fqn { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumnsList.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns[] InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns">DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns</a>[]
 
 ---
 
@@ -6629,16 +6629,16 @@ private void ResetPrimaryKey()
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.collationInput">CollationInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.columnInput">ColumnInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.dataTypeInput">DataTypeInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.nullableInput">NullableInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.nullableInput">NullableInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.ordinalPositionInput">OrdinalPositionInput</a></code> | <code>double</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.primaryKeyInput">PrimaryKeyInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.primaryKeyInput">PrimaryKeyInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.collation">Collation</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.column">Column</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.dataType">DataType</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.nullable">Nullable</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.nullable">Nullable</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.ordinalPosition">OrdinalPosition</a></code> | <code>double</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.primaryKey">PrimaryKey</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.primaryKey">PrimaryKey</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns">DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns</a></code> | *No description.* |
 
 ---
 
@@ -6709,10 +6709,10 @@ public string DataTypeInput { get; }
 ##### `NullableInput`<sup>Optional</sup> <a name="NullableInput" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.nullableInput"></a>
 
 ```csharp
-public object NullableInput { get; }
+public bool|IResolvable NullableInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -6729,10 +6729,10 @@ public double OrdinalPositionInput { get; }
 ##### `PrimaryKeyInput`<sup>Optional</sup> <a name="PrimaryKeyInput" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.primaryKeyInput"></a>
 
 ```csharp
-public object PrimaryKeyInput { get; }
+public bool|IResolvable PrimaryKeyInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -6769,10 +6769,10 @@ public string DataType { get; }
 ##### `Nullable`<sup>Required</sup> <a name="Nullable" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.nullable"></a>
 
 ```csharp
-public object Nullable { get; }
+public bool|IResolvable Nullable { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -6789,20 +6789,20 @@ public double OrdinalPosition { get; }
 ##### `PrimaryKey`<sup>Required</sup> <a name="PrimaryKey" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.primaryKey"></a>
 
 ```csharp
-public object PrimaryKey { get; }
+public bool|IResolvable PrimaryKey { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns">DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns</a>
 
 ---
 
@@ -7033,12 +7033,12 @@ Returns a reversible string representation.
 ##### `PutMysqlColumns` <a name="PutMysqlColumns" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesOutputReference.putMysqlColumns"></a>
 
 ```csharp
-private void PutMysqlColumns(object Value)
+private void PutMysqlColumns(IResolvable|DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns[] Value)
 ```
 
 ###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesOutputReference.putMysqlColumns.parameter.value"></a>
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns">DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns</a>[]
 
 ---
 
@@ -7056,10 +7056,10 @@ private void ResetMysqlColumns()
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesOutputReference.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesOutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesOutputReference.property.mysqlColumns">MysqlColumns</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumnsList">DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumnsList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesOutputReference.property.mysqlColumnsInput">MysqlColumnsInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesOutputReference.property.mysqlColumnsInput">MysqlColumnsInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns">DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns</a>[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesOutputReference.property.tableInput">TableInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesOutputReference.property.table">Table</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTables">DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTables</a></code> | *No description.* |
 
 ---
 
@@ -7100,10 +7100,10 @@ public DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesM
 ##### `MysqlColumnsInput`<sup>Optional</sup> <a name="MysqlColumnsInput" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesOutputReference.property.mysqlColumnsInput"></a>
 
 ```csharp
-public object MysqlColumnsInput { get; }
+public IResolvable|DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns[] MysqlColumnsInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns">DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns</a>[]
 
 ---
 
@@ -7130,10 +7130,10 @@ public string Table { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTables InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTables">DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTables</a>
 
 ---
 
@@ -7364,12 +7364,12 @@ Returns a reversible string representation.
 ##### `PutMysqlTables` <a name="PutMysqlTables" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesOutputReference.putMysqlTables"></a>
 
 ```csharp
-private void PutMysqlTables(object Value)
+private void PutMysqlTables(IResolvable|DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTables[] Value)
 ```
 
 ###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesOutputReference.putMysqlTables.parameter.value"></a>
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTables">DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTables</a>[]
 
 ---
 
@@ -7388,9 +7388,9 @@ private void ResetMysqlTables()
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesOutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesOutputReference.property.mysqlTables">MysqlTables</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesList">DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesOutputReference.property.databaseInput">DatabaseInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesOutputReference.property.mysqlTablesInput">MysqlTablesInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesOutputReference.property.mysqlTablesInput">MysqlTablesInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTables">DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTables</a>[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesOutputReference.property.database">Database</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabases">DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabases</a></code> | *No description.* |
 
 ---
 
@@ -7441,10 +7441,10 @@ public string DatabaseInput { get; }
 ##### `MysqlTablesInput`<sup>Optional</sup> <a name="MysqlTablesInput" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesOutputReference.property.mysqlTablesInput"></a>
 
 ```csharp
-public object MysqlTablesInput { get; }
+public IResolvable|DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTables[] MysqlTablesInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTables">DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTables</a>[]
 
 ---
 
@@ -7461,10 +7461,10 @@ public string Database { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabases InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabases">DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabases</a>
 
 ---
 
@@ -7676,12 +7676,12 @@ Returns a reversible string representation.
 ##### `PutMysqlDatabases` <a name="PutMysqlDatabases" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsOutputReference.putMysqlDatabases"></a>
 
 ```csharp
-private void PutMysqlDatabases(object Value)
+private void PutMysqlDatabases(IResolvable|DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabases[] Value)
 ```
 
 ###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsOutputReference.putMysqlDatabases.parameter.value"></a>
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabases">DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabases</a>[]
 
 ---
 
@@ -7693,7 +7693,7 @@ private void PutMysqlDatabases(object Value)
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsOutputReference.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsOutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsOutputReference.property.mysqlDatabases">MysqlDatabases</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesList">DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsOutputReference.property.mysqlDatabasesInput">MysqlDatabasesInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsOutputReference.property.mysqlDatabasesInput">MysqlDatabasesInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabases">DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabases</a>[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsOutputReference.property.internalValue">InternalValue</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjects">DatastreamStreamBackfillAllMysqlExcludedObjects</a></code> | *No description.* |
 
 ---
@@ -7735,10 +7735,10 @@ public DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesList MysqlDa
 ##### `MysqlDatabasesInput`<sup>Optional</sup> <a name="MysqlDatabasesInput" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsOutputReference.property.mysqlDatabasesInput"></a>
 
 ```csharp
-public object MysqlDatabasesInput { get; }
+public IResolvable|DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabases[] MysqlDatabasesInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabases">DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabases</a>[]
 
 ---
 
@@ -7874,7 +7874,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasList.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasList.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemas">DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemas</a>[]</code> | *No description.* |
 
 ---
 
@@ -7905,10 +7905,10 @@ public string Fqn { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasList.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemas[] InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemas">DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemas</a>[]
 
 ---
 
@@ -8034,7 +8034,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesList.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesList.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTables">DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTables</a>[]</code> | *No description.* |
 
 ---
 
@@ -8065,10 +8065,10 @@ public string Fqn { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesList.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTables[] InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTables">DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTables</a>[]
 
 ---
 
@@ -8194,7 +8194,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumnsList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumnsList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumnsList.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumnsList.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumns">DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumns</a>[]</code> | *No description.* |
 
 ---
 
@@ -8225,10 +8225,10 @@ public string Fqn { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumnsList.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumns[] InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumns">DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumns</a>[]
 
 ---
 
@@ -8486,7 +8486,7 @@ private void ResetDataType()
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumnsOutputReference.property.dataTypeInput">DataTypeInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumnsOutputReference.property.column">Column</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumnsOutputReference.property.dataType">DataType</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumnsOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumnsOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumns">DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumns</a></code> | *No description.* |
 
 ---
 
@@ -8627,10 +8627,10 @@ public string DataType { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumnsOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumns InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumns">DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumns</a>
 
 ---
 
@@ -8861,12 +8861,12 @@ Returns a reversible string representation.
 ##### `PutOracleColumns` <a name="PutOracleColumns" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOutputReference.putOracleColumns"></a>
 
 ```csharp
-private void PutOracleColumns(object Value)
+private void PutOracleColumns(IResolvable|DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumns[] Value)
 ```
 
 ###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOutputReference.putOracleColumns.parameter.value"></a>
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumns">DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumns</a>[]
 
 ---
 
@@ -8884,10 +8884,10 @@ private void ResetOracleColumns()
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOutputReference.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOutputReference.property.oracleColumns">OracleColumns</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumnsList">DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumnsList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOutputReference.property.oracleColumnsInput">OracleColumnsInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOutputReference.property.oracleColumnsInput">OracleColumnsInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumns">DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumns</a>[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOutputReference.property.tableInput">TableInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOutputReference.property.table">Table</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTables">DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTables</a></code> | *No description.* |
 
 ---
 
@@ -8928,10 +8928,10 @@ public DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTables
 ##### `OracleColumnsInput`<sup>Optional</sup> <a name="OracleColumnsInput" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOutputReference.property.oracleColumnsInput"></a>
 
 ```csharp
-public object OracleColumnsInput { get; }
+public IResolvable|DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumns[] OracleColumnsInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumns">DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumns</a>[]
 
 ---
 
@@ -8958,10 +8958,10 @@ public string Table { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTables InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTables">DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTables</a>
 
 ---
 
@@ -9192,12 +9192,12 @@ Returns a reversible string representation.
 ##### `PutOracleTables` <a name="PutOracleTables" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOutputReference.putOracleTables"></a>
 
 ```csharp
-private void PutOracleTables(object Value)
+private void PutOracleTables(IResolvable|DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTables[] Value)
 ```
 
 ###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOutputReference.putOracleTables.parameter.value"></a>
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTables">DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTables</a>[]
 
 ---
 
@@ -9215,10 +9215,10 @@ private void ResetOracleTables()
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOutputReference.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOutputReference.property.oracleTables">OracleTables</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesList">DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOutputReference.property.oracleTablesInput">OracleTablesInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOutputReference.property.oracleTablesInput">OracleTablesInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTables">DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTables</a>[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOutputReference.property.schemaInput">SchemaInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOutputReference.property.schema">Schema</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemas">DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemas</a></code> | *No description.* |
 
 ---
 
@@ -9259,10 +9259,10 @@ public DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTables
 ##### `OracleTablesInput`<sup>Optional</sup> <a name="OracleTablesInput" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOutputReference.property.oracleTablesInput"></a>
 
 ```csharp
-public object OracleTablesInput { get; }
+public IResolvable|DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTables[] OracleTablesInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTables">DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTables</a>[]
 
 ---
 
@@ -9289,10 +9289,10 @@ public string Schema { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemas InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemas">DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemas</a>
 
 ---
 
@@ -9504,12 +9504,12 @@ Returns a reversible string representation.
 ##### `PutOracleSchemas` <a name="PutOracleSchemas" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOutputReference.putOracleSchemas"></a>
 
 ```csharp
-private void PutOracleSchemas(object Value)
+private void PutOracleSchemas(IResolvable|DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemas[] Value)
 ```
 
 ###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOutputReference.putOracleSchemas.parameter.value"></a>
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemas">DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemas</a>[]
 
 ---
 
@@ -9521,7 +9521,7 @@ private void PutOracleSchemas(object Value)
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOutputReference.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOutputReference.property.oracleSchemas">OracleSchemas</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasList">DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOutputReference.property.oracleSchemasInput">OracleSchemasInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOutputReference.property.oracleSchemasInput">OracleSchemasInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemas">DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemas</a>[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOutputReference.property.internalValue">InternalValue</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjects">DatastreamStreamBackfillAllOracleExcludedObjects</a></code> | *No description.* |
 
 ---
@@ -9563,10 +9563,10 @@ public DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasList OracleS
 ##### `OracleSchemasInput`<sup>Optional</sup> <a name="OracleSchemasInput" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOutputReference.property.oracleSchemasInput"></a>
 
 ```csharp
-public object OracleSchemasInput { get; }
+public IResolvable|DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemas[] OracleSchemasInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemas">DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemas</a>[]
 
 ---
 
@@ -10247,12 +10247,12 @@ Returns a reversible string representation.
 ##### `PutPostgresqlSchemas` <a name="PutPostgresqlSchemas" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsOutputReference.putPostgresqlSchemas"></a>
 
 ```csharp
-private void PutPostgresqlSchemas(object Value)
+private void PutPostgresqlSchemas(IResolvable|DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas[] Value)
 ```
 
 ###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsOutputReference.putPostgresqlSchemas.parameter.value"></a>
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas">DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas</a>[]
 
 ---
 
@@ -10264,7 +10264,7 @@ private void PutPostgresqlSchemas(object Value)
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsOutputReference.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsOutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsOutputReference.property.postgresqlSchemas">PostgresqlSchemas</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasList">DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsOutputReference.property.postgresqlSchemasInput">PostgresqlSchemasInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsOutputReference.property.postgresqlSchemasInput">PostgresqlSchemasInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas">DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas</a>[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsOutputReference.property.internalValue">InternalValue</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjects">DatastreamStreamBackfillAllPostgresqlExcludedObjects</a></code> | *No description.* |
 
 ---
@@ -10306,10 +10306,10 @@ public DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasList
 ##### `PostgresqlSchemasInput`<sup>Optional</sup> <a name="PostgresqlSchemasInput" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsOutputReference.property.postgresqlSchemasInput"></a>
 
 ```csharp
-public object PostgresqlSchemasInput { get; }
+public IResolvable|DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas[] PostgresqlSchemasInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas">DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas</a>[]
 
 ---
 
@@ -10445,7 +10445,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasList.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasList.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas">DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas</a>[]</code> | *No description.* |
 
 ---
 
@@ -10476,10 +10476,10 @@ public string Fqn { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasList.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas[] InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas">DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas</a>[]
 
 ---
 
@@ -10710,12 +10710,12 @@ Returns a reversible string representation.
 ##### `PutPostgresqlTables` <a name="PutPostgresqlTables" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasOutputReference.putPostgresqlTables"></a>
 
 ```csharp
-private void PutPostgresqlTables(object Value)
+private void PutPostgresqlTables(IResolvable|DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTables[] Value)
 ```
 
 ###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasOutputReference.putPostgresqlTables.parameter.value"></a>
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTables">DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTables</a>[]
 
 ---
 
@@ -10733,10 +10733,10 @@ private void ResetPostgresqlTables()
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasOutputReference.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasOutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasOutputReference.property.postgresqlTables">PostgresqlTables</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesList">DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasOutputReference.property.postgresqlTablesInput">PostgresqlTablesInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasOutputReference.property.postgresqlTablesInput">PostgresqlTablesInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTables">DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTables</a>[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasOutputReference.property.schemaInput">SchemaInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasOutputReference.property.schema">Schema</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas">DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas</a></code> | *No description.* |
 
 ---
 
@@ -10777,10 +10777,10 @@ public DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPost
 ##### `PostgresqlTablesInput`<sup>Optional</sup> <a name="PostgresqlTablesInput" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasOutputReference.property.postgresqlTablesInput"></a>
 
 ```csharp
-public object PostgresqlTablesInput { get; }
+public IResolvable|DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTables[] PostgresqlTablesInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTables">DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTables</a>[]
 
 ---
 
@@ -10807,10 +10807,10 @@ public string Schema { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas">DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas</a>
 
 ---
 
@@ -10936,7 +10936,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesList.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesList.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTables">DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTables</a>[]</code> | *No description.* |
 
 ---
 
@@ -10967,10 +10967,10 @@ public string Fqn { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesList.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTables[] InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTables">DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTables</a>[]
 
 ---
 
@@ -11201,12 +11201,12 @@ Returns a reversible string representation.
 ##### `PutPostgresqlColumns` <a name="PutPostgresqlColumns" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesOutputReference.putPostgresqlColumns"></a>
 
 ```csharp
-private void PutPostgresqlColumns(object Value)
+private void PutPostgresqlColumns(IResolvable|DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns[] Value)
 ```
 
 ###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesOutputReference.putPostgresqlColumns.parameter.value"></a>
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns">DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns</a>[]
 
 ---
 
@@ -11224,10 +11224,10 @@ private void ResetPostgresqlColumns()
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesOutputReference.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesOutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesOutputReference.property.postgresqlColumns">PostgresqlColumns</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsList">DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesOutputReference.property.postgresqlColumnsInput">PostgresqlColumnsInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesOutputReference.property.postgresqlColumnsInput">PostgresqlColumnsInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns">DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns</a>[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesOutputReference.property.tableInput">TableInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesOutputReference.property.table">Table</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTables">DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTables</a></code> | *No description.* |
 
 ---
 
@@ -11268,10 +11268,10 @@ public DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPost
 ##### `PostgresqlColumnsInput`<sup>Optional</sup> <a name="PostgresqlColumnsInput" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesOutputReference.property.postgresqlColumnsInput"></a>
 
 ```csharp
-public object PostgresqlColumnsInput { get; }
+public IResolvable|DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns[] PostgresqlColumnsInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns">DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns</a>[]
 
 ---
 
@@ -11298,10 +11298,10 @@ public string Table { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTables InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTables">DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTables</a>
 
 ---
 
@@ -11427,7 +11427,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsList.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsList.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns">DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns</a>[]</code> | *No description.* |
 
 ---
 
@@ -11458,10 +11458,10 @@ public string Fqn { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsList.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns[] InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns">DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns</a>[]
 
 ---
 
@@ -11734,15 +11734,15 @@ private void ResetPrimaryKey()
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.scale">Scale</a></code> | <code>double</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.columnInput">ColumnInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.dataTypeInput">DataTypeInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.nullableInput">NullableInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.nullableInput">NullableInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.ordinalPositionInput">OrdinalPositionInput</a></code> | <code>double</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.primaryKeyInput">PrimaryKeyInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.primaryKeyInput">PrimaryKeyInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.column">Column</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.dataType">DataType</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.nullable">Nullable</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.nullable">Nullable</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.ordinalPosition">OrdinalPosition</a></code> | <code>double</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.primaryKey">PrimaryKey</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.primaryKey">PrimaryKey</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns">DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns</a></code> | *No description.* |
 
 ---
 
@@ -11823,10 +11823,10 @@ public string DataTypeInput { get; }
 ##### `NullableInput`<sup>Optional</sup> <a name="NullableInput" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.nullableInput"></a>
 
 ```csharp
-public object NullableInput { get; }
+public bool|IResolvable NullableInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -11843,10 +11843,10 @@ public double OrdinalPositionInput { get; }
 ##### `PrimaryKeyInput`<sup>Optional</sup> <a name="PrimaryKeyInput" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.primaryKeyInput"></a>
 
 ```csharp
-public object PrimaryKeyInput { get; }
+public bool|IResolvable PrimaryKeyInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -11873,10 +11873,10 @@ public string DataType { get; }
 ##### `Nullable`<sup>Required</sup> <a name="Nullable" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.nullable"></a>
 
 ```csharp
-public object Nullable { get; }
+public bool|IResolvable Nullable { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -11893,20 +11893,20 @@ public double OrdinalPosition { get; }
 ##### `PrimaryKey`<sup>Required</sup> <a name="PrimaryKey" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.primaryKey"></a>
 
 ```csharp
-public object PrimaryKey { get; }
+public bool|IResolvable PrimaryKey { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns">DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns</a>
 
 ---
 
@@ -12032,7 +12032,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFieldsList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFieldsList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFieldsList.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFieldsList.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFields">DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFields</a>[]</code> | *No description.* |
 
 ---
 
@@ -12063,10 +12063,10 @@ public string Fqn { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFieldsList.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFields[] InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFields">DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFields</a>[]
 
 ---
 
@@ -12308,7 +12308,7 @@ private void ResetName()
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFieldsOutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFieldsOutputReference.property.nameInput">NameInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFieldsOutputReference.property.name">Name</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFieldsOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFieldsOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFields">DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFields</a></code> | *No description.* |
 
 ---
 
@@ -12359,10 +12359,10 @@ public string Name { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFieldsOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFields InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFields">DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFields</a>
 
 ---
 
@@ -12488,7 +12488,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsList.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsList.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjects">DatastreamStreamBackfillAllSalesforceExcludedObjectsObjects</a>[]</code> | *No description.* |
 
 ---
 
@@ -12519,10 +12519,10 @@ public string Fqn { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsList.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|DatastreamStreamBackfillAllSalesforceExcludedObjectsObjects[] InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjects">DatastreamStreamBackfillAllSalesforceExcludedObjectsObjects</a>[]
 
 ---
 
@@ -12754,12 +12754,12 @@ Returns a reversible string representation.
 ##### `PutFields` <a name="PutFields" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsOutputReference.putFields"></a>
 
 ```csharp
-private void PutFields(object Value)
+private void PutFields(IResolvable|DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFields[] Value)
 ```
 
 ###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsOutputReference.putFields.parameter.value"></a>
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFields">DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFields</a>[]
 
 ---
 
@@ -12783,10 +12783,10 @@ private void ResetObjectName()
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsOutputReference.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsOutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsOutputReference.property.fields">Fields</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFieldsList">DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFieldsList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsOutputReference.property.fieldsInput">FieldsInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsOutputReference.property.fieldsInput">FieldsInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFields">DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFields</a>[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsOutputReference.property.objectNameInput">ObjectNameInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsOutputReference.property.objectName">ObjectName</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjects">DatastreamStreamBackfillAllSalesforceExcludedObjectsObjects</a></code> | *No description.* |
 
 ---
 
@@ -12827,10 +12827,10 @@ public DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFieldsList Fie
 ##### `FieldsInput`<sup>Optional</sup> <a name="FieldsInput" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsOutputReference.property.fieldsInput"></a>
 
 ```csharp
-public object FieldsInput { get; }
+public IResolvable|DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFields[] FieldsInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFields">DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFields</a>[]
 
 ---
 
@@ -12857,10 +12857,10 @@ public string ObjectName { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|DatastreamStreamBackfillAllSalesforceExcludedObjectsObjects InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjects">DatastreamStreamBackfillAllSalesforceExcludedObjectsObjects</a>
 
 ---
 
@@ -13072,12 +13072,12 @@ Returns a reversible string representation.
 ##### `PutObjects` <a name="PutObjects" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsOutputReference.putObjects"></a>
 
 ```csharp
-private void PutObjects(object Value)
+private void PutObjects(IResolvable|DatastreamStreamBackfillAllSalesforceExcludedObjectsObjects[] Value)
 ```
 
 ###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsOutputReference.putObjects.parameter.value"></a>
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjects">DatastreamStreamBackfillAllSalesforceExcludedObjectsObjects</a>[]
 
 ---
 
@@ -13089,7 +13089,7 @@ private void PutObjects(object Value)
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsOutputReference.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsOutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsOutputReference.property.objects">Objects</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsList">DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsOutputReference.property.objectsInput">ObjectsInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsOutputReference.property.objectsInput">ObjectsInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjects">DatastreamStreamBackfillAllSalesforceExcludedObjectsObjects</a>[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsOutputReference.property.internalValue">InternalValue</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjects">DatastreamStreamBackfillAllSalesforceExcludedObjects</a></code> | *No description.* |
 
 ---
@@ -13131,10 +13131,10 @@ public DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsList Objects {
 ##### `ObjectsInput`<sup>Optional</sup> <a name="ObjectsInput" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsOutputReference.property.objectsInput"></a>
 
 ```csharp
-public object ObjectsInput { get; }
+public IResolvable|DatastreamStreamBackfillAllSalesforceExcludedObjectsObjects[] ObjectsInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjects">DatastreamStreamBackfillAllSalesforceExcludedObjectsObjects</a>[]
 
 ---
 
@@ -13356,12 +13356,12 @@ Returns a reversible string representation.
 ##### `PutSchemas` <a name="PutSchemas" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsOutputReference.putSchemas"></a>
 
 ```csharp
-private void PutSchemas(object Value)
+private void PutSchemas(IResolvable|DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemas[] Value)
 ```
 
 ###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsOutputReference.putSchemas.parameter.value"></a>
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemas">DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemas</a>[]
 
 ---
 
@@ -13373,7 +13373,7 @@ private void PutSchemas(object Value)
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsOutputReference.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsOutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsOutputReference.property.schemas">Schemas</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasList">DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsOutputReference.property.schemasInput">SchemasInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsOutputReference.property.schemasInput">SchemasInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemas">DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemas</a>[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsOutputReference.property.internalValue">InternalValue</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjects">DatastreamStreamBackfillAllSqlServerExcludedObjects</a></code> | *No description.* |
 
 ---
@@ -13415,10 +13415,10 @@ public DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasList Schemas { 
 ##### `SchemasInput`<sup>Optional</sup> <a name="SchemasInput" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsOutputReference.property.schemasInput"></a>
 
 ```csharp
-public object SchemasInput { get; }
+public IResolvable|DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemas[] SchemasInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemas">DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemas</a>[]
 
 ---
 
@@ -13554,7 +13554,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasList.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasList.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemas">DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemas</a>[]</code> | *No description.* |
 
 ---
 
@@ -13585,10 +13585,10 @@ public string Fqn { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasList.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemas[] InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemas">DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemas</a>[]
 
 ---
 
@@ -13819,12 +13819,12 @@ Returns a reversible string representation.
 ##### `PutTables` <a name="PutTables" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasOutputReference.putTables"></a>
 
 ```csharp
-private void PutTables(object Value)
+private void PutTables(IResolvable|DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTables[] Value)
 ```
 
 ###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasOutputReference.putTables.parameter.value"></a>
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTables">DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTables</a>[]
 
 ---
 
@@ -13843,9 +13843,9 @@ private void ResetTables()
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasOutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasOutputReference.property.tables">Tables</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesList">DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasOutputReference.property.schemaInput">SchemaInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasOutputReference.property.tablesInput">TablesInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasOutputReference.property.tablesInput">TablesInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTables">DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTables</a>[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasOutputReference.property.schema">Schema</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemas">DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemas</a></code> | *No description.* |
 
 ---
 
@@ -13896,10 +13896,10 @@ public string SchemaInput { get; }
 ##### `TablesInput`<sup>Optional</sup> <a name="TablesInput" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasOutputReference.property.tablesInput"></a>
 
 ```csharp
-public object TablesInput { get; }
+public IResolvable|DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTables[] TablesInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTables">DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTables</a>[]
 
 ---
 
@@ -13916,10 +13916,10 @@ public string Schema { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemas InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemas">DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemas</a>
 
 ---
 
@@ -14045,7 +14045,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumnsList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumnsList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumnsList.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumnsList.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumns">DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumns</a>[]</code> | *No description.* |
 
 ---
 
@@ -14076,10 +14076,10 @@ public string Fqn { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumnsList.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumns[] InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumns">DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumns</a>[]
 
 ---
 
@@ -14336,7 +14336,7 @@ private void ResetDataType()
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumnsOutputReference.property.dataTypeInput">DataTypeInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumnsOutputReference.property.column">Column</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumnsOutputReference.property.dataType">DataType</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumnsOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumnsOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumns">DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumns</a></code> | *No description.* |
 
 ---
 
@@ -14467,10 +14467,10 @@ public string DataType { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumnsOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumns InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumns">DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumns</a>
 
 ---
 
@@ -14596,7 +14596,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesList.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesList.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTables">DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTables</a>[]</code> | *No description.* |
 
 ---
 
@@ -14627,10 +14627,10 @@ public string Fqn { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesList.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTables[] InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTables">DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTables</a>[]
 
 ---
 
@@ -14861,12 +14861,12 @@ Returns a reversible string representation.
 ##### `PutColumns` <a name="PutColumns" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesOutputReference.putColumns"></a>
 
 ```csharp
-private void PutColumns(object Value)
+private void PutColumns(IResolvable|DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumns[] Value)
 ```
 
 ###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesOutputReference.putColumns.parameter.value"></a>
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumns">DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumns</a>[]
 
 ---
 
@@ -14884,10 +14884,10 @@ private void ResetColumns()
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesOutputReference.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesOutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesOutputReference.property.columns">Columns</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumnsList">DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumnsList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesOutputReference.property.columnsInput">ColumnsInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesOutputReference.property.columnsInput">ColumnsInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumns">DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumns</a>[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesOutputReference.property.tableInput">TableInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesOutputReference.property.table">Table</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTables">DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTables</a></code> | *No description.* |
 
 ---
 
@@ -14928,10 +14928,10 @@ public DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumnsLi
 ##### `ColumnsInput`<sup>Optional</sup> <a name="ColumnsInput" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesOutputReference.property.columnsInput"></a>
 
 ```csharp
-public object ColumnsInput { get; }
+public IResolvable|DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumns[] ColumnsInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumns">DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumns</a>[]
 
 ---
 
@@ -14958,10 +14958,10 @@ public string Table { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTables InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTables">DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTables</a>
 
 ---
 
@@ -19152,7 +19152,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesList.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesList.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases">DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases</a>[]</code> | *No description.* |
 
 ---
 
@@ -19183,10 +19183,10 @@ public string Fqn { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesList.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases[] InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases">DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases</a>[]
 
 ---
 
@@ -19312,7 +19312,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesList.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesList.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTables">DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTables</a>[]</code> | *No description.* |
 
 ---
 
@@ -19343,10 +19343,10 @@ public string Fqn { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesList.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTables[] InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTables">DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTables</a>[]
 
 ---
 
@@ -19472,7 +19472,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsList.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsList.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns">DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns</a>[]</code> | *No description.* |
 
 ---
 
@@ -19503,10 +19503,10 @@ public string Fqn { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsList.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns[] InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns">DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns</a>[]
 
 ---
 
@@ -19785,16 +19785,16 @@ private void ResetPrimaryKey()
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.collationInput">CollationInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.columnInput">ColumnInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.dataTypeInput">DataTypeInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.nullableInput">NullableInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.nullableInput">NullableInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.ordinalPositionInput">OrdinalPositionInput</a></code> | <code>double</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.primaryKeyInput">PrimaryKeyInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.primaryKeyInput">PrimaryKeyInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.collation">Collation</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.column">Column</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.dataType">DataType</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.nullable">Nullable</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.nullable">Nullable</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.ordinalPosition">OrdinalPosition</a></code> | <code>double</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.primaryKey">PrimaryKey</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.primaryKey">PrimaryKey</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns">DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns</a></code> | *No description.* |
 
 ---
 
@@ -19865,10 +19865,10 @@ public string DataTypeInput { get; }
 ##### `NullableInput`<sup>Optional</sup> <a name="NullableInput" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.nullableInput"></a>
 
 ```csharp
-public object NullableInput { get; }
+public bool|IResolvable NullableInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -19885,10 +19885,10 @@ public double OrdinalPositionInput { get; }
 ##### `PrimaryKeyInput`<sup>Optional</sup> <a name="PrimaryKeyInput" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.primaryKeyInput"></a>
 
 ```csharp
-public object PrimaryKeyInput { get; }
+public bool|IResolvable PrimaryKeyInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -19925,10 +19925,10 @@ public string DataType { get; }
 ##### `Nullable`<sup>Required</sup> <a name="Nullable" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.nullable"></a>
 
 ```csharp
-public object Nullable { get; }
+public bool|IResolvable Nullable { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -19945,20 +19945,20 @@ public double OrdinalPosition { get; }
 ##### `PrimaryKey`<sup>Required</sup> <a name="PrimaryKey" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.primaryKey"></a>
 
 ```csharp
-public object PrimaryKey { get; }
+public bool|IResolvable PrimaryKey { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns">DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns</a>
 
 ---
 
@@ -20189,12 +20189,12 @@ Returns a reversible string representation.
 ##### `PutMysqlColumns` <a name="PutMysqlColumns" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesOutputReference.putMysqlColumns"></a>
 
 ```csharp
-private void PutMysqlColumns(object Value)
+private void PutMysqlColumns(IResolvable|DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns[] Value)
 ```
 
 ###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesOutputReference.putMysqlColumns.parameter.value"></a>
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns">DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns</a>[]
 
 ---
 
@@ -20212,10 +20212,10 @@ private void ResetMysqlColumns()
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesOutputReference.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesOutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesOutputReference.property.mysqlColumns">MysqlColumns</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsList">DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesOutputReference.property.mysqlColumnsInput">MysqlColumnsInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesOutputReference.property.mysqlColumnsInput">MysqlColumnsInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns">DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns</a>[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesOutputReference.property.tableInput">TableInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesOutputReference.property.table">Table</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTables">DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTables</a></code> | *No description.* |
 
 ---
 
@@ -20256,10 +20256,10 @@ public DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases
 ##### `MysqlColumnsInput`<sup>Optional</sup> <a name="MysqlColumnsInput" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesOutputReference.property.mysqlColumnsInput"></a>
 
 ```csharp
-public object MysqlColumnsInput { get; }
+public IResolvable|DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns[] MysqlColumnsInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns">DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns</a>[]
 
 ---
 
@@ -20286,10 +20286,10 @@ public string Table { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTables InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTables">DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTables</a>
 
 ---
 
@@ -20520,12 +20520,12 @@ Returns a reversible string representation.
 ##### `PutMysqlTables` <a name="PutMysqlTables" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesOutputReference.putMysqlTables"></a>
 
 ```csharp
-private void PutMysqlTables(object Value)
+private void PutMysqlTables(IResolvable|DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTables[] Value)
 ```
 
 ###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesOutputReference.putMysqlTables.parameter.value"></a>
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTables">DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTables</a>[]
 
 ---
 
@@ -20544,9 +20544,9 @@ private void ResetMysqlTables()
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesOutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesOutputReference.property.mysqlTables">MysqlTables</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesList">DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesOutputReference.property.databaseInput">DatabaseInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesOutputReference.property.mysqlTablesInput">MysqlTablesInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesOutputReference.property.mysqlTablesInput">MysqlTablesInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTables">DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTables</a>[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesOutputReference.property.database">Database</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases">DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases</a></code> | *No description.* |
 
 ---
 
@@ -20597,10 +20597,10 @@ public string DatabaseInput { get; }
 ##### `MysqlTablesInput`<sup>Optional</sup> <a name="MysqlTablesInput" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesOutputReference.property.mysqlTablesInput"></a>
 
 ```csharp
-public object MysqlTablesInput { get; }
+public IResolvable|DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTables[] MysqlTablesInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTables">DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTables</a>[]
 
 ---
 
@@ -20617,10 +20617,10 @@ public string Database { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases">DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases</a>
 
 ---
 
@@ -20832,12 +20832,12 @@ Returns a reversible string representation.
 ##### `PutMysqlDatabases` <a name="PutMysqlDatabases" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsOutputReference.putMysqlDatabases"></a>
 
 ```csharp
-private void PutMysqlDatabases(object Value)
+private void PutMysqlDatabases(IResolvable|DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases[] Value)
 ```
 
 ###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsOutputReference.putMysqlDatabases.parameter.value"></a>
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases">DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases</a>[]
 
 ---
 
@@ -20849,7 +20849,7 @@ private void PutMysqlDatabases(object Value)
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsOutputReference.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsOutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsOutputReference.property.mysqlDatabases">MysqlDatabases</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesList">DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsOutputReference.property.mysqlDatabasesInput">MysqlDatabasesInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsOutputReference.property.mysqlDatabasesInput">MysqlDatabasesInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases">DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases</a>[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsOutputReference.property.internalValue">InternalValue</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjects">DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjects</a></code> | *No description.* |
 
 ---
@@ -20891,10 +20891,10 @@ public DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases
 ##### `MysqlDatabasesInput`<sup>Optional</sup> <a name="MysqlDatabasesInput" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsOutputReference.property.mysqlDatabasesInput"></a>
 
 ```csharp
-public object MysqlDatabasesInput { get; }
+public IResolvable|DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases[] MysqlDatabasesInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases">DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases</a>[]
 
 ---
 
@@ -21279,7 +21279,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesList.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesList.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases">DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases</a>[]</code> | *No description.* |
 
 ---
 
@@ -21310,10 +21310,10 @@ public string Fqn { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesList.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases[] InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases">DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases</a>[]
 
 ---
 
@@ -21439,7 +21439,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesList.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesList.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTables">DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTables</a>[]</code> | *No description.* |
 
 ---
 
@@ -21470,10 +21470,10 @@ public string Fqn { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesList.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTables[] InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTables">DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTables</a>[]
 
 ---
 
@@ -21599,7 +21599,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsList.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsList.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns">DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns</a>[]</code> | *No description.* |
 
 ---
 
@@ -21630,10 +21630,10 @@ public string Fqn { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsList.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns[] InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns">DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns</a>[]
 
 ---
 
@@ -21912,16 +21912,16 @@ private void ResetPrimaryKey()
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.collationInput">CollationInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.columnInput">ColumnInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.dataTypeInput">DataTypeInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.nullableInput">NullableInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.nullableInput">NullableInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.ordinalPositionInput">OrdinalPositionInput</a></code> | <code>double</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.primaryKeyInput">PrimaryKeyInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.primaryKeyInput">PrimaryKeyInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.collation">Collation</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.column">Column</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.dataType">DataType</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.nullable">Nullable</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.nullable">Nullable</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.ordinalPosition">OrdinalPosition</a></code> | <code>double</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.primaryKey">PrimaryKey</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.primaryKey">PrimaryKey</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns">DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns</a></code> | *No description.* |
 
 ---
 
@@ -21992,10 +21992,10 @@ public string DataTypeInput { get; }
 ##### `NullableInput`<sup>Optional</sup> <a name="NullableInput" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.nullableInput"></a>
 
 ```csharp
-public object NullableInput { get; }
+public bool|IResolvable NullableInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -22012,10 +22012,10 @@ public double OrdinalPositionInput { get; }
 ##### `PrimaryKeyInput`<sup>Optional</sup> <a name="PrimaryKeyInput" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.primaryKeyInput"></a>
 
 ```csharp
-public object PrimaryKeyInput { get; }
+public bool|IResolvable PrimaryKeyInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -22052,10 +22052,10 @@ public string DataType { get; }
 ##### `Nullable`<sup>Required</sup> <a name="Nullable" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.nullable"></a>
 
 ```csharp
-public object Nullable { get; }
+public bool|IResolvable Nullable { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -22072,20 +22072,20 @@ public double OrdinalPosition { get; }
 ##### `PrimaryKey`<sup>Required</sup> <a name="PrimaryKey" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.primaryKey"></a>
 
 ```csharp
-public object PrimaryKey { get; }
+public bool|IResolvable PrimaryKey { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns">DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns</a>
 
 ---
 
@@ -22316,12 +22316,12 @@ Returns a reversible string representation.
 ##### `PutMysqlColumns` <a name="PutMysqlColumns" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesOutputReference.putMysqlColumns"></a>
 
 ```csharp
-private void PutMysqlColumns(object Value)
+private void PutMysqlColumns(IResolvable|DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns[] Value)
 ```
 
 ###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesOutputReference.putMysqlColumns.parameter.value"></a>
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns">DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns</a>[]
 
 ---
 
@@ -22339,10 +22339,10 @@ private void ResetMysqlColumns()
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesOutputReference.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesOutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesOutputReference.property.mysqlColumns">MysqlColumns</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsList">DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesOutputReference.property.mysqlColumnsInput">MysqlColumnsInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesOutputReference.property.mysqlColumnsInput">MysqlColumnsInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns">DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns</a>[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesOutputReference.property.tableInput">TableInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesOutputReference.property.table">Table</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTables">DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTables</a></code> | *No description.* |
 
 ---
 
@@ -22383,10 +22383,10 @@ public DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases
 ##### `MysqlColumnsInput`<sup>Optional</sup> <a name="MysqlColumnsInput" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesOutputReference.property.mysqlColumnsInput"></a>
 
 ```csharp
-public object MysqlColumnsInput { get; }
+public IResolvable|DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns[] MysqlColumnsInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns">DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns</a>[]
 
 ---
 
@@ -22413,10 +22413,10 @@ public string Table { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTables InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTables">DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTables</a>
 
 ---
 
@@ -22647,12 +22647,12 @@ Returns a reversible string representation.
 ##### `PutMysqlTables` <a name="PutMysqlTables" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesOutputReference.putMysqlTables"></a>
 
 ```csharp
-private void PutMysqlTables(object Value)
+private void PutMysqlTables(IResolvable|DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTables[] Value)
 ```
 
 ###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesOutputReference.putMysqlTables.parameter.value"></a>
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTables">DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTables</a>[]
 
 ---
 
@@ -22671,9 +22671,9 @@ private void ResetMysqlTables()
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesOutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesOutputReference.property.mysqlTables">MysqlTables</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesList">DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesOutputReference.property.databaseInput">DatabaseInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesOutputReference.property.mysqlTablesInput">MysqlTablesInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesOutputReference.property.mysqlTablesInput">MysqlTablesInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTables">DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTables</a>[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesOutputReference.property.database">Database</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases">DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases</a></code> | *No description.* |
 
 ---
 
@@ -22724,10 +22724,10 @@ public string DatabaseInput { get; }
 ##### `MysqlTablesInput`<sup>Optional</sup> <a name="MysqlTablesInput" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesOutputReference.property.mysqlTablesInput"></a>
 
 ```csharp
-public object MysqlTablesInput { get; }
+public IResolvable|DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTables[] MysqlTablesInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTables">DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTables</a>[]
 
 ---
 
@@ -22744,10 +22744,10 @@ public string Database { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases">DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases</a>
 
 ---
 
@@ -22959,12 +22959,12 @@ Returns a reversible string representation.
 ##### `PutMysqlDatabases` <a name="PutMysqlDatabases" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsOutputReference.putMysqlDatabases"></a>
 
 ```csharp
-private void PutMysqlDatabases(object Value)
+private void PutMysqlDatabases(IResolvable|DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases[] Value)
 ```
 
 ###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsOutputReference.putMysqlDatabases.parameter.value"></a>
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases">DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases</a>[]
 
 ---
 
@@ -22976,7 +22976,7 @@ private void PutMysqlDatabases(object Value)
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsOutputReference.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsOutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsOutputReference.property.mysqlDatabases">MysqlDatabases</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesList">DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsOutputReference.property.mysqlDatabasesInput">MysqlDatabasesInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsOutputReference.property.mysqlDatabasesInput">MysqlDatabasesInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases">DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases</a>[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsOutputReference.property.internalValue">InternalValue</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjects">DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjects</a></code> | *No description.* |
 
 ---
@@ -23018,10 +23018,10 @@ public DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases
 ##### `MysqlDatabasesInput`<sup>Optional</sup> <a name="MysqlDatabasesInput" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsOutputReference.property.mysqlDatabasesInput"></a>
 
 ```csharp
-public object MysqlDatabasesInput { get; }
+public IResolvable|DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases[] MysqlDatabasesInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases">DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases</a>[]
 
 ---
 
@@ -23881,7 +23881,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasList.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasList.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas">DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas</a>[]</code> | *No description.* |
 
 ---
 
@@ -23912,10 +23912,10 @@ public string Fqn { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasList.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas[] InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas">DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas</a>[]
 
 ---
 
@@ -24041,7 +24041,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesList.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesList.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTables">DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTables</a>[]</code> | *No description.* |
 
 ---
 
@@ -24072,10 +24072,10 @@ public string Fqn { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesList.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTables[] InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTables">DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTables</a>[]
 
 ---
 
@@ -24201,7 +24201,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumnsList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumnsList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumnsList.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumnsList.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumns">DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumns</a>[]</code> | *No description.* |
 
 ---
 
@@ -24232,10 +24232,10 @@ public string Fqn { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumnsList.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumns[] InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumns">DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumns</a>[]
 
 ---
 
@@ -24493,7 +24493,7 @@ private void ResetDataType()
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumnsOutputReference.property.dataTypeInput">DataTypeInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumnsOutputReference.property.column">Column</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumnsOutputReference.property.dataType">DataType</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumnsOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumnsOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumns">DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumns</a></code> | *No description.* |
 
 ---
 
@@ -24634,10 +24634,10 @@ public string DataType { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumnsOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumns InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumns">DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumns</a>
 
 ---
 
@@ -24868,12 +24868,12 @@ Returns a reversible string representation.
 ##### `PutOracleColumns` <a name="PutOracleColumns" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOutputReference.putOracleColumns"></a>
 
 ```csharp
-private void PutOracleColumns(object Value)
+private void PutOracleColumns(IResolvable|DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumns[] Value)
 ```
 
 ###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOutputReference.putOracleColumns.parameter.value"></a>
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumns">DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumns</a>[]
 
 ---
 
@@ -24891,10 +24891,10 @@ private void ResetOracleColumns()
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOutputReference.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOutputReference.property.oracleColumns">OracleColumns</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumnsList">DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumnsList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOutputReference.property.oracleColumnsInput">OracleColumnsInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOutputReference.property.oracleColumnsInput">OracleColumnsInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumns">DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumns</a>[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOutputReference.property.tableInput">TableInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOutputReference.property.table">Table</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTables">DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTables</a></code> | *No description.* |
 
 ---
 
@@ -24935,10 +24935,10 @@ public DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas
 ##### `OracleColumnsInput`<sup>Optional</sup> <a name="OracleColumnsInput" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOutputReference.property.oracleColumnsInput"></a>
 
 ```csharp
-public object OracleColumnsInput { get; }
+public IResolvable|DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumns[] OracleColumnsInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumns">DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumns</a>[]
 
 ---
 
@@ -24965,10 +24965,10 @@ public string Table { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTables InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTables">DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTables</a>
 
 ---
 
@@ -25199,12 +25199,12 @@ Returns a reversible string representation.
 ##### `PutOracleTables` <a name="PutOracleTables" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOutputReference.putOracleTables"></a>
 
 ```csharp
-private void PutOracleTables(object Value)
+private void PutOracleTables(IResolvable|DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTables[] Value)
 ```
 
 ###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOutputReference.putOracleTables.parameter.value"></a>
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTables">DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTables</a>[]
 
 ---
 
@@ -25222,10 +25222,10 @@ private void ResetOracleTables()
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOutputReference.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOutputReference.property.oracleTables">OracleTables</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesList">DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOutputReference.property.oracleTablesInput">OracleTablesInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOutputReference.property.oracleTablesInput">OracleTablesInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTables">DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTables</a>[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOutputReference.property.schemaInput">SchemaInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOutputReference.property.schema">Schema</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas">DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas</a></code> | *No description.* |
 
 ---
 
@@ -25266,10 +25266,10 @@ public DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas
 ##### `OracleTablesInput`<sup>Optional</sup> <a name="OracleTablesInput" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOutputReference.property.oracleTablesInput"></a>
 
 ```csharp
-public object OracleTablesInput { get; }
+public IResolvable|DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTables[] OracleTablesInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTables">DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTables</a>[]
 
 ---
 
@@ -25296,10 +25296,10 @@ public string Schema { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas">DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas</a>
 
 ---
 
@@ -25511,12 +25511,12 @@ Returns a reversible string representation.
 ##### `PutOracleSchemas` <a name="PutOracleSchemas" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOutputReference.putOracleSchemas"></a>
 
 ```csharp
-private void PutOracleSchemas(object Value)
+private void PutOracleSchemas(IResolvable|DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas[] Value)
 ```
 
 ###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOutputReference.putOracleSchemas.parameter.value"></a>
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas">DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas</a>[]
 
 ---
 
@@ -25528,7 +25528,7 @@ private void PutOracleSchemas(object Value)
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOutputReference.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOutputReference.property.oracleSchemas">OracleSchemas</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasList">DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOutputReference.property.oracleSchemasInput">OracleSchemasInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOutputReference.property.oracleSchemasInput">OracleSchemasInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas">DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas</a>[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOutputReference.property.internalValue">InternalValue</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjects">DatastreamStreamSourceConfigOracleSourceConfigExcludeObjects</a></code> | *No description.* |
 
 ---
@@ -25570,10 +25570,10 @@ public DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas
 ##### `OracleSchemasInput`<sup>Optional</sup> <a name="OracleSchemasInput" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOutputReference.property.oracleSchemasInput"></a>
 
 ```csharp
-public object OracleSchemasInput { get; }
+public IResolvable|DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas[] OracleSchemasInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas">DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas</a>[]
 
 ---
 
@@ -25709,7 +25709,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasList.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasList.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas">DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas</a>[]</code> | *No description.* |
 
 ---
 
@@ -25740,10 +25740,10 @@ public string Fqn { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasList.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas[] InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas">DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas</a>[]
 
 ---
 
@@ -25869,7 +25869,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesList.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesList.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTables">DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTables</a>[]</code> | *No description.* |
 
 ---
 
@@ -25900,10 +25900,10 @@ public string Fqn { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesList.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTables[] InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTables">DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTables</a>[]
 
 ---
 
@@ -26029,7 +26029,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumnsList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumnsList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumnsList.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumnsList.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumns">DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumns</a>[]</code> | *No description.* |
 
 ---
 
@@ -26060,10 +26060,10 @@ public string Fqn { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumnsList.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumns[] InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumns">DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumns</a>[]
 
 ---
 
@@ -26321,7 +26321,7 @@ private void ResetDataType()
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumnsOutputReference.property.dataTypeInput">DataTypeInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumnsOutputReference.property.column">Column</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumnsOutputReference.property.dataType">DataType</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumnsOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumnsOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumns">DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumns</a></code> | *No description.* |
 
 ---
 
@@ -26462,10 +26462,10 @@ public string DataType { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumnsOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumns InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumns">DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumns</a>
 
 ---
 
@@ -26696,12 +26696,12 @@ Returns a reversible string representation.
 ##### `PutOracleColumns` <a name="PutOracleColumns" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOutputReference.putOracleColumns"></a>
 
 ```csharp
-private void PutOracleColumns(object Value)
+private void PutOracleColumns(IResolvable|DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumns[] Value)
 ```
 
 ###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOutputReference.putOracleColumns.parameter.value"></a>
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumns">DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumns</a>[]
 
 ---
 
@@ -26719,10 +26719,10 @@ private void ResetOracleColumns()
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOutputReference.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOutputReference.property.oracleColumns">OracleColumns</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumnsList">DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumnsList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOutputReference.property.oracleColumnsInput">OracleColumnsInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOutputReference.property.oracleColumnsInput">OracleColumnsInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumns">DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumns</a>[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOutputReference.property.tableInput">TableInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOutputReference.property.table">Table</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTables">DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTables</a></code> | *No description.* |
 
 ---
 
@@ -26763,10 +26763,10 @@ public DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas
 ##### `OracleColumnsInput`<sup>Optional</sup> <a name="OracleColumnsInput" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOutputReference.property.oracleColumnsInput"></a>
 
 ```csharp
-public object OracleColumnsInput { get; }
+public IResolvable|DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumns[] OracleColumnsInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumns">DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumns</a>[]
 
 ---
 
@@ -26793,10 +26793,10 @@ public string Table { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTables InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTables">DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTables</a>
 
 ---
 
@@ -27027,12 +27027,12 @@ Returns a reversible string representation.
 ##### `PutOracleTables` <a name="PutOracleTables" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOutputReference.putOracleTables"></a>
 
 ```csharp
-private void PutOracleTables(object Value)
+private void PutOracleTables(IResolvable|DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTables[] Value)
 ```
 
 ###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOutputReference.putOracleTables.parameter.value"></a>
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTables">DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTables</a>[]
 
 ---
 
@@ -27050,10 +27050,10 @@ private void ResetOracleTables()
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOutputReference.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOutputReference.property.oracleTables">OracleTables</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesList">DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOutputReference.property.oracleTablesInput">OracleTablesInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOutputReference.property.oracleTablesInput">OracleTablesInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTables">DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTables</a>[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOutputReference.property.schemaInput">SchemaInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOutputReference.property.schema">Schema</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas">DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas</a></code> | *No description.* |
 
 ---
 
@@ -27094,10 +27094,10 @@ public DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas
 ##### `OracleTablesInput`<sup>Optional</sup> <a name="OracleTablesInput" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOutputReference.property.oracleTablesInput"></a>
 
 ```csharp
-public object OracleTablesInput { get; }
+public IResolvable|DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTables[] OracleTablesInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTables">DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTables</a>[]
 
 ---
 
@@ -27124,10 +27124,10 @@ public string Schema { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas">DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas</a>
 
 ---
 
@@ -27339,12 +27339,12 @@ Returns a reversible string representation.
 ##### `PutOracleSchemas` <a name="PutOracleSchemas" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOutputReference.putOracleSchemas"></a>
 
 ```csharp
-private void PutOracleSchemas(object Value)
+private void PutOracleSchemas(IResolvable|DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas[] Value)
 ```
 
 ###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOutputReference.putOracleSchemas.parameter.value"></a>
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas">DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas</a>[]
 
 ---
 
@@ -27356,7 +27356,7 @@ private void PutOracleSchemas(object Value)
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOutputReference.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOutputReference.property.oracleSchemas">OracleSchemas</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasList">DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOutputReference.property.oracleSchemasInput">OracleSchemasInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOutputReference.property.oracleSchemasInput">OracleSchemasInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas">DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas</a>[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOutputReference.property.internalValue">InternalValue</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjects">DatastreamStreamSourceConfigOracleSourceConfigIncludeObjects</a></code> | *No description.* |
 
 ---
@@ -27398,10 +27398,10 @@ public DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas
 ##### `OracleSchemasInput`<sup>Optional</sup> <a name="OracleSchemasInput" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOutputReference.property.oracleSchemasInput"></a>
 
 ```csharp
-public object OracleSchemasInput { get; }
+public IResolvable|DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas[] OracleSchemasInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas">DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas</a>[]
 
 ---
 
@@ -28828,12 +28828,12 @@ Returns a reversible string representation.
 ##### `PutPostgresqlSchemas` <a name="PutPostgresqlSchemas" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsOutputReference.putPostgresqlSchemas"></a>
 
 ```csharp
-private void PutPostgresqlSchemas(object Value)
+private void PutPostgresqlSchemas(IResolvable|DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas[] Value)
 ```
 
 ###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsOutputReference.putPostgresqlSchemas.parameter.value"></a>
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas">DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas</a>[]
 
 ---
 
@@ -28845,7 +28845,7 @@ private void PutPostgresqlSchemas(object Value)
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsOutputReference.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsOutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsOutputReference.property.postgresqlSchemas">PostgresqlSchemas</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasList">DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsOutputReference.property.postgresqlSchemasInput">PostgresqlSchemasInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsOutputReference.property.postgresqlSchemasInput">PostgresqlSchemasInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas">DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas</a>[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsOutputReference.property.internalValue">InternalValue</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjects">DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjects</a></code> | *No description.* |
 
 ---
@@ -28887,10 +28887,10 @@ public DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresq
 ##### `PostgresqlSchemasInput`<sup>Optional</sup> <a name="PostgresqlSchemasInput" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsOutputReference.property.postgresqlSchemasInput"></a>
 
 ```csharp
-public object PostgresqlSchemasInput { get; }
+public IResolvable|DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas[] PostgresqlSchemasInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas">DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas</a>[]
 
 ---
 
@@ -29026,7 +29026,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasList.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasList.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas">DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas</a>[]</code> | *No description.* |
 
 ---
 
@@ -29057,10 +29057,10 @@ public string Fqn { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasList.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas[] InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas">DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas</a>[]
 
 ---
 
@@ -29291,12 +29291,12 @@ Returns a reversible string representation.
 ##### `PutPostgresqlTables` <a name="PutPostgresqlTables" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasOutputReference.putPostgresqlTables"></a>
 
 ```csharp
-private void PutPostgresqlTables(object Value)
+private void PutPostgresqlTables(IResolvable|DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTables[] Value)
 ```
 
 ###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasOutputReference.putPostgresqlTables.parameter.value"></a>
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTables">DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTables</a>[]
 
 ---
 
@@ -29314,10 +29314,10 @@ private void ResetPostgresqlTables()
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasOutputReference.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasOutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasOutputReference.property.postgresqlTables">PostgresqlTables</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesList">DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasOutputReference.property.postgresqlTablesInput">PostgresqlTablesInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasOutputReference.property.postgresqlTablesInput">PostgresqlTablesInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTables">DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTables</a>[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasOutputReference.property.schemaInput">SchemaInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasOutputReference.property.schema">Schema</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas">DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas</a></code> | *No description.* |
 
 ---
 
@@ -29358,10 +29358,10 @@ public DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresq
 ##### `PostgresqlTablesInput`<sup>Optional</sup> <a name="PostgresqlTablesInput" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasOutputReference.property.postgresqlTablesInput"></a>
 
 ```csharp
-public object PostgresqlTablesInput { get; }
+public IResolvable|DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTables[] PostgresqlTablesInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTables">DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTables</a>[]
 
 ---
 
@@ -29388,10 +29388,10 @@ public string Schema { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas">DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas</a>
 
 ---
 
@@ -29517,7 +29517,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesList.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesList.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTables">DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTables</a>[]</code> | *No description.* |
 
 ---
 
@@ -29548,10 +29548,10 @@ public string Fqn { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesList.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTables[] InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTables">DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTables</a>[]
 
 ---
 
@@ -29782,12 +29782,12 @@ Returns a reversible string representation.
 ##### `PutPostgresqlColumns` <a name="PutPostgresqlColumns" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesOutputReference.putPostgresqlColumns"></a>
 
 ```csharp
-private void PutPostgresqlColumns(object Value)
+private void PutPostgresqlColumns(IResolvable|DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns[] Value)
 ```
 
 ###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesOutputReference.putPostgresqlColumns.parameter.value"></a>
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns">DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns</a>[]
 
 ---
 
@@ -29805,10 +29805,10 @@ private void ResetPostgresqlColumns()
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesOutputReference.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesOutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesOutputReference.property.postgresqlColumns">PostgresqlColumns</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsList">DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesOutputReference.property.postgresqlColumnsInput">PostgresqlColumnsInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesOutputReference.property.postgresqlColumnsInput">PostgresqlColumnsInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns">DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns</a>[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesOutputReference.property.tableInput">TableInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesOutputReference.property.table">Table</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTables">DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTables</a></code> | *No description.* |
 
 ---
 
@@ -29849,10 +29849,10 @@ public DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresq
 ##### `PostgresqlColumnsInput`<sup>Optional</sup> <a name="PostgresqlColumnsInput" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesOutputReference.property.postgresqlColumnsInput"></a>
 
 ```csharp
-public object PostgresqlColumnsInput { get; }
+public IResolvable|DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns[] PostgresqlColumnsInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns">DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns</a>[]
 
 ---
 
@@ -29879,10 +29879,10 @@ public string Table { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTables InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTables">DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTables</a>
 
 ---
 
@@ -30008,7 +30008,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsList.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsList.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns">DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns</a>[]</code> | *No description.* |
 
 ---
 
@@ -30039,10 +30039,10 @@ public string Fqn { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsList.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns[] InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns">DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns</a>[]
 
 ---
 
@@ -30315,15 +30315,15 @@ private void ResetPrimaryKey()
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.scale">Scale</a></code> | <code>double</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.columnInput">ColumnInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.dataTypeInput">DataTypeInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.nullableInput">NullableInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.nullableInput">NullableInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.ordinalPositionInput">OrdinalPositionInput</a></code> | <code>double</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.primaryKeyInput">PrimaryKeyInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.primaryKeyInput">PrimaryKeyInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.column">Column</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.dataType">DataType</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.nullable">Nullable</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.nullable">Nullable</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.ordinalPosition">OrdinalPosition</a></code> | <code>double</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.primaryKey">PrimaryKey</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.primaryKey">PrimaryKey</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns">DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns</a></code> | *No description.* |
 
 ---
 
@@ -30404,10 +30404,10 @@ public string DataTypeInput { get; }
 ##### `NullableInput`<sup>Optional</sup> <a name="NullableInput" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.nullableInput"></a>
 
 ```csharp
-public object NullableInput { get; }
+public bool|IResolvable NullableInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -30424,10 +30424,10 @@ public double OrdinalPositionInput { get; }
 ##### `PrimaryKeyInput`<sup>Optional</sup> <a name="PrimaryKeyInput" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.primaryKeyInput"></a>
 
 ```csharp
-public object PrimaryKeyInput { get; }
+public bool|IResolvable PrimaryKeyInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -30454,10 +30454,10 @@ public string DataType { get; }
 ##### `Nullable`<sup>Required</sup> <a name="Nullable" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.nullable"></a>
 
 ```csharp
-public object Nullable { get; }
+public bool|IResolvable Nullable { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -30474,20 +30474,20 @@ public double OrdinalPosition { get; }
 ##### `PrimaryKey`<sup>Required</sup> <a name="PrimaryKey" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.primaryKey"></a>
 
 ```csharp
-public object PrimaryKey { get; }
+public bool|IResolvable PrimaryKey { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns">DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns</a>
 
 ---
 
@@ -30699,12 +30699,12 @@ Returns a reversible string representation.
 ##### `PutPostgresqlSchemas` <a name="PutPostgresqlSchemas" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsOutputReference.putPostgresqlSchemas"></a>
 
 ```csharp
-private void PutPostgresqlSchemas(object Value)
+private void PutPostgresqlSchemas(IResolvable|DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas[] Value)
 ```
 
 ###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsOutputReference.putPostgresqlSchemas.parameter.value"></a>
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas">DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas</a>[]
 
 ---
 
@@ -30716,7 +30716,7 @@ private void PutPostgresqlSchemas(object Value)
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsOutputReference.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsOutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsOutputReference.property.postgresqlSchemas">PostgresqlSchemas</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasList">DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsOutputReference.property.postgresqlSchemasInput">PostgresqlSchemasInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsOutputReference.property.postgresqlSchemasInput">PostgresqlSchemasInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas">DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas</a>[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsOutputReference.property.internalValue">InternalValue</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjects">DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjects</a></code> | *No description.* |
 
 ---
@@ -30758,10 +30758,10 @@ public DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresq
 ##### `PostgresqlSchemasInput`<sup>Optional</sup> <a name="PostgresqlSchemasInput" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsOutputReference.property.postgresqlSchemasInput"></a>
 
 ```csharp
-public object PostgresqlSchemasInput { get; }
+public IResolvable|DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas[] PostgresqlSchemasInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas">DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas</a>[]
 
 ---
 
@@ -30897,7 +30897,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasList.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasList.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas">DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas</a>[]</code> | *No description.* |
 
 ---
 
@@ -30928,10 +30928,10 @@ public string Fqn { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasList.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas[] InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas">DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas</a>[]
 
 ---
 
@@ -31162,12 +31162,12 @@ Returns a reversible string representation.
 ##### `PutPostgresqlTables` <a name="PutPostgresqlTables" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasOutputReference.putPostgresqlTables"></a>
 
 ```csharp
-private void PutPostgresqlTables(object Value)
+private void PutPostgresqlTables(IResolvable|DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTables[] Value)
 ```
 
 ###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasOutputReference.putPostgresqlTables.parameter.value"></a>
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTables">DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTables</a>[]
 
 ---
 
@@ -31185,10 +31185,10 @@ private void ResetPostgresqlTables()
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasOutputReference.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasOutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasOutputReference.property.postgresqlTables">PostgresqlTables</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesList">DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasOutputReference.property.postgresqlTablesInput">PostgresqlTablesInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasOutputReference.property.postgresqlTablesInput">PostgresqlTablesInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTables">DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTables</a>[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasOutputReference.property.schemaInput">SchemaInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasOutputReference.property.schema">Schema</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas">DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas</a></code> | *No description.* |
 
 ---
 
@@ -31229,10 +31229,10 @@ public DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresq
 ##### `PostgresqlTablesInput`<sup>Optional</sup> <a name="PostgresqlTablesInput" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasOutputReference.property.postgresqlTablesInput"></a>
 
 ```csharp
-public object PostgresqlTablesInput { get; }
+public IResolvable|DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTables[] PostgresqlTablesInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTables">DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTables</a>[]
 
 ---
 
@@ -31259,10 +31259,10 @@ public string Schema { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas">DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas</a>
 
 ---
 
@@ -31388,7 +31388,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesList.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesList.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTables">DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTables</a>[]</code> | *No description.* |
 
 ---
 
@@ -31419,10 +31419,10 @@ public string Fqn { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesList.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTables[] InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTables">DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTables</a>[]
 
 ---
 
@@ -31653,12 +31653,12 @@ Returns a reversible string representation.
 ##### `PutPostgresqlColumns` <a name="PutPostgresqlColumns" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesOutputReference.putPostgresqlColumns"></a>
 
 ```csharp
-private void PutPostgresqlColumns(object Value)
+private void PutPostgresqlColumns(IResolvable|DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns[] Value)
 ```
 
 ###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesOutputReference.putPostgresqlColumns.parameter.value"></a>
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns">DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns</a>[]
 
 ---
 
@@ -31676,10 +31676,10 @@ private void ResetPostgresqlColumns()
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesOutputReference.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesOutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesOutputReference.property.postgresqlColumns">PostgresqlColumns</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsList">DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesOutputReference.property.postgresqlColumnsInput">PostgresqlColumnsInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesOutputReference.property.postgresqlColumnsInput">PostgresqlColumnsInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns">DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns</a>[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesOutputReference.property.tableInput">TableInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesOutputReference.property.table">Table</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTables">DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTables</a></code> | *No description.* |
 
 ---
 
@@ -31720,10 +31720,10 @@ public DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresq
 ##### `PostgresqlColumnsInput`<sup>Optional</sup> <a name="PostgresqlColumnsInput" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesOutputReference.property.postgresqlColumnsInput"></a>
 
 ```csharp
-public object PostgresqlColumnsInput { get; }
+public IResolvable|DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns[] PostgresqlColumnsInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns">DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns</a>[]
 
 ---
 
@@ -31750,10 +31750,10 @@ public string Table { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTables InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTables">DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTables</a>
 
 ---
 
@@ -31879,7 +31879,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsList.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsList.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns">DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns</a>[]</code> | *No description.* |
 
 ---
 
@@ -31910,10 +31910,10 @@ public string Fqn { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsList.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns[] InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns">DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns</a>[]
 
 ---
 
@@ -32186,15 +32186,15 @@ private void ResetPrimaryKey()
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.scale">Scale</a></code> | <code>double</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.columnInput">ColumnInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.dataTypeInput">DataTypeInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.nullableInput">NullableInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.nullableInput">NullableInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.ordinalPositionInput">OrdinalPositionInput</a></code> | <code>double</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.primaryKeyInput">PrimaryKeyInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.primaryKeyInput">PrimaryKeyInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.column">Column</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.dataType">DataType</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.nullable">Nullable</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.nullable">Nullable</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.ordinalPosition">OrdinalPosition</a></code> | <code>double</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.primaryKey">PrimaryKey</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.primaryKey">PrimaryKey</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns">DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns</a></code> | *No description.* |
 
 ---
 
@@ -32275,10 +32275,10 @@ public string DataTypeInput { get; }
 ##### `NullableInput`<sup>Optional</sup> <a name="NullableInput" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.nullableInput"></a>
 
 ```csharp
-public object NullableInput { get; }
+public bool|IResolvable NullableInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -32295,10 +32295,10 @@ public double OrdinalPositionInput { get; }
 ##### `PrimaryKeyInput`<sup>Optional</sup> <a name="PrimaryKeyInput" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.primaryKeyInput"></a>
 
 ```csharp
-public object PrimaryKeyInput { get; }
+public bool|IResolvable PrimaryKeyInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -32325,10 +32325,10 @@ public string DataType { get; }
 ##### `Nullable`<sup>Required</sup> <a name="Nullable" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.nullable"></a>
 
 ```csharp
-public object Nullable { get; }
+public bool|IResolvable Nullable { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -32345,20 +32345,20 @@ public double OrdinalPosition { get; }
 ##### `PrimaryKey`<sup>Required</sup> <a name="PrimaryKey" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.primaryKey"></a>
 
 ```csharp
-public object PrimaryKey { get; }
+public bool|IResolvable PrimaryKey { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns">DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns</a>
 
 ---
 
@@ -32890,7 +32890,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFieldsList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFieldsList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFieldsList.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFieldsList.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFields">DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFields</a>[]</code> | *No description.* |
 
 ---
 
@@ -32921,10 +32921,10 @@ public string Fqn { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFieldsList.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFields[] InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFields">DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFields</a>[]
 
 ---
 
@@ -33166,7 +33166,7 @@ private void ResetName()
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFieldsOutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFieldsOutputReference.property.nameInput">NameInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFieldsOutputReference.property.name">Name</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFieldsOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFieldsOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFields">DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFields</a></code> | *No description.* |
 
 ---
 
@@ -33217,10 +33217,10 @@ public string Name { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFieldsOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFields InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFields">DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFields</a>
 
 ---
 
@@ -33346,7 +33346,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsList.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsList.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjects">DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjects</a>[]</code> | *No description.* |
 
 ---
 
@@ -33377,10 +33377,10 @@ public string Fqn { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsList.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjects[] InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjects">DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjects</a>[]
 
 ---
 
@@ -33612,12 +33612,12 @@ Returns a reversible string representation.
 ##### `PutFields` <a name="PutFields" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsOutputReference.putFields"></a>
 
 ```csharp
-private void PutFields(object Value)
+private void PutFields(IResolvable|DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFields[] Value)
 ```
 
 ###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsOutputReference.putFields.parameter.value"></a>
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFields">DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFields</a>[]
 
 ---
 
@@ -33641,10 +33641,10 @@ private void ResetObjectName()
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsOutputReference.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsOutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsOutputReference.property.fields">Fields</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFieldsList">DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFieldsList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsOutputReference.property.fieldsInput">FieldsInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsOutputReference.property.fieldsInput">FieldsInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFields">DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFields</a>[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsOutputReference.property.objectNameInput">ObjectNameInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsOutputReference.property.objectName">ObjectName</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjects">DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjects</a></code> | *No description.* |
 
 ---
 
@@ -33685,10 +33685,10 @@ public DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFi
 ##### `FieldsInput`<sup>Optional</sup> <a name="FieldsInput" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsOutputReference.property.fieldsInput"></a>
 
 ```csharp
-public object FieldsInput { get; }
+public IResolvable|DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFields[] FieldsInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFields">DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFields</a>[]
 
 ---
 
@@ -33715,10 +33715,10 @@ public string ObjectName { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjects InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjects">DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjects</a>
 
 ---
 
@@ -33930,12 +33930,12 @@ Returns a reversible string representation.
 ##### `PutObjects` <a name="PutObjects" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsOutputReference.putObjects"></a>
 
 ```csharp
-private void PutObjects(object Value)
+private void PutObjects(IResolvable|DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjects[] Value)
 ```
 
 ###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsOutputReference.putObjects.parameter.value"></a>
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjects">DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjects</a>[]
 
 ---
 
@@ -33947,7 +33947,7 @@ private void PutObjects(object Value)
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsOutputReference.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsOutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsOutputReference.property.objects">Objects</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsList">DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsOutputReference.property.objectsInput">ObjectsInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsOutputReference.property.objectsInput">ObjectsInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjects">DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjects</a>[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsOutputReference.property.internalValue">InternalValue</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjects">DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjects</a></code> | *No description.* |
 
 ---
@@ -33989,10 +33989,10 @@ public DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsLi
 ##### `ObjectsInput`<sup>Optional</sup> <a name="ObjectsInput" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsOutputReference.property.objectsInput"></a>
 
 ```csharp
-public object ObjectsInput { get; }
+public IResolvable|DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjects[] ObjectsInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjects">DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjects</a>[]
 
 ---
 
@@ -34128,7 +34128,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFieldsList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFieldsList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFieldsList.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFieldsList.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFields">DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFields</a>[]</code> | *No description.* |
 
 ---
 
@@ -34159,10 +34159,10 @@ public string Fqn { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFieldsList.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFields[] InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFields">DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFields</a>[]
 
 ---
 
@@ -34404,7 +34404,7 @@ private void ResetName()
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFieldsOutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFieldsOutputReference.property.nameInput">NameInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFieldsOutputReference.property.name">Name</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFieldsOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFieldsOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFields">DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFields</a></code> | *No description.* |
 
 ---
 
@@ -34455,10 +34455,10 @@ public string Name { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFieldsOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFields InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFields">DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFields</a>
 
 ---
 
@@ -34584,7 +34584,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsList.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsList.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjects">DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjects</a>[]</code> | *No description.* |
 
 ---
 
@@ -34615,10 +34615,10 @@ public string Fqn { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsList.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjects[] InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjects">DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjects</a>[]
 
 ---
 
@@ -34850,12 +34850,12 @@ Returns a reversible string representation.
 ##### `PutFields` <a name="PutFields" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsOutputReference.putFields"></a>
 
 ```csharp
-private void PutFields(object Value)
+private void PutFields(IResolvable|DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFields[] Value)
 ```
 
 ###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsOutputReference.putFields.parameter.value"></a>
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFields">DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFields</a>[]
 
 ---
 
@@ -34879,10 +34879,10 @@ private void ResetObjectName()
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsOutputReference.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsOutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsOutputReference.property.fields">Fields</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFieldsList">DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFieldsList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsOutputReference.property.fieldsInput">FieldsInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsOutputReference.property.fieldsInput">FieldsInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFields">DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFields</a>[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsOutputReference.property.objectNameInput">ObjectNameInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsOutputReference.property.objectName">ObjectName</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjects">DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjects</a></code> | *No description.* |
 
 ---
 
@@ -34923,10 +34923,10 @@ public DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFi
 ##### `FieldsInput`<sup>Optional</sup> <a name="FieldsInput" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsOutputReference.property.fieldsInput"></a>
 
 ```csharp
-public object FieldsInput { get; }
+public IResolvable|DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFields[] FieldsInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFields">DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFields</a>[]
 
 ---
 
@@ -34953,10 +34953,10 @@ public string ObjectName { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjects InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjects">DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjects</a>
 
 ---
 
@@ -35168,12 +35168,12 @@ Returns a reversible string representation.
 ##### `PutObjects` <a name="PutObjects" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsOutputReference.putObjects"></a>
 
 ```csharp
-private void PutObjects(object Value)
+private void PutObjects(IResolvable|DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjects[] Value)
 ```
 
 ###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsOutputReference.putObjects.parameter.value"></a>
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjects">DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjects</a>[]
 
 ---
 
@@ -35185,7 +35185,7 @@ private void PutObjects(object Value)
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsOutputReference.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsOutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsOutputReference.property.objects">Objects</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsList">DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsOutputReference.property.objectsInput">ObjectsInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsOutputReference.property.objectsInput">ObjectsInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjects">DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjects</a>[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsOutputReference.property.internalValue">InternalValue</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjects">DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjects</a></code> | *No description.* |
 
 ---
@@ -35227,10 +35227,10 @@ public DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsLi
 ##### `ObjectsInput`<sup>Optional</sup> <a name="ObjectsInput" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsOutputReference.property.objectsInput"></a>
 
 ```csharp
-public object ObjectsInput { get; }
+public IResolvable|DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjects[] ObjectsInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjects">DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjects</a>[]
 
 ---
 
@@ -36056,12 +36056,12 @@ Returns a reversible string representation.
 ##### `PutSchemas` <a name="PutSchemas" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsOutputReference.putSchemas"></a>
 
 ```csharp
-private void PutSchemas(object Value)
+private void PutSchemas(IResolvable|DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemas[] Value)
 ```
 
 ###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsOutputReference.putSchemas.parameter.value"></a>
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemas">DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemas</a>[]
 
 ---
 
@@ -36073,7 +36073,7 @@ private void PutSchemas(object Value)
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsOutputReference.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsOutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsOutputReference.property.schemas">Schemas</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasList">DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsOutputReference.property.schemasInput">SchemasInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsOutputReference.property.schemasInput">SchemasInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemas">DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemas</a>[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsOutputReference.property.internalValue">InternalValue</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjects">DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjects</a></code> | *No description.* |
 
 ---
@@ -36115,10 +36115,10 @@ public DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasLis
 ##### `SchemasInput`<sup>Optional</sup> <a name="SchemasInput" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsOutputReference.property.schemasInput"></a>
 
 ```csharp
-public object SchemasInput { get; }
+public IResolvable|DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemas[] SchemasInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemas">DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemas</a>[]
 
 ---
 
@@ -36254,7 +36254,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasList.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasList.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemas">DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemas</a>[]</code> | *No description.* |
 
 ---
 
@@ -36285,10 +36285,10 @@ public string Fqn { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasList.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemas[] InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemas">DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemas</a>[]
 
 ---
 
@@ -36519,12 +36519,12 @@ Returns a reversible string representation.
 ##### `PutTables` <a name="PutTables" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasOutputReference.putTables"></a>
 
 ```csharp
-private void PutTables(object Value)
+private void PutTables(IResolvable|DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTables[] Value)
 ```
 
 ###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasOutputReference.putTables.parameter.value"></a>
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTables">DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTables</a>[]
 
 ---
 
@@ -36543,9 +36543,9 @@ private void ResetTables()
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasOutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasOutputReference.property.tables">Tables</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesList">DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasOutputReference.property.schemaInput">SchemaInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasOutputReference.property.tablesInput">TablesInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasOutputReference.property.tablesInput">TablesInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTables">DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTables</a>[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasOutputReference.property.schema">Schema</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemas">DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemas</a></code> | *No description.* |
 
 ---
 
@@ -36596,10 +36596,10 @@ public string SchemaInput { get; }
 ##### `TablesInput`<sup>Optional</sup> <a name="TablesInput" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasOutputReference.property.tablesInput"></a>
 
 ```csharp
-public object TablesInput { get; }
+public IResolvable|DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTables[] TablesInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTables">DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTables</a>[]
 
 ---
 
@@ -36616,10 +36616,10 @@ public string Schema { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemas InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemas">DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemas</a>
 
 ---
 
@@ -36745,7 +36745,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumnsList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumnsList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumnsList.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumnsList.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumns">DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumns</a>[]</code> | *No description.* |
 
 ---
 
@@ -36776,10 +36776,10 @@ public string Fqn { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumnsList.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumns[] InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumns">DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumns</a>[]
 
 ---
 
@@ -37036,7 +37036,7 @@ private void ResetDataType()
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumnsOutputReference.property.dataTypeInput">DataTypeInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumnsOutputReference.property.column">Column</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumnsOutputReference.property.dataType">DataType</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumnsOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumnsOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumns">DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumns</a></code> | *No description.* |
 
 ---
 
@@ -37167,10 +37167,10 @@ public string DataType { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumnsOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumns InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumns">DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumns</a>
 
 ---
 
@@ -37296,7 +37296,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesList.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesList.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTables">DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTables</a>[]</code> | *No description.* |
 
 ---
 
@@ -37327,10 +37327,10 @@ public string Fqn { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesList.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTables[] InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTables">DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTables</a>[]
 
 ---
 
@@ -37561,12 +37561,12 @@ Returns a reversible string representation.
 ##### `PutColumns` <a name="PutColumns" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesOutputReference.putColumns"></a>
 
 ```csharp
-private void PutColumns(object Value)
+private void PutColumns(IResolvable|DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumns[] Value)
 ```
 
 ###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesOutputReference.putColumns.parameter.value"></a>
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumns">DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumns</a>[]
 
 ---
 
@@ -37584,10 +37584,10 @@ private void ResetColumns()
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesOutputReference.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesOutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesOutputReference.property.columns">Columns</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumnsList">DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumnsList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesOutputReference.property.columnsInput">ColumnsInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesOutputReference.property.columnsInput">ColumnsInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumns">DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumns</a>[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesOutputReference.property.tableInput">TableInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesOutputReference.property.table">Table</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTables">DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTables</a></code> | *No description.* |
 
 ---
 
@@ -37628,10 +37628,10 @@ public DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTab
 ##### `ColumnsInput`<sup>Optional</sup> <a name="ColumnsInput" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesOutputReference.property.columnsInput"></a>
 
 ```csharp
-public object ColumnsInput { get; }
+public IResolvable|DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumns[] ColumnsInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumns">DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumns</a>[]
 
 ---
 
@@ -37658,10 +37658,10 @@ public string Table { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTables InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTables">DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTables</a>
 
 ---
 
@@ -37873,12 +37873,12 @@ Returns a reversible string representation.
 ##### `PutSchemas` <a name="PutSchemas" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsOutputReference.putSchemas"></a>
 
 ```csharp
-private void PutSchemas(object Value)
+private void PutSchemas(IResolvable|DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemas[] Value)
 ```
 
 ###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsOutputReference.putSchemas.parameter.value"></a>
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemas">DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemas</a>[]
 
 ---
 
@@ -37890,7 +37890,7 @@ private void PutSchemas(object Value)
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsOutputReference.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsOutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsOutputReference.property.schemas">Schemas</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasList">DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsOutputReference.property.schemasInput">SchemasInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsOutputReference.property.schemasInput">SchemasInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemas">DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemas</a>[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsOutputReference.property.internalValue">InternalValue</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjects">DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjects</a></code> | *No description.* |
 
 ---
@@ -37932,10 +37932,10 @@ public DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasLis
 ##### `SchemasInput`<sup>Optional</sup> <a name="SchemasInput" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsOutputReference.property.schemasInput"></a>
 
 ```csharp
-public object SchemasInput { get; }
+public IResolvable|DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemas[] SchemasInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemas">DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemas</a>[]
 
 ---
 
@@ -38071,7 +38071,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasList.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasList.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemas">DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemas</a>[]</code> | *No description.* |
 
 ---
 
@@ -38102,10 +38102,10 @@ public string Fqn { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasList.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemas[] InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemas">DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemas</a>[]
 
 ---
 
@@ -38336,12 +38336,12 @@ Returns a reversible string representation.
 ##### `PutTables` <a name="PutTables" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasOutputReference.putTables"></a>
 
 ```csharp
-private void PutTables(object Value)
+private void PutTables(IResolvable|DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTables[] Value)
 ```
 
 ###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasOutputReference.putTables.parameter.value"></a>
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTables">DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTables</a>[]
 
 ---
 
@@ -38360,9 +38360,9 @@ private void ResetTables()
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasOutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasOutputReference.property.tables">Tables</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesList">DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasOutputReference.property.schemaInput">SchemaInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasOutputReference.property.tablesInput">TablesInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasOutputReference.property.tablesInput">TablesInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTables">DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTables</a>[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasOutputReference.property.schema">Schema</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemas">DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemas</a></code> | *No description.* |
 
 ---
 
@@ -38413,10 +38413,10 @@ public string SchemaInput { get; }
 ##### `TablesInput`<sup>Optional</sup> <a name="TablesInput" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasOutputReference.property.tablesInput"></a>
 
 ```csharp
-public object TablesInput { get; }
+public IResolvable|DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTables[] TablesInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTables">DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTables</a>[]
 
 ---
 
@@ -38433,10 +38433,10 @@ public string Schema { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemas InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemas">DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemas</a>
 
 ---
 
@@ -38562,7 +38562,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumnsList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumnsList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumnsList.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumnsList.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumns">DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumns</a>[]</code> | *No description.* |
 
 ---
 
@@ -38593,10 +38593,10 @@ public string Fqn { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumnsList.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumns[] InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumns">DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumns</a>[]
 
 ---
 
@@ -38853,7 +38853,7 @@ private void ResetDataType()
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumnsOutputReference.property.dataTypeInput">DataTypeInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumnsOutputReference.property.column">Column</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumnsOutputReference.property.dataType">DataType</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumnsOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumnsOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumns">DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumns</a></code> | *No description.* |
 
 ---
 
@@ -38984,10 +38984,10 @@ public string DataType { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumnsOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumns InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumns">DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumns</a>
 
 ---
 
@@ -39113,7 +39113,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesList.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesList.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTables">DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTables</a>[]</code> | *No description.* |
 
 ---
 
@@ -39144,10 +39144,10 @@ public string Fqn { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesList.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTables[] InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTables">DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTables</a>[]
 
 ---
 
@@ -39378,12 +39378,12 @@ Returns a reversible string representation.
 ##### `PutColumns` <a name="PutColumns" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesOutputReference.putColumns"></a>
 
 ```csharp
-private void PutColumns(object Value)
+private void PutColumns(IResolvable|DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumns[] Value)
 ```
 
 ###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesOutputReference.putColumns.parameter.value"></a>
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumns">DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumns</a>[]
 
 ---
 
@@ -39401,10 +39401,10 @@ private void ResetColumns()
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesOutputReference.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesOutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesOutputReference.property.columns">Columns</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumnsList">DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumnsList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesOutputReference.property.columnsInput">ColumnsInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesOutputReference.property.columnsInput">ColumnsInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumns">DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumns</a>[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesOutputReference.property.tableInput">TableInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesOutputReference.property.table">Table</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTables">DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTables</a></code> | *No description.* |
 
 ---
 
@@ -39445,10 +39445,10 @@ public DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTab
 ##### `ColumnsInput`<sup>Optional</sup> <a name="ColumnsInput" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesOutputReference.property.columnsInput"></a>
 
 ```csharp
-public object ColumnsInput { get; }
+public IResolvable|DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumns[] ColumnsInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumns">DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumns</a>[]
 
 ---
 
@@ -39475,10 +39475,10 @@ public string Table { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTables InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTables">DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTables</a>
 
 ---
 
@@ -40444,7 +40444,7 @@ private void ResetUpdate()
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamTimeoutsOutputReference.property.create">Create</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamTimeoutsOutputReference.property.delete">Delete</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamTimeoutsOutputReference.property.update">Update</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamTimeoutsOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamTimeoutsOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamTimeouts">DatastreamStreamTimeouts</a></code> | *No description.* |
 
 ---
 
@@ -40535,10 +40535,10 @@ public string Update { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamTimeoutsOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|DatastreamStreamTimeouts InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamTimeouts">DatastreamStreamTimeouts</a>
 
 ---
 

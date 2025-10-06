@@ -323,7 +323,7 @@ private System.Collections.Generic.IDictionary<string, string> GetStringMapAttri
 ##### `HasResourceMove` <a name="HasResourceMove" id="@cdktf/provider-google.computeBackendService.ComputeBackendService.hasResourceMove"></a>
 
 ```csharp
-private object HasResourceMove()
+private TerraformResourceMoveByTarget|TerraformResourceMoveById HasResourceMove()
 ```
 
 ##### `ImportFrom` <a name="ImportFrom" id="@cdktf/provider-google.computeBackendService.ComputeBackendService.importFrom"></a>
@@ -377,7 +377,7 @@ Full id of resource being moved from, e.g. "aws_s3_bucket.example".
 ##### `MoveTo` <a name="MoveTo" id="@cdktf/provider-google.computeBackendService.ComputeBackendService.moveTo"></a>
 
 ```csharp
-private void MoveTo(string MoveTarget, object Index = null)
+private void MoveTo(string MoveTarget, string|double Index = null)
 ```
 
 Moves this resource to the target resource given by moveTarget.
@@ -392,7 +392,7 @@ The previously set user defined string set by .addMoveTarget() corresponding to 
 
 ###### `Index`<sup>Optional</sup> <a name="Index" id="@cdktf/provider-google.computeBackendService.ComputeBackendService.moveTo.parameter.index"></a>
 
-- *Type:* object
+- *Type:* string|double
 
 Optional The index corresponding to the key the resource is to appear in the foreach of a resource to move to.
 
@@ -417,12 +417,12 @@ Full id of resource to move to, e.g. "aws_s3_bucket.example".
 ##### `PutBackend` <a name="PutBackend" id="@cdktf/provider-google.computeBackendService.ComputeBackendService.putBackend"></a>
 
 ```csharp
-private void PutBackend(object Value)
+private void PutBackend(IResolvable|ComputeBackendServiceBackend[] Value)
 ```
 
 ###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-google.computeBackendService.ComputeBackendService.putBackend.parameter.value"></a>
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceBackend">ComputeBackendServiceBackend</a>[]
 
 ---
 
@@ -465,12 +465,12 @@ private void PutConsistentHash(ComputeBackendServiceConsistentHash Value)
 ##### `PutCustomMetrics` <a name="PutCustomMetrics" id="@cdktf/provider-google.computeBackendService.ComputeBackendService.putCustomMetrics"></a>
 
 ```csharp
-private void PutCustomMetrics(object Value)
+private void PutCustomMetrics(IResolvable|ComputeBackendServiceCustomMetrics[] Value)
 ```
 
 ###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-google.computeBackendService.ComputeBackendService.putCustomMetrics.parameter.value"></a>
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCustomMetrics">ComputeBackendServiceCustomMetrics</a>[]
 
 ---
 
@@ -489,12 +489,12 @@ private void PutIap(ComputeBackendServiceIap Value)
 ##### `PutLocalityLbPolicies` <a name="PutLocalityLbPolicies" id="@cdktf/provider-google.computeBackendService.ComputeBackendService.putLocalityLbPolicies"></a>
 
 ```csharp
-private void PutLocalityLbPolicies(object Value)
+private void PutLocalityLbPolicies(IResolvable|ComputeBackendServiceLocalityLbPolicies[] Value)
 ```
 
 ###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-google.computeBackendService.ComputeBackendService.putLocalityLbPolicies.parameter.value"></a>
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceLocalityLbPolicies">ComputeBackendServiceLocalityLbPolicies</a>[]
 
 ---
 
@@ -924,13 +924,13 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.5
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendService.property.terraformMetaArguments">TerraformMetaArguments</a></code> | <code>System.Collections.Generic.IDictionary<string, object></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendService.property.terraformResourceType">TerraformResourceType</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendService.property.terraformGeneratorMetadata">TerraformGeneratorMetadata</a></code> | <code>HashiCorp.Cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendService.property.connection">Connection</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendService.property.count">Count</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendService.property.connection">Connection</a></code> | <code>HashiCorp.Cdktf.SSHProvisionerConnection\|HashiCorp.Cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendService.property.count">Count</a></code> | <code>double\|HashiCorp.Cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendService.property.dependsOn">DependsOn</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendService.property.forEach">ForEach</a></code> | <code>HashiCorp.Cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendService.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendService.property.provider">Provider</a></code> | <code>HashiCorp.Cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendService.property.provisioners">Provisioners</a></code> | <code>object[]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendService.property.provisioners">Provisioners</a></code> | <code>HashiCorp.Cdktf.FileProvisioner\|HashiCorp.Cdktf.LocalExecProvisioner\|HashiCorp.Cdktf.RemoteExecProvisioner[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendService.property.backend">Backend</a></code> | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceBackendList">ComputeBackendServiceBackendList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendService.property.cdnPolicy">CdnPolicy</a></code> | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicyOutputReference">ComputeBackendServiceCdnPolicyOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendService.property.circuitBreakers">CircuitBreakers</a></code> | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCircuitBreakersOutputReference">ComputeBackendServiceCircuitBreakersOutputReference</a></code> | *No description.* |
@@ -950,18 +950,18 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.5
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendService.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceTimeoutsOutputReference">ComputeBackendServiceTimeoutsOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendService.property.tlsSettings">TlsSettings</a></code> | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceTlsSettingsOutputReference">ComputeBackendServiceTlsSettingsOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendService.property.affinityCookieTtlSecInput">AffinityCookieTtlSecInput</a></code> | <code>double</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendService.property.backendInput">BackendInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendService.property.backendInput">BackendInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceBackend">ComputeBackendServiceBackend</a>[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendService.property.cdnPolicyInput">CdnPolicyInput</a></code> | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicy">ComputeBackendServiceCdnPolicy</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendService.property.circuitBreakersInput">CircuitBreakersInput</a></code> | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCircuitBreakers">ComputeBackendServiceCircuitBreakers</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendService.property.compressionModeInput">CompressionModeInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendService.property.connectionDrainingTimeoutSecInput">ConnectionDrainingTimeoutSecInput</a></code> | <code>double</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendService.property.consistentHashInput">ConsistentHashInput</a></code> | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceConsistentHash">ComputeBackendServiceConsistentHash</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendService.property.customMetricsInput">CustomMetricsInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendService.property.customMetricsInput">CustomMetricsInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCustomMetrics">ComputeBackendServiceCustomMetrics</a>[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendService.property.customRequestHeadersInput">CustomRequestHeadersInput</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendService.property.customResponseHeadersInput">CustomResponseHeadersInput</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendService.property.descriptionInput">DescriptionInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendService.property.edgeSecurityPolicyInput">EdgeSecurityPolicyInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendService.property.enableCdnInput">EnableCdnInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendService.property.enableCdnInput">EnableCdnInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendService.property.externalManagedMigrationStateInput">ExternalManagedMigrationStateInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendService.property.externalManagedMigrationTestingPercentageInput">ExternalManagedMigrationTestingPercentageInput</a></code> | <code>double</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendService.property.healthChecksInput">HealthChecksInput</a></code> | <code>string[]</code> | *No description.* |
@@ -969,7 +969,7 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.5
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendService.property.idInput">IdInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendService.property.ipAddressSelectionPolicyInput">IpAddressSelectionPolicyInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendService.property.loadBalancingSchemeInput">LoadBalancingSchemeInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendService.property.localityLbPoliciesInput">LocalityLbPoliciesInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendService.property.localityLbPoliciesInput">LocalityLbPoliciesInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceLocalityLbPolicies">ComputeBackendServiceLocalityLbPolicies</a>[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendService.property.localityLbPolicyInput">LocalityLbPolicyInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendService.property.logConfigInput">LogConfigInput</a></code> | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceLogConfig">ComputeBackendServiceLogConfig</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendService.property.maxStreamDurationInput">MaxStreamDurationInput</a></code> | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceMaxStreamDuration">ComputeBackendServiceMaxStreamDuration</a></code> | *No description.* |
@@ -984,7 +984,7 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.5
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendService.property.sessionAffinityInput">SessionAffinityInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendService.property.strongSessionAffinityCookieInput">StrongSessionAffinityCookieInput</a></code> | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceStrongSessionAffinityCookie">ComputeBackendServiceStrongSessionAffinityCookie</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendService.property.timeoutSecInput">TimeoutSecInput</a></code> | <code>double</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendService.property.timeoutsInput">TimeoutsInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendService.property.timeoutsInput">TimeoutsInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceTimeouts">ComputeBackendServiceTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendService.property.tlsSettingsInput">TlsSettingsInput</a></code> | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceTlsSettings">ComputeBackendServiceTlsSettings</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendService.property.affinityCookieTtlSec">AffinityCookieTtlSec</a></code> | <code>double</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendService.property.compressionMode">CompressionMode</a></code> | <code>string</code> | *No description.* |
@@ -993,7 +993,7 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.5
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendService.property.customResponseHeaders">CustomResponseHeaders</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendService.property.description">Description</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendService.property.edgeSecurityPolicy">EdgeSecurityPolicy</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendService.property.enableCdn">EnableCdn</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendService.property.enableCdn">EnableCdn</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendService.property.externalManagedMigrationState">ExternalManagedMigrationState</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendService.property.externalManagedMigrationTestingPercentage">ExternalManagedMigrationTestingPercentage</a></code> | <code>double</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendService.property.healthChecks">HealthChecks</a></code> | <code>string[]</code> | *No description.* |
@@ -1087,20 +1087,20 @@ public TerraformProviderGeneratorMetadata TerraformGeneratorMetadata { get; }
 ##### `Connection`<sup>Optional</sup> <a name="Connection" id="@cdktf/provider-google.computeBackendService.ComputeBackendService.property.connection"></a>
 
 ```csharp
-public object Connection { get; }
+public SSHProvisionerConnection|WinrmProvisionerConnection Connection { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.SSHProvisionerConnection|HashiCorp.Cdktf.WinrmProvisionerConnection
 
 ---
 
 ##### `Count`<sup>Optional</sup> <a name="Count" id="@cdktf/provider-google.computeBackendService.ComputeBackendService.property.count"></a>
 
 ```csharp
-public object Count { get; }
+public double|TerraformCount Count { get; }
 ```
 
-- *Type:* object
+- *Type:* double|HashiCorp.Cdktf.TerraformCount
 
 ---
 
@@ -1147,10 +1147,10 @@ public TerraformProvider Provider { get; }
 ##### `Provisioners`<sup>Optional</sup> <a name="Provisioners" id="@cdktf/provider-google.computeBackendService.ComputeBackendService.property.provisioners"></a>
 
 ```csharp
-public object[] Provisioners { get; }
+public (FileProvisioner|LocalExecProvisioner|RemoteExecProvisioner)[] Provisioners { get; }
 ```
 
-- *Type:* object[]
+- *Type:* HashiCorp.Cdktf.FileProvisioner|HashiCorp.Cdktf.LocalExecProvisioner|HashiCorp.Cdktf.RemoteExecProvisioner[]
 
 ---
 
@@ -1347,10 +1347,10 @@ public double AffinityCookieTtlSecInput { get; }
 ##### `BackendInput`<sup>Optional</sup> <a name="BackendInput" id="@cdktf/provider-google.computeBackendService.ComputeBackendService.property.backendInput"></a>
 
 ```csharp
-public object BackendInput { get; }
+public IResolvable|ComputeBackendServiceBackend[] BackendInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceBackend">ComputeBackendServiceBackend</a>[]
 
 ---
 
@@ -1407,10 +1407,10 @@ public ComputeBackendServiceConsistentHash ConsistentHashInput { get; }
 ##### `CustomMetricsInput`<sup>Optional</sup> <a name="CustomMetricsInput" id="@cdktf/provider-google.computeBackendService.ComputeBackendService.property.customMetricsInput"></a>
 
 ```csharp
-public object CustomMetricsInput { get; }
+public IResolvable|ComputeBackendServiceCustomMetrics[] CustomMetricsInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCustomMetrics">ComputeBackendServiceCustomMetrics</a>[]
 
 ---
 
@@ -1457,10 +1457,10 @@ public string EdgeSecurityPolicyInput { get; }
 ##### `EnableCdnInput`<sup>Optional</sup> <a name="EnableCdnInput" id="@cdktf/provider-google.computeBackendService.ComputeBackendService.property.enableCdnInput"></a>
 
 ```csharp
-public object EnableCdnInput { get; }
+public bool|IResolvable EnableCdnInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -1537,10 +1537,10 @@ public string LoadBalancingSchemeInput { get; }
 ##### `LocalityLbPoliciesInput`<sup>Optional</sup> <a name="LocalityLbPoliciesInput" id="@cdktf/provider-google.computeBackendService.ComputeBackendService.property.localityLbPoliciesInput"></a>
 
 ```csharp
-public object LocalityLbPoliciesInput { get; }
+public IResolvable|ComputeBackendServiceLocalityLbPolicies[] LocalityLbPoliciesInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceLocalityLbPolicies">ComputeBackendServiceLocalityLbPolicies</a>[]
 
 ---
 
@@ -1687,10 +1687,10 @@ public double TimeoutSecInput { get; }
 ##### `TimeoutsInput`<sup>Optional</sup> <a name="TimeoutsInput" id="@cdktf/provider-google.computeBackendService.ComputeBackendService.property.timeoutsInput"></a>
 
 ```csharp
-public object TimeoutsInput { get; }
+public IResolvable|ComputeBackendServiceTimeouts TimeoutsInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceTimeouts">ComputeBackendServiceTimeouts</a>
 
 ---
 
@@ -1777,10 +1777,10 @@ public string EdgeSecurityPolicy { get; }
 ##### `EnableCdn`<sup>Required</sup> <a name="EnableCdn" id="@cdktf/provider-google.computeBackendService.ComputeBackendService.property.enableCdn"></a>
 
 ```csharp
-public object EnableCdn { get; }
+public bool|IResolvable EnableCdn { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -1965,7 +1965,7 @@ new ComputeBackendServiceBackend {
     string Group,
     string BalancingMode = null,
     double CapacityScaler = null,
-    object CustomMetrics = null,
+    IResolvable|ComputeBackendServiceBackendCustomMetrics[] CustomMetrics = null,
     string Description = null,
     double MaxConnections = null,
     double MaxConnectionsPerEndpoint = null,
@@ -1985,7 +1985,7 @@ new ComputeBackendServiceBackend {
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceBackend.property.group">Group</a></code> | <code>string</code> | The fully-qualified URL of an Instance Group or Network Endpoint Group resource. |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceBackend.property.balancingMode">BalancingMode</a></code> | <code>string</code> | Specifies the balancing mode for this backend. |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceBackend.property.capacityScaler">CapacityScaler</a></code> | <code>double</code> | A multiplier applied to the group's maximum servicing capacity (based on UTILIZATION, RATE or CONNECTION). |
-| <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceBackend.property.customMetrics">CustomMetrics</a></code> | <code>object</code> | custom_metrics block. |
+| <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceBackend.property.customMetrics">CustomMetrics</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceBackendCustomMetrics">ComputeBackendServiceBackendCustomMetrics</a>[]</code> | custom_metrics block. |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceBackend.property.description">Description</a></code> | <code>string</code> | An optional description of this resource. Provide this property when you create the resource. |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceBackend.property.maxConnections">MaxConnections</a></code> | <code>double</code> | The max number of simultaneous connections for the group. Can be used with either CONNECTION or UTILIZATION balancing modes. |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceBackend.property.maxConnectionsPerEndpoint">MaxConnectionsPerEndpoint</a></code> | <code>double</code> | The max number of simultaneous connections that a single backend network endpoint can handle. |
@@ -2072,10 +2072,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `CustomMetrics`<sup>Optional</sup> <a name="CustomMetrics" id="@cdktf/provider-google.computeBackendService.ComputeBackendServiceBackend.property.customMetrics"></a>
 
 ```csharp
-public object CustomMetrics { get; set; }
+public IResolvable|ComputeBackendServiceBackendCustomMetrics[] CustomMetrics { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceBackendCustomMetrics">ComputeBackendServiceBackendCustomMetrics</a>[]
 
 custom_metrics block.
 
@@ -2255,7 +2255,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 using HashiCorp.Cdktf.Providers.Google;
 
 new ComputeBackendServiceBackendCustomMetrics {
-    object DryRun,
+    bool|IResolvable DryRun,
     string Name,
     double MaxUtilization = null
 };
@@ -2265,7 +2265,7 @@ new ComputeBackendServiceBackendCustomMetrics {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceBackendCustomMetrics.property.dryRun">DryRun</a></code> | <code>object</code> | If true, the metric data is collected and reported to Cloud Monitoring, but is not used for load balancing. |
+| <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceBackendCustomMetrics.property.dryRun">DryRun</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | If true, the metric data is collected and reported to Cloud Monitoring, but is not used for load balancing. |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceBackendCustomMetrics.property.name">Name</a></code> | <code>string</code> | Name of a custom utilization signal. |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceBackendCustomMetrics.property.maxUtilization">MaxUtilization</a></code> | <code>double</code> | Optional parameter to define a target utilization for the Custom Metrics balancing mode. The valid range is <code>[0.0, 1.0]</code>. |
 
@@ -2274,10 +2274,10 @@ new ComputeBackendServiceBackendCustomMetrics {
 ##### `DryRun`<sup>Required</sup> <a name="DryRun" id="@cdktf/provider-google.computeBackendService.ComputeBackendServiceBackendCustomMetrics.property.dryRun"></a>
 
 ```csharp
-public object DryRun { get; set; }
+public bool|IResolvable DryRun { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 If true, the metric data is collected and reported to Cloud Monitoring, but is not used for load balancing.
 
@@ -2331,15 +2331,15 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 using HashiCorp.Cdktf.Providers.Google;
 
 new ComputeBackendServiceCdnPolicy {
-    object BypassCacheOnRequestHeaders = null,
+    IResolvable|ComputeBackendServiceCdnPolicyBypassCacheOnRequestHeaders[] BypassCacheOnRequestHeaders = null,
     ComputeBackendServiceCdnPolicyCacheKeyPolicy CacheKeyPolicy = null,
     string CacheMode = null,
     double ClientTtl = null,
     double DefaultTtl = null,
     double MaxTtl = null,
-    object NegativeCaching = null,
-    object NegativeCachingPolicy = null,
-    object RequestCoalescing = null,
+    bool|IResolvable NegativeCaching = null,
+    IResolvable|ComputeBackendServiceCdnPolicyNegativeCachingPolicy[] NegativeCachingPolicy = null,
+    bool|IResolvable RequestCoalescing = null,
     double ServeWhileStale = null,
     double SignedUrlCacheMaxAgeSec = null
 };
@@ -2349,15 +2349,15 @@ new ComputeBackendServiceCdnPolicy {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicy.property.bypassCacheOnRequestHeaders">BypassCacheOnRequestHeaders</a></code> | <code>object</code> | bypass_cache_on_request_headers block. |
+| <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicy.property.bypassCacheOnRequestHeaders">BypassCacheOnRequestHeaders</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicyBypassCacheOnRequestHeaders">ComputeBackendServiceCdnPolicyBypassCacheOnRequestHeaders</a>[]</code> | bypass_cache_on_request_headers block. |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicy.property.cacheKeyPolicy">CacheKeyPolicy</a></code> | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicyCacheKeyPolicy">ComputeBackendServiceCdnPolicyCacheKeyPolicy</a></code> | cache_key_policy block. |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicy.property.cacheMode">CacheMode</a></code> | <code>string</code> | Specifies the cache setting for all responses from this backend. |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicy.property.clientTtl">ClientTtl</a></code> | <code>double</code> | Specifies the maximum allowed TTL for cached content served by this origin. |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicy.property.defaultTtl">DefaultTtl</a></code> | <code>double</code> | Specifies the default TTL for cached content served by this origin for responses that do not have an existing valid TTL (max-age or s-max-age). |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicy.property.maxTtl">MaxTtl</a></code> | <code>double</code> | Specifies the maximum allowed TTL for cached content served by this origin. |
-| <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicy.property.negativeCaching">NegativeCaching</a></code> | <code>object</code> | Negative caching allows per-status code TTLs to be set, in order to apply fine-grained caching for common errors or redirects. |
-| <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicy.property.negativeCachingPolicy">NegativeCachingPolicy</a></code> | <code>object</code> | negative_caching_policy block. |
-| <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicy.property.requestCoalescing">RequestCoalescing</a></code> | <code>object</code> | If true then Cloud CDN will combine multiple concurrent cache fill requests into a small number of requests to the origin. |
+| <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicy.property.negativeCaching">NegativeCaching</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Negative caching allows per-status code TTLs to be set, in order to apply fine-grained caching for common errors or redirects. |
+| <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicy.property.negativeCachingPolicy">NegativeCachingPolicy</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicyNegativeCachingPolicy">ComputeBackendServiceCdnPolicyNegativeCachingPolicy</a>[]</code> | negative_caching_policy block. |
+| <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicy.property.requestCoalescing">RequestCoalescing</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | If true then Cloud CDN will combine multiple concurrent cache fill requests into a small number of requests to the origin. |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicy.property.serveWhileStale">ServeWhileStale</a></code> | <code>double</code> | Serve existing content from the cache (if available) when revalidating content with the origin, or when an error is encountered when refreshing the cache. |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicy.property.signedUrlCacheMaxAgeSec">SignedUrlCacheMaxAgeSec</a></code> | <code>double</code> | Maximum number of seconds the response to a signed URL request will be considered fresh, defaults to 1hr (3600s). |
 
@@ -2366,10 +2366,10 @@ new ComputeBackendServiceCdnPolicy {
 ##### `BypassCacheOnRequestHeaders`<sup>Optional</sup> <a name="BypassCacheOnRequestHeaders" id="@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicy.property.bypassCacheOnRequestHeaders"></a>
 
 ```csharp
-public object BypassCacheOnRequestHeaders { get; set; }
+public IResolvable|ComputeBackendServiceCdnPolicyBypassCacheOnRequestHeaders[] BypassCacheOnRequestHeaders { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicyBypassCacheOnRequestHeaders">ComputeBackendServiceCdnPolicyBypassCacheOnRequestHeaders</a>[]
 
 bypass_cache_on_request_headers block.
 
@@ -2452,10 +2452,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `NegativeCaching`<sup>Optional</sup> <a name="NegativeCaching" id="@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicy.property.negativeCaching"></a>
 
 ```csharp
-public object NegativeCaching { get; set; }
+public bool|IResolvable NegativeCaching { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Negative caching allows per-status code TTLs to be set, in order to apply fine-grained caching for common errors or redirects.
 
@@ -2466,10 +2466,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `NegativeCachingPolicy`<sup>Optional</sup> <a name="NegativeCachingPolicy" id="@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicy.property.negativeCachingPolicy"></a>
 
 ```csharp
-public object NegativeCachingPolicy { get; set; }
+public IResolvable|ComputeBackendServiceCdnPolicyNegativeCachingPolicy[] NegativeCachingPolicy { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicyNegativeCachingPolicy">ComputeBackendServiceCdnPolicyNegativeCachingPolicy</a>[]
 
 negative_caching_policy block.
 
@@ -2480,10 +2480,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `RequestCoalescing`<sup>Optional</sup> <a name="RequestCoalescing" id="@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicy.property.requestCoalescing"></a>
 
 ```csharp
-public object RequestCoalescing { get; set; }
+public bool|IResolvable RequestCoalescing { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 If true then Cloud CDN will combine multiple concurrent cache fill requests into a small number of requests to the origin.
 
@@ -2571,11 +2571,11 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 using HashiCorp.Cdktf.Providers.Google;
 
 new ComputeBackendServiceCdnPolicyCacheKeyPolicy {
-    object IncludeHost = null,
+    bool|IResolvable IncludeHost = null,
     string[] IncludeHttpHeaders = null,
     string[] IncludeNamedCookies = null,
-    object IncludeProtocol = null,
-    object IncludeQueryString = null,
+    bool|IResolvable IncludeProtocol = null,
+    bool|IResolvable IncludeQueryString = null,
     string[] QueryStringBlacklist = null,
     string[] QueryStringWhitelist = null
 };
@@ -2585,11 +2585,11 @@ new ComputeBackendServiceCdnPolicyCacheKeyPolicy {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicyCacheKeyPolicy.property.includeHost">IncludeHost</a></code> | <code>object</code> | If true requests to different hosts will be cached separately. |
+| <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicyCacheKeyPolicy.property.includeHost">IncludeHost</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | If true requests to different hosts will be cached separately. |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicyCacheKeyPolicy.property.includeHttpHeaders">IncludeHttpHeaders</a></code> | <code>string[]</code> | Allows HTTP request headers (by name) to be used in the cache key. |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicyCacheKeyPolicy.property.includeNamedCookies">IncludeNamedCookies</a></code> | <code>string[]</code> | Names of cookies to include in cache keys. |
-| <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicyCacheKeyPolicy.property.includeProtocol">IncludeProtocol</a></code> | <code>object</code> | If true, http and https requests will be cached separately. |
-| <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicyCacheKeyPolicy.property.includeQueryString">IncludeQueryString</a></code> | <code>object</code> | If true, include query string parameters in the cache key according to query_string_whitelist and query_string_blacklist. |
+| <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicyCacheKeyPolicy.property.includeProtocol">IncludeProtocol</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | If true, http and https requests will be cached separately. |
+| <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicyCacheKeyPolicy.property.includeQueryString">IncludeQueryString</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | If true, include query string parameters in the cache key according to query_string_whitelist and query_string_blacklist. |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicyCacheKeyPolicy.property.queryStringBlacklist">QueryStringBlacklist</a></code> | <code>string[]</code> | Names of query string parameters to exclude in cache keys. |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicyCacheKeyPolicy.property.queryStringWhitelist">QueryStringWhitelist</a></code> | <code>string[]</code> | Names of query string parameters to include in cache keys. |
 
@@ -2598,10 +2598,10 @@ new ComputeBackendServiceCdnPolicyCacheKeyPolicy {
 ##### `IncludeHost`<sup>Optional</sup> <a name="IncludeHost" id="@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicyCacheKeyPolicy.property.includeHost"></a>
 
 ```csharp
-public object IncludeHost { get; set; }
+public bool|IResolvable IncludeHost { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 If true requests to different hosts will be cached separately.
 
@@ -2640,10 +2640,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `IncludeProtocol`<sup>Optional</sup> <a name="IncludeProtocol" id="@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicyCacheKeyPolicy.property.includeProtocol"></a>
 
 ```csharp
-public object IncludeProtocol { get; set; }
+public bool|IResolvable IncludeProtocol { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 If true, http and https requests will be cached separately.
 
@@ -2654,10 +2654,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `IncludeQueryString`<sup>Optional</sup> <a name="IncludeQueryString" id="@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicyCacheKeyPolicy.property.includeQueryString"></a>
 
 ```csharp
-public object IncludeQueryString { get; set; }
+public bool|IResolvable IncludeQueryString { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 If true, include query string parameters in the cache key according to query_string_whitelist and query_string_blacklist.
 
@@ -2876,27 +2876,27 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 using HashiCorp.Cdktf.Providers.Google;
 
 new ComputeBackendServiceConfig {
-    object Connection = null,
-    object Count = null,
+    SSHProvisionerConnection|WinrmProvisionerConnection Connection = null,
+    double|TerraformCount Count = null,
     ITerraformDependable[] DependsOn = null,
     ITerraformIterator ForEach = null,
     TerraformResourceLifecycle Lifecycle = null,
     TerraformProvider Provider = null,
-    object[] Provisioners = null,
+    (FileProvisioner|LocalExecProvisioner|RemoteExecProvisioner)[] Provisioners = null,
     string Name,
     double AffinityCookieTtlSec = null,
-    object Backend = null,
+    IResolvable|ComputeBackendServiceBackend[] Backend = null,
     ComputeBackendServiceCdnPolicy CdnPolicy = null,
     ComputeBackendServiceCircuitBreakers CircuitBreakers = null,
     string CompressionMode = null,
     double ConnectionDrainingTimeoutSec = null,
     ComputeBackendServiceConsistentHash ConsistentHash = null,
-    object CustomMetrics = null,
+    IResolvable|ComputeBackendServiceCustomMetrics[] CustomMetrics = null,
     string[] CustomRequestHeaders = null,
     string[] CustomResponseHeaders = null,
     string Description = null,
     string EdgeSecurityPolicy = null,
-    object EnableCdn = null,
+    bool|IResolvable EnableCdn = null,
     string ExternalManagedMigrationState = null,
     double ExternalManagedMigrationTestingPercentage = null,
     string[] HealthChecks = null,
@@ -2904,7 +2904,7 @@ new ComputeBackendServiceConfig {
     string Id = null,
     string IpAddressSelectionPolicy = null,
     string LoadBalancingScheme = null,
-    object LocalityLbPolicies = null,
+    IResolvable|ComputeBackendServiceLocalityLbPolicies[] LocalityLbPolicies = null,
     string LocalityLbPolicy = null,
     ComputeBackendServiceLogConfig LogConfig = null,
     ComputeBackendServiceMaxStreamDuration MaxStreamDuration = null,
@@ -2927,27 +2927,27 @@ new ComputeBackendServiceConfig {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceConfig.property.connection">Connection</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceConfig.property.count">Count</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceConfig.property.connection">Connection</a></code> | <code>HashiCorp.Cdktf.SSHProvisionerConnection\|HashiCorp.Cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceConfig.property.count">Count</a></code> | <code>double\|HashiCorp.Cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceConfig.property.dependsOn">DependsOn</a></code> | <code>HashiCorp.Cdktf.ITerraformDependable[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceConfig.property.forEach">ForEach</a></code> | <code>HashiCorp.Cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceConfig.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceConfig.property.provider">Provider</a></code> | <code>HashiCorp.Cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceConfig.property.provisioners">Provisioners</a></code> | <code>object[]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceConfig.property.provisioners">Provisioners</a></code> | <code>HashiCorp.Cdktf.FileProvisioner\|HashiCorp.Cdktf.LocalExecProvisioner\|HashiCorp.Cdktf.RemoteExecProvisioner[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceConfig.property.name">Name</a></code> | <code>string</code> | Name of the resource. |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceConfig.property.affinityCookieTtlSec">AffinityCookieTtlSec</a></code> | <code>double</code> | Lifetime of cookies in seconds if session_affinity is GENERATED_COOKIE. |
-| <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceConfig.property.backend">Backend</a></code> | <code>object</code> | backend block. |
+| <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceConfig.property.backend">Backend</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceBackend">ComputeBackendServiceBackend</a>[]</code> | backend block. |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceConfig.property.cdnPolicy">CdnPolicy</a></code> | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicy">ComputeBackendServiceCdnPolicy</a></code> | cdn_policy block. |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceConfig.property.circuitBreakers">CircuitBreakers</a></code> | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCircuitBreakers">ComputeBackendServiceCircuitBreakers</a></code> | circuit_breakers block. |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceConfig.property.compressionMode">CompressionMode</a></code> | <code>string</code> | Compress text responses using Brotli or gzip compression, based on the client's Accept-Encoding header. Possible values: ["AUTOMATIC", "DISABLED"]. |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceConfig.property.connectionDrainingTimeoutSec">ConnectionDrainingTimeoutSec</a></code> | <code>double</code> | Time for which instance will be drained (not accept new connections, but still work to finish started). |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceConfig.property.consistentHash">ConsistentHash</a></code> | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceConsistentHash">ComputeBackendServiceConsistentHash</a></code> | consistent_hash block. |
-| <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceConfig.property.customMetrics">CustomMetrics</a></code> | <code>object</code> | custom_metrics block. |
+| <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceConfig.property.customMetrics">CustomMetrics</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCustomMetrics">ComputeBackendServiceCustomMetrics</a>[]</code> | custom_metrics block. |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceConfig.property.customRequestHeaders">CustomRequestHeaders</a></code> | <code>string[]</code> | Headers that the HTTP/S load balancer should add to proxied requests. |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceConfig.property.customResponseHeaders">CustomResponseHeaders</a></code> | <code>string[]</code> | Headers that the HTTP/S load balancer should add to proxied responses. |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceConfig.property.description">Description</a></code> | <code>string</code> | An optional description of this resource. |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceConfig.property.edgeSecurityPolicy">EdgeSecurityPolicy</a></code> | <code>string</code> | The resource URL for the edge security policy associated with this backend service. |
-| <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceConfig.property.enableCdn">EnableCdn</a></code> | <code>object</code> | If true, enable Cloud CDN for this BackendService. |
+| <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceConfig.property.enableCdn">EnableCdn</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | If true, enable Cloud CDN for this BackendService. |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceConfig.property.externalManagedMigrationState">ExternalManagedMigrationState</a></code> | <code>string</code> | Specifies the canary migration state. Possible values are PREPARE, TEST_BY_PERCENTAGE, and TEST_ALL_TRAFFIC. |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceConfig.property.externalManagedMigrationTestingPercentage">ExternalManagedMigrationTestingPercentage</a></code> | <code>double</code> | Determines the fraction of requests that should be processed by the Global external Application Load Balancer. |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceConfig.property.healthChecks">HealthChecks</a></code> | <code>string[]</code> | The set of URLs to the HttpHealthCheck or HttpsHealthCheck resource for health checking this BackendService. |
@@ -2955,7 +2955,7 @@ new ComputeBackendServiceConfig {
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/compute_backend_service#id ComputeBackendService#id}. |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceConfig.property.ipAddressSelectionPolicy">IpAddressSelectionPolicy</a></code> | <code>string</code> | Specifies preference of traffic to the backend (from the proxy and from the client for proxyless gRPC). |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceConfig.property.loadBalancingScheme">LoadBalancingScheme</a></code> | <code>string</code> | Indicates whether the backend service will be used with internal or external load balancing. |
-| <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceConfig.property.localityLbPolicies">LocalityLbPolicies</a></code> | <code>object</code> | locality_lb_policies block. |
+| <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceConfig.property.localityLbPolicies">LocalityLbPolicies</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceLocalityLbPolicies">ComputeBackendServiceLocalityLbPolicies</a>[]</code> | locality_lb_policies block. |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceConfig.property.localityLbPolicy">LocalityLbPolicy</a></code> | <code>string</code> | The load balancing algorithm used within the scope of the locality. The possible values are:. |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceConfig.property.logConfig">LogConfig</a></code> | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceLogConfig">ComputeBackendServiceLogConfig</a></code> | log_config block. |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceConfig.property.maxStreamDuration">MaxStreamDuration</a></code> | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceMaxStreamDuration">ComputeBackendServiceMaxStreamDuration</a></code> | max_stream_duration block. |
@@ -2977,20 +2977,20 @@ new ComputeBackendServiceConfig {
 ##### `Connection`<sup>Optional</sup> <a name="Connection" id="@cdktf/provider-google.computeBackendService.ComputeBackendServiceConfig.property.connection"></a>
 
 ```csharp
-public object Connection { get; set; }
+public SSHProvisionerConnection|WinrmProvisionerConnection Connection { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.SSHProvisionerConnection|HashiCorp.Cdktf.WinrmProvisionerConnection
 
 ---
 
 ##### `Count`<sup>Optional</sup> <a name="Count" id="@cdktf/provider-google.computeBackendService.ComputeBackendServiceConfig.property.count"></a>
 
 ```csharp
-public object Count { get; set; }
+public double|TerraformCount Count { get; set; }
 ```
 
-- *Type:* object
+- *Type:* double|HashiCorp.Cdktf.TerraformCount
 
 ---
 
@@ -3037,10 +3037,10 @@ public TerraformProvider Provider { get; set; }
 ##### `Provisioners`<sup>Optional</sup> <a name="Provisioners" id="@cdktf/provider-google.computeBackendService.ComputeBackendServiceConfig.property.provisioners"></a>
 
 ```csharp
-public object[] Provisioners { get; set; }
+public (FileProvisioner|LocalExecProvisioner|RemoteExecProvisioner)[] Provisioners { get; set; }
 ```
 
-- *Type:* object[]
+- *Type:* HashiCorp.Cdktf.FileProvisioner|HashiCorp.Cdktf.LocalExecProvisioner|HashiCorp.Cdktf.RemoteExecProvisioner[]
 
 ---
 
@@ -3089,10 +3089,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `Backend`<sup>Optional</sup> <a name="Backend" id="@cdktf/provider-google.computeBackendService.ComputeBackendServiceConfig.property.backend"></a>
 
 ```csharp
-public object Backend { get; set; }
+public IResolvable|ComputeBackendServiceBackend[] Backend { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceBackend">ComputeBackendServiceBackend</a>[]
 
 backend block.
 
@@ -3173,10 +3173,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `CustomMetrics`<sup>Optional</sup> <a name="CustomMetrics" id="@cdktf/provider-google.computeBackendService.ComputeBackendServiceConfig.property.customMetrics"></a>
 
 ```csharp
-public object CustomMetrics { get; set; }
+public IResolvable|ComputeBackendServiceCustomMetrics[] CustomMetrics { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCustomMetrics">ComputeBackendServiceCustomMetrics</a>[]
 
 custom_metrics block.
 
@@ -3243,10 +3243,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `EnableCdn`<sup>Optional</sup> <a name="EnableCdn" id="@cdktf/provider-google.computeBackendService.ComputeBackendServiceConfig.property.enableCdn"></a>
 
 ```csharp
-public object EnableCdn { get; set; }
+public bool|IResolvable EnableCdn { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 If true, enable Cloud CDN for this BackendService.
 
@@ -3388,10 +3388,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `LocalityLbPolicies`<sup>Optional</sup> <a name="LocalityLbPolicies" id="@cdktf/provider-google.computeBackendService.ComputeBackendServiceConfig.property.localityLbPolicies"></a>
 
 ```csharp
-public object LocalityLbPolicies { get; set; }
+public IResolvable|ComputeBackendServiceLocalityLbPolicies[] LocalityLbPolicies { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceLocalityLbPolicies">ComputeBackendServiceLocalityLbPolicies</a>[]
 
 locality_lb_policies block.
 
@@ -3879,7 +3879,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 using HashiCorp.Cdktf.Providers.Google;
 
 new ComputeBackendServiceCustomMetrics {
-    object DryRun,
+    bool|IResolvable DryRun,
     string Name
 };
 ```
@@ -3888,7 +3888,7 @@ new ComputeBackendServiceCustomMetrics {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCustomMetrics.property.dryRun">DryRun</a></code> | <code>object</code> | If true, the metric data is not used for load balancing. |
+| <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCustomMetrics.property.dryRun">DryRun</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | If true, the metric data is not used for load balancing. |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCustomMetrics.property.name">Name</a></code> | <code>string</code> | Name of a custom utilization signal. |
 
 ---
@@ -3896,10 +3896,10 @@ new ComputeBackendServiceCustomMetrics {
 ##### `DryRun`<sup>Required</sup> <a name="DryRun" id="@cdktf/provider-google.computeBackendService.ComputeBackendServiceCustomMetrics.property.dryRun"></a>
 
 ```csharp
-public object DryRun { get; set; }
+public bool|IResolvable DryRun { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 If true, the metric data is not used for load balancing.
 
@@ -3939,7 +3939,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 using HashiCorp.Cdktf.Providers.Google;
 
 new ComputeBackendServiceIap {
-    object Enabled,
+    bool|IResolvable Enabled,
     string Oauth2ClientId = null,
     string Oauth2ClientSecret = null
 };
@@ -3949,7 +3949,7 @@ new ComputeBackendServiceIap {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceIap.property.enabled">Enabled</a></code> | <code>object</code> | Whether the serving infrastructure will authenticate and authorize all incoming requests. |
+| <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceIap.property.enabled">Enabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Whether the serving infrastructure will authenticate and authorize all incoming requests. |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceIap.property.oauth2ClientId">Oauth2ClientId</a></code> | <code>string</code> | OAuth2 Client ID for IAP. |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceIap.property.oauth2ClientSecret">Oauth2ClientSecret</a></code> | <code>string</code> | OAuth2 Client Secret for IAP. |
 
@@ -3958,10 +3958,10 @@ new ComputeBackendServiceIap {
 ##### `Enabled`<sup>Required</sup> <a name="Enabled" id="@cdktf/provider-google.computeBackendService.ComputeBackendServiceIap.property.enabled"></a>
 
 ```csharp
-public object Enabled { get; set; }
+public bool|IResolvable Enabled { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Whether the serving infrastructure will authenticate and authorize all incoming requests.
 
@@ -4178,7 +4178,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 using HashiCorp.Cdktf.Providers.Google;
 
 new ComputeBackendServiceLogConfig {
-    object Enable = null,
+    bool|IResolvable Enable = null,
     string[] OptionalFields = null,
     string OptionalMode = null,
     double SampleRate = null
@@ -4189,7 +4189,7 @@ new ComputeBackendServiceLogConfig {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceLogConfig.property.enable">Enable</a></code> | <code>object</code> | Whether to enable logging for the load balancer traffic served by this backend service. |
+| <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceLogConfig.property.enable">Enable</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Whether to enable logging for the load balancer traffic served by this backend service. |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceLogConfig.property.optionalFields">OptionalFields</a></code> | <code>string[]</code> | This field can only be specified if logging is enabled for this backend service and "logConfig.optionalMode" was set to CUSTOM. Contains a list of optional fields you want to include in the logs. For example: serverInstance, serverGkeDetails.cluster, serverGkeDetails.pod.podNamespace For example: orca_load_report, tls.protocol. |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceLogConfig.property.optionalMode">OptionalMode</a></code> | <code>string</code> | Specifies the optional logging mode for the load balancer traffic. Supported values: INCLUDE_ALL_OPTIONAL, EXCLUDE_ALL_OPTIONAL, CUSTOM. Possible values: ["INCLUDE_ALL_OPTIONAL", "EXCLUDE_ALL_OPTIONAL", "CUSTOM"]. |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceLogConfig.property.sampleRate">SampleRate</a></code> | <code>double</code> | This field can only be specified if logging is enabled for this backend service. |
@@ -4199,10 +4199,10 @@ new ComputeBackendServiceLogConfig {
 ##### `Enable`<sup>Optional</sup> <a name="Enable" id="@cdktf/provider-google.computeBackendService.ComputeBackendServiceLogConfig.property.enable"></a>
 
 ```csharp
-public object Enable { get; set; }
+public bool|IResolvable Enable { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Whether to enable logging for the load balancer traffic served by this backend service.
 
@@ -4992,7 +4992,7 @@ using HashiCorp.Cdktf.Providers.Google;
 new ComputeBackendServiceTlsSettings {
     string AuthenticationConfig = null,
     string Sni = null,
-    object SubjectAltNames = null
+    IResolvable|ComputeBackendServiceTlsSettingsSubjectAltNames[] SubjectAltNames = null
 };
 ```
 
@@ -5002,7 +5002,7 @@ new ComputeBackendServiceTlsSettings {
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceTlsSettings.property.authenticationConfig">AuthenticationConfig</a></code> | <code>string</code> | Reference to the BackendAuthenticationConfig resource from the networksecurity.googleapis.com namespace. Can be used in authenticating TLS connections to the backend, as specified by the authenticationMode field. Can only be specified if authenticationMode is not NONE. |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceTlsSettings.property.sni">Sni</a></code> | <code>string</code> | Server Name Indication - see RFC3546 section 3.1. If set, the load balancer sends this string as the SNI hostname in the TLS connection to the backend, and requires that this string match a Subject Alternative Name (SAN) in the backend's server certificate. With a Regional Internet NEG backend, if the SNI is specified here, the load balancer uses it regardless of whether the Regional Internet NEG is specified with FQDN or IP address and port. |
-| <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceTlsSettings.property.subjectAltNames">SubjectAltNames</a></code> | <code>object</code> | subject_alt_names block. |
+| <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceTlsSettings.property.subjectAltNames">SubjectAltNames</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceTlsSettingsSubjectAltNames">ComputeBackendServiceTlsSettingsSubjectAltNames</a>[]</code> | subject_alt_names block. |
 
 ---
 
@@ -5037,10 +5037,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `SubjectAltNames`<sup>Optional</sup> <a name="SubjectAltNames" id="@cdktf/provider-google.computeBackendService.ComputeBackendServiceTlsSettings.property.subjectAltNames"></a>
 
 ```csharp
-public object SubjectAltNames { get; set; }
+public IResolvable|ComputeBackendServiceTlsSettingsSubjectAltNames[] SubjectAltNames { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceTlsSettingsSubjectAltNames">ComputeBackendServiceTlsSettingsSubjectAltNames</a>[]
 
 subject_alt_names block.
 
@@ -5221,7 +5221,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceBackendCustomMetricsList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceBackendCustomMetricsList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceBackendCustomMetricsList.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceBackendCustomMetricsList.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceBackendCustomMetrics">ComputeBackendServiceBackendCustomMetrics</a>[]</code> | *No description.* |
 
 ---
 
@@ -5252,10 +5252,10 @@ public string Fqn { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.computeBackendService.ComputeBackendServiceBackendCustomMetricsList.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|ComputeBackendServiceBackendCustomMetrics[] InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceBackendCustomMetrics">ComputeBackendServiceBackendCustomMetrics</a>[]
 
 ---
 
@@ -5495,13 +5495,13 @@ private void ResetMaxUtilization()
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceBackendCustomMetricsOutputReference.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceBackendCustomMetricsOutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceBackendCustomMetricsOutputReference.property.dryRunInput">DryRunInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceBackendCustomMetricsOutputReference.property.dryRunInput">DryRunInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceBackendCustomMetricsOutputReference.property.maxUtilizationInput">MaxUtilizationInput</a></code> | <code>double</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceBackendCustomMetricsOutputReference.property.nameInput">NameInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceBackendCustomMetricsOutputReference.property.dryRun">DryRun</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceBackendCustomMetricsOutputReference.property.dryRun">DryRun</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceBackendCustomMetricsOutputReference.property.maxUtilization">MaxUtilization</a></code> | <code>double</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceBackendCustomMetricsOutputReference.property.name">Name</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceBackendCustomMetricsOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceBackendCustomMetricsOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceBackendCustomMetrics">ComputeBackendServiceBackendCustomMetrics</a></code> | *No description.* |
 
 ---
 
@@ -5532,10 +5532,10 @@ public string Fqn { get; }
 ##### `DryRunInput`<sup>Optional</sup> <a name="DryRunInput" id="@cdktf/provider-google.computeBackendService.ComputeBackendServiceBackendCustomMetricsOutputReference.property.dryRunInput"></a>
 
 ```csharp
-public object DryRunInput { get; }
+public bool|IResolvable DryRunInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -5562,10 +5562,10 @@ public string NameInput { get; }
 ##### `DryRun`<sup>Required</sup> <a name="DryRun" id="@cdktf/provider-google.computeBackendService.ComputeBackendServiceBackendCustomMetricsOutputReference.property.dryRun"></a>
 
 ```csharp
-public object DryRun { get; }
+public bool|IResolvable DryRun { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -5592,10 +5592,10 @@ public string Name { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.computeBackendService.ComputeBackendServiceBackendCustomMetricsOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|ComputeBackendServiceBackendCustomMetrics InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceBackendCustomMetrics">ComputeBackendServiceBackendCustomMetrics</a>
 
 ---
 
@@ -5721,7 +5721,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceBackendList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceBackendList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceBackendList.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceBackendList.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceBackend">ComputeBackendServiceBackend</a>[]</code> | *No description.* |
 
 ---
 
@@ -5752,10 +5752,10 @@ public string Fqn { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.computeBackendService.ComputeBackendServiceBackendList.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|ComputeBackendServiceBackend[] InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceBackend">ComputeBackendServiceBackend</a>[]
 
 ---
 
@@ -5997,12 +5997,12 @@ Returns a reversible string representation.
 ##### `PutCustomMetrics` <a name="PutCustomMetrics" id="@cdktf/provider-google.computeBackendService.ComputeBackendServiceBackendOutputReference.putCustomMetrics"></a>
 
 ```csharp
-private void PutCustomMetrics(object Value)
+private void PutCustomMetrics(IResolvable|ComputeBackendServiceBackendCustomMetrics[] Value)
 ```
 
 ###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-google.computeBackendService.ComputeBackendServiceBackendOutputReference.putCustomMetrics.parameter.value"></a>
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceBackendCustomMetrics">ComputeBackendServiceBackendCustomMetrics</a>[]
 
 ---
 
@@ -6088,7 +6088,7 @@ private void ResetPreference()
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceBackendOutputReference.property.customMetrics">CustomMetrics</a></code> | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceBackendCustomMetricsList">ComputeBackendServiceBackendCustomMetricsList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceBackendOutputReference.property.balancingModeInput">BalancingModeInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceBackendOutputReference.property.capacityScalerInput">CapacityScalerInput</a></code> | <code>double</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceBackendOutputReference.property.customMetricsInput">CustomMetricsInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceBackendOutputReference.property.customMetricsInput">CustomMetricsInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceBackendCustomMetrics">ComputeBackendServiceBackendCustomMetrics</a>[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceBackendOutputReference.property.descriptionInput">DescriptionInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceBackendOutputReference.property.groupInput">GroupInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceBackendOutputReference.property.maxConnectionsInput">MaxConnectionsInput</a></code> | <code>double</code> | *No description.* |
@@ -6111,7 +6111,7 @@ private void ResetPreference()
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceBackendOutputReference.property.maxRatePerInstance">MaxRatePerInstance</a></code> | <code>double</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceBackendOutputReference.property.maxUtilization">MaxUtilization</a></code> | <code>double</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceBackendOutputReference.property.preference">Preference</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceBackendOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceBackendOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceBackend">ComputeBackendServiceBackend</a></code> | *No description.* |
 
 ---
 
@@ -6172,10 +6172,10 @@ public double CapacityScalerInput { get; }
 ##### `CustomMetricsInput`<sup>Optional</sup> <a name="CustomMetricsInput" id="@cdktf/provider-google.computeBackendService.ComputeBackendServiceBackendOutputReference.property.customMetricsInput"></a>
 
 ```csharp
-public object CustomMetricsInput { get; }
+public IResolvable|ComputeBackendServiceBackendCustomMetrics[] CustomMetricsInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceBackendCustomMetrics">ComputeBackendServiceBackendCustomMetrics</a>[]
 
 ---
 
@@ -6402,10 +6402,10 @@ public string Preference { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.computeBackendService.ComputeBackendServiceBackendOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|ComputeBackendServiceBackend InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceBackend">ComputeBackendServiceBackend</a>
 
 ---
 
@@ -6531,7 +6531,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicyBypassCacheOnRequestHeadersList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicyBypassCacheOnRequestHeadersList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicyBypassCacheOnRequestHeadersList.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicyBypassCacheOnRequestHeadersList.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicyBypassCacheOnRequestHeaders">ComputeBackendServiceCdnPolicyBypassCacheOnRequestHeaders</a>[]</code> | *No description.* |
 
 ---
 
@@ -6562,10 +6562,10 @@ public string Fqn { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicyBypassCacheOnRequestHeadersList.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|ComputeBackendServiceCdnPolicyBypassCacheOnRequestHeaders[] InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicyBypassCacheOnRequestHeaders">ComputeBackendServiceCdnPolicyBypassCacheOnRequestHeaders</a>[]
 
 ---
 
@@ -6800,7 +6800,7 @@ Returns a reversible string representation.
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicyBypassCacheOnRequestHeadersOutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicyBypassCacheOnRequestHeadersOutputReference.property.headerNameInput">HeaderNameInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicyBypassCacheOnRequestHeadersOutputReference.property.headerName">HeaderName</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicyBypassCacheOnRequestHeadersOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicyBypassCacheOnRequestHeadersOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicyBypassCacheOnRequestHeaders">ComputeBackendServiceCdnPolicyBypassCacheOnRequestHeaders</a></code> | *No description.* |
 
 ---
 
@@ -6851,10 +6851,10 @@ public string HeaderName { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicyBypassCacheOnRequestHeadersOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|ComputeBackendServiceCdnPolicyBypassCacheOnRequestHeaders InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicyBypassCacheOnRequestHeaders">ComputeBackendServiceCdnPolicyBypassCacheOnRequestHeaders</a>
 
 ---
 
@@ -7118,18 +7118,18 @@ private void ResetQueryStringWhitelist()
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicyCacheKeyPolicyOutputReference.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicyCacheKeyPolicyOutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicyCacheKeyPolicyOutputReference.property.includeHostInput">IncludeHostInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicyCacheKeyPolicyOutputReference.property.includeHostInput">IncludeHostInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicyCacheKeyPolicyOutputReference.property.includeHttpHeadersInput">IncludeHttpHeadersInput</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicyCacheKeyPolicyOutputReference.property.includeNamedCookiesInput">IncludeNamedCookiesInput</a></code> | <code>string[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicyCacheKeyPolicyOutputReference.property.includeProtocolInput">IncludeProtocolInput</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicyCacheKeyPolicyOutputReference.property.includeQueryStringInput">IncludeQueryStringInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicyCacheKeyPolicyOutputReference.property.includeProtocolInput">IncludeProtocolInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicyCacheKeyPolicyOutputReference.property.includeQueryStringInput">IncludeQueryStringInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicyCacheKeyPolicyOutputReference.property.queryStringBlacklistInput">QueryStringBlacklistInput</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicyCacheKeyPolicyOutputReference.property.queryStringWhitelistInput">QueryStringWhitelistInput</a></code> | <code>string[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicyCacheKeyPolicyOutputReference.property.includeHost">IncludeHost</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicyCacheKeyPolicyOutputReference.property.includeHost">IncludeHost</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicyCacheKeyPolicyOutputReference.property.includeHttpHeaders">IncludeHttpHeaders</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicyCacheKeyPolicyOutputReference.property.includeNamedCookies">IncludeNamedCookies</a></code> | <code>string[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicyCacheKeyPolicyOutputReference.property.includeProtocol">IncludeProtocol</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicyCacheKeyPolicyOutputReference.property.includeQueryString">IncludeQueryString</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicyCacheKeyPolicyOutputReference.property.includeProtocol">IncludeProtocol</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicyCacheKeyPolicyOutputReference.property.includeQueryString">IncludeQueryString</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicyCacheKeyPolicyOutputReference.property.queryStringBlacklist">QueryStringBlacklist</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicyCacheKeyPolicyOutputReference.property.queryStringWhitelist">QueryStringWhitelist</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicyCacheKeyPolicyOutputReference.property.internalValue">InternalValue</a></code> | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicyCacheKeyPolicy">ComputeBackendServiceCdnPolicyCacheKeyPolicy</a></code> | *No description.* |
@@ -7163,10 +7163,10 @@ public string Fqn { get; }
 ##### `IncludeHostInput`<sup>Optional</sup> <a name="IncludeHostInput" id="@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicyCacheKeyPolicyOutputReference.property.includeHostInput"></a>
 
 ```csharp
-public object IncludeHostInput { get; }
+public bool|IResolvable IncludeHostInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -7193,20 +7193,20 @@ public string[] IncludeNamedCookiesInput { get; }
 ##### `IncludeProtocolInput`<sup>Optional</sup> <a name="IncludeProtocolInput" id="@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicyCacheKeyPolicyOutputReference.property.includeProtocolInput"></a>
 
 ```csharp
-public object IncludeProtocolInput { get; }
+public bool|IResolvable IncludeProtocolInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
 ##### `IncludeQueryStringInput`<sup>Optional</sup> <a name="IncludeQueryStringInput" id="@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicyCacheKeyPolicyOutputReference.property.includeQueryStringInput"></a>
 
 ```csharp
-public object IncludeQueryStringInput { get; }
+public bool|IResolvable IncludeQueryStringInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -7233,10 +7233,10 @@ public string[] QueryStringWhitelistInput { get; }
 ##### `IncludeHost`<sup>Required</sup> <a name="IncludeHost" id="@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicyCacheKeyPolicyOutputReference.property.includeHost"></a>
 
 ```csharp
-public object IncludeHost { get; }
+public bool|IResolvable IncludeHost { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -7263,20 +7263,20 @@ public string[] IncludeNamedCookies { get; }
 ##### `IncludeProtocol`<sup>Required</sup> <a name="IncludeProtocol" id="@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicyCacheKeyPolicyOutputReference.property.includeProtocol"></a>
 
 ```csharp
-public object IncludeProtocol { get; }
+public bool|IResolvable IncludeProtocol { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
 ##### `IncludeQueryString`<sup>Required</sup> <a name="IncludeQueryString" id="@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicyCacheKeyPolicyOutputReference.property.includeQueryString"></a>
 
 ```csharp
-public object IncludeQueryString { get; }
+public bool|IResolvable IncludeQueryString { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -7432,7 +7432,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicyNegativeCachingPolicyList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicyNegativeCachingPolicyList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicyNegativeCachingPolicyList.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicyNegativeCachingPolicyList.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicyNegativeCachingPolicy">ComputeBackendServiceCdnPolicyNegativeCachingPolicy</a>[]</code> | *No description.* |
 
 ---
 
@@ -7463,10 +7463,10 @@ public string Fqn { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicyNegativeCachingPolicyList.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|ComputeBackendServiceCdnPolicyNegativeCachingPolicy[] InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicyNegativeCachingPolicy">ComputeBackendServiceCdnPolicyNegativeCachingPolicy</a>[]
 
 ---
 
@@ -7717,7 +7717,7 @@ private void ResetTtl()
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicyNegativeCachingPolicyOutputReference.property.ttlInput">TtlInput</a></code> | <code>double</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicyNegativeCachingPolicyOutputReference.property.code">Code</a></code> | <code>double</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicyNegativeCachingPolicyOutputReference.property.ttl">Ttl</a></code> | <code>double</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicyNegativeCachingPolicyOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicyNegativeCachingPolicyOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicyNegativeCachingPolicy">ComputeBackendServiceCdnPolicyNegativeCachingPolicy</a></code> | *No description.* |
 
 ---
 
@@ -7788,10 +7788,10 @@ public double Ttl { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicyNegativeCachingPolicyOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|ComputeBackendServiceCdnPolicyNegativeCachingPolicy InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicyNegativeCachingPolicy">ComputeBackendServiceCdnPolicyNegativeCachingPolicy</a>
 
 ---
 
@@ -8016,12 +8016,12 @@ Returns a reversible string representation.
 ##### `PutBypassCacheOnRequestHeaders` <a name="PutBypassCacheOnRequestHeaders" id="@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicyOutputReference.putBypassCacheOnRequestHeaders"></a>
 
 ```csharp
-private void PutBypassCacheOnRequestHeaders(object Value)
+private void PutBypassCacheOnRequestHeaders(IResolvable|ComputeBackendServiceCdnPolicyBypassCacheOnRequestHeaders[] Value)
 ```
 
 ###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicyOutputReference.putBypassCacheOnRequestHeaders.parameter.value"></a>
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicyBypassCacheOnRequestHeaders">ComputeBackendServiceCdnPolicyBypassCacheOnRequestHeaders</a>[]
 
 ---
 
@@ -8040,12 +8040,12 @@ private void PutCacheKeyPolicy(ComputeBackendServiceCdnPolicyCacheKeyPolicy Valu
 ##### `PutNegativeCachingPolicy` <a name="PutNegativeCachingPolicy" id="@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicyOutputReference.putNegativeCachingPolicy"></a>
 
 ```csharp
-private void PutNegativeCachingPolicy(object Value)
+private void PutNegativeCachingPolicy(IResolvable|ComputeBackendServiceCdnPolicyNegativeCachingPolicy[] Value)
 ```
 
 ###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicyOutputReference.putNegativeCachingPolicy.parameter.value"></a>
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicyNegativeCachingPolicy">ComputeBackendServiceCdnPolicyNegativeCachingPolicy</a>[]
 
 ---
 
@@ -8125,23 +8125,23 @@ private void ResetSignedUrlCacheMaxAgeSec()
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicyOutputReference.property.bypassCacheOnRequestHeaders">BypassCacheOnRequestHeaders</a></code> | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicyBypassCacheOnRequestHeadersList">ComputeBackendServiceCdnPolicyBypassCacheOnRequestHeadersList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicyOutputReference.property.cacheKeyPolicy">CacheKeyPolicy</a></code> | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicyCacheKeyPolicyOutputReference">ComputeBackendServiceCdnPolicyCacheKeyPolicyOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicyOutputReference.property.negativeCachingPolicy">NegativeCachingPolicy</a></code> | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicyNegativeCachingPolicyList">ComputeBackendServiceCdnPolicyNegativeCachingPolicyList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicyOutputReference.property.bypassCacheOnRequestHeadersInput">BypassCacheOnRequestHeadersInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicyOutputReference.property.bypassCacheOnRequestHeadersInput">BypassCacheOnRequestHeadersInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicyBypassCacheOnRequestHeaders">ComputeBackendServiceCdnPolicyBypassCacheOnRequestHeaders</a>[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicyOutputReference.property.cacheKeyPolicyInput">CacheKeyPolicyInput</a></code> | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicyCacheKeyPolicy">ComputeBackendServiceCdnPolicyCacheKeyPolicy</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicyOutputReference.property.cacheModeInput">CacheModeInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicyOutputReference.property.clientTtlInput">ClientTtlInput</a></code> | <code>double</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicyOutputReference.property.defaultTtlInput">DefaultTtlInput</a></code> | <code>double</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicyOutputReference.property.maxTtlInput">MaxTtlInput</a></code> | <code>double</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicyOutputReference.property.negativeCachingInput">NegativeCachingInput</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicyOutputReference.property.negativeCachingPolicyInput">NegativeCachingPolicyInput</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicyOutputReference.property.requestCoalescingInput">RequestCoalescingInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicyOutputReference.property.negativeCachingInput">NegativeCachingInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicyOutputReference.property.negativeCachingPolicyInput">NegativeCachingPolicyInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicyNegativeCachingPolicy">ComputeBackendServiceCdnPolicyNegativeCachingPolicy</a>[]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicyOutputReference.property.requestCoalescingInput">RequestCoalescingInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicyOutputReference.property.serveWhileStaleInput">ServeWhileStaleInput</a></code> | <code>double</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicyOutputReference.property.signedUrlCacheMaxAgeSecInput">SignedUrlCacheMaxAgeSecInput</a></code> | <code>double</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicyOutputReference.property.cacheMode">CacheMode</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicyOutputReference.property.clientTtl">ClientTtl</a></code> | <code>double</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicyOutputReference.property.defaultTtl">DefaultTtl</a></code> | <code>double</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicyOutputReference.property.maxTtl">MaxTtl</a></code> | <code>double</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicyOutputReference.property.negativeCaching">NegativeCaching</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicyOutputReference.property.requestCoalescing">RequestCoalescing</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicyOutputReference.property.negativeCaching">NegativeCaching</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicyOutputReference.property.requestCoalescing">RequestCoalescing</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicyOutputReference.property.serveWhileStale">ServeWhileStale</a></code> | <code>double</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicyOutputReference.property.signedUrlCacheMaxAgeSec">SignedUrlCacheMaxAgeSec</a></code> | <code>double</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicyOutputReference.property.internalValue">InternalValue</a></code> | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicy">ComputeBackendServiceCdnPolicy</a></code> | *No description.* |
@@ -8205,10 +8205,10 @@ public ComputeBackendServiceCdnPolicyNegativeCachingPolicyList NegativeCachingPo
 ##### `BypassCacheOnRequestHeadersInput`<sup>Optional</sup> <a name="BypassCacheOnRequestHeadersInput" id="@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicyOutputReference.property.bypassCacheOnRequestHeadersInput"></a>
 
 ```csharp
-public object BypassCacheOnRequestHeadersInput { get; }
+public IResolvable|ComputeBackendServiceCdnPolicyBypassCacheOnRequestHeaders[] BypassCacheOnRequestHeadersInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicyBypassCacheOnRequestHeaders">ComputeBackendServiceCdnPolicyBypassCacheOnRequestHeaders</a>[]
 
 ---
 
@@ -8265,30 +8265,30 @@ public double MaxTtlInput { get; }
 ##### `NegativeCachingInput`<sup>Optional</sup> <a name="NegativeCachingInput" id="@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicyOutputReference.property.negativeCachingInput"></a>
 
 ```csharp
-public object NegativeCachingInput { get; }
+public bool|IResolvable NegativeCachingInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
 ##### `NegativeCachingPolicyInput`<sup>Optional</sup> <a name="NegativeCachingPolicyInput" id="@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicyOutputReference.property.negativeCachingPolicyInput"></a>
 
 ```csharp
-public object NegativeCachingPolicyInput { get; }
+public IResolvable|ComputeBackendServiceCdnPolicyNegativeCachingPolicy[] NegativeCachingPolicyInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicyNegativeCachingPolicy">ComputeBackendServiceCdnPolicyNegativeCachingPolicy</a>[]
 
 ---
 
 ##### `RequestCoalescingInput`<sup>Optional</sup> <a name="RequestCoalescingInput" id="@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicyOutputReference.property.requestCoalescingInput"></a>
 
 ```csharp
-public object RequestCoalescingInput { get; }
+public bool|IResolvable RequestCoalescingInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -8355,20 +8355,20 @@ public double MaxTtl { get; }
 ##### `NegativeCaching`<sup>Required</sup> <a name="NegativeCaching" id="@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicyOutputReference.property.negativeCaching"></a>
 
 ```csharp
-public object NegativeCaching { get; }
+public bool|IResolvable NegativeCaching { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
 ##### `RequestCoalescing`<sup>Required</sup> <a name="RequestCoalescing" id="@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicyOutputReference.property.requestCoalescing"></a>
 
 ```csharp
-public object RequestCoalescing { get; }
+public bool|IResolvable RequestCoalescing { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -9916,7 +9916,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCustomMetricsList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCustomMetricsList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCustomMetricsList.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCustomMetricsList.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCustomMetrics">ComputeBackendServiceCustomMetrics</a>[]</code> | *No description.* |
 
 ---
 
@@ -9947,10 +9947,10 @@ public string Fqn { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.computeBackendService.ComputeBackendServiceCustomMetricsList.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|ComputeBackendServiceCustomMetrics[] InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCustomMetrics">ComputeBackendServiceCustomMetrics</a>[]
 
 ---
 
@@ -10183,11 +10183,11 @@ Returns a reversible string representation.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCustomMetricsOutputReference.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCustomMetricsOutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCustomMetricsOutputReference.property.dryRunInput">DryRunInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCustomMetricsOutputReference.property.dryRunInput">DryRunInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCustomMetricsOutputReference.property.nameInput">NameInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCustomMetricsOutputReference.property.dryRun">DryRun</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCustomMetricsOutputReference.property.dryRun">DryRun</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCustomMetricsOutputReference.property.name">Name</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCustomMetricsOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCustomMetricsOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCustomMetrics">ComputeBackendServiceCustomMetrics</a></code> | *No description.* |
 
 ---
 
@@ -10218,10 +10218,10 @@ public string Fqn { get; }
 ##### `DryRunInput`<sup>Optional</sup> <a name="DryRunInput" id="@cdktf/provider-google.computeBackendService.ComputeBackendServiceCustomMetricsOutputReference.property.dryRunInput"></a>
 
 ```csharp
-public object DryRunInput { get; }
+public bool|IResolvable DryRunInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -10238,10 +10238,10 @@ public string NameInput { get; }
 ##### `DryRun`<sup>Required</sup> <a name="DryRun" id="@cdktf/provider-google.computeBackendService.ComputeBackendServiceCustomMetricsOutputReference.property.dryRun"></a>
 
 ```csharp
-public object DryRun { get; }
+public bool|IResolvable DryRun { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -10258,10 +10258,10 @@ public string Name { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.computeBackendService.ComputeBackendServiceCustomMetricsOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|ComputeBackendServiceCustomMetrics InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceCustomMetrics">ComputeBackendServiceCustomMetrics</a>
 
 ---
 
@@ -10491,10 +10491,10 @@ private void ResetOauth2ClientSecret()
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceIapOutputReference.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceIapOutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceIapOutputReference.property.oauth2ClientSecretSha256">Oauth2ClientSecretSha256</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceIapOutputReference.property.enabledInput">EnabledInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceIapOutputReference.property.enabledInput">EnabledInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceIapOutputReference.property.oauth2ClientIdInput">Oauth2ClientIdInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceIapOutputReference.property.oauth2ClientSecretInput">Oauth2ClientSecretInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceIapOutputReference.property.enabled">Enabled</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceIapOutputReference.property.enabled">Enabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceIapOutputReference.property.oauth2ClientId">Oauth2ClientId</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceIapOutputReference.property.oauth2ClientSecret">Oauth2ClientSecret</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceIapOutputReference.property.internalValue">InternalValue</a></code> | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceIap">ComputeBackendServiceIap</a></code> | *No description.* |
@@ -10538,10 +10538,10 @@ public string Oauth2ClientSecretSha256 { get; }
 ##### `EnabledInput`<sup>Optional</sup> <a name="EnabledInput" id="@cdktf/provider-google.computeBackendService.ComputeBackendServiceIapOutputReference.property.enabledInput"></a>
 
 ```csharp
-public object EnabledInput { get; }
+public bool|IResolvable EnabledInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -10568,10 +10568,10 @@ public string Oauth2ClientSecretInput { get; }
 ##### `Enabled`<sup>Required</sup> <a name="Enabled" id="@cdktf/provider-google.computeBackendService.ComputeBackendServiceIapOutputReference.property.enabled"></a>
 
 ```csharp
-public object Enabled { get; }
+public bool|IResolvable Enabled { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -11027,7 +11027,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceLocalityLbPoliciesList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceLocalityLbPoliciesList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceLocalityLbPoliciesList.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceLocalityLbPoliciesList.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceLocalityLbPolicies">ComputeBackendServiceLocalityLbPolicies</a>[]</code> | *No description.* |
 
 ---
 
@@ -11058,10 +11058,10 @@ public string Fqn { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.computeBackendService.ComputeBackendServiceLocalityLbPoliciesList.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|ComputeBackendServiceLocalityLbPolicies[] InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceLocalityLbPolicies">ComputeBackendServiceLocalityLbPolicies</a>[]
 
 ---
 
@@ -11338,7 +11338,7 @@ private void ResetPolicy()
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceLocalityLbPoliciesOutputReference.property.policy">Policy</a></code> | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceLocalityLbPoliciesPolicyOutputReference">ComputeBackendServiceLocalityLbPoliciesPolicyOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceLocalityLbPoliciesOutputReference.property.customPolicyInput">CustomPolicyInput</a></code> | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceLocalityLbPoliciesCustomPolicy">ComputeBackendServiceLocalityLbPoliciesCustomPolicy</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceLocalityLbPoliciesOutputReference.property.policyInput">PolicyInput</a></code> | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceLocalityLbPoliciesPolicy">ComputeBackendServiceLocalityLbPoliciesPolicy</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceLocalityLbPoliciesOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceLocalityLbPoliciesOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceLocalityLbPolicies">ComputeBackendServiceLocalityLbPolicies</a></code> | *No description.* |
 
 ---
 
@@ -11409,10 +11409,10 @@ public ComputeBackendServiceLocalityLbPoliciesPolicy PolicyInput { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.computeBackendService.ComputeBackendServiceLocalityLbPoliciesOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|ComputeBackendServiceLocalityLbPolicies InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceLocalityLbPolicies">ComputeBackendServiceLocalityLbPolicies</a>
 
 ---
 
@@ -11926,11 +11926,11 @@ private void ResetSampleRate()
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceLogConfigOutputReference.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceLogConfigOutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceLogConfigOutputReference.property.enableInput">EnableInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceLogConfigOutputReference.property.enableInput">EnableInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceLogConfigOutputReference.property.optionalFieldsInput">OptionalFieldsInput</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceLogConfigOutputReference.property.optionalModeInput">OptionalModeInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceLogConfigOutputReference.property.sampleRateInput">SampleRateInput</a></code> | <code>double</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceLogConfigOutputReference.property.enable">Enable</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceLogConfigOutputReference.property.enable">Enable</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceLogConfigOutputReference.property.optionalFields">OptionalFields</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceLogConfigOutputReference.property.optionalMode">OptionalMode</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceLogConfigOutputReference.property.sampleRate">SampleRate</a></code> | <code>double</code> | *No description.* |
@@ -11965,10 +11965,10 @@ public string Fqn { get; }
 ##### `EnableInput`<sup>Optional</sup> <a name="EnableInput" id="@cdktf/provider-google.computeBackendService.ComputeBackendServiceLogConfigOutputReference.property.enableInput"></a>
 
 ```csharp
-public object EnableInput { get; }
+public bool|IResolvable EnableInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -12005,10 +12005,10 @@ public double SampleRateInput { get; }
 ##### `Enable`<sup>Required</sup> <a name="Enable" id="@cdktf/provider-google.computeBackendService.ComputeBackendServiceLogConfigOutputReference.property.enable"></a>
 
 ```csharp
-public object Enable { get; }
+public bool|IResolvable Enable { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -15147,7 +15147,7 @@ private void ResetUpdate()
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceTimeoutsOutputReference.property.create">Create</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceTimeoutsOutputReference.property.delete">Delete</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceTimeoutsOutputReference.property.update">Update</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceTimeoutsOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceTimeoutsOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceTimeouts">ComputeBackendServiceTimeouts</a></code> | *No description.* |
 
 ---
 
@@ -15238,10 +15238,10 @@ public string Update { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.computeBackendService.ComputeBackendServiceTimeoutsOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|ComputeBackendServiceTimeouts InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceTimeouts">ComputeBackendServiceTimeouts</a>
 
 ---
 
@@ -15456,12 +15456,12 @@ Returns a reversible string representation.
 ##### `PutSubjectAltNames` <a name="PutSubjectAltNames" id="@cdktf/provider-google.computeBackendService.ComputeBackendServiceTlsSettingsOutputReference.putSubjectAltNames"></a>
 
 ```csharp
-private void PutSubjectAltNames(object Value)
+private void PutSubjectAltNames(IResolvable|ComputeBackendServiceTlsSettingsSubjectAltNames[] Value)
 ```
 
 ###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-google.computeBackendService.ComputeBackendServiceTlsSettingsOutputReference.putSubjectAltNames.parameter.value"></a>
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceTlsSettingsSubjectAltNames">ComputeBackendServiceTlsSettingsSubjectAltNames</a>[]
 
 ---
 
@@ -15493,7 +15493,7 @@ private void ResetSubjectAltNames()
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceTlsSettingsOutputReference.property.subjectAltNames">SubjectAltNames</a></code> | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceTlsSettingsSubjectAltNamesList">ComputeBackendServiceTlsSettingsSubjectAltNamesList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceTlsSettingsOutputReference.property.authenticationConfigInput">AuthenticationConfigInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceTlsSettingsOutputReference.property.sniInput">SniInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceTlsSettingsOutputReference.property.subjectAltNamesInput">SubjectAltNamesInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceTlsSettingsOutputReference.property.subjectAltNamesInput">SubjectAltNamesInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceTlsSettingsSubjectAltNames">ComputeBackendServiceTlsSettingsSubjectAltNames</a>[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceTlsSettingsOutputReference.property.authenticationConfig">AuthenticationConfig</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceTlsSettingsOutputReference.property.sni">Sni</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceTlsSettingsOutputReference.property.internalValue">InternalValue</a></code> | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceTlsSettings">ComputeBackendServiceTlsSettings</a></code> | *No description.* |
@@ -15557,10 +15557,10 @@ public string SniInput { get; }
 ##### `SubjectAltNamesInput`<sup>Optional</sup> <a name="SubjectAltNamesInput" id="@cdktf/provider-google.computeBackendService.ComputeBackendServiceTlsSettingsOutputReference.property.subjectAltNamesInput"></a>
 
 ```csharp
-public object SubjectAltNamesInput { get; }
+public IResolvable|ComputeBackendServiceTlsSettingsSubjectAltNames[] SubjectAltNamesInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceTlsSettingsSubjectAltNames">ComputeBackendServiceTlsSettingsSubjectAltNames</a>[]
 
 ---
 
@@ -15716,7 +15716,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceTlsSettingsSubjectAltNamesList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceTlsSettingsSubjectAltNamesList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceTlsSettingsSubjectAltNamesList.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceTlsSettingsSubjectAltNamesList.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceTlsSettingsSubjectAltNames">ComputeBackendServiceTlsSettingsSubjectAltNames</a>[]</code> | *No description.* |
 
 ---
 
@@ -15747,10 +15747,10 @@ public string Fqn { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.computeBackendService.ComputeBackendServiceTlsSettingsSubjectAltNamesList.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|ComputeBackendServiceTlsSettingsSubjectAltNames[] InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceTlsSettingsSubjectAltNames">ComputeBackendServiceTlsSettingsSubjectAltNames</a>[]
 
 ---
 
@@ -16001,7 +16001,7 @@ private void ResetUniformResourceIdentifier()
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceTlsSettingsSubjectAltNamesOutputReference.property.uniformResourceIdentifierInput">UniformResourceIdentifierInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceTlsSettingsSubjectAltNamesOutputReference.property.dnsName">DnsName</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceTlsSettingsSubjectAltNamesOutputReference.property.uniformResourceIdentifier">UniformResourceIdentifier</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceTlsSettingsSubjectAltNamesOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceTlsSettingsSubjectAltNamesOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceTlsSettingsSubjectAltNames">ComputeBackendServiceTlsSettingsSubjectAltNames</a></code> | *No description.* |
 
 ---
 
@@ -16072,10 +16072,10 @@ public string UniformResourceIdentifier { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.computeBackendService.ComputeBackendServiceTlsSettingsSubjectAltNamesOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|ComputeBackendServiceTlsSettingsSubjectAltNames InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.computeBackendService.ComputeBackendServiceTlsSettingsSubjectAltNames">ComputeBackendServiceTlsSettingsSubjectAltNames</a>
 
 ---
 

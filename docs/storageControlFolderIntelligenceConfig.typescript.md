@@ -702,7 +702,7 @@ public readonly provider: TerraformProvider;
 ##### `provisioners`<sup>Optional</sup> <a name="provisioners" id="@cdktf/provider-google.storageControlFolderIntelligenceConfig.StorageControlFolderIntelligenceConfig.property.provisioners"></a>
 
 ```typescript
-public readonly provisioners: FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner[];
+public readonly provisioners: (FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner)[];
 ```
 
 - *Type:* cdktf.FileProvisioner | cdktf.LocalExecProvisioner | cdktf.RemoteExecProvisioner[]
@@ -951,7 +951,7 @@ public readonly provider: TerraformProvider;
 ##### `provisioners`<sup>Optional</sup> <a name="provisioners" id="@cdktf/provider-google.storageControlFolderIntelligenceConfig.StorageControlFolderIntelligenceConfigConfig.property.provisioners"></a>
 
 ```typescript
-public readonly provisioners: FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner[];
+public readonly provisioners: (FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner)[];
 ```
 
 - *Type:* cdktf.FileProvisioner | cdktf.LocalExecProvisioner | cdktf.RemoteExecProvisioner[]

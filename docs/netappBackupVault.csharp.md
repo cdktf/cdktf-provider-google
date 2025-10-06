@@ -283,7 +283,7 @@ private System.Collections.Generic.IDictionary<string, string> GetStringMapAttri
 ##### `HasResourceMove` <a name="HasResourceMove" id="@cdktf/provider-google.netappBackupVault.NetappBackupVault.hasResourceMove"></a>
 
 ```csharp
-private object HasResourceMove()
+private TerraformResourceMoveByTarget|TerraformResourceMoveById HasResourceMove()
 ```
 
 ##### `ImportFrom` <a name="ImportFrom" id="@cdktf/provider-google.netappBackupVault.NetappBackupVault.importFrom"></a>
@@ -337,7 +337,7 @@ Full id of resource being moved from, e.g. "aws_s3_bucket.example".
 ##### `MoveTo` <a name="MoveTo" id="@cdktf/provider-google.netappBackupVault.NetappBackupVault.moveTo"></a>
 
 ```csharp
-private void MoveTo(string MoveTarget, object Index = null)
+private void MoveTo(string MoveTarget, string|double Index = null)
 ```
 
 Moves this resource to the target resource given by moveTarget.
@@ -352,7 +352,7 @@ The previously set user defined string set by .addMoveTarget() corresponding to 
 
 ###### `Index`<sup>Optional</sup> <a name="Index" id="@cdktf/provider-google.netappBackupVault.NetappBackupVault.moveTo.parameter.index"></a>
 
-- *Type:* object
+- *Type:* string|double
 
 Optional The index corresponding to the key the resource is to appear in the foreach of a resource to move to.
 
@@ -572,13 +572,13 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.5
 | <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVault.property.terraformMetaArguments">TerraformMetaArguments</a></code> | <code>System.Collections.Generic.IDictionary<string, object></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVault.property.terraformResourceType">TerraformResourceType</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVault.property.terraformGeneratorMetadata">TerraformGeneratorMetadata</a></code> | <code>HashiCorp.Cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVault.property.connection">Connection</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVault.property.count">Count</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVault.property.connection">Connection</a></code> | <code>HashiCorp.Cdktf.SSHProvisionerConnection\|HashiCorp.Cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVault.property.count">Count</a></code> | <code>double\|HashiCorp.Cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVault.property.dependsOn">DependsOn</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVault.property.forEach">ForEach</a></code> | <code>HashiCorp.Cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVault.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVault.property.provider">Provider</a></code> | <code>HashiCorp.Cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVault.property.provisioners">Provisioners</a></code> | <code>object[]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVault.property.provisioners">Provisioners</a></code> | <code>HashiCorp.Cdktf.FileProvisioner\|HashiCorp.Cdktf.LocalExecProvisioner\|HashiCorp.Cdktf.RemoteExecProvisioner[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVault.property.backupRetentionPolicy">BackupRetentionPolicy</a></code> | <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVaultBackupRetentionPolicyOutputReference">NetappBackupVaultBackupRetentionPolicyOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVault.property.createTime">CreateTime</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVault.property.destinationBackupVault">DestinationBackupVault</a></code> | <code>string</code> | *No description.* |
@@ -597,7 +597,7 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.5
 | <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVault.property.locationInput">LocationInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVault.property.nameInput">NameInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVault.property.projectInput">ProjectInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVault.property.timeoutsInput">TimeoutsInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVault.property.timeoutsInput">TimeoutsInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVaultTimeouts">NetappBackupVaultTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVault.property.backupRegion">BackupRegion</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVault.property.backupVaultType">BackupVaultType</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVault.property.description">Description</a></code> | <code>string</code> | *No description.* |
@@ -684,20 +684,20 @@ public TerraformProviderGeneratorMetadata TerraformGeneratorMetadata { get; }
 ##### `Connection`<sup>Optional</sup> <a name="Connection" id="@cdktf/provider-google.netappBackupVault.NetappBackupVault.property.connection"></a>
 
 ```csharp
-public object Connection { get; }
+public SSHProvisionerConnection|WinrmProvisionerConnection Connection { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.SSHProvisionerConnection|HashiCorp.Cdktf.WinrmProvisionerConnection
 
 ---
 
 ##### `Count`<sup>Optional</sup> <a name="Count" id="@cdktf/provider-google.netappBackupVault.NetappBackupVault.property.count"></a>
 
 ```csharp
-public object Count { get; }
+public double|TerraformCount Count { get; }
 ```
 
-- *Type:* object
+- *Type:* double|HashiCorp.Cdktf.TerraformCount
 
 ---
 
@@ -744,10 +744,10 @@ public TerraformProvider Provider { get; }
 ##### `Provisioners`<sup>Optional</sup> <a name="Provisioners" id="@cdktf/provider-google.netappBackupVault.NetappBackupVault.property.provisioners"></a>
 
 ```csharp
-public object[] Provisioners { get; }
+public (FileProvisioner|LocalExecProvisioner|RemoteExecProvisioner)[] Provisioners { get; }
 ```
 
-- *Type:* object[]
+- *Type:* HashiCorp.Cdktf.FileProvisioner|HashiCorp.Cdktf.LocalExecProvisioner|HashiCorp.Cdktf.RemoteExecProvisioner[]
 
 ---
 
@@ -934,10 +934,10 @@ public string ProjectInput { get; }
 ##### `TimeoutsInput`<sup>Optional</sup> <a name="TimeoutsInput" id="@cdktf/provider-google.netappBackupVault.NetappBackupVault.property.timeoutsInput"></a>
 
 ```csharp
-public object TimeoutsInput { get; }
+public IResolvable|NetappBackupVaultTimeouts TimeoutsInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVaultTimeouts">NetappBackupVaultTimeouts</a>
 
 ---
 
@@ -1050,10 +1050,10 @@ using HashiCorp.Cdktf.Providers.Google;
 
 new NetappBackupVaultBackupRetentionPolicy {
     double BackupMinimumEnforcedRetentionDays,
-    object DailyBackupImmutable = null,
-    object ManualBackupImmutable = null,
-    object MonthlyBackupImmutable = null,
-    object WeeklyBackupImmutable = null
+    bool|IResolvable DailyBackupImmutable = null,
+    bool|IResolvable ManualBackupImmutable = null,
+    bool|IResolvable MonthlyBackupImmutable = null,
+    bool|IResolvable WeeklyBackupImmutable = null
 };
 ```
 
@@ -1062,10 +1062,10 @@ new NetappBackupVaultBackupRetentionPolicy {
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVaultBackupRetentionPolicy.property.backupMinimumEnforcedRetentionDays">BackupMinimumEnforcedRetentionDays</a></code> | <code>double</code> | Minimum retention duration in days for backups in the backup vault. |
-| <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVaultBackupRetentionPolicy.property.dailyBackupImmutable">DailyBackupImmutable</a></code> | <code>object</code> | Indicates if the daily backups are immutable. At least one of daily_backup_immutable, weekly_backup_immutable, monthly_backup_immutable and manual_backup_immutable must be true. |
-| <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVaultBackupRetentionPolicy.property.manualBackupImmutable">ManualBackupImmutable</a></code> | <code>object</code> | Indicates if the manual backups are immutable. At least one of daily_backup_immutable, weekly_backup_immutable, monthly_backup_immutable and manual_backup_immutable must be true. |
-| <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVaultBackupRetentionPolicy.property.monthlyBackupImmutable">MonthlyBackupImmutable</a></code> | <code>object</code> | Indicates if the monthly backups are immutable. At least one of daily_backup_immutable, weekly_backup_immutable, monthly_backup_immutable and manual_backup_immutable must be true. |
-| <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVaultBackupRetentionPolicy.property.weeklyBackupImmutable">WeeklyBackupImmutable</a></code> | <code>object</code> | Indicates if the weekly backups are immutable. At least one of daily_backup_immutable, weekly_backup_immutable, monthly_backup_immutable and manual_backup_immutable must be true. |
+| <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVaultBackupRetentionPolicy.property.dailyBackupImmutable">DailyBackupImmutable</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Indicates if the daily backups are immutable. At least one of daily_backup_immutable, weekly_backup_immutable, monthly_backup_immutable and manual_backup_immutable must be true. |
+| <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVaultBackupRetentionPolicy.property.manualBackupImmutable">ManualBackupImmutable</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Indicates if the manual backups are immutable. At least one of daily_backup_immutable, weekly_backup_immutable, monthly_backup_immutable and manual_backup_immutable must be true. |
+| <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVaultBackupRetentionPolicy.property.monthlyBackupImmutable">MonthlyBackupImmutable</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Indicates if the monthly backups are immutable. At least one of daily_backup_immutable, weekly_backup_immutable, monthly_backup_immutable and manual_backup_immutable must be true. |
+| <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVaultBackupRetentionPolicy.property.weeklyBackupImmutable">WeeklyBackupImmutable</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Indicates if the weekly backups are immutable. At least one of daily_backup_immutable, weekly_backup_immutable, monthly_backup_immutable and manual_backup_immutable must be true. |
 
 ---
 
@@ -1086,10 +1086,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `DailyBackupImmutable`<sup>Optional</sup> <a name="DailyBackupImmutable" id="@cdktf/provider-google.netappBackupVault.NetappBackupVaultBackupRetentionPolicy.property.dailyBackupImmutable"></a>
 
 ```csharp
-public object DailyBackupImmutable { get; set; }
+public bool|IResolvable DailyBackupImmutable { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Indicates if the daily backups are immutable. At least one of daily_backup_immutable, weekly_backup_immutable, monthly_backup_immutable and manual_backup_immutable must be true.
 
@@ -1100,10 +1100,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `ManualBackupImmutable`<sup>Optional</sup> <a name="ManualBackupImmutable" id="@cdktf/provider-google.netappBackupVault.NetappBackupVaultBackupRetentionPolicy.property.manualBackupImmutable"></a>
 
 ```csharp
-public object ManualBackupImmutable { get; set; }
+public bool|IResolvable ManualBackupImmutable { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Indicates if the manual backups are immutable. At least one of daily_backup_immutable, weekly_backup_immutable, monthly_backup_immutable and manual_backup_immutable must be true.
 
@@ -1114,10 +1114,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `MonthlyBackupImmutable`<sup>Optional</sup> <a name="MonthlyBackupImmutable" id="@cdktf/provider-google.netappBackupVault.NetappBackupVaultBackupRetentionPolicy.property.monthlyBackupImmutable"></a>
 
 ```csharp
-public object MonthlyBackupImmutable { get; set; }
+public bool|IResolvable MonthlyBackupImmutable { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Indicates if the monthly backups are immutable. At least one of daily_backup_immutable, weekly_backup_immutable, monthly_backup_immutable and manual_backup_immutable must be true.
 
@@ -1128,10 +1128,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `WeeklyBackupImmutable`<sup>Optional</sup> <a name="WeeklyBackupImmutable" id="@cdktf/provider-google.netappBackupVault.NetappBackupVaultBackupRetentionPolicy.property.weeklyBackupImmutable"></a>
 
 ```csharp
-public object WeeklyBackupImmutable { get; set; }
+public bool|IResolvable WeeklyBackupImmutable { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Indicates if the weekly backups are immutable. At least one of daily_backup_immutable, weekly_backup_immutable, monthly_backup_immutable and manual_backup_immutable must be true.
 
@@ -1147,13 +1147,13 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 using HashiCorp.Cdktf.Providers.Google;
 
 new NetappBackupVaultConfig {
-    object Connection = null,
-    object Count = null,
+    SSHProvisionerConnection|WinrmProvisionerConnection Connection = null,
+    double|TerraformCount Count = null,
     ITerraformDependable[] DependsOn = null,
     ITerraformIterator ForEach = null,
     TerraformResourceLifecycle Lifecycle = null,
     TerraformProvider Provider = null,
-    object[] Provisioners = null,
+    (FileProvisioner|LocalExecProvisioner|RemoteExecProvisioner)[] Provisioners = null,
     string Location,
     string Name,
     string BackupRegion = null,
@@ -1171,13 +1171,13 @@ new NetappBackupVaultConfig {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVaultConfig.property.connection">Connection</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVaultConfig.property.count">Count</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVaultConfig.property.connection">Connection</a></code> | <code>HashiCorp.Cdktf.SSHProvisionerConnection\|HashiCorp.Cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVaultConfig.property.count">Count</a></code> | <code>double\|HashiCorp.Cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVaultConfig.property.dependsOn">DependsOn</a></code> | <code>HashiCorp.Cdktf.ITerraformDependable[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVaultConfig.property.forEach">ForEach</a></code> | <code>HashiCorp.Cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVaultConfig.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVaultConfig.property.provider">Provider</a></code> | <code>HashiCorp.Cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVaultConfig.property.provisioners">Provisioners</a></code> | <code>object[]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVaultConfig.property.provisioners">Provisioners</a></code> | <code>HashiCorp.Cdktf.FileProvisioner\|HashiCorp.Cdktf.LocalExecProvisioner\|HashiCorp.Cdktf.RemoteExecProvisioner[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVaultConfig.property.location">Location</a></code> | <code>string</code> | Location (region) of the backup vault. |
 | <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVaultConfig.property.name">Name</a></code> | <code>string</code> | The resource name of the backup vault. Needs to be unique per location. |
 | <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVaultConfig.property.backupRegion">BackupRegion</a></code> | <code>string</code> | Region in which backup is stored. |
@@ -1194,20 +1194,20 @@ new NetappBackupVaultConfig {
 ##### `Connection`<sup>Optional</sup> <a name="Connection" id="@cdktf/provider-google.netappBackupVault.NetappBackupVaultConfig.property.connection"></a>
 
 ```csharp
-public object Connection { get; set; }
+public SSHProvisionerConnection|WinrmProvisionerConnection Connection { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.SSHProvisionerConnection|HashiCorp.Cdktf.WinrmProvisionerConnection
 
 ---
 
 ##### `Count`<sup>Optional</sup> <a name="Count" id="@cdktf/provider-google.netappBackupVault.NetappBackupVaultConfig.property.count"></a>
 
 ```csharp
-public object Count { get; set; }
+public double|TerraformCount Count { get; set; }
 ```
 
-- *Type:* object
+- *Type:* double|HashiCorp.Cdktf.TerraformCount
 
 ---
 
@@ -1254,10 +1254,10 @@ public TerraformProvider Provider { get; set; }
 ##### `Provisioners`<sup>Optional</sup> <a name="Provisioners" id="@cdktf/provider-google.netappBackupVault.NetappBackupVaultConfig.property.provisioners"></a>
 
 ```csharp
-public object[] Provisioners { get; set; }
+public (FileProvisioner|LocalExecProvisioner|RemoteExecProvisioner)[] Provisioners { get; set; }
 ```
 
-- *Type:* object[]
+- *Type:* HashiCorp.Cdktf.FileProvisioner|HashiCorp.Cdktf.LocalExecProvisioner|HashiCorp.Cdktf.RemoteExecProvisioner[]
 
 ---
 
@@ -1704,15 +1704,15 @@ private void ResetWeeklyBackupImmutable()
 | <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVaultBackupRetentionPolicyOutputReference.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVaultBackupRetentionPolicyOutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVaultBackupRetentionPolicyOutputReference.property.backupMinimumEnforcedRetentionDaysInput">BackupMinimumEnforcedRetentionDaysInput</a></code> | <code>double</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVaultBackupRetentionPolicyOutputReference.property.dailyBackupImmutableInput">DailyBackupImmutableInput</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVaultBackupRetentionPolicyOutputReference.property.manualBackupImmutableInput">ManualBackupImmutableInput</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVaultBackupRetentionPolicyOutputReference.property.monthlyBackupImmutableInput">MonthlyBackupImmutableInput</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVaultBackupRetentionPolicyOutputReference.property.weeklyBackupImmutableInput">WeeklyBackupImmutableInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVaultBackupRetentionPolicyOutputReference.property.dailyBackupImmutableInput">DailyBackupImmutableInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVaultBackupRetentionPolicyOutputReference.property.manualBackupImmutableInput">ManualBackupImmutableInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVaultBackupRetentionPolicyOutputReference.property.monthlyBackupImmutableInput">MonthlyBackupImmutableInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVaultBackupRetentionPolicyOutputReference.property.weeklyBackupImmutableInput">WeeklyBackupImmutableInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVaultBackupRetentionPolicyOutputReference.property.backupMinimumEnforcedRetentionDays">BackupMinimumEnforcedRetentionDays</a></code> | <code>double</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVaultBackupRetentionPolicyOutputReference.property.dailyBackupImmutable">DailyBackupImmutable</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVaultBackupRetentionPolicyOutputReference.property.manualBackupImmutable">ManualBackupImmutable</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVaultBackupRetentionPolicyOutputReference.property.monthlyBackupImmutable">MonthlyBackupImmutable</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVaultBackupRetentionPolicyOutputReference.property.weeklyBackupImmutable">WeeklyBackupImmutable</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVaultBackupRetentionPolicyOutputReference.property.dailyBackupImmutable">DailyBackupImmutable</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVaultBackupRetentionPolicyOutputReference.property.manualBackupImmutable">ManualBackupImmutable</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVaultBackupRetentionPolicyOutputReference.property.monthlyBackupImmutable">MonthlyBackupImmutable</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVaultBackupRetentionPolicyOutputReference.property.weeklyBackupImmutable">WeeklyBackupImmutable</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVaultBackupRetentionPolicyOutputReference.property.internalValue">InternalValue</a></code> | <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVaultBackupRetentionPolicy">NetappBackupVaultBackupRetentionPolicy</a></code> | *No description.* |
 
 ---
@@ -1754,40 +1754,40 @@ public double BackupMinimumEnforcedRetentionDaysInput { get; }
 ##### `DailyBackupImmutableInput`<sup>Optional</sup> <a name="DailyBackupImmutableInput" id="@cdktf/provider-google.netappBackupVault.NetappBackupVaultBackupRetentionPolicyOutputReference.property.dailyBackupImmutableInput"></a>
 
 ```csharp
-public object DailyBackupImmutableInput { get; }
+public bool|IResolvable DailyBackupImmutableInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
 ##### `ManualBackupImmutableInput`<sup>Optional</sup> <a name="ManualBackupImmutableInput" id="@cdktf/provider-google.netappBackupVault.NetappBackupVaultBackupRetentionPolicyOutputReference.property.manualBackupImmutableInput"></a>
 
 ```csharp
-public object ManualBackupImmutableInput { get; }
+public bool|IResolvable ManualBackupImmutableInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
 ##### `MonthlyBackupImmutableInput`<sup>Optional</sup> <a name="MonthlyBackupImmutableInput" id="@cdktf/provider-google.netappBackupVault.NetappBackupVaultBackupRetentionPolicyOutputReference.property.monthlyBackupImmutableInput"></a>
 
 ```csharp
-public object MonthlyBackupImmutableInput { get; }
+public bool|IResolvable MonthlyBackupImmutableInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
 ##### `WeeklyBackupImmutableInput`<sup>Optional</sup> <a name="WeeklyBackupImmutableInput" id="@cdktf/provider-google.netappBackupVault.NetappBackupVaultBackupRetentionPolicyOutputReference.property.weeklyBackupImmutableInput"></a>
 
 ```csharp
-public object WeeklyBackupImmutableInput { get; }
+public bool|IResolvable WeeklyBackupImmutableInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -1804,40 +1804,40 @@ public double BackupMinimumEnforcedRetentionDays { get; }
 ##### `DailyBackupImmutable`<sup>Required</sup> <a name="DailyBackupImmutable" id="@cdktf/provider-google.netappBackupVault.NetappBackupVaultBackupRetentionPolicyOutputReference.property.dailyBackupImmutable"></a>
 
 ```csharp
-public object DailyBackupImmutable { get; }
+public bool|IResolvable DailyBackupImmutable { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
 ##### `ManualBackupImmutable`<sup>Required</sup> <a name="ManualBackupImmutable" id="@cdktf/provider-google.netappBackupVault.NetappBackupVaultBackupRetentionPolicyOutputReference.property.manualBackupImmutable"></a>
 
 ```csharp
-public object ManualBackupImmutable { get; }
+public bool|IResolvable ManualBackupImmutable { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
 ##### `MonthlyBackupImmutable`<sup>Required</sup> <a name="MonthlyBackupImmutable" id="@cdktf/provider-google.netappBackupVault.NetappBackupVaultBackupRetentionPolicyOutputReference.property.monthlyBackupImmutable"></a>
 
 ```csharp
-public object MonthlyBackupImmutable { get; }
+public bool|IResolvable MonthlyBackupImmutable { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
 ##### `WeeklyBackupImmutable`<sup>Required</sup> <a name="WeeklyBackupImmutable" id="@cdktf/provider-google.netappBackupVault.NetappBackupVaultBackupRetentionPolicyOutputReference.property.weeklyBackupImmutable"></a>
 
 ```csharp
-public object WeeklyBackupImmutable { get; }
+public bool|IResolvable WeeklyBackupImmutable { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -2089,7 +2089,7 @@ private void ResetUpdate()
 | <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVaultTimeoutsOutputReference.property.create">Create</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVaultTimeoutsOutputReference.property.delete">Delete</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVaultTimeoutsOutputReference.property.update">Update</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVaultTimeoutsOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVaultTimeoutsOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVaultTimeouts">NetappBackupVaultTimeouts</a></code> | *No description.* |
 
 ---
 
@@ -2180,10 +2180,10 @@ public string Update { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.netappBackupVault.NetappBackupVaultTimeoutsOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|NetappBackupVaultTimeouts InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVaultTimeouts">NetappBackupVaultTimeouts</a>
 
 ---
 

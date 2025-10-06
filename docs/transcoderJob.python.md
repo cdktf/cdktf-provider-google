@@ -14,13 +14,13 @@ from cdktf_cdktf_provider_google import transcoder_job
 transcoderJob.TranscoderJob(
   scope: Construct,
   id: str,
-  connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection] = None,
-  count: typing.Union[typing.Union[int, float], TerraformCount] = None,
+  connection: SSHProvisionerConnection | WinrmProvisionerConnection = None,
+  count: typing.Union[int, float] | TerraformCount = None,
   depends_on: typing.List[ITerraformDependable] = None,
   for_each: ITerraformIterator = None,
   lifecycle: TerraformResourceLifecycle = None,
   provider: TerraformProvider = None,
-  provisioners: typing.List[typing.Union[FileProvisioner, LocalExecProvisioner, RemoteExecProvisioner]] = None,
+  provisioners: typing.List[FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner] = None,
   location: str,
   config: TranscoderJobConfigA = None,
   id: str = None,
@@ -35,13 +35,13 @@ transcoderJob.TranscoderJob(
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJob.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | The scope in which to define this construct. |
 | <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJob.Initializer.parameter.id">id</a></code> | <code>str</code> | The scoped construct ID. |
-| <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJob.Initializer.parameter.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJob.Initializer.parameter.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJob.Initializer.parameter.connection">connection</a></code> | <code>cdktf.SSHProvisionerConnection \| cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJob.Initializer.parameter.count">count</a></code> | <code>typing.Union[int, float] \| cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJob.Initializer.parameter.dependsOn">depends_on</a></code> | <code>typing.List[cdktf.ITerraformDependable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJob.Initializer.parameter.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJob.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJob.Initializer.parameter.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJob.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJob.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJob.Initializer.parameter.location">location</a></code> | <code>str</code> | The location of the transcoding job resource. |
 | <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJob.Initializer.parameter.config">config</a></code> | <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigA">TranscoderJobConfigA</a></code> | config block. |
 | <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJob.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/transcoder_job#id TranscoderJob#id}. |
@@ -72,13 +72,13 @@ Must be unique amongst siblings in the same scope
 
 ##### `connection`<sup>Optional</sup> <a name="connection" id="@cdktf/provider-google.transcoderJob.TranscoderJob.Initializer.parameter.connection"></a>
 
-- *Type:* typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]
+- *Type:* cdktf.SSHProvisionerConnection | cdktf.WinrmProvisionerConnection
 
 ---
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.transcoderJob.TranscoderJob.Initializer.parameter.count"></a>
 
-- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
+- *Type:* typing.Union[int, float] | cdktf.TerraformCount
 
 ---
 
@@ -108,7 +108,7 @@ Must be unique amongst siblings in the same scope
 
 ##### `provisioners`<sup>Optional</sup> <a name="provisioners" id="@cdktf/provider-google.transcoderJob.TranscoderJob.Initializer.parameter.provisioners"></a>
 
-- *Type:* typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]
+- *Type:* typing.List[cdktf.FileProvisioner | cdktf.LocalExecProvisioner | cdktf.RemoteExecProvisioner]
 
 ---
 
@@ -444,7 +444,7 @@ def get_string_map_attribute(
 ##### `has_resource_move` <a name="has_resource_move" id="@cdktf/provider-google.transcoderJob.TranscoderJob.hasResourceMove"></a>
 
 ```python
-def has_resource_move() -> typing.Union[TerraformResourceMoveByTarget, TerraformResourceMoveById]
+def has_resource_move() -> TerraformResourceMoveByTarget | TerraformResourceMoveById
 ```
 
 ##### `import_from` <a name="import_from" id="@cdktf/provider-google.transcoderJob.TranscoderJob.importFrom"></a>
@@ -507,7 +507,7 @@ Full id of resource being moved from, e.g. "aws_s3_bucket.example".
 ```python
 def move_to(
   move_target: str,
-  index: typing.Union[str, typing.Union[int, float]] = None
+  index: str | typing.Union[int, float] = None
 ) -> None
 ```
 
@@ -523,7 +523,7 @@ The previously set user defined string set by .addMoveTarget() corresponding to 
 
 ###### `index`<sup>Optional</sup> <a name="index" id="@cdktf/provider-google.transcoderJob.TranscoderJob.moveTo.parameter.index"></a>
 
-- *Type:* typing.Union[str, typing.Union[int, float]]
+- *Type:* str | typing.Union[int, float]
 
 Optional The index corresponding to the key the resource is to appear in the foreach of a resource to move to.
 
@@ -551,22 +551,22 @@ Full id of resource to move to, e.g. "aws_s3_bucket.example".
 
 ```python
 def put_config(
-  ad_breaks: typing.Union[IResolvable, typing.List[TranscoderJobConfigAdBreaks]] = None,
-  edit_list: typing.Union[IResolvable, typing.List[TranscoderJobConfigEditListStruct]] = None,
-  elementary_streams: typing.Union[IResolvable, typing.List[TranscoderJobConfigElementaryStreams]] = None,
-  encryptions: typing.Union[IResolvable, typing.List[TranscoderJobConfigEncryptions]] = None,
-  inputs: typing.Union[IResolvable, typing.List[TranscoderJobConfigInputs]] = None,
-  manifests: typing.Union[IResolvable, typing.List[TranscoderJobConfigManifests]] = None,
-  mux_streams: typing.Union[IResolvable, typing.List[TranscoderJobConfigMuxStreams]] = None,
+  ad_breaks: IResolvable | typing.List[TranscoderJobConfigAdBreaks] = None,
+  edit_list: IResolvable | typing.List[TranscoderJobConfigEditListStruct] = None,
+  elementary_streams: IResolvable | typing.List[TranscoderJobConfigElementaryStreams] = None,
+  encryptions: IResolvable | typing.List[TranscoderJobConfigEncryptions] = None,
+  inputs: IResolvable | typing.List[TranscoderJobConfigInputs] = None,
+  manifests: IResolvable | typing.List[TranscoderJobConfigManifests] = None,
+  mux_streams: IResolvable | typing.List[TranscoderJobConfigMuxStreams] = None,
   output: TranscoderJobConfigOutput = None,
-  overlays: typing.Union[IResolvable, typing.List[TranscoderJobConfigOverlays]] = None,
+  overlays: IResolvable | typing.List[TranscoderJobConfigOverlays] = None,
   pubsub_destination: TranscoderJobConfigPubsubDestination = None
 ) -> None
 ```
 
 ###### `ad_breaks`<sup>Optional</sup> <a name="ad_breaks" id="@cdktf/provider-google.transcoderJob.TranscoderJob.putConfig.parameter.adBreaks"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigAdBreaks">TranscoderJobConfigAdBreaks</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigAdBreaks">TranscoderJobConfigAdBreaks</a>]
 
 ad_breaks block.
 
@@ -576,7 +576,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `edit_list`<sup>Optional</sup> <a name="edit_list" id="@cdktf/provider-google.transcoderJob.TranscoderJob.putConfig.parameter.editList"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigEditListStruct">TranscoderJobConfigEditListStruct</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigEditListStruct">TranscoderJobConfigEditListStruct</a>]
 
 edit_list block.
 
@@ -586,7 +586,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `elementary_streams`<sup>Optional</sup> <a name="elementary_streams" id="@cdktf/provider-google.transcoderJob.TranscoderJob.putConfig.parameter.elementaryStreams"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigElementaryStreams">TranscoderJobConfigElementaryStreams</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigElementaryStreams">TranscoderJobConfigElementaryStreams</a>]
 
 elementary_streams block.
 
@@ -596,7 +596,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `encryptions`<sup>Optional</sup> <a name="encryptions" id="@cdktf/provider-google.transcoderJob.TranscoderJob.putConfig.parameter.encryptions"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigEncryptions">TranscoderJobConfigEncryptions</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigEncryptions">TranscoderJobConfigEncryptions</a>]
 
 encryptions block.
 
@@ -606,7 +606,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `inputs`<sup>Optional</sup> <a name="inputs" id="@cdktf/provider-google.transcoderJob.TranscoderJob.putConfig.parameter.inputs"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigInputs">TranscoderJobConfigInputs</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigInputs">TranscoderJobConfigInputs</a>]
 
 inputs block.
 
@@ -616,7 +616,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `manifests`<sup>Optional</sup> <a name="manifests" id="@cdktf/provider-google.transcoderJob.TranscoderJob.putConfig.parameter.manifests"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigManifests">TranscoderJobConfigManifests</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigManifests">TranscoderJobConfigManifests</a>]
 
 manifests block.
 
@@ -626,7 +626,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `mux_streams`<sup>Optional</sup> <a name="mux_streams" id="@cdktf/provider-google.transcoderJob.TranscoderJob.putConfig.parameter.muxStreams"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigMuxStreams">TranscoderJobConfigMuxStreams</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigMuxStreams">TranscoderJobConfigMuxStreams</a>]
 
 mux_streams block.
 
@@ -646,7 +646,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `overlays`<sup>Optional</sup> <a name="overlays" id="@cdktf/provider-google.transcoderJob.TranscoderJob.putConfig.parameter.overlays"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigOverlays">TranscoderJobConfigOverlays</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigOverlays">TranscoderJobConfigOverlays</a>]
 
 overlays block.
 
@@ -871,13 +871,13 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.5
 | <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJob.property.terraformMetaArguments">terraform_meta_arguments</a></code> | <code>typing.Mapping[typing.Any]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJob.property.terraformResourceType">terraform_resource_type</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJob.property.terraformGeneratorMetadata">terraform_generator_metadata</a></code> | <code>cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJob.property.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJob.property.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJob.property.connection">connection</a></code> | <code>cdktf.SSHProvisionerConnection \| cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJob.property.count">count</a></code> | <code>typing.Union[int, float] \| cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJob.property.dependsOn">depends_on</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJob.property.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJob.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJob.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJob.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJob.property.provisioners">provisioners</a></code> | <code>typing.List[cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJob.property.config">config</a></code> | <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigAOutputReference">TranscoderJobConfigAOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJob.property.createTime">create_time</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJob.property.effectiveLabels">effective_labels</a></code> | <code>cdktf.StringMap</code> | *No description.* |
@@ -893,7 +893,7 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.5
 | <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJob.property.locationInput">location_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJob.property.projectInput">project_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJob.property.templateIdInput">template_id_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJob.property.timeoutsInput">timeouts_input</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.transcoderJob.TranscoderJobTimeouts">TranscoderJobTimeouts</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJob.property.timeoutsInput">timeouts_input</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.transcoderJob.TranscoderJobTimeouts">TranscoderJobTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJob.property.id">id</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJob.property.labels">labels</a></code> | <code>typing.Mapping[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJob.property.location">location</a></code> | <code>str</code> | *No description.* |
@@ -977,20 +977,20 @@ terraform_generator_metadata: TerraformProviderGeneratorMetadata
 ##### `connection`<sup>Optional</sup> <a name="connection" id="@cdktf/provider-google.transcoderJob.TranscoderJob.property.connection"></a>
 
 ```python
-connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection]
+connection: SSHProvisionerConnection | WinrmProvisionerConnection
 ```
 
-- *Type:* typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]
+- *Type:* cdktf.SSHProvisionerConnection | cdktf.WinrmProvisionerConnection
 
 ---
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.transcoderJob.TranscoderJob.property.count"></a>
 
 ```python
-count: typing.Union[typing.Union[int, float], TerraformCount]
+count: typing.Union[int, float] | TerraformCount
 ```
 
-- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
+- *Type:* typing.Union[int, float] | cdktf.TerraformCount
 
 ---
 
@@ -1037,10 +1037,10 @@ provider: TerraformProvider
 ##### `provisioners`<sup>Optional</sup> <a name="provisioners" id="@cdktf/provider-google.transcoderJob.TranscoderJob.property.provisioners"></a>
 
 ```python
-provisioners: typing.List[typing.Union[FileProvisioner, LocalExecProvisioner, RemoteExecProvisioner]]
+provisioners: typing.List[FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner]
 ```
 
-- *Type:* typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]
+- *Type:* typing.List[cdktf.FileProvisioner | cdktf.LocalExecProvisioner | cdktf.RemoteExecProvisioner]
 
 ---
 
@@ -1197,10 +1197,10 @@ template_id_input: str
 ##### `timeouts_input`<sup>Optional</sup> <a name="timeouts_input" id="@cdktf/provider-google.transcoderJob.TranscoderJob.property.timeoutsInput"></a>
 
 ```python
-timeouts_input: typing.Union[IResolvable, TranscoderJobTimeouts]
+timeouts_input: IResolvable | TranscoderJobTimeouts
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.transcoderJob.TranscoderJobTimeouts">TranscoderJobTimeouts</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.transcoderJob.TranscoderJobTimeouts">TranscoderJobTimeouts</a>
 
 ---
 
@@ -1282,13 +1282,13 @@ tfResourceType: str
 from cdktf_cdktf_provider_google import transcoder_job
 
 transcoderJob.TranscoderJobConfig(
-  connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection] = None,
-  count: typing.Union[typing.Union[int, float], TerraformCount] = None,
+  connection: SSHProvisionerConnection | WinrmProvisionerConnection = None,
+  count: typing.Union[int, float] | TerraformCount = None,
   depends_on: typing.List[ITerraformDependable] = None,
   for_each: ITerraformIterator = None,
   lifecycle: TerraformResourceLifecycle = None,
   provider: TerraformProvider = None,
-  provisioners: typing.List[typing.Union[FileProvisioner, LocalExecProvisioner, RemoteExecProvisioner]] = None,
+  provisioners: typing.List[FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner] = None,
   location: str,
   config: TranscoderJobConfigA = None,
   id: str = None,
@@ -1303,13 +1303,13 @@ transcoderJob.TranscoderJobConfig(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfig.property.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfig.property.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfig.property.connection">connection</a></code> | <code>cdktf.SSHProvisionerConnection \| cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfig.property.count">count</a></code> | <code>typing.Union[int, float] \| cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfig.property.dependsOn">depends_on</a></code> | <code>typing.List[cdktf.ITerraformDependable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfig.property.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfig.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfig.property.provisioners">provisioners</a></code> | <code>typing.List[cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfig.property.location">location</a></code> | <code>str</code> | The location of the transcoding job resource. |
 | <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfig.property.config">config</a></code> | <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigA">TranscoderJobConfigA</a></code> | config block. |
 | <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/transcoder_job#id TranscoderJob#id}. |
@@ -1323,20 +1323,20 @@ transcoderJob.TranscoderJobConfig(
 ##### `connection`<sup>Optional</sup> <a name="connection" id="@cdktf/provider-google.transcoderJob.TranscoderJobConfig.property.connection"></a>
 
 ```python
-connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection]
+connection: SSHProvisionerConnection | WinrmProvisionerConnection
 ```
 
-- *Type:* typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]
+- *Type:* cdktf.SSHProvisionerConnection | cdktf.WinrmProvisionerConnection
 
 ---
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.transcoderJob.TranscoderJobConfig.property.count"></a>
 
 ```python
-count: typing.Union[typing.Union[int, float], TerraformCount]
+count: typing.Union[int, float] | TerraformCount
 ```
 
-- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
+- *Type:* typing.Union[int, float] | cdktf.TerraformCount
 
 ---
 
@@ -1383,10 +1383,10 @@ provider: TerraformProvider
 ##### `provisioners`<sup>Optional</sup> <a name="provisioners" id="@cdktf/provider-google.transcoderJob.TranscoderJobConfig.property.provisioners"></a>
 
 ```python
-provisioners: typing.List[typing.Union[FileProvisioner, LocalExecProvisioner, RemoteExecProvisioner]]
+provisioners: typing.List[FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner]
 ```
 
-- *Type:* typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]
+- *Type:* typing.List[cdktf.FileProvisioner | cdktf.LocalExecProvisioner | cdktf.RemoteExecProvisioner]
 
 ---
 
@@ -1498,15 +1498,15 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 from cdktf_cdktf_provider_google import transcoder_job
 
 transcoderJob.TranscoderJobConfigA(
-  ad_breaks: typing.Union[IResolvable, typing.List[TranscoderJobConfigAdBreaks]] = None,
-  edit_list: typing.Union[IResolvable, typing.List[TranscoderJobConfigEditListStruct]] = None,
-  elementary_streams: typing.Union[IResolvable, typing.List[TranscoderJobConfigElementaryStreams]] = None,
-  encryptions: typing.Union[IResolvable, typing.List[TranscoderJobConfigEncryptions]] = None,
-  inputs: typing.Union[IResolvable, typing.List[TranscoderJobConfigInputs]] = None,
-  manifests: typing.Union[IResolvable, typing.List[TranscoderJobConfigManifests]] = None,
-  mux_streams: typing.Union[IResolvable, typing.List[TranscoderJobConfigMuxStreams]] = None,
+  ad_breaks: IResolvable | typing.List[TranscoderJobConfigAdBreaks] = None,
+  edit_list: IResolvable | typing.List[TranscoderJobConfigEditListStruct] = None,
+  elementary_streams: IResolvable | typing.List[TranscoderJobConfigElementaryStreams] = None,
+  encryptions: IResolvable | typing.List[TranscoderJobConfigEncryptions] = None,
+  inputs: IResolvable | typing.List[TranscoderJobConfigInputs] = None,
+  manifests: IResolvable | typing.List[TranscoderJobConfigManifests] = None,
+  mux_streams: IResolvable | typing.List[TranscoderJobConfigMuxStreams] = None,
   output: TranscoderJobConfigOutput = None,
-  overlays: typing.Union[IResolvable, typing.List[TranscoderJobConfigOverlays]] = None,
+  overlays: IResolvable | typing.List[TranscoderJobConfigOverlays] = None,
   pubsub_destination: TranscoderJobConfigPubsubDestination = None
 )
 ```
@@ -1515,15 +1515,15 @@ transcoderJob.TranscoderJobConfigA(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigA.property.adBreaks">ad_breaks</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigAdBreaks">TranscoderJobConfigAdBreaks</a>]]</code> | ad_breaks block. |
-| <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigA.property.editList">edit_list</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigEditListStruct">TranscoderJobConfigEditListStruct</a>]]</code> | edit_list block. |
-| <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigA.property.elementaryStreams">elementary_streams</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigElementaryStreams">TranscoderJobConfigElementaryStreams</a>]]</code> | elementary_streams block. |
-| <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigA.property.encryptions">encryptions</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigEncryptions">TranscoderJobConfigEncryptions</a>]]</code> | encryptions block. |
-| <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigA.property.inputs">inputs</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigInputs">TranscoderJobConfigInputs</a>]]</code> | inputs block. |
-| <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigA.property.manifests">manifests</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigManifests">TranscoderJobConfigManifests</a>]]</code> | manifests block. |
-| <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigA.property.muxStreams">mux_streams</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigMuxStreams">TranscoderJobConfigMuxStreams</a>]]</code> | mux_streams block. |
+| <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigA.property.adBreaks">ad_breaks</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigAdBreaks">TranscoderJobConfigAdBreaks</a>]</code> | ad_breaks block. |
+| <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigA.property.editList">edit_list</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigEditListStruct">TranscoderJobConfigEditListStruct</a>]</code> | edit_list block. |
+| <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigA.property.elementaryStreams">elementary_streams</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigElementaryStreams">TranscoderJobConfigElementaryStreams</a>]</code> | elementary_streams block. |
+| <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigA.property.encryptions">encryptions</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigEncryptions">TranscoderJobConfigEncryptions</a>]</code> | encryptions block. |
+| <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigA.property.inputs">inputs</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigInputs">TranscoderJobConfigInputs</a>]</code> | inputs block. |
+| <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigA.property.manifests">manifests</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigManifests">TranscoderJobConfigManifests</a>]</code> | manifests block. |
+| <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigA.property.muxStreams">mux_streams</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigMuxStreams">TranscoderJobConfigMuxStreams</a>]</code> | mux_streams block. |
 | <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigA.property.output">output</a></code> | <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigOutput">TranscoderJobConfigOutput</a></code> | output block. |
-| <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigA.property.overlays">overlays</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigOverlays">TranscoderJobConfigOverlays</a>]]</code> | overlays block. |
+| <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigA.property.overlays">overlays</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigOverlays">TranscoderJobConfigOverlays</a>]</code> | overlays block. |
 | <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigA.property.pubsubDestination">pubsub_destination</a></code> | <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigPubsubDestination">TranscoderJobConfigPubsubDestination</a></code> | pubsub_destination block. |
 
 ---
@@ -1531,10 +1531,10 @@ transcoderJob.TranscoderJobConfigA(
 ##### `ad_breaks`<sup>Optional</sup> <a name="ad_breaks" id="@cdktf/provider-google.transcoderJob.TranscoderJobConfigA.property.adBreaks"></a>
 
 ```python
-ad_breaks: typing.Union[IResolvable, typing.List[TranscoderJobConfigAdBreaks]]
+ad_breaks: IResolvable | typing.List[TranscoderJobConfigAdBreaks]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigAdBreaks">TranscoderJobConfigAdBreaks</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigAdBreaks">TranscoderJobConfigAdBreaks</a>]
 
 ad_breaks block.
 
@@ -1545,10 +1545,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `edit_list`<sup>Optional</sup> <a name="edit_list" id="@cdktf/provider-google.transcoderJob.TranscoderJobConfigA.property.editList"></a>
 
 ```python
-edit_list: typing.Union[IResolvable, typing.List[TranscoderJobConfigEditListStruct]]
+edit_list: IResolvable | typing.List[TranscoderJobConfigEditListStruct]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigEditListStruct">TranscoderJobConfigEditListStruct</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigEditListStruct">TranscoderJobConfigEditListStruct</a>]
 
 edit_list block.
 
@@ -1559,10 +1559,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `elementary_streams`<sup>Optional</sup> <a name="elementary_streams" id="@cdktf/provider-google.transcoderJob.TranscoderJobConfigA.property.elementaryStreams"></a>
 
 ```python
-elementary_streams: typing.Union[IResolvable, typing.List[TranscoderJobConfigElementaryStreams]]
+elementary_streams: IResolvable | typing.List[TranscoderJobConfigElementaryStreams]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigElementaryStreams">TranscoderJobConfigElementaryStreams</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigElementaryStreams">TranscoderJobConfigElementaryStreams</a>]
 
 elementary_streams block.
 
@@ -1573,10 +1573,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `encryptions`<sup>Optional</sup> <a name="encryptions" id="@cdktf/provider-google.transcoderJob.TranscoderJobConfigA.property.encryptions"></a>
 
 ```python
-encryptions: typing.Union[IResolvable, typing.List[TranscoderJobConfigEncryptions]]
+encryptions: IResolvable | typing.List[TranscoderJobConfigEncryptions]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigEncryptions">TranscoderJobConfigEncryptions</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigEncryptions">TranscoderJobConfigEncryptions</a>]
 
 encryptions block.
 
@@ -1587,10 +1587,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `inputs`<sup>Optional</sup> <a name="inputs" id="@cdktf/provider-google.transcoderJob.TranscoderJobConfigA.property.inputs"></a>
 
 ```python
-inputs: typing.Union[IResolvable, typing.List[TranscoderJobConfigInputs]]
+inputs: IResolvable | typing.List[TranscoderJobConfigInputs]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigInputs">TranscoderJobConfigInputs</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigInputs">TranscoderJobConfigInputs</a>]
 
 inputs block.
 
@@ -1601,10 +1601,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `manifests`<sup>Optional</sup> <a name="manifests" id="@cdktf/provider-google.transcoderJob.TranscoderJobConfigA.property.manifests"></a>
 
 ```python
-manifests: typing.Union[IResolvable, typing.List[TranscoderJobConfigManifests]]
+manifests: IResolvable | typing.List[TranscoderJobConfigManifests]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigManifests">TranscoderJobConfigManifests</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigManifests">TranscoderJobConfigManifests</a>]
 
 manifests block.
 
@@ -1615,10 +1615,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `mux_streams`<sup>Optional</sup> <a name="mux_streams" id="@cdktf/provider-google.transcoderJob.TranscoderJobConfigA.property.muxStreams"></a>
 
 ```python
-mux_streams: typing.Union[IResolvable, typing.List[TranscoderJobConfigMuxStreams]]
+mux_streams: IResolvable | typing.List[TranscoderJobConfigMuxStreams]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigMuxStreams">TranscoderJobConfigMuxStreams</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigMuxStreams">TranscoderJobConfigMuxStreams</a>]
 
 mux_streams block.
 
@@ -1643,10 +1643,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `overlays`<sup>Optional</sup> <a name="overlays" id="@cdktf/provider-google.transcoderJob.TranscoderJobConfigA.property.overlays"></a>
 
 ```python
-overlays: typing.Union[IResolvable, typing.List[TranscoderJobConfigOverlays]]
+overlays: IResolvable | typing.List[TranscoderJobConfigOverlays]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigOverlays">TranscoderJobConfigOverlays</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigOverlays">TranscoderJobConfigOverlays</a>]
 
 overlays block.
 
@@ -2888,7 +2888,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 from cdktf_cdktf_provider_google import transcoder_job
 
 transcoderJob.TranscoderJobConfigOverlays(
-  animations: typing.Union[IResolvable, typing.List[TranscoderJobConfigOverlaysAnimations]] = None,
+  animations: IResolvable | typing.List[TranscoderJobConfigOverlaysAnimations] = None,
   image: TranscoderJobConfigOverlaysImage = None
 )
 ```
@@ -2897,7 +2897,7 @@ transcoderJob.TranscoderJobConfigOverlays(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigOverlays.property.animations">animations</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigOverlaysAnimations">TranscoderJobConfigOverlaysAnimations</a>]]</code> | animations block. |
+| <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigOverlays.property.animations">animations</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigOverlaysAnimations">TranscoderJobConfigOverlaysAnimations</a>]</code> | animations block. |
 | <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigOverlays.property.image">image</a></code> | <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigOverlaysImage">TranscoderJobConfigOverlaysImage</a></code> | image block. |
 
 ---
@@ -2905,10 +2905,10 @@ transcoderJob.TranscoderJobConfigOverlays(
 ##### `animations`<sup>Optional</sup> <a name="animations" id="@cdktf/provider-google.transcoderJob.TranscoderJobConfigOverlays.property.animations"></a>
 
 ```python
-animations: typing.Union[IResolvable, typing.List[TranscoderJobConfigOverlaysAnimations]]
+animations: IResolvable | typing.List[TranscoderJobConfigOverlaysAnimations]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigOverlaysAnimations">TranscoderJobConfigOverlaysAnimations</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigOverlaysAnimations">TranscoderJobConfigOverlaysAnimations</a>]
 
 animations block.
 
@@ -3361,7 +3361,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigAdBreaksList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigAdBreaksList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigAdBreaksList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigAdBreaks">TranscoderJobConfigAdBreaks</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigAdBreaksList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigAdBreaks">TranscoderJobConfigAdBreaks</a>]</code> | *No description.* |
 
 ---
 
@@ -3392,10 +3392,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.transcoderJob.TranscoderJobConfigAdBreaksList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[TranscoderJobConfigAdBreaks]]
+internal_value: IResolvable | typing.List[TranscoderJobConfigAdBreaks]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigAdBreaks">TranscoderJobConfigAdBreaks</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigAdBreaks">TranscoderJobConfigAdBreaks</a>]
 
 ---
 
@@ -3664,7 +3664,7 @@ def reset_start_time_offset() -> None
 | <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigAdBreaksOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigAdBreaksOutputReference.property.startTimeOffsetInput">start_time_offset_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigAdBreaksOutputReference.property.startTimeOffset">start_time_offset</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigAdBreaksOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigAdBreaks">TranscoderJobConfigAdBreaks</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigAdBreaksOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigAdBreaks">TranscoderJobConfigAdBreaks</a></code> | *No description.* |
 
 ---
 
@@ -3715,10 +3715,10 @@ start_time_offset: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.transcoderJob.TranscoderJobConfigAdBreaksOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, TranscoderJobConfigAdBreaks]
+internal_value: IResolvable | TranscoderJobConfigAdBreaks
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigAdBreaks">TranscoderJobConfigAdBreaks</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigAdBreaks">TranscoderJobConfigAdBreaks</a>
 
 ---
 
@@ -3975,13 +3975,13 @@ Returns a reversible string representation.
 
 ```python
 def put_ad_breaks(
-  value: typing.Union[IResolvable, typing.List[TranscoderJobConfigAdBreaks]]
+  value: IResolvable | typing.List[TranscoderJobConfigAdBreaks]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.transcoderJob.TranscoderJobConfigAOutputReference.putAdBreaks.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigAdBreaks">TranscoderJobConfigAdBreaks</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigAdBreaks">TranscoderJobConfigAdBreaks</a>]
 
 ---
 
@@ -3989,13 +3989,13 @@ def put_ad_breaks(
 
 ```python
 def put_edit_list(
-  value: typing.Union[IResolvable, typing.List[TranscoderJobConfigEditListStruct]]
+  value: IResolvable | typing.List[TranscoderJobConfigEditListStruct]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.transcoderJob.TranscoderJobConfigAOutputReference.putEditList.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigEditListStruct">TranscoderJobConfigEditListStruct</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigEditListStruct">TranscoderJobConfigEditListStruct</a>]
 
 ---
 
@@ -4003,13 +4003,13 @@ def put_edit_list(
 
 ```python
 def put_elementary_streams(
-  value: typing.Union[IResolvable, typing.List[TranscoderJobConfigElementaryStreams]]
+  value: IResolvable | typing.List[TranscoderJobConfigElementaryStreams]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.transcoderJob.TranscoderJobConfigAOutputReference.putElementaryStreams.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigElementaryStreams">TranscoderJobConfigElementaryStreams</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigElementaryStreams">TranscoderJobConfigElementaryStreams</a>]
 
 ---
 
@@ -4017,13 +4017,13 @@ def put_elementary_streams(
 
 ```python
 def put_encryptions(
-  value: typing.Union[IResolvable, typing.List[TranscoderJobConfigEncryptions]]
+  value: IResolvable | typing.List[TranscoderJobConfigEncryptions]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.transcoderJob.TranscoderJobConfigAOutputReference.putEncryptions.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigEncryptions">TranscoderJobConfigEncryptions</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigEncryptions">TranscoderJobConfigEncryptions</a>]
 
 ---
 
@@ -4031,13 +4031,13 @@ def put_encryptions(
 
 ```python
 def put_inputs(
-  value: typing.Union[IResolvable, typing.List[TranscoderJobConfigInputs]]
+  value: IResolvable | typing.List[TranscoderJobConfigInputs]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.transcoderJob.TranscoderJobConfigAOutputReference.putInputs.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigInputs">TranscoderJobConfigInputs</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigInputs">TranscoderJobConfigInputs</a>]
 
 ---
 
@@ -4045,13 +4045,13 @@ def put_inputs(
 
 ```python
 def put_manifests(
-  value: typing.Union[IResolvable, typing.List[TranscoderJobConfigManifests]]
+  value: IResolvable | typing.List[TranscoderJobConfigManifests]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.transcoderJob.TranscoderJobConfigAOutputReference.putManifests.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigManifests">TranscoderJobConfigManifests</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigManifests">TranscoderJobConfigManifests</a>]
 
 ---
 
@@ -4059,13 +4059,13 @@ def put_manifests(
 
 ```python
 def put_mux_streams(
-  value: typing.Union[IResolvable, typing.List[TranscoderJobConfigMuxStreams]]
+  value: IResolvable | typing.List[TranscoderJobConfigMuxStreams]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.transcoderJob.TranscoderJobConfigAOutputReference.putMuxStreams.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigMuxStreams">TranscoderJobConfigMuxStreams</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigMuxStreams">TranscoderJobConfigMuxStreams</a>]
 
 ---
 
@@ -4091,13 +4091,13 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ```python
 def put_overlays(
-  value: typing.Union[IResolvable, typing.List[TranscoderJobConfigOverlays]]
+  value: IResolvable | typing.List[TranscoderJobConfigOverlays]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.transcoderJob.TranscoderJobConfigAOutputReference.putOverlays.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigOverlays">TranscoderJobConfigOverlays</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigOverlays">TranscoderJobConfigOverlays</a>]
 
 ---
 
@@ -4196,15 +4196,15 @@ def reset_pubsub_destination() -> None
 | <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigAOutputReference.property.output">output</a></code> | <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigOutputOutputReference">TranscoderJobConfigOutputOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigAOutputReference.property.overlays">overlays</a></code> | <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigOverlaysList">TranscoderJobConfigOverlaysList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigAOutputReference.property.pubsubDestination">pubsub_destination</a></code> | <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigPubsubDestinationOutputReference">TranscoderJobConfigPubsubDestinationOutputReference</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigAOutputReference.property.adBreaksInput">ad_breaks_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigAdBreaks">TranscoderJobConfigAdBreaks</a>]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigAOutputReference.property.editListInput">edit_list_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigEditListStruct">TranscoderJobConfigEditListStruct</a>]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigAOutputReference.property.elementaryStreamsInput">elementary_streams_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigElementaryStreams">TranscoderJobConfigElementaryStreams</a>]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigAOutputReference.property.encryptionsInput">encryptions_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigEncryptions">TranscoderJobConfigEncryptions</a>]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigAOutputReference.property.inputsInput">inputs_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigInputs">TranscoderJobConfigInputs</a>]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigAOutputReference.property.manifestsInput">manifests_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigManifests">TranscoderJobConfigManifests</a>]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigAOutputReference.property.muxStreamsInput">mux_streams_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigMuxStreams">TranscoderJobConfigMuxStreams</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigAOutputReference.property.adBreaksInput">ad_breaks_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigAdBreaks">TranscoderJobConfigAdBreaks</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigAOutputReference.property.editListInput">edit_list_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigEditListStruct">TranscoderJobConfigEditListStruct</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigAOutputReference.property.elementaryStreamsInput">elementary_streams_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigElementaryStreams">TranscoderJobConfigElementaryStreams</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigAOutputReference.property.encryptionsInput">encryptions_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigEncryptions">TranscoderJobConfigEncryptions</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigAOutputReference.property.inputsInput">inputs_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigInputs">TranscoderJobConfigInputs</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigAOutputReference.property.manifestsInput">manifests_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigManifests">TranscoderJobConfigManifests</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigAOutputReference.property.muxStreamsInput">mux_streams_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigMuxStreams">TranscoderJobConfigMuxStreams</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigAOutputReference.property.outputInput">output_input</a></code> | <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigOutput">TranscoderJobConfigOutput</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigAOutputReference.property.overlaysInput">overlays_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigOverlays">TranscoderJobConfigOverlays</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigAOutputReference.property.overlaysInput">overlays_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigOverlays">TranscoderJobConfigOverlays</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigAOutputReference.property.pubsubDestinationInput">pubsub_destination_input</a></code> | <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigPubsubDestination">TranscoderJobConfigPubsubDestination</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigAOutputReference.property.internalValue">internal_value</a></code> | <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigA">TranscoderJobConfigA</a></code> | *No description.* |
 
@@ -4337,70 +4337,70 @@ pubsub_destination: TranscoderJobConfigPubsubDestinationOutputReference
 ##### `ad_breaks_input`<sup>Optional</sup> <a name="ad_breaks_input" id="@cdktf/provider-google.transcoderJob.TranscoderJobConfigAOutputReference.property.adBreaksInput"></a>
 
 ```python
-ad_breaks_input: typing.Union[IResolvable, typing.List[TranscoderJobConfigAdBreaks]]
+ad_breaks_input: IResolvable | typing.List[TranscoderJobConfigAdBreaks]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigAdBreaks">TranscoderJobConfigAdBreaks</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigAdBreaks">TranscoderJobConfigAdBreaks</a>]
 
 ---
 
 ##### `edit_list_input`<sup>Optional</sup> <a name="edit_list_input" id="@cdktf/provider-google.transcoderJob.TranscoderJobConfigAOutputReference.property.editListInput"></a>
 
 ```python
-edit_list_input: typing.Union[IResolvable, typing.List[TranscoderJobConfigEditListStruct]]
+edit_list_input: IResolvable | typing.List[TranscoderJobConfigEditListStruct]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigEditListStruct">TranscoderJobConfigEditListStruct</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigEditListStruct">TranscoderJobConfigEditListStruct</a>]
 
 ---
 
 ##### `elementary_streams_input`<sup>Optional</sup> <a name="elementary_streams_input" id="@cdktf/provider-google.transcoderJob.TranscoderJobConfigAOutputReference.property.elementaryStreamsInput"></a>
 
 ```python
-elementary_streams_input: typing.Union[IResolvable, typing.List[TranscoderJobConfigElementaryStreams]]
+elementary_streams_input: IResolvable | typing.List[TranscoderJobConfigElementaryStreams]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigElementaryStreams">TranscoderJobConfigElementaryStreams</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigElementaryStreams">TranscoderJobConfigElementaryStreams</a>]
 
 ---
 
 ##### `encryptions_input`<sup>Optional</sup> <a name="encryptions_input" id="@cdktf/provider-google.transcoderJob.TranscoderJobConfigAOutputReference.property.encryptionsInput"></a>
 
 ```python
-encryptions_input: typing.Union[IResolvable, typing.List[TranscoderJobConfigEncryptions]]
+encryptions_input: IResolvable | typing.List[TranscoderJobConfigEncryptions]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigEncryptions">TranscoderJobConfigEncryptions</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigEncryptions">TranscoderJobConfigEncryptions</a>]
 
 ---
 
 ##### `inputs_input`<sup>Optional</sup> <a name="inputs_input" id="@cdktf/provider-google.transcoderJob.TranscoderJobConfigAOutputReference.property.inputsInput"></a>
 
 ```python
-inputs_input: typing.Union[IResolvable, typing.List[TranscoderJobConfigInputs]]
+inputs_input: IResolvable | typing.List[TranscoderJobConfigInputs]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigInputs">TranscoderJobConfigInputs</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigInputs">TranscoderJobConfigInputs</a>]
 
 ---
 
 ##### `manifests_input`<sup>Optional</sup> <a name="manifests_input" id="@cdktf/provider-google.transcoderJob.TranscoderJobConfigAOutputReference.property.manifestsInput"></a>
 
 ```python
-manifests_input: typing.Union[IResolvable, typing.List[TranscoderJobConfigManifests]]
+manifests_input: IResolvable | typing.List[TranscoderJobConfigManifests]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigManifests">TranscoderJobConfigManifests</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigManifests">TranscoderJobConfigManifests</a>]
 
 ---
 
 ##### `mux_streams_input`<sup>Optional</sup> <a name="mux_streams_input" id="@cdktf/provider-google.transcoderJob.TranscoderJobConfigAOutputReference.property.muxStreamsInput"></a>
 
 ```python
-mux_streams_input: typing.Union[IResolvable, typing.List[TranscoderJobConfigMuxStreams]]
+mux_streams_input: IResolvable | typing.List[TranscoderJobConfigMuxStreams]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigMuxStreams">TranscoderJobConfigMuxStreams</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigMuxStreams">TranscoderJobConfigMuxStreams</a>]
 
 ---
 
@@ -4417,10 +4417,10 @@ output_input: TranscoderJobConfigOutput
 ##### `overlays_input`<sup>Optional</sup> <a name="overlays_input" id="@cdktf/provider-google.transcoderJob.TranscoderJobConfigAOutputReference.property.overlaysInput"></a>
 
 ```python
-overlays_input: typing.Union[IResolvable, typing.List[TranscoderJobConfigOverlays]]
+overlays_input: IResolvable | typing.List[TranscoderJobConfigOverlays]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigOverlays">TranscoderJobConfigOverlays</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigOverlays">TranscoderJobConfigOverlays</a>]
 
 ---
 
@@ -4576,7 +4576,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigEditListStructList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigEditListStructList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigEditListStructList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigEditListStruct">TranscoderJobConfigEditListStruct</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigEditListStructList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigEditListStruct">TranscoderJobConfigEditListStruct</a>]</code> | *No description.* |
 
 ---
 
@@ -4607,10 +4607,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.transcoderJob.TranscoderJobConfigEditListStructList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[TranscoderJobConfigEditListStruct]]
+internal_value: IResolvable | typing.List[TranscoderJobConfigEditListStruct]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigEditListStruct">TranscoderJobConfigEditListStruct</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigEditListStruct">TranscoderJobConfigEditListStruct</a>]
 
 ---
 
@@ -4897,7 +4897,7 @@ def reset_start_time_offset() -> None
 | <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigEditListStructOutputReference.property.inputs">inputs</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigEditListStructOutputReference.property.key">key</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigEditListStructOutputReference.property.startTimeOffset">start_time_offset</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigEditListStructOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigEditListStruct">TranscoderJobConfigEditListStruct</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigEditListStructOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigEditListStruct">TranscoderJobConfigEditListStruct</a></code> | *No description.* |
 
 ---
 
@@ -4988,10 +4988,10 @@ start_time_offset: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.transcoderJob.TranscoderJobConfigEditListStructOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, TranscoderJobConfigEditListStruct]
+internal_value: IResolvable | TranscoderJobConfigEditListStruct
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigEditListStruct">TranscoderJobConfigEditListStruct</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigEditListStruct">TranscoderJobConfigEditListStruct</a>
 
 ---
 
@@ -5539,7 +5539,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigElementaryStreamsList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigElementaryStreamsList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigElementaryStreamsList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigElementaryStreams">TranscoderJobConfigElementaryStreams</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigElementaryStreamsList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigElementaryStreams">TranscoderJobConfigElementaryStreams</a>]</code> | *No description.* |
 
 ---
 
@@ -5570,10 +5570,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.transcoderJob.TranscoderJobConfigElementaryStreamsList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[TranscoderJobConfigElementaryStreams]]
+internal_value: IResolvable | typing.List[TranscoderJobConfigElementaryStreams]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigElementaryStreams">TranscoderJobConfigElementaryStreams</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigElementaryStreams">TranscoderJobConfigElementaryStreams</a>]
 
 ---
 
@@ -5942,7 +5942,7 @@ def reset_video_stream() -> None
 | <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigElementaryStreamsOutputReference.property.keyInput">key_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigElementaryStreamsOutputReference.property.videoStreamInput">video_stream_input</a></code> | <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigElementaryStreamsVideoStream">TranscoderJobConfigElementaryStreamsVideoStream</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigElementaryStreamsOutputReference.property.key">key</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigElementaryStreamsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigElementaryStreams">TranscoderJobConfigElementaryStreams</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigElementaryStreamsOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigElementaryStreams">TranscoderJobConfigElementaryStreams</a></code> | *No description.* |
 
 ---
 
@@ -6033,10 +6033,10 @@ key: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.transcoderJob.TranscoderJobConfigElementaryStreamsOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, TranscoderJobConfigElementaryStreams]
+internal_value: IResolvable | TranscoderJobConfigElementaryStreams
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigElementaryStreams">TranscoderJobConfigElementaryStreams</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigElementaryStreams">TranscoderJobConfigElementaryStreams</a>
 
 ---
 
@@ -9693,7 +9693,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigEncryptionsList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigEncryptionsList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigEncryptionsList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigEncryptions">TranscoderJobConfigEncryptions</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigEncryptionsList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigEncryptions">TranscoderJobConfigEncryptions</a>]</code> | *No description.* |
 
 ---
 
@@ -9724,10 +9724,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.transcoderJob.TranscoderJobConfigEncryptionsList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[TranscoderJobConfigEncryptions]]
+internal_value: IResolvable | typing.List[TranscoderJobConfigEncryptions]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigEncryptions">TranscoderJobConfigEncryptions</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigEncryptions">TranscoderJobConfigEncryptions</a>]
 
 ---
 
@@ -10434,7 +10434,7 @@ def reset_secret_manager_key_source() -> None
 | <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigEncryptionsOutputReference.property.sampleAesInput">sample_aes_input</a></code> | <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigEncryptionsSampleAes">TranscoderJobConfigEncryptionsSampleAes</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigEncryptionsOutputReference.property.secretManagerKeySourceInput">secret_manager_key_source_input</a></code> | <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigEncryptionsSecretManagerKeySource">TranscoderJobConfigEncryptionsSecretManagerKeySource</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigEncryptionsOutputReference.property.id">id</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigEncryptionsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigEncryptions">TranscoderJobConfigEncryptions</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigEncryptionsOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigEncryptions">TranscoderJobConfigEncryptions</a></code> | *No description.* |
 
 ---
 
@@ -10585,10 +10585,10 @@ id: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.transcoderJob.TranscoderJobConfigEncryptionsOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, TranscoderJobConfigEncryptions]
+internal_value: IResolvable | TranscoderJobConfigEncryptions
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigEncryptions">TranscoderJobConfigEncryptions</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigEncryptions">TranscoderJobConfigEncryptions</a>
 
 ---
 
@@ -11294,7 +11294,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigInputsList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigInputsList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigInputsList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigInputs">TranscoderJobConfigInputs</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigInputsList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigInputs">TranscoderJobConfigInputs</a>]</code> | *No description.* |
 
 ---
 
@@ -11325,10 +11325,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.transcoderJob.TranscoderJobConfigInputsList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[TranscoderJobConfigInputs]]
+internal_value: IResolvable | typing.List[TranscoderJobConfigInputs]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigInputs">TranscoderJobConfigInputs</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigInputs">TranscoderJobConfigInputs</a>]
 
 ---
 
@@ -11606,7 +11606,7 @@ def reset_uri() -> None
 | <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigInputsOutputReference.property.uriInput">uri_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigInputsOutputReference.property.key">key</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigInputsOutputReference.property.uri">uri</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigInputsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigInputs">TranscoderJobConfigInputs</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigInputsOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigInputs">TranscoderJobConfigInputs</a></code> | *No description.* |
 
 ---
 
@@ -11677,10 +11677,10 @@ uri: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.transcoderJob.TranscoderJobConfigInputsOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, TranscoderJobConfigInputs]
+internal_value: IResolvable | TranscoderJobConfigInputs
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigInputs">TranscoderJobConfigInputs</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigInputs">TranscoderJobConfigInputs</a>
 
 ---
 
@@ -11816,7 +11816,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigManifestsList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigManifestsList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigManifestsList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigManifests">TranscoderJobConfigManifests</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigManifestsList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigManifests">TranscoderJobConfigManifests</a>]</code> | *No description.* |
 
 ---
 
@@ -11847,10 +11847,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.transcoderJob.TranscoderJobConfigManifestsList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[TranscoderJobConfigManifests]]
+internal_value: IResolvable | typing.List[TranscoderJobConfigManifests]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigManifests">TranscoderJobConfigManifests</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigManifests">TranscoderJobConfigManifests</a>]
 
 ---
 
@@ -12137,7 +12137,7 @@ def reset_type() -> None
 | <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigManifestsOutputReference.property.fileName">file_name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigManifestsOutputReference.property.muxStreams">mux_streams</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigManifestsOutputReference.property.type">type</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigManifestsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigManifests">TranscoderJobConfigManifests</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigManifestsOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigManifests">TranscoderJobConfigManifests</a></code> | *No description.* |
 
 ---
 
@@ -12228,10 +12228,10 @@ type: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.transcoderJob.TranscoderJobConfigManifestsOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, TranscoderJobConfigManifests]
+internal_value: IResolvable | TranscoderJobConfigManifests
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigManifests">TranscoderJobConfigManifests</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigManifests">TranscoderJobConfigManifests</a>
 
 ---
 
@@ -12367,7 +12367,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigMuxStreamsList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigMuxStreamsList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigMuxStreamsList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigMuxStreams">TranscoderJobConfigMuxStreams</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigMuxStreamsList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigMuxStreams">TranscoderJobConfigMuxStreams</a>]</code> | *No description.* |
 
 ---
 
@@ -12398,10 +12398,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.transcoderJob.TranscoderJobConfigMuxStreamsList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[TranscoderJobConfigMuxStreams]]
+internal_value: IResolvable | typing.List[TranscoderJobConfigMuxStreams]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigMuxStreams">TranscoderJobConfigMuxStreams</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigMuxStreams">TranscoderJobConfigMuxStreams</a>]
 
 ---
 
@@ -12734,7 +12734,7 @@ def reset_segment_settings() -> None
 | <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigMuxStreamsOutputReference.property.encryptionId">encryption_id</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigMuxStreamsOutputReference.property.fileName">file_name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigMuxStreamsOutputReference.property.key">key</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigMuxStreamsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigMuxStreams">TranscoderJobConfigMuxStreams</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigMuxStreamsOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigMuxStreams">TranscoderJobConfigMuxStreams</a></code> | *No description.* |
 
 ---
 
@@ -12885,10 +12885,10 @@ key: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.transcoderJob.TranscoderJobConfigMuxStreamsOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, TranscoderJobConfigMuxStreams]
+internal_value: IResolvable | TranscoderJobConfigMuxStreams
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigMuxStreams">TranscoderJobConfigMuxStreams</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigMuxStreams">TranscoderJobConfigMuxStreams</a>
 
 ---
 
@@ -14375,7 +14375,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigOverlaysAnimationsList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigOverlaysAnimationsList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigOverlaysAnimationsList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigOverlaysAnimations">TranscoderJobConfigOverlaysAnimations</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigOverlaysAnimationsList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigOverlaysAnimations">TranscoderJobConfigOverlaysAnimations</a>]</code> | *No description.* |
 
 ---
 
@@ -14406,10 +14406,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.transcoderJob.TranscoderJobConfigOverlaysAnimationsList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[TranscoderJobConfigOverlaysAnimations]]
+internal_value: IResolvable | typing.List[TranscoderJobConfigOverlaysAnimations]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigOverlaysAnimations">TranscoderJobConfigOverlaysAnimations</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigOverlaysAnimations">TranscoderJobConfigOverlaysAnimations</a>]
 
 ---
 
@@ -14734,7 +14734,7 @@ def reset_animation_fade() -> None
 | <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigOverlaysAnimationsOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigOverlaysAnimationsOutputReference.property.animationFade">animation_fade</a></code> | <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigOverlaysAnimationsAnimationFadeOutputReference">TranscoderJobConfigOverlaysAnimationsAnimationFadeOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigOverlaysAnimationsOutputReference.property.animationFadeInput">animation_fade_input</a></code> | <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigOverlaysAnimationsAnimationFade">TranscoderJobConfigOverlaysAnimationsAnimationFade</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigOverlaysAnimationsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigOverlaysAnimations">TranscoderJobConfigOverlaysAnimations</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigOverlaysAnimationsOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigOverlaysAnimations">TranscoderJobConfigOverlaysAnimations</a></code> | *No description.* |
 
 ---
 
@@ -14785,10 +14785,10 @@ animation_fade_input: TranscoderJobConfigOverlaysAnimationsAnimationFade
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.transcoderJob.TranscoderJobConfigOverlaysAnimationsOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, TranscoderJobConfigOverlaysAnimations]
+internal_value: IResolvable | TranscoderJobConfigOverlaysAnimations
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigOverlaysAnimations">TranscoderJobConfigOverlaysAnimations</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigOverlaysAnimations">TranscoderJobConfigOverlaysAnimations</a>
 
 ---
 
@@ -15220,7 +15220,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigOverlaysList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigOverlaysList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigOverlaysList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigOverlays">TranscoderJobConfigOverlays</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigOverlaysList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigOverlays">TranscoderJobConfigOverlays</a>]</code> | *No description.* |
 
 ---
 
@@ -15251,10 +15251,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.transcoderJob.TranscoderJobConfigOverlaysList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[TranscoderJobConfigOverlays]]
+internal_value: IResolvable | typing.List[TranscoderJobConfigOverlays]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigOverlays">TranscoderJobConfigOverlays</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigOverlays">TranscoderJobConfigOverlays</a>]
 
 ---
 
@@ -15515,13 +15515,13 @@ Returns a reversible string representation.
 
 ```python
 def put_animations(
-  value: typing.Union[IResolvable, typing.List[TranscoderJobConfigOverlaysAnimations]]
+  value: IResolvable | typing.List[TranscoderJobConfigOverlaysAnimations]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.transcoderJob.TranscoderJobConfigOverlaysOutputReference.putAnimations.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigOverlaysAnimations">TranscoderJobConfigOverlaysAnimations</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigOverlaysAnimations">TranscoderJobConfigOverlaysAnimations</a>]
 
 ---
 
@@ -15564,9 +15564,9 @@ def reset_image() -> None
 | <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigOverlaysOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigOverlaysOutputReference.property.animations">animations</a></code> | <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigOverlaysAnimationsList">TranscoderJobConfigOverlaysAnimationsList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigOverlaysOutputReference.property.image">image</a></code> | <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigOverlaysImageOutputReference">TranscoderJobConfigOverlaysImageOutputReference</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigOverlaysOutputReference.property.animationsInput">animations_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigOverlaysAnimations">TranscoderJobConfigOverlaysAnimations</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigOverlaysOutputReference.property.animationsInput">animations_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigOverlaysAnimations">TranscoderJobConfigOverlaysAnimations</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigOverlaysOutputReference.property.imageInput">image_input</a></code> | <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigOverlaysImage">TranscoderJobConfigOverlaysImage</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigOverlaysOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigOverlays">TranscoderJobConfigOverlays</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigOverlaysOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigOverlays">TranscoderJobConfigOverlays</a></code> | *No description.* |
 
 ---
 
@@ -15617,10 +15617,10 @@ image: TranscoderJobConfigOverlaysImageOutputReference
 ##### `animations_input`<sup>Optional</sup> <a name="animations_input" id="@cdktf/provider-google.transcoderJob.TranscoderJobConfigOverlaysOutputReference.property.animationsInput"></a>
 
 ```python
-animations_input: typing.Union[IResolvable, typing.List[TranscoderJobConfigOverlaysAnimations]]
+animations_input: IResolvable | typing.List[TranscoderJobConfigOverlaysAnimations]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigOverlaysAnimations">TranscoderJobConfigOverlaysAnimations</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigOverlaysAnimations">TranscoderJobConfigOverlaysAnimations</a>]
 
 ---
 
@@ -15637,10 +15637,10 @@ image_input: TranscoderJobConfigOverlaysImage
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.transcoderJob.TranscoderJobConfigOverlaysOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, TranscoderJobConfigOverlays]
+internal_value: IResolvable | TranscoderJobConfigOverlays
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigOverlays">TranscoderJobConfigOverlays</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigOverlays">TranscoderJobConfigOverlays</a>
 
 ---
 
@@ -16210,7 +16210,7 @@ def reset_update() -> None
 | <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobTimeoutsOutputReference.property.create">create</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobTimeoutsOutputReference.property.delete">delete</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobTimeoutsOutputReference.property.update">update</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.transcoderJob.TranscoderJobTimeouts">TranscoderJobTimeouts</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.transcoderJob.TranscoderJobTimeouts">TranscoderJobTimeouts</a></code> | *No description.* |
 
 ---
 
@@ -16301,10 +16301,10 @@ update: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.transcoderJob.TranscoderJobTimeoutsOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, TranscoderJobTimeouts]
+internal_value: IResolvable | TranscoderJobTimeouts
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.transcoderJob.TranscoderJobTimeouts">TranscoderJobTimeouts</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.transcoderJob.TranscoderJobTimeouts">TranscoderJobTimeouts</a>
 
 ---
 

@@ -14,13 +14,13 @@ from cdktf_cdktf_provider_google import dataplex_datascan
 dataplexDatascan.DataplexDatascan(
   scope: Construct,
   id: str,
-  connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection] = None,
-  count: typing.Union[typing.Union[int, float], TerraformCount] = None,
+  connection: SSHProvisionerConnection | WinrmProvisionerConnection = None,
+  count: typing.Union[int, float] | TerraformCount = None,
   depends_on: typing.List[ITerraformDependable] = None,
   for_each: ITerraformIterator = None,
   lifecycle: TerraformResourceLifecycle = None,
   provider: TerraformProvider = None,
-  provisioners: typing.List[typing.Union[FileProvisioner, LocalExecProvisioner, RemoteExecProvisioner]] = None,
+  provisioners: typing.List[FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner] = None,
   data: DataplexDatascanData,
   data_scan_id: str,
   execution_spec: DataplexDatascanExecutionSpec,
@@ -41,13 +41,13 @@ dataplexDatascan.DataplexDatascan(
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascan.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | The scope in which to define this construct. |
 | <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascan.Initializer.parameter.id">id</a></code> | <code>str</code> | The scoped construct ID. |
-| <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascan.Initializer.parameter.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascan.Initializer.parameter.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascan.Initializer.parameter.connection">connection</a></code> | <code>cdktf.SSHProvisionerConnection \| cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascan.Initializer.parameter.count">count</a></code> | <code>typing.Union[int, float] \| cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascan.Initializer.parameter.dependsOn">depends_on</a></code> | <code>typing.List[cdktf.ITerraformDependable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascan.Initializer.parameter.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascan.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascan.Initializer.parameter.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascan.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascan.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascan.Initializer.parameter.data">data</a></code> | <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanData">DataplexDatascanData</a></code> | data block. |
 | <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascan.Initializer.parameter.dataScanId">data_scan_id</a></code> | <code>str</code> | DataScan identifier. |
 | <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascan.Initializer.parameter.executionSpec">execution_spec</a></code> | <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanExecutionSpec">DataplexDatascanExecutionSpec</a></code> | execution_spec block. |
@@ -84,13 +84,13 @@ Must be unique amongst siblings in the same scope
 
 ##### `connection`<sup>Optional</sup> <a name="connection" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascan.Initializer.parameter.connection"></a>
 
-- *Type:* typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]
+- *Type:* cdktf.SSHProvisionerConnection | cdktf.WinrmProvisionerConnection
 
 ---
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascan.Initializer.parameter.count"></a>
 
-- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
+- *Type:* typing.Union[int, float] | cdktf.TerraformCount
 
 ---
 
@@ -120,7 +120,7 @@ Must be unique amongst siblings in the same scope
 
 ##### `provisioners`<sup>Optional</sup> <a name="provisioners" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascan.Initializer.parameter.provisioners"></a>
 
-- *Type:* typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]
+- *Type:* typing.List[cdktf.FileProvisioner | cdktf.LocalExecProvisioner | cdktf.RemoteExecProvisioner]
 
 ---
 
@@ -525,7 +525,7 @@ def get_string_map_attribute(
 ##### `has_resource_move` <a name="has_resource_move" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascan.hasResourceMove"></a>
 
 ```python
-def has_resource_move() -> typing.Union[TerraformResourceMoveByTarget, TerraformResourceMoveById]
+def has_resource_move() -> TerraformResourceMoveByTarget | TerraformResourceMoveById
 ```
 
 ##### `import_from` <a name="import_from" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascan.importFrom"></a>
@@ -588,7 +588,7 @@ Full id of resource being moved from, e.g. "aws_s3_bucket.example".
 ```python
 def move_to(
   move_target: str,
-  index: typing.Union[str, typing.Union[int, float]] = None
+  index: str | typing.Union[int, float] = None
 ) -> None
 ```
 
@@ -604,7 +604,7 @@ The previously set user defined string set by .addMoveTarget() corresponding to 
 
 ###### `index`<sup>Optional</sup> <a name="index" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascan.moveTo.parameter.index"></a>
 
-- *Type:* typing.Union[str, typing.Union[int, float]]
+- *Type:* str | typing.Union[int, float]
 
 Optional The index corresponding to the key the resource is to appear in the foreach of a resource to move to.
 
@@ -760,17 +760,17 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ```python
 def put_data_quality_spec(
-  catalog_publishing_enabled: typing.Union[bool, IResolvable] = None,
+  catalog_publishing_enabled: bool | IResolvable = None,
   post_scan_actions: DataplexDatascanDataQualitySpecPostScanActions = None,
   row_filter: str = None,
-  rules: typing.Union[IResolvable, typing.List[DataplexDatascanDataQualitySpecRules]] = None,
+  rules: IResolvable | typing.List[DataplexDatascanDataQualitySpecRules] = None,
   sampling_percent: typing.Union[int, float] = None
 ) -> None
 ```
 
 ###### `catalog_publishing_enabled`<sup>Optional</sup> <a name="catalog_publishing_enabled" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascan.putDataQualitySpec.parameter.catalogPublishingEnabled"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 If set, the latest DataScan job result will be published to Dataplex Catalog.
 
@@ -802,7 +802,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `rules`<sup>Optional</sup> <a name="rules" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascan.putDataQualitySpec.parameter.rules"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRules">DataplexDatascanDataQualitySpecRules</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRules">DataplexDatascanDataQualitySpecRules</a>]
 
 rules block.
 
@@ -1079,13 +1079,13 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.5
 | <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascan.property.terraformMetaArguments">terraform_meta_arguments</a></code> | <code>typing.Mapping[typing.Any]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascan.property.terraformResourceType">terraform_resource_type</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascan.property.terraformGeneratorMetadata">terraform_generator_metadata</a></code> | <code>cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascan.property.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascan.property.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascan.property.connection">connection</a></code> | <code>cdktf.SSHProvisionerConnection \| cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascan.property.count">count</a></code> | <code>typing.Union[int, float] \| cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascan.property.dependsOn">depends_on</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascan.property.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascan.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascan.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascan.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascan.property.provisioners">provisioners</a></code> | <code>typing.List[cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascan.property.createTime">create_time</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascan.property.data">data</a></code> | <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataOutputReference">DataplexDatascanDataOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascan.property.dataDiscoverySpec">data_discovery_spec</a></code> | <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataDiscoverySpecOutputReference">DataplexDatascanDataDiscoverySpecOutputReference</a></code> | *No description.* |
@@ -1113,7 +1113,7 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.5
 | <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascan.property.labelsInput">labels_input</a></code> | <code>typing.Mapping[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascan.property.locationInput">location_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascan.property.projectInput">project_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascan.property.timeoutsInput">timeouts_input</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanTimeouts">DataplexDatascanTimeouts</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascan.property.timeoutsInput">timeouts_input</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanTimeouts">DataplexDatascanTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascan.property.dataScanId">data_scan_id</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascan.property.description">description</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascan.property.displayName">display_name</a></code> | <code>str</code> | *No description.* |
@@ -1199,20 +1199,20 @@ terraform_generator_metadata: TerraformProviderGeneratorMetadata
 ##### `connection`<sup>Optional</sup> <a name="connection" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascan.property.connection"></a>
 
 ```python
-connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection]
+connection: SSHProvisionerConnection | WinrmProvisionerConnection
 ```
 
-- *Type:* typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]
+- *Type:* cdktf.SSHProvisionerConnection | cdktf.WinrmProvisionerConnection
 
 ---
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascan.property.count"></a>
 
 ```python
-count: typing.Union[typing.Union[int, float], TerraformCount]
+count: typing.Union[int, float] | TerraformCount
 ```
 
-- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
+- *Type:* typing.Union[int, float] | cdktf.TerraformCount
 
 ---
 
@@ -1259,10 +1259,10 @@ provider: TerraformProvider
 ##### `provisioners`<sup>Optional</sup> <a name="provisioners" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascan.property.provisioners"></a>
 
 ```python
-provisioners: typing.List[typing.Union[FileProvisioner, LocalExecProvisioner, RemoteExecProvisioner]]
+provisioners: typing.List[FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner]
 ```
 
-- *Type:* typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]
+- *Type:* typing.List[cdktf.FileProvisioner | cdktf.LocalExecProvisioner | cdktf.RemoteExecProvisioner]
 
 ---
 
@@ -1539,10 +1539,10 @@ project_input: str
 ##### `timeouts_input`<sup>Optional</sup> <a name="timeouts_input" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascan.property.timeoutsInput"></a>
 
 ```python
-timeouts_input: typing.Union[IResolvable, DataplexDatascanTimeouts]
+timeouts_input: IResolvable | DataplexDatascanTimeouts
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanTimeouts">DataplexDatascanTimeouts</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanTimeouts">DataplexDatascanTimeouts</a>
 
 ---
 
@@ -1644,13 +1644,13 @@ tfResourceType: str
 from cdktf_cdktf_provider_google import dataplex_datascan
 
 dataplexDatascan.DataplexDatascanConfig(
-  connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection] = None,
-  count: typing.Union[typing.Union[int, float], TerraformCount] = None,
+  connection: SSHProvisionerConnection | WinrmProvisionerConnection = None,
+  count: typing.Union[int, float] | TerraformCount = None,
   depends_on: typing.List[ITerraformDependable] = None,
   for_each: ITerraformIterator = None,
   lifecycle: TerraformResourceLifecycle = None,
   provider: TerraformProvider = None,
-  provisioners: typing.List[typing.Union[FileProvisioner, LocalExecProvisioner, RemoteExecProvisioner]] = None,
+  provisioners: typing.List[FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner] = None,
   data: DataplexDatascanData,
   data_scan_id: str,
   execution_spec: DataplexDatascanExecutionSpec,
@@ -1671,13 +1671,13 @@ dataplexDatascan.DataplexDatascanConfig(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanConfig.property.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanConfig.property.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanConfig.property.connection">connection</a></code> | <code>cdktf.SSHProvisionerConnection \| cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanConfig.property.count">count</a></code> | <code>typing.Union[int, float] \| cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanConfig.property.dependsOn">depends_on</a></code> | <code>typing.List[cdktf.ITerraformDependable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanConfig.property.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanConfig.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanConfig.property.provisioners">provisioners</a></code> | <code>typing.List[cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanConfig.property.data">data</a></code> | <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanData">DataplexDatascanData</a></code> | data block. |
 | <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanConfig.property.dataScanId">data_scan_id</a></code> | <code>str</code> | DataScan identifier. |
 | <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanConfig.property.executionSpec">execution_spec</a></code> | <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanExecutionSpec">DataplexDatascanExecutionSpec</a></code> | execution_spec block. |
@@ -1697,20 +1697,20 @@ dataplexDatascan.DataplexDatascanConfig(
 ##### `connection`<sup>Optional</sup> <a name="connection" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanConfig.property.connection"></a>
 
 ```python
-connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection]
+connection: SSHProvisionerConnection | WinrmProvisionerConnection
 ```
 
-- *Type:* typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]
+- *Type:* cdktf.SSHProvisionerConnection | cdktf.WinrmProvisionerConnection
 
 ---
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanConfig.property.count"></a>
 
 ```python
-count: typing.Union[typing.Union[int, float], TerraformCount]
+count: typing.Union[int, float] | TerraformCount
 ```
 
-- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
+- *Type:* typing.Union[int, float] | cdktf.TerraformCount
 
 ---
 
@@ -1757,10 +1757,10 @@ provider: TerraformProvider
 ##### `provisioners`<sup>Optional</sup> <a name="provisioners" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanConfig.property.provisioners"></a>
 
 ```python
-provisioners: typing.List[typing.Union[FileProvisioner, LocalExecProvisioner, RemoteExecProvisioner]]
+provisioners: typing.List[FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner]
 ```
 
-- *Type:* typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]
+- *Type:* typing.List[cdktf.FileProvisioner | cdktf.LocalExecProvisioner | cdktf.RemoteExecProvisioner]
 
 ---
 
@@ -2235,7 +2235,7 @@ dataplexDatascan.DataplexDatascanDataDiscoverySpecStorageConfigCsvOptions(
   encoding: str = None,
   header_rows: typing.Union[int, float] = None,
   quote: str = None,
-  type_inference_disabled: typing.Union[bool, IResolvable] = None
+  type_inference_disabled: bool | IResolvable = None
 )
 ```
 
@@ -2247,7 +2247,7 @@ dataplexDatascan.DataplexDatascanDataDiscoverySpecStorageConfigCsvOptions(
 | <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataDiscoverySpecStorageConfigCsvOptions.property.encoding">encoding</a></code> | <code>str</code> | The character encoding of the data. The default is UTF-8. |
 | <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataDiscoverySpecStorageConfigCsvOptions.property.headerRows">header_rows</a></code> | <code>typing.Union[int, float]</code> | The number of rows to interpret as header rows that should be skipped when reading data rows. |
 | <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataDiscoverySpecStorageConfigCsvOptions.property.quote">quote</a></code> | <code>str</code> | The character used to quote column values. |
-| <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataDiscoverySpecStorageConfigCsvOptions.property.typeInferenceDisabled">type_inference_disabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Whether to disable the inference of data types for CSV data. If true, all columns are registered as strings. |
+| <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataDiscoverySpecStorageConfigCsvOptions.property.typeInferenceDisabled">type_inference_disabled</a></code> | <code>bool \| cdktf.IResolvable</code> | Whether to disable the inference of data types for CSV data. If true, all columns are registered as strings. |
 
 ---
 
@@ -2312,10 +2312,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `type_inference_disabled`<sup>Optional</sup> <a name="type_inference_disabled" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataDiscoverySpecStorageConfigCsvOptions.property.typeInferenceDisabled"></a>
 
 ```python
-type_inference_disabled: typing.Union[bool, IResolvable]
+type_inference_disabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Whether to disable the inference of data types for CSV data. If true, all columns are registered as strings.
 
@@ -2332,7 +2332,7 @@ from cdktf_cdktf_provider_google import dataplex_datascan
 
 dataplexDatascan.DataplexDatascanDataDiscoverySpecStorageConfigJsonOptions(
   encoding: str = None,
-  type_inference_disabled: typing.Union[bool, IResolvable] = None
+  type_inference_disabled: bool | IResolvable = None
 )
 ```
 
@@ -2341,7 +2341,7 @@ dataplexDatascan.DataplexDatascanDataDiscoverySpecStorageConfigJsonOptions(
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataDiscoverySpecStorageConfigJsonOptions.property.encoding">encoding</a></code> | <code>str</code> | The character encoding of the data. The default is UTF-8. |
-| <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataDiscoverySpecStorageConfigJsonOptions.property.typeInferenceDisabled">type_inference_disabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Whether to disable the inference of data types for JSON data. |
+| <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataDiscoverySpecStorageConfigJsonOptions.property.typeInferenceDisabled">type_inference_disabled</a></code> | <code>bool \| cdktf.IResolvable</code> | Whether to disable the inference of data types for JSON data. |
 
 ---
 
@@ -2362,10 +2362,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `type_inference_disabled`<sup>Optional</sup> <a name="type_inference_disabled" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataDiscoverySpecStorageConfigJsonOptions.property.typeInferenceDisabled"></a>
 
 ```python
-type_inference_disabled: typing.Union[bool, IResolvable]
+type_inference_disabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Whether to disable the inference of data types for JSON data.
 
@@ -2628,10 +2628,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 from cdktf_cdktf_provider_google import dataplex_datascan
 
 dataplexDatascan.DataplexDatascanDataQualitySpec(
-  catalog_publishing_enabled: typing.Union[bool, IResolvable] = None,
+  catalog_publishing_enabled: bool | IResolvable = None,
   post_scan_actions: DataplexDatascanDataQualitySpecPostScanActions = None,
   row_filter: str = None,
-  rules: typing.Union[IResolvable, typing.List[DataplexDatascanDataQualitySpecRules]] = None,
+  rules: IResolvable | typing.List[DataplexDatascanDataQualitySpecRules] = None,
   sampling_percent: typing.Union[int, float] = None
 )
 ```
@@ -2640,10 +2640,10 @@ dataplexDatascan.DataplexDatascanDataQualitySpec(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpec.property.catalogPublishingEnabled">catalog_publishing_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | If set, the latest DataScan job result will be published to Dataplex Catalog. |
+| <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpec.property.catalogPublishingEnabled">catalog_publishing_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | If set, the latest DataScan job result will be published to Dataplex Catalog. |
 | <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpec.property.postScanActions">post_scan_actions</a></code> | <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecPostScanActions">DataplexDatascanDataQualitySpecPostScanActions</a></code> | post_scan_actions block. |
 | <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpec.property.rowFilter">row_filter</a></code> | <code>str</code> | A filter applied to all rows in a single DataScan job. |
-| <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpec.property.rules">rules</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRules">DataplexDatascanDataQualitySpecRules</a>]]</code> | rules block. |
+| <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpec.property.rules">rules</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRules">DataplexDatascanDataQualitySpecRules</a>]</code> | rules block. |
 | <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpec.property.samplingPercent">sampling_percent</a></code> | <code>typing.Union[int, float]</code> | The percentage of the records to be selected from the dataset for DataScan. |
 
 ---
@@ -2651,10 +2651,10 @@ dataplexDatascan.DataplexDatascanDataQualitySpec(
 ##### `catalog_publishing_enabled`<sup>Optional</sup> <a name="catalog_publishing_enabled" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpec.property.catalogPublishingEnabled"></a>
 
 ```python
-catalog_publishing_enabled: typing.Union[bool, IResolvable]
+catalog_publishing_enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 If set, the latest DataScan job result will be published to Dataplex Catalog.
 
@@ -2695,10 +2695,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `rules`<sup>Optional</sup> <a name="rules" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpec.property.rules"></a>
 
 ```python
-rules: typing.Union[IResolvable, typing.List[DataplexDatascanDataQualitySpecRules]]
+rules: IResolvable | typing.List[DataplexDatascanDataQualitySpecRules]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRules">DataplexDatascanDataQualitySpecRules</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRules">DataplexDatascanDataQualitySpecRules</a>]
 
 rules block.
 
@@ -2990,7 +2990,7 @@ dataplexDatascan.DataplexDatascanDataQualitySpecRules(
   dimension: str,
   column: str = None,
   description: str = None,
-  ignore_null: typing.Union[bool, IResolvable] = None,
+  ignore_null: bool | IResolvable = None,
   name: str = None,
   non_null_expectation: DataplexDatascanDataQualitySpecRulesNonNullExpectation = None,
   range_expectation: DataplexDatascanDataQualitySpecRulesRangeExpectation = None,
@@ -2999,7 +2999,7 @@ dataplexDatascan.DataplexDatascanDataQualitySpecRules(
   set_expectation: DataplexDatascanDataQualitySpecRulesSetExpectation = None,
   sql_assertion: DataplexDatascanDataQualitySpecRulesSqlAssertion = None,
   statistic_range_expectation: DataplexDatascanDataQualitySpecRulesStatisticRangeExpectation = None,
-  suspended: typing.Union[bool, IResolvable] = None,
+  suspended: bool | IResolvable = None,
   table_condition_expectation: DataplexDatascanDataQualitySpecRulesTableConditionExpectation = None,
   threshold: typing.Union[int, float] = None,
   uniqueness_expectation: DataplexDatascanDataQualitySpecRulesUniquenessExpectation = None
@@ -3013,7 +3013,7 @@ dataplexDatascan.DataplexDatascanDataQualitySpecRules(
 | <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRules.property.dimension">dimension</a></code> | <code>str</code> | The dimension name a rule belongs to. |
 | <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRules.property.column">column</a></code> | <code>str</code> | The unnested column which this rule is evaluated against. |
 | <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRules.property.description">description</a></code> | <code>str</code> | Description of the rule. The maximum length is 1,024 characters. |
-| <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRules.property.ignoreNull">ignore_null</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Rows with null values will automatically fail a rule, unless ignoreNull is true. |
+| <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRules.property.ignoreNull">ignore_null</a></code> | <code>bool \| cdktf.IResolvable</code> | Rows with null values will automatically fail a rule, unless ignoreNull is true. |
 | <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRules.property.name">name</a></code> | <code>str</code> | A mutable name for the rule. |
 | <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRules.property.nonNullExpectation">non_null_expectation</a></code> | <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRulesNonNullExpectation">DataplexDatascanDataQualitySpecRulesNonNullExpectation</a></code> | non_null_expectation block. |
 | <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRules.property.rangeExpectation">range_expectation</a></code> | <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRulesRangeExpectation">DataplexDatascanDataQualitySpecRulesRangeExpectation</a></code> | range_expectation block. |
@@ -3022,7 +3022,7 @@ dataplexDatascan.DataplexDatascanDataQualitySpecRules(
 | <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRules.property.setExpectation">set_expectation</a></code> | <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRulesSetExpectation">DataplexDatascanDataQualitySpecRulesSetExpectation</a></code> | set_expectation block. |
 | <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRules.property.sqlAssertion">sql_assertion</a></code> | <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRulesSqlAssertion">DataplexDatascanDataQualitySpecRulesSqlAssertion</a></code> | sql_assertion block. |
 | <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRules.property.statisticRangeExpectation">statistic_range_expectation</a></code> | <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRulesStatisticRangeExpectation">DataplexDatascanDataQualitySpecRulesStatisticRangeExpectation</a></code> | statistic_range_expectation block. |
-| <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRules.property.suspended">suspended</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Whether the Rule is active or suspended. Default = false. |
+| <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRules.property.suspended">suspended</a></code> | <code>bool \| cdktf.IResolvable</code> | Whether the Rule is active or suspended. Default = false. |
 | <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRules.property.tableConditionExpectation">table_condition_expectation</a></code> | <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRulesTableConditionExpectation">DataplexDatascanDataQualitySpecRulesTableConditionExpectation</a></code> | table_condition_expectation block. |
 | <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRules.property.threshold">threshold</a></code> | <code>typing.Union[int, float]</code> | The minimum ratio of passing_rows / total_rows required to pass this rule, with a range of [0.0, 1.0]. 0 indicates default value (i.e. 1.0). |
 | <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRules.property.uniquenessExpectation">uniqueness_expectation</a></code> | <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRulesUniquenessExpectation">DataplexDatascanDataQualitySpecRulesUniquenessExpectation</a></code> | uniqueness_expectation block. |
@@ -3076,10 +3076,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `ignore_null`<sup>Optional</sup> <a name="ignore_null" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRules.property.ignoreNull"></a>
 
 ```python
-ignore_null: typing.Union[bool, IResolvable]
+ignore_null: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Rows with null values will automatically fail a rule, unless ignoreNull is true.
 
@@ -3209,10 +3209,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `suspended`<sup>Optional</sup> <a name="suspended" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRules.property.suspended"></a>
 
 ```python
-suspended: typing.Union[bool, IResolvable]
+suspended: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Whether the Rule is active or suspended. Default = false.
 
@@ -3283,8 +3283,8 @@ from cdktf_cdktf_provider_google import dataplex_datascan
 dataplexDatascan.DataplexDatascanDataQualitySpecRulesRangeExpectation(
   max_value: str = None,
   min_value: str = None,
-  strict_max_enabled: typing.Union[bool, IResolvable] = None,
-  strict_min_enabled: typing.Union[bool, IResolvable] = None
+  strict_max_enabled: bool | IResolvable = None,
+  strict_min_enabled: bool | IResolvable = None
 )
 ```
 
@@ -3294,8 +3294,8 @@ dataplexDatascan.DataplexDatascanDataQualitySpecRulesRangeExpectation(
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRulesRangeExpectation.property.maxValue">max_value</a></code> | <code>str</code> | The maximum column value allowed for a row to pass this validation. |
 | <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRulesRangeExpectation.property.minValue">min_value</a></code> | <code>str</code> | The minimum column value allowed for a row to pass this validation. |
-| <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRulesRangeExpectation.property.strictMaxEnabled">strict_max_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Whether each value needs to be strictly lesser than ('<') the maximum, or if equality is allowed. |
-| <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRulesRangeExpectation.property.strictMinEnabled">strict_min_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Whether each value needs to be strictly greater than ('>') the minimum, or if equality is allowed. |
+| <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRulesRangeExpectation.property.strictMaxEnabled">strict_max_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | Whether each value needs to be strictly lesser than ('<') the maximum, or if equality is allowed. |
+| <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRulesRangeExpectation.property.strictMinEnabled">strict_min_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | Whether each value needs to be strictly greater than ('>') the minimum, or if equality is allowed. |
 
 ---
 
@@ -3334,10 +3334,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `strict_max_enabled`<sup>Optional</sup> <a name="strict_max_enabled" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRulesRangeExpectation.property.strictMaxEnabled"></a>
 
 ```python
-strict_max_enabled: typing.Union[bool, IResolvable]
+strict_max_enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Whether each value needs to be strictly lesser than ('<') the maximum, or if equality is allowed.
 
@@ -3350,10 +3350,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `strict_min_enabled`<sup>Optional</sup> <a name="strict_min_enabled" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRulesRangeExpectation.property.strictMinEnabled"></a>
 
 ```python
-strict_min_enabled: typing.Union[bool, IResolvable]
+strict_min_enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Whether each value needs to be strictly greater than ('>') the minimum, or if equality is allowed.
 
@@ -3510,8 +3510,8 @@ dataplexDatascan.DataplexDatascanDataQualitySpecRulesStatisticRangeExpectation(
   statistic: str,
   max_value: str = None,
   min_value: str = None,
-  strict_max_enabled: typing.Union[bool, IResolvable] = None,
-  strict_min_enabled: typing.Union[bool, IResolvable] = None
+  strict_max_enabled: bool | IResolvable = None,
+  strict_min_enabled: bool | IResolvable = None
 )
 ```
 
@@ -3522,8 +3522,8 @@ dataplexDatascan.DataplexDatascanDataQualitySpecRulesStatisticRangeExpectation(
 | <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRulesStatisticRangeExpectation.property.statistic">statistic</a></code> | <code>str</code> | column statistics. Possible values: ["STATISTIC_UNDEFINED", "MEAN", "MIN", "MAX"]. |
 | <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRulesStatisticRangeExpectation.property.maxValue">max_value</a></code> | <code>str</code> | The maximum column statistic value allowed for a row to pass this validation. |
 | <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRulesStatisticRangeExpectation.property.minValue">min_value</a></code> | <code>str</code> | The minimum column statistic value allowed for a row to pass this validation. |
-| <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRulesStatisticRangeExpectation.property.strictMaxEnabled">strict_max_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Whether column statistic needs to be strictly lesser than ('<') the maximum, or if equality is allowed. |
-| <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRulesStatisticRangeExpectation.property.strictMinEnabled">strict_min_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Whether column statistic needs to be strictly greater than ('>') the minimum, or if equality is allowed. |
+| <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRulesStatisticRangeExpectation.property.strictMaxEnabled">strict_max_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | Whether column statistic needs to be strictly lesser than ('<') the maximum, or if equality is allowed. |
+| <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRulesStatisticRangeExpectation.property.strictMinEnabled">strict_min_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | Whether column statistic needs to be strictly greater than ('>') the minimum, or if equality is allowed. |
 
 ---
 
@@ -3576,10 +3576,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `strict_max_enabled`<sup>Optional</sup> <a name="strict_max_enabled" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRulesStatisticRangeExpectation.property.strictMaxEnabled"></a>
 
 ```python
-strict_max_enabled: typing.Union[bool, IResolvable]
+strict_max_enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Whether column statistic needs to be strictly lesser than ('<') the maximum, or if equality is allowed.
 
@@ -3592,10 +3592,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `strict_min_enabled`<sup>Optional</sup> <a name="strict_min_enabled" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRulesStatisticRangeExpectation.property.strictMinEnabled"></a>
 
 ```python
-strict_min_enabled: typing.Union[bool, IResolvable]
+strict_min_enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Whether column statistic needs to be strictly greater than ('>') the minimum, or if equality is allowed.
 
@@ -4976,12 +4976,12 @@ def reset_type_inference_disabled() -> None
 | <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataDiscoverySpecStorageConfigCsvOptionsOutputReference.property.encodingInput">encoding_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataDiscoverySpecStorageConfigCsvOptionsOutputReference.property.headerRowsInput">header_rows_input</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataDiscoverySpecStorageConfigCsvOptionsOutputReference.property.quoteInput">quote_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataDiscoverySpecStorageConfigCsvOptionsOutputReference.property.typeInferenceDisabledInput">type_inference_disabled_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataDiscoverySpecStorageConfigCsvOptionsOutputReference.property.typeInferenceDisabledInput">type_inference_disabled_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataDiscoverySpecStorageConfigCsvOptionsOutputReference.property.delimiter">delimiter</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataDiscoverySpecStorageConfigCsvOptionsOutputReference.property.encoding">encoding</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataDiscoverySpecStorageConfigCsvOptionsOutputReference.property.headerRows">header_rows</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataDiscoverySpecStorageConfigCsvOptionsOutputReference.property.quote">quote</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataDiscoverySpecStorageConfigCsvOptionsOutputReference.property.typeInferenceDisabled">type_inference_disabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataDiscoverySpecStorageConfigCsvOptionsOutputReference.property.typeInferenceDisabled">type_inference_disabled</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataDiscoverySpecStorageConfigCsvOptionsOutputReference.property.internalValue">internal_value</a></code> | <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataDiscoverySpecStorageConfigCsvOptions">DataplexDatascanDataDiscoverySpecStorageConfigCsvOptions</a></code> | *No description.* |
 
 ---
@@ -5053,10 +5053,10 @@ quote_input: str
 ##### `type_inference_disabled_input`<sup>Optional</sup> <a name="type_inference_disabled_input" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataDiscoverySpecStorageConfigCsvOptionsOutputReference.property.typeInferenceDisabledInput"></a>
 
 ```python
-type_inference_disabled_input: typing.Union[bool, IResolvable]
+type_inference_disabled_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -5103,10 +5103,10 @@ quote: str
 ##### `type_inference_disabled`<sup>Required</sup> <a name="type_inference_disabled" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataDiscoverySpecStorageConfigCsvOptionsOutputReference.property.typeInferenceDisabled"></a>
 
 ```python
-type_inference_disabled: typing.Union[bool, IResolvable]
+type_inference_disabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -5371,9 +5371,9 @@ def reset_type_inference_disabled() -> None
 | <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataDiscoverySpecStorageConfigJsonOptionsOutputReference.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataDiscoverySpecStorageConfigJsonOptionsOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataDiscoverySpecStorageConfigJsonOptionsOutputReference.property.encodingInput">encoding_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataDiscoverySpecStorageConfigJsonOptionsOutputReference.property.typeInferenceDisabledInput">type_inference_disabled_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataDiscoverySpecStorageConfigJsonOptionsOutputReference.property.typeInferenceDisabledInput">type_inference_disabled_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataDiscoverySpecStorageConfigJsonOptionsOutputReference.property.encoding">encoding</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataDiscoverySpecStorageConfigJsonOptionsOutputReference.property.typeInferenceDisabled">type_inference_disabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataDiscoverySpecStorageConfigJsonOptionsOutputReference.property.typeInferenceDisabled">type_inference_disabled</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataDiscoverySpecStorageConfigJsonOptionsOutputReference.property.internalValue">internal_value</a></code> | <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataDiscoverySpecStorageConfigJsonOptions">DataplexDatascanDataDiscoverySpecStorageConfigJsonOptions</a></code> | *No description.* |
 
 ---
@@ -5415,10 +5415,10 @@ encoding_input: str
 ##### `type_inference_disabled_input`<sup>Optional</sup> <a name="type_inference_disabled_input" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataDiscoverySpecStorageConfigJsonOptionsOutputReference.property.typeInferenceDisabledInput"></a>
 
 ```python
-type_inference_disabled_input: typing.Union[bool, IResolvable]
+type_inference_disabled_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -5435,10 +5435,10 @@ encoding: str
 ##### `type_inference_disabled`<sup>Required</sup> <a name="type_inference_disabled" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataDiscoverySpecStorageConfigJsonOptionsOutputReference.property.typeInferenceDisabled"></a>
 
 ```python
-type_inference_disabled: typing.Union[bool, IResolvable]
+type_inference_disabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -5695,7 +5695,7 @@ def put_csv_options(
   encoding: str = None,
   header_rows: typing.Union[int, float] = None,
   quote: str = None,
-  type_inference_disabled: typing.Union[bool, IResolvable] = None
+  type_inference_disabled: bool | IResolvable = None
 ) -> None
 ```
 
@@ -5743,7 +5743,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `type_inference_disabled`<sup>Optional</sup> <a name="type_inference_disabled" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataDiscoverySpecStorageConfigOutputReference.putCsvOptions.parameter.typeInferenceDisabled"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Whether to disable the inference of data types for CSV data. If true, all columns are registered as strings.
 
@@ -5756,7 +5756,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ```python
 def put_json_options(
   encoding: str = None,
-  type_inference_disabled: typing.Union[bool, IResolvable] = None
+  type_inference_disabled: bool | IResolvable = None
 ) -> None
 ```
 
@@ -5772,7 +5772,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `type_inference_disabled`<sup>Optional</sup> <a name="type_inference_disabled" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataDiscoverySpecStorageConfigOutputReference.putJsonOptions.parameter.typeInferenceDisabled"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Whether to disable the inference of data types for JSON data.
 
@@ -8253,13 +8253,13 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ```python
 def put_rules(
-  value: typing.Union[IResolvable, typing.List[DataplexDatascanDataQualitySpecRules]]
+  value: IResolvable | typing.List[DataplexDatascanDataQualitySpecRules]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecOutputReference.putRules.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRules">DataplexDatascanDataQualitySpecRules</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRules">DataplexDatascanDataQualitySpecRules</a>]
 
 ---
 
@@ -8302,12 +8302,12 @@ def reset_sampling_percent() -> None
 | <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecOutputReference.property.postScanActions">post_scan_actions</a></code> | <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecPostScanActionsOutputReference">DataplexDatascanDataQualitySpecPostScanActionsOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecOutputReference.property.rules">rules</a></code> | <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRulesList">DataplexDatascanDataQualitySpecRulesList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecOutputReference.property.catalogPublishingEnabledInput">catalog_publishing_enabled_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecOutputReference.property.catalogPublishingEnabledInput">catalog_publishing_enabled_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecOutputReference.property.postScanActionsInput">post_scan_actions_input</a></code> | <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecPostScanActions">DataplexDatascanDataQualitySpecPostScanActions</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecOutputReference.property.rowFilterInput">row_filter_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecOutputReference.property.rulesInput">rules_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRules">DataplexDatascanDataQualitySpecRules</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecOutputReference.property.rulesInput">rules_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRules">DataplexDatascanDataQualitySpecRules</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecOutputReference.property.samplingPercentInput">sampling_percent_input</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecOutputReference.property.catalogPublishingEnabled">catalog_publishing_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecOutputReference.property.catalogPublishingEnabled">catalog_publishing_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecOutputReference.property.rowFilter">row_filter</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecOutputReference.property.samplingPercent">sampling_percent</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecOutputReference.property.internalValue">internal_value</a></code> | <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpec">DataplexDatascanDataQualitySpec</a></code> | *No description.* |
@@ -8361,10 +8361,10 @@ rules: DataplexDatascanDataQualitySpecRulesList
 ##### `catalog_publishing_enabled_input`<sup>Optional</sup> <a name="catalog_publishing_enabled_input" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecOutputReference.property.catalogPublishingEnabledInput"></a>
 
 ```python
-catalog_publishing_enabled_input: typing.Union[bool, IResolvable]
+catalog_publishing_enabled_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -8391,10 +8391,10 @@ row_filter_input: str
 ##### `rules_input`<sup>Optional</sup> <a name="rules_input" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecOutputReference.property.rulesInput"></a>
 
 ```python
-rules_input: typing.Union[IResolvable, typing.List[DataplexDatascanDataQualitySpecRules]]
+rules_input: IResolvable | typing.List[DataplexDatascanDataQualitySpecRules]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRules">DataplexDatascanDataQualitySpecRules</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRules">DataplexDatascanDataQualitySpecRules</a>]
 
 ---
 
@@ -8411,10 +8411,10 @@ sampling_percent_input: typing.Union[int, float]
 ##### `catalog_publishing_enabled`<sup>Required</sup> <a name="catalog_publishing_enabled" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecOutputReference.property.catalogPublishingEnabled"></a>
 
 ```python
-catalog_publishing_enabled: typing.Union[bool, IResolvable]
+catalog_publishing_enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -10875,7 +10875,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRulesList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRulesList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRulesList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRules">DataplexDatascanDataQualitySpecRules</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRulesList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRules">DataplexDatascanDataQualitySpecRules</a>]</code> | *No description.* |
 
 ---
 
@@ -10906,10 +10906,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRulesList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[DataplexDatascanDataQualitySpecRules]]
+internal_value: IResolvable | typing.List[DataplexDatascanDataQualitySpecRules]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRules">DataplexDatascanDataQualitySpecRules</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRules">DataplexDatascanDataQualitySpecRules</a>]
 
 ---
 
@@ -11472,8 +11472,8 @@ def put_non_null_expectation() -> None
 def put_range_expectation(
   max_value: str = None,
   min_value: str = None,
-  strict_max_enabled: typing.Union[bool, IResolvable] = None,
-  strict_min_enabled: typing.Union[bool, IResolvable] = None
+  strict_max_enabled: bool | IResolvable = None,
+  strict_min_enabled: bool | IResolvable = None
 ) -> None
 ```
 
@@ -11503,7 +11503,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `strict_max_enabled`<sup>Optional</sup> <a name="strict_max_enabled" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRulesOutputReference.putRangeExpectation.parameter.strictMaxEnabled"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Whether each value needs to be strictly lesser than ('<') the maximum, or if equality is allowed.
 
@@ -11515,7 +11515,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `strict_min_enabled`<sup>Optional</sup> <a name="strict_min_enabled" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRulesOutputReference.putRangeExpectation.parameter.strictMinEnabled"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Whether each value needs to be strictly greater than ('>') the minimum, or if equality is allowed.
 
@@ -11604,8 +11604,8 @@ def put_statistic_range_expectation(
   statistic: str,
   max_value: str = None,
   min_value: str = None,
-  strict_max_enabled: typing.Union[bool, IResolvable] = None,
-  strict_min_enabled: typing.Union[bool, IResolvable] = None
+  strict_max_enabled: bool | IResolvable = None,
+  strict_min_enabled: bool | IResolvable = None
 ) -> None
 ```
 
@@ -11645,7 +11645,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `strict_max_enabled`<sup>Optional</sup> <a name="strict_max_enabled" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRulesOutputReference.putStatisticRangeExpectation.parameter.strictMaxEnabled"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Whether column statistic needs to be strictly lesser than ('<') the maximum, or if equality is allowed.
 
@@ -11657,7 +11657,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `strict_min_enabled`<sup>Optional</sup> <a name="strict_min_enabled" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRulesOutputReference.putStatisticRangeExpectation.parameter.strictMinEnabled"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Whether column statistic needs to be strictly greater than ('>') the minimum, or if equality is allowed.
 
@@ -11800,7 +11800,7 @@ def reset_uniqueness_expectation() -> None
 | <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRulesOutputReference.property.columnInput">column_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRulesOutputReference.property.descriptionInput">description_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRulesOutputReference.property.dimensionInput">dimension_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRulesOutputReference.property.ignoreNullInput">ignore_null_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRulesOutputReference.property.ignoreNullInput">ignore_null_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRulesOutputReference.property.nameInput">name_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRulesOutputReference.property.nonNullExpectationInput">non_null_expectation_input</a></code> | <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRulesNonNullExpectation">DataplexDatascanDataQualitySpecRulesNonNullExpectation</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRulesOutputReference.property.rangeExpectationInput">range_expectation_input</a></code> | <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRulesRangeExpectation">DataplexDatascanDataQualitySpecRulesRangeExpectation</a></code> | *No description.* |
@@ -11809,18 +11809,18 @@ def reset_uniqueness_expectation() -> None
 | <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRulesOutputReference.property.setExpectationInput">set_expectation_input</a></code> | <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRulesSetExpectation">DataplexDatascanDataQualitySpecRulesSetExpectation</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRulesOutputReference.property.sqlAssertionInput">sql_assertion_input</a></code> | <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRulesSqlAssertion">DataplexDatascanDataQualitySpecRulesSqlAssertion</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRulesOutputReference.property.statisticRangeExpectationInput">statistic_range_expectation_input</a></code> | <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRulesStatisticRangeExpectation">DataplexDatascanDataQualitySpecRulesStatisticRangeExpectation</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRulesOutputReference.property.suspendedInput">suspended_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRulesOutputReference.property.suspendedInput">suspended_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRulesOutputReference.property.tableConditionExpectationInput">table_condition_expectation_input</a></code> | <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRulesTableConditionExpectation">DataplexDatascanDataQualitySpecRulesTableConditionExpectation</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRulesOutputReference.property.thresholdInput">threshold_input</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRulesOutputReference.property.uniquenessExpectationInput">uniqueness_expectation_input</a></code> | <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRulesUniquenessExpectation">DataplexDatascanDataQualitySpecRulesUniquenessExpectation</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRulesOutputReference.property.column">column</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRulesOutputReference.property.description">description</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRulesOutputReference.property.dimension">dimension</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRulesOutputReference.property.ignoreNull">ignore_null</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRulesOutputReference.property.ignoreNull">ignore_null</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRulesOutputReference.property.name">name</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRulesOutputReference.property.suspended">suspended</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRulesOutputReference.property.suspended">suspended</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRulesOutputReference.property.threshold">threshold</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRulesOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRules">DataplexDatascanDataQualitySpecRules</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRulesOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRules">DataplexDatascanDataQualitySpecRules</a></code> | *No description.* |
 
 ---
 
@@ -11971,10 +11971,10 @@ dimension_input: str
 ##### `ignore_null_input`<sup>Optional</sup> <a name="ignore_null_input" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRulesOutputReference.property.ignoreNullInput"></a>
 
 ```python
-ignore_null_input: typing.Union[bool, IResolvable]
+ignore_null_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -12061,10 +12061,10 @@ statistic_range_expectation_input: DataplexDatascanDataQualitySpecRulesStatistic
 ##### `suspended_input`<sup>Optional</sup> <a name="suspended_input" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRulesOutputReference.property.suspendedInput"></a>
 
 ```python
-suspended_input: typing.Union[bool, IResolvable]
+suspended_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -12131,10 +12131,10 @@ dimension: str
 ##### `ignore_null`<sup>Required</sup> <a name="ignore_null" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRulesOutputReference.property.ignoreNull"></a>
 
 ```python
-ignore_null: typing.Union[bool, IResolvable]
+ignore_null: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -12151,10 +12151,10 @@ name: str
 ##### `suspended`<sup>Required</sup> <a name="suspended" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRulesOutputReference.property.suspended"></a>
 
 ```python
-suspended: typing.Union[bool, IResolvable]
+suspended: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -12171,10 +12171,10 @@ threshold: typing.Union[int, float]
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRulesOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, DataplexDatascanDataQualitySpecRules]
+internal_value: IResolvable | DataplexDatascanDataQualitySpecRules
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRules">DataplexDatascanDataQualitySpecRules</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRules">DataplexDatascanDataQualitySpecRules</a>
 
 ---
 
@@ -12444,12 +12444,12 @@ def reset_strict_min_enabled() -> None
 | <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRulesRangeExpectationOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRulesRangeExpectationOutputReference.property.maxValueInput">max_value_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRulesRangeExpectationOutputReference.property.minValueInput">min_value_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRulesRangeExpectationOutputReference.property.strictMaxEnabledInput">strict_max_enabled_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRulesRangeExpectationOutputReference.property.strictMinEnabledInput">strict_min_enabled_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRulesRangeExpectationOutputReference.property.strictMaxEnabledInput">strict_max_enabled_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRulesRangeExpectationOutputReference.property.strictMinEnabledInput">strict_min_enabled_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRulesRangeExpectationOutputReference.property.maxValue">max_value</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRulesRangeExpectationOutputReference.property.minValue">min_value</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRulesRangeExpectationOutputReference.property.strictMaxEnabled">strict_max_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRulesRangeExpectationOutputReference.property.strictMinEnabled">strict_min_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRulesRangeExpectationOutputReference.property.strictMaxEnabled">strict_max_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRulesRangeExpectationOutputReference.property.strictMinEnabled">strict_min_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRulesRangeExpectationOutputReference.property.internalValue">internal_value</a></code> | <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRulesRangeExpectation">DataplexDatascanDataQualitySpecRulesRangeExpectation</a></code> | *No description.* |
 
 ---
@@ -12501,20 +12501,20 @@ min_value_input: str
 ##### `strict_max_enabled_input`<sup>Optional</sup> <a name="strict_max_enabled_input" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRulesRangeExpectationOutputReference.property.strictMaxEnabledInput"></a>
 
 ```python
-strict_max_enabled_input: typing.Union[bool, IResolvable]
+strict_max_enabled_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `strict_min_enabled_input`<sup>Optional</sup> <a name="strict_min_enabled_input" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRulesRangeExpectationOutputReference.property.strictMinEnabledInput"></a>
 
 ```python
-strict_min_enabled_input: typing.Union[bool, IResolvable]
+strict_min_enabled_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -12541,20 +12541,20 @@ min_value: str
 ##### `strict_max_enabled`<sup>Required</sup> <a name="strict_max_enabled" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRulesRangeExpectationOutputReference.property.strictMaxEnabled"></a>
 
 ```python
-strict_max_enabled: typing.Union[bool, IResolvable]
+strict_max_enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `strict_min_enabled`<sup>Required</sup> <a name="strict_min_enabled" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRulesRangeExpectationOutputReference.property.strictMinEnabled"></a>
 
 ```python
-strict_min_enabled: typing.Union[bool, IResolvable]
+strict_min_enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -14019,13 +14019,13 @@ def reset_strict_min_enabled() -> None
 | <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRulesStatisticRangeExpectationOutputReference.property.maxValueInput">max_value_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRulesStatisticRangeExpectationOutputReference.property.minValueInput">min_value_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRulesStatisticRangeExpectationOutputReference.property.statisticInput">statistic_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRulesStatisticRangeExpectationOutputReference.property.strictMaxEnabledInput">strict_max_enabled_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRulesStatisticRangeExpectationOutputReference.property.strictMinEnabledInput">strict_min_enabled_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRulesStatisticRangeExpectationOutputReference.property.strictMaxEnabledInput">strict_max_enabled_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRulesStatisticRangeExpectationOutputReference.property.strictMinEnabledInput">strict_min_enabled_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRulesStatisticRangeExpectationOutputReference.property.maxValue">max_value</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRulesStatisticRangeExpectationOutputReference.property.minValue">min_value</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRulesStatisticRangeExpectationOutputReference.property.statistic">statistic</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRulesStatisticRangeExpectationOutputReference.property.strictMaxEnabled">strict_max_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRulesStatisticRangeExpectationOutputReference.property.strictMinEnabled">strict_min_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRulesStatisticRangeExpectationOutputReference.property.strictMaxEnabled">strict_max_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRulesStatisticRangeExpectationOutputReference.property.strictMinEnabled">strict_min_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRulesStatisticRangeExpectationOutputReference.property.internalValue">internal_value</a></code> | <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRulesStatisticRangeExpectation">DataplexDatascanDataQualitySpecRulesStatisticRangeExpectation</a></code> | *No description.* |
 
 ---
@@ -14087,20 +14087,20 @@ statistic_input: str
 ##### `strict_max_enabled_input`<sup>Optional</sup> <a name="strict_max_enabled_input" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRulesStatisticRangeExpectationOutputReference.property.strictMaxEnabledInput"></a>
 
 ```python
-strict_max_enabled_input: typing.Union[bool, IResolvable]
+strict_max_enabled_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `strict_min_enabled_input`<sup>Optional</sup> <a name="strict_min_enabled_input" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRulesStatisticRangeExpectationOutputReference.property.strictMinEnabledInput"></a>
 
 ```python
-strict_min_enabled_input: typing.Union[bool, IResolvable]
+strict_min_enabled_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -14137,20 +14137,20 @@ statistic: str
 ##### `strict_max_enabled`<sup>Required</sup> <a name="strict_max_enabled" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRulesStatisticRangeExpectationOutputReference.property.strictMaxEnabled"></a>
 
 ```python
-strict_max_enabled: typing.Union[bool, IResolvable]
+strict_max_enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `strict_min_enabled`<sup>Required</sup> <a name="strict_min_enabled" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRulesStatisticRangeExpectationOutputReference.property.strictMinEnabled"></a>
 
 ```python
-strict_min_enabled: typing.Union[bool, IResolvable]
+strict_min_enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -16755,7 +16755,7 @@ def reset_update() -> None
 | <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanTimeoutsOutputReference.property.create">create</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanTimeoutsOutputReference.property.delete">delete</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanTimeoutsOutputReference.property.update">update</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanTimeouts">DataplexDatascanTimeouts</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanTimeouts">DataplexDatascanTimeouts</a></code> | *No description.* |
 
 ---
 
@@ -16846,10 +16846,10 @@ update: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanTimeoutsOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, DataplexDatascanTimeouts]
+internal_value: IResolvable | DataplexDatascanTimeouts
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanTimeouts">DataplexDatascanTimeouts</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.dataplexDatascan.DataplexDatascanTimeouts">DataplexDatascanTimeouts</a>
 
 ---
 

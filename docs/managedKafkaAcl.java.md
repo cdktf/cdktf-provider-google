@@ -12,19 +12,14 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.5
 import com.hashicorp.cdktf.providers.google.managed_kafka_acl.ManagedKafkaAcl;
 
 ManagedKafkaAcl.Builder.create(Construct scope, java.lang.String id)
-//  .connection(SSHProvisionerConnection)
-//  .connection(WinrmProvisionerConnection)
-//  .count(java.lang.Number)
-//  .count(TerraformCount)
+//  .connection(SSHProvisionerConnection|WinrmProvisionerConnection)
+//  .count(java.lang.Number|TerraformCount)
 //  .dependsOn(java.util.List<ITerraformDependable>)
 //  .forEach(ITerraformIterator)
 //  .lifecycle(TerraformResourceLifecycle)
 //  .provider(TerraformProvider)
-//  .provisioners(java.util.List<FileProvisioner)
-//  .provisioners(LocalExecProvisioner)
-//  .provisioners(RemoteExecProvisioner>)
-    .aclEntries(IResolvable)
-    .aclEntries(java.util.List<ManagedKafkaAclAclEntries>)
+//  .provisioners(java.util.List<FileProvisioner|LocalExecProvisioner|RemoteExecProvisioner>)
+    .aclEntries(IResolvable|java.util.List<ManagedKafkaAclAclEntries>)
     .aclId(java.lang.String)
     .cluster(java.lang.String)
     .location(java.lang.String)
@@ -38,14 +33,14 @@ ManagedKafkaAcl.Builder.create(Construct scope, java.lang.String id)
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.managedKafkaAcl.ManagedKafkaAcl.Initializer.parameter.scope">scope</a></code> | <code>software.constructs.Construct</code> | The scope in which to define this construct. |
 | <code><a href="#@cdktf/provider-google.managedKafkaAcl.ManagedKafkaAcl.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | The scoped construct ID. |
-| <code><a href="#@cdktf/provider-google.managedKafkaAcl.ManagedKafkaAcl.Initializer.parameter.connection">connection</a></code> | <code>com.hashicorp.cdktf.SSHProvisionerConnection OR com.hashicorp.cdktf.WinrmProvisionerConnection</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.managedKafkaAcl.ManagedKafkaAcl.Initializer.parameter.count">count</a></code> | <code>java.lang.Number OR com.hashicorp.cdktf.TerraformCount</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.managedKafkaAcl.ManagedKafkaAcl.Initializer.parameter.connection">connection</a></code> | <code>com.hashicorp.cdktf.SSHProvisionerConnection\|com.hashicorp.cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.managedKafkaAcl.ManagedKafkaAcl.Initializer.parameter.count">count</a></code> | <code>java.lang.Number\|com.hashicorp.cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.managedKafkaAcl.ManagedKafkaAcl.Initializer.parameter.dependsOn">dependsOn</a></code> | <code>java.util.List<com.hashicorp.cdktf.ITerraformDependable></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.managedKafkaAcl.ManagedKafkaAcl.Initializer.parameter.forEach">forEach</a></code> | <code>com.hashicorp.cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.managedKafkaAcl.ManagedKafkaAcl.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.managedKafkaAcl.ManagedKafkaAcl.Initializer.parameter.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.managedKafkaAcl.ManagedKafkaAcl.Initializer.parameter.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.managedKafkaAcl.ManagedKafkaAcl.Initializer.parameter.aclEntries">aclEntries</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.managedKafkaAcl.ManagedKafkaAclAclEntries">ManagedKafkaAclAclEntries</a>></code> | acl_entries block. |
+| <code><a href="#@cdktf/provider-google.managedKafkaAcl.ManagedKafkaAcl.Initializer.parameter.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner\|com.hashicorp.cdktf.LocalExecProvisioner\|com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.managedKafkaAcl.ManagedKafkaAcl.Initializer.parameter.aclEntries">aclEntries</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.managedKafkaAcl.ManagedKafkaAclAclEntries">ManagedKafkaAclAclEntries</a>></code> | acl_entries block. |
 | <code><a href="#@cdktf/provider-google.managedKafkaAcl.ManagedKafkaAcl.Initializer.parameter.aclId">aclId</a></code> | <code>java.lang.String</code> | The ID to use for the acl, which will become the final component of the acl's name. |
 | <code><a href="#@cdktf/provider-google.managedKafkaAcl.ManagedKafkaAcl.Initializer.parameter.cluster">cluster</a></code> | <code>java.lang.String</code> | The cluster name. |
 | <code><a href="#@cdktf/provider-google.managedKafkaAcl.ManagedKafkaAcl.Initializer.parameter.location">location</a></code> | <code>java.lang.String</code> | ID of the location of the Kafka resource. See https://cloud.google.com/managed-kafka/docs/locations for a list of supported locations. |
@@ -75,13 +70,13 @@ Must be unique amongst siblings in the same scope
 
 ##### `connection`<sup>Optional</sup> <a name="connection" id="@cdktf/provider-google.managedKafkaAcl.ManagedKafkaAcl.Initializer.parameter.connection"></a>
 
-- *Type:* com.hashicorp.cdktf.SSHProvisionerConnection OR com.hashicorp.cdktf.WinrmProvisionerConnection
+- *Type:* com.hashicorp.cdktf.SSHProvisionerConnection|com.hashicorp.cdktf.WinrmProvisionerConnection
 
 ---
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.managedKafkaAcl.ManagedKafkaAcl.Initializer.parameter.count"></a>
 
-- *Type:* java.lang.Number OR com.hashicorp.cdktf.TerraformCount
+- *Type:* java.lang.Number|com.hashicorp.cdktf.TerraformCount
 
 ---
 
@@ -111,13 +106,13 @@ Must be unique amongst siblings in the same scope
 
 ##### `provisioners`<sup>Optional</sup> <a name="provisioners" id="@cdktf/provider-google.managedKafkaAcl.ManagedKafkaAcl.Initializer.parameter.provisioners"></a>
 
-- *Type:* java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner>
+- *Type:* java.util.List<com.hashicorp.cdktf.FileProvisioner|com.hashicorp.cdktf.LocalExecProvisioner|com.hashicorp.cdktf.RemoteExecProvisioner>
 
 ---
 
 ##### `aclEntries`<sup>Required</sup> <a name="aclEntries" id="@cdktf/provider-google.managedKafkaAcl.ManagedKafkaAcl.Initializer.parameter.aclEntries"></a>
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.managedKafkaAcl.ManagedKafkaAclAclEntries">ManagedKafkaAclAclEntries</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.managedKafkaAcl.ManagedKafkaAclAclEntries">ManagedKafkaAclAclEntries</a>>
 
 acl_entries block.
 
@@ -422,7 +417,7 @@ public java.util.Map<java.lang.String, java.lang.String> getStringMapAttribute(j
 ##### `hasResourceMove` <a name="hasResourceMove" id="@cdktf/provider-google.managedKafkaAcl.ManagedKafkaAcl.hasResourceMove"></a>
 
 ```java
-public TerraformResourceMoveByTarget OR TerraformResourceMoveById hasResourceMove()
+public TerraformResourceMoveByTarget|TerraformResourceMoveById hasResourceMove()
 ```
 
 ##### `importFrom` <a name="importFrom" id="@cdktf/provider-google.managedKafkaAcl.ManagedKafkaAcl.importFrom"></a>
@@ -478,7 +473,7 @@ Full id of resource being moved from, e.g. "aws_s3_bucket.example".
 
 ```java
 public void moveTo(java.lang.String moveTarget)
-public void moveTo(java.lang.String moveTarget, java.lang.String OR java.lang.Number index)
+public void moveTo(java.lang.String moveTarget, java.lang.String|java.lang.Number index)
 ```
 
 Moves this resource to the target resource given by moveTarget.
@@ -493,7 +488,7 @@ The previously set user defined string set by .addMoveTarget() corresponding to 
 
 ###### `index`<sup>Optional</sup> <a name="index" id="@cdktf/provider-google.managedKafkaAcl.ManagedKafkaAcl.moveTo.parameter.index"></a>
 
-- *Type:* java.lang.String OR java.lang.Number
+- *Type:* java.lang.String|java.lang.Number
 
 Optional The index corresponding to the key the resource is to appear in the foreach of a resource to move to.
 
@@ -518,12 +513,12 @@ Full id of resource to move to, e.g. "aws_s3_bucket.example".
 ##### `putAclEntries` <a name="putAclEntries" id="@cdktf/provider-google.managedKafkaAcl.ManagedKafkaAcl.putAclEntries"></a>
 
 ```java
-public void putAclEntries(IResolvable OR java.util.List<ManagedKafkaAclAclEntries> value)
+public void putAclEntries(IResolvable|java.util.List<ManagedKafkaAclAclEntries> value)
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.managedKafkaAcl.ManagedKafkaAcl.putAclEntries.parameter.value"></a>
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.managedKafkaAcl.ManagedKafkaAclAclEntries">ManagedKafkaAclAclEntries</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.managedKafkaAcl.ManagedKafkaAclAclEntries">ManagedKafkaAclAclEntries</a>>
 
 ---
 
@@ -683,13 +678,13 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.5
 | <code><a href="#@cdktf/provider-google.managedKafkaAcl.ManagedKafkaAcl.property.terraformMetaArguments">terraformMetaArguments</a></code> | <code>java.util.Map<java.lang.String, java.lang.Object></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.managedKafkaAcl.ManagedKafkaAcl.property.terraformResourceType">terraformResourceType</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.managedKafkaAcl.ManagedKafkaAcl.property.terraformGeneratorMetadata">terraformGeneratorMetadata</a></code> | <code>com.hashicorp.cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.managedKafkaAcl.ManagedKafkaAcl.property.connection">connection</a></code> | <code>com.hashicorp.cdktf.SSHProvisionerConnection OR com.hashicorp.cdktf.WinrmProvisionerConnection</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.managedKafkaAcl.ManagedKafkaAcl.property.count">count</a></code> | <code>java.lang.Number OR com.hashicorp.cdktf.TerraformCount</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.managedKafkaAcl.ManagedKafkaAcl.property.connection">connection</a></code> | <code>com.hashicorp.cdktf.SSHProvisionerConnection\|com.hashicorp.cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.managedKafkaAcl.ManagedKafkaAcl.property.count">count</a></code> | <code>java.lang.Number\|com.hashicorp.cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.managedKafkaAcl.ManagedKafkaAcl.property.dependsOn">dependsOn</a></code> | <code>java.util.List<java.lang.String></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.managedKafkaAcl.ManagedKafkaAcl.property.forEach">forEach</a></code> | <code>com.hashicorp.cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.managedKafkaAcl.ManagedKafkaAcl.property.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.managedKafkaAcl.ManagedKafkaAcl.property.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.managedKafkaAcl.ManagedKafkaAcl.property.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.managedKafkaAcl.ManagedKafkaAcl.property.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner\|com.hashicorp.cdktf.LocalExecProvisioner\|com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.managedKafkaAcl.ManagedKafkaAcl.property.aclEntries">aclEntries</a></code> | <code><a href="#@cdktf/provider-google.managedKafkaAcl.ManagedKafkaAclAclEntriesList">ManagedKafkaAclAclEntriesList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.managedKafkaAcl.ManagedKafkaAcl.property.etag">etag</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.managedKafkaAcl.ManagedKafkaAcl.property.name">name</a></code> | <code>java.lang.String</code> | *No description.* |
@@ -697,13 +692,13 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.5
 | <code><a href="#@cdktf/provider-google.managedKafkaAcl.ManagedKafkaAcl.property.resourceName">resourceName</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.managedKafkaAcl.ManagedKafkaAcl.property.resourceType">resourceType</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.managedKafkaAcl.ManagedKafkaAcl.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-google.managedKafkaAcl.ManagedKafkaAclTimeoutsOutputReference">ManagedKafkaAclTimeoutsOutputReference</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.managedKafkaAcl.ManagedKafkaAcl.property.aclEntriesInput">aclEntriesInput</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.managedKafkaAcl.ManagedKafkaAclAclEntries">ManagedKafkaAclAclEntries</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.managedKafkaAcl.ManagedKafkaAcl.property.aclEntriesInput">aclEntriesInput</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.managedKafkaAcl.ManagedKafkaAclAclEntries">ManagedKafkaAclAclEntries</a>></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.managedKafkaAcl.ManagedKafkaAcl.property.aclIdInput">aclIdInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.managedKafkaAcl.ManagedKafkaAcl.property.clusterInput">clusterInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.managedKafkaAcl.ManagedKafkaAcl.property.idInput">idInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.managedKafkaAcl.ManagedKafkaAcl.property.locationInput">locationInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.managedKafkaAcl.ManagedKafkaAcl.property.projectInput">projectInput</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.managedKafkaAcl.ManagedKafkaAcl.property.timeoutsInput">timeoutsInput</a></code> | <code>com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.managedKafkaAcl.ManagedKafkaAclTimeouts">ManagedKafkaAclTimeouts</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.managedKafkaAcl.ManagedKafkaAcl.property.timeoutsInput">timeoutsInput</a></code> | <code>com.hashicorp.cdktf.IResolvable\|<a href="#@cdktf/provider-google.managedKafkaAcl.ManagedKafkaAclTimeouts">ManagedKafkaAclTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.managedKafkaAcl.ManagedKafkaAcl.property.aclId">aclId</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.managedKafkaAcl.ManagedKafkaAcl.property.cluster">cluster</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.managedKafkaAcl.ManagedKafkaAcl.property.id">id</a></code> | <code>java.lang.String</code> | *No description.* |
@@ -787,20 +782,20 @@ public TerraformProviderGeneratorMetadata getTerraformGeneratorMetadata();
 ##### `connection`<sup>Optional</sup> <a name="connection" id="@cdktf/provider-google.managedKafkaAcl.ManagedKafkaAcl.property.connection"></a>
 
 ```java
-public java.lang.Object getConnection();
+public SSHProvisionerConnection|WinrmProvisionerConnection getConnection();
 ```
 
-- *Type:* com.hashicorp.cdktf.SSHProvisionerConnection OR com.hashicorp.cdktf.WinrmProvisionerConnection
+- *Type:* com.hashicorp.cdktf.SSHProvisionerConnection|com.hashicorp.cdktf.WinrmProvisionerConnection
 
 ---
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.managedKafkaAcl.ManagedKafkaAcl.property.count"></a>
 
 ```java
-public java.lang.Object getCount();
+public java.lang.Number|TerraformCount getCount();
 ```
 
-- *Type:* java.lang.Number OR com.hashicorp.cdktf.TerraformCount
+- *Type:* java.lang.Number|com.hashicorp.cdktf.TerraformCount
 
 ---
 
@@ -847,10 +842,10 @@ public TerraformProvider getProvider();
 ##### `provisioners`<sup>Optional</sup> <a name="provisioners" id="@cdktf/provider-google.managedKafkaAcl.ManagedKafkaAcl.property.provisioners"></a>
 
 ```java
-public java.lang.Object getProvisioners();
+public java.util.List<FileProvisioner|LocalExecProvisioner|RemoteExecProvisioner> getProvisioners();
 ```
 
-- *Type:* java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner>
+- *Type:* java.util.List<com.hashicorp.cdktf.FileProvisioner|com.hashicorp.cdktf.LocalExecProvisioner|com.hashicorp.cdktf.RemoteExecProvisioner>
 
 ---
 
@@ -927,10 +922,10 @@ public ManagedKafkaAclTimeoutsOutputReference getTimeouts();
 ##### `aclEntriesInput`<sup>Optional</sup> <a name="aclEntriesInput" id="@cdktf/provider-google.managedKafkaAcl.ManagedKafkaAcl.property.aclEntriesInput"></a>
 
 ```java
-public java.lang.Object getAclEntriesInput();
+public IResolvable|java.util.List<ManagedKafkaAclAclEntries> getAclEntriesInput();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.managedKafkaAcl.ManagedKafkaAclAclEntries">ManagedKafkaAclAclEntries</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.managedKafkaAcl.ManagedKafkaAclAclEntries">ManagedKafkaAclAclEntries</a>>
 
 ---
 
@@ -987,10 +982,10 @@ public java.lang.String getProjectInput();
 ##### `timeoutsInput`<sup>Optional</sup> <a name="timeoutsInput" id="@cdktf/provider-google.managedKafkaAcl.ManagedKafkaAcl.property.timeoutsInput"></a>
 
 ```java
-public java.lang.Object getTimeoutsInput();
+public IResolvable|ManagedKafkaAclTimeouts getTimeoutsInput();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.managedKafkaAcl.ManagedKafkaAclTimeouts">ManagedKafkaAclTimeouts</a>
+- *Type:* com.hashicorp.cdktf.IResolvable|<a href="#@cdktf/provider-google.managedKafkaAcl.ManagedKafkaAclTimeouts">ManagedKafkaAclTimeouts</a>
 
 ---
 
@@ -1161,19 +1156,14 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 import com.hashicorp.cdktf.providers.google.managed_kafka_acl.ManagedKafkaAclConfig;
 
 ManagedKafkaAclConfig.builder()
-//  .connection(SSHProvisionerConnection)
-//  .connection(WinrmProvisionerConnection)
-//  .count(java.lang.Number)
-//  .count(TerraformCount)
+//  .connection(SSHProvisionerConnection|WinrmProvisionerConnection)
+//  .count(java.lang.Number|TerraformCount)
 //  .dependsOn(java.util.List<ITerraformDependable>)
 //  .forEach(ITerraformIterator)
 //  .lifecycle(TerraformResourceLifecycle)
 //  .provider(TerraformProvider)
-//  .provisioners(java.util.List<FileProvisioner)
-//  .provisioners(LocalExecProvisioner)
-//  .provisioners(RemoteExecProvisioner>)
-    .aclEntries(IResolvable)
-    .aclEntries(java.util.List<ManagedKafkaAclAclEntries>)
+//  .provisioners(java.util.List<FileProvisioner|LocalExecProvisioner|RemoteExecProvisioner>)
+    .aclEntries(IResolvable|java.util.List<ManagedKafkaAclAclEntries>)
     .aclId(java.lang.String)
     .cluster(java.lang.String)
     .location(java.lang.String)
@@ -1187,14 +1177,14 @@ ManagedKafkaAclConfig.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.managedKafkaAcl.ManagedKafkaAclConfig.property.connection">connection</a></code> | <code>com.hashicorp.cdktf.SSHProvisionerConnection OR com.hashicorp.cdktf.WinrmProvisionerConnection</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.managedKafkaAcl.ManagedKafkaAclConfig.property.count">count</a></code> | <code>java.lang.Number OR com.hashicorp.cdktf.TerraformCount</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.managedKafkaAcl.ManagedKafkaAclConfig.property.connection">connection</a></code> | <code>com.hashicorp.cdktf.SSHProvisionerConnection\|com.hashicorp.cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.managedKafkaAcl.ManagedKafkaAclConfig.property.count">count</a></code> | <code>java.lang.Number\|com.hashicorp.cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.managedKafkaAcl.ManagedKafkaAclConfig.property.dependsOn">dependsOn</a></code> | <code>java.util.List<com.hashicorp.cdktf.ITerraformDependable></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.managedKafkaAcl.ManagedKafkaAclConfig.property.forEach">forEach</a></code> | <code>com.hashicorp.cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.managedKafkaAcl.ManagedKafkaAclConfig.property.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.managedKafkaAcl.ManagedKafkaAclConfig.property.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.managedKafkaAcl.ManagedKafkaAclConfig.property.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.managedKafkaAcl.ManagedKafkaAclConfig.property.aclEntries">aclEntries</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.managedKafkaAcl.ManagedKafkaAclAclEntries">ManagedKafkaAclAclEntries</a>></code> | acl_entries block. |
+| <code><a href="#@cdktf/provider-google.managedKafkaAcl.ManagedKafkaAclConfig.property.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner\|com.hashicorp.cdktf.LocalExecProvisioner\|com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.managedKafkaAcl.ManagedKafkaAclConfig.property.aclEntries">aclEntries</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.managedKafkaAcl.ManagedKafkaAclAclEntries">ManagedKafkaAclAclEntries</a>></code> | acl_entries block. |
 | <code><a href="#@cdktf/provider-google.managedKafkaAcl.ManagedKafkaAclConfig.property.aclId">aclId</a></code> | <code>java.lang.String</code> | The ID to use for the acl, which will become the final component of the acl's name. |
 | <code><a href="#@cdktf/provider-google.managedKafkaAcl.ManagedKafkaAclConfig.property.cluster">cluster</a></code> | <code>java.lang.String</code> | The cluster name. |
 | <code><a href="#@cdktf/provider-google.managedKafkaAcl.ManagedKafkaAclConfig.property.location">location</a></code> | <code>java.lang.String</code> | ID of the location of the Kafka resource. See https://cloud.google.com/managed-kafka/docs/locations for a list of supported locations. |
@@ -1207,20 +1197,20 @@ ManagedKafkaAclConfig.builder()
 ##### `connection`<sup>Optional</sup> <a name="connection" id="@cdktf/provider-google.managedKafkaAcl.ManagedKafkaAclConfig.property.connection"></a>
 
 ```java
-public java.lang.Object getConnection();
+public SSHProvisionerConnection|WinrmProvisionerConnection getConnection();
 ```
 
-- *Type:* com.hashicorp.cdktf.SSHProvisionerConnection OR com.hashicorp.cdktf.WinrmProvisionerConnection
+- *Type:* com.hashicorp.cdktf.SSHProvisionerConnection|com.hashicorp.cdktf.WinrmProvisionerConnection
 
 ---
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.managedKafkaAcl.ManagedKafkaAclConfig.property.count"></a>
 
 ```java
-public java.lang.Object getCount();
+public java.lang.Number|TerraformCount getCount();
 ```
 
-- *Type:* java.lang.Number OR com.hashicorp.cdktf.TerraformCount
+- *Type:* java.lang.Number|com.hashicorp.cdktf.TerraformCount
 
 ---
 
@@ -1267,20 +1257,20 @@ public TerraformProvider getProvider();
 ##### `provisioners`<sup>Optional</sup> <a name="provisioners" id="@cdktf/provider-google.managedKafkaAcl.ManagedKafkaAclConfig.property.provisioners"></a>
 
 ```java
-public java.lang.Object getProvisioners();
+public java.util.List<FileProvisioner|LocalExecProvisioner|RemoteExecProvisioner> getProvisioners();
 ```
 
-- *Type:* java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner>
+- *Type:* java.util.List<com.hashicorp.cdktf.FileProvisioner|com.hashicorp.cdktf.LocalExecProvisioner|com.hashicorp.cdktf.RemoteExecProvisioner>
 
 ---
 
 ##### `aclEntries`<sup>Required</sup> <a name="aclEntries" id="@cdktf/provider-google.managedKafkaAcl.ManagedKafkaAclConfig.property.aclEntries"></a>
 
 ```java
-public java.lang.Object getAclEntries();
+public IResolvable|java.util.List<ManagedKafkaAclAclEntries> getAclEntries();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.managedKafkaAcl.ManagedKafkaAclAclEntries">ManagedKafkaAclAclEntries</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.managedKafkaAcl.ManagedKafkaAclAclEntries">ManagedKafkaAclAclEntries</a>>
 
 acl_entries block.
 
@@ -1560,7 +1550,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.managedKafkaAcl.ManagedKafkaAclAclEntriesList.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.managedKafkaAcl.ManagedKafkaAclAclEntriesList.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.managedKafkaAcl.ManagedKafkaAclAclEntriesList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.managedKafkaAcl.ManagedKafkaAclAclEntries">ManagedKafkaAclAclEntries</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.managedKafkaAcl.ManagedKafkaAclAclEntriesList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.managedKafkaAcl.ManagedKafkaAclAclEntries">ManagedKafkaAclAclEntries</a>></code> | *No description.* |
 
 ---
 
@@ -1591,10 +1581,10 @@ public java.lang.String getFqn();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.managedKafkaAcl.ManagedKafkaAclAclEntriesList.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|java.util.List<ManagedKafkaAclAclEntries> getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.managedKafkaAcl.ManagedKafkaAclAclEntries">ManagedKafkaAclAclEntries</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.managedKafkaAcl.ManagedKafkaAclAclEntries">ManagedKafkaAclAclEntries</a>>
 
 ---
 
@@ -1849,7 +1839,7 @@ public void resetPermissionType()
 | <code><a href="#@cdktf/provider-google.managedKafkaAcl.ManagedKafkaAclAclEntriesOutputReference.property.operation">operation</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.managedKafkaAcl.ManagedKafkaAclAclEntriesOutputReference.property.permissionType">permissionType</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.managedKafkaAcl.ManagedKafkaAclAclEntriesOutputReference.property.principal">principal</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.managedKafkaAcl.ManagedKafkaAclAclEntriesOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.managedKafkaAcl.ManagedKafkaAclAclEntries">ManagedKafkaAclAclEntries</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.managedKafkaAcl.ManagedKafkaAclAclEntriesOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|<a href="#@cdktf/provider-google.managedKafkaAcl.ManagedKafkaAclAclEntries">ManagedKafkaAclAclEntries</a></code> | *No description.* |
 
 ---
 
@@ -1960,10 +1950,10 @@ public java.lang.String getPrincipal();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.managedKafkaAcl.ManagedKafkaAclAclEntriesOutputReference.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|ManagedKafkaAclAclEntries getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.managedKafkaAcl.ManagedKafkaAclAclEntries">ManagedKafkaAclAclEntries</a>
+- *Type:* com.hashicorp.cdktf.IResolvable|<a href="#@cdktf/provider-google.managedKafkaAcl.ManagedKafkaAclAclEntries">ManagedKafkaAclAclEntries</a>
 
 ---
 
@@ -2205,7 +2195,7 @@ public void resetUpdate()
 | <code><a href="#@cdktf/provider-google.managedKafkaAcl.ManagedKafkaAclTimeoutsOutputReference.property.create">create</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.managedKafkaAcl.ManagedKafkaAclTimeoutsOutputReference.property.delete">delete</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.managedKafkaAcl.ManagedKafkaAclTimeoutsOutputReference.property.update">update</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.managedKafkaAcl.ManagedKafkaAclTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.managedKafkaAcl.ManagedKafkaAclTimeouts">ManagedKafkaAclTimeouts</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.managedKafkaAcl.ManagedKafkaAclTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|<a href="#@cdktf/provider-google.managedKafkaAcl.ManagedKafkaAclTimeouts">ManagedKafkaAclTimeouts</a></code> | *No description.* |
 
 ---
 
@@ -2296,10 +2286,10 @@ public java.lang.String getUpdate();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.managedKafkaAcl.ManagedKafkaAclTimeoutsOutputReference.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|ManagedKafkaAclTimeouts getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.managedKafkaAcl.ManagedKafkaAclTimeouts">ManagedKafkaAclTimeouts</a>
+- *Type:* com.hashicorp.cdktf.IResolvable|<a href="#@cdktf/provider-google.managedKafkaAcl.ManagedKafkaAclTimeouts">ManagedKafkaAclTimeouts</a>
 
 ---
 

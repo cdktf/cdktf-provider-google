@@ -303,7 +303,7 @@ private System.Collections.Generic.IDictionary<string, string> GetStringMapAttri
 ##### `HasResourceMove` <a name="HasResourceMove" id="@cdktf/provider-google.redisCluster.RedisCluster.hasResourceMove"></a>
 
 ```csharp
-private object HasResourceMove()
+private TerraformResourceMoveByTarget|TerraformResourceMoveById HasResourceMove()
 ```
 
 ##### `ImportFrom` <a name="ImportFrom" id="@cdktf/provider-google.redisCluster.RedisCluster.importFrom"></a>
@@ -357,7 +357,7 @@ Full id of resource being moved from, e.g. "aws_s3_bucket.example".
 ##### `MoveTo` <a name="MoveTo" id="@cdktf/provider-google.redisCluster.RedisCluster.moveTo"></a>
 
 ```csharp
-private void MoveTo(string MoveTarget, object Index = null)
+private void MoveTo(string MoveTarget, string|double Index = null)
 ```
 
 Moves this resource to the target resource given by moveTarget.
@@ -372,7 +372,7 @@ The previously set user defined string set by .addMoveTarget() corresponding to 
 
 ###### `Index`<sup>Optional</sup> <a name="Index" id="@cdktf/provider-google.redisCluster.RedisCluster.moveTo.parameter.index"></a>
 
-- *Type:* object
+- *Type:* string|double
 
 Optional The index corresponding to the key the resource is to appear in the foreach of a resource to move to.
 
@@ -469,12 +469,12 @@ private void PutPersistenceConfig(RedisClusterPersistenceConfig Value)
 ##### `PutPscConfigs` <a name="PutPscConfigs" id="@cdktf/provider-google.redisCluster.RedisCluster.putPscConfigs"></a>
 
 ```csharp
-private void PutPscConfigs(object Value)
+private void PutPscConfigs(IResolvable|RedisClusterPscConfigs[] Value)
 ```
 
 ###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-google.redisCluster.RedisCluster.putPscConfigs.parameter.value"></a>
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.redisCluster.RedisClusterPscConfigs">RedisClusterPscConfigs</a>[]
 
 ---
 
@@ -754,13 +754,13 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.5
 | <code><a href="#@cdktf/provider-google.redisCluster.RedisCluster.property.terraformMetaArguments">TerraformMetaArguments</a></code> | <code>System.Collections.Generic.IDictionary<string, object></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.redisCluster.RedisCluster.property.terraformResourceType">TerraformResourceType</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.redisCluster.RedisCluster.property.terraformGeneratorMetadata">TerraformGeneratorMetadata</a></code> | <code>HashiCorp.Cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.redisCluster.RedisCluster.property.connection">Connection</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.redisCluster.RedisCluster.property.count">Count</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.redisCluster.RedisCluster.property.connection">Connection</a></code> | <code>HashiCorp.Cdktf.SSHProvisionerConnection\|HashiCorp.Cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.redisCluster.RedisCluster.property.count">Count</a></code> | <code>double\|HashiCorp.Cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.redisCluster.RedisCluster.property.dependsOn">DependsOn</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.redisCluster.RedisCluster.property.forEach">ForEach</a></code> | <code>HashiCorp.Cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.redisCluster.RedisCluster.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.redisCluster.RedisCluster.property.provider">Provider</a></code> | <code>HashiCorp.Cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.redisCluster.RedisCluster.property.provisioners">Provisioners</a></code> | <code>object[]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.redisCluster.RedisCluster.property.provisioners">Provisioners</a></code> | <code>HashiCorp.Cdktf.FileProvisioner\|HashiCorp.Cdktf.LocalExecProvisioner\|HashiCorp.Cdktf.RemoteExecProvisioner[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.redisCluster.RedisCluster.property.automatedBackupConfig">AutomatedBackupConfig</a></code> | <code><a href="#@cdktf/provider-google.redisCluster.RedisClusterAutomatedBackupConfigOutputReference">RedisClusterAutomatedBackupConfigOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.redisCluster.RedisCluster.property.backupCollection">BackupCollection</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.redisCluster.RedisCluster.property.createTime">CreateTime</a></code> | <code>string</code> | *No description.* |
@@ -782,11 +782,11 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.5
 | <code><a href="#@cdktf/provider-google.redisCluster.RedisCluster.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-google.redisCluster.RedisClusterTimeoutsOutputReference">RedisClusterTimeoutsOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.redisCluster.RedisCluster.property.uid">Uid</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.redisCluster.RedisCluster.property.zoneDistributionConfig">ZoneDistributionConfig</a></code> | <code><a href="#@cdktf/provider-google.redisCluster.RedisClusterZoneDistributionConfigOutputReference">RedisClusterZoneDistributionConfigOutputReference</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.redisCluster.RedisCluster.property.allowFewerZonesDeploymentInput">AllowFewerZonesDeploymentInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.redisCluster.RedisCluster.property.allowFewerZonesDeploymentInput">AllowFewerZonesDeploymentInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.redisCluster.RedisCluster.property.authorizationModeInput">AuthorizationModeInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.redisCluster.RedisCluster.property.automatedBackupConfigInput">AutomatedBackupConfigInput</a></code> | <code><a href="#@cdktf/provider-google.redisCluster.RedisClusterAutomatedBackupConfig">RedisClusterAutomatedBackupConfig</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.redisCluster.RedisCluster.property.crossClusterReplicationConfigInput">CrossClusterReplicationConfigInput</a></code> | <code><a href="#@cdktf/provider-google.redisCluster.RedisClusterCrossClusterReplicationConfig">RedisClusterCrossClusterReplicationConfig</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.redisCluster.RedisCluster.property.deletionProtectionEnabledInput">DeletionProtectionEnabledInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.redisCluster.RedisCluster.property.deletionProtectionEnabledInput">DeletionProtectionEnabledInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.redisCluster.RedisCluster.property.gcsSourceInput">GcsSourceInput</a></code> | <code><a href="#@cdktf/provider-google.redisCluster.RedisClusterGcsSource">RedisClusterGcsSource</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.redisCluster.RedisCluster.property.idInput">IdInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.redisCluster.RedisCluster.property.kmsKeyInput">KmsKeyInput</a></code> | <code>string</code> | *No description.* |
@@ -796,17 +796,17 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.5
 | <code><a href="#@cdktf/provider-google.redisCluster.RedisCluster.property.nodeTypeInput">NodeTypeInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.redisCluster.RedisCluster.property.persistenceConfigInput">PersistenceConfigInput</a></code> | <code><a href="#@cdktf/provider-google.redisCluster.RedisClusterPersistenceConfig">RedisClusterPersistenceConfig</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.redisCluster.RedisCluster.property.projectInput">ProjectInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.redisCluster.RedisCluster.property.pscConfigsInput">PscConfigsInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.redisCluster.RedisCluster.property.pscConfigsInput">PscConfigsInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.redisCluster.RedisClusterPscConfigs">RedisClusterPscConfigs</a>[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.redisCluster.RedisCluster.property.redisConfigsInput">RedisConfigsInput</a></code> | <code>System.Collections.Generic.IDictionary<string, string></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.redisCluster.RedisCluster.property.regionInput">RegionInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.redisCluster.RedisCluster.property.replicaCountInput">ReplicaCountInput</a></code> | <code>double</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.redisCluster.RedisCluster.property.shardCountInput">ShardCountInput</a></code> | <code>double</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.redisCluster.RedisCluster.property.timeoutsInput">TimeoutsInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.redisCluster.RedisCluster.property.timeoutsInput">TimeoutsInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.redisCluster.RedisClusterTimeouts">RedisClusterTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.redisCluster.RedisCluster.property.transitEncryptionModeInput">TransitEncryptionModeInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.redisCluster.RedisCluster.property.zoneDistributionConfigInput">ZoneDistributionConfigInput</a></code> | <code><a href="#@cdktf/provider-google.redisCluster.RedisClusterZoneDistributionConfig">RedisClusterZoneDistributionConfig</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.redisCluster.RedisCluster.property.allowFewerZonesDeployment">AllowFewerZonesDeployment</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.redisCluster.RedisCluster.property.allowFewerZonesDeployment">AllowFewerZonesDeployment</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.redisCluster.RedisCluster.property.authorizationMode">AuthorizationMode</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.redisCluster.RedisCluster.property.deletionProtectionEnabled">DeletionProtectionEnabled</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.redisCluster.RedisCluster.property.deletionProtectionEnabled">DeletionProtectionEnabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.redisCluster.RedisCluster.property.id">Id</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.redisCluster.RedisCluster.property.kmsKey">KmsKey</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.redisCluster.RedisCluster.property.name">Name</a></code> | <code>string</code> | *No description.* |
@@ -895,20 +895,20 @@ public TerraformProviderGeneratorMetadata TerraformGeneratorMetadata { get; }
 ##### `Connection`<sup>Optional</sup> <a name="Connection" id="@cdktf/provider-google.redisCluster.RedisCluster.property.connection"></a>
 
 ```csharp
-public object Connection { get; }
+public SSHProvisionerConnection|WinrmProvisionerConnection Connection { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.SSHProvisionerConnection|HashiCorp.Cdktf.WinrmProvisionerConnection
 
 ---
 
 ##### `Count`<sup>Optional</sup> <a name="Count" id="@cdktf/provider-google.redisCluster.RedisCluster.property.count"></a>
 
 ```csharp
-public object Count { get; }
+public double|TerraformCount Count { get; }
 ```
 
-- *Type:* object
+- *Type:* double|HashiCorp.Cdktf.TerraformCount
 
 ---
 
@@ -955,10 +955,10 @@ public TerraformProvider Provider { get; }
 ##### `Provisioners`<sup>Optional</sup> <a name="Provisioners" id="@cdktf/provider-google.redisCluster.RedisCluster.property.provisioners"></a>
 
 ```csharp
-public object[] Provisioners { get; }
+public (FileProvisioner|LocalExecProvisioner|RemoteExecProvisioner)[] Provisioners { get; }
 ```
 
-- *Type:* object[]
+- *Type:* HashiCorp.Cdktf.FileProvisioner|HashiCorp.Cdktf.LocalExecProvisioner|HashiCorp.Cdktf.RemoteExecProvisioner[]
 
 ---
 
@@ -1175,10 +1175,10 @@ public RedisClusterZoneDistributionConfigOutputReference ZoneDistributionConfig 
 ##### `AllowFewerZonesDeploymentInput`<sup>Optional</sup> <a name="AllowFewerZonesDeploymentInput" id="@cdktf/provider-google.redisCluster.RedisCluster.property.allowFewerZonesDeploymentInput"></a>
 
 ```csharp
-public object AllowFewerZonesDeploymentInput { get; }
+public bool|IResolvable AllowFewerZonesDeploymentInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -1215,10 +1215,10 @@ public RedisClusterCrossClusterReplicationConfig CrossClusterReplicationConfigIn
 ##### `DeletionProtectionEnabledInput`<sup>Optional</sup> <a name="DeletionProtectionEnabledInput" id="@cdktf/provider-google.redisCluster.RedisCluster.property.deletionProtectionEnabledInput"></a>
 
 ```csharp
-public object DeletionProtectionEnabledInput { get; }
+public bool|IResolvable DeletionProtectionEnabledInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -1315,10 +1315,10 @@ public string ProjectInput { get; }
 ##### `PscConfigsInput`<sup>Optional</sup> <a name="PscConfigsInput" id="@cdktf/provider-google.redisCluster.RedisCluster.property.pscConfigsInput"></a>
 
 ```csharp
-public object PscConfigsInput { get; }
+public IResolvable|RedisClusterPscConfigs[] PscConfigsInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.redisCluster.RedisClusterPscConfigs">RedisClusterPscConfigs</a>[]
 
 ---
 
@@ -1365,10 +1365,10 @@ public double ShardCountInput { get; }
 ##### `TimeoutsInput`<sup>Optional</sup> <a name="TimeoutsInput" id="@cdktf/provider-google.redisCluster.RedisCluster.property.timeoutsInput"></a>
 
 ```csharp
-public object TimeoutsInput { get; }
+public IResolvable|RedisClusterTimeouts TimeoutsInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.redisCluster.RedisClusterTimeouts">RedisClusterTimeouts</a>
 
 ---
 
@@ -1395,10 +1395,10 @@ public RedisClusterZoneDistributionConfig ZoneDistributionConfigInput { get; }
 ##### `AllowFewerZonesDeployment`<sup>Required</sup> <a name="AllowFewerZonesDeployment" id="@cdktf/provider-google.redisCluster.RedisCluster.property.allowFewerZonesDeployment"></a>
 
 ```csharp
-public object AllowFewerZonesDeployment { get; }
+public bool|IResolvable AllowFewerZonesDeployment { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -1415,10 +1415,10 @@ public string AuthorizationMode { get; }
 ##### `DeletionProtectionEnabled`<sup>Required</sup> <a name="DeletionProtectionEnabled" id="@cdktf/provider-google.redisCluster.RedisCluster.property.deletionProtectionEnabled"></a>
 
 ```csharp
-public object DeletionProtectionEnabled { get; }
+public bool|IResolvable DeletionProtectionEnabled { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -1674,19 +1674,19 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 using HashiCorp.Cdktf.Providers.Google;
 
 new RedisClusterConfig {
-    object Connection = null,
-    object Count = null,
+    SSHProvisionerConnection|WinrmProvisionerConnection Connection = null,
+    double|TerraformCount Count = null,
     ITerraformDependable[] DependsOn = null,
     ITerraformIterator ForEach = null,
     TerraformResourceLifecycle Lifecycle = null,
     TerraformProvider Provider = null,
-    object[] Provisioners = null,
+    (FileProvisioner|LocalExecProvisioner|RemoteExecProvisioner)[] Provisioners = null,
     double ShardCount,
-    object AllowFewerZonesDeployment = null,
+    bool|IResolvable AllowFewerZonesDeployment = null,
     string AuthorizationMode = null,
     RedisClusterAutomatedBackupConfig AutomatedBackupConfig = null,
     RedisClusterCrossClusterReplicationConfig CrossClusterReplicationConfig = null,
-    object DeletionProtectionEnabled = null,
+    bool|IResolvable DeletionProtectionEnabled = null,
     RedisClusterGcsSource GcsSource = null,
     string Id = null,
     string KmsKey = null,
@@ -1696,7 +1696,7 @@ new RedisClusterConfig {
     string NodeType = null,
     RedisClusterPersistenceConfig PersistenceConfig = null,
     string Project = null,
-    object PscConfigs = null,
+    IResolvable|RedisClusterPscConfigs[] PscConfigs = null,
     System.Collections.Generic.IDictionary<string, string> RedisConfigs = null,
     string Region = null,
     double ReplicaCount = null,
@@ -1710,19 +1710,19 @@ new RedisClusterConfig {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.redisCluster.RedisClusterConfig.property.connection">Connection</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.redisCluster.RedisClusterConfig.property.count">Count</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.redisCluster.RedisClusterConfig.property.connection">Connection</a></code> | <code>HashiCorp.Cdktf.SSHProvisionerConnection\|HashiCorp.Cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.redisCluster.RedisClusterConfig.property.count">Count</a></code> | <code>double\|HashiCorp.Cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.redisCluster.RedisClusterConfig.property.dependsOn">DependsOn</a></code> | <code>HashiCorp.Cdktf.ITerraformDependable[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.redisCluster.RedisClusterConfig.property.forEach">ForEach</a></code> | <code>HashiCorp.Cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.redisCluster.RedisClusterConfig.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.redisCluster.RedisClusterConfig.property.provider">Provider</a></code> | <code>HashiCorp.Cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.redisCluster.RedisClusterConfig.property.provisioners">Provisioners</a></code> | <code>object[]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.redisCluster.RedisClusterConfig.property.provisioners">Provisioners</a></code> | <code>HashiCorp.Cdktf.FileProvisioner\|HashiCorp.Cdktf.LocalExecProvisioner\|HashiCorp.Cdktf.RemoteExecProvisioner[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.redisCluster.RedisClusterConfig.property.shardCount">ShardCount</a></code> | <code>double</code> | Required. Number of shards for the Redis cluster. |
-| <code><a href="#@cdktf/provider-google.redisCluster.RedisClusterConfig.property.allowFewerZonesDeployment">AllowFewerZonesDeployment</a></code> | <code>object</code> | Allows customers to specify if they are okay with deploying a multi-zone cluster in less than 3 zones. |
+| <code><a href="#@cdktf/provider-google.redisCluster.RedisClusterConfig.property.allowFewerZonesDeployment">AllowFewerZonesDeployment</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Allows customers to specify if they are okay with deploying a multi-zone cluster in less than 3 zones. |
 | <code><a href="#@cdktf/provider-google.redisCluster.RedisClusterConfig.property.authorizationMode">AuthorizationMode</a></code> | <code>string</code> | Optional. |
 | <code><a href="#@cdktf/provider-google.redisCluster.RedisClusterConfig.property.automatedBackupConfig">AutomatedBackupConfig</a></code> | <code><a href="#@cdktf/provider-google.redisCluster.RedisClusterAutomatedBackupConfig">RedisClusterAutomatedBackupConfig</a></code> | automated_backup_config block. |
 | <code><a href="#@cdktf/provider-google.redisCluster.RedisClusterConfig.property.crossClusterReplicationConfig">CrossClusterReplicationConfig</a></code> | <code><a href="#@cdktf/provider-google.redisCluster.RedisClusterCrossClusterReplicationConfig">RedisClusterCrossClusterReplicationConfig</a></code> | cross_cluster_replication_config block. |
-| <code><a href="#@cdktf/provider-google.redisCluster.RedisClusterConfig.property.deletionProtectionEnabled">DeletionProtectionEnabled</a></code> | <code>object</code> | Optional. |
+| <code><a href="#@cdktf/provider-google.redisCluster.RedisClusterConfig.property.deletionProtectionEnabled">DeletionProtectionEnabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Optional. |
 | <code><a href="#@cdktf/provider-google.redisCluster.RedisClusterConfig.property.gcsSource">GcsSource</a></code> | <code><a href="#@cdktf/provider-google.redisCluster.RedisClusterGcsSource">RedisClusterGcsSource</a></code> | gcs_source block. |
 | <code><a href="#@cdktf/provider-google.redisCluster.RedisClusterConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/redis_cluster#id RedisCluster#id}. |
 | <code><a href="#@cdktf/provider-google.redisCluster.RedisClusterConfig.property.kmsKey">KmsKey</a></code> | <code>string</code> | The KMS key used to encrypt the at-rest data of the cluster. |
@@ -1732,7 +1732,7 @@ new RedisClusterConfig {
 | <code><a href="#@cdktf/provider-google.redisCluster.RedisClusterConfig.property.nodeType">NodeType</a></code> | <code>string</code> | The nodeType for the Redis cluster. |
 | <code><a href="#@cdktf/provider-google.redisCluster.RedisClusterConfig.property.persistenceConfig">PersistenceConfig</a></code> | <code><a href="#@cdktf/provider-google.redisCluster.RedisClusterPersistenceConfig">RedisClusterPersistenceConfig</a></code> | persistence_config block. |
 | <code><a href="#@cdktf/provider-google.redisCluster.RedisClusterConfig.property.project">Project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/redis_cluster#project RedisCluster#project}. |
-| <code><a href="#@cdktf/provider-google.redisCluster.RedisClusterConfig.property.pscConfigs">PscConfigs</a></code> | <code>object</code> | psc_configs block. |
+| <code><a href="#@cdktf/provider-google.redisCluster.RedisClusterConfig.property.pscConfigs">PscConfigs</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.redisCluster.RedisClusterPscConfigs">RedisClusterPscConfigs</a>[]</code> | psc_configs block. |
 | <code><a href="#@cdktf/provider-google.redisCluster.RedisClusterConfig.property.redisConfigs">RedisConfigs</a></code> | <code>System.Collections.Generic.IDictionary<string, string></code> | Configure Redis Cluster behavior using a subset of native Redis configuration parameters. |
 | <code><a href="#@cdktf/provider-google.redisCluster.RedisClusterConfig.property.region">Region</a></code> | <code>string</code> | The name of the region of the Redis cluster. |
 | <code><a href="#@cdktf/provider-google.redisCluster.RedisClusterConfig.property.replicaCount">ReplicaCount</a></code> | <code>double</code> | Optional. The number of replica nodes per shard. |
@@ -1745,20 +1745,20 @@ new RedisClusterConfig {
 ##### `Connection`<sup>Optional</sup> <a name="Connection" id="@cdktf/provider-google.redisCluster.RedisClusterConfig.property.connection"></a>
 
 ```csharp
-public object Connection { get; set; }
+public SSHProvisionerConnection|WinrmProvisionerConnection Connection { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.SSHProvisionerConnection|HashiCorp.Cdktf.WinrmProvisionerConnection
 
 ---
 
 ##### `Count`<sup>Optional</sup> <a name="Count" id="@cdktf/provider-google.redisCluster.RedisClusterConfig.property.count"></a>
 
 ```csharp
-public object Count { get; set; }
+public double|TerraformCount Count { get; set; }
 ```
 
-- *Type:* object
+- *Type:* double|HashiCorp.Cdktf.TerraformCount
 
 ---
 
@@ -1805,10 +1805,10 @@ public TerraformProvider Provider { get; set; }
 ##### `Provisioners`<sup>Optional</sup> <a name="Provisioners" id="@cdktf/provider-google.redisCluster.RedisClusterConfig.property.provisioners"></a>
 
 ```csharp
-public object[] Provisioners { get; set; }
+public (FileProvisioner|LocalExecProvisioner|RemoteExecProvisioner)[] Provisioners { get; set; }
 ```
 
-- *Type:* object[]
+- *Type:* HashiCorp.Cdktf.FileProvisioner|HashiCorp.Cdktf.LocalExecProvisioner|HashiCorp.Cdktf.RemoteExecProvisioner[]
 
 ---
 
@@ -1829,10 +1829,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `AllowFewerZonesDeployment`<sup>Optional</sup> <a name="AllowFewerZonesDeployment" id="@cdktf/provider-google.redisCluster.RedisClusterConfig.property.allowFewerZonesDeployment"></a>
 
 ```csharp
-public object AllowFewerZonesDeployment { get; set; }
+public bool|IResolvable AllowFewerZonesDeployment { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Allows customers to specify if they are okay with deploying a multi-zone cluster in less than 3 zones.
 
@@ -1891,10 +1891,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `DeletionProtectionEnabled`<sup>Optional</sup> <a name="DeletionProtectionEnabled" id="@cdktf/provider-google.redisCluster.RedisClusterConfig.property.deletionProtectionEnabled"></a>
 
 ```csharp
-public object DeletionProtectionEnabled { get; set; }
+public bool|IResolvable DeletionProtectionEnabled { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Optional.
 
@@ -2036,10 +2036,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `PscConfigs`<sup>Optional</sup> <a name="PscConfigs" id="@cdktf/provider-google.redisCluster.RedisClusterConfig.property.pscConfigs"></a>
 
 ```csharp
-public object PscConfigs { get; set; }
+public IResolvable|RedisClusterPscConfigs[] PscConfigs { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.redisCluster.RedisClusterPscConfigs">RedisClusterPscConfigs</a>[]
 
 psc_configs block.
 
@@ -2147,7 +2147,7 @@ using HashiCorp.Cdktf.Providers.Google;
 new RedisClusterCrossClusterReplicationConfig {
     string ClusterRole = null,
     RedisClusterCrossClusterReplicationConfigPrimaryCluster PrimaryCluster = null,
-    object SecondaryClusters = null
+    IResolvable|RedisClusterCrossClusterReplicationConfigSecondaryClusters[] SecondaryClusters = null
 };
 ```
 
@@ -2157,7 +2157,7 @@ new RedisClusterCrossClusterReplicationConfig {
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.redisCluster.RedisClusterCrossClusterReplicationConfig.property.clusterRole">ClusterRole</a></code> | <code>string</code> | The role of the cluster in cross cluster replication. Supported values are:. |
 | <code><a href="#@cdktf/provider-google.redisCluster.RedisClusterCrossClusterReplicationConfig.property.primaryCluster">PrimaryCluster</a></code> | <code><a href="#@cdktf/provider-google.redisCluster.RedisClusterCrossClusterReplicationConfigPrimaryCluster">RedisClusterCrossClusterReplicationConfigPrimaryCluster</a></code> | primary_cluster block. |
-| <code><a href="#@cdktf/provider-google.redisCluster.RedisClusterCrossClusterReplicationConfig.property.secondaryClusters">SecondaryClusters</a></code> | <code>object</code> | secondary_clusters block. |
+| <code><a href="#@cdktf/provider-google.redisCluster.RedisClusterCrossClusterReplicationConfig.property.secondaryClusters">SecondaryClusters</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.redisCluster.RedisClusterCrossClusterReplicationConfigSecondaryClusters">RedisClusterCrossClusterReplicationConfigSecondaryClusters</a>[]</code> | secondary_clusters block. |
 
 ---
 
@@ -2197,10 +2197,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `SecondaryClusters`<sup>Optional</sup> <a name="SecondaryClusters" id="@cdktf/provider-google.redisCluster.RedisClusterCrossClusterReplicationConfig.property.secondaryClusters"></a>
 
 ```csharp
-public object SecondaryClusters { get; set; }
+public IResolvable|RedisClusterCrossClusterReplicationConfigSecondaryClusters[] SecondaryClusters { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.redisCluster.RedisClusterCrossClusterReplicationConfigSecondaryClusters">RedisClusterCrossClusterReplicationConfigSecondaryClusters</a>[]
 
 secondary_clusters block.
 
@@ -2383,7 +2383,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 using HashiCorp.Cdktf.Providers.Google;
 
 new RedisClusterMaintenancePolicy {
-    object WeeklyMaintenanceWindow = null
+    IResolvable|RedisClusterMaintenancePolicyWeeklyMaintenanceWindow[] WeeklyMaintenanceWindow = null
 };
 ```
 
@@ -2391,17 +2391,17 @@ new RedisClusterMaintenancePolicy {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.redisCluster.RedisClusterMaintenancePolicy.property.weeklyMaintenanceWindow">WeeklyMaintenanceWindow</a></code> | <code>object</code> | weekly_maintenance_window block. |
+| <code><a href="#@cdktf/provider-google.redisCluster.RedisClusterMaintenancePolicy.property.weeklyMaintenanceWindow">WeeklyMaintenanceWindow</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.redisCluster.RedisClusterMaintenancePolicyWeeklyMaintenanceWindow">RedisClusterMaintenancePolicyWeeklyMaintenanceWindow</a>[]</code> | weekly_maintenance_window block. |
 
 ---
 
 ##### `WeeklyMaintenanceWindow`<sup>Optional</sup> <a name="WeeklyMaintenanceWindow" id="@cdktf/provider-google.redisCluster.RedisClusterMaintenancePolicy.property.weeklyMaintenanceWindow"></a>
 
 ```csharp
-public object WeeklyMaintenanceWindow { get; set; }
+public IResolvable|RedisClusterMaintenancePolicyWeeklyMaintenanceWindow[] WeeklyMaintenanceWindow { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.redisCluster.RedisClusterMaintenancePolicyWeeklyMaintenanceWindow">RedisClusterMaintenancePolicyWeeklyMaintenanceWindow</a>[]
 
 weekly_maintenance_window block.
 
@@ -5393,12 +5393,12 @@ private void PutPrimaryCluster(RedisClusterCrossClusterReplicationConfigPrimaryC
 ##### `PutSecondaryClusters` <a name="PutSecondaryClusters" id="@cdktf/provider-google.redisCluster.RedisClusterCrossClusterReplicationConfigOutputReference.putSecondaryClusters"></a>
 
 ```csharp
-private void PutSecondaryClusters(object Value)
+private void PutSecondaryClusters(IResolvable|RedisClusterCrossClusterReplicationConfigSecondaryClusters[] Value)
 ```
 
 ###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-google.redisCluster.RedisClusterCrossClusterReplicationConfigOutputReference.putSecondaryClusters.parameter.value"></a>
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.redisCluster.RedisClusterCrossClusterReplicationConfigSecondaryClusters">RedisClusterCrossClusterReplicationConfigSecondaryClusters</a>[]
 
 ---
 
@@ -5433,7 +5433,7 @@ private void ResetSecondaryClusters()
 | <code><a href="#@cdktf/provider-google.redisCluster.RedisClusterCrossClusterReplicationConfigOutputReference.property.updateTime">UpdateTime</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.redisCluster.RedisClusterCrossClusterReplicationConfigOutputReference.property.clusterRoleInput">ClusterRoleInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.redisCluster.RedisClusterCrossClusterReplicationConfigOutputReference.property.primaryClusterInput">PrimaryClusterInput</a></code> | <code><a href="#@cdktf/provider-google.redisCluster.RedisClusterCrossClusterReplicationConfigPrimaryCluster">RedisClusterCrossClusterReplicationConfigPrimaryCluster</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.redisCluster.RedisClusterCrossClusterReplicationConfigOutputReference.property.secondaryClustersInput">SecondaryClustersInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.redisCluster.RedisClusterCrossClusterReplicationConfigOutputReference.property.secondaryClustersInput">SecondaryClustersInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.redisCluster.RedisClusterCrossClusterReplicationConfigSecondaryClusters">RedisClusterCrossClusterReplicationConfigSecondaryClusters</a>[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.redisCluster.RedisClusterCrossClusterReplicationConfigOutputReference.property.clusterRole">ClusterRole</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.redisCluster.RedisClusterCrossClusterReplicationConfigOutputReference.property.internalValue">InternalValue</a></code> | <code><a href="#@cdktf/provider-google.redisCluster.RedisClusterCrossClusterReplicationConfig">RedisClusterCrossClusterReplicationConfig</a></code> | *No description.* |
 
@@ -5526,10 +5526,10 @@ public RedisClusterCrossClusterReplicationConfigPrimaryCluster PrimaryClusterInp
 ##### `SecondaryClustersInput`<sup>Optional</sup> <a name="SecondaryClustersInput" id="@cdktf/provider-google.redisCluster.RedisClusterCrossClusterReplicationConfigOutputReference.property.secondaryClustersInput"></a>
 
 ```csharp
-public object SecondaryClustersInput { get; }
+public IResolvable|RedisClusterCrossClusterReplicationConfigSecondaryClusters[] SecondaryClustersInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.redisCluster.RedisClusterCrossClusterReplicationConfigSecondaryClusters">RedisClusterCrossClusterReplicationConfigSecondaryClusters</a>[]
 
 ---
 
@@ -5964,7 +5964,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.redisCluster.RedisClusterCrossClusterReplicationConfigSecondaryClustersList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.redisCluster.RedisClusterCrossClusterReplicationConfigSecondaryClustersList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.redisCluster.RedisClusterCrossClusterReplicationConfigSecondaryClustersList.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.redisCluster.RedisClusterCrossClusterReplicationConfigSecondaryClustersList.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.redisCluster.RedisClusterCrossClusterReplicationConfigSecondaryClusters">RedisClusterCrossClusterReplicationConfigSecondaryClusters</a>[]</code> | *No description.* |
 
 ---
 
@@ -5995,10 +5995,10 @@ public string Fqn { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.redisCluster.RedisClusterCrossClusterReplicationConfigSecondaryClustersList.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|RedisClusterCrossClusterReplicationConfigSecondaryClusters[] InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.redisCluster.RedisClusterCrossClusterReplicationConfigSecondaryClusters">RedisClusterCrossClusterReplicationConfigSecondaryClusters</a>[]
 
 ---
 
@@ -6241,7 +6241,7 @@ private void ResetCluster()
 | <code><a href="#@cdktf/provider-google.redisCluster.RedisClusterCrossClusterReplicationConfigSecondaryClustersOutputReference.property.uid">Uid</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.redisCluster.RedisClusterCrossClusterReplicationConfigSecondaryClustersOutputReference.property.clusterInput">ClusterInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.redisCluster.RedisClusterCrossClusterReplicationConfigSecondaryClustersOutputReference.property.cluster">Cluster</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.redisCluster.RedisClusterCrossClusterReplicationConfigSecondaryClustersOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.redisCluster.RedisClusterCrossClusterReplicationConfigSecondaryClustersOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.redisCluster.RedisClusterCrossClusterReplicationConfigSecondaryClusters">RedisClusterCrossClusterReplicationConfigSecondaryClusters</a></code> | *No description.* |
 
 ---
 
@@ -6302,10 +6302,10 @@ public string Cluster { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.redisCluster.RedisClusterCrossClusterReplicationConfigSecondaryClustersOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|RedisClusterCrossClusterReplicationConfigSecondaryClusters InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.redisCluster.RedisClusterCrossClusterReplicationConfigSecondaryClusters">RedisClusterCrossClusterReplicationConfigSecondaryClusters</a>
 
 ---
 
@@ -7665,12 +7665,12 @@ Returns a reversible string representation.
 ##### `PutWeeklyMaintenanceWindow` <a name="PutWeeklyMaintenanceWindow" id="@cdktf/provider-google.redisCluster.RedisClusterMaintenancePolicyOutputReference.putWeeklyMaintenanceWindow"></a>
 
 ```csharp
-private void PutWeeklyMaintenanceWindow(object Value)
+private void PutWeeklyMaintenanceWindow(IResolvable|RedisClusterMaintenancePolicyWeeklyMaintenanceWindow[] Value)
 ```
 
 ###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-google.redisCluster.RedisClusterMaintenancePolicyOutputReference.putWeeklyMaintenanceWindow.parameter.value"></a>
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.redisCluster.RedisClusterMaintenancePolicyWeeklyMaintenanceWindow">RedisClusterMaintenancePolicyWeeklyMaintenanceWindow</a>[]
 
 ---
 
@@ -7690,7 +7690,7 @@ private void ResetWeeklyMaintenanceWindow()
 | <code><a href="#@cdktf/provider-google.redisCluster.RedisClusterMaintenancePolicyOutputReference.property.createTime">CreateTime</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.redisCluster.RedisClusterMaintenancePolicyOutputReference.property.updateTime">UpdateTime</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.redisCluster.RedisClusterMaintenancePolicyOutputReference.property.weeklyMaintenanceWindow">WeeklyMaintenanceWindow</a></code> | <code><a href="#@cdktf/provider-google.redisCluster.RedisClusterMaintenancePolicyWeeklyMaintenanceWindowList">RedisClusterMaintenancePolicyWeeklyMaintenanceWindowList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.redisCluster.RedisClusterMaintenancePolicyOutputReference.property.weeklyMaintenanceWindowInput">WeeklyMaintenanceWindowInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.redisCluster.RedisClusterMaintenancePolicyOutputReference.property.weeklyMaintenanceWindowInput">WeeklyMaintenanceWindowInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.redisCluster.RedisClusterMaintenancePolicyWeeklyMaintenanceWindow">RedisClusterMaintenancePolicyWeeklyMaintenanceWindow</a>[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.redisCluster.RedisClusterMaintenancePolicyOutputReference.property.internalValue">InternalValue</a></code> | <code><a href="#@cdktf/provider-google.redisCluster.RedisClusterMaintenancePolicy">RedisClusterMaintenancePolicy</a></code> | *No description.* |
 
 ---
@@ -7752,10 +7752,10 @@ public RedisClusterMaintenancePolicyWeeklyMaintenanceWindowList WeeklyMaintenanc
 ##### `WeeklyMaintenanceWindowInput`<sup>Optional</sup> <a name="WeeklyMaintenanceWindowInput" id="@cdktf/provider-google.redisCluster.RedisClusterMaintenancePolicyOutputReference.property.weeklyMaintenanceWindowInput"></a>
 
 ```csharp
-public object WeeklyMaintenanceWindowInput { get; }
+public IResolvable|RedisClusterMaintenancePolicyWeeklyMaintenanceWindow[] WeeklyMaintenanceWindowInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.redisCluster.RedisClusterMaintenancePolicyWeeklyMaintenanceWindow">RedisClusterMaintenancePolicyWeeklyMaintenanceWindow</a>[]
 
 ---
 
@@ -7891,7 +7891,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.redisCluster.RedisClusterMaintenancePolicyWeeklyMaintenanceWindowList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.redisCluster.RedisClusterMaintenancePolicyWeeklyMaintenanceWindowList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.redisCluster.RedisClusterMaintenancePolicyWeeklyMaintenanceWindowList.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.redisCluster.RedisClusterMaintenancePolicyWeeklyMaintenanceWindowList.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.redisCluster.RedisClusterMaintenancePolicyWeeklyMaintenanceWindow">RedisClusterMaintenancePolicyWeeklyMaintenanceWindow</a>[]</code> | *No description.* |
 
 ---
 
@@ -7922,10 +7922,10 @@ public string Fqn { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.redisCluster.RedisClusterMaintenancePolicyWeeklyMaintenanceWindowList.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|RedisClusterMaintenancePolicyWeeklyMaintenanceWindow[] InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.redisCluster.RedisClusterMaintenancePolicyWeeklyMaintenanceWindow">RedisClusterMaintenancePolicyWeeklyMaintenanceWindow</a>[]
 
 ---
 
@@ -8176,7 +8176,7 @@ private void PutStartTime(RedisClusterMaintenancePolicyWeeklyMaintenanceWindowSt
 | <code><a href="#@cdktf/provider-google.redisCluster.RedisClusterMaintenancePolicyWeeklyMaintenanceWindowOutputReference.property.dayInput">DayInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.redisCluster.RedisClusterMaintenancePolicyWeeklyMaintenanceWindowOutputReference.property.startTimeInput">StartTimeInput</a></code> | <code><a href="#@cdktf/provider-google.redisCluster.RedisClusterMaintenancePolicyWeeklyMaintenanceWindowStartTime">RedisClusterMaintenancePolicyWeeklyMaintenanceWindowStartTime</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.redisCluster.RedisClusterMaintenancePolicyWeeklyMaintenanceWindowOutputReference.property.day">Day</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.redisCluster.RedisClusterMaintenancePolicyWeeklyMaintenanceWindowOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.redisCluster.RedisClusterMaintenancePolicyWeeklyMaintenanceWindowOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.redisCluster.RedisClusterMaintenancePolicyWeeklyMaintenanceWindow">RedisClusterMaintenancePolicyWeeklyMaintenanceWindow</a></code> | *No description.* |
 
 ---
 
@@ -8257,10 +8257,10 @@ public string Day { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.redisCluster.RedisClusterMaintenancePolicyWeeklyMaintenanceWindowOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|RedisClusterMaintenancePolicyWeeklyMaintenanceWindow InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.redisCluster.RedisClusterMaintenancePolicyWeeklyMaintenanceWindow">RedisClusterMaintenancePolicyWeeklyMaintenanceWindow</a>
 
 ---
 
@@ -11272,7 +11272,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.redisCluster.RedisClusterPscConfigsList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.redisCluster.RedisClusterPscConfigsList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.redisCluster.RedisClusterPscConfigsList.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.redisCluster.RedisClusterPscConfigsList.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.redisCluster.RedisClusterPscConfigs">RedisClusterPscConfigs</a>[]</code> | *No description.* |
 
 ---
 
@@ -11303,10 +11303,10 @@ public string Fqn { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.redisCluster.RedisClusterPscConfigsList.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|RedisClusterPscConfigs[] InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.redisCluster.RedisClusterPscConfigs">RedisClusterPscConfigs</a>[]
 
 ---
 
@@ -11541,7 +11541,7 @@ Returns a reversible string representation.
 | <code><a href="#@cdktf/provider-google.redisCluster.RedisClusterPscConfigsOutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.redisCluster.RedisClusterPscConfigsOutputReference.property.networkInput">NetworkInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.redisCluster.RedisClusterPscConfigsOutputReference.property.network">Network</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.redisCluster.RedisClusterPscConfigsOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.redisCluster.RedisClusterPscConfigsOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.redisCluster.RedisClusterPscConfigs">RedisClusterPscConfigs</a></code> | *No description.* |
 
 ---
 
@@ -11592,10 +11592,10 @@ public string Network { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.redisCluster.RedisClusterPscConfigsOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|RedisClusterPscConfigs InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.redisCluster.RedisClusterPscConfigs">RedisClusterPscConfigs</a>
 
 ---
 
@@ -13611,7 +13611,7 @@ private void ResetUpdate()
 | <code><a href="#@cdktf/provider-google.redisCluster.RedisClusterTimeoutsOutputReference.property.create">Create</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.redisCluster.RedisClusterTimeoutsOutputReference.property.delete">Delete</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.redisCluster.RedisClusterTimeoutsOutputReference.property.update">Update</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.redisCluster.RedisClusterTimeoutsOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.redisCluster.RedisClusterTimeoutsOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.redisCluster.RedisClusterTimeouts">RedisClusterTimeouts</a></code> | *No description.* |
 
 ---
 
@@ -13702,10 +13702,10 @@ public string Update { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.redisCluster.RedisClusterTimeoutsOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|RedisClusterTimeouts InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.redisCluster.RedisClusterTimeouts">RedisClusterTimeouts</a>
 
 ---
 

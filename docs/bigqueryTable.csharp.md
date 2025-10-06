@@ -310,7 +310,7 @@ private System.Collections.Generic.IDictionary<string, string> GetStringMapAttri
 ##### `HasResourceMove` <a name="HasResourceMove" id="@cdktf/provider-google.bigqueryTable.BigqueryTable.hasResourceMove"></a>
 
 ```csharp
-private object HasResourceMove()
+private TerraformResourceMoveByTarget|TerraformResourceMoveById HasResourceMove()
 ```
 
 ##### `ImportFrom` <a name="ImportFrom" id="@cdktf/provider-google.bigqueryTable.BigqueryTable.importFrom"></a>
@@ -364,7 +364,7 @@ Full id of resource being moved from, e.g. "aws_s3_bucket.example".
 ##### `MoveTo` <a name="MoveTo" id="@cdktf/provider-google.bigqueryTable.BigqueryTable.moveTo"></a>
 
 ```csharp
-private void MoveTo(string MoveTarget, object Index = null)
+private void MoveTo(string MoveTarget, string|double Index = null)
 ```
 
 Moves this resource to the target resource given by moveTarget.
@@ -379,7 +379,7 @@ The previously set user defined string set by .addMoveTarget() corresponding to 
 
 ###### `Index`<sup>Optional</sup> <a name="Index" id="@cdktf/provider-google.bigqueryTable.BigqueryTable.moveTo.parameter.index"></a>
 
-- *Type:* object
+- *Type:* string|double
 
 Optional The index corresponding to the key the resource is to appear in the foreach of a resource to move to.
 
@@ -815,13 +815,13 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.5
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTable.property.terraformMetaArguments">TerraformMetaArguments</a></code> | <code>System.Collections.Generic.IDictionary<string, object></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTable.property.terraformResourceType">TerraformResourceType</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTable.property.terraformGeneratorMetadata">TerraformGeneratorMetadata</a></code> | <code>HashiCorp.Cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTable.property.connection">Connection</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTable.property.count">Count</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTable.property.connection">Connection</a></code> | <code>HashiCorp.Cdktf.SSHProvisionerConnection\|HashiCorp.Cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTable.property.count">Count</a></code> | <code>double\|HashiCorp.Cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTable.property.dependsOn">DependsOn</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTable.property.forEach">ForEach</a></code> | <code>HashiCorp.Cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTable.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTable.property.provider">Provider</a></code> | <code>HashiCorp.Cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTable.property.provisioners">Provisioners</a></code> | <code>object[]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTable.property.provisioners">Provisioners</a></code> | <code>HashiCorp.Cdktf.FileProvisioner\|HashiCorp.Cdktf.LocalExecProvisioner\|HashiCorp.Cdktf.RemoteExecProvisioner[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTable.property.biglakeConfiguration">BiglakeConfiguration</a></code> | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableBiglakeConfigurationOutputReference">BigqueryTableBiglakeConfigurationOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTable.property.creationTime">CreationTime</a></code> | <code>double</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTable.property.effectiveLabels">EffectiveLabels</a></code> | <code>HashiCorp.Cdktf.StringMap</code> | *No description.* |
@@ -848,7 +848,7 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.5
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTable.property.biglakeConfigurationInput">BiglakeConfigurationInput</a></code> | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableBiglakeConfiguration">BigqueryTableBiglakeConfiguration</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTable.property.clusteringInput">ClusteringInput</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTable.property.datasetIdInput">DatasetIdInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTable.property.deletionProtectionInput">DeletionProtectionInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTable.property.deletionProtectionInput">DeletionProtectionInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTable.property.descriptionInput">DescriptionInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTable.property.encryptionConfigurationInput">EncryptionConfigurationInput</a></code> | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableEncryptionConfiguration">BigqueryTableEncryptionConfiguration</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTable.property.expirationTimeInput">ExpirationTimeInput</a></code> | <code>double</code> | *No description.* |
@@ -856,14 +856,14 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.5
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTable.property.externalDataConfigurationInput">ExternalDataConfigurationInput</a></code> | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfiguration">BigqueryTableExternalDataConfiguration</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTable.property.friendlyNameInput">FriendlyNameInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTable.property.idInput">IdInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTable.property.ignoreAutoGeneratedSchemaInput">IgnoreAutoGeneratedSchemaInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTable.property.ignoreAutoGeneratedSchemaInput">IgnoreAutoGeneratedSchemaInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTable.property.ignoreSchemaChangesInput">IgnoreSchemaChangesInput</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTable.property.labelsInput">LabelsInput</a></code> | <code>System.Collections.Generic.IDictionary<string, string></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTable.property.materializedViewInput">MaterializedViewInput</a></code> | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableMaterializedView">BigqueryTableMaterializedView</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTable.property.maxStalenessInput">MaxStalenessInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTable.property.projectInput">ProjectInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTable.property.rangePartitioningInput">RangePartitioningInput</a></code> | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableRangePartitioning">BigqueryTableRangePartitioning</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTable.property.requirePartitionFilterInput">RequirePartitionFilterInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTable.property.requirePartitionFilterInput">RequirePartitionFilterInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTable.property.resourceTagsInput">ResourceTagsInput</a></code> | <code>System.Collections.Generic.IDictionary<string, string></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTable.property.schemaForeignTypeInfoInput">SchemaForeignTypeInfoInput</a></code> | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableSchemaForeignTypeInfo">BigqueryTableSchemaForeignTypeInfo</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTable.property.schemaInput">SchemaInput</a></code> | <code>string</code> | *No description.* |
@@ -875,17 +875,17 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.5
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTable.property.viewInput">ViewInput</a></code> | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableView">BigqueryTableView</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTable.property.clustering">Clustering</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTable.property.datasetId">DatasetId</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTable.property.deletionProtection">DeletionProtection</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTable.property.deletionProtection">DeletionProtection</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTable.property.description">Description</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTable.property.expirationTime">ExpirationTime</a></code> | <code>double</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTable.property.friendlyName">FriendlyName</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTable.property.id">Id</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTable.property.ignoreAutoGeneratedSchema">IgnoreAutoGeneratedSchema</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTable.property.ignoreAutoGeneratedSchema">IgnoreAutoGeneratedSchema</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTable.property.ignoreSchemaChanges">IgnoreSchemaChanges</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTable.property.labels">Labels</a></code> | <code>System.Collections.Generic.IDictionary<string, string></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTable.property.maxStaleness">MaxStaleness</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTable.property.project">Project</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTable.property.requirePartitionFilter">RequirePartitionFilter</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTable.property.requirePartitionFilter">RequirePartitionFilter</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTable.property.resourceTags">ResourceTags</a></code> | <code>System.Collections.Generic.IDictionary<string, string></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTable.property.schema">Schema</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTable.property.tableId">TableId</a></code> | <code>string</code> | *No description.* |
@@ -968,20 +968,20 @@ public TerraformProviderGeneratorMetadata TerraformGeneratorMetadata { get; }
 ##### `Connection`<sup>Optional</sup> <a name="Connection" id="@cdktf/provider-google.bigqueryTable.BigqueryTable.property.connection"></a>
 
 ```csharp
-public object Connection { get; }
+public SSHProvisionerConnection|WinrmProvisionerConnection Connection { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.SSHProvisionerConnection|HashiCorp.Cdktf.WinrmProvisionerConnection
 
 ---
 
 ##### `Count`<sup>Optional</sup> <a name="Count" id="@cdktf/provider-google.bigqueryTable.BigqueryTable.property.count"></a>
 
 ```csharp
-public object Count { get; }
+public double|TerraformCount Count { get; }
 ```
 
-- *Type:* object
+- *Type:* double|HashiCorp.Cdktf.TerraformCount
 
 ---
 
@@ -1028,10 +1028,10 @@ public TerraformProvider Provider { get; }
 ##### `Provisioners`<sup>Optional</sup> <a name="Provisioners" id="@cdktf/provider-google.bigqueryTable.BigqueryTable.property.provisioners"></a>
 
 ```csharp
-public object[] Provisioners { get; }
+public (FileProvisioner|LocalExecProvisioner|RemoteExecProvisioner)[] Provisioners { get; }
 ```
 
-- *Type:* object[]
+- *Type:* HashiCorp.Cdktf.FileProvisioner|HashiCorp.Cdktf.LocalExecProvisioner|HashiCorp.Cdktf.RemoteExecProvisioner[]
 
 ---
 
@@ -1298,10 +1298,10 @@ public string DatasetIdInput { get; }
 ##### `DeletionProtectionInput`<sup>Optional</sup> <a name="DeletionProtectionInput" id="@cdktf/provider-google.bigqueryTable.BigqueryTable.property.deletionProtectionInput"></a>
 
 ```csharp
-public object DeletionProtectionInput { get; }
+public bool|IResolvable DeletionProtectionInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -1378,10 +1378,10 @@ public string IdInput { get; }
 ##### `IgnoreAutoGeneratedSchemaInput`<sup>Optional</sup> <a name="IgnoreAutoGeneratedSchemaInput" id="@cdktf/provider-google.bigqueryTable.BigqueryTable.property.ignoreAutoGeneratedSchemaInput"></a>
 
 ```csharp
-public object IgnoreAutoGeneratedSchemaInput { get; }
+public bool|IResolvable IgnoreAutoGeneratedSchemaInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -1448,10 +1448,10 @@ public BigqueryTableRangePartitioning RangePartitioningInput { get; }
 ##### `RequirePartitionFilterInput`<sup>Optional</sup> <a name="RequirePartitionFilterInput" id="@cdktf/provider-google.bigqueryTable.BigqueryTable.property.requirePartitionFilterInput"></a>
 
 ```csharp
-public object RequirePartitionFilterInput { get; }
+public bool|IResolvable RequirePartitionFilterInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -1568,10 +1568,10 @@ public string DatasetId { get; }
 ##### `DeletionProtection`<sup>Required</sup> <a name="DeletionProtection" id="@cdktf/provider-google.bigqueryTable.BigqueryTable.property.deletionProtection"></a>
 
 ```csharp
-public object DeletionProtection { get; }
+public bool|IResolvable DeletionProtection { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -1618,10 +1618,10 @@ public string Id { get; }
 ##### `IgnoreAutoGeneratedSchema`<sup>Required</sup> <a name="IgnoreAutoGeneratedSchema" id="@cdktf/provider-google.bigqueryTable.BigqueryTable.property.ignoreAutoGeneratedSchema"></a>
 
 ```csharp
-public object IgnoreAutoGeneratedSchema { get; }
+public bool|IResolvable IgnoreAutoGeneratedSchema { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -1668,10 +1668,10 @@ public string Project { get; }
 ##### `RequirePartitionFilter`<sup>Required</sup> <a name="RequirePartitionFilter" id="@cdktf/provider-google.bigqueryTable.BigqueryTable.property.requirePartitionFilter"></a>
 
 ```csharp
-public object RequirePartitionFilter { get; }
+public bool|IResolvable RequirePartitionFilter { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -1829,18 +1829,18 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 using HashiCorp.Cdktf.Providers.Google;
 
 new BigqueryTableConfig {
-    object Connection = null,
-    object Count = null,
+    SSHProvisionerConnection|WinrmProvisionerConnection Connection = null,
+    double|TerraformCount Count = null,
     ITerraformDependable[] DependsOn = null,
     ITerraformIterator ForEach = null,
     TerraformResourceLifecycle Lifecycle = null,
     TerraformProvider Provider = null,
-    object[] Provisioners = null,
+    (FileProvisioner|LocalExecProvisioner|RemoteExecProvisioner)[] Provisioners = null,
     string DatasetId,
     string TableId,
     BigqueryTableBiglakeConfiguration BiglakeConfiguration = null,
     string[] Clustering = null,
-    object DeletionProtection = null,
+    bool|IResolvable DeletionProtection = null,
     string Description = null,
     BigqueryTableEncryptionConfiguration EncryptionConfiguration = null,
     double ExpirationTime = null,
@@ -1848,14 +1848,14 @@ new BigqueryTableConfig {
     BigqueryTableExternalDataConfiguration ExternalDataConfiguration = null,
     string FriendlyName = null,
     string Id = null,
-    object IgnoreAutoGeneratedSchema = null,
+    bool|IResolvable IgnoreAutoGeneratedSchema = null,
     string[] IgnoreSchemaChanges = null,
     System.Collections.Generic.IDictionary<string, string> Labels = null,
     BigqueryTableMaterializedView MaterializedView = null,
     string MaxStaleness = null,
     string Project = null,
     BigqueryTableRangePartitioning RangePartitioning = null,
-    object RequirePartitionFilter = null,
+    bool|IResolvable RequirePartitionFilter = null,
     System.Collections.Generic.IDictionary<string, string> ResourceTags = null,
     string Schema = null,
     BigqueryTableSchemaForeignTypeInfo SchemaForeignTypeInfo = null,
@@ -1871,18 +1871,18 @@ new BigqueryTableConfig {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableConfig.property.connection">Connection</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableConfig.property.count">Count</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableConfig.property.connection">Connection</a></code> | <code>HashiCorp.Cdktf.SSHProvisionerConnection\|HashiCorp.Cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableConfig.property.count">Count</a></code> | <code>double\|HashiCorp.Cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableConfig.property.dependsOn">DependsOn</a></code> | <code>HashiCorp.Cdktf.ITerraformDependable[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableConfig.property.forEach">ForEach</a></code> | <code>HashiCorp.Cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableConfig.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableConfig.property.provider">Provider</a></code> | <code>HashiCorp.Cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableConfig.property.provisioners">Provisioners</a></code> | <code>object[]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableConfig.property.provisioners">Provisioners</a></code> | <code>HashiCorp.Cdktf.FileProvisioner\|HashiCorp.Cdktf.LocalExecProvisioner\|HashiCorp.Cdktf.RemoteExecProvisioner[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableConfig.property.datasetId">DatasetId</a></code> | <code>string</code> | The dataset ID to create the table in. Changing this forces a new resource to be created. |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableConfig.property.tableId">TableId</a></code> | <code>string</code> | A unique ID for the resource. Changing this forces a new resource to be created. |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableConfig.property.biglakeConfiguration">BiglakeConfiguration</a></code> | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableBiglakeConfiguration">BigqueryTableBiglakeConfiguration</a></code> | biglake_configuration block. |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableConfig.property.clustering">Clustering</a></code> | <code>string[]</code> | Specifies column names to use for data clustering. |
-| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableConfig.property.deletionProtection">DeletionProtection</a></code> | <code>object</code> | Whether Terraform will be prevented from destroying the instance. |
+| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableConfig.property.deletionProtection">DeletionProtection</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Whether Terraform will be prevented from destroying the instance. |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableConfig.property.description">Description</a></code> | <code>string</code> | The field description. |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableConfig.property.encryptionConfiguration">EncryptionConfiguration</a></code> | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableEncryptionConfiguration">BigqueryTableEncryptionConfiguration</a></code> | encryption_configuration block. |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableConfig.property.expirationTime">ExpirationTime</a></code> | <code>double</code> | The time when this table expires, in milliseconds since the epoch. |
@@ -1890,14 +1890,14 @@ new BigqueryTableConfig {
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableConfig.property.externalDataConfiguration">ExternalDataConfiguration</a></code> | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfiguration">BigqueryTableExternalDataConfiguration</a></code> | external_data_configuration block. |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableConfig.property.friendlyName">FriendlyName</a></code> | <code>string</code> | A descriptive name for the table. |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/bigquery_table#id BigqueryTable#id}. |
-| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableConfig.property.ignoreAutoGeneratedSchema">IgnoreAutoGeneratedSchema</a></code> | <code>object</code> | Whether Terraform will prevent implicitly added columns in schema from showing diff. |
+| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableConfig.property.ignoreAutoGeneratedSchema">IgnoreAutoGeneratedSchema</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Whether Terraform will prevent implicitly added columns in schema from showing diff. |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableConfig.property.ignoreSchemaChanges">IgnoreSchemaChanges</a></code> | <code>string[]</code> | Mention which fields in schema are to be ignored. |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableConfig.property.labels">Labels</a></code> | <code>System.Collections.Generic.IDictionary<string, string></code> | A mapping of labels to assign to the resource. |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableConfig.property.materializedView">MaterializedView</a></code> | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableMaterializedView">BigqueryTableMaterializedView</a></code> | materialized_view block. |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableConfig.property.maxStaleness">MaxStaleness</a></code> | <code>string</code> | The maximum staleness of data that could be returned when the table (or stale MV) is queried. |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableConfig.property.project">Project</a></code> | <code>string</code> | The ID of the project in which the resource belongs. |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableConfig.property.rangePartitioning">RangePartitioning</a></code> | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableRangePartitioning">BigqueryTableRangePartitioning</a></code> | range_partitioning block. |
-| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableConfig.property.requirePartitionFilter">RequirePartitionFilter</a></code> | <code>object</code> | If set to true, queries over this table require a partition filter that can be used for partition elimination to be specified. |
+| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableConfig.property.requirePartitionFilter">RequirePartitionFilter</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | If set to true, queries over this table require a partition filter that can be used for partition elimination to be specified. |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableConfig.property.resourceTags">ResourceTags</a></code> | <code>System.Collections.Generic.IDictionary<string, string></code> | The tags attached to this table. |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableConfig.property.schema">Schema</a></code> | <code>string</code> | A JSON schema for the table. |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableConfig.property.schemaForeignTypeInfo">SchemaForeignTypeInfo</a></code> | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableSchemaForeignTypeInfo">BigqueryTableSchemaForeignTypeInfo</a></code> | schema_foreign_type_info block. |
@@ -1912,20 +1912,20 @@ new BigqueryTableConfig {
 ##### `Connection`<sup>Optional</sup> <a name="Connection" id="@cdktf/provider-google.bigqueryTable.BigqueryTableConfig.property.connection"></a>
 
 ```csharp
-public object Connection { get; set; }
+public SSHProvisionerConnection|WinrmProvisionerConnection Connection { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.SSHProvisionerConnection|HashiCorp.Cdktf.WinrmProvisionerConnection
 
 ---
 
 ##### `Count`<sup>Optional</sup> <a name="Count" id="@cdktf/provider-google.bigqueryTable.BigqueryTableConfig.property.count"></a>
 
 ```csharp
-public object Count { get; set; }
+public double|TerraformCount Count { get; set; }
 ```
 
-- *Type:* object
+- *Type:* double|HashiCorp.Cdktf.TerraformCount
 
 ---
 
@@ -1972,10 +1972,10 @@ public TerraformProvider Provider { get; set; }
 ##### `Provisioners`<sup>Optional</sup> <a name="Provisioners" id="@cdktf/provider-google.bigqueryTable.BigqueryTableConfig.property.provisioners"></a>
 
 ```csharp
-public object[] Provisioners { get; set; }
+public (FileProvisioner|LocalExecProvisioner|RemoteExecProvisioner)[] Provisioners { get; set; }
 ```
 
-- *Type:* object[]
+- *Type:* HashiCorp.Cdktf.FileProvisioner|HashiCorp.Cdktf.LocalExecProvisioner|HashiCorp.Cdktf.RemoteExecProvisioner[]
 
 ---
 
@@ -2040,10 +2040,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `DeletionProtection`<sup>Optional</sup> <a name="DeletionProtection" id="@cdktf/provider-google.bigqueryTable.BigqueryTableConfig.property.deletionProtection"></a>
 
 ```csharp
-public object DeletionProtection { get; set; }
+public bool|IResolvable DeletionProtection { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Whether Terraform will be prevented from destroying the instance.
 
@@ -2157,10 +2157,10 @@ If you experience problems setting this value it might not be settable. Please t
 ##### `IgnoreAutoGeneratedSchema`<sup>Optional</sup> <a name="IgnoreAutoGeneratedSchema" id="@cdktf/provider-google.bigqueryTable.BigqueryTableConfig.property.ignoreAutoGeneratedSchema"></a>
 
 ```csharp
-public object IgnoreAutoGeneratedSchema { get; set; }
+public bool|IResolvable IgnoreAutoGeneratedSchema { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Whether Terraform will prevent implicitly added columns in schema from showing diff.
 
@@ -2260,10 +2260,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `RequirePartitionFilter`<sup>Optional</sup> <a name="RequirePartitionFilter" id="@cdktf/provider-google.bigqueryTable.BigqueryTableConfig.property.requirePartitionFilter"></a>
 
 ```csharp
-public object RequirePartitionFilter { get; set; }
+public bool|IResolvable RequirePartitionFilter { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 If set to true, queries over this table require a partition filter that can be used for partition elimination to be specified.
 
@@ -2651,7 +2651,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 using HashiCorp.Cdktf.Providers.Google;
 
 new BigqueryTableExternalDataConfiguration {
-    object Autodetect,
+    bool|IResolvable Autodetect,
     string[] SourceUris,
     BigqueryTableExternalDataConfigurationAvroOptions AvroOptions = null,
     BigqueryTableExternalDataConfigurationBigtableOptions BigtableOptions = null,
@@ -2661,7 +2661,7 @@ new BigqueryTableExternalDataConfiguration {
     string FileSetSpecType = null,
     BigqueryTableExternalDataConfigurationGoogleSheetsOptions GoogleSheetsOptions = null,
     BigqueryTableExternalDataConfigurationHivePartitioningOptions HivePartitioningOptions = null,
-    object IgnoreUnknownValues = null,
+    bool|IResolvable IgnoreUnknownValues = null,
     string JsonExtension = null,
     BigqueryTableExternalDataConfigurationJsonOptions JsonOptions = null,
     double MaxBadRecords = null,
@@ -2678,7 +2678,7 @@ new BigqueryTableExternalDataConfiguration {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfiguration.property.autodetect">Autodetect</a></code> | <code>object</code> | Let BigQuery try to autodetect the schema and format of the table. |
+| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfiguration.property.autodetect">Autodetect</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Let BigQuery try to autodetect the schema and format of the table. |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfiguration.property.sourceUris">SourceUris</a></code> | <code>string[]</code> | A list of the fully-qualified URIs that point to your data in Google Cloud. |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfiguration.property.avroOptions">AvroOptions</a></code> | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationAvroOptions">BigqueryTableExternalDataConfigurationAvroOptions</a></code> | avro_options block. |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfiguration.property.bigtableOptions">BigtableOptions</a></code> | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationBigtableOptions">BigqueryTableExternalDataConfigurationBigtableOptions</a></code> | bigtable_options block. |
@@ -2688,7 +2688,7 @@ new BigqueryTableExternalDataConfiguration {
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfiguration.property.fileSetSpecType">FileSetSpecType</a></code> | <code>string</code> | Specifies how source URIs are interpreted for constructing the file set to load. |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfiguration.property.googleSheetsOptions">GoogleSheetsOptions</a></code> | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationGoogleSheetsOptions">BigqueryTableExternalDataConfigurationGoogleSheetsOptions</a></code> | google_sheets_options block. |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfiguration.property.hivePartitioningOptions">HivePartitioningOptions</a></code> | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationHivePartitioningOptions">BigqueryTableExternalDataConfigurationHivePartitioningOptions</a></code> | hive_partitioning_options block. |
-| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfiguration.property.ignoreUnknownValues">IgnoreUnknownValues</a></code> | <code>object</code> | Indicates if BigQuery should allow extra values that are not represented in the table schema. |
+| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfiguration.property.ignoreUnknownValues">IgnoreUnknownValues</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Indicates if BigQuery should allow extra values that are not represented in the table schema. |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfiguration.property.jsonExtension">JsonExtension</a></code> | <code>string</code> | Load option to be used together with sourceFormat newline-delimited JSON to indicate that a variant of JSON is being loaded. |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfiguration.property.jsonOptions">JsonOptions</a></code> | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationJsonOptions">BigqueryTableExternalDataConfigurationJsonOptions</a></code> | json_options block. |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfiguration.property.maxBadRecords">MaxBadRecords</a></code> | <code>double</code> | The maximum number of bad records that BigQuery can ignore when reading data. |
@@ -2704,10 +2704,10 @@ new BigqueryTableExternalDataConfiguration {
 ##### `Autodetect`<sup>Required</sup> <a name="Autodetect" id="@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfiguration.property.autodetect"></a>
 
 ```csharp
-public object Autodetect { get; set; }
+public bool|IResolvable Autodetect { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Let BigQuery try to autodetect the schema and format of the table.
 
@@ -2848,10 +2848,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `IgnoreUnknownValues`<sup>Optional</sup> <a name="IgnoreUnknownValues" id="@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfiguration.property.ignoreUnknownValues"></a>
 
 ```csharp
-public object IgnoreUnknownValues { get; set; }
+public bool|IResolvable IgnoreUnknownValues { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Indicates if BigQuery should allow extra values that are not represented in the table schema.
 
@@ -3003,7 +3003,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 using HashiCorp.Cdktf.Providers.Google;
 
 new BigqueryTableExternalDataConfigurationAvroOptions {
-    object UseAvroLogicalTypes
+    bool|IResolvable UseAvroLogicalTypes
 };
 ```
 
@@ -3011,17 +3011,17 @@ new BigqueryTableExternalDataConfigurationAvroOptions {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationAvroOptions.property.useAvroLogicalTypes">UseAvroLogicalTypes</a></code> | <code>object</code> | If sourceFormat is set to "AVRO", indicates whether to interpret logical types as the corresponding BigQuery data type (for example, TIMESTAMP), instead of using the raw type (for example, INTEGER). |
+| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationAvroOptions.property.useAvroLogicalTypes">UseAvroLogicalTypes</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | If sourceFormat is set to "AVRO", indicates whether to interpret logical types as the corresponding BigQuery data type (for example, TIMESTAMP), instead of using the raw type (for example, INTEGER). |
 
 ---
 
 ##### `UseAvroLogicalTypes`<sup>Required</sup> <a name="UseAvroLogicalTypes" id="@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationAvroOptions.property.useAvroLogicalTypes"></a>
 
 ```csharp
-public object UseAvroLogicalTypes { get; set; }
+public bool|IResolvable UseAvroLogicalTypes { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 If sourceFormat is set to "AVRO", indicates whether to interpret logical types as the corresponding BigQuery data type (for example, TIMESTAMP), instead of using the raw type (for example, INTEGER).
 
@@ -3037,10 +3037,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 using HashiCorp.Cdktf.Providers.Google;
 
 new BigqueryTableExternalDataConfigurationBigtableOptions {
-    object ColumnFamily = null,
-    object IgnoreUnspecifiedColumnFamilies = null,
-    object OutputColumnFamiliesAsJson = null,
-    object ReadRowkeyAsString = null
+    IResolvable|BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamily[] ColumnFamily = null,
+    bool|IResolvable IgnoreUnspecifiedColumnFamilies = null,
+    bool|IResolvable OutputColumnFamiliesAsJson = null,
+    bool|IResolvable ReadRowkeyAsString = null
 };
 ```
 
@@ -3048,20 +3048,20 @@ new BigqueryTableExternalDataConfigurationBigtableOptions {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationBigtableOptions.property.columnFamily">ColumnFamily</a></code> | <code>object</code> | column_family block. |
-| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationBigtableOptions.property.ignoreUnspecifiedColumnFamilies">IgnoreUnspecifiedColumnFamilies</a></code> | <code>object</code> | If field is true, then the column families that are not specified in columnFamilies list are not exposed in the table schema. |
-| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationBigtableOptions.property.outputColumnFamiliesAsJson">OutputColumnFamiliesAsJson</a></code> | <code>object</code> | If field is true, then each column family will be read as a single JSON column. |
-| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationBigtableOptions.property.readRowkeyAsString">ReadRowkeyAsString</a></code> | <code>object</code> | If field is true, then the rowkey column families will be read and converted to string. |
+| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationBigtableOptions.property.columnFamily">ColumnFamily</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamily">BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamily</a>[]</code> | column_family block. |
+| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationBigtableOptions.property.ignoreUnspecifiedColumnFamilies">IgnoreUnspecifiedColumnFamilies</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | If field is true, then the column families that are not specified in columnFamilies list are not exposed in the table schema. |
+| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationBigtableOptions.property.outputColumnFamiliesAsJson">OutputColumnFamiliesAsJson</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | If field is true, then each column family will be read as a single JSON column. |
+| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationBigtableOptions.property.readRowkeyAsString">ReadRowkeyAsString</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | If field is true, then the rowkey column families will be read and converted to string. |
 
 ---
 
 ##### `ColumnFamily`<sup>Optional</sup> <a name="ColumnFamily" id="@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationBigtableOptions.property.columnFamily"></a>
 
 ```csharp
-public object ColumnFamily { get; set; }
+public IResolvable|BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamily[] ColumnFamily { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamily">BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamily</a>[]
 
 column_family block.
 
@@ -3072,10 +3072,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `IgnoreUnspecifiedColumnFamilies`<sup>Optional</sup> <a name="IgnoreUnspecifiedColumnFamilies" id="@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationBigtableOptions.property.ignoreUnspecifiedColumnFamilies"></a>
 
 ```csharp
-public object IgnoreUnspecifiedColumnFamilies { get; set; }
+public bool|IResolvable IgnoreUnspecifiedColumnFamilies { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 If field is true, then the column families that are not specified in columnFamilies list are not exposed in the table schema.
 
@@ -3088,10 +3088,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `OutputColumnFamiliesAsJson`<sup>Optional</sup> <a name="OutputColumnFamiliesAsJson" id="@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationBigtableOptions.property.outputColumnFamiliesAsJson"></a>
 
 ```csharp
-public object OutputColumnFamiliesAsJson { get; set; }
+public bool|IResolvable OutputColumnFamiliesAsJson { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 If field is true, then each column family will be read as a single JSON column.
 
@@ -3104,10 +3104,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `ReadRowkeyAsString`<sup>Optional</sup> <a name="ReadRowkeyAsString" id="@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationBigtableOptions.property.readRowkeyAsString"></a>
 
 ```csharp
-public object ReadRowkeyAsString { get; set; }
+public bool|IResolvable ReadRowkeyAsString { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 If field is true, then the rowkey column families will be read and converted to string.
 
@@ -3125,10 +3125,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 using HashiCorp.Cdktf.Providers.Google;
 
 new BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamily {
-    object Column = null,
+    IResolvable|BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamilyColumn[] Column = null,
     string Encoding = null,
     string FamilyId = null,
-    object OnlyReadLatest = null,
+    bool|IResolvable OnlyReadLatest = null,
     string Type = null
 };
 ```
@@ -3137,10 +3137,10 @@ new BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamily {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamily.property.column">Column</a></code> | <code>object</code> | column block. |
+| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamily.property.column">Column</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamilyColumn">BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamilyColumn</a>[]</code> | column block. |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamily.property.encoding">Encoding</a></code> | <code>string</code> | The encoding of the values when the type is not STRING. |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamily.property.familyId">FamilyId</a></code> | <code>string</code> | Identifier of the column family. |
-| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamily.property.onlyReadLatest">OnlyReadLatest</a></code> | <code>object</code> | If this is set only the latest version of value are exposed for all columns in this column family. |
+| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamily.property.onlyReadLatest">OnlyReadLatest</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | If this is set only the latest version of value are exposed for all columns in this column family. |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamily.property.type">Type</a></code> | <code>string</code> | The type to convert the value in cells of this column family. |
 
 ---
@@ -3148,10 +3148,10 @@ new BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamily {
 ##### `Column`<sup>Optional</sup> <a name="Column" id="@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamily.property.column"></a>
 
 ```csharp
-public object Column { get; set; }
+public IResolvable|BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamilyColumn[] Column { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamilyColumn">BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamilyColumn</a>[]
 
 column block.
 
@@ -3192,10 +3192,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `OnlyReadLatest`<sup>Optional</sup> <a name="OnlyReadLatest" id="@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamily.property.onlyReadLatest"></a>
 
 ```csharp
-public object OnlyReadLatest { get; set; }
+public bool|IResolvable OnlyReadLatest { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 If this is set only the latest version of value are exposed for all columns in this column family.
 
@@ -3231,7 +3231,7 @@ using HashiCorp.Cdktf.Providers.Google;
 new BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamilyColumn {
     string Encoding = null,
     string FieldName = null,
-    object OnlyReadLatest = null,
+    bool|IResolvable OnlyReadLatest = null,
     string QualifierEncoded = null,
     string QualifierString = null,
     string Type = null
@@ -3244,7 +3244,7 @@ new BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamilyColumn {
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamilyColumn.property.encoding">Encoding</a></code> | <code>string</code> | The encoding of the values when the type is not STRING. |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamilyColumn.property.fieldName">FieldName</a></code> | <code>string</code> | If the qualifier is not a valid BigQuery field identifier i.e. does not match [a-zA-Z][a-zA-Z0-9_]*, a valid identifier must be provided as the column field name and is used as field name in queries. |
-| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamilyColumn.property.onlyReadLatest">OnlyReadLatest</a></code> | <code>object</code> | If this is set, only the latest version of value in this column are exposed. |
+| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamilyColumn.property.onlyReadLatest">OnlyReadLatest</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | If this is set, only the latest version of value in this column are exposed. |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamilyColumn.property.qualifierEncoded">QualifierEncoded</a></code> | <code>string</code> | Qualifier of the column. |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamilyColumn.property.qualifierString">QualifierString</a></code> | <code>string</code> | Qualifier string. |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamilyColumn.property.type">Type</a></code> | <code>string</code> | The type to convert the value in cells of this column. |
@@ -3284,10 +3284,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `OnlyReadLatest`<sup>Optional</sup> <a name="OnlyReadLatest" id="@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamilyColumn.property.onlyReadLatest"></a>
 
 ```csharp
-public object OnlyReadLatest { get; set; }
+public bool|IResolvable OnlyReadLatest { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 If this is set, only the latest version of value in this column are exposed.
 
@@ -3352,8 +3352,8 @@ using HashiCorp.Cdktf.Providers.Google;
 
 new BigqueryTableExternalDataConfigurationCsvOptions {
     string Quote,
-    object AllowJaggedRows = null,
-    object AllowQuotedNewlines = null,
+    bool|IResolvable AllowJaggedRows = null,
+    bool|IResolvable AllowQuotedNewlines = null,
     string Encoding = null,
     string FieldDelimiter = null,
     double SkipLeadingRows = null
@@ -3365,8 +3365,8 @@ new BigqueryTableExternalDataConfigurationCsvOptions {
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationCsvOptions.property.quote">Quote</a></code> | <code>string</code> | The value that is used to quote data sections in a CSV file. |
-| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationCsvOptions.property.allowJaggedRows">AllowJaggedRows</a></code> | <code>object</code> | Indicates if BigQuery should accept rows that are missing trailing optional columns. |
-| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationCsvOptions.property.allowQuotedNewlines">AllowQuotedNewlines</a></code> | <code>object</code> | Indicates if BigQuery should allow quoted data sections that contain newline characters in a CSV file. |
+| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationCsvOptions.property.allowJaggedRows">AllowJaggedRows</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Indicates if BigQuery should accept rows that are missing trailing optional columns. |
+| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationCsvOptions.property.allowQuotedNewlines">AllowQuotedNewlines</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Indicates if BigQuery should allow quoted data sections that contain newline characters in a CSV file. |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationCsvOptions.property.encoding">Encoding</a></code> | <code>string</code> | The character encoding of the data. The supported values are UTF-8 or ISO-8859-1. |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationCsvOptions.property.fieldDelimiter">FieldDelimiter</a></code> | <code>string</code> | The separator for fields in a CSV file. |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationCsvOptions.property.skipLeadingRows">SkipLeadingRows</a></code> | <code>double</code> | The number of rows at the top of a CSV file that BigQuery will skip when reading the data. |
@@ -3392,10 +3392,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `AllowJaggedRows`<sup>Optional</sup> <a name="AllowJaggedRows" id="@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationCsvOptions.property.allowJaggedRows"></a>
 
 ```csharp
-public object AllowJaggedRows { get; set; }
+public bool|IResolvable AllowJaggedRows { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Indicates if BigQuery should accept rows that are missing trailing optional columns.
 
@@ -3406,10 +3406,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `AllowQuotedNewlines`<sup>Optional</sup> <a name="AllowQuotedNewlines" id="@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationCsvOptions.property.allowQuotedNewlines"></a>
 
 ```csharp
-public object AllowQuotedNewlines { get; set; }
+public bool|IResolvable AllowQuotedNewlines { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Indicates if BigQuery should allow quoted data sections that contain newline characters in a CSV file.
 
@@ -3524,7 +3524,7 @@ using HashiCorp.Cdktf.Providers.Google;
 
 new BigqueryTableExternalDataConfigurationHivePartitioningOptions {
     string Mode = null,
-    object RequirePartitionFilter = null,
+    bool|IResolvable RequirePartitionFilter = null,
     string SourceUriPrefix = null
 };
 ```
@@ -3534,7 +3534,7 @@ new BigqueryTableExternalDataConfigurationHivePartitioningOptions {
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationHivePartitioningOptions.property.mode">Mode</a></code> | <code>string</code> | When set, what mode of hive partitioning to use when reading data. |
-| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationHivePartitioningOptions.property.requirePartitionFilter">RequirePartitionFilter</a></code> | <code>object</code> | If set to true, queries over this table require a partition filter that can be used for partition elimination to be specified. |
+| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationHivePartitioningOptions.property.requirePartitionFilter">RequirePartitionFilter</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | If set to true, queries over this table require a partition filter that can be used for partition elimination to be specified. |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationHivePartitioningOptions.property.sourceUriPrefix">SourceUriPrefix</a></code> | <code>string</code> | When hive partition detection is requested, a common for all source uris must be required. |
 
 ---
@@ -3556,10 +3556,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `RequirePartitionFilter`<sup>Optional</sup> <a name="RequirePartitionFilter" id="@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationHivePartitioningOptions.property.requirePartitionFilter"></a>
 
 ```csharp
-public object RequirePartitionFilter { get; set; }
+public bool|IResolvable RequirePartitionFilter { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 If set to true, queries over this table require a partition filter that can be used for partition elimination to be specified.
 
@@ -3627,8 +3627,8 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 using HashiCorp.Cdktf.Providers.Google;
 
 new BigqueryTableExternalDataConfigurationParquetOptions {
-    object EnableListInference = null,
-    object EnumAsString = null
+    bool|IResolvable EnableListInference = null,
+    bool|IResolvable EnumAsString = null
 };
 ```
 
@@ -3636,18 +3636,18 @@ new BigqueryTableExternalDataConfigurationParquetOptions {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationParquetOptions.property.enableListInference">EnableListInference</a></code> | <code>object</code> | Indicates whether to use schema inference specifically for Parquet LIST logical type. |
-| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationParquetOptions.property.enumAsString">EnumAsString</a></code> | <code>object</code> | Indicates whether to infer Parquet ENUM logical type as STRING instead of BYTES by default. |
+| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationParquetOptions.property.enableListInference">EnableListInference</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Indicates whether to use schema inference specifically for Parquet LIST logical type. |
+| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationParquetOptions.property.enumAsString">EnumAsString</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Indicates whether to infer Parquet ENUM logical type as STRING instead of BYTES by default. |
 
 ---
 
 ##### `EnableListInference`<sup>Optional</sup> <a name="EnableListInference" id="@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationParquetOptions.property.enableListInference"></a>
 
 ```csharp
-public object EnableListInference { get; set; }
+public bool|IResolvable EnableListInference { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Indicates whether to use schema inference specifically for Parquet LIST logical type.
 
@@ -3658,10 +3658,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `EnumAsString`<sup>Optional</sup> <a name="EnumAsString" id="@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationParquetOptions.property.enumAsString"></a>
 
 ```csharp
-public object EnumAsString { get; set; }
+public bool|IResolvable EnumAsString { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Indicates whether to infer Parquet ENUM logical type as STRING instead of BYTES by default.
 
@@ -3678,8 +3678,8 @@ using HashiCorp.Cdktf.Providers.Google;
 
 new BigqueryTableMaterializedView {
     string Query,
-    object AllowNonIncrementalDefinition = null,
-    object EnableRefresh = null,
+    bool|IResolvable AllowNonIncrementalDefinition = null,
+    bool|IResolvable EnableRefresh = null,
     double RefreshIntervalMs = null
 };
 ```
@@ -3689,8 +3689,8 @@ new BigqueryTableMaterializedView {
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableMaterializedView.property.query">Query</a></code> | <code>string</code> | A query whose result is persisted. |
-| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableMaterializedView.property.allowNonIncrementalDefinition">AllowNonIncrementalDefinition</a></code> | <code>object</code> | Allow non incremental materialized view definition. The default value is false. |
-| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableMaterializedView.property.enableRefresh">EnableRefresh</a></code> | <code>object</code> | Specifies if BigQuery should automatically refresh materialized view when the base table is updated. The default is true. |
+| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableMaterializedView.property.allowNonIncrementalDefinition">AllowNonIncrementalDefinition</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Allow non incremental materialized view definition. The default value is false. |
+| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableMaterializedView.property.enableRefresh">EnableRefresh</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Specifies if BigQuery should automatically refresh materialized view when the base table is updated. The default is true. |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableMaterializedView.property.refreshIntervalMs">RefreshIntervalMs</a></code> | <code>double</code> | Specifies maximum frequency at which this materialized view will be refreshed. The default is 1800000. |
 
 ---
@@ -3712,10 +3712,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `AllowNonIncrementalDefinition`<sup>Optional</sup> <a name="AllowNonIncrementalDefinition" id="@cdktf/provider-google.bigqueryTable.BigqueryTableMaterializedView.property.allowNonIncrementalDefinition"></a>
 
 ```csharp
-public object AllowNonIncrementalDefinition { get; set; }
+public bool|IResolvable AllowNonIncrementalDefinition { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Allow non incremental materialized view definition. The default value is false.
 
@@ -3726,10 +3726,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `EnableRefresh`<sup>Optional</sup> <a name="EnableRefresh" id="@cdktf/provider-google.bigqueryTable.BigqueryTableMaterializedView.property.enableRefresh"></a>
 
 ```csharp
-public object EnableRefresh { get; set; }
+public bool|IResolvable EnableRefresh { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Specifies if BigQuery should automatically refresh materialized view when the base table is updated. The default is true.
 
@@ -3909,7 +3909,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 using HashiCorp.Cdktf.Providers.Google;
 
 new BigqueryTableTableConstraints {
-    object ForeignKeys = null,
+    IResolvable|BigqueryTableTableConstraintsForeignKeys[] ForeignKeys = null,
     BigqueryTableTableConstraintsPrimaryKey PrimaryKey = null
 };
 ```
@@ -3918,7 +3918,7 @@ new BigqueryTableTableConstraints {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableTableConstraints.property.foreignKeys">ForeignKeys</a></code> | <code>object</code> | foreign_keys block. |
+| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableTableConstraints.property.foreignKeys">ForeignKeys</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableTableConstraintsForeignKeys">BigqueryTableTableConstraintsForeignKeys</a>[]</code> | foreign_keys block. |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableTableConstraints.property.primaryKey">PrimaryKey</a></code> | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableTableConstraintsPrimaryKey">BigqueryTableTableConstraintsPrimaryKey</a></code> | primary_key block. |
 
 ---
@@ -3926,10 +3926,10 @@ new BigqueryTableTableConstraints {
 ##### `ForeignKeys`<sup>Optional</sup> <a name="ForeignKeys" id="@cdktf/provider-google.bigqueryTable.BigqueryTableTableConstraints.property.foreignKeys"></a>
 
 ```csharp
-public object ForeignKeys { get; set; }
+public IResolvable|BigqueryTableTableConstraintsForeignKeys[] ForeignKeys { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableTableConstraintsForeignKeys">BigqueryTableTableConstraintsForeignKeys</a>[]
 
 foreign_keys block.
 
@@ -4262,7 +4262,7 @@ new BigqueryTableTimePartitioning {
     string Type,
     double ExpirationMs = null,
     string Field = null,
-    object RequirePartitionFilter = null
+    bool|IResolvable RequirePartitionFilter = null
 };
 ```
 
@@ -4273,7 +4273,7 @@ new BigqueryTableTimePartitioning {
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableTimePartitioning.property.type">Type</a></code> | <code>string</code> | The supported types are DAY, HOUR, MONTH, and YEAR, which will generate one partition per day, hour, month, and year, respectively. |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableTimePartitioning.property.expirationMs">ExpirationMs</a></code> | <code>double</code> | Number of milliseconds for which to keep the storage for a partition. |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableTimePartitioning.property.field">Field</a></code> | <code>string</code> | The field used to determine how to create a time-based partition. |
-| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableTimePartitioning.property.requirePartitionFilter">RequirePartitionFilter</a></code> | <code>object</code> | If set to true, queries over this table require a partition filter that can be used for partition elimination to be specified. |
+| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableTimePartitioning.property.requirePartitionFilter">RequirePartitionFilter</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | If set to true, queries over this table require a partition filter that can be used for partition elimination to be specified. |
 
 ---
 
@@ -4324,10 +4324,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `RequirePartitionFilter`<sup>Optional</sup> <a name="RequirePartitionFilter" id="@cdktf/provider-google.bigqueryTable.BigqueryTableTimePartitioning.property.requirePartitionFilter"></a>
 
 ```csharp
-public object RequirePartitionFilter { get; set; }
+public bool|IResolvable RequirePartitionFilter { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 If set to true, queries over this table require a partition filter that can be used for partition elimination to be specified.
 
@@ -4344,7 +4344,7 @@ using HashiCorp.Cdktf.Providers.Google;
 
 new BigqueryTableView {
     string Query,
-    object UseLegacySql = null
+    bool|IResolvable UseLegacySql = null
 };
 ```
 
@@ -4353,7 +4353,7 @@ new BigqueryTableView {
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableView.property.query">Query</a></code> | <code>string</code> | A query that BigQuery executes when the view is referenced. |
-| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableView.property.useLegacySql">UseLegacySql</a></code> | <code>object</code> | Specifies whether to use BigQuery's legacy SQL for this view. |
+| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableView.property.useLegacySql">UseLegacySql</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Specifies whether to use BigQuery's legacy SQL for this view. |
 
 ---
 
@@ -4374,10 +4374,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `UseLegacySql`<sup>Optional</sup> <a name="UseLegacySql" id="@cdktf/provider-google.bigqueryTable.BigqueryTableView.property.useLegacySql"></a>
 
 ```csharp
-public object UseLegacySql { get; set; }
+public bool|IResolvable UseLegacySql { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Specifies whether to use BigQuery's legacy SQL for this view.
 
@@ -6274,8 +6274,8 @@ Returns a reversible string representation.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationAvroOptionsOutputReference.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationAvroOptionsOutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationAvroOptionsOutputReference.property.useAvroLogicalTypesInput">UseAvroLogicalTypesInput</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationAvroOptionsOutputReference.property.useAvroLogicalTypes">UseAvroLogicalTypes</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationAvroOptionsOutputReference.property.useAvroLogicalTypesInput">UseAvroLogicalTypesInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationAvroOptionsOutputReference.property.useAvroLogicalTypes">UseAvroLogicalTypes</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationAvroOptionsOutputReference.property.internalValue">InternalValue</a></code> | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationAvroOptions">BigqueryTableExternalDataConfigurationAvroOptions</a></code> | *No description.* |
 
 ---
@@ -6307,20 +6307,20 @@ public string Fqn { get; }
 ##### `UseAvroLogicalTypesInput`<sup>Optional</sup> <a name="UseAvroLogicalTypesInput" id="@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationAvroOptionsOutputReference.property.useAvroLogicalTypesInput"></a>
 
 ```csharp
-public object UseAvroLogicalTypesInput { get; }
+public bool|IResolvable UseAvroLogicalTypesInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
 ##### `UseAvroLogicalTypes`<sup>Required</sup> <a name="UseAvroLogicalTypes" id="@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationAvroOptionsOutputReference.property.useAvroLogicalTypes"></a>
 
 ```csharp
-public object UseAvroLogicalTypes { get; }
+public bool|IResolvable UseAvroLogicalTypes { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -6456,7 +6456,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamilyColumnList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamilyColumnList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamilyColumnList.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamilyColumnList.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamilyColumn">BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamilyColumn</a>[]</code> | *No description.* |
 
 ---
 
@@ -6487,10 +6487,10 @@ public string Fqn { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamilyColumnList.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamilyColumn[] InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamilyColumn">BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamilyColumn</a>[]
 
 ---
 
@@ -6767,17 +6767,17 @@ private void ResetType()
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamilyColumnOutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamilyColumnOutputReference.property.encodingInput">EncodingInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamilyColumnOutputReference.property.fieldNameInput">FieldNameInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamilyColumnOutputReference.property.onlyReadLatestInput">OnlyReadLatestInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamilyColumnOutputReference.property.onlyReadLatestInput">OnlyReadLatestInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamilyColumnOutputReference.property.qualifierEncodedInput">QualifierEncodedInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamilyColumnOutputReference.property.qualifierStringInput">QualifierStringInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamilyColumnOutputReference.property.typeInput">TypeInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamilyColumnOutputReference.property.encoding">Encoding</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamilyColumnOutputReference.property.fieldName">FieldName</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamilyColumnOutputReference.property.onlyReadLatest">OnlyReadLatest</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamilyColumnOutputReference.property.onlyReadLatest">OnlyReadLatest</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamilyColumnOutputReference.property.qualifierEncoded">QualifierEncoded</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamilyColumnOutputReference.property.qualifierString">QualifierString</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamilyColumnOutputReference.property.type">Type</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamilyColumnOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamilyColumnOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamilyColumn">BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamilyColumn</a></code> | *No description.* |
 
 ---
 
@@ -6828,10 +6828,10 @@ public string FieldNameInput { get; }
 ##### `OnlyReadLatestInput`<sup>Optional</sup> <a name="OnlyReadLatestInput" id="@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamilyColumnOutputReference.property.onlyReadLatestInput"></a>
 
 ```csharp
-public object OnlyReadLatestInput { get; }
+public bool|IResolvable OnlyReadLatestInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -6888,10 +6888,10 @@ public string FieldName { get; }
 ##### `OnlyReadLatest`<sup>Required</sup> <a name="OnlyReadLatest" id="@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamilyColumnOutputReference.property.onlyReadLatest"></a>
 
 ```csharp
-public object OnlyReadLatest { get; }
+public bool|IResolvable OnlyReadLatest { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -6928,10 +6928,10 @@ public string Type { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamilyColumnOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamilyColumn InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamilyColumn">BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamilyColumn</a>
 
 ---
 
@@ -7057,7 +7057,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamilyList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamilyList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamilyList.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamilyList.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamily">BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamily</a>[]</code> | *No description.* |
 
 ---
 
@@ -7088,10 +7088,10 @@ public string Fqn { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamilyList.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamily[] InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamily">BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamily</a>[]
 
 ---
 
@@ -7326,12 +7326,12 @@ Returns a reversible string representation.
 ##### `PutColumn` <a name="PutColumn" id="@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamilyOutputReference.putColumn"></a>
 
 ```csharp
-private void PutColumn(object Value)
+private void PutColumn(IResolvable|BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamilyColumn[] Value)
 ```
 
 ###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamilyOutputReference.putColumn.parameter.value"></a>
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamilyColumn">BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamilyColumn</a>[]
 
 ---
 
@@ -7373,16 +7373,16 @@ private void ResetType()
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamilyOutputReference.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamilyOutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamilyOutputReference.property.column">Column</a></code> | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamilyColumnList">BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamilyColumnList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamilyOutputReference.property.columnInput">ColumnInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamilyOutputReference.property.columnInput">ColumnInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamilyColumn">BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamilyColumn</a>[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamilyOutputReference.property.encodingInput">EncodingInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamilyOutputReference.property.familyIdInput">FamilyIdInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamilyOutputReference.property.onlyReadLatestInput">OnlyReadLatestInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamilyOutputReference.property.onlyReadLatestInput">OnlyReadLatestInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamilyOutputReference.property.typeInput">TypeInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamilyOutputReference.property.encoding">Encoding</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamilyOutputReference.property.familyId">FamilyId</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamilyOutputReference.property.onlyReadLatest">OnlyReadLatest</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamilyOutputReference.property.onlyReadLatest">OnlyReadLatest</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamilyOutputReference.property.type">Type</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamilyOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamilyOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamily">BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamily</a></code> | *No description.* |
 
 ---
 
@@ -7423,10 +7423,10 @@ public BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamilyColumnLi
 ##### `ColumnInput`<sup>Optional</sup> <a name="ColumnInput" id="@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamilyOutputReference.property.columnInput"></a>
 
 ```csharp
-public object ColumnInput { get; }
+public IResolvable|BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamilyColumn[] ColumnInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamilyColumn">BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamilyColumn</a>[]
 
 ---
 
@@ -7453,10 +7453,10 @@ public string FamilyIdInput { get; }
 ##### `OnlyReadLatestInput`<sup>Optional</sup> <a name="OnlyReadLatestInput" id="@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamilyOutputReference.property.onlyReadLatestInput"></a>
 
 ```csharp
-public object OnlyReadLatestInput { get; }
+public bool|IResolvable OnlyReadLatestInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -7493,10 +7493,10 @@ public string FamilyId { get; }
 ##### `OnlyReadLatest`<sup>Required</sup> <a name="OnlyReadLatest" id="@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamilyOutputReference.property.onlyReadLatest"></a>
 
 ```csharp
-public object OnlyReadLatest { get; }
+public bool|IResolvable OnlyReadLatest { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -7513,10 +7513,10 @@ public string Type { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamilyOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamily InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamily">BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamily</a>
 
 ---
 
@@ -7732,12 +7732,12 @@ Returns a reversible string representation.
 ##### `PutColumnFamily` <a name="PutColumnFamily" id="@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationBigtableOptionsOutputReference.putColumnFamily"></a>
 
 ```csharp
-private void PutColumnFamily(object Value)
+private void PutColumnFamily(IResolvable|BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamily[] Value)
 ```
 
 ###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationBigtableOptionsOutputReference.putColumnFamily.parameter.value"></a>
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamily">BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamily</a>[]
 
 ---
 
@@ -7773,13 +7773,13 @@ private void ResetReadRowkeyAsString()
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationBigtableOptionsOutputReference.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationBigtableOptionsOutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationBigtableOptionsOutputReference.property.columnFamily">ColumnFamily</a></code> | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamilyList">BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamilyList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationBigtableOptionsOutputReference.property.columnFamilyInput">ColumnFamilyInput</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationBigtableOptionsOutputReference.property.ignoreUnspecifiedColumnFamiliesInput">IgnoreUnspecifiedColumnFamiliesInput</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationBigtableOptionsOutputReference.property.outputColumnFamiliesAsJsonInput">OutputColumnFamiliesAsJsonInput</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationBigtableOptionsOutputReference.property.readRowkeyAsStringInput">ReadRowkeyAsStringInput</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationBigtableOptionsOutputReference.property.ignoreUnspecifiedColumnFamilies">IgnoreUnspecifiedColumnFamilies</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationBigtableOptionsOutputReference.property.outputColumnFamiliesAsJson">OutputColumnFamiliesAsJson</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationBigtableOptionsOutputReference.property.readRowkeyAsString">ReadRowkeyAsString</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationBigtableOptionsOutputReference.property.columnFamilyInput">ColumnFamilyInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamily">BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamily</a>[]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationBigtableOptionsOutputReference.property.ignoreUnspecifiedColumnFamiliesInput">IgnoreUnspecifiedColumnFamiliesInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationBigtableOptionsOutputReference.property.outputColumnFamiliesAsJsonInput">OutputColumnFamiliesAsJsonInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationBigtableOptionsOutputReference.property.readRowkeyAsStringInput">ReadRowkeyAsStringInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationBigtableOptionsOutputReference.property.ignoreUnspecifiedColumnFamilies">IgnoreUnspecifiedColumnFamilies</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationBigtableOptionsOutputReference.property.outputColumnFamiliesAsJson">OutputColumnFamiliesAsJson</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationBigtableOptionsOutputReference.property.readRowkeyAsString">ReadRowkeyAsString</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationBigtableOptionsOutputReference.property.internalValue">InternalValue</a></code> | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationBigtableOptions">BigqueryTableExternalDataConfigurationBigtableOptions</a></code> | *No description.* |
 
 ---
@@ -7821,70 +7821,70 @@ public BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamilyList Col
 ##### `ColumnFamilyInput`<sup>Optional</sup> <a name="ColumnFamilyInput" id="@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationBigtableOptionsOutputReference.property.columnFamilyInput"></a>
 
 ```csharp
-public object ColumnFamilyInput { get; }
+public IResolvable|BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamily[] ColumnFamilyInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamily">BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamily</a>[]
 
 ---
 
 ##### `IgnoreUnspecifiedColumnFamiliesInput`<sup>Optional</sup> <a name="IgnoreUnspecifiedColumnFamiliesInput" id="@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationBigtableOptionsOutputReference.property.ignoreUnspecifiedColumnFamiliesInput"></a>
 
 ```csharp
-public object IgnoreUnspecifiedColumnFamiliesInput { get; }
+public bool|IResolvable IgnoreUnspecifiedColumnFamiliesInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
 ##### `OutputColumnFamiliesAsJsonInput`<sup>Optional</sup> <a name="OutputColumnFamiliesAsJsonInput" id="@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationBigtableOptionsOutputReference.property.outputColumnFamiliesAsJsonInput"></a>
 
 ```csharp
-public object OutputColumnFamiliesAsJsonInput { get; }
+public bool|IResolvable OutputColumnFamiliesAsJsonInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
 ##### `ReadRowkeyAsStringInput`<sup>Optional</sup> <a name="ReadRowkeyAsStringInput" id="@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationBigtableOptionsOutputReference.property.readRowkeyAsStringInput"></a>
 
 ```csharp
-public object ReadRowkeyAsStringInput { get; }
+public bool|IResolvable ReadRowkeyAsStringInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
 ##### `IgnoreUnspecifiedColumnFamilies`<sup>Required</sup> <a name="IgnoreUnspecifiedColumnFamilies" id="@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationBigtableOptionsOutputReference.property.ignoreUnspecifiedColumnFamilies"></a>
 
 ```csharp
-public object IgnoreUnspecifiedColumnFamilies { get; }
+public bool|IResolvable IgnoreUnspecifiedColumnFamilies { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
 ##### `OutputColumnFamiliesAsJson`<sup>Required</sup> <a name="OutputColumnFamiliesAsJson" id="@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationBigtableOptionsOutputReference.property.outputColumnFamiliesAsJson"></a>
 
 ```csharp
-public object OutputColumnFamiliesAsJson { get; }
+public bool|IResolvable OutputColumnFamiliesAsJson { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
 ##### `ReadRowkeyAsString`<sup>Required</sup> <a name="ReadRowkeyAsString" id="@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationBigtableOptionsOutputReference.property.readRowkeyAsString"></a>
 
 ```csharp
-public object ReadRowkeyAsString { get; }
+public bool|IResolvable ReadRowkeyAsString { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -8144,14 +8144,14 @@ private void ResetSkipLeadingRows()
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationCsvOptionsOutputReference.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationCsvOptionsOutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationCsvOptionsOutputReference.property.allowJaggedRowsInput">AllowJaggedRowsInput</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationCsvOptionsOutputReference.property.allowQuotedNewlinesInput">AllowQuotedNewlinesInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationCsvOptionsOutputReference.property.allowJaggedRowsInput">AllowJaggedRowsInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationCsvOptionsOutputReference.property.allowQuotedNewlinesInput">AllowQuotedNewlinesInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationCsvOptionsOutputReference.property.encodingInput">EncodingInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationCsvOptionsOutputReference.property.fieldDelimiterInput">FieldDelimiterInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationCsvOptionsOutputReference.property.quoteInput">QuoteInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationCsvOptionsOutputReference.property.skipLeadingRowsInput">SkipLeadingRowsInput</a></code> | <code>double</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationCsvOptionsOutputReference.property.allowJaggedRows">AllowJaggedRows</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationCsvOptionsOutputReference.property.allowQuotedNewlines">AllowQuotedNewlines</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationCsvOptionsOutputReference.property.allowJaggedRows">AllowJaggedRows</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationCsvOptionsOutputReference.property.allowQuotedNewlines">AllowQuotedNewlines</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationCsvOptionsOutputReference.property.encoding">Encoding</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationCsvOptionsOutputReference.property.fieldDelimiter">FieldDelimiter</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationCsvOptionsOutputReference.property.quote">Quote</a></code> | <code>string</code> | *No description.* |
@@ -8187,20 +8187,20 @@ public string Fqn { get; }
 ##### `AllowJaggedRowsInput`<sup>Optional</sup> <a name="AllowJaggedRowsInput" id="@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationCsvOptionsOutputReference.property.allowJaggedRowsInput"></a>
 
 ```csharp
-public object AllowJaggedRowsInput { get; }
+public bool|IResolvable AllowJaggedRowsInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
 ##### `AllowQuotedNewlinesInput`<sup>Optional</sup> <a name="AllowQuotedNewlinesInput" id="@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationCsvOptionsOutputReference.property.allowQuotedNewlinesInput"></a>
 
 ```csharp
-public object AllowQuotedNewlinesInput { get; }
+public bool|IResolvable AllowQuotedNewlinesInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -8247,20 +8247,20 @@ public double SkipLeadingRowsInput { get; }
 ##### `AllowJaggedRows`<sup>Required</sup> <a name="AllowJaggedRows" id="@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationCsvOptionsOutputReference.property.allowJaggedRows"></a>
 
 ```csharp
-public object AllowJaggedRows { get; }
+public bool|IResolvable AllowJaggedRows { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
 ##### `AllowQuotedNewlines`<sup>Required</sup> <a name="AllowQuotedNewlines" id="@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationCsvOptionsOutputReference.property.allowQuotedNewlines"></a>
 
 ```csharp
-public object AllowQuotedNewlines { get; }
+public bool|IResolvable AllowQuotedNewlines { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -8854,10 +8854,10 @@ private void ResetSourceUriPrefix()
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationHivePartitioningOptionsOutputReference.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationHivePartitioningOptionsOutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationHivePartitioningOptionsOutputReference.property.modeInput">ModeInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationHivePartitioningOptionsOutputReference.property.requirePartitionFilterInput">RequirePartitionFilterInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationHivePartitioningOptionsOutputReference.property.requirePartitionFilterInput">RequirePartitionFilterInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationHivePartitioningOptionsOutputReference.property.sourceUriPrefixInput">SourceUriPrefixInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationHivePartitioningOptionsOutputReference.property.mode">Mode</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationHivePartitioningOptionsOutputReference.property.requirePartitionFilter">RequirePartitionFilter</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationHivePartitioningOptionsOutputReference.property.requirePartitionFilter">RequirePartitionFilter</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationHivePartitioningOptionsOutputReference.property.sourceUriPrefix">SourceUriPrefix</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationHivePartitioningOptionsOutputReference.property.internalValue">InternalValue</a></code> | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationHivePartitioningOptions">BigqueryTableExternalDataConfigurationHivePartitioningOptions</a></code> | *No description.* |
 
@@ -8900,10 +8900,10 @@ public string ModeInput { get; }
 ##### `RequirePartitionFilterInput`<sup>Optional</sup> <a name="RequirePartitionFilterInput" id="@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationHivePartitioningOptionsOutputReference.property.requirePartitionFilterInput"></a>
 
 ```csharp
-public object RequirePartitionFilterInput { get; }
+public bool|IResolvable RequirePartitionFilterInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -8930,10 +8930,10 @@ public string Mode { get; }
 ##### `RequirePartitionFilter`<sup>Required</sup> <a name="RequirePartitionFilter" id="@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationHivePartitioningOptionsOutputReference.property.requirePartitionFilter"></a>
 
 ```csharp
-public object RequirePartitionFilter { get; }
+public bool|IResolvable RequirePartitionFilter { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -9670,7 +9670,7 @@ private void ResetSourceFormat()
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationOutputReference.property.hivePartitioningOptions">HivePartitioningOptions</a></code> | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationHivePartitioningOptionsOutputReference">BigqueryTableExternalDataConfigurationHivePartitioningOptionsOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationOutputReference.property.jsonOptions">JsonOptions</a></code> | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationJsonOptionsOutputReference">BigqueryTableExternalDataConfigurationJsonOptionsOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationOutputReference.property.parquetOptions">ParquetOptions</a></code> | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationParquetOptionsOutputReference">BigqueryTableExternalDataConfigurationParquetOptionsOutputReference</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationOutputReference.property.autodetectInput">AutodetectInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationOutputReference.property.autodetectInput">AutodetectInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationOutputReference.property.avroOptionsInput">AvroOptionsInput</a></code> | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationAvroOptions">BigqueryTableExternalDataConfigurationAvroOptions</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationOutputReference.property.bigtableOptionsInput">BigtableOptionsInput</a></code> | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationBigtableOptions">BigqueryTableExternalDataConfigurationBigtableOptions</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationOutputReference.property.compressionInput">CompressionInput</a></code> | <code>string</code> | *No description.* |
@@ -9679,7 +9679,7 @@ private void ResetSourceFormat()
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationOutputReference.property.fileSetSpecTypeInput">FileSetSpecTypeInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationOutputReference.property.googleSheetsOptionsInput">GoogleSheetsOptionsInput</a></code> | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationGoogleSheetsOptions">BigqueryTableExternalDataConfigurationGoogleSheetsOptions</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationOutputReference.property.hivePartitioningOptionsInput">HivePartitioningOptionsInput</a></code> | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationHivePartitioningOptions">BigqueryTableExternalDataConfigurationHivePartitioningOptions</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationOutputReference.property.ignoreUnknownValuesInput">IgnoreUnknownValuesInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationOutputReference.property.ignoreUnknownValuesInput">IgnoreUnknownValuesInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationOutputReference.property.jsonExtensionInput">JsonExtensionInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationOutputReference.property.jsonOptionsInput">JsonOptionsInput</a></code> | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationJsonOptions">BigqueryTableExternalDataConfigurationJsonOptions</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationOutputReference.property.maxBadRecordsInput">MaxBadRecordsInput</a></code> | <code>double</code> | *No description.* |
@@ -9690,11 +9690,11 @@ private void ResetSourceFormat()
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationOutputReference.property.schemaInput">SchemaInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationOutputReference.property.sourceFormatInput">SourceFormatInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationOutputReference.property.sourceUrisInput">SourceUrisInput</a></code> | <code>string[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationOutputReference.property.autodetect">Autodetect</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationOutputReference.property.autodetect">Autodetect</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationOutputReference.property.compression">Compression</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationOutputReference.property.connectionId">ConnectionId</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationOutputReference.property.fileSetSpecType">FileSetSpecType</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationOutputReference.property.ignoreUnknownValues">IgnoreUnknownValues</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationOutputReference.property.ignoreUnknownValues">IgnoreUnknownValues</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationOutputReference.property.jsonExtension">JsonExtension</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationOutputReference.property.maxBadRecords">MaxBadRecords</a></code> | <code>double</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationOutputReference.property.metadataCacheMode">MetadataCacheMode</a></code> | <code>string</code> | *No description.* |
@@ -9804,10 +9804,10 @@ public BigqueryTableExternalDataConfigurationParquetOptionsOutputReference Parqu
 ##### `AutodetectInput`<sup>Optional</sup> <a name="AutodetectInput" id="@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationOutputReference.property.autodetectInput"></a>
 
 ```csharp
-public object AutodetectInput { get; }
+public bool|IResolvable AutodetectInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -9894,10 +9894,10 @@ public BigqueryTableExternalDataConfigurationHivePartitioningOptions HivePartiti
 ##### `IgnoreUnknownValuesInput`<sup>Optional</sup> <a name="IgnoreUnknownValuesInput" id="@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationOutputReference.property.ignoreUnknownValuesInput"></a>
 
 ```csharp
-public object IgnoreUnknownValuesInput { get; }
+public bool|IResolvable IgnoreUnknownValuesInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -10004,10 +10004,10 @@ public string[] SourceUrisInput { get; }
 ##### `Autodetect`<sup>Required</sup> <a name="Autodetect" id="@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationOutputReference.property.autodetect"></a>
 
 ```csharp
-public object Autodetect { get; }
+public bool|IResolvable Autodetect { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -10044,10 +10044,10 @@ public string FileSetSpecType { get; }
 ##### `IgnoreUnknownValues`<sup>Required</sup> <a name="IgnoreUnknownValues" id="@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationOutputReference.property.ignoreUnknownValues"></a>
 
 ```csharp
-public object IgnoreUnknownValues { get; }
+public bool|IResolvable IgnoreUnknownValues { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -10366,10 +10366,10 @@ private void ResetEnumAsString()
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationParquetOptionsOutputReference.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationParquetOptionsOutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationParquetOptionsOutputReference.property.enableListInferenceInput">EnableListInferenceInput</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationParquetOptionsOutputReference.property.enumAsStringInput">EnumAsStringInput</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationParquetOptionsOutputReference.property.enableListInference">EnableListInference</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationParquetOptionsOutputReference.property.enumAsString">EnumAsString</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationParquetOptionsOutputReference.property.enableListInferenceInput">EnableListInferenceInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationParquetOptionsOutputReference.property.enumAsStringInput">EnumAsStringInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationParquetOptionsOutputReference.property.enableListInference">EnableListInference</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationParquetOptionsOutputReference.property.enumAsString">EnumAsString</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationParquetOptionsOutputReference.property.internalValue">InternalValue</a></code> | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationParquetOptions">BigqueryTableExternalDataConfigurationParquetOptions</a></code> | *No description.* |
 
 ---
@@ -10401,40 +10401,40 @@ public string Fqn { get; }
 ##### `EnableListInferenceInput`<sup>Optional</sup> <a name="EnableListInferenceInput" id="@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationParquetOptionsOutputReference.property.enableListInferenceInput"></a>
 
 ```csharp
-public object EnableListInferenceInput { get; }
+public bool|IResolvable EnableListInferenceInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
 ##### `EnumAsStringInput`<sup>Optional</sup> <a name="EnumAsStringInput" id="@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationParquetOptionsOutputReference.property.enumAsStringInput"></a>
 
 ```csharp
-public object EnumAsStringInput { get; }
+public bool|IResolvable EnumAsStringInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
 ##### `EnableListInference`<sup>Required</sup> <a name="EnableListInference" id="@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationParquetOptionsOutputReference.property.enableListInference"></a>
 
 ```csharp
-public object EnableListInference { get; }
+public bool|IResolvable EnableListInference { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
 ##### `EnumAsString`<sup>Required</sup> <a name="EnumAsString" id="@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationParquetOptionsOutputReference.property.enumAsString"></a>
 
 ```csharp
-public object EnumAsString { get; }
+public bool|IResolvable EnumAsString { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -10680,12 +10680,12 @@ private void ResetRefreshIntervalMs()
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableMaterializedViewOutputReference.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableMaterializedViewOutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableMaterializedViewOutputReference.property.allowNonIncrementalDefinitionInput">AllowNonIncrementalDefinitionInput</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableMaterializedViewOutputReference.property.enableRefreshInput">EnableRefreshInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableMaterializedViewOutputReference.property.allowNonIncrementalDefinitionInput">AllowNonIncrementalDefinitionInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableMaterializedViewOutputReference.property.enableRefreshInput">EnableRefreshInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableMaterializedViewOutputReference.property.queryInput">QueryInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableMaterializedViewOutputReference.property.refreshIntervalMsInput">RefreshIntervalMsInput</a></code> | <code>double</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableMaterializedViewOutputReference.property.allowNonIncrementalDefinition">AllowNonIncrementalDefinition</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableMaterializedViewOutputReference.property.enableRefresh">EnableRefresh</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableMaterializedViewOutputReference.property.allowNonIncrementalDefinition">AllowNonIncrementalDefinition</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableMaterializedViewOutputReference.property.enableRefresh">EnableRefresh</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableMaterializedViewOutputReference.property.query">Query</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableMaterializedViewOutputReference.property.refreshIntervalMs">RefreshIntervalMs</a></code> | <code>double</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableMaterializedViewOutputReference.property.internalValue">InternalValue</a></code> | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableMaterializedView">BigqueryTableMaterializedView</a></code> | *No description.* |
@@ -10719,20 +10719,20 @@ public string Fqn { get; }
 ##### `AllowNonIncrementalDefinitionInput`<sup>Optional</sup> <a name="AllowNonIncrementalDefinitionInput" id="@cdktf/provider-google.bigqueryTable.BigqueryTableMaterializedViewOutputReference.property.allowNonIncrementalDefinitionInput"></a>
 
 ```csharp
-public object AllowNonIncrementalDefinitionInput { get; }
+public bool|IResolvable AllowNonIncrementalDefinitionInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
 ##### `EnableRefreshInput`<sup>Optional</sup> <a name="EnableRefreshInput" id="@cdktf/provider-google.bigqueryTable.BigqueryTableMaterializedViewOutputReference.property.enableRefreshInput"></a>
 
 ```csharp
-public object EnableRefreshInput { get; }
+public bool|IResolvable EnableRefreshInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -10759,20 +10759,20 @@ public double RefreshIntervalMsInput { get; }
 ##### `AllowNonIncrementalDefinition`<sup>Required</sup> <a name="AllowNonIncrementalDefinition" id="@cdktf/provider-google.bigqueryTable.BigqueryTableMaterializedViewOutputReference.property.allowNonIncrementalDefinition"></a>
 
 ```csharp
-public object AllowNonIncrementalDefinition { get; }
+public bool|IResolvable AllowNonIncrementalDefinition { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
 ##### `EnableRefresh`<sup>Required</sup> <a name="EnableRefresh" id="@cdktf/provider-google.bigqueryTable.BigqueryTableMaterializedViewOutputReference.property.enableRefresh"></a>
 
 ```csharp
-public object EnableRefresh { get; }
+public bool|IResolvable EnableRefresh { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -12113,7 +12113,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableTableConstraintsForeignKeysList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableTableConstraintsForeignKeysList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableTableConstraintsForeignKeysList.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableTableConstraintsForeignKeysList.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableTableConstraintsForeignKeys">BigqueryTableTableConstraintsForeignKeys</a>[]</code> | *No description.* |
 
 ---
 
@@ -12144,10 +12144,10 @@ public string Fqn { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.bigqueryTable.BigqueryTableTableConstraintsForeignKeysList.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|BigqueryTableTableConstraintsForeignKeys[] InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableTableConstraintsForeignKeys">BigqueryTableTableConstraintsForeignKeys</a>[]
 
 ---
 
@@ -12419,7 +12419,7 @@ private void ResetName()
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableTableConstraintsForeignKeysOutputReference.property.nameInput">NameInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableTableConstraintsForeignKeysOutputReference.property.referencedTableInput">ReferencedTableInput</a></code> | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableTableConstraintsForeignKeysReferencedTable">BigqueryTableTableConstraintsForeignKeysReferencedTable</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableTableConstraintsForeignKeysOutputReference.property.name">Name</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableTableConstraintsForeignKeysOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableTableConstraintsForeignKeysOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableTableConstraintsForeignKeys">BigqueryTableTableConstraintsForeignKeys</a></code> | *No description.* |
 
 ---
 
@@ -12510,10 +12510,10 @@ public string Name { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.bigqueryTable.BigqueryTableTableConstraintsForeignKeysOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|BigqueryTableTableConstraintsForeignKeys InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableTableConstraintsForeignKeys">BigqueryTableTableConstraintsForeignKeys</a>
 
 ---
 
@@ -13043,12 +13043,12 @@ Returns a reversible string representation.
 ##### `PutForeignKeys` <a name="PutForeignKeys" id="@cdktf/provider-google.bigqueryTable.BigqueryTableTableConstraintsOutputReference.putForeignKeys"></a>
 
 ```csharp
-private void PutForeignKeys(object Value)
+private void PutForeignKeys(IResolvable|BigqueryTableTableConstraintsForeignKeys[] Value)
 ```
 
 ###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-google.bigqueryTable.BigqueryTableTableConstraintsOutputReference.putForeignKeys.parameter.value"></a>
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableTableConstraintsForeignKeys">BigqueryTableTableConstraintsForeignKeys</a>[]
 
 ---
 
@@ -13085,7 +13085,7 @@ private void ResetPrimaryKey()
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableTableConstraintsOutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableTableConstraintsOutputReference.property.foreignKeys">ForeignKeys</a></code> | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableTableConstraintsForeignKeysList">BigqueryTableTableConstraintsForeignKeysList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableTableConstraintsOutputReference.property.primaryKey">PrimaryKey</a></code> | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableTableConstraintsPrimaryKeyOutputReference">BigqueryTableTableConstraintsPrimaryKeyOutputReference</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableTableConstraintsOutputReference.property.foreignKeysInput">ForeignKeysInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableTableConstraintsOutputReference.property.foreignKeysInput">ForeignKeysInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableTableConstraintsForeignKeys">BigqueryTableTableConstraintsForeignKeys</a>[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableTableConstraintsOutputReference.property.primaryKeyInput">PrimaryKeyInput</a></code> | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableTableConstraintsPrimaryKey">BigqueryTableTableConstraintsPrimaryKey</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableTableConstraintsOutputReference.property.internalValue">InternalValue</a></code> | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableTableConstraints">BigqueryTableTableConstraints</a></code> | *No description.* |
 
@@ -13138,10 +13138,10 @@ public BigqueryTableTableConstraintsPrimaryKeyOutputReference PrimaryKey { get; 
 ##### `ForeignKeysInput`<sup>Optional</sup> <a name="ForeignKeysInput" id="@cdktf/provider-google.bigqueryTable.BigqueryTableTableConstraintsOutputReference.property.foreignKeysInput"></a>
 
 ```csharp
-public object ForeignKeysInput { get; }
+public IResolvable|BigqueryTableTableConstraintsForeignKeys[] ForeignKeysInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableTableConstraintsForeignKeys">BigqueryTableTableConstraintsForeignKeys</a>[]
 
 ---
 
@@ -14014,11 +14014,11 @@ private void ResetRequirePartitionFilter()
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableTimePartitioningOutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableTimePartitioningOutputReference.property.expirationMsInput">ExpirationMsInput</a></code> | <code>double</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableTimePartitioningOutputReference.property.fieldInput">FieldInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableTimePartitioningOutputReference.property.requirePartitionFilterInput">RequirePartitionFilterInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableTimePartitioningOutputReference.property.requirePartitionFilterInput">RequirePartitionFilterInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableTimePartitioningOutputReference.property.typeInput">TypeInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableTimePartitioningOutputReference.property.expirationMs">ExpirationMs</a></code> | <code>double</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableTimePartitioningOutputReference.property.field">Field</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableTimePartitioningOutputReference.property.requirePartitionFilter">RequirePartitionFilter</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableTimePartitioningOutputReference.property.requirePartitionFilter">RequirePartitionFilter</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableTimePartitioningOutputReference.property.type">Type</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableTimePartitioningOutputReference.property.internalValue">InternalValue</a></code> | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableTimePartitioning">BigqueryTableTimePartitioning</a></code> | *No description.* |
 
@@ -14071,10 +14071,10 @@ public string FieldInput { get; }
 ##### `RequirePartitionFilterInput`<sup>Optional</sup> <a name="RequirePartitionFilterInput" id="@cdktf/provider-google.bigqueryTable.BigqueryTableTimePartitioningOutputReference.property.requirePartitionFilterInput"></a>
 
 ```csharp
-public object RequirePartitionFilterInput { get; }
+public bool|IResolvable RequirePartitionFilterInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -14111,10 +14111,10 @@ public string Field { get; }
 ##### `RequirePartitionFilter`<sup>Required</sup> <a name="RequirePartitionFilter" id="@cdktf/provider-google.bigqueryTable.BigqueryTableTimePartitioningOutputReference.property.requirePartitionFilter"></a>
 
 ```csharp
-public object RequirePartitionFilter { get; }
+public bool|IResolvable RequirePartitionFilter { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -14357,9 +14357,9 @@ private void ResetUseLegacySql()
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableViewOutputReference.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableViewOutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableViewOutputReference.property.queryInput">QueryInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableViewOutputReference.property.useLegacySqlInput">UseLegacySqlInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableViewOutputReference.property.useLegacySqlInput">UseLegacySqlInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableViewOutputReference.property.query">Query</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableViewOutputReference.property.useLegacySql">UseLegacySql</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableViewOutputReference.property.useLegacySql">UseLegacySql</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableViewOutputReference.property.internalValue">InternalValue</a></code> | <code><a href="#@cdktf/provider-google.bigqueryTable.BigqueryTableView">BigqueryTableView</a></code> | *No description.* |
 
 ---
@@ -14401,10 +14401,10 @@ public string QueryInput { get; }
 ##### `UseLegacySqlInput`<sup>Optional</sup> <a name="UseLegacySqlInput" id="@cdktf/provider-google.bigqueryTable.BigqueryTableViewOutputReference.property.useLegacySqlInput"></a>
 
 ```csharp
-public object UseLegacySqlInput { get; }
+public bool|IResolvable UseLegacySqlInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -14421,10 +14421,10 @@ public string Query { get; }
 ##### `UseLegacySql`<sup>Required</sup> <a name="UseLegacySql" id="@cdktf/provider-google.bigqueryTable.BigqueryTableViewOutputReference.property.useLegacySql"></a>
 
 ```csharp
-public object UseLegacySql { get; }
+public bool|IResolvable UseLegacySql { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 

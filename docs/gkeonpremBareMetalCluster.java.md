@@ -12,17 +12,13 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.5
 import com.hashicorp.cdktf.providers.google.gkeonprem_bare_metal_cluster.GkeonpremBareMetalCluster;
 
 GkeonpremBareMetalCluster.Builder.create(Construct scope, java.lang.String id)
-//  .connection(SSHProvisionerConnection)
-//  .connection(WinrmProvisionerConnection)
-//  .count(java.lang.Number)
-//  .count(TerraformCount)
+//  .connection(SSHProvisionerConnection|WinrmProvisionerConnection)
+//  .count(java.lang.Number|TerraformCount)
 //  .dependsOn(java.util.List<ITerraformDependable>)
 //  .forEach(ITerraformIterator)
 //  .lifecycle(TerraformResourceLifecycle)
 //  .provider(TerraformProvider)
-//  .provisioners(java.util.List<FileProvisioner)
-//  .provisioners(LocalExecProvisioner)
-//  .provisioners(RemoteExecProvisioner>)
+//  .provisioners(java.util.List<FileProvisioner|LocalExecProvisioner|RemoteExecProvisioner>)
     .adminClusterMembership(java.lang.String)
     .bareMetalVersion(java.lang.String)
     .controlPlane(GkeonpremBareMetalClusterControlPlane)
@@ -52,13 +48,13 @@ GkeonpremBareMetalCluster.Builder.create(Construct scope, java.lang.String id)
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalCluster.Initializer.parameter.scope">scope</a></code> | <code>software.constructs.Construct</code> | The scope in which to define this construct. |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalCluster.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | The scoped construct ID. |
-| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalCluster.Initializer.parameter.connection">connection</a></code> | <code>com.hashicorp.cdktf.SSHProvisionerConnection OR com.hashicorp.cdktf.WinrmProvisionerConnection</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalCluster.Initializer.parameter.count">count</a></code> | <code>java.lang.Number OR com.hashicorp.cdktf.TerraformCount</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalCluster.Initializer.parameter.connection">connection</a></code> | <code>com.hashicorp.cdktf.SSHProvisionerConnection\|com.hashicorp.cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalCluster.Initializer.parameter.count">count</a></code> | <code>java.lang.Number\|com.hashicorp.cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalCluster.Initializer.parameter.dependsOn">dependsOn</a></code> | <code>java.util.List<com.hashicorp.cdktf.ITerraformDependable></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalCluster.Initializer.parameter.forEach">forEach</a></code> | <code>com.hashicorp.cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalCluster.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalCluster.Initializer.parameter.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalCluster.Initializer.parameter.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalCluster.Initializer.parameter.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner\|com.hashicorp.cdktf.LocalExecProvisioner\|com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalCluster.Initializer.parameter.adminClusterMembership">adminClusterMembership</a></code> | <code>java.lang.String</code> | The Admin Cluster this Bare Metal User Cluster belongs to. |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalCluster.Initializer.parameter.bareMetalVersion">bareMetalVersion</a></code> | <code>java.lang.String</code> | A human readable description of this Bare Metal User Cluster. |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalCluster.Initializer.parameter.controlPlane">controlPlane</a></code> | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterControlPlane">GkeonpremBareMetalClusterControlPlane</a></code> | control_plane block. |
@@ -104,13 +100,13 @@ Must be unique amongst siblings in the same scope
 
 ##### `connection`<sup>Optional</sup> <a name="connection" id="@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalCluster.Initializer.parameter.connection"></a>
 
-- *Type:* com.hashicorp.cdktf.SSHProvisionerConnection OR com.hashicorp.cdktf.WinrmProvisionerConnection
+- *Type:* com.hashicorp.cdktf.SSHProvisionerConnection|com.hashicorp.cdktf.WinrmProvisionerConnection
 
 ---
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalCluster.Initializer.parameter.count"></a>
 
-- *Type:* java.lang.Number OR com.hashicorp.cdktf.TerraformCount
+- *Type:* java.lang.Number|com.hashicorp.cdktf.TerraformCount
 
 ---
 
@@ -140,7 +136,7 @@ Must be unique amongst siblings in the same scope
 
 ##### `provisioners`<sup>Optional</sup> <a name="provisioners" id="@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalCluster.Initializer.parameter.provisioners"></a>
 
-- *Type:* java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner>
+- *Type:* java.util.List<com.hashicorp.cdktf.FileProvisioner|com.hashicorp.cdktf.LocalExecProvisioner|com.hashicorp.cdktf.RemoteExecProvisioner>
 
 ---
 
@@ -631,7 +627,7 @@ public java.util.Map<java.lang.String, java.lang.String> getStringMapAttribute(j
 ##### `hasResourceMove` <a name="hasResourceMove" id="@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalCluster.hasResourceMove"></a>
 
 ```java
-public TerraformResourceMoveByTarget OR TerraformResourceMoveById hasResourceMove()
+public TerraformResourceMoveByTarget|TerraformResourceMoveById hasResourceMove()
 ```
 
 ##### `importFrom` <a name="importFrom" id="@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalCluster.importFrom"></a>
@@ -687,7 +683,7 @@ Full id of resource being moved from, e.g. "aws_s3_bucket.example".
 
 ```java
 public void moveTo(java.lang.String moveTarget)
-public void moveTo(java.lang.String moveTarget, java.lang.String OR java.lang.Number index)
+public void moveTo(java.lang.String moveTarget, java.lang.String|java.lang.Number index)
 ```
 
 Moves this resource to the target resource given by moveTarget.
@@ -702,7 +698,7 @@ The previously set user defined string set by .addMoveTarget() corresponding to 
 
 ###### `index`<sup>Optional</sup> <a name="index" id="@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalCluster.moveTo.parameter.index"></a>
 
-- *Type:* java.lang.String OR java.lang.Number
+- *Type:* java.lang.String|java.lang.Number
 
 Optional The index corresponding to the key the resource is to appear in the foreach of a resource to move to.
 
@@ -1102,13 +1098,13 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.5
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalCluster.property.terraformMetaArguments">terraformMetaArguments</a></code> | <code>java.util.Map<java.lang.String, java.lang.Object></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalCluster.property.terraformResourceType">terraformResourceType</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalCluster.property.terraformGeneratorMetadata">terraformGeneratorMetadata</a></code> | <code>com.hashicorp.cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalCluster.property.connection">connection</a></code> | <code>com.hashicorp.cdktf.SSHProvisionerConnection OR com.hashicorp.cdktf.WinrmProvisionerConnection</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalCluster.property.count">count</a></code> | <code>java.lang.Number OR com.hashicorp.cdktf.TerraformCount</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalCluster.property.connection">connection</a></code> | <code>com.hashicorp.cdktf.SSHProvisionerConnection\|com.hashicorp.cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalCluster.property.count">count</a></code> | <code>java.lang.Number\|com.hashicorp.cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalCluster.property.dependsOn">dependsOn</a></code> | <code>java.util.List<java.lang.String></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalCluster.property.forEach">forEach</a></code> | <code>com.hashicorp.cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalCluster.property.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalCluster.property.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalCluster.property.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalCluster.property.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner\|com.hashicorp.cdktf.LocalExecProvisioner\|com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalCluster.property.binaryAuthorization">binaryAuthorization</a></code> | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterBinaryAuthorizationOutputReference">GkeonpremBareMetalClusterBinaryAuthorizationOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalCluster.property.clusterOperations">clusterOperations</a></code> | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterClusterOperationsOutputReference">GkeonpremBareMetalClusterClusterOperationsOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalCluster.property.controlPlane">controlPlane</a></code> | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterControlPlaneOutputReference">GkeonpremBareMetalClusterControlPlaneOutputReference</a></code> | *No description.* |
@@ -1156,7 +1152,7 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.5
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalCluster.property.proxyInput">proxyInput</a></code> | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterProxy">GkeonpremBareMetalClusterProxy</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalCluster.property.securityConfigInput">securityConfigInput</a></code> | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterSecurityConfig">GkeonpremBareMetalClusterSecurityConfig</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalCluster.property.storageInput">storageInput</a></code> | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterStorage">GkeonpremBareMetalClusterStorage</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalCluster.property.timeoutsInput">timeoutsInput</a></code> | <code>com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterTimeouts">GkeonpremBareMetalClusterTimeouts</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalCluster.property.timeoutsInput">timeoutsInput</a></code> | <code>com.hashicorp.cdktf.IResolvable\|<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterTimeouts">GkeonpremBareMetalClusterTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalCluster.property.upgradePolicyInput">upgradePolicyInput</a></code> | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterUpgradePolicy">GkeonpremBareMetalClusterUpgradePolicy</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalCluster.property.adminClusterMembership">adminClusterMembership</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalCluster.property.annotations">annotations</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | *No description.* |
@@ -1244,20 +1240,20 @@ public TerraformProviderGeneratorMetadata getTerraformGeneratorMetadata();
 ##### `connection`<sup>Optional</sup> <a name="connection" id="@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalCluster.property.connection"></a>
 
 ```java
-public java.lang.Object getConnection();
+public SSHProvisionerConnection|WinrmProvisionerConnection getConnection();
 ```
 
-- *Type:* com.hashicorp.cdktf.SSHProvisionerConnection OR com.hashicorp.cdktf.WinrmProvisionerConnection
+- *Type:* com.hashicorp.cdktf.SSHProvisionerConnection|com.hashicorp.cdktf.WinrmProvisionerConnection
 
 ---
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalCluster.property.count"></a>
 
 ```java
-public java.lang.Object getCount();
+public java.lang.Number|TerraformCount getCount();
 ```
 
-- *Type:* java.lang.Number OR com.hashicorp.cdktf.TerraformCount
+- *Type:* java.lang.Number|com.hashicorp.cdktf.TerraformCount
 
 ---
 
@@ -1304,10 +1300,10 @@ public TerraformProvider getProvider();
 ##### `provisioners`<sup>Optional</sup> <a name="provisioners" id="@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalCluster.property.provisioners"></a>
 
 ```java
-public java.lang.Object getProvisioners();
+public java.util.List<FileProvisioner|LocalExecProvisioner|RemoteExecProvisioner> getProvisioners();
 ```
 
-- *Type:* java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner>
+- *Type:* java.util.List<com.hashicorp.cdktf.FileProvisioner|com.hashicorp.cdktf.LocalExecProvisioner|com.hashicorp.cdktf.RemoteExecProvisioner>
 
 ---
 
@@ -1784,10 +1780,10 @@ public GkeonpremBareMetalClusterStorage getStorageInput();
 ##### `timeoutsInput`<sup>Optional</sup> <a name="timeoutsInput" id="@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalCluster.property.timeoutsInput"></a>
 
 ```java
-public java.lang.Object getTimeoutsInput();
+public IResolvable|GkeonpremBareMetalClusterTimeouts getTimeoutsInput();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterTimeouts">GkeonpremBareMetalClusterTimeouts</a>
+- *Type:* com.hashicorp.cdktf.IResolvable|<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterTimeouts">GkeonpremBareMetalClusterTimeouts</a>
 
 ---
 
@@ -1943,8 +1939,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 import com.hashicorp.cdktf.providers.google.gkeonprem_bare_metal_cluster.GkeonpremBareMetalClusterClusterOperations;
 
 GkeonpremBareMetalClusterClusterOperations.builder()
-//  .enableApplicationLogs(java.lang.Boolean)
-//  .enableApplicationLogs(IResolvable)
+//  .enableApplicationLogs(java.lang.Boolean|IResolvable)
     .build();
 ```
 
@@ -1952,17 +1947,17 @@ GkeonpremBareMetalClusterClusterOperations.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterClusterOperations.property.enableApplicationLogs">enableApplicationLogs</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Whether collection of application logs/metrics should be enabled (in addition to system logs/metrics). |
+| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterClusterOperations.property.enableApplicationLogs">enableApplicationLogs</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Whether collection of application logs/metrics should be enabled (in addition to system logs/metrics). |
 
 ---
 
 ##### `enableApplicationLogs`<sup>Optional</sup> <a name="enableApplicationLogs" id="@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterClusterOperations.property.enableApplicationLogs"></a>
 
 ```java
-public java.lang.Object getEnableApplicationLogs();
+public java.lang.Boolean|IResolvable getEnableApplicationLogs();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 Whether collection of application logs/metrics should be enabled (in addition to system logs/metrics).
 
@@ -1978,17 +1973,13 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 import com.hashicorp.cdktf.providers.google.gkeonprem_bare_metal_cluster.GkeonpremBareMetalClusterConfig;
 
 GkeonpremBareMetalClusterConfig.builder()
-//  .connection(SSHProvisionerConnection)
-//  .connection(WinrmProvisionerConnection)
-//  .count(java.lang.Number)
-//  .count(TerraformCount)
+//  .connection(SSHProvisionerConnection|WinrmProvisionerConnection)
+//  .count(java.lang.Number|TerraformCount)
 //  .dependsOn(java.util.List<ITerraformDependable>)
 //  .forEach(ITerraformIterator)
 //  .lifecycle(TerraformResourceLifecycle)
 //  .provider(TerraformProvider)
-//  .provisioners(java.util.List<FileProvisioner)
-//  .provisioners(LocalExecProvisioner)
-//  .provisioners(RemoteExecProvisioner>)
+//  .provisioners(java.util.List<FileProvisioner|LocalExecProvisioner|RemoteExecProvisioner>)
     .adminClusterMembership(java.lang.String)
     .bareMetalVersion(java.lang.String)
     .controlPlane(GkeonpremBareMetalClusterControlPlane)
@@ -2018,13 +2009,13 @@ GkeonpremBareMetalClusterConfig.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterConfig.property.connection">connection</a></code> | <code>com.hashicorp.cdktf.SSHProvisionerConnection OR com.hashicorp.cdktf.WinrmProvisionerConnection</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterConfig.property.count">count</a></code> | <code>java.lang.Number OR com.hashicorp.cdktf.TerraformCount</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterConfig.property.connection">connection</a></code> | <code>com.hashicorp.cdktf.SSHProvisionerConnection\|com.hashicorp.cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterConfig.property.count">count</a></code> | <code>java.lang.Number\|com.hashicorp.cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterConfig.property.dependsOn">dependsOn</a></code> | <code>java.util.List<com.hashicorp.cdktf.ITerraformDependable></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterConfig.property.forEach">forEach</a></code> | <code>com.hashicorp.cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterConfig.property.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterConfig.property.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterConfig.property.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterConfig.property.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner\|com.hashicorp.cdktf.LocalExecProvisioner\|com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterConfig.property.adminClusterMembership">adminClusterMembership</a></code> | <code>java.lang.String</code> | The Admin Cluster this Bare Metal User Cluster belongs to. |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterConfig.property.bareMetalVersion">bareMetalVersion</a></code> | <code>java.lang.String</code> | A human readable description of this Bare Metal User Cluster. |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterConfig.property.controlPlane">controlPlane</a></code> | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterControlPlane">GkeonpremBareMetalClusterControlPlane</a></code> | control_plane block. |
@@ -2053,20 +2044,20 @@ GkeonpremBareMetalClusterConfig.builder()
 ##### `connection`<sup>Optional</sup> <a name="connection" id="@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterConfig.property.connection"></a>
 
 ```java
-public java.lang.Object getConnection();
+public SSHProvisionerConnection|WinrmProvisionerConnection getConnection();
 ```
 
-- *Type:* com.hashicorp.cdktf.SSHProvisionerConnection OR com.hashicorp.cdktf.WinrmProvisionerConnection
+- *Type:* com.hashicorp.cdktf.SSHProvisionerConnection|com.hashicorp.cdktf.WinrmProvisionerConnection
 
 ---
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterConfig.property.count"></a>
 
 ```java
-public java.lang.Object getCount();
+public java.lang.Number|TerraformCount getCount();
 ```
 
-- *Type:* java.lang.Number OR com.hashicorp.cdktf.TerraformCount
+- *Type:* java.lang.Number|com.hashicorp.cdktf.TerraformCount
 
 ---
 
@@ -2113,10 +2104,10 @@ public TerraformProvider getProvider();
 ##### `provisioners`<sup>Optional</sup> <a name="provisioners" id="@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterConfig.property.provisioners"></a>
 
 ```java
-public java.lang.Object getProvisioners();
+public java.util.List<FileProvisioner|LocalExecProvisioner|RemoteExecProvisioner> getProvisioners();
 ```
 
-- *Type:* java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner>
+- *Type:* java.util.List<com.hashicorp.cdktf.FileProvisioner|com.hashicorp.cdktf.LocalExecProvisioner|com.hashicorp.cdktf.RemoteExecProvisioner>
 
 ---
 
@@ -2449,8 +2440,7 @@ import com.hashicorp.cdktf.providers.google.gkeonprem_bare_metal_cluster.Gkeonpr
 
 GkeonpremBareMetalClusterControlPlane.builder()
     .controlPlaneNodePoolConfig(GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfig)
-//  .apiServerArgs(IResolvable)
-//  .apiServerArgs(java.util.List<GkeonpremBareMetalClusterControlPlaneApiServerArgs>)
+//  .apiServerArgs(IResolvable|java.util.List<GkeonpremBareMetalClusterControlPlaneApiServerArgs>)
     .build();
 ```
 
@@ -2459,7 +2449,7 @@ GkeonpremBareMetalClusterControlPlane.builder()
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterControlPlane.property.controlPlaneNodePoolConfig">controlPlaneNodePoolConfig</a></code> | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfig">GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfig</a></code> | control_plane_node_pool_config block. |
-| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterControlPlane.property.apiServerArgs">apiServerArgs</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterControlPlaneApiServerArgs">GkeonpremBareMetalClusterControlPlaneApiServerArgs</a>></code> | api_server_args block. |
+| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterControlPlane.property.apiServerArgs">apiServerArgs</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterControlPlaneApiServerArgs">GkeonpremBareMetalClusterControlPlaneApiServerArgs</a>></code> | api_server_args block. |
 
 ---
 
@@ -2480,10 +2470,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `apiServerArgs`<sup>Optional</sup> <a name="apiServerArgs" id="@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterControlPlane.property.apiServerArgs"></a>
 
 ```java
-public java.lang.Object getApiServerArgs();
+public IResolvable|java.util.List<GkeonpremBareMetalClusterControlPlaneApiServerArgs> getApiServerArgs();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterControlPlaneApiServerArgs">GkeonpremBareMetalClusterControlPlaneApiServerArgs</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterControlPlaneApiServerArgs">GkeonpremBareMetalClusterControlPlaneApiServerArgs</a>>
 
 api_server_args block.
 
@@ -2584,11 +2574,9 @@ import com.hashicorp.cdktf.providers.google.gkeonprem_bare_metal_cluster.Gkeonpr
 
 GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfigNodePoolConfig.builder()
 //  .labels(java.util.Map<java.lang.String, java.lang.String>)
-//  .nodeConfigs(IResolvable)
-//  .nodeConfigs(java.util.List<GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfigNodePoolConfigNodeConfigs>)
+//  .nodeConfigs(IResolvable|java.util.List<GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfigNodePoolConfigNodeConfigs>)
 //  .operatingSystem(java.lang.String)
-//  .taints(IResolvable)
-//  .taints(java.util.List<GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfigNodePoolConfigTaints>)
+//  .taints(IResolvable|java.util.List<GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfigNodePoolConfigTaints>)
     .build();
 ```
 
@@ -2597,9 +2585,9 @@ GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfigNodePoolConfig.bu
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfigNodePoolConfig.property.labels">labels</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | The map of Kubernetes labels (key/value pairs) to be applied to each node. |
-| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfigNodePoolConfig.property.nodeConfigs">nodeConfigs</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfigNodePoolConfigNodeConfigs">GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfigNodePoolConfigNodeConfigs</a>></code> | node_configs block. |
+| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfigNodePoolConfig.property.nodeConfigs">nodeConfigs</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfigNodePoolConfigNodeConfigs">GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfigNodePoolConfigNodeConfigs</a>></code> | node_configs block. |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfigNodePoolConfig.property.operatingSystem">operatingSystem</a></code> | <code>java.lang.String</code> | Specifies the nodes operating system (default: LINUX). |
-| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfigNodePoolConfig.property.taints">taints</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfigNodePoolConfigTaints">GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfigNodePoolConfigTaints</a>></code> | taints block. |
+| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfigNodePoolConfig.property.taints">taints</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfigNodePoolConfigTaints">GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfigNodePoolConfigTaints</a>></code> | taints block. |
 
 ---
 
@@ -2631,10 +2619,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `nodeConfigs`<sup>Optional</sup> <a name="nodeConfigs" id="@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfigNodePoolConfig.property.nodeConfigs"></a>
 
 ```java
-public java.lang.Object getNodeConfigs();
+public IResolvable|java.util.List<GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfigNodePoolConfigNodeConfigs> getNodeConfigs();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfigNodePoolConfigNodeConfigs">GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfigNodePoolConfigNodeConfigs</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfigNodePoolConfigNodeConfigs">GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfigNodePoolConfigNodeConfigs</a>>
 
 node_configs block.
 
@@ -2659,10 +2647,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `taints`<sup>Optional</sup> <a name="taints" id="@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfigNodePoolConfig.property.taints"></a>
 
 ```java
-public java.lang.Object getTaints();
+public IResolvable|java.util.List<GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfigNodePoolConfigTaints> getTaints();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfigNodePoolConfigTaints">GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfigNodePoolConfigTaints</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfigNodePoolConfigTaints">GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfigNodePoolConfigTaints</a>>
 
 taints block.
 
@@ -2915,11 +2903,9 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 import com.hashicorp.cdktf.providers.google.gkeonprem_bare_metal_cluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfig;
 
 GkeonpremBareMetalClusterLoadBalancerBgpLbConfig.builder()
-    .addressPools(IResolvable)
-    .addressPools(java.util.List<GkeonpremBareMetalClusterLoadBalancerBgpLbConfigAddressPools>)
+    .addressPools(IResolvable|java.util.List<GkeonpremBareMetalClusterLoadBalancerBgpLbConfigAddressPools>)
     .asn(java.lang.Number)
-    .bgpPeerConfigs(IResolvable)
-    .bgpPeerConfigs(java.util.List<GkeonpremBareMetalClusterLoadBalancerBgpLbConfigBgpPeerConfigs>)
+    .bgpPeerConfigs(IResolvable|java.util.List<GkeonpremBareMetalClusterLoadBalancerBgpLbConfigBgpPeerConfigs>)
 //  .loadBalancerNodePoolConfig(GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfig)
     .build();
 ```
@@ -2928,9 +2914,9 @@ GkeonpremBareMetalClusterLoadBalancerBgpLbConfig.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfig.property.addressPools">addressPools</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigAddressPools">GkeonpremBareMetalClusterLoadBalancerBgpLbConfigAddressPools</a>></code> | address_pools block. |
+| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfig.property.addressPools">addressPools</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigAddressPools">GkeonpremBareMetalClusterLoadBalancerBgpLbConfigAddressPools</a>></code> | address_pools block. |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfig.property.asn">asn</a></code> | <code>java.lang.Number</code> | BGP autonomous system number (ASN) of the cluster. This field can be updated after cluster creation. |
-| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfig.property.bgpPeerConfigs">bgpPeerConfigs</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigBgpPeerConfigs">GkeonpremBareMetalClusterLoadBalancerBgpLbConfigBgpPeerConfigs</a>></code> | bgp_peer_configs block. |
+| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfig.property.bgpPeerConfigs">bgpPeerConfigs</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigBgpPeerConfigs">GkeonpremBareMetalClusterLoadBalancerBgpLbConfigBgpPeerConfigs</a>></code> | bgp_peer_configs block. |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfig.property.loadBalancerNodePoolConfig">loadBalancerNodePoolConfig</a></code> | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfig">GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfig</a></code> | load_balancer_node_pool_config block. |
 
 ---
@@ -2938,10 +2924,10 @@ GkeonpremBareMetalClusterLoadBalancerBgpLbConfig.builder()
 ##### `addressPools`<sup>Required</sup> <a name="addressPools" id="@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfig.property.addressPools"></a>
 
 ```java
-public java.lang.Object getAddressPools();
+public IResolvable|java.util.List<GkeonpremBareMetalClusterLoadBalancerBgpLbConfigAddressPools> getAddressPools();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigAddressPools">GkeonpremBareMetalClusterLoadBalancerBgpLbConfigAddressPools</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigAddressPools">GkeonpremBareMetalClusterLoadBalancerBgpLbConfigAddressPools</a>>
 
 address_pools block.
 
@@ -2966,10 +2952,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `bgpPeerConfigs`<sup>Required</sup> <a name="bgpPeerConfigs" id="@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfig.property.bgpPeerConfigs"></a>
 
 ```java
-public java.lang.Object getBgpPeerConfigs();
+public IResolvable|java.util.List<GkeonpremBareMetalClusterLoadBalancerBgpLbConfigBgpPeerConfigs> getBgpPeerConfigs();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigBgpPeerConfigs">GkeonpremBareMetalClusterLoadBalancerBgpLbConfigBgpPeerConfigs</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigBgpPeerConfigs">GkeonpremBareMetalClusterLoadBalancerBgpLbConfigBgpPeerConfigs</a>>
 
 bgp_peer_configs block.
 
@@ -3001,10 +2987,8 @@ import com.hashicorp.cdktf.providers.google.gkeonprem_bare_metal_cluster.Gkeonpr
 GkeonpremBareMetalClusterLoadBalancerBgpLbConfigAddressPools.builder()
     .addresses(java.util.List<java.lang.String>)
     .pool(java.lang.String)
-//  .avoidBuggyIps(java.lang.Boolean)
-//  .avoidBuggyIps(IResolvable)
-//  .manualAssign(java.lang.Boolean)
-//  .manualAssign(IResolvable)
+//  .avoidBuggyIps(java.lang.Boolean|IResolvable)
+//  .manualAssign(java.lang.Boolean|IResolvable)
     .build();
 ```
 
@@ -3014,8 +2998,8 @@ GkeonpremBareMetalClusterLoadBalancerBgpLbConfigAddressPools.builder()
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigAddressPools.property.addresses">addresses</a></code> | <code>java.util.List<java.lang.String></code> | The addresses that are part of this pool. |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigAddressPools.property.pool">pool</a></code> | <code>java.lang.String</code> | The name of the address pool. |
-| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigAddressPools.property.avoidBuggyIps">avoidBuggyIps</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | If true, avoid using IPs ending in .0 or .255. This avoids buggy consumer devices mistakenly dropping IPv4 traffic for those special IP addresses. |
-| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigAddressPools.property.manualAssign">manualAssign</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | If true, prevent IP addresses from being automatically assigned. |
+| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigAddressPools.property.avoidBuggyIps">avoidBuggyIps</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | If true, avoid using IPs ending in .0 or .255. This avoids buggy consumer devices mistakenly dropping IPv4 traffic for those special IP addresses. |
+| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigAddressPools.property.manualAssign">manualAssign</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | If true, prevent IP addresses from being automatically assigned. |
 
 ---
 
@@ -3052,10 +3036,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `avoidBuggyIps`<sup>Optional</sup> <a name="avoidBuggyIps" id="@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigAddressPools.property.avoidBuggyIps"></a>
 
 ```java
-public java.lang.Object getAvoidBuggyIps();
+public java.lang.Boolean|IResolvable getAvoidBuggyIps();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 If true, avoid using IPs ending in .0 or .255. This avoids buggy consumer devices mistakenly dropping IPv4 traffic for those special IP addresses.
 
@@ -3066,10 +3050,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `manualAssign`<sup>Optional</sup> <a name="manualAssign" id="@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigAddressPools.property.manualAssign"></a>
 
 ```java
-public java.lang.Object getManualAssign();
+public java.lang.Boolean|IResolvable getManualAssign();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 If true, prevent IP addresses from being automatically assigned.
 
@@ -3191,11 +3175,9 @@ import com.hashicorp.cdktf.providers.google.gkeonprem_bare_metal_cluster.Gkeonpr
 GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfig.builder()
 //  .kubeletConfig(GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigKubeletConfig)
 //  .labels(java.util.Map<java.lang.String, java.lang.String>)
-//  .nodeConfigs(IResolvable)
-//  .nodeConfigs(java.util.List<GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigNodeConfigs>)
+//  .nodeConfigs(IResolvable|java.util.List<GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigNodeConfigs>)
 //  .operatingSystem(java.lang.String)
-//  .taints(IResolvable)
-//  .taints(java.util.List<GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigTaints>)
+//  .taints(IResolvable|java.util.List<GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigTaints>)
     .build();
 ```
 
@@ -3205,9 +3187,9 @@ GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePo
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfig.property.kubeletConfig">kubeletConfig</a></code> | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigKubeletConfig">GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigKubeletConfig</a></code> | kubelet_config block. |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfig.property.labels">labels</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | The map of Kubernetes labels (key/value pairs) to be applied to each node. |
-| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfig.property.nodeConfigs">nodeConfigs</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigNodeConfigs">GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigNodeConfigs</a>></code> | node_configs block. |
+| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfig.property.nodeConfigs">nodeConfigs</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigNodeConfigs">GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigNodeConfigs</a>></code> | node_configs block. |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfig.property.operatingSystem">operatingSystem</a></code> | <code>java.lang.String</code> | Specifies the nodes operating system (default: LINUX). |
-| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfig.property.taints">taints</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigTaints">GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigTaints</a>></code> | taints block. |
+| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfig.property.taints">taints</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigTaints">GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigTaints</a>></code> | taints block. |
 
 ---
 
@@ -3253,10 +3235,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `nodeConfigs`<sup>Optional</sup> <a name="nodeConfigs" id="@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfig.property.nodeConfigs"></a>
 
 ```java
-public java.lang.Object getNodeConfigs();
+public IResolvable|java.util.List<GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigNodeConfigs> getNodeConfigs();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigNodeConfigs">GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigNodeConfigs</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigNodeConfigs">GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigNodeConfigs</a>>
 
 node_configs block.
 
@@ -3281,10 +3263,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `taints`<sup>Optional</sup> <a name="taints" id="@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfig.property.taints"></a>
 
 ```java
-public java.lang.Object getTaints();
+public IResolvable|java.util.List<GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigTaints> getTaints();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigTaints">GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigTaints</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigTaints">GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigTaints</a>>
 
 taints block.
 
@@ -3302,8 +3284,7 @@ import com.hashicorp.cdktf.providers.google.gkeonprem_bare_metal_cluster.Gkeonpr
 GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigKubeletConfig.builder()
 //  .registryBurst(java.lang.Number)
 //  .registryPullQps(java.lang.Number)
-//  .serializeImagePullsDisabled(java.lang.Boolean)
-//  .serializeImagePullsDisabled(IResolvable)
+//  .serializeImagePullsDisabled(java.lang.Boolean|IResolvable)
     .build();
 ```
 
@@ -3313,7 +3294,7 @@ GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePo
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigKubeletConfig.property.registryBurst">registryBurst</a></code> | <code>java.lang.Number</code> | The maximum size of bursty pulls, temporarily allows pulls to burst to this number, while still not exceeding registry_pull_qps. |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigKubeletConfig.property.registryPullQps">registryPullQps</a></code> | <code>java.lang.Number</code> | The limit of registry pulls per second. |
-| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigKubeletConfig.property.serializeImagePullsDisabled">serializeImagePullsDisabled</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Prevents the Kubelet from pulling multiple images at a time. |
+| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigKubeletConfig.property.serializeImagePullsDisabled">serializeImagePullsDisabled</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Prevents the Kubelet from pulling multiple images at a time. |
 
 ---
 
@@ -3358,10 +3339,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `serializeImagePullsDisabled`<sup>Optional</sup> <a name="serializeImagePullsDisabled" id="@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigKubeletConfig.property.serializeImagePullsDisabled"></a>
 
 ```java
-public java.lang.Object getSerializeImagePullsDisabled();
+public java.lang.Boolean|IResolvable getSerializeImagePullsDisabled();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 Prevents the Kubelet from pulling multiple images at a time.
 
@@ -3509,8 +3490,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 import com.hashicorp.cdktf.providers.google.gkeonprem_bare_metal_cluster.GkeonpremBareMetalClusterLoadBalancerManualLbConfig;
 
 GkeonpremBareMetalClusterLoadBalancerManualLbConfig.builder()
-    .enabled(java.lang.Boolean)
-    .enabled(IResolvable)
+    .enabled(java.lang.Boolean|IResolvable)
     .build();
 ```
 
@@ -3518,17 +3498,17 @@ GkeonpremBareMetalClusterLoadBalancerManualLbConfig.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerManualLbConfig.property.enabled">enabled</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Whether manual load balancing is enabled. |
+| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerManualLbConfig.property.enabled">enabled</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Whether manual load balancing is enabled. |
 
 ---
 
 ##### `enabled`<sup>Required</sup> <a name="enabled" id="@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerManualLbConfig.property.enabled"></a>
 
 ```java
-public java.lang.Object getEnabled();
+public java.lang.Boolean|IResolvable getEnabled();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 Whether manual load balancing is enabled.
 
@@ -3544,8 +3524,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 import com.hashicorp.cdktf.providers.google.gkeonprem_bare_metal_cluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfig;
 
 GkeonpremBareMetalClusterLoadBalancerMetalLbConfig.builder()
-    .addressPools(IResolvable)
-    .addressPools(java.util.List<GkeonpremBareMetalClusterLoadBalancerMetalLbConfigAddressPools>)
+    .addressPools(IResolvable|java.util.List<GkeonpremBareMetalClusterLoadBalancerMetalLbConfigAddressPools>)
 //  .loadBalancerNodePoolConfig(GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfig)
     .build();
 ```
@@ -3554,7 +3533,7 @@ GkeonpremBareMetalClusterLoadBalancerMetalLbConfig.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfig.property.addressPools">addressPools</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigAddressPools">GkeonpremBareMetalClusterLoadBalancerMetalLbConfigAddressPools</a>></code> | address_pools block. |
+| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfig.property.addressPools">addressPools</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigAddressPools">GkeonpremBareMetalClusterLoadBalancerMetalLbConfigAddressPools</a>></code> | address_pools block. |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfig.property.loadBalancerNodePoolConfig">loadBalancerNodePoolConfig</a></code> | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfig">GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfig</a></code> | load_balancer_node_pool_config block. |
 
 ---
@@ -3562,10 +3541,10 @@ GkeonpremBareMetalClusterLoadBalancerMetalLbConfig.builder()
 ##### `addressPools`<sup>Required</sup> <a name="addressPools" id="@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfig.property.addressPools"></a>
 
 ```java
-public java.lang.Object getAddressPools();
+public IResolvable|java.util.List<GkeonpremBareMetalClusterLoadBalancerMetalLbConfigAddressPools> getAddressPools();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigAddressPools">GkeonpremBareMetalClusterLoadBalancerMetalLbConfigAddressPools</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigAddressPools">GkeonpremBareMetalClusterLoadBalancerMetalLbConfigAddressPools</a>>
 
 address_pools block.
 
@@ -3597,10 +3576,8 @@ import com.hashicorp.cdktf.providers.google.gkeonprem_bare_metal_cluster.Gkeonpr
 GkeonpremBareMetalClusterLoadBalancerMetalLbConfigAddressPools.builder()
     .addresses(java.util.List<java.lang.String>)
     .pool(java.lang.String)
-//  .avoidBuggyIps(java.lang.Boolean)
-//  .avoidBuggyIps(IResolvable)
-//  .manualAssign(java.lang.Boolean)
-//  .manualAssign(IResolvable)
+//  .avoidBuggyIps(java.lang.Boolean|IResolvable)
+//  .manualAssign(java.lang.Boolean|IResolvable)
     .build();
 ```
 
@@ -3610,8 +3587,8 @@ GkeonpremBareMetalClusterLoadBalancerMetalLbConfigAddressPools.builder()
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigAddressPools.property.addresses">addresses</a></code> | <code>java.util.List<java.lang.String></code> | The addresses that are part of this pool. |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigAddressPools.property.pool">pool</a></code> | <code>java.lang.String</code> | The name of the address pool. |
-| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigAddressPools.property.avoidBuggyIps">avoidBuggyIps</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | If true, avoid using IPs ending in .0 or .255. This avoids buggy consumer devices mistakenly dropping IPv4 traffic for those special IP addresses. |
-| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigAddressPools.property.manualAssign">manualAssign</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | If true, prevent IP addresses from being automatically assigned. |
+| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigAddressPools.property.avoidBuggyIps">avoidBuggyIps</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | If true, avoid using IPs ending in .0 or .255. This avoids buggy consumer devices mistakenly dropping IPv4 traffic for those special IP addresses. |
+| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigAddressPools.property.manualAssign">manualAssign</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | If true, prevent IP addresses from being automatically assigned. |
 
 ---
 
@@ -3648,10 +3625,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `avoidBuggyIps`<sup>Optional</sup> <a name="avoidBuggyIps" id="@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigAddressPools.property.avoidBuggyIps"></a>
 
 ```java
-public java.lang.Object getAvoidBuggyIps();
+public java.lang.Boolean|IResolvable getAvoidBuggyIps();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 If true, avoid using IPs ending in .0 or .255. This avoids buggy consumer devices mistakenly dropping IPv4 traffic for those special IP addresses.
 
@@ -3662,10 +3639,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `manualAssign`<sup>Optional</sup> <a name="manualAssign" id="@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigAddressPools.property.manualAssign"></a>
 
 ```java
-public java.lang.Object getManualAssign();
+public java.lang.Boolean|IResolvable getManualAssign();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 If true, prevent IP addresses from being automatically assigned.
 
@@ -3716,11 +3693,9 @@ import com.hashicorp.cdktf.providers.google.gkeonprem_bare_metal_cluster.Gkeonpr
 
 GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNodePoolConfig.builder()
 //  .labels(java.util.Map<java.lang.String, java.lang.String>)
-//  .nodeConfigs(IResolvable)
-//  .nodeConfigs(java.util.List<GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNodePoolConfigNodeConfigs>)
+//  .nodeConfigs(IResolvable|java.util.List<GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNodePoolConfigNodeConfigs>)
 //  .operatingSystem(java.lang.String)
-//  .taints(IResolvable)
-//  .taints(java.util.List<GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNodePoolConfigTaints>)
+//  .taints(IResolvable|java.util.List<GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNodePoolConfigTaints>)
     .build();
 ```
 
@@ -3729,9 +3704,9 @@ GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNode
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNodePoolConfig.property.labels">labels</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | The map of Kubernetes labels (key/value pairs) to be applied to each node. |
-| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNodePoolConfig.property.nodeConfigs">nodeConfigs</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNodePoolConfigNodeConfigs">GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNodePoolConfigNodeConfigs</a>></code> | node_configs block. |
+| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNodePoolConfig.property.nodeConfigs">nodeConfigs</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNodePoolConfigNodeConfigs">GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNodePoolConfigNodeConfigs</a>></code> | node_configs block. |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNodePoolConfig.property.operatingSystem">operatingSystem</a></code> | <code>java.lang.String</code> | Specifies the nodes operating system (default: LINUX). |
-| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNodePoolConfig.property.taints">taints</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNodePoolConfigTaints">GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNodePoolConfigTaints</a>></code> | taints block. |
+| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNodePoolConfig.property.taints">taints</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNodePoolConfigTaints">GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNodePoolConfigTaints</a>></code> | taints block. |
 
 ---
 
@@ -3763,10 +3738,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `nodeConfigs`<sup>Optional</sup> <a name="nodeConfigs" id="@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNodePoolConfig.property.nodeConfigs"></a>
 
 ```java
-public java.lang.Object getNodeConfigs();
+public IResolvable|java.util.List<GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNodePoolConfigNodeConfigs> getNodeConfigs();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNodePoolConfigNodeConfigs">GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNodePoolConfigNodeConfigs</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNodePoolConfigNodeConfigs">GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNodePoolConfigNodeConfigs</a>>
 
 node_configs block.
 
@@ -3791,10 +3766,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `taints`<sup>Optional</sup> <a name="taints" id="@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNodePoolConfig.property.taints"></a>
 
 ```java
-public java.lang.Object getTaints();
+public IResolvable|java.util.List<GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNodePoolConfigTaints> getTaints();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNodePoolConfigTaints">GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNodePoolConfigTaints</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNodePoolConfigTaints">GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNodePoolConfigTaints</a>>
 
 taints block.
 
@@ -4059,8 +4034,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 import com.hashicorp.cdktf.providers.google.gkeonprem_bare_metal_cluster.GkeonpremBareMetalClusterNetworkConfig;
 
 GkeonpremBareMetalClusterNetworkConfig.builder()
-//  .advancedNetworking(java.lang.Boolean)
-//  .advancedNetworking(IResolvable)
+//  .advancedNetworking(java.lang.Boolean|IResolvable)
 //  .islandModeCidr(GkeonpremBareMetalClusterNetworkConfigIslandModeCidr)
 //  .multipleNetworkInterfacesConfig(GkeonpremBareMetalClusterNetworkConfigMultipleNetworkInterfacesConfig)
 //  .srIovConfig(GkeonpremBareMetalClusterNetworkConfigSrIovConfig)
@@ -4071,7 +4045,7 @@ GkeonpremBareMetalClusterNetworkConfig.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterNetworkConfig.property.advancedNetworking">advancedNetworking</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Enables the use of advanced Anthos networking features, such as Bundled Load Balancing with BGP or the egress NAT gateway. |
+| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterNetworkConfig.property.advancedNetworking">advancedNetworking</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Enables the use of advanced Anthos networking features, such as Bundled Load Balancing with BGP or the egress NAT gateway. |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterNetworkConfig.property.islandModeCidr">islandModeCidr</a></code> | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterNetworkConfigIslandModeCidr">GkeonpremBareMetalClusterNetworkConfigIslandModeCidr</a></code> | island_mode_cidr block. |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterNetworkConfig.property.multipleNetworkInterfacesConfig">multipleNetworkInterfacesConfig</a></code> | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterNetworkConfigMultipleNetworkInterfacesConfig">GkeonpremBareMetalClusterNetworkConfigMultipleNetworkInterfacesConfig</a></code> | multiple_network_interfaces_config block. |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterNetworkConfig.property.srIovConfig">srIovConfig</a></code> | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterNetworkConfigSrIovConfig">GkeonpremBareMetalClusterNetworkConfigSrIovConfig</a></code> | sr_iov_config block. |
@@ -4081,10 +4055,10 @@ GkeonpremBareMetalClusterNetworkConfig.builder()
 ##### `advancedNetworking`<sup>Optional</sup> <a name="advancedNetworking" id="@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterNetworkConfig.property.advancedNetworking"></a>
 
 ```java
-public java.lang.Object getAdvancedNetworking();
+public java.lang.Boolean|IResolvable getAdvancedNetworking();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 Enables the use of advanced Anthos networking features, such as Bundled Load Balancing with BGP or the egress NAT gateway.
 
@@ -4199,8 +4173,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 import com.hashicorp.cdktf.providers.google.gkeonprem_bare_metal_cluster.GkeonpremBareMetalClusterNetworkConfigMultipleNetworkInterfacesConfig;
 
 GkeonpremBareMetalClusterNetworkConfigMultipleNetworkInterfacesConfig.builder()
-//  .enabled(java.lang.Boolean)
-//  .enabled(IResolvable)
+//  .enabled(java.lang.Boolean|IResolvable)
     .build();
 ```
 
@@ -4208,17 +4181,17 @@ GkeonpremBareMetalClusterNetworkConfigMultipleNetworkInterfacesConfig.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterNetworkConfigMultipleNetworkInterfacesConfig.property.enabled">enabled</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Whether to enable multiple network interfaces for your pods. When set network_config.advanced_networking is automatically set to true. |
+| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterNetworkConfigMultipleNetworkInterfacesConfig.property.enabled">enabled</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Whether to enable multiple network interfaces for your pods. When set network_config.advanced_networking is automatically set to true. |
 
 ---
 
 ##### `enabled`<sup>Optional</sup> <a name="enabled" id="@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterNetworkConfigMultipleNetworkInterfacesConfig.property.enabled"></a>
 
 ```java
-public java.lang.Object getEnabled();
+public java.lang.Boolean|IResolvable getEnabled();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 Whether to enable multiple network interfaces for your pods. When set network_config.advanced_networking is automatically set to true.
 
@@ -4234,8 +4207,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 import com.hashicorp.cdktf.providers.google.gkeonprem_bare_metal_cluster.GkeonpremBareMetalClusterNetworkConfigSrIovConfig;
 
 GkeonpremBareMetalClusterNetworkConfigSrIovConfig.builder()
-//  .enabled(java.lang.Boolean)
-//  .enabled(IResolvable)
+//  .enabled(java.lang.Boolean|IResolvable)
     .build();
 ```
 
@@ -4243,17 +4215,17 @@ GkeonpremBareMetalClusterNetworkConfigSrIovConfig.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterNetworkConfigSrIovConfig.property.enabled">enabled</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Whether to install the SR-IOV operator. |
+| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterNetworkConfigSrIovConfig.property.enabled">enabled</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Whether to install the SR-IOV operator. |
 
 ---
 
 ##### `enabled`<sup>Optional</sup> <a name="enabled" id="@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterNetworkConfigSrIovConfig.property.enabled"></a>
 
 ```java
-public java.lang.Object getEnabled();
+public java.lang.Boolean|IResolvable getEnabled();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 Whether to install the SR-IOV operator.
 
@@ -4358,8 +4330,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 import com.hashicorp.cdktf.providers.google.gkeonprem_bare_metal_cluster.GkeonpremBareMetalClusterOsEnvironmentConfig;
 
 GkeonpremBareMetalClusterOsEnvironmentConfig.builder()
-    .packageRepoExcluded(java.lang.Boolean)
-    .packageRepoExcluded(IResolvable)
+    .packageRepoExcluded(java.lang.Boolean|IResolvable)
     .build();
 ```
 
@@ -4367,17 +4338,17 @@ GkeonpremBareMetalClusterOsEnvironmentConfig.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterOsEnvironmentConfig.property.packageRepoExcluded">packageRepoExcluded</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Whether the package repo should not be included when initializing bare metal machines. |
+| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterOsEnvironmentConfig.property.packageRepoExcluded">packageRepoExcluded</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Whether the package repo should not be included when initializing bare metal machines. |
 
 ---
 
 ##### `packageRepoExcluded`<sup>Required</sup> <a name="packageRepoExcluded" id="@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterOsEnvironmentConfig.property.packageRepoExcluded"></a>
 
 ```java
-public java.lang.Object getPackageRepoExcluded();
+public java.lang.Boolean|IResolvable getPackageRepoExcluded();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 Whether the package repo should not be included when initializing bare metal machines.
 
@@ -4481,8 +4452,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 import com.hashicorp.cdktf.providers.google.gkeonprem_bare_metal_cluster.GkeonpremBareMetalClusterSecurityConfigAuthorization;
 
 GkeonpremBareMetalClusterSecurityConfigAuthorization.builder()
-    .adminUsers(IResolvable)
-    .adminUsers(java.util.List<GkeonpremBareMetalClusterSecurityConfigAuthorizationAdminUsers>)
+    .adminUsers(IResolvable|java.util.List<GkeonpremBareMetalClusterSecurityConfigAuthorizationAdminUsers>)
     .build();
 ```
 
@@ -4490,17 +4460,17 @@ GkeonpremBareMetalClusterSecurityConfigAuthorization.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterSecurityConfigAuthorization.property.adminUsers">adminUsers</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterSecurityConfigAuthorizationAdminUsers">GkeonpremBareMetalClusterSecurityConfigAuthorizationAdminUsers</a>></code> | admin_users block. |
+| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterSecurityConfigAuthorization.property.adminUsers">adminUsers</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterSecurityConfigAuthorizationAdminUsers">GkeonpremBareMetalClusterSecurityConfigAuthorizationAdminUsers</a>></code> | admin_users block. |
 
 ---
 
 ##### `adminUsers`<sup>Required</sup> <a name="adminUsers" id="@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterSecurityConfigAuthorization.property.adminUsers"></a>
 
 ```java
-public java.lang.Object getAdminUsers();
+public IResolvable|java.util.List<GkeonpremBareMetalClusterSecurityConfigAuthorizationAdminUsers> getAdminUsers();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterSecurityConfigAuthorizationAdminUsers">GkeonpremBareMetalClusterSecurityConfigAuthorizationAdminUsers</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterSecurityConfigAuthorizationAdminUsers">GkeonpremBareMetalClusterSecurityConfigAuthorizationAdminUsers</a>>
 
 admin_users block.
 
@@ -5393,8 +5363,8 @@ public void resetEnableApplicationLogs()
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterClusterOperationsOutputReference.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterClusterOperationsOutputReference.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterClusterOperationsOutputReference.property.enableApplicationLogsInput">enableApplicationLogsInput</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterClusterOperationsOutputReference.property.enableApplicationLogs">enableApplicationLogs</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterClusterOperationsOutputReference.property.enableApplicationLogsInput">enableApplicationLogsInput</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterClusterOperationsOutputReference.property.enableApplicationLogs">enableApplicationLogs</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterClusterOperationsOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterClusterOperations">GkeonpremBareMetalClusterClusterOperations</a></code> | *No description.* |
 
 ---
@@ -5426,20 +5396,20 @@ public java.lang.String getFqn();
 ##### `enableApplicationLogsInput`<sup>Optional</sup> <a name="enableApplicationLogsInput" id="@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterClusterOperationsOutputReference.property.enableApplicationLogsInput"></a>
 
 ```java
-public java.lang.Object getEnableApplicationLogsInput();
+public java.lang.Boolean|IResolvable getEnableApplicationLogsInput();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
 ##### `enableApplicationLogs`<sup>Required</sup> <a name="enableApplicationLogs" id="@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterClusterOperationsOutputReference.property.enableApplicationLogs"></a>
 
 ```java
-public java.lang.Object getEnableApplicationLogs();
+public java.lang.Boolean|IResolvable getEnableApplicationLogs();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
@@ -5575,7 +5545,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterControlPlaneApiServerArgsList.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterControlPlaneApiServerArgsList.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterControlPlaneApiServerArgsList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterControlPlaneApiServerArgs">GkeonpremBareMetalClusterControlPlaneApiServerArgs</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterControlPlaneApiServerArgsList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterControlPlaneApiServerArgs">GkeonpremBareMetalClusterControlPlaneApiServerArgs</a>></code> | *No description.* |
 
 ---
 
@@ -5606,10 +5576,10 @@ public java.lang.String getFqn();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterControlPlaneApiServerArgsList.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|java.util.List<GkeonpremBareMetalClusterControlPlaneApiServerArgs> getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterControlPlaneApiServerArgs">GkeonpremBareMetalClusterControlPlaneApiServerArgs</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterControlPlaneApiServerArgs">GkeonpremBareMetalClusterControlPlaneApiServerArgs</a>>
 
 ---
 
@@ -5846,7 +5816,7 @@ Returns a reversible string representation.
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterControlPlaneApiServerArgsOutputReference.property.valueInput">valueInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterControlPlaneApiServerArgsOutputReference.property.argument">argument</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterControlPlaneApiServerArgsOutputReference.property.value">value</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterControlPlaneApiServerArgsOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterControlPlaneApiServerArgs">GkeonpremBareMetalClusterControlPlaneApiServerArgs</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterControlPlaneApiServerArgsOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterControlPlaneApiServerArgs">GkeonpremBareMetalClusterControlPlaneApiServerArgs</a></code> | *No description.* |
 
 ---
 
@@ -5917,10 +5887,10 @@ public java.lang.String getValue();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterControlPlaneApiServerArgsOutputReference.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|GkeonpremBareMetalClusterControlPlaneApiServerArgs getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterControlPlaneApiServerArgs">GkeonpremBareMetalClusterControlPlaneApiServerArgs</a>
+- *Type:* com.hashicorp.cdktf.IResolvable|<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterControlPlaneApiServerArgs">GkeonpremBareMetalClusterControlPlaneApiServerArgs</a>
 
 ---
 
@@ -6046,7 +6016,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfigNodePoolConfigNodeConfigsList.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfigNodePoolConfigNodeConfigsList.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfigNodePoolConfigNodeConfigsList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfigNodePoolConfigNodeConfigs">GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfigNodePoolConfigNodeConfigs</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfigNodePoolConfigNodeConfigsList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfigNodePoolConfigNodeConfigs">GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfigNodePoolConfigNodeConfigs</a>></code> | *No description.* |
 
 ---
 
@@ -6077,10 +6047,10 @@ public java.lang.String getFqn();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfigNodePoolConfigNodeConfigsList.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|java.util.List<GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfigNodePoolConfigNodeConfigs> getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfigNodePoolConfigNodeConfigs">GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfigNodePoolConfigNodeConfigs</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfigNodePoolConfigNodeConfigs">GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfigNodePoolConfigNodeConfigs</a>>
 
 ---
 
@@ -6331,7 +6301,7 @@ public void resetNodeIp()
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfigNodePoolConfigNodeConfigsOutputReference.property.nodeIpInput">nodeIpInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfigNodePoolConfigNodeConfigsOutputReference.property.labels">labels</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfigNodePoolConfigNodeConfigsOutputReference.property.nodeIp">nodeIp</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfigNodePoolConfigNodeConfigsOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfigNodePoolConfigNodeConfigs">GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfigNodePoolConfigNodeConfigs</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfigNodePoolConfigNodeConfigsOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfigNodePoolConfigNodeConfigs">GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfigNodePoolConfigNodeConfigs</a></code> | *No description.* |
 
 ---
 
@@ -6402,10 +6372,10 @@ public java.lang.String getNodeIp();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfigNodePoolConfigNodeConfigsOutputReference.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfigNodePoolConfigNodeConfigs getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfigNodePoolConfigNodeConfigs">GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfigNodePoolConfigNodeConfigs</a>
+- *Type:* com.hashicorp.cdktf.IResolvable|<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfigNodePoolConfigNodeConfigs">GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfigNodePoolConfigNodeConfigs</a>
 
 ---
 
@@ -6622,24 +6592,24 @@ Returns a reversible string representation.
 ##### `putNodeConfigs` <a name="putNodeConfigs" id="@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfigNodePoolConfigOutputReference.putNodeConfigs"></a>
 
 ```java
-public void putNodeConfigs(IResolvable OR java.util.List<GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfigNodePoolConfigNodeConfigs> value)
+public void putNodeConfigs(IResolvable|java.util.List<GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfigNodePoolConfigNodeConfigs> value)
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfigNodePoolConfigOutputReference.putNodeConfigs.parameter.value"></a>
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfigNodePoolConfigNodeConfigs">GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfigNodePoolConfigNodeConfigs</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfigNodePoolConfigNodeConfigs">GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfigNodePoolConfigNodeConfigs</a>>
 
 ---
 
 ##### `putTaints` <a name="putTaints" id="@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfigNodePoolConfigOutputReference.putTaints"></a>
 
 ```java
-public void putTaints(IResolvable OR java.util.List<GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfigNodePoolConfigTaints> value)
+public void putTaints(IResolvable|java.util.List<GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfigNodePoolConfigTaints> value)
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfigNodePoolConfigOutputReference.putTaints.parameter.value"></a>
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfigNodePoolConfigTaints">GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfigNodePoolConfigTaints</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfigNodePoolConfigTaints">GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfigNodePoolConfigTaints</a>>
 
 ---
 
@@ -6677,9 +6647,9 @@ public void resetTaints()
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfigNodePoolConfigOutputReference.property.nodeConfigs">nodeConfigs</a></code> | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfigNodePoolConfigNodeConfigsList">GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfigNodePoolConfigNodeConfigsList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfigNodePoolConfigOutputReference.property.taints">taints</a></code> | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfigNodePoolConfigTaintsList">GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfigNodePoolConfigTaintsList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfigNodePoolConfigOutputReference.property.labelsInput">labelsInput</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfigNodePoolConfigOutputReference.property.nodeConfigsInput">nodeConfigsInput</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfigNodePoolConfigNodeConfigs">GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfigNodePoolConfigNodeConfigs</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfigNodePoolConfigOutputReference.property.nodeConfigsInput">nodeConfigsInput</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfigNodePoolConfigNodeConfigs">GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfigNodePoolConfigNodeConfigs</a>></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfigNodePoolConfigOutputReference.property.operatingSystemInput">operatingSystemInput</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfigNodePoolConfigOutputReference.property.taintsInput">taintsInput</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfigNodePoolConfigTaints">GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfigNodePoolConfigTaints</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfigNodePoolConfigOutputReference.property.taintsInput">taintsInput</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfigNodePoolConfigTaints">GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfigNodePoolConfigTaints</a>></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfigNodePoolConfigOutputReference.property.labels">labels</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfigNodePoolConfigOutputReference.property.operatingSystem">operatingSystem</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfigNodePoolConfigOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfigNodePoolConfig">GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfigNodePoolConfig</a></code> | *No description.* |
@@ -6743,10 +6713,10 @@ public java.util.Map<java.lang.String, java.lang.String> getLabelsInput();
 ##### `nodeConfigsInput`<sup>Optional</sup> <a name="nodeConfigsInput" id="@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfigNodePoolConfigOutputReference.property.nodeConfigsInput"></a>
 
 ```java
-public java.lang.Object getNodeConfigsInput();
+public IResolvable|java.util.List<GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfigNodePoolConfigNodeConfigs> getNodeConfigsInput();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfigNodePoolConfigNodeConfigs">GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfigNodePoolConfigNodeConfigs</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfigNodePoolConfigNodeConfigs">GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfigNodePoolConfigNodeConfigs</a>>
 
 ---
 
@@ -6763,10 +6733,10 @@ public java.lang.String getOperatingSystemInput();
 ##### `taintsInput`<sup>Optional</sup> <a name="taintsInput" id="@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfigNodePoolConfigOutputReference.property.taintsInput"></a>
 
 ```java
-public java.lang.Object getTaintsInput();
+public IResolvable|java.util.List<GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfigNodePoolConfigTaints> getTaintsInput();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfigNodePoolConfigTaints">GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfigNodePoolConfigTaints</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfigNodePoolConfigTaints">GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfigNodePoolConfigTaints</a>>
 
 ---
 
@@ -6922,7 +6892,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfigNodePoolConfigTaintsList.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfigNodePoolConfigTaintsList.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfigNodePoolConfigTaintsList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfigNodePoolConfigTaints">GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfigNodePoolConfigTaints</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfigNodePoolConfigTaintsList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfigNodePoolConfigTaints">GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfigNodePoolConfigTaints</a>></code> | *No description.* |
 
 ---
 
@@ -6953,10 +6923,10 @@ public java.lang.String getFqn();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfigNodePoolConfigTaintsList.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|java.util.List<GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfigNodePoolConfigTaints> getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfigNodePoolConfigTaints">GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfigNodePoolConfigTaints</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfigNodePoolConfigTaints">GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfigNodePoolConfigTaints</a>>
 
 ---
 
@@ -7216,7 +7186,7 @@ public void resetValue()
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfigNodePoolConfigTaintsOutputReference.property.effect">effect</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfigNodePoolConfigTaintsOutputReference.property.key">key</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfigNodePoolConfigTaintsOutputReference.property.value">value</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfigNodePoolConfigTaintsOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfigNodePoolConfigTaints">GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfigNodePoolConfigTaints</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfigNodePoolConfigTaintsOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfigNodePoolConfigTaints">GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfigNodePoolConfigTaints</a></code> | *No description.* |
 
 ---
 
@@ -7307,10 +7277,10 @@ public java.lang.String getValue();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfigNodePoolConfigTaintsOutputReference.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfigNodePoolConfigTaints getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfigNodePoolConfigTaints">GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfigNodePoolConfigTaints</a>
+- *Type:* com.hashicorp.cdktf.IResolvable|<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfigNodePoolConfigTaints">GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfigNodePoolConfigTaints</a>
 
 ---
 
@@ -7808,12 +7778,12 @@ Returns a reversible string representation.
 ##### `putApiServerArgs` <a name="putApiServerArgs" id="@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterControlPlaneOutputReference.putApiServerArgs"></a>
 
 ```java
-public void putApiServerArgs(IResolvable OR java.util.List<GkeonpremBareMetalClusterControlPlaneApiServerArgs> value)
+public void putApiServerArgs(IResolvable|java.util.List<GkeonpremBareMetalClusterControlPlaneApiServerArgs> value)
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterControlPlaneOutputReference.putApiServerArgs.parameter.value"></a>
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterControlPlaneApiServerArgs">GkeonpremBareMetalClusterControlPlaneApiServerArgs</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterControlPlaneApiServerArgs">GkeonpremBareMetalClusterControlPlaneApiServerArgs</a>>
 
 ---
 
@@ -7844,7 +7814,7 @@ public void resetApiServerArgs()
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterControlPlaneOutputReference.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterControlPlaneOutputReference.property.apiServerArgs">apiServerArgs</a></code> | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterControlPlaneApiServerArgsList">GkeonpremBareMetalClusterControlPlaneApiServerArgsList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterControlPlaneOutputReference.property.controlPlaneNodePoolConfig">controlPlaneNodePoolConfig</a></code> | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfigOutputReference">GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfigOutputReference</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterControlPlaneOutputReference.property.apiServerArgsInput">apiServerArgsInput</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterControlPlaneApiServerArgs">GkeonpremBareMetalClusterControlPlaneApiServerArgs</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterControlPlaneOutputReference.property.apiServerArgsInput">apiServerArgsInput</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterControlPlaneApiServerArgs">GkeonpremBareMetalClusterControlPlaneApiServerArgs</a>></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterControlPlaneOutputReference.property.controlPlaneNodePoolConfigInput">controlPlaneNodePoolConfigInput</a></code> | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfig">GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfig</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterControlPlaneOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterControlPlane">GkeonpremBareMetalClusterControlPlane</a></code> | *No description.* |
 
@@ -7897,10 +7867,10 @@ public GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfigOutputRefe
 ##### `apiServerArgsInput`<sup>Optional</sup> <a name="apiServerArgsInput" id="@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterControlPlaneOutputReference.property.apiServerArgsInput"></a>
 
 ```java
-public java.lang.Object getApiServerArgsInput();
+public IResolvable|java.util.List<GkeonpremBareMetalClusterControlPlaneApiServerArgs> getApiServerArgsInput();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterControlPlaneApiServerArgs">GkeonpremBareMetalClusterControlPlaneApiServerArgs</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterControlPlaneApiServerArgs">GkeonpremBareMetalClusterControlPlaneApiServerArgs</a>>
 
 ---
 
@@ -8473,7 +8443,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigAddressPoolsList.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigAddressPoolsList.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigAddressPoolsList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigAddressPools">GkeonpremBareMetalClusterLoadBalancerBgpLbConfigAddressPools</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigAddressPoolsList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigAddressPools">GkeonpremBareMetalClusterLoadBalancerBgpLbConfigAddressPools</a>></code> | *No description.* |
 
 ---
 
@@ -8504,10 +8474,10 @@ public java.lang.String getFqn();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigAddressPoolsList.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|java.util.List<GkeonpremBareMetalClusterLoadBalancerBgpLbConfigAddressPools> getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigAddressPools">GkeonpremBareMetalClusterLoadBalancerBgpLbConfigAddressPools</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigAddressPools">GkeonpremBareMetalClusterLoadBalancerBgpLbConfigAddressPools</a>>
 
 ---
 
@@ -8755,14 +8725,14 @@ public void resetManualAssign()
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigAddressPoolsOutputReference.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigAddressPoolsOutputReference.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigAddressPoolsOutputReference.property.addressesInput">addressesInput</a></code> | <code>java.util.List<java.lang.String></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigAddressPoolsOutputReference.property.avoidBuggyIpsInput">avoidBuggyIpsInput</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigAddressPoolsOutputReference.property.manualAssignInput">manualAssignInput</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigAddressPoolsOutputReference.property.avoidBuggyIpsInput">avoidBuggyIpsInput</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigAddressPoolsOutputReference.property.manualAssignInput">manualAssignInput</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigAddressPoolsOutputReference.property.poolInput">poolInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigAddressPoolsOutputReference.property.addresses">addresses</a></code> | <code>java.util.List<java.lang.String></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigAddressPoolsOutputReference.property.avoidBuggyIps">avoidBuggyIps</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigAddressPoolsOutputReference.property.manualAssign">manualAssign</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigAddressPoolsOutputReference.property.avoidBuggyIps">avoidBuggyIps</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigAddressPoolsOutputReference.property.manualAssign">manualAssign</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigAddressPoolsOutputReference.property.pool">pool</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigAddressPoolsOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigAddressPools">GkeonpremBareMetalClusterLoadBalancerBgpLbConfigAddressPools</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigAddressPoolsOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigAddressPools">GkeonpremBareMetalClusterLoadBalancerBgpLbConfigAddressPools</a></code> | *No description.* |
 
 ---
 
@@ -8803,20 +8773,20 @@ public java.util.List<java.lang.String> getAddressesInput();
 ##### `avoidBuggyIpsInput`<sup>Optional</sup> <a name="avoidBuggyIpsInput" id="@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigAddressPoolsOutputReference.property.avoidBuggyIpsInput"></a>
 
 ```java
-public java.lang.Object getAvoidBuggyIpsInput();
+public java.lang.Boolean|IResolvable getAvoidBuggyIpsInput();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
 ##### `manualAssignInput`<sup>Optional</sup> <a name="manualAssignInput" id="@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigAddressPoolsOutputReference.property.manualAssignInput"></a>
 
 ```java
-public java.lang.Object getManualAssignInput();
+public java.lang.Boolean|IResolvable getManualAssignInput();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
@@ -8843,20 +8813,20 @@ public java.util.List<java.lang.String> getAddresses();
 ##### `avoidBuggyIps`<sup>Required</sup> <a name="avoidBuggyIps" id="@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigAddressPoolsOutputReference.property.avoidBuggyIps"></a>
 
 ```java
-public java.lang.Object getAvoidBuggyIps();
+public java.lang.Boolean|IResolvable getAvoidBuggyIps();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
 ##### `manualAssign`<sup>Required</sup> <a name="manualAssign" id="@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigAddressPoolsOutputReference.property.manualAssign"></a>
 
 ```java
-public java.lang.Object getManualAssign();
+public java.lang.Boolean|IResolvable getManualAssign();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
@@ -8873,10 +8843,10 @@ public java.lang.String getPool();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigAddressPoolsOutputReference.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|GkeonpremBareMetalClusterLoadBalancerBgpLbConfigAddressPools getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigAddressPools">GkeonpremBareMetalClusterLoadBalancerBgpLbConfigAddressPools</a>
+- *Type:* com.hashicorp.cdktf.IResolvable|<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigAddressPools">GkeonpremBareMetalClusterLoadBalancerBgpLbConfigAddressPools</a>
 
 ---
 
@@ -9002,7 +8972,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigBgpPeerConfigsList.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigBgpPeerConfigsList.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigBgpPeerConfigsList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigBgpPeerConfigs">GkeonpremBareMetalClusterLoadBalancerBgpLbConfigBgpPeerConfigs</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigBgpPeerConfigsList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigBgpPeerConfigs">GkeonpremBareMetalClusterLoadBalancerBgpLbConfigBgpPeerConfigs</a>></code> | *No description.* |
 
 ---
 
@@ -9033,10 +9003,10 @@ public java.lang.String getFqn();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigBgpPeerConfigsList.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|java.util.List<GkeonpremBareMetalClusterLoadBalancerBgpLbConfigBgpPeerConfigs> getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigBgpPeerConfigs">GkeonpremBareMetalClusterLoadBalancerBgpLbConfigBgpPeerConfigs</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigBgpPeerConfigs">GkeonpremBareMetalClusterLoadBalancerBgpLbConfigBgpPeerConfigs</a>>
 
 ---
 
@@ -9282,7 +9252,7 @@ public void resetControlPlaneNodes()
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigBgpPeerConfigsOutputReference.property.asn">asn</a></code> | <code>java.lang.Number</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigBgpPeerConfigsOutputReference.property.controlPlaneNodes">controlPlaneNodes</a></code> | <code>java.util.List<java.lang.String></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigBgpPeerConfigsOutputReference.property.ipAddress">ipAddress</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigBgpPeerConfigsOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigBgpPeerConfigs">GkeonpremBareMetalClusterLoadBalancerBgpLbConfigBgpPeerConfigs</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigBgpPeerConfigsOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigBgpPeerConfigs">GkeonpremBareMetalClusterLoadBalancerBgpLbConfigBgpPeerConfigs</a></code> | *No description.* |
 
 ---
 
@@ -9373,10 +9343,10 @@ public java.lang.String getIpAddress();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigBgpPeerConfigsOutputReference.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|GkeonpremBareMetalClusterLoadBalancerBgpLbConfigBgpPeerConfigs getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigBgpPeerConfigs">GkeonpremBareMetalClusterLoadBalancerBgpLbConfigBgpPeerConfigs</a>
+- *Type:* com.hashicorp.cdktf.IResolvable|<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigBgpPeerConfigs">GkeonpremBareMetalClusterLoadBalancerBgpLbConfigBgpPeerConfigs</a>
 
 ---
 
@@ -9614,10 +9584,10 @@ public void resetSerializeImagePullsDisabled()
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigKubeletConfigOutputReference.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigKubeletConfigOutputReference.property.registryBurstInput">registryBurstInput</a></code> | <code>java.lang.Number</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigKubeletConfigOutputReference.property.registryPullQpsInput">registryPullQpsInput</a></code> | <code>java.lang.Number</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigKubeletConfigOutputReference.property.serializeImagePullsDisabledInput">serializeImagePullsDisabledInput</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigKubeletConfigOutputReference.property.serializeImagePullsDisabledInput">serializeImagePullsDisabledInput</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigKubeletConfigOutputReference.property.registryBurst">registryBurst</a></code> | <code>java.lang.Number</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigKubeletConfigOutputReference.property.registryPullQps">registryPullQps</a></code> | <code>java.lang.Number</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigKubeletConfigOutputReference.property.serializeImagePullsDisabled">serializeImagePullsDisabled</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigKubeletConfigOutputReference.property.serializeImagePullsDisabled">serializeImagePullsDisabled</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigKubeletConfigOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigKubeletConfig">GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigKubeletConfig</a></code> | *No description.* |
 
 ---
@@ -9669,10 +9639,10 @@ public java.lang.Number getRegistryPullQpsInput();
 ##### `serializeImagePullsDisabledInput`<sup>Optional</sup> <a name="serializeImagePullsDisabledInput" id="@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigKubeletConfigOutputReference.property.serializeImagePullsDisabledInput"></a>
 
 ```java
-public java.lang.Object getSerializeImagePullsDisabledInput();
+public java.lang.Boolean|IResolvable getSerializeImagePullsDisabledInput();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
@@ -9699,10 +9669,10 @@ public java.lang.Number getRegistryPullQps();
 ##### `serializeImagePullsDisabled`<sup>Required</sup> <a name="serializeImagePullsDisabled" id="@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigKubeletConfigOutputReference.property.serializeImagePullsDisabled"></a>
 
 ```java
-public java.lang.Object getSerializeImagePullsDisabled();
+public java.lang.Boolean|IResolvable getSerializeImagePullsDisabled();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
@@ -9838,7 +9808,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigNodeConfigsList.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigNodeConfigsList.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigNodeConfigsList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigNodeConfigs">GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigNodeConfigs</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigNodeConfigsList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigNodeConfigs">GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigNodeConfigs</a>></code> | *No description.* |
 
 ---
 
@@ -9869,10 +9839,10 @@ public java.lang.String getFqn();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigNodeConfigsList.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|java.util.List<GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigNodeConfigs> getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigNodeConfigs">GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigNodeConfigs</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigNodeConfigs">GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigNodeConfigs</a>>
 
 ---
 
@@ -10123,7 +10093,7 @@ public void resetNodeIp()
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigNodeConfigsOutputReference.property.nodeIpInput">nodeIpInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigNodeConfigsOutputReference.property.labels">labels</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigNodeConfigsOutputReference.property.nodeIp">nodeIp</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigNodeConfigsOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigNodeConfigs">GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigNodeConfigs</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigNodeConfigsOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigNodeConfigs">GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigNodeConfigs</a></code> | *No description.* |
 
 ---
 
@@ -10194,10 +10164,10 @@ public java.lang.String getNodeIp();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigNodeConfigsOutputReference.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigNodeConfigs getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigNodeConfigs">GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigNodeConfigs</a>
+- *Type:* com.hashicorp.cdktf.IResolvable|<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigNodeConfigs">GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigNodeConfigs</a>
 
 ---
 
@@ -10428,24 +10398,24 @@ public void putKubeletConfig(GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoa
 ##### `putNodeConfigs` <a name="putNodeConfigs" id="@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigOutputReference.putNodeConfigs"></a>
 
 ```java
-public void putNodeConfigs(IResolvable OR java.util.List<GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigNodeConfigs> value)
+public void putNodeConfigs(IResolvable|java.util.List<GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigNodeConfigs> value)
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigOutputReference.putNodeConfigs.parameter.value"></a>
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigNodeConfigs">GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigNodeConfigs</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigNodeConfigs">GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigNodeConfigs</a>>
 
 ---
 
 ##### `putTaints` <a name="putTaints" id="@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigOutputReference.putTaints"></a>
 
 ```java
-public void putTaints(IResolvable OR java.util.List<GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigTaints> value)
+public void putTaints(IResolvable|java.util.List<GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigTaints> value)
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigOutputReference.putTaints.parameter.value"></a>
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigTaints">GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigTaints</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigTaints">GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigTaints</a>>
 
 ---
 
@@ -10491,9 +10461,9 @@ public void resetTaints()
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigOutputReference.property.taints">taints</a></code> | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigTaintsList">GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigTaintsList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigOutputReference.property.kubeletConfigInput">kubeletConfigInput</a></code> | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigKubeletConfig">GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigKubeletConfig</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigOutputReference.property.labelsInput">labelsInput</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigOutputReference.property.nodeConfigsInput">nodeConfigsInput</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigNodeConfigs">GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigNodeConfigs</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigOutputReference.property.nodeConfigsInput">nodeConfigsInput</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigNodeConfigs">GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigNodeConfigs</a>></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigOutputReference.property.operatingSystemInput">operatingSystemInput</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigOutputReference.property.taintsInput">taintsInput</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigTaints">GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigTaints</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigOutputReference.property.taintsInput">taintsInput</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigTaints">GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigTaints</a>></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigOutputReference.property.labels">labels</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigOutputReference.property.operatingSystem">operatingSystem</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfig">GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfig</a></code> | *No description.* |
@@ -10577,10 +10547,10 @@ public java.util.Map<java.lang.String, java.lang.String> getLabelsInput();
 ##### `nodeConfigsInput`<sup>Optional</sup> <a name="nodeConfigsInput" id="@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigOutputReference.property.nodeConfigsInput"></a>
 
 ```java
-public java.lang.Object getNodeConfigsInput();
+public IResolvable|java.util.List<GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigNodeConfigs> getNodeConfigsInput();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigNodeConfigs">GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigNodeConfigs</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigNodeConfigs">GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigNodeConfigs</a>>
 
 ---
 
@@ -10597,10 +10567,10 @@ public java.lang.String getOperatingSystemInput();
 ##### `taintsInput`<sup>Optional</sup> <a name="taintsInput" id="@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigOutputReference.property.taintsInput"></a>
 
 ```java
-public java.lang.Object getTaintsInput();
+public IResolvable|java.util.List<GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigTaints> getTaintsInput();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigTaints">GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigTaints</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigTaints">GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigTaints</a>>
 
 ---
 
@@ -10756,7 +10726,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigTaintsList.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigTaintsList.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigTaintsList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigTaints">GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigTaints</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigTaintsList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigTaints">GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigTaints</a>></code> | *No description.* |
 
 ---
 
@@ -10787,10 +10757,10 @@ public java.lang.String getFqn();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigTaintsList.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|java.util.List<GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigTaints> getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigTaints">GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigTaints</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigTaints">GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigTaints</a>>
 
 ---
 
@@ -11050,7 +11020,7 @@ public void resetValue()
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigTaintsOutputReference.property.effect">effect</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigTaintsOutputReference.property.key">key</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigTaintsOutputReference.property.value">value</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigTaintsOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigTaints">GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigTaints</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigTaintsOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigTaints">GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigTaints</a></code> | *No description.* |
 
 ---
 
@@ -11141,10 +11111,10 @@ public java.lang.String getValue();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigTaintsOutputReference.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigTaints getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigTaints">GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigTaints</a>
+- *Type:* com.hashicorp.cdktf.IResolvable|<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigTaints">GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigTaints</a>
 
 ---
 
@@ -11650,24 +11620,24 @@ Returns a reversible string representation.
 ##### `putAddressPools` <a name="putAddressPools" id="@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigOutputReference.putAddressPools"></a>
 
 ```java
-public void putAddressPools(IResolvable OR java.util.List<GkeonpremBareMetalClusterLoadBalancerBgpLbConfigAddressPools> value)
+public void putAddressPools(IResolvable|java.util.List<GkeonpremBareMetalClusterLoadBalancerBgpLbConfigAddressPools> value)
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigOutputReference.putAddressPools.parameter.value"></a>
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigAddressPools">GkeonpremBareMetalClusterLoadBalancerBgpLbConfigAddressPools</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigAddressPools">GkeonpremBareMetalClusterLoadBalancerBgpLbConfigAddressPools</a>>
 
 ---
 
 ##### `putBgpPeerConfigs` <a name="putBgpPeerConfigs" id="@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigOutputReference.putBgpPeerConfigs"></a>
 
 ```java
-public void putBgpPeerConfigs(IResolvable OR java.util.List<GkeonpremBareMetalClusterLoadBalancerBgpLbConfigBgpPeerConfigs> value)
+public void putBgpPeerConfigs(IResolvable|java.util.List<GkeonpremBareMetalClusterLoadBalancerBgpLbConfigBgpPeerConfigs> value)
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigOutputReference.putBgpPeerConfigs.parameter.value"></a>
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigBgpPeerConfigs">GkeonpremBareMetalClusterLoadBalancerBgpLbConfigBgpPeerConfigs</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigBgpPeerConfigs">GkeonpremBareMetalClusterLoadBalancerBgpLbConfigBgpPeerConfigs</a>>
 
 ---
 
@@ -11699,9 +11669,9 @@ public void resetLoadBalancerNodePoolConfig()
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigOutputReference.property.addressPools">addressPools</a></code> | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigAddressPoolsList">GkeonpremBareMetalClusterLoadBalancerBgpLbConfigAddressPoolsList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigOutputReference.property.bgpPeerConfigs">bgpPeerConfigs</a></code> | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigBgpPeerConfigsList">GkeonpremBareMetalClusterLoadBalancerBgpLbConfigBgpPeerConfigsList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigOutputReference.property.loadBalancerNodePoolConfig">loadBalancerNodePoolConfig</a></code> | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigOutputReference">GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigOutputReference</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigOutputReference.property.addressPoolsInput">addressPoolsInput</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigAddressPools">GkeonpremBareMetalClusterLoadBalancerBgpLbConfigAddressPools</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigOutputReference.property.addressPoolsInput">addressPoolsInput</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigAddressPools">GkeonpremBareMetalClusterLoadBalancerBgpLbConfigAddressPools</a>></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigOutputReference.property.asnInput">asnInput</a></code> | <code>java.lang.Number</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigOutputReference.property.bgpPeerConfigsInput">bgpPeerConfigsInput</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigBgpPeerConfigs">GkeonpremBareMetalClusterLoadBalancerBgpLbConfigBgpPeerConfigs</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigOutputReference.property.bgpPeerConfigsInput">bgpPeerConfigsInput</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigBgpPeerConfigs">GkeonpremBareMetalClusterLoadBalancerBgpLbConfigBgpPeerConfigs</a>></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigOutputReference.property.loadBalancerNodePoolConfigInput">loadBalancerNodePoolConfigInput</a></code> | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfig">GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfig</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigOutputReference.property.asn">asn</a></code> | <code>java.lang.Number</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfig">GkeonpremBareMetalClusterLoadBalancerBgpLbConfig</a></code> | *No description.* |
@@ -11765,10 +11735,10 @@ public GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfi
 ##### `addressPoolsInput`<sup>Optional</sup> <a name="addressPoolsInput" id="@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigOutputReference.property.addressPoolsInput"></a>
 
 ```java
-public java.lang.Object getAddressPoolsInput();
+public IResolvable|java.util.List<GkeonpremBareMetalClusterLoadBalancerBgpLbConfigAddressPools> getAddressPoolsInput();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigAddressPools">GkeonpremBareMetalClusterLoadBalancerBgpLbConfigAddressPools</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigAddressPools">GkeonpremBareMetalClusterLoadBalancerBgpLbConfigAddressPools</a>>
 
 ---
 
@@ -11785,10 +11755,10 @@ public java.lang.Number getAsnInput();
 ##### `bgpPeerConfigsInput`<sup>Optional</sup> <a name="bgpPeerConfigsInput" id="@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigOutputReference.property.bgpPeerConfigsInput"></a>
 
 ```java
-public java.lang.Object getBgpPeerConfigsInput();
+public IResolvable|java.util.List<GkeonpremBareMetalClusterLoadBalancerBgpLbConfigBgpPeerConfigs> getBgpPeerConfigsInput();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigBgpPeerConfigs">GkeonpremBareMetalClusterLoadBalancerBgpLbConfigBgpPeerConfigs</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerBgpLbConfigBgpPeerConfigs">GkeonpremBareMetalClusterLoadBalancerBgpLbConfigBgpPeerConfigs</a>>
 
 ---
 
@@ -12033,8 +12003,8 @@ Returns a reversible string representation.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerManualLbConfigOutputReference.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerManualLbConfigOutputReference.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerManualLbConfigOutputReference.property.enabledInput">enabledInput</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerManualLbConfigOutputReference.property.enabled">enabled</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerManualLbConfigOutputReference.property.enabledInput">enabledInput</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerManualLbConfigOutputReference.property.enabled">enabled</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerManualLbConfigOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerManualLbConfig">GkeonpremBareMetalClusterLoadBalancerManualLbConfig</a></code> | *No description.* |
 
 ---
@@ -12066,20 +12036,20 @@ public java.lang.String getFqn();
 ##### `enabledInput`<sup>Optional</sup> <a name="enabledInput" id="@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerManualLbConfigOutputReference.property.enabledInput"></a>
 
 ```java
-public java.lang.Object getEnabledInput();
+public java.lang.Boolean|IResolvable getEnabledInput();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
 ##### `enabled`<sup>Required</sup> <a name="enabled" id="@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerManualLbConfigOutputReference.property.enabled"></a>
 
 ```java
-public java.lang.Object getEnabled();
+public java.lang.Boolean|IResolvable getEnabled();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
@@ -12215,7 +12185,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigAddressPoolsList.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigAddressPoolsList.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigAddressPoolsList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigAddressPools">GkeonpremBareMetalClusterLoadBalancerMetalLbConfigAddressPools</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigAddressPoolsList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigAddressPools">GkeonpremBareMetalClusterLoadBalancerMetalLbConfigAddressPools</a>></code> | *No description.* |
 
 ---
 
@@ -12246,10 +12216,10 @@ public java.lang.String getFqn();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigAddressPoolsList.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|java.util.List<GkeonpremBareMetalClusterLoadBalancerMetalLbConfigAddressPools> getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigAddressPools">GkeonpremBareMetalClusterLoadBalancerMetalLbConfigAddressPools</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigAddressPools">GkeonpremBareMetalClusterLoadBalancerMetalLbConfigAddressPools</a>>
 
 ---
 
@@ -12497,14 +12467,14 @@ public void resetManualAssign()
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigAddressPoolsOutputReference.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigAddressPoolsOutputReference.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigAddressPoolsOutputReference.property.addressesInput">addressesInput</a></code> | <code>java.util.List<java.lang.String></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigAddressPoolsOutputReference.property.avoidBuggyIpsInput">avoidBuggyIpsInput</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigAddressPoolsOutputReference.property.manualAssignInput">manualAssignInput</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigAddressPoolsOutputReference.property.avoidBuggyIpsInput">avoidBuggyIpsInput</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigAddressPoolsOutputReference.property.manualAssignInput">manualAssignInput</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigAddressPoolsOutputReference.property.poolInput">poolInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigAddressPoolsOutputReference.property.addresses">addresses</a></code> | <code>java.util.List<java.lang.String></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigAddressPoolsOutputReference.property.avoidBuggyIps">avoidBuggyIps</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigAddressPoolsOutputReference.property.manualAssign">manualAssign</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigAddressPoolsOutputReference.property.avoidBuggyIps">avoidBuggyIps</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigAddressPoolsOutputReference.property.manualAssign">manualAssign</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigAddressPoolsOutputReference.property.pool">pool</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigAddressPoolsOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigAddressPools">GkeonpremBareMetalClusterLoadBalancerMetalLbConfigAddressPools</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigAddressPoolsOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigAddressPools">GkeonpremBareMetalClusterLoadBalancerMetalLbConfigAddressPools</a></code> | *No description.* |
 
 ---
 
@@ -12545,20 +12515,20 @@ public java.util.List<java.lang.String> getAddressesInput();
 ##### `avoidBuggyIpsInput`<sup>Optional</sup> <a name="avoidBuggyIpsInput" id="@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigAddressPoolsOutputReference.property.avoidBuggyIpsInput"></a>
 
 ```java
-public java.lang.Object getAvoidBuggyIpsInput();
+public java.lang.Boolean|IResolvable getAvoidBuggyIpsInput();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
 ##### `manualAssignInput`<sup>Optional</sup> <a name="manualAssignInput" id="@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigAddressPoolsOutputReference.property.manualAssignInput"></a>
 
 ```java
-public java.lang.Object getManualAssignInput();
+public java.lang.Boolean|IResolvable getManualAssignInput();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
@@ -12585,20 +12555,20 @@ public java.util.List<java.lang.String> getAddresses();
 ##### `avoidBuggyIps`<sup>Required</sup> <a name="avoidBuggyIps" id="@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigAddressPoolsOutputReference.property.avoidBuggyIps"></a>
 
 ```java
-public java.lang.Object getAvoidBuggyIps();
+public java.lang.Boolean|IResolvable getAvoidBuggyIps();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
 ##### `manualAssign`<sup>Required</sup> <a name="manualAssign" id="@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigAddressPoolsOutputReference.property.manualAssign"></a>
 
 ```java
-public java.lang.Object getManualAssign();
+public java.lang.Boolean|IResolvable getManualAssign();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
@@ -12615,10 +12585,10 @@ public java.lang.String getPool();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigAddressPoolsOutputReference.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|GkeonpremBareMetalClusterLoadBalancerMetalLbConfigAddressPools getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigAddressPools">GkeonpremBareMetalClusterLoadBalancerMetalLbConfigAddressPools</a>
+- *Type:* com.hashicorp.cdktf.IResolvable|<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigAddressPools">GkeonpremBareMetalClusterLoadBalancerMetalLbConfigAddressPools</a>
 
 ---
 
@@ -12744,7 +12714,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNodePoolConfigNodeConfigsList.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNodePoolConfigNodeConfigsList.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNodePoolConfigNodeConfigsList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNodePoolConfigNodeConfigs">GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNodePoolConfigNodeConfigs</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNodePoolConfigNodeConfigsList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNodePoolConfigNodeConfigs">GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNodePoolConfigNodeConfigs</a>></code> | *No description.* |
 
 ---
 
@@ -12775,10 +12745,10 @@ public java.lang.String getFqn();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNodePoolConfigNodeConfigsList.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|java.util.List<GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNodePoolConfigNodeConfigs> getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNodePoolConfigNodeConfigs">GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNodePoolConfigNodeConfigs</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNodePoolConfigNodeConfigs">GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNodePoolConfigNodeConfigs</a>>
 
 ---
 
@@ -13029,7 +12999,7 @@ public void resetNodeIp()
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNodePoolConfigNodeConfigsOutputReference.property.nodeIpInput">nodeIpInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNodePoolConfigNodeConfigsOutputReference.property.labels">labels</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNodePoolConfigNodeConfigsOutputReference.property.nodeIp">nodeIp</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNodePoolConfigNodeConfigsOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNodePoolConfigNodeConfigs">GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNodePoolConfigNodeConfigs</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNodePoolConfigNodeConfigsOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNodePoolConfigNodeConfigs">GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNodePoolConfigNodeConfigs</a></code> | *No description.* |
 
 ---
 
@@ -13100,10 +13070,10 @@ public java.lang.String getNodeIp();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNodePoolConfigNodeConfigsOutputReference.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNodePoolConfigNodeConfigs getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNodePoolConfigNodeConfigs">GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNodePoolConfigNodeConfigs</a>
+- *Type:* com.hashicorp.cdktf.IResolvable|<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNodePoolConfigNodeConfigs">GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNodePoolConfigNodeConfigs</a>
 
 ---
 
@@ -13320,24 +13290,24 @@ Returns a reversible string representation.
 ##### `putNodeConfigs` <a name="putNodeConfigs" id="@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNodePoolConfigOutputReference.putNodeConfigs"></a>
 
 ```java
-public void putNodeConfigs(IResolvable OR java.util.List<GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNodePoolConfigNodeConfigs> value)
+public void putNodeConfigs(IResolvable|java.util.List<GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNodePoolConfigNodeConfigs> value)
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNodePoolConfigOutputReference.putNodeConfigs.parameter.value"></a>
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNodePoolConfigNodeConfigs">GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNodePoolConfigNodeConfigs</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNodePoolConfigNodeConfigs">GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNodePoolConfigNodeConfigs</a>>
 
 ---
 
 ##### `putTaints` <a name="putTaints" id="@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNodePoolConfigOutputReference.putTaints"></a>
 
 ```java
-public void putTaints(IResolvable OR java.util.List<GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNodePoolConfigTaints> value)
+public void putTaints(IResolvable|java.util.List<GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNodePoolConfigTaints> value)
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNodePoolConfigOutputReference.putTaints.parameter.value"></a>
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNodePoolConfigTaints">GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNodePoolConfigTaints</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNodePoolConfigTaints">GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNodePoolConfigTaints</a>>
 
 ---
 
@@ -13375,9 +13345,9 @@ public void resetTaints()
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNodePoolConfigOutputReference.property.nodeConfigs">nodeConfigs</a></code> | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNodePoolConfigNodeConfigsList">GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNodePoolConfigNodeConfigsList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNodePoolConfigOutputReference.property.taints">taints</a></code> | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNodePoolConfigTaintsList">GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNodePoolConfigTaintsList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNodePoolConfigOutputReference.property.labelsInput">labelsInput</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNodePoolConfigOutputReference.property.nodeConfigsInput">nodeConfigsInput</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNodePoolConfigNodeConfigs">GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNodePoolConfigNodeConfigs</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNodePoolConfigOutputReference.property.nodeConfigsInput">nodeConfigsInput</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNodePoolConfigNodeConfigs">GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNodePoolConfigNodeConfigs</a>></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNodePoolConfigOutputReference.property.operatingSystemInput">operatingSystemInput</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNodePoolConfigOutputReference.property.taintsInput">taintsInput</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNodePoolConfigTaints">GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNodePoolConfigTaints</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNodePoolConfigOutputReference.property.taintsInput">taintsInput</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNodePoolConfigTaints">GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNodePoolConfigTaints</a>></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNodePoolConfigOutputReference.property.labels">labels</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNodePoolConfigOutputReference.property.operatingSystem">operatingSystem</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNodePoolConfigOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNodePoolConfig">GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNodePoolConfig</a></code> | *No description.* |
@@ -13441,10 +13411,10 @@ public java.util.Map<java.lang.String, java.lang.String> getLabelsInput();
 ##### `nodeConfigsInput`<sup>Optional</sup> <a name="nodeConfigsInput" id="@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNodePoolConfigOutputReference.property.nodeConfigsInput"></a>
 
 ```java
-public java.lang.Object getNodeConfigsInput();
+public IResolvable|java.util.List<GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNodePoolConfigNodeConfigs> getNodeConfigsInput();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNodePoolConfigNodeConfigs">GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNodePoolConfigNodeConfigs</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNodePoolConfigNodeConfigs">GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNodePoolConfigNodeConfigs</a>>
 
 ---
 
@@ -13461,10 +13431,10 @@ public java.lang.String getOperatingSystemInput();
 ##### `taintsInput`<sup>Optional</sup> <a name="taintsInput" id="@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNodePoolConfigOutputReference.property.taintsInput"></a>
 
 ```java
-public java.lang.Object getTaintsInput();
+public IResolvable|java.util.List<GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNodePoolConfigTaints> getTaintsInput();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNodePoolConfigTaints">GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNodePoolConfigTaints</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNodePoolConfigTaints">GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNodePoolConfigTaints</a>>
 
 ---
 
@@ -13620,7 +13590,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNodePoolConfigTaintsList.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNodePoolConfigTaintsList.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNodePoolConfigTaintsList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNodePoolConfigTaints">GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNodePoolConfigTaints</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNodePoolConfigTaintsList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNodePoolConfigTaints">GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNodePoolConfigTaints</a>></code> | *No description.* |
 
 ---
 
@@ -13651,10 +13621,10 @@ public java.lang.String getFqn();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNodePoolConfigTaintsList.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|java.util.List<GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNodePoolConfigTaints> getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNodePoolConfigTaints">GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNodePoolConfigTaints</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNodePoolConfigTaints">GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNodePoolConfigTaints</a>>
 
 ---
 
@@ -13914,7 +13884,7 @@ public void resetValue()
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNodePoolConfigTaintsOutputReference.property.effect">effect</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNodePoolConfigTaintsOutputReference.property.key">key</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNodePoolConfigTaintsOutputReference.property.value">value</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNodePoolConfigTaintsOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNodePoolConfigTaints">GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNodePoolConfigTaints</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNodePoolConfigTaintsOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNodePoolConfigTaints">GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNodePoolConfigTaints</a></code> | *No description.* |
 
 ---
 
@@ -14005,10 +13975,10 @@ public java.lang.String getValue();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNodePoolConfigTaintsOutputReference.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNodePoolConfigTaints getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNodePoolConfigTaints">GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNodePoolConfigTaints</a>
+- *Type:* com.hashicorp.cdktf.IResolvable|<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNodePoolConfigTaints">GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNodePoolConfigTaints</a>
 
 ---
 
@@ -14513,12 +14483,12 @@ Returns a reversible string representation.
 ##### `putAddressPools` <a name="putAddressPools" id="@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigOutputReference.putAddressPools"></a>
 
 ```java
-public void putAddressPools(IResolvable OR java.util.List<GkeonpremBareMetalClusterLoadBalancerMetalLbConfigAddressPools> value)
+public void putAddressPools(IResolvable|java.util.List<GkeonpremBareMetalClusterLoadBalancerMetalLbConfigAddressPools> value)
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigOutputReference.putAddressPools.parameter.value"></a>
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigAddressPools">GkeonpremBareMetalClusterLoadBalancerMetalLbConfigAddressPools</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigAddressPools">GkeonpremBareMetalClusterLoadBalancerMetalLbConfigAddressPools</a>>
 
 ---
 
@@ -14549,7 +14519,7 @@ public void resetLoadBalancerNodePoolConfig()
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigOutputReference.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigOutputReference.property.addressPools">addressPools</a></code> | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigAddressPoolsList">GkeonpremBareMetalClusterLoadBalancerMetalLbConfigAddressPoolsList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigOutputReference.property.loadBalancerNodePoolConfig">loadBalancerNodePoolConfig</a></code> | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigOutputReference">GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigOutputReference</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigOutputReference.property.addressPoolsInput">addressPoolsInput</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigAddressPools">GkeonpremBareMetalClusterLoadBalancerMetalLbConfigAddressPools</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigOutputReference.property.addressPoolsInput">addressPoolsInput</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigAddressPools">GkeonpremBareMetalClusterLoadBalancerMetalLbConfigAddressPools</a>></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigOutputReference.property.loadBalancerNodePoolConfigInput">loadBalancerNodePoolConfigInput</a></code> | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfig">GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolConfig</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfig">GkeonpremBareMetalClusterLoadBalancerMetalLbConfig</a></code> | *No description.* |
 
@@ -14602,10 +14572,10 @@ public GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolCon
 ##### `addressPoolsInput`<sup>Optional</sup> <a name="addressPoolsInput" id="@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigOutputReference.property.addressPoolsInput"></a>
 
 ```java
-public java.lang.Object getAddressPoolsInput();
+public IResolvable|java.util.List<GkeonpremBareMetalClusterLoadBalancerMetalLbConfigAddressPools> getAddressPoolsInput();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigAddressPools">GkeonpremBareMetalClusterLoadBalancerMetalLbConfigAddressPools</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterLoadBalancerMetalLbConfigAddressPools">GkeonpremBareMetalClusterLoadBalancerMetalLbConfigAddressPools</a>>
 
 ---
 
@@ -16420,8 +16390,8 @@ public void resetEnabled()
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterNetworkConfigMultipleNetworkInterfacesConfigOutputReference.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterNetworkConfigMultipleNetworkInterfacesConfigOutputReference.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterNetworkConfigMultipleNetworkInterfacesConfigOutputReference.property.enabledInput">enabledInput</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterNetworkConfigMultipleNetworkInterfacesConfigOutputReference.property.enabled">enabled</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterNetworkConfigMultipleNetworkInterfacesConfigOutputReference.property.enabledInput">enabledInput</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterNetworkConfigMultipleNetworkInterfacesConfigOutputReference.property.enabled">enabled</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterNetworkConfigMultipleNetworkInterfacesConfigOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterNetworkConfigMultipleNetworkInterfacesConfig">GkeonpremBareMetalClusterNetworkConfigMultipleNetworkInterfacesConfig</a></code> | *No description.* |
 
 ---
@@ -16453,20 +16423,20 @@ public java.lang.String getFqn();
 ##### `enabledInput`<sup>Optional</sup> <a name="enabledInput" id="@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterNetworkConfigMultipleNetworkInterfacesConfigOutputReference.property.enabledInput"></a>
 
 ```java
-public java.lang.Object getEnabledInput();
+public java.lang.Boolean|IResolvable getEnabledInput();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
 ##### `enabled`<sup>Required</sup> <a name="enabled" id="@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterNetworkConfigMultipleNetworkInterfacesConfigOutputReference.property.enabled"></a>
 
 ```java
-public java.lang.Object getEnabled();
+public java.lang.Boolean|IResolvable getEnabled();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
@@ -16761,11 +16731,11 @@ public void resetSrIovConfig()
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterNetworkConfigOutputReference.property.islandModeCidr">islandModeCidr</a></code> | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterNetworkConfigIslandModeCidrOutputReference">GkeonpremBareMetalClusterNetworkConfigIslandModeCidrOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterNetworkConfigOutputReference.property.multipleNetworkInterfacesConfig">multipleNetworkInterfacesConfig</a></code> | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterNetworkConfigMultipleNetworkInterfacesConfigOutputReference">GkeonpremBareMetalClusterNetworkConfigMultipleNetworkInterfacesConfigOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterNetworkConfigOutputReference.property.srIovConfig">srIovConfig</a></code> | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterNetworkConfigSrIovConfigOutputReference">GkeonpremBareMetalClusterNetworkConfigSrIovConfigOutputReference</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterNetworkConfigOutputReference.property.advancedNetworkingInput">advancedNetworkingInput</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterNetworkConfigOutputReference.property.advancedNetworkingInput">advancedNetworkingInput</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterNetworkConfigOutputReference.property.islandModeCidrInput">islandModeCidrInput</a></code> | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterNetworkConfigIslandModeCidr">GkeonpremBareMetalClusterNetworkConfigIslandModeCidr</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterNetworkConfigOutputReference.property.multipleNetworkInterfacesConfigInput">multipleNetworkInterfacesConfigInput</a></code> | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterNetworkConfigMultipleNetworkInterfacesConfig">GkeonpremBareMetalClusterNetworkConfigMultipleNetworkInterfacesConfig</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterNetworkConfigOutputReference.property.srIovConfigInput">srIovConfigInput</a></code> | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterNetworkConfigSrIovConfig">GkeonpremBareMetalClusterNetworkConfigSrIovConfig</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterNetworkConfigOutputReference.property.advancedNetworking">advancedNetworking</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterNetworkConfigOutputReference.property.advancedNetworking">advancedNetworking</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterNetworkConfigOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterNetworkConfig">GkeonpremBareMetalClusterNetworkConfig</a></code> | *No description.* |
 
 ---
@@ -16827,10 +16797,10 @@ public GkeonpremBareMetalClusterNetworkConfigSrIovConfigOutputReference getSrIov
 ##### `advancedNetworkingInput`<sup>Optional</sup> <a name="advancedNetworkingInput" id="@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterNetworkConfigOutputReference.property.advancedNetworkingInput"></a>
 
 ```java
-public java.lang.Object getAdvancedNetworkingInput();
+public java.lang.Boolean|IResolvable getAdvancedNetworkingInput();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
@@ -16867,10 +16837,10 @@ public GkeonpremBareMetalClusterNetworkConfigSrIovConfig getSrIovConfigInput();
 ##### `advancedNetworking`<sup>Required</sup> <a name="advancedNetworking" id="@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterNetworkConfigOutputReference.property.advancedNetworking"></a>
 
 ```java
-public java.lang.Object getAdvancedNetworking();
+public java.lang.Boolean|IResolvable getAdvancedNetworking();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
@@ -17102,8 +17072,8 @@ public void resetEnabled()
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterNetworkConfigSrIovConfigOutputReference.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterNetworkConfigSrIovConfigOutputReference.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterNetworkConfigSrIovConfigOutputReference.property.enabledInput">enabledInput</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterNetworkConfigSrIovConfigOutputReference.property.enabled">enabled</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterNetworkConfigSrIovConfigOutputReference.property.enabledInput">enabledInput</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterNetworkConfigSrIovConfigOutputReference.property.enabled">enabled</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterNetworkConfigSrIovConfigOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterNetworkConfigSrIovConfig">GkeonpremBareMetalClusterNetworkConfigSrIovConfig</a></code> | *No description.* |
 
 ---
@@ -17135,20 +17105,20 @@ public java.lang.String getFqn();
 ##### `enabledInput`<sup>Optional</sup> <a name="enabledInput" id="@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterNetworkConfigSrIovConfigOutputReference.property.enabledInput"></a>
 
 ```java
-public java.lang.Object getEnabledInput();
+public java.lang.Boolean|IResolvable getEnabledInput();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
 ##### `enabled`<sup>Required</sup> <a name="enabled" id="@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterNetworkConfigSrIovConfigOutputReference.property.enabled"></a>
 
 ```java
-public java.lang.Object getEnabled();
+public java.lang.Boolean|IResolvable getEnabled();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
@@ -17958,8 +17928,8 @@ Returns a reversible string representation.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterOsEnvironmentConfigOutputReference.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterOsEnvironmentConfigOutputReference.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterOsEnvironmentConfigOutputReference.property.packageRepoExcludedInput">packageRepoExcludedInput</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterOsEnvironmentConfigOutputReference.property.packageRepoExcluded">packageRepoExcluded</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterOsEnvironmentConfigOutputReference.property.packageRepoExcludedInput">packageRepoExcludedInput</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterOsEnvironmentConfigOutputReference.property.packageRepoExcluded">packageRepoExcluded</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterOsEnvironmentConfigOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterOsEnvironmentConfig">GkeonpremBareMetalClusterOsEnvironmentConfig</a></code> | *No description.* |
 
 ---
@@ -17991,20 +17961,20 @@ public java.lang.String getFqn();
 ##### `packageRepoExcludedInput`<sup>Optional</sup> <a name="packageRepoExcludedInput" id="@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterOsEnvironmentConfigOutputReference.property.packageRepoExcludedInput"></a>
 
 ```java
-public java.lang.Object getPackageRepoExcludedInput();
+public java.lang.Boolean|IResolvable getPackageRepoExcludedInput();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
 ##### `packageRepoExcluded`<sup>Required</sup> <a name="packageRepoExcluded" id="@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterOsEnvironmentConfigOutputReference.property.packageRepoExcluded"></a>
 
 ```java
-public java.lang.Object getPackageRepoExcluded();
+public java.lang.Boolean|IResolvable getPackageRepoExcluded();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
@@ -18440,7 +18410,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterSecurityConfigAuthorizationAdminUsersList.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterSecurityConfigAuthorizationAdminUsersList.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterSecurityConfigAuthorizationAdminUsersList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterSecurityConfigAuthorizationAdminUsers">GkeonpremBareMetalClusterSecurityConfigAuthorizationAdminUsers</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterSecurityConfigAuthorizationAdminUsersList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterSecurityConfigAuthorizationAdminUsers">GkeonpremBareMetalClusterSecurityConfigAuthorizationAdminUsers</a>></code> | *No description.* |
 
 ---
 
@@ -18471,10 +18441,10 @@ public java.lang.String getFqn();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterSecurityConfigAuthorizationAdminUsersList.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|java.util.List<GkeonpremBareMetalClusterSecurityConfigAuthorizationAdminUsers> getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterSecurityConfigAuthorizationAdminUsers">GkeonpremBareMetalClusterSecurityConfigAuthorizationAdminUsers</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterSecurityConfigAuthorizationAdminUsers">GkeonpremBareMetalClusterSecurityConfigAuthorizationAdminUsers</a>>
 
 ---
 
@@ -18709,7 +18679,7 @@ Returns a reversible string representation.
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterSecurityConfigAuthorizationAdminUsersOutputReference.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterSecurityConfigAuthorizationAdminUsersOutputReference.property.usernameInput">usernameInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterSecurityConfigAuthorizationAdminUsersOutputReference.property.username">username</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterSecurityConfigAuthorizationAdminUsersOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterSecurityConfigAuthorizationAdminUsers">GkeonpremBareMetalClusterSecurityConfigAuthorizationAdminUsers</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterSecurityConfigAuthorizationAdminUsersOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterSecurityConfigAuthorizationAdminUsers">GkeonpremBareMetalClusterSecurityConfigAuthorizationAdminUsers</a></code> | *No description.* |
 
 ---
 
@@ -18760,10 +18730,10 @@ public java.lang.String getUsername();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterSecurityConfigAuthorizationAdminUsersOutputReference.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|GkeonpremBareMetalClusterSecurityConfigAuthorizationAdminUsers getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterSecurityConfigAuthorizationAdminUsers">GkeonpremBareMetalClusterSecurityConfigAuthorizationAdminUsers</a>
+- *Type:* com.hashicorp.cdktf.IResolvable|<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterSecurityConfigAuthorizationAdminUsers">GkeonpremBareMetalClusterSecurityConfigAuthorizationAdminUsers</a>
 
 ---
 
@@ -18975,12 +18945,12 @@ Returns a reversible string representation.
 ##### `putAdminUsers` <a name="putAdminUsers" id="@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterSecurityConfigAuthorizationOutputReference.putAdminUsers"></a>
 
 ```java
-public void putAdminUsers(IResolvable OR java.util.List<GkeonpremBareMetalClusterSecurityConfigAuthorizationAdminUsers> value)
+public void putAdminUsers(IResolvable|java.util.List<GkeonpremBareMetalClusterSecurityConfigAuthorizationAdminUsers> value)
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterSecurityConfigAuthorizationOutputReference.putAdminUsers.parameter.value"></a>
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterSecurityConfigAuthorizationAdminUsers">GkeonpremBareMetalClusterSecurityConfigAuthorizationAdminUsers</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterSecurityConfigAuthorizationAdminUsers">GkeonpremBareMetalClusterSecurityConfigAuthorizationAdminUsers</a>>
 
 ---
 
@@ -18992,7 +18962,7 @@ public void putAdminUsers(IResolvable OR java.util.List<GkeonpremBareMetalCluste
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterSecurityConfigAuthorizationOutputReference.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterSecurityConfigAuthorizationOutputReference.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterSecurityConfigAuthorizationOutputReference.property.adminUsers">adminUsers</a></code> | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterSecurityConfigAuthorizationAdminUsersList">GkeonpremBareMetalClusterSecurityConfigAuthorizationAdminUsersList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterSecurityConfigAuthorizationOutputReference.property.adminUsersInput">adminUsersInput</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterSecurityConfigAuthorizationAdminUsers">GkeonpremBareMetalClusterSecurityConfigAuthorizationAdminUsers</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterSecurityConfigAuthorizationOutputReference.property.adminUsersInput">adminUsersInput</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterSecurityConfigAuthorizationAdminUsers">GkeonpremBareMetalClusterSecurityConfigAuthorizationAdminUsers</a>></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterSecurityConfigAuthorizationOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterSecurityConfigAuthorization">GkeonpremBareMetalClusterSecurityConfigAuthorization</a></code> | *No description.* |
 
 ---
@@ -19034,10 +19004,10 @@ public GkeonpremBareMetalClusterSecurityConfigAuthorizationAdminUsersList getAdm
 ##### `adminUsersInput`<sup>Optional</sup> <a name="adminUsersInput" id="@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterSecurityConfigAuthorizationOutputReference.property.adminUsersInput"></a>
 
 ```java
-public java.lang.Object getAdminUsersInput();
+public IResolvable|java.util.List<GkeonpremBareMetalClusterSecurityConfigAuthorizationAdminUsers> getAdminUsersInput();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterSecurityConfigAuthorizationAdminUsers">GkeonpremBareMetalClusterSecurityConfigAuthorizationAdminUsers</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterSecurityConfigAuthorizationAdminUsers">GkeonpremBareMetalClusterSecurityConfigAuthorizationAdminUsers</a>>
 
 ---
 
@@ -21707,7 +21677,7 @@ public void resetUpdate()
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterTimeoutsOutputReference.property.create">create</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterTimeoutsOutputReference.property.delete">delete</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterTimeoutsOutputReference.property.update">update</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterTimeouts">GkeonpremBareMetalClusterTimeouts</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterTimeouts">GkeonpremBareMetalClusterTimeouts</a></code> | *No description.* |
 
 ---
 
@@ -21798,10 +21768,10 @@ public java.lang.String getUpdate();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterTimeoutsOutputReference.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|GkeonpremBareMetalClusterTimeouts getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterTimeouts">GkeonpremBareMetalClusterTimeouts</a>
+- *Type:* com.hashicorp.cdktf.IResolvable|<a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterTimeouts">GkeonpremBareMetalClusterTimeouts</a>
 
 ---
 

@@ -12,26 +12,20 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.5
 import com.hashicorp.cdktf.providers.google.integration_connectors_connection.IntegrationConnectorsConnection;
 
 IntegrationConnectorsConnection.Builder.create(Construct scope, java.lang.String id)
-//  .connection(SSHProvisionerConnection)
-//  .connection(WinrmProvisionerConnection)
-//  .count(java.lang.Number)
-//  .count(TerraformCount)
+//  .connection(SSHProvisionerConnection|WinrmProvisionerConnection)
+//  .count(java.lang.Number|TerraformCount)
 //  .dependsOn(java.util.List<ITerraformDependable>)
 //  .forEach(ITerraformIterator)
 //  .lifecycle(TerraformResourceLifecycle)
 //  .provider(TerraformProvider)
-//  .provisioners(java.util.List<FileProvisioner)
-//  .provisioners(LocalExecProvisioner)
-//  .provisioners(RemoteExecProvisioner>)
+//  .provisioners(java.util.List<FileProvisioner|LocalExecProvisioner|RemoteExecProvisioner>)
     .connectorVersion(java.lang.String)
     .location(java.lang.String)
     .name(java.lang.String)
 //  .authConfig(IntegrationConnectorsConnectionAuthConfig)
-//  .configVariable(IResolvable)
-//  .configVariable(java.util.List<IntegrationConnectorsConnectionConfigVariable>)
+//  .configVariable(IResolvable|java.util.List<IntegrationConnectorsConnectionConfigVariable>)
 //  .description(java.lang.String)
-//  .destinationConfig(IResolvable)
-//  .destinationConfig(java.util.List<IntegrationConnectorsConnectionDestinationConfig>)
+//  .destinationConfig(IResolvable|java.util.List<IntegrationConnectorsConnectionDestinationConfig>)
 //  .eventingConfig(IntegrationConnectorsConnectionEventingConfig)
 //  .eventingEnablementType(java.lang.String)
 //  .id(java.lang.String)
@@ -42,8 +36,7 @@ IntegrationConnectorsConnection.Builder.create(Construct scope, java.lang.String
 //  .project(java.lang.String)
 //  .serviceAccount(java.lang.String)
 //  .sslConfig(IntegrationConnectorsConnectionSslConfig)
-//  .suspended(java.lang.Boolean)
-//  .suspended(IResolvable)
+//  .suspended(java.lang.Boolean|IResolvable)
 //  .timeouts(IntegrationConnectorsConnectionTimeouts)
     .build();
 ```
@@ -52,20 +45,20 @@ IntegrationConnectorsConnection.Builder.create(Construct scope, java.lang.String
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.Initializer.parameter.scope">scope</a></code> | <code>software.constructs.Construct</code> | The scope in which to define this construct. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | The scoped construct ID. |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.Initializer.parameter.connection">connection</a></code> | <code>com.hashicorp.cdktf.SSHProvisionerConnection OR com.hashicorp.cdktf.WinrmProvisionerConnection</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.Initializer.parameter.count">count</a></code> | <code>java.lang.Number OR com.hashicorp.cdktf.TerraformCount</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.Initializer.parameter.connection">connection</a></code> | <code>com.hashicorp.cdktf.SSHProvisionerConnection\|com.hashicorp.cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.Initializer.parameter.count">count</a></code> | <code>java.lang.Number\|com.hashicorp.cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.Initializer.parameter.dependsOn">dependsOn</a></code> | <code>java.util.List<com.hashicorp.cdktf.ITerraformDependable></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.Initializer.parameter.forEach">forEach</a></code> | <code>com.hashicorp.cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.Initializer.parameter.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.Initializer.parameter.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.Initializer.parameter.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner\|com.hashicorp.cdktf.LocalExecProvisioner\|com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.Initializer.parameter.connectorVersion">connectorVersion</a></code> | <code>java.lang.String</code> | connectorVersion of the Connector. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.Initializer.parameter.location">location</a></code> | <code>java.lang.String</code> | Location in which Connection needs to be created. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.Initializer.parameter.name">name</a></code> | <code>java.lang.String</code> | Name of Connection needs to be created. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.Initializer.parameter.authConfig">authConfig</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfig">IntegrationConnectorsConnectionAuthConfig</a></code> | auth_config block. |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.Initializer.parameter.configVariable">configVariable</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfigVariable">IntegrationConnectorsConnectionConfigVariable</a>></code> | config_variable block. |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.Initializer.parameter.configVariable">configVariable</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfigVariable">IntegrationConnectorsConnectionConfigVariable</a>></code> | config_variable block. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.Initializer.parameter.description">description</a></code> | <code>java.lang.String</code> | An arbitrary description for the Connection. |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.Initializer.parameter.destinationConfig">destinationConfig</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfig">IntegrationConnectorsConnectionDestinationConfig</a>></code> | destination_config block. |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.Initializer.parameter.destinationConfig">destinationConfig</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfig">IntegrationConnectorsConnectionDestinationConfig</a>></code> | destination_config block. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.Initializer.parameter.eventingConfig">eventingConfig</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfig">IntegrationConnectorsConnectionEventingConfig</a></code> | eventing_config block. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.Initializer.parameter.eventingEnablementType">eventingEnablementType</a></code> | <code>java.lang.String</code> | Eventing enablement type. Will be nil if eventing is not enabled. Possible values: ["EVENTING_AND_CONNECTION", "ONLY_EVENTING"]. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/integration_connectors_connection#id IntegrationConnectorsConnection#id}. |
@@ -76,7 +69,7 @@ IntegrationConnectorsConnection.Builder.create(Construct scope, java.lang.String
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.Initializer.parameter.project">project</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/integration_connectors_connection#project IntegrationConnectorsConnection#project}. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.Initializer.parameter.serviceAccount">serviceAccount</a></code> | <code>java.lang.String</code> | Service account needed for runtime plane to access Google Cloud resources. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.Initializer.parameter.sslConfig">sslConfig</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfig">IntegrationConnectorsConnectionSslConfig</a></code> | ssl_config block. |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.Initializer.parameter.suspended">suspended</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Suspended indicates if a user has suspended a connection or not. |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.Initializer.parameter.suspended">suspended</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Suspended indicates if a user has suspended a connection or not. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionTimeouts">IntegrationConnectorsConnectionTimeouts</a></code> | timeouts block. |
 
 ---
@@ -101,13 +94,13 @@ Must be unique amongst siblings in the same scope
 
 ##### `connection`<sup>Optional</sup> <a name="connection" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.Initializer.parameter.connection"></a>
 
-- *Type:* com.hashicorp.cdktf.SSHProvisionerConnection OR com.hashicorp.cdktf.WinrmProvisionerConnection
+- *Type:* com.hashicorp.cdktf.SSHProvisionerConnection|com.hashicorp.cdktf.WinrmProvisionerConnection
 
 ---
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.Initializer.parameter.count"></a>
 
-- *Type:* java.lang.Number OR com.hashicorp.cdktf.TerraformCount
+- *Type:* java.lang.Number|com.hashicorp.cdktf.TerraformCount
 
 ---
 
@@ -137,7 +130,7 @@ Must be unique amongst siblings in the same scope
 
 ##### `provisioners`<sup>Optional</sup> <a name="provisioners" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.Initializer.parameter.provisioners"></a>
 
-- *Type:* java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner>
+- *Type:* java.util.List<com.hashicorp.cdktf.FileProvisioner|com.hashicorp.cdktf.LocalExecProvisioner|com.hashicorp.cdktf.RemoteExecProvisioner>
 
 ---
 
@@ -183,7 +176,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `configVariable`<sup>Optional</sup> <a name="configVariable" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.Initializer.parameter.configVariable"></a>
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfigVariable">IntegrationConnectorsConnectionConfigVariable</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfigVariable">IntegrationConnectorsConnectionConfigVariable</a>>
 
 config_variable block.
 
@@ -203,7 +196,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `destinationConfig`<sup>Optional</sup> <a name="destinationConfig" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.Initializer.parameter.destinationConfig"></a>
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfig">IntegrationConnectorsConnectionDestinationConfig</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfig">IntegrationConnectorsConnectionDestinationConfig</a>>
 
 destination_config block.
 
@@ -315,7 +308,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `suspended`<sup>Optional</sup> <a name="suspended" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.Initializer.parameter.suspended"></a>
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 Suspended indicates if a user has suspended a connection or not.
 
@@ -585,7 +578,7 @@ public java.util.Map<java.lang.String, java.lang.String> getStringMapAttribute(j
 ##### `hasResourceMove` <a name="hasResourceMove" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.hasResourceMove"></a>
 
 ```java
-public TerraformResourceMoveByTarget OR TerraformResourceMoveById hasResourceMove()
+public TerraformResourceMoveByTarget|TerraformResourceMoveById hasResourceMove()
 ```
 
 ##### `importFrom` <a name="importFrom" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.importFrom"></a>
@@ -641,7 +634,7 @@ Full id of resource being moved from, e.g. "aws_s3_bucket.example".
 
 ```java
 public void moveTo(java.lang.String moveTarget)
-public void moveTo(java.lang.String moveTarget, java.lang.String OR java.lang.Number index)
+public void moveTo(java.lang.String moveTarget, java.lang.String|java.lang.Number index)
 ```
 
 Moves this resource to the target resource given by moveTarget.
@@ -656,7 +649,7 @@ The previously set user defined string set by .addMoveTarget() corresponding to 
 
 ###### `index`<sup>Optional</sup> <a name="index" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.moveTo.parameter.index"></a>
 
-- *Type:* java.lang.String OR java.lang.Number
+- *Type:* java.lang.String|java.lang.Number
 
 Optional The index corresponding to the key the resource is to appear in the foreach of a resource to move to.
 
@@ -693,24 +686,24 @@ public void putAuthConfig(IntegrationConnectorsConnectionAuthConfig value)
 ##### `putConfigVariable` <a name="putConfigVariable" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.putConfigVariable"></a>
 
 ```java
-public void putConfigVariable(IResolvable OR java.util.List<IntegrationConnectorsConnectionConfigVariable> value)
+public void putConfigVariable(IResolvable|java.util.List<IntegrationConnectorsConnectionConfigVariable> value)
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.putConfigVariable.parameter.value"></a>
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfigVariable">IntegrationConnectorsConnectionConfigVariable</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfigVariable">IntegrationConnectorsConnectionConfigVariable</a>>
 
 ---
 
 ##### `putDestinationConfig` <a name="putDestinationConfig" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.putDestinationConfig"></a>
 
 ```java
-public void putDestinationConfig(IResolvable OR java.util.List<IntegrationConnectorsConnectionDestinationConfig> value)
+public void putDestinationConfig(IResolvable|java.util.List<IntegrationConnectorsConnectionDestinationConfig> value)
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.putDestinationConfig.parameter.value"></a>
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfig">IntegrationConnectorsConnectionDestinationConfig</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfig">IntegrationConnectorsConnectionDestinationConfig</a>>
 
 ---
 
@@ -1008,13 +1001,13 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.5
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.property.terraformMetaArguments">terraformMetaArguments</a></code> | <code>java.util.Map<java.lang.String, java.lang.Object></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.property.terraformResourceType">terraformResourceType</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.property.terraformGeneratorMetadata">terraformGeneratorMetadata</a></code> | <code>com.hashicorp.cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.property.connection">connection</a></code> | <code>com.hashicorp.cdktf.SSHProvisionerConnection OR com.hashicorp.cdktf.WinrmProvisionerConnection</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.property.count">count</a></code> | <code>java.lang.Number OR com.hashicorp.cdktf.TerraformCount</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.property.connection">connection</a></code> | <code>com.hashicorp.cdktf.SSHProvisionerConnection\|com.hashicorp.cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.property.count">count</a></code> | <code>java.lang.Number\|com.hashicorp.cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.property.dependsOn">dependsOn</a></code> | <code>java.util.List<java.lang.String></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.property.forEach">forEach</a></code> | <code>com.hashicorp.cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.property.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.property.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.property.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.property.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner\|com.hashicorp.cdktf.LocalExecProvisioner\|com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.property.authConfig">authConfig</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigOutputReference">IntegrationConnectorsConnectionAuthConfigOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.property.configVariable">configVariable</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfigVariableList">IntegrationConnectorsConnectionConfigVariableList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.property.connectionRevision">connectionRevision</a></code> | <code>java.lang.String</code> | *No description.* |
@@ -1036,10 +1029,10 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.5
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionTimeoutsOutputReference">IntegrationConnectorsConnectionTimeoutsOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.property.updateTime">updateTime</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.property.authConfigInput">authConfigInput</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfig">IntegrationConnectorsConnectionAuthConfig</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.property.configVariableInput">configVariableInput</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfigVariable">IntegrationConnectorsConnectionConfigVariable</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.property.configVariableInput">configVariableInput</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfigVariable">IntegrationConnectorsConnectionConfigVariable</a>></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.property.connectorVersionInput">connectorVersionInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.property.descriptionInput">descriptionInput</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.property.destinationConfigInput">destinationConfigInput</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfig">IntegrationConnectorsConnectionDestinationConfig</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.property.destinationConfigInput">destinationConfigInput</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfig">IntegrationConnectorsConnectionDestinationConfig</a>></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.property.eventingConfigInput">eventingConfigInput</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfig">IntegrationConnectorsConnectionEventingConfig</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.property.eventingEnablementTypeInput">eventingEnablementTypeInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.property.idInput">idInput</a></code> | <code>java.lang.String</code> | *No description.* |
@@ -1052,8 +1045,8 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.5
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.property.projectInput">projectInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.property.serviceAccountInput">serviceAccountInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.property.sslConfigInput">sslConfigInput</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfig">IntegrationConnectorsConnectionSslConfig</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.property.suspendedInput">suspendedInput</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.property.timeoutsInput">timeoutsInput</a></code> | <code>com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionTimeouts">IntegrationConnectorsConnectionTimeouts</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.property.suspendedInput">suspendedInput</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.property.timeoutsInput">timeoutsInput</a></code> | <code>com.hashicorp.cdktf.IResolvable\|<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionTimeouts">IntegrationConnectorsConnectionTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.property.connectorVersion">connectorVersion</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.property.description">description</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.property.eventingEnablementType">eventingEnablementType</a></code> | <code>java.lang.String</code> | *No description.* |
@@ -1063,7 +1056,7 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.5
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.property.name">name</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.property.project">project</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.property.serviceAccount">serviceAccount</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.property.suspended">suspended</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.property.suspended">suspended</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 
 ---
 
@@ -1142,20 +1135,20 @@ public TerraformProviderGeneratorMetadata getTerraformGeneratorMetadata();
 ##### `connection`<sup>Optional</sup> <a name="connection" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.property.connection"></a>
 
 ```java
-public java.lang.Object getConnection();
+public SSHProvisionerConnection|WinrmProvisionerConnection getConnection();
 ```
 
-- *Type:* com.hashicorp.cdktf.SSHProvisionerConnection OR com.hashicorp.cdktf.WinrmProvisionerConnection
+- *Type:* com.hashicorp.cdktf.SSHProvisionerConnection|com.hashicorp.cdktf.WinrmProvisionerConnection
 
 ---
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.property.count"></a>
 
 ```java
-public java.lang.Object getCount();
+public java.lang.Number|TerraformCount getCount();
 ```
 
-- *Type:* java.lang.Number OR com.hashicorp.cdktf.TerraformCount
+- *Type:* java.lang.Number|com.hashicorp.cdktf.TerraformCount
 
 ---
 
@@ -1202,10 +1195,10 @@ public TerraformProvider getProvider();
 ##### `provisioners`<sup>Optional</sup> <a name="provisioners" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.property.provisioners"></a>
 
 ```java
-public java.lang.Object getProvisioners();
+public java.util.List<FileProvisioner|LocalExecProvisioner|RemoteExecProvisioner> getProvisioners();
 ```
 
-- *Type:* java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner>
+- *Type:* java.util.List<com.hashicorp.cdktf.FileProvisioner|com.hashicorp.cdktf.LocalExecProvisioner|com.hashicorp.cdktf.RemoteExecProvisioner>
 
 ---
 
@@ -1422,10 +1415,10 @@ public IntegrationConnectorsConnectionAuthConfig getAuthConfigInput();
 ##### `configVariableInput`<sup>Optional</sup> <a name="configVariableInput" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.property.configVariableInput"></a>
 
 ```java
-public java.lang.Object getConfigVariableInput();
+public IResolvable|java.util.List<IntegrationConnectorsConnectionConfigVariable> getConfigVariableInput();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfigVariable">IntegrationConnectorsConnectionConfigVariable</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfigVariable">IntegrationConnectorsConnectionConfigVariable</a>>
 
 ---
 
@@ -1452,10 +1445,10 @@ public java.lang.String getDescriptionInput();
 ##### `destinationConfigInput`<sup>Optional</sup> <a name="destinationConfigInput" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.property.destinationConfigInput"></a>
 
 ```java
-public java.lang.Object getDestinationConfigInput();
+public IResolvable|java.util.List<IntegrationConnectorsConnectionDestinationConfig> getDestinationConfigInput();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfig">IntegrationConnectorsConnectionDestinationConfig</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfig">IntegrationConnectorsConnectionDestinationConfig</a>>
 
 ---
 
@@ -1582,20 +1575,20 @@ public IntegrationConnectorsConnectionSslConfig getSslConfigInput();
 ##### `suspendedInput`<sup>Optional</sup> <a name="suspendedInput" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.property.suspendedInput"></a>
 
 ```java
-public java.lang.Object getSuspendedInput();
+public java.lang.Boolean|IResolvable getSuspendedInput();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
 ##### `timeoutsInput`<sup>Optional</sup> <a name="timeoutsInput" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.property.timeoutsInput"></a>
 
 ```java
-public java.lang.Object getTimeoutsInput();
+public IResolvable|IntegrationConnectorsConnectionTimeouts getTimeoutsInput();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionTimeouts">IntegrationConnectorsConnectionTimeouts</a>
+- *Type:* com.hashicorp.cdktf.IResolvable|<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionTimeouts">IntegrationConnectorsConnectionTimeouts</a>
 
 ---
 
@@ -1692,10 +1685,10 @@ public java.lang.String getServiceAccount();
 ##### `suspended`<sup>Required</sup> <a name="suspended" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.property.suspended"></a>
 
 ```java
-public java.lang.Object getSuspended();
+public java.lang.Boolean|IResolvable getSuspended();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
@@ -1728,8 +1721,7 @@ import com.hashicorp.cdktf.providers.google.integration_connectors_connection.In
 
 IntegrationConnectorsConnectionAuthConfig.builder()
     .authType(java.lang.String)
-//  .additionalVariable(IResolvable)
-//  .additionalVariable(java.util.List<IntegrationConnectorsConnectionAuthConfigAdditionalVariable>)
+//  .additionalVariable(IResolvable|java.util.List<IntegrationConnectorsConnectionAuthConfigAdditionalVariable>)
 //  .authKey(java.lang.String)
 //  .oauth2AuthCodeFlow(IntegrationConnectorsConnectionAuthConfigOauth2AuthCodeFlow)
 //  .oauth2ClientCredentials(IntegrationConnectorsConnectionAuthConfigOauth2ClientCredentials)
@@ -1744,7 +1736,7 @@ IntegrationConnectorsConnectionAuthConfig.builder()
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfig.property.authType">authType</a></code> | <code>java.lang.String</code> | authType of the Connection Possible values: ["AUTH_TYPE_UNSPECIFIED", "USER_PASSWORD", "OAUTH2_JWT_BEARER", "OAUTH2_CLIENT_CREDENTIALS", "SSH_PUBLIC_KEY", "OAUTH2_AUTH_CODE_FLOW"]. |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfig.property.additionalVariable">additionalVariable</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigAdditionalVariable">IntegrationConnectorsConnectionAuthConfigAdditionalVariable</a>></code> | additional_variable block. |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfig.property.additionalVariable">additionalVariable</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigAdditionalVariable">IntegrationConnectorsConnectionAuthConfigAdditionalVariable</a>></code> | additional_variable block. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfig.property.authKey">authKey</a></code> | <code>java.lang.String</code> | The type of authentication configured. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfig.property.oauth2AuthCodeFlow">oauth2AuthCodeFlow</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigOauth2AuthCodeFlow">IntegrationConnectorsConnectionAuthConfigOauth2AuthCodeFlow</a></code> | oauth2_auth_code_flow block. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfig.property.oauth2ClientCredentials">oauth2ClientCredentials</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigOauth2ClientCredentials">IntegrationConnectorsConnectionAuthConfigOauth2ClientCredentials</a></code> | oauth2_client_credentials block. |
@@ -1771,10 +1763,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `additionalVariable`<sup>Optional</sup> <a name="additionalVariable" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfig.property.additionalVariable"></a>
 
 ```java
-public java.lang.Object getAdditionalVariable();
+public IResolvable|java.util.List<IntegrationConnectorsConnectionAuthConfigAdditionalVariable> getAdditionalVariable();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigAdditionalVariable">IntegrationConnectorsConnectionAuthConfigAdditionalVariable</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigAdditionalVariable">IntegrationConnectorsConnectionAuthConfigAdditionalVariable</a>>
 
 additional_variable block.
 
@@ -1875,8 +1867,7 @@ import com.hashicorp.cdktf.providers.google.integration_connectors_connection.In
 
 IntegrationConnectorsConnectionAuthConfigAdditionalVariable.builder()
     .key(java.lang.String)
-//  .booleanValue(java.lang.Boolean)
-//  .booleanValue(IResolvable)
+//  .booleanValue(java.lang.Boolean|IResolvable)
 //  .encryptionKeyValue(IntegrationConnectorsConnectionAuthConfigAdditionalVariableEncryptionKeyValue)
 //  .integerValue(java.lang.Number)
 //  .secretValue(IntegrationConnectorsConnectionAuthConfigAdditionalVariableSecretValue)
@@ -1889,7 +1880,7 @@ IntegrationConnectorsConnectionAuthConfigAdditionalVariable.builder()
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigAdditionalVariable.property.key">key</a></code> | <code>java.lang.String</code> | Key for the configVariable. |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigAdditionalVariable.property.booleanValue">booleanValue</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Boolean Value of configVariable. |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigAdditionalVariable.property.booleanValue">booleanValue</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Boolean Value of configVariable. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigAdditionalVariable.property.encryptionKeyValue">encryptionKeyValue</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigAdditionalVariableEncryptionKeyValue">IntegrationConnectorsConnectionAuthConfigAdditionalVariableEncryptionKeyValue</a></code> | encryption_key_value block. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigAdditionalVariable.property.integerValue">integerValue</a></code> | <code>java.lang.Number</code> | Integer Value of configVariable. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigAdditionalVariable.property.secretValue">secretValue</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigAdditionalVariableSecretValue">IntegrationConnectorsConnectionAuthConfigAdditionalVariableSecretValue</a></code> | secret_value block. |
@@ -1914,10 +1905,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `booleanValue`<sup>Optional</sup> <a name="booleanValue" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigAdditionalVariable.property.booleanValue"></a>
 
 ```java
-public java.lang.Object getBooleanValue();
+public java.lang.Boolean|IResolvable getBooleanValue();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 Boolean Value of configVariable.
 
@@ -2082,8 +2073,7 @@ IntegrationConnectorsConnectionAuthConfigOauth2AuthCodeFlow.builder()
 //  .authUri(java.lang.String)
 //  .clientId(java.lang.String)
 //  .clientSecret(IntegrationConnectorsConnectionAuthConfigOauth2AuthCodeFlowClientSecret)
-//  .enablePkce(java.lang.Boolean)
-//  .enablePkce(IResolvable)
+//  .enablePkce(java.lang.Boolean|IResolvable)
 //  .scopes(java.util.List<java.lang.String>)
     .build();
 ```
@@ -2095,7 +2085,7 @@ IntegrationConnectorsConnectionAuthConfigOauth2AuthCodeFlow.builder()
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigOauth2AuthCodeFlow.property.authUri">authUri</a></code> | <code>java.lang.String</code> | Auth URL for Authorization Code Flow. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigOauth2AuthCodeFlow.property.clientId">clientId</a></code> | <code>java.lang.String</code> | Client ID for user-provided OAuth app. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigOauth2AuthCodeFlow.property.clientSecret">clientSecret</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigOauth2AuthCodeFlowClientSecret">IntegrationConnectorsConnectionAuthConfigOauth2AuthCodeFlowClientSecret</a></code> | client_secret block. |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigOauth2AuthCodeFlow.property.enablePkce">enablePkce</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Whether to enable PKCE when the user performs the auth code flow. |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigOauth2AuthCodeFlow.property.enablePkce">enablePkce</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Whether to enable PKCE when the user performs the auth code flow. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigOauth2AuthCodeFlow.property.scopes">scopes</a></code> | <code>java.util.List<java.lang.String></code> | Scopes the connection will request when the user performs the auth code flow. |
 
 ---
@@ -2145,10 +2135,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `enablePkce`<sup>Optional</sup> <a name="enablePkce" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigOauth2AuthCodeFlow.property.enablePkce"></a>
 
 ```java
-public java.lang.Object getEnablePkce();
+public java.lang.Boolean|IResolvable getEnablePkce();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 Whether to enable PKCE when the user performs the auth code flow.
 
@@ -2692,26 +2682,20 @@ Note: The above comment contained a comment block ending sequence (* followed by
 import com.hashicorp.cdktf.providers.google.integration_connectors_connection.IntegrationConnectorsConnectionConfig;
 
 IntegrationConnectorsConnectionConfig.builder()
-//  .connection(SSHProvisionerConnection)
-//  .connection(WinrmProvisionerConnection)
-//  .count(java.lang.Number)
-//  .count(TerraformCount)
+//  .connection(SSHProvisionerConnection|WinrmProvisionerConnection)
+//  .count(java.lang.Number|TerraformCount)
 //  .dependsOn(java.util.List<ITerraformDependable>)
 //  .forEach(ITerraformIterator)
 //  .lifecycle(TerraformResourceLifecycle)
 //  .provider(TerraformProvider)
-//  .provisioners(java.util.List<FileProvisioner)
-//  .provisioners(LocalExecProvisioner)
-//  .provisioners(RemoteExecProvisioner>)
+//  .provisioners(java.util.List<FileProvisioner|LocalExecProvisioner|RemoteExecProvisioner>)
     .connectorVersion(java.lang.String)
     .location(java.lang.String)
     .name(java.lang.String)
 //  .authConfig(IntegrationConnectorsConnectionAuthConfig)
-//  .configVariable(IResolvable)
-//  .configVariable(java.util.List<IntegrationConnectorsConnectionConfigVariable>)
+//  .configVariable(IResolvable|java.util.List<IntegrationConnectorsConnectionConfigVariable>)
 //  .description(java.lang.String)
-//  .destinationConfig(IResolvable)
-//  .destinationConfig(java.util.List<IntegrationConnectorsConnectionDestinationConfig>)
+//  .destinationConfig(IResolvable|java.util.List<IntegrationConnectorsConnectionDestinationConfig>)
 //  .eventingConfig(IntegrationConnectorsConnectionEventingConfig)
 //  .eventingEnablementType(java.lang.String)
 //  .id(java.lang.String)
@@ -2722,8 +2706,7 @@ IntegrationConnectorsConnectionConfig.builder()
 //  .project(java.lang.String)
 //  .serviceAccount(java.lang.String)
 //  .sslConfig(IntegrationConnectorsConnectionSslConfig)
-//  .suspended(java.lang.Boolean)
-//  .suspended(IResolvable)
+//  .suspended(java.lang.Boolean|IResolvable)
 //  .timeouts(IntegrationConnectorsConnectionTimeouts)
     .build();
 ```
@@ -2732,20 +2715,20 @@ IntegrationConnectorsConnectionConfig.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfig.property.connection">connection</a></code> | <code>com.hashicorp.cdktf.SSHProvisionerConnection OR com.hashicorp.cdktf.WinrmProvisionerConnection</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfig.property.count">count</a></code> | <code>java.lang.Number OR com.hashicorp.cdktf.TerraformCount</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfig.property.connection">connection</a></code> | <code>com.hashicorp.cdktf.SSHProvisionerConnection\|com.hashicorp.cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfig.property.count">count</a></code> | <code>java.lang.Number\|com.hashicorp.cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfig.property.dependsOn">dependsOn</a></code> | <code>java.util.List<com.hashicorp.cdktf.ITerraformDependable></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfig.property.forEach">forEach</a></code> | <code>com.hashicorp.cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfig.property.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfig.property.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfig.property.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfig.property.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner\|com.hashicorp.cdktf.LocalExecProvisioner\|com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfig.property.connectorVersion">connectorVersion</a></code> | <code>java.lang.String</code> | connectorVersion of the Connector. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfig.property.location">location</a></code> | <code>java.lang.String</code> | Location in which Connection needs to be created. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfig.property.name">name</a></code> | <code>java.lang.String</code> | Name of Connection needs to be created. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfig.property.authConfig">authConfig</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfig">IntegrationConnectorsConnectionAuthConfig</a></code> | auth_config block. |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfig.property.configVariable">configVariable</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfigVariable">IntegrationConnectorsConnectionConfigVariable</a>></code> | config_variable block. |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfig.property.configVariable">configVariable</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfigVariable">IntegrationConnectorsConnectionConfigVariable</a>></code> | config_variable block. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfig.property.description">description</a></code> | <code>java.lang.String</code> | An arbitrary description for the Connection. |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfig.property.destinationConfig">destinationConfig</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfig">IntegrationConnectorsConnectionDestinationConfig</a>></code> | destination_config block. |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfig.property.destinationConfig">destinationConfig</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfig">IntegrationConnectorsConnectionDestinationConfig</a>></code> | destination_config block. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfig.property.eventingConfig">eventingConfig</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfig">IntegrationConnectorsConnectionEventingConfig</a></code> | eventing_config block. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfig.property.eventingEnablementType">eventingEnablementType</a></code> | <code>java.lang.String</code> | Eventing enablement type. Will be nil if eventing is not enabled. Possible values: ["EVENTING_AND_CONNECTION", "ONLY_EVENTING"]. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/integration_connectors_connection#id IntegrationConnectorsConnection#id}. |
@@ -2756,7 +2739,7 @@ IntegrationConnectorsConnectionConfig.builder()
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfig.property.project">project</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/integration_connectors_connection#project IntegrationConnectorsConnection#project}. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfig.property.serviceAccount">serviceAccount</a></code> | <code>java.lang.String</code> | Service account needed for runtime plane to access Google Cloud resources. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfig.property.sslConfig">sslConfig</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfig">IntegrationConnectorsConnectionSslConfig</a></code> | ssl_config block. |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfig.property.suspended">suspended</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Suspended indicates if a user has suspended a connection or not. |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfig.property.suspended">suspended</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Suspended indicates if a user has suspended a connection or not. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionTimeouts">IntegrationConnectorsConnectionTimeouts</a></code> | timeouts block. |
 
 ---
@@ -2764,20 +2747,20 @@ IntegrationConnectorsConnectionConfig.builder()
 ##### `connection`<sup>Optional</sup> <a name="connection" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfig.property.connection"></a>
 
 ```java
-public java.lang.Object getConnection();
+public SSHProvisionerConnection|WinrmProvisionerConnection getConnection();
 ```
 
-- *Type:* com.hashicorp.cdktf.SSHProvisionerConnection OR com.hashicorp.cdktf.WinrmProvisionerConnection
+- *Type:* com.hashicorp.cdktf.SSHProvisionerConnection|com.hashicorp.cdktf.WinrmProvisionerConnection
 
 ---
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfig.property.count"></a>
 
 ```java
-public java.lang.Object getCount();
+public java.lang.Number|TerraformCount getCount();
 ```
 
-- *Type:* java.lang.Number OR com.hashicorp.cdktf.TerraformCount
+- *Type:* java.lang.Number|com.hashicorp.cdktf.TerraformCount
 
 ---
 
@@ -2824,10 +2807,10 @@ public TerraformProvider getProvider();
 ##### `provisioners`<sup>Optional</sup> <a name="provisioners" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfig.property.provisioners"></a>
 
 ```java
-public java.lang.Object getProvisioners();
+public java.util.List<FileProvisioner|LocalExecProvisioner|RemoteExecProvisioner> getProvisioners();
 ```
 
-- *Type:* java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner>
+- *Type:* java.util.List<com.hashicorp.cdktf.FileProvisioner|com.hashicorp.cdktf.LocalExecProvisioner|com.hashicorp.cdktf.RemoteExecProvisioner>
 
 ---
 
@@ -2890,10 +2873,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `configVariable`<sup>Optional</sup> <a name="configVariable" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfig.property.configVariable"></a>
 
 ```java
-public java.lang.Object getConfigVariable();
+public IResolvable|java.util.List<IntegrationConnectorsConnectionConfigVariable> getConfigVariable();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfigVariable">IntegrationConnectorsConnectionConfigVariable</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfigVariable">IntegrationConnectorsConnectionConfigVariable</a>>
 
 config_variable block.
 
@@ -2918,10 +2901,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `destinationConfig`<sup>Optional</sup> <a name="destinationConfig" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfig.property.destinationConfig"></a>
 
 ```java
-public java.lang.Object getDestinationConfig();
+public IResolvable|java.util.List<IntegrationConnectorsConnectionDestinationConfig> getDestinationConfig();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfig">IntegrationConnectorsConnectionDestinationConfig</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfig">IntegrationConnectorsConnectionDestinationConfig</a>>
 
 destination_config block.
 
@@ -3074,10 +3057,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `suspended`<sup>Optional</sup> <a name="suspended" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfig.property.suspended"></a>
 
 ```java
-public java.lang.Object getSuspended();
+public java.lang.Boolean|IResolvable getSuspended();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 Suspended indicates if a user has suspended a connection or not.
 
@@ -3108,8 +3091,7 @@ import com.hashicorp.cdktf.providers.google.integration_connectors_connection.In
 
 IntegrationConnectorsConnectionConfigVariable.builder()
     .key(java.lang.String)
-//  .booleanValue(java.lang.Boolean)
-//  .booleanValue(IResolvable)
+//  .booleanValue(java.lang.Boolean|IResolvable)
 //  .encryptionKeyValue(IntegrationConnectorsConnectionConfigVariableEncryptionKeyValue)
 //  .integerValue(java.lang.Number)
 //  .secretValue(IntegrationConnectorsConnectionConfigVariableSecretValue)
@@ -3122,7 +3104,7 @@ IntegrationConnectorsConnectionConfigVariable.builder()
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfigVariable.property.key">key</a></code> | <code>java.lang.String</code> | Key for the configVariable. |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfigVariable.property.booleanValue">booleanValue</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Boolean Value of configVariable. |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfigVariable.property.booleanValue">booleanValue</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Boolean Value of configVariable. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfigVariable.property.encryptionKeyValue">encryptionKeyValue</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfigVariableEncryptionKeyValue">IntegrationConnectorsConnectionConfigVariableEncryptionKeyValue</a></code> | encryption_key_value block. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfigVariable.property.integerValue">integerValue</a></code> | <code>java.lang.Number</code> | Integer Value of configVariable. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfigVariable.property.secretValue">secretValue</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfigVariableSecretValue">IntegrationConnectorsConnectionConfigVariableSecretValue</a></code> | secret_value block. |
@@ -3147,10 +3129,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `booleanValue`<sup>Optional</sup> <a name="booleanValue" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfigVariable.property.booleanValue"></a>
 
 ```java
-public java.lang.Object getBooleanValue();
+public java.lang.Boolean|IResolvable getBooleanValue();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 Boolean Value of configVariable.
 
@@ -3325,8 +3307,7 @@ import com.hashicorp.cdktf.providers.google.integration_connectors_connection.In
 
 IntegrationConnectorsConnectionDestinationConfig.builder()
     .key(java.lang.String)
-//  .destination(IResolvable)
-//  .destination(java.util.List<IntegrationConnectorsConnectionDestinationConfigDestination>)
+//  .destination(IResolvable|java.util.List<IntegrationConnectorsConnectionDestinationConfigDestination>)
     .build();
 ```
 
@@ -3335,7 +3316,7 @@ IntegrationConnectorsConnectionDestinationConfig.builder()
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfig.property.key">key</a></code> | <code>java.lang.String</code> | The key is the destination identifier that is supported by the Connector. |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfig.property.destination">destination</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfigDestination">IntegrationConnectorsConnectionDestinationConfigDestination</a>></code> | destination block. |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfig.property.destination">destination</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfigDestination">IntegrationConnectorsConnectionDestinationConfigDestination</a>></code> | destination block. |
 
 ---
 
@@ -3356,10 +3337,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `destination`<sup>Optional</sup> <a name="destination" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfig.property.destination"></a>
 
 ```java
-public java.lang.Object getDestination();
+public IResolvable|java.util.List<IntegrationConnectorsConnectionDestinationConfigDestination> getDestination();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfigDestination">IntegrationConnectorsConnectionDestinationConfigDestination</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfigDestination">IntegrationConnectorsConnectionDestinationConfigDestination</a>>
 
 destination block.
 
@@ -3444,11 +3425,9 @@ import com.hashicorp.cdktf.providers.google.integration_connectors_connection.In
 
 IntegrationConnectorsConnectionEventingConfig.builder()
     .registrationDestinationConfig(IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfig)
-//  .additionalVariable(IResolvable)
-//  .additionalVariable(java.util.List<IntegrationConnectorsConnectionEventingConfigAdditionalVariable>)
+//  .additionalVariable(IResolvable|java.util.List<IntegrationConnectorsConnectionEventingConfigAdditionalVariable>)
 //  .authConfig(IntegrationConnectorsConnectionEventingConfigAuthConfig)
-//  .enrichmentEnabled(java.lang.Boolean)
-//  .enrichmentEnabled(IResolvable)
+//  .enrichmentEnabled(java.lang.Boolean|IResolvable)
     .build();
 ```
 
@@ -3457,9 +3436,9 @@ IntegrationConnectorsConnectionEventingConfig.builder()
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfig.property.registrationDestinationConfig">registrationDestinationConfig</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfig">IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfig</a></code> | registration_destination_config block. |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfig.property.additionalVariable">additionalVariable</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAdditionalVariable">IntegrationConnectorsConnectionEventingConfigAdditionalVariable</a>></code> | additional_variable block. |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfig.property.additionalVariable">additionalVariable</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAdditionalVariable">IntegrationConnectorsConnectionEventingConfigAdditionalVariable</a>></code> | additional_variable block. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfig.property.authConfig">authConfig</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfig">IntegrationConnectorsConnectionEventingConfigAuthConfig</a></code> | auth_config block. |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfig.property.enrichmentEnabled">enrichmentEnabled</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Enrichment Enabled. |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfig.property.enrichmentEnabled">enrichmentEnabled</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Enrichment Enabled. |
 
 ---
 
@@ -3480,10 +3459,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `additionalVariable`<sup>Optional</sup> <a name="additionalVariable" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfig.property.additionalVariable"></a>
 
 ```java
-public java.lang.Object getAdditionalVariable();
+public IResolvable|java.util.List<IntegrationConnectorsConnectionEventingConfigAdditionalVariable> getAdditionalVariable();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAdditionalVariable">IntegrationConnectorsConnectionEventingConfigAdditionalVariable</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAdditionalVariable">IntegrationConnectorsConnectionEventingConfigAdditionalVariable</a>>
 
 additional_variable block.
 
@@ -3508,10 +3487,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `enrichmentEnabled`<sup>Optional</sup> <a name="enrichmentEnabled" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfig.property.enrichmentEnabled"></a>
 
 ```java
-public java.lang.Object getEnrichmentEnabled();
+public java.lang.Boolean|IResolvable getEnrichmentEnabled();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 Enrichment Enabled.
 
@@ -3528,8 +3507,7 @@ import com.hashicorp.cdktf.providers.google.integration_connectors_connection.In
 
 IntegrationConnectorsConnectionEventingConfigAdditionalVariable.builder()
     .key(java.lang.String)
-//  .booleanValue(java.lang.Boolean)
-//  .booleanValue(IResolvable)
+//  .booleanValue(java.lang.Boolean|IResolvable)
 //  .encryptionKeyValue(IntegrationConnectorsConnectionEventingConfigAdditionalVariableEncryptionKeyValue)
 //  .integerValue(java.lang.Number)
 //  .secretValue(IntegrationConnectorsConnectionEventingConfigAdditionalVariableSecretValue)
@@ -3542,7 +3520,7 @@ IntegrationConnectorsConnectionEventingConfigAdditionalVariable.builder()
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAdditionalVariable.property.key">key</a></code> | <code>java.lang.String</code> | Key for the configVariable. |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAdditionalVariable.property.booleanValue">booleanValue</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Boolean Value of configVariable. |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAdditionalVariable.property.booleanValue">booleanValue</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Boolean Value of configVariable. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAdditionalVariable.property.encryptionKeyValue">encryptionKeyValue</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAdditionalVariableEncryptionKeyValue">IntegrationConnectorsConnectionEventingConfigAdditionalVariableEncryptionKeyValue</a></code> | encryption_key_value block. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAdditionalVariable.property.integerValue">integerValue</a></code> | <code>java.lang.Number</code> | Integer Value of configVariable. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAdditionalVariable.property.secretValue">secretValue</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAdditionalVariableSecretValue">IntegrationConnectorsConnectionEventingConfigAdditionalVariableSecretValue</a></code> | secret_value block. |
@@ -3567,10 +3545,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `booleanValue`<sup>Optional</sup> <a name="booleanValue" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAdditionalVariable.property.booleanValue"></a>
 
 ```java
-public java.lang.Object getBooleanValue();
+public java.lang.Boolean|IResolvable getBooleanValue();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 Boolean Value of configVariable.
 
@@ -3734,8 +3712,7 @@ import com.hashicorp.cdktf.providers.google.integration_connectors_connection.In
 IntegrationConnectorsConnectionEventingConfigAuthConfig.builder()
     .authType(java.lang.String)
     .userPassword(IntegrationConnectorsConnectionEventingConfigAuthConfigUserPassword)
-//  .additionalVariable(IResolvable)
-//  .additionalVariable(java.util.List<IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariable>)
+//  .additionalVariable(IResolvable|java.util.List<IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariable>)
 //  .authKey(java.lang.String)
     .build();
 ```
@@ -3746,7 +3723,7 @@ IntegrationConnectorsConnectionEventingConfigAuthConfig.builder()
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfig.property.authType">authType</a></code> | <code>java.lang.String</code> | authType of the Connection Possible values: ["USER_PASSWORD"]. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfig.property.userPassword">userPassword</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigUserPassword">IntegrationConnectorsConnectionEventingConfigAuthConfigUserPassword</a></code> | user_password block. |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfig.property.additionalVariable">additionalVariable</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariable">IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariable</a>></code> | additional_variable block. |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfig.property.additionalVariable">additionalVariable</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariable">IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariable</a>></code> | additional_variable block. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfig.property.authKey">authKey</a></code> | <code>java.lang.String</code> | The type of authentication configured. |
 
 ---
@@ -3782,10 +3759,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `additionalVariable`<sup>Optional</sup> <a name="additionalVariable" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfig.property.additionalVariable"></a>
 
 ```java
-public java.lang.Object getAdditionalVariable();
+public IResolvable|java.util.List<IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariable> getAdditionalVariable();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariable">IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariable</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariable">IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariable</a>>
 
 additional_variable block.
 
@@ -3816,8 +3793,7 @@ import com.hashicorp.cdktf.providers.google.integration_connectors_connection.In
 
 IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariable.builder()
     .key(java.lang.String)
-//  .booleanValue(java.lang.Boolean)
-//  .booleanValue(IResolvable)
+//  .booleanValue(java.lang.Boolean|IResolvable)
 //  .encryptionKeyValue(IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariableEncryptionKeyValue)
 //  .integerValue(java.lang.Number)
 //  .secretValue(IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariableSecretValue)
@@ -3830,7 +3806,7 @@ IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariable.builde
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariable.property.key">key</a></code> | <code>java.lang.String</code> | Key for the configVariable. |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariable.property.booleanValue">booleanValue</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Boolean Value of configVariable. |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariable.property.booleanValue">booleanValue</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Boolean Value of configVariable. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariable.property.encryptionKeyValue">encryptionKeyValue</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariableEncryptionKeyValue">IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariableEncryptionKeyValue</a></code> | encryption_key_value block. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariable.property.integerValue">integerValue</a></code> | <code>java.lang.Number</code> | Integer Value of configVariable. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariable.property.secretValue">secretValue</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariableSecretValue">IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariableSecretValue</a></code> | secret_value block. |
@@ -3855,10 +3831,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `booleanValue`<sup>Optional</sup> <a name="booleanValue" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariable.property.booleanValue"></a>
 
 ```java
-public java.lang.Object getBooleanValue();
+public java.lang.Boolean|IResolvable getBooleanValue();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 Boolean Value of configVariable.
 
@@ -4106,8 +4082,7 @@ Note: The above comment contained a comment block ending sequence (* followed by
 import com.hashicorp.cdktf.providers.google.integration_connectors_connection.IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfig;
 
 IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfig.builder()
-//  .destination(IResolvable)
-//  .destination(java.util.List<IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigDestination>)
+//  .destination(IResolvable|java.util.List<IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigDestination>)
 //  .key(java.lang.String)
     .build();
 ```
@@ -4116,7 +4091,7 @@ IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfig.build
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfig.property.destination">destination</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigDestination">IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigDestination</a>></code> | destination block. |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfig.property.destination">destination</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigDestination">IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigDestination</a>></code> | destination block. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfig.property.key">key</a></code> | <code>java.lang.String</code> | Key for the connection. |
 
 ---
@@ -4124,10 +4099,10 @@ IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfig.build
 ##### `destination`<sup>Optional</sup> <a name="destination" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfig.property.destination"></a>
 
 ```java
-public java.lang.Object getDestination();
+public IResolvable|java.util.List<IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigDestination> getDestination();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigDestination">IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigDestination</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigDestination">IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigDestination</a>>
 
 destination block.
 
@@ -4247,8 +4222,7 @@ IntegrationConnectorsConnectionEventingRuntimeDataStatus.builder()
 import com.hashicorp.cdktf.providers.google.integration_connectors_connection.IntegrationConnectorsConnectionLockConfig;
 
 IntegrationConnectorsConnectionLockConfig.builder()
-    .locked(java.lang.Boolean)
-    .locked(IResolvable)
+    .locked(java.lang.Boolean|IResolvable)
 //  .reason(java.lang.String)
     .build();
 ```
@@ -4257,7 +4231,7 @@ IntegrationConnectorsConnectionLockConfig.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionLockConfig.property.locked">locked</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Indicates whether or not the connection is locked. |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionLockConfig.property.locked">locked</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Indicates whether or not the connection is locked. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionLockConfig.property.reason">reason</a></code> | <code>java.lang.String</code> | Describes why a connection is locked. |
 
 ---
@@ -4265,10 +4239,10 @@ IntegrationConnectorsConnectionLockConfig.builder()
 ##### `locked`<sup>Required</sup> <a name="locked" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionLockConfig.property.locked"></a>
 
 ```java
-public java.lang.Object getLocked();
+public java.lang.Boolean|IResolvable getLocked();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 Indicates whether or not the connection is locked.
 
@@ -4298,8 +4272,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 import com.hashicorp.cdktf.providers.google.integration_connectors_connection.IntegrationConnectorsConnectionLogConfig;
 
 IntegrationConnectorsConnectionLogConfig.builder()
-    .enabled(java.lang.Boolean)
-    .enabled(IResolvable)
+    .enabled(java.lang.Boolean|IResolvable)
 //  .level(java.lang.String)
     .build();
 ```
@@ -4308,7 +4281,7 @@ IntegrationConnectorsConnectionLogConfig.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionLogConfig.property.enabled">enabled</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Enabled represents whether logging is enabled or not for a connection. |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionLogConfig.property.enabled">enabled</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Enabled represents whether logging is enabled or not for a connection. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionLogConfig.property.level">level</a></code> | <code>java.lang.String</code> | Log configuration level. Possible values: ["LOG_LEVEL_UNSPECIFIED", "ERROR", "INFO", "DEBUG"]. |
 
 ---
@@ -4316,10 +4289,10 @@ IntegrationConnectorsConnectionLogConfig.builder()
 ##### `enabled`<sup>Required</sup> <a name="enabled" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionLogConfig.property.enabled"></a>
 
 ```java
-public java.lang.Object getEnabled();
+public java.lang.Boolean|IResolvable getEnabled();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 Enabled represents whether logging is enabled or not for a connection.
 
@@ -4400,8 +4373,7 @@ import com.hashicorp.cdktf.providers.google.integration_connectors_connection.In
 
 IntegrationConnectorsConnectionSslConfig.builder()
     .type(java.lang.String)
-//  .additionalVariable(IResolvable)
-//  .additionalVariable(java.util.List<IntegrationConnectorsConnectionSslConfigAdditionalVariable>)
+//  .additionalVariable(IResolvable|java.util.List<IntegrationConnectorsConnectionSslConfigAdditionalVariable>)
 //  .clientCertificate(IntegrationConnectorsConnectionSslConfigClientCertificate)
 //  .clientCertType(java.lang.String)
 //  .clientPrivateKey(IntegrationConnectorsConnectionSslConfigClientPrivateKey)
@@ -4409,8 +4381,7 @@ IntegrationConnectorsConnectionSslConfig.builder()
 //  .privateServerCertificate(IntegrationConnectorsConnectionSslConfigPrivateServerCertificate)
 //  .serverCertType(java.lang.String)
 //  .trustModel(java.lang.String)
-//  .useSsl(java.lang.Boolean)
-//  .useSsl(IResolvable)
+//  .useSsl(java.lang.Boolean|IResolvable)
     .build();
 ```
 
@@ -4419,7 +4390,7 @@ IntegrationConnectorsConnectionSslConfig.builder()
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfig.property.type">type</a></code> | <code>java.lang.String</code> | Enum for controlling the SSL Type (TLS/MTLS) Possible values: ["TLS", "MTLS"]. |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfig.property.additionalVariable">additionalVariable</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigAdditionalVariable">IntegrationConnectorsConnectionSslConfigAdditionalVariable</a>></code> | additional_variable block. |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfig.property.additionalVariable">additionalVariable</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigAdditionalVariable">IntegrationConnectorsConnectionSslConfigAdditionalVariable</a>></code> | additional_variable block. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfig.property.clientCertificate">clientCertificate</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigClientCertificate">IntegrationConnectorsConnectionSslConfigClientCertificate</a></code> | client_certificate block. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfig.property.clientCertType">clientCertType</a></code> | <code>java.lang.String</code> | Type of Client Cert (PEM/JKS/.. etc.) Possible values: ["PEM"]. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfig.property.clientPrivateKey">clientPrivateKey</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigClientPrivateKey">IntegrationConnectorsConnectionSslConfigClientPrivateKey</a></code> | client_private_key block. |
@@ -4427,7 +4398,7 @@ IntegrationConnectorsConnectionSslConfig.builder()
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfig.property.privateServerCertificate">privateServerCertificate</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigPrivateServerCertificate">IntegrationConnectorsConnectionSslConfigPrivateServerCertificate</a></code> | private_server_certificate block. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfig.property.serverCertType">serverCertType</a></code> | <code>java.lang.String</code> | Type of Server Cert (PEM/JKS/.. etc.) Possible values: ["PEM"]. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfig.property.trustModel">trustModel</a></code> | <code>java.lang.String</code> | Enum for Trust Model Possible values: ["PUBLIC", "PRIVATE", "INSECURE"]. |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfig.property.useSsl">useSsl</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Bool for enabling SSL. |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfig.property.useSsl">useSsl</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Bool for enabling SSL. |
 
 ---
 
@@ -4448,10 +4419,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `additionalVariable`<sup>Optional</sup> <a name="additionalVariable" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfig.property.additionalVariable"></a>
 
 ```java
-public java.lang.Object getAdditionalVariable();
+public IResolvable|java.util.List<IntegrationConnectorsConnectionSslConfigAdditionalVariable> getAdditionalVariable();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigAdditionalVariable">IntegrationConnectorsConnectionSslConfigAdditionalVariable</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigAdditionalVariable">IntegrationConnectorsConnectionSslConfigAdditionalVariable</a>>
 
 additional_variable block.
 
@@ -4560,10 +4531,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `useSsl`<sup>Optional</sup> <a name="useSsl" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfig.property.useSsl"></a>
 
 ```java
-public java.lang.Object getUseSsl();
+public java.lang.Boolean|IResolvable getUseSsl();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 Bool for enabling SSL.
 
@@ -4580,8 +4551,7 @@ import com.hashicorp.cdktf.providers.google.integration_connectors_connection.In
 
 IntegrationConnectorsConnectionSslConfigAdditionalVariable.builder()
     .key(java.lang.String)
-//  .booleanValue(java.lang.Boolean)
-//  .booleanValue(IResolvable)
+//  .booleanValue(java.lang.Boolean|IResolvable)
 //  .encryptionKeyValue(IntegrationConnectorsConnectionSslConfigAdditionalVariableEncryptionKeyValue)
 //  .integerValue(java.lang.Number)
 //  .secretValue(IntegrationConnectorsConnectionSslConfigAdditionalVariableSecretValue)
@@ -4594,7 +4564,7 @@ IntegrationConnectorsConnectionSslConfigAdditionalVariable.builder()
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigAdditionalVariable.property.key">key</a></code> | <code>java.lang.String</code> | Key for the configVariable. |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigAdditionalVariable.property.booleanValue">booleanValue</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Boolean Value of configVariable. |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigAdditionalVariable.property.booleanValue">booleanValue</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Boolean Value of configVariable. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigAdditionalVariable.property.encryptionKeyValue">encryptionKeyValue</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigAdditionalVariableEncryptionKeyValue">IntegrationConnectorsConnectionSslConfigAdditionalVariableEncryptionKeyValue</a></code> | encryption_key_value block. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigAdditionalVariable.property.integerValue">integerValue</a></code> | <code>java.lang.Number</code> | Integer Value of configVariable. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigAdditionalVariable.property.secretValue">secretValue</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigAdditionalVariableSecretValue">IntegrationConnectorsConnectionSslConfigAdditionalVariableSecretValue</a></code> | secret_value block. |
@@ -4619,10 +4589,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `booleanValue`<sup>Optional</sup> <a name="booleanValue" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigAdditionalVariable.property.booleanValue"></a>
 
 ```java
-public java.lang.Object getBooleanValue();
+public java.lang.Boolean|IResolvable getBooleanValue();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 Boolean Value of configVariable.
 
@@ -5407,7 +5377,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigAdditionalVariableList.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigAdditionalVariableList.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigAdditionalVariableList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigAdditionalVariable">IntegrationConnectorsConnectionAuthConfigAdditionalVariable</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigAdditionalVariableList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigAdditionalVariable">IntegrationConnectorsConnectionAuthConfigAdditionalVariable</a>></code> | *No description.* |
 
 ---
 
@@ -5438,10 +5408,10 @@ public java.lang.String getFqn();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigAdditionalVariableList.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|java.util.List<IntegrationConnectorsConnectionAuthConfigAdditionalVariable> getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigAdditionalVariable">IntegrationConnectorsConnectionAuthConfigAdditionalVariable</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigAdditionalVariable">IntegrationConnectorsConnectionAuthConfigAdditionalVariable</a>>
 
 ---
 
@@ -5737,17 +5707,17 @@ public void resetStringValue()
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigAdditionalVariableOutputReference.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigAdditionalVariableOutputReference.property.encryptionKeyValue">encryptionKeyValue</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigAdditionalVariableEncryptionKeyValueOutputReference">IntegrationConnectorsConnectionAuthConfigAdditionalVariableEncryptionKeyValueOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigAdditionalVariableOutputReference.property.secretValue">secretValue</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigAdditionalVariableSecretValueOutputReference">IntegrationConnectorsConnectionAuthConfigAdditionalVariableSecretValueOutputReference</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigAdditionalVariableOutputReference.property.booleanValueInput">booleanValueInput</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigAdditionalVariableOutputReference.property.booleanValueInput">booleanValueInput</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigAdditionalVariableOutputReference.property.encryptionKeyValueInput">encryptionKeyValueInput</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigAdditionalVariableEncryptionKeyValue">IntegrationConnectorsConnectionAuthConfigAdditionalVariableEncryptionKeyValue</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigAdditionalVariableOutputReference.property.integerValueInput">integerValueInput</a></code> | <code>java.lang.Number</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigAdditionalVariableOutputReference.property.keyInput">keyInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigAdditionalVariableOutputReference.property.secretValueInput">secretValueInput</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigAdditionalVariableSecretValue">IntegrationConnectorsConnectionAuthConfigAdditionalVariableSecretValue</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigAdditionalVariableOutputReference.property.stringValueInput">stringValueInput</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigAdditionalVariableOutputReference.property.booleanValue">booleanValue</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigAdditionalVariableOutputReference.property.booleanValue">booleanValue</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigAdditionalVariableOutputReference.property.integerValue">integerValue</a></code> | <code>java.lang.Number</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigAdditionalVariableOutputReference.property.key">key</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigAdditionalVariableOutputReference.property.stringValue">stringValue</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigAdditionalVariableOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigAdditionalVariable">IntegrationConnectorsConnectionAuthConfigAdditionalVariable</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigAdditionalVariableOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigAdditionalVariable">IntegrationConnectorsConnectionAuthConfigAdditionalVariable</a></code> | *No description.* |
 
 ---
 
@@ -5798,10 +5768,10 @@ public IntegrationConnectorsConnectionAuthConfigAdditionalVariableSecretValueOut
 ##### `booleanValueInput`<sup>Optional</sup> <a name="booleanValueInput" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigAdditionalVariableOutputReference.property.booleanValueInput"></a>
 
 ```java
-public java.lang.Object getBooleanValueInput();
+public java.lang.Boolean|IResolvable getBooleanValueInput();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
@@ -5858,10 +5828,10 @@ public java.lang.String getStringValueInput();
 ##### `booleanValue`<sup>Required</sup> <a name="booleanValue" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigAdditionalVariableOutputReference.property.booleanValue"></a>
 
 ```java
-public java.lang.Object getBooleanValue();
+public java.lang.Boolean|IResolvable getBooleanValue();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
@@ -5898,10 +5868,10 @@ public java.lang.String getStringValue();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigAdditionalVariableOutputReference.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|IntegrationConnectorsConnectionAuthConfigAdditionalVariable getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigAdditionalVariable">IntegrationConnectorsConnectionAuthConfigAdditionalVariable</a>
+- *Type:* com.hashicorp.cdktf.IResolvable|<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigAdditionalVariable">IntegrationConnectorsConnectionAuthConfigAdditionalVariable</a>
 
 ---
 
@@ -6710,11 +6680,11 @@ public void resetScopes()
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigOauth2AuthCodeFlowOutputReference.property.authUriInput">authUriInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigOauth2AuthCodeFlowOutputReference.property.clientIdInput">clientIdInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigOauth2AuthCodeFlowOutputReference.property.clientSecretInput">clientSecretInput</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigOauth2AuthCodeFlowClientSecret">IntegrationConnectorsConnectionAuthConfigOauth2AuthCodeFlowClientSecret</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigOauth2AuthCodeFlowOutputReference.property.enablePkceInput">enablePkceInput</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigOauth2AuthCodeFlowOutputReference.property.enablePkceInput">enablePkceInput</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigOauth2AuthCodeFlowOutputReference.property.scopesInput">scopesInput</a></code> | <code>java.util.List<java.lang.String></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigOauth2AuthCodeFlowOutputReference.property.authUri">authUri</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigOauth2AuthCodeFlowOutputReference.property.clientId">clientId</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigOauth2AuthCodeFlowOutputReference.property.enablePkce">enablePkce</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigOauth2AuthCodeFlowOutputReference.property.enablePkce">enablePkce</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigOauth2AuthCodeFlowOutputReference.property.scopes">scopes</a></code> | <code>java.util.List<java.lang.String></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigOauth2AuthCodeFlowOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigOauth2AuthCodeFlow">IntegrationConnectorsConnectionAuthConfigOauth2AuthCodeFlow</a></code> | *No description.* |
 
@@ -6787,10 +6757,10 @@ public IntegrationConnectorsConnectionAuthConfigOauth2AuthCodeFlowClientSecret g
 ##### `enablePkceInput`<sup>Optional</sup> <a name="enablePkceInput" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigOauth2AuthCodeFlowOutputReference.property.enablePkceInput"></a>
 
 ```java
-public java.lang.Object getEnablePkceInput();
+public java.lang.Boolean|IResolvable getEnablePkceInput();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
@@ -6827,10 +6797,10 @@ public java.lang.String getClientId();
 ##### `enablePkce`<sup>Required</sup> <a name="enablePkce" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigOauth2AuthCodeFlowOutputReference.property.enablePkce"></a>
 
 ```java
-public java.lang.Object getEnablePkce();
+public java.lang.Boolean|IResolvable getEnablePkce();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
@@ -8598,12 +8568,12 @@ Returns a reversible string representation.
 ##### `putAdditionalVariable` <a name="putAdditionalVariable" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigOutputReference.putAdditionalVariable"></a>
 
 ```java
-public void putAdditionalVariable(IResolvable OR java.util.List<IntegrationConnectorsConnectionAuthConfigAdditionalVariable> value)
+public void putAdditionalVariable(IResolvable|java.util.List<IntegrationConnectorsConnectionAuthConfigAdditionalVariable> value)
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigOutputReference.putAdditionalVariable.parameter.value"></a>
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigAdditionalVariable">IntegrationConnectorsConnectionAuthConfigAdditionalVariable</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigAdditionalVariable">IntegrationConnectorsConnectionAuthConfigAdditionalVariable</a>>
 
 ---
 
@@ -8722,7 +8692,7 @@ public void resetUserPassword()
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigOutputReference.property.oauth2JwtBearer">oauth2JwtBearer</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigOauth2JwtBearerOutputReference">IntegrationConnectorsConnectionAuthConfigOauth2JwtBearerOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigOutputReference.property.sshPublicKey">sshPublicKey</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigSshPublicKeyOutputReference">IntegrationConnectorsConnectionAuthConfigSshPublicKeyOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigOutputReference.property.userPassword">userPassword</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigUserPasswordOutputReference">IntegrationConnectorsConnectionAuthConfigUserPasswordOutputReference</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigOutputReference.property.additionalVariableInput">additionalVariableInput</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigAdditionalVariable">IntegrationConnectorsConnectionAuthConfigAdditionalVariable</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigOutputReference.property.additionalVariableInput">additionalVariableInput</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigAdditionalVariable">IntegrationConnectorsConnectionAuthConfigAdditionalVariable</a>></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigOutputReference.property.authKeyInput">authKeyInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigOutputReference.property.authTypeInput">authTypeInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigOutputReference.property.oauth2AuthCodeFlowInput">oauth2AuthCodeFlowInput</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigOauth2AuthCodeFlow">IntegrationConnectorsConnectionAuthConfigOauth2AuthCodeFlow</a></code> | *No description.* |
@@ -8823,10 +8793,10 @@ public IntegrationConnectorsConnectionAuthConfigUserPasswordOutputReference getU
 ##### `additionalVariableInput`<sup>Optional</sup> <a name="additionalVariableInput" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigOutputReference.property.additionalVariableInput"></a>
 
 ```java
-public java.lang.Object getAdditionalVariableInput();
+public IResolvable|java.util.List<IntegrationConnectorsConnectionAuthConfigAdditionalVariable> getAdditionalVariableInput();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigAdditionalVariable">IntegrationConnectorsConnectionAuthConfigAdditionalVariable</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigAdditionalVariable">IntegrationConnectorsConnectionAuthConfigAdditionalVariable</a>>
 
 ---
 
@@ -10862,7 +10832,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfigVariableList.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfigVariableList.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfigVariableList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfigVariable">IntegrationConnectorsConnectionConfigVariable</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfigVariableList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfigVariable">IntegrationConnectorsConnectionConfigVariable</a>></code> | *No description.* |
 
 ---
 
@@ -10893,10 +10863,10 @@ public java.lang.String getFqn();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfigVariableList.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|java.util.List<IntegrationConnectorsConnectionConfigVariable> getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfigVariable">IntegrationConnectorsConnectionConfigVariable</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfigVariable">IntegrationConnectorsConnectionConfigVariable</a>>
 
 ---
 
@@ -11192,17 +11162,17 @@ public void resetStringValue()
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfigVariableOutputReference.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfigVariableOutputReference.property.encryptionKeyValue">encryptionKeyValue</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfigVariableEncryptionKeyValueOutputReference">IntegrationConnectorsConnectionConfigVariableEncryptionKeyValueOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfigVariableOutputReference.property.secretValue">secretValue</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfigVariableSecretValueOutputReference">IntegrationConnectorsConnectionConfigVariableSecretValueOutputReference</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfigVariableOutputReference.property.booleanValueInput">booleanValueInput</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfigVariableOutputReference.property.booleanValueInput">booleanValueInput</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfigVariableOutputReference.property.encryptionKeyValueInput">encryptionKeyValueInput</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfigVariableEncryptionKeyValue">IntegrationConnectorsConnectionConfigVariableEncryptionKeyValue</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfigVariableOutputReference.property.integerValueInput">integerValueInput</a></code> | <code>java.lang.Number</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfigVariableOutputReference.property.keyInput">keyInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfigVariableOutputReference.property.secretValueInput">secretValueInput</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfigVariableSecretValue">IntegrationConnectorsConnectionConfigVariableSecretValue</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfigVariableOutputReference.property.stringValueInput">stringValueInput</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfigVariableOutputReference.property.booleanValue">booleanValue</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfigVariableOutputReference.property.booleanValue">booleanValue</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfigVariableOutputReference.property.integerValue">integerValue</a></code> | <code>java.lang.Number</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfigVariableOutputReference.property.key">key</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfigVariableOutputReference.property.stringValue">stringValue</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfigVariableOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfigVariable">IntegrationConnectorsConnectionConfigVariable</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfigVariableOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfigVariable">IntegrationConnectorsConnectionConfigVariable</a></code> | *No description.* |
 
 ---
 
@@ -11253,10 +11223,10 @@ public IntegrationConnectorsConnectionConfigVariableSecretValueOutputReference g
 ##### `booleanValueInput`<sup>Optional</sup> <a name="booleanValueInput" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfigVariableOutputReference.property.booleanValueInput"></a>
 
 ```java
-public java.lang.Object getBooleanValueInput();
+public java.lang.Boolean|IResolvable getBooleanValueInput();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
@@ -11313,10 +11283,10 @@ public java.lang.String getStringValueInput();
 ##### `booleanValue`<sup>Required</sup> <a name="booleanValue" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfigVariableOutputReference.property.booleanValue"></a>
 
 ```java
-public java.lang.Object getBooleanValue();
+public java.lang.Boolean|IResolvable getBooleanValue();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
@@ -11353,10 +11323,10 @@ public java.lang.String getStringValue();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfigVariableOutputReference.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|IntegrationConnectorsConnectionConfigVariable getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfigVariable">IntegrationConnectorsConnectionConfigVariable</a>
+- *Type:* com.hashicorp.cdktf.IResolvable|<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfigVariable">IntegrationConnectorsConnectionConfigVariable</a>
 
 ---
 
@@ -12180,7 +12150,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfigDestinationList.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfigDestinationList.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfigDestinationList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfigDestination">IntegrationConnectorsConnectionDestinationConfigDestination</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfigDestinationList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfigDestination">IntegrationConnectorsConnectionDestinationConfigDestination</a>></code> | *No description.* |
 
 ---
 
@@ -12211,10 +12181,10 @@ public java.lang.String getFqn();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfigDestinationList.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|java.util.List<IntegrationConnectorsConnectionDestinationConfigDestination> getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfigDestination">IntegrationConnectorsConnectionDestinationConfigDestination</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfigDestination">IntegrationConnectorsConnectionDestinationConfigDestination</a>>
 
 ---
 
@@ -12474,7 +12444,7 @@ public void resetServiceAttachment()
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfigDestinationOutputReference.property.host">host</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfigDestinationOutputReference.property.port">port</a></code> | <code>java.lang.Number</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfigDestinationOutputReference.property.serviceAttachment">serviceAttachment</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfigDestinationOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfigDestination">IntegrationConnectorsConnectionDestinationConfigDestination</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfigDestinationOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfigDestination">IntegrationConnectorsConnectionDestinationConfigDestination</a></code> | *No description.* |
 
 ---
 
@@ -12565,10 +12535,10 @@ public java.lang.String getServiceAttachment();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfigDestinationOutputReference.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|IntegrationConnectorsConnectionDestinationConfigDestination getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfigDestination">IntegrationConnectorsConnectionDestinationConfigDestination</a>
+- *Type:* com.hashicorp.cdktf.IResolvable|<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfigDestination">IntegrationConnectorsConnectionDestinationConfigDestination</a>
 
 ---
 
@@ -12694,7 +12664,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfigList.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfigList.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfigList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfig">IntegrationConnectorsConnectionDestinationConfig</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfigList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfig">IntegrationConnectorsConnectionDestinationConfig</a>></code> | *No description.* |
 
 ---
 
@@ -12725,10 +12695,10 @@ public java.lang.String getFqn();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfigList.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|java.util.List<IntegrationConnectorsConnectionDestinationConfig> getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfig">IntegrationConnectorsConnectionDestinationConfig</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfig">IntegrationConnectorsConnectionDestinationConfig</a>>
 
 ---
 
@@ -12959,12 +12929,12 @@ Returns a reversible string representation.
 ##### `putDestination` <a name="putDestination" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfigOutputReference.putDestination"></a>
 
 ```java
-public void putDestination(IResolvable OR java.util.List<IntegrationConnectorsConnectionDestinationConfigDestination> value)
+public void putDestination(IResolvable|java.util.List<IntegrationConnectorsConnectionDestinationConfigDestination> value)
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfigOutputReference.putDestination.parameter.value"></a>
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfigDestination">IntegrationConnectorsConnectionDestinationConfigDestination</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfigDestination">IntegrationConnectorsConnectionDestinationConfigDestination</a>>
 
 ---
 
@@ -12982,10 +12952,10 @@ public void resetDestination()
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfigOutputReference.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfigOutputReference.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfigOutputReference.property.destination">destination</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfigDestinationList">IntegrationConnectorsConnectionDestinationConfigDestinationList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfigOutputReference.property.destinationInput">destinationInput</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfigDestination">IntegrationConnectorsConnectionDestinationConfigDestination</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfigOutputReference.property.destinationInput">destinationInput</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfigDestination">IntegrationConnectorsConnectionDestinationConfigDestination</a>></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfigOutputReference.property.keyInput">keyInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfigOutputReference.property.key">key</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfigOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfig">IntegrationConnectorsConnectionDestinationConfig</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfigOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfig">IntegrationConnectorsConnectionDestinationConfig</a></code> | *No description.* |
 
 ---
 
@@ -13026,10 +12996,10 @@ public IntegrationConnectorsConnectionDestinationConfigDestinationList getDestin
 ##### `destinationInput`<sup>Optional</sup> <a name="destinationInput" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfigOutputReference.property.destinationInput"></a>
 
 ```java
-public java.lang.Object getDestinationInput();
+public IResolvable|java.util.List<IntegrationConnectorsConnectionDestinationConfigDestination> getDestinationInput();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfigDestination">IntegrationConnectorsConnectionDestinationConfigDestination</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfigDestination">IntegrationConnectorsConnectionDestinationConfigDestination</a>>
 
 ---
 
@@ -13056,10 +13026,10 @@ public java.lang.String getKey();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfigOutputReference.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|IntegrationConnectorsConnectionDestinationConfig getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfig">IntegrationConnectorsConnectionDestinationConfig</a>
+- *Type:* com.hashicorp.cdktf.IResolvable|<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfig">IntegrationConnectorsConnectionDestinationConfig</a>
 
 ---
 
@@ -13492,7 +13462,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAdditionalVariableList.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAdditionalVariableList.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAdditionalVariableList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAdditionalVariable">IntegrationConnectorsConnectionEventingConfigAdditionalVariable</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAdditionalVariableList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAdditionalVariable">IntegrationConnectorsConnectionEventingConfigAdditionalVariable</a>></code> | *No description.* |
 
 ---
 
@@ -13523,10 +13493,10 @@ public java.lang.String getFqn();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAdditionalVariableList.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|java.util.List<IntegrationConnectorsConnectionEventingConfigAdditionalVariable> getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAdditionalVariable">IntegrationConnectorsConnectionEventingConfigAdditionalVariable</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAdditionalVariable">IntegrationConnectorsConnectionEventingConfigAdditionalVariable</a>>
 
 ---
 
@@ -13822,17 +13792,17 @@ public void resetStringValue()
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAdditionalVariableOutputReference.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAdditionalVariableOutputReference.property.encryptionKeyValue">encryptionKeyValue</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAdditionalVariableEncryptionKeyValueOutputReference">IntegrationConnectorsConnectionEventingConfigAdditionalVariableEncryptionKeyValueOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAdditionalVariableOutputReference.property.secretValue">secretValue</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAdditionalVariableSecretValueOutputReference">IntegrationConnectorsConnectionEventingConfigAdditionalVariableSecretValueOutputReference</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAdditionalVariableOutputReference.property.booleanValueInput">booleanValueInput</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAdditionalVariableOutputReference.property.booleanValueInput">booleanValueInput</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAdditionalVariableOutputReference.property.encryptionKeyValueInput">encryptionKeyValueInput</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAdditionalVariableEncryptionKeyValue">IntegrationConnectorsConnectionEventingConfigAdditionalVariableEncryptionKeyValue</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAdditionalVariableOutputReference.property.integerValueInput">integerValueInput</a></code> | <code>java.lang.Number</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAdditionalVariableOutputReference.property.keyInput">keyInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAdditionalVariableOutputReference.property.secretValueInput">secretValueInput</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAdditionalVariableSecretValue">IntegrationConnectorsConnectionEventingConfigAdditionalVariableSecretValue</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAdditionalVariableOutputReference.property.stringValueInput">stringValueInput</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAdditionalVariableOutputReference.property.booleanValue">booleanValue</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAdditionalVariableOutputReference.property.booleanValue">booleanValue</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAdditionalVariableOutputReference.property.integerValue">integerValue</a></code> | <code>java.lang.Number</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAdditionalVariableOutputReference.property.key">key</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAdditionalVariableOutputReference.property.stringValue">stringValue</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAdditionalVariableOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAdditionalVariable">IntegrationConnectorsConnectionEventingConfigAdditionalVariable</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAdditionalVariableOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAdditionalVariable">IntegrationConnectorsConnectionEventingConfigAdditionalVariable</a></code> | *No description.* |
 
 ---
 
@@ -13883,10 +13853,10 @@ public IntegrationConnectorsConnectionEventingConfigAdditionalVariableSecretValu
 ##### `booleanValueInput`<sup>Optional</sup> <a name="booleanValueInput" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAdditionalVariableOutputReference.property.booleanValueInput"></a>
 
 ```java
-public java.lang.Object getBooleanValueInput();
+public java.lang.Boolean|IResolvable getBooleanValueInput();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
@@ -13943,10 +13913,10 @@ public java.lang.String getStringValueInput();
 ##### `booleanValue`<sup>Required</sup> <a name="booleanValue" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAdditionalVariableOutputReference.property.booleanValue"></a>
 
 ```java
-public java.lang.Object getBooleanValue();
+public java.lang.Boolean|IResolvable getBooleanValue();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
@@ -13983,10 +13953,10 @@ public java.lang.String getStringValue();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAdditionalVariableOutputReference.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|IntegrationConnectorsConnectionEventingConfigAdditionalVariable getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAdditionalVariable">IntegrationConnectorsConnectionEventingConfigAdditionalVariable</a>
+- *Type:* com.hashicorp.cdktf.IResolvable|<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAdditionalVariable">IntegrationConnectorsConnectionEventingConfigAdditionalVariable</a>
 
 ---
 
@@ -14690,7 +14660,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariableList.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariableList.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariableList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariable">IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariable</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariableList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariable">IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariable</a>></code> | *No description.* |
 
 ---
 
@@ -14721,10 +14691,10 @@ public java.lang.String getFqn();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariableList.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|java.util.List<IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariable> getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariable">IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariable</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariable">IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariable</a>>
 
 ---
 
@@ -15020,17 +14990,17 @@ public void resetStringValue()
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariableOutputReference.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariableOutputReference.property.encryptionKeyValue">encryptionKeyValue</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariableEncryptionKeyValueOutputReference">IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariableEncryptionKeyValueOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariableOutputReference.property.secretValue">secretValue</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariableSecretValueOutputReference">IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariableSecretValueOutputReference</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariableOutputReference.property.booleanValueInput">booleanValueInput</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariableOutputReference.property.booleanValueInput">booleanValueInput</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariableOutputReference.property.encryptionKeyValueInput">encryptionKeyValueInput</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariableEncryptionKeyValue">IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariableEncryptionKeyValue</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariableOutputReference.property.integerValueInput">integerValueInput</a></code> | <code>java.lang.Number</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariableOutputReference.property.keyInput">keyInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariableOutputReference.property.secretValueInput">secretValueInput</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariableSecretValue">IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariableSecretValue</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariableOutputReference.property.stringValueInput">stringValueInput</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariableOutputReference.property.booleanValue">booleanValue</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariableOutputReference.property.booleanValue">booleanValue</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariableOutputReference.property.integerValue">integerValue</a></code> | <code>java.lang.Number</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariableOutputReference.property.key">key</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariableOutputReference.property.stringValue">stringValue</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariableOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariable">IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariable</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariableOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariable">IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariable</a></code> | *No description.* |
 
 ---
 
@@ -15081,10 +15051,10 @@ public IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariable
 ##### `booleanValueInput`<sup>Optional</sup> <a name="booleanValueInput" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariableOutputReference.property.booleanValueInput"></a>
 
 ```java
-public java.lang.Object getBooleanValueInput();
+public java.lang.Boolean|IResolvable getBooleanValueInput();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
@@ -15141,10 +15111,10 @@ public java.lang.String getStringValueInput();
 ##### `booleanValue`<sup>Required</sup> <a name="booleanValue" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariableOutputReference.property.booleanValue"></a>
 
 ```java
-public java.lang.Object getBooleanValue();
+public java.lang.Boolean|IResolvable getBooleanValue();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
@@ -15181,10 +15151,10 @@ public java.lang.String getStringValue();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariableOutputReference.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariable getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariable">IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariable</a>
+- *Type:* com.hashicorp.cdktf.IResolvable|<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariable">IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariable</a>
 
 ---
 
@@ -15670,12 +15640,12 @@ Returns a reversible string representation.
 ##### `putAdditionalVariable` <a name="putAdditionalVariable" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigOutputReference.putAdditionalVariable"></a>
 
 ```java
-public void putAdditionalVariable(IResolvable OR java.util.List<IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariable> value)
+public void putAdditionalVariable(IResolvable|java.util.List<IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariable> value)
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigOutputReference.putAdditionalVariable.parameter.value"></a>
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariable">IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariable</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariable">IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariable</a>>
 
 ---
 
@@ -15712,7 +15682,7 @@ public void resetAuthKey()
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigOutputReference.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigOutputReference.property.additionalVariable">additionalVariable</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariableList">IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariableList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigOutputReference.property.userPassword">userPassword</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigUserPasswordOutputReference">IntegrationConnectorsConnectionEventingConfigAuthConfigUserPasswordOutputReference</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigOutputReference.property.additionalVariableInput">additionalVariableInput</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariable">IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariable</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigOutputReference.property.additionalVariableInput">additionalVariableInput</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariable">IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariable</a>></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigOutputReference.property.authKeyInput">authKeyInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigOutputReference.property.authTypeInput">authTypeInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigOutputReference.property.userPasswordInput">userPasswordInput</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigUserPassword">IntegrationConnectorsConnectionEventingConfigAuthConfigUserPassword</a></code> | *No description.* |
@@ -15769,10 +15739,10 @@ public IntegrationConnectorsConnectionEventingConfigAuthConfigUserPasswordOutput
 ##### `additionalVariableInput`<sup>Optional</sup> <a name="additionalVariableInput" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigOutputReference.property.additionalVariableInput"></a>
 
 ```java
-public java.lang.Object getAdditionalVariableInput();
+public IResolvable|java.util.List<IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariable> getAdditionalVariableInput();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariable">IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariable</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariable">IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariable</a>>
 
 ---
 
@@ -16640,12 +16610,12 @@ Returns a reversible string representation.
 ##### `putAdditionalVariable` <a name="putAdditionalVariable" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigOutputReference.putAdditionalVariable"></a>
 
 ```java
-public void putAdditionalVariable(IResolvable OR java.util.List<IntegrationConnectorsConnectionEventingConfigAdditionalVariable> value)
+public void putAdditionalVariable(IResolvable|java.util.List<IntegrationConnectorsConnectionEventingConfigAdditionalVariable> value)
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigOutputReference.putAdditionalVariable.parameter.value"></a>
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAdditionalVariable">IntegrationConnectorsConnectionEventingConfigAdditionalVariable</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAdditionalVariable">IntegrationConnectorsConnectionEventingConfigAdditionalVariable</a>>
 
 ---
 
@@ -16701,11 +16671,11 @@ public void resetEnrichmentEnabled()
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigOutputReference.property.additionalVariable">additionalVariable</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAdditionalVariableList">IntegrationConnectorsConnectionEventingConfigAdditionalVariableList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigOutputReference.property.authConfig">authConfig</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigOutputReference">IntegrationConnectorsConnectionEventingConfigAuthConfigOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigOutputReference.property.registrationDestinationConfig">registrationDestinationConfig</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigOutputReference">IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigOutputReference</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigOutputReference.property.additionalVariableInput">additionalVariableInput</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAdditionalVariable">IntegrationConnectorsConnectionEventingConfigAdditionalVariable</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigOutputReference.property.additionalVariableInput">additionalVariableInput</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAdditionalVariable">IntegrationConnectorsConnectionEventingConfigAdditionalVariable</a>></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigOutputReference.property.authConfigInput">authConfigInput</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfig">IntegrationConnectorsConnectionEventingConfigAuthConfig</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigOutputReference.property.enrichmentEnabledInput">enrichmentEnabledInput</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigOutputReference.property.enrichmentEnabledInput">enrichmentEnabledInput</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigOutputReference.property.registrationDestinationConfigInput">registrationDestinationConfigInput</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfig">IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfig</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigOutputReference.property.enrichmentEnabled">enrichmentEnabled</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigOutputReference.property.enrichmentEnabled">enrichmentEnabled</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfig">IntegrationConnectorsConnectionEventingConfig</a></code> | *No description.* |
 
 ---
@@ -16767,10 +16737,10 @@ public IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfi
 ##### `additionalVariableInput`<sup>Optional</sup> <a name="additionalVariableInput" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigOutputReference.property.additionalVariableInput"></a>
 
 ```java
-public java.lang.Object getAdditionalVariableInput();
+public IResolvable|java.util.List<IntegrationConnectorsConnectionEventingConfigAdditionalVariable> getAdditionalVariableInput();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAdditionalVariable">IntegrationConnectorsConnectionEventingConfigAdditionalVariable</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAdditionalVariable">IntegrationConnectorsConnectionEventingConfigAdditionalVariable</a>>
 
 ---
 
@@ -16787,10 +16757,10 @@ public IntegrationConnectorsConnectionEventingConfigAuthConfig getAuthConfigInpu
 ##### `enrichmentEnabledInput`<sup>Optional</sup> <a name="enrichmentEnabledInput" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigOutputReference.property.enrichmentEnabledInput"></a>
 
 ```java
-public java.lang.Object getEnrichmentEnabledInput();
+public java.lang.Boolean|IResolvable getEnrichmentEnabledInput();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
@@ -16807,10 +16777,10 @@ public IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfi
 ##### `enrichmentEnabled`<sup>Required</sup> <a name="enrichmentEnabled" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigOutputReference.property.enrichmentEnabled"></a>
 
 ```java
-public java.lang.Object getEnrichmentEnabled();
+public java.lang.Boolean|IResolvable getEnrichmentEnabled();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
@@ -16946,7 +16916,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigDestinationList.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigDestinationList.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigDestinationList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigDestination">IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigDestination</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigDestinationList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigDestination">IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigDestination</a>></code> | *No description.* |
 
 ---
 
@@ -16977,10 +16947,10 @@ public java.lang.String getFqn();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigDestinationList.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|java.util.List<IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigDestination> getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigDestination">IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigDestination</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigDestination">IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigDestination</a>>
 
 ---
 
@@ -17240,7 +17210,7 @@ public void resetServiceAttachment()
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigDestinationOutputReference.property.host">host</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigDestinationOutputReference.property.port">port</a></code> | <code>java.lang.Number</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigDestinationOutputReference.property.serviceAttachment">serviceAttachment</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigDestinationOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigDestination">IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigDestination</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigDestinationOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigDestination">IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigDestination</a></code> | *No description.* |
 
 ---
 
@@ -17331,10 +17301,10 @@ public java.lang.String getServiceAttachment();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigDestinationOutputReference.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigDestination getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigDestination">IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigDestination</a>
+- *Type:* com.hashicorp.cdktf.IResolvable|<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigDestination">IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigDestination</a>
 
 ---
 
@@ -17548,12 +17518,12 @@ Returns a reversible string representation.
 ##### `putDestination` <a name="putDestination" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigOutputReference.putDestination"></a>
 
 ```java
-public void putDestination(IResolvable OR java.util.List<IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigDestination> value)
+public void putDestination(IResolvable|java.util.List<IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigDestination> value)
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigOutputReference.putDestination.parameter.value"></a>
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigDestination">IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigDestination</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigDestination">IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigDestination</a>>
 
 ---
 
@@ -17577,7 +17547,7 @@ public void resetKey()
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigOutputReference.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigOutputReference.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigOutputReference.property.destination">destination</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigDestinationList">IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigDestinationList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigOutputReference.property.destinationInput">destinationInput</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigDestination">IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigDestination</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigOutputReference.property.destinationInput">destinationInput</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigDestination">IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigDestination</a>></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigOutputReference.property.keyInput">keyInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigOutputReference.property.key">key</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfig">IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfig</a></code> | *No description.* |
@@ -17621,10 +17591,10 @@ public IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfi
 ##### `destinationInput`<sup>Optional</sup> <a name="destinationInput" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigOutputReference.property.destinationInput"></a>
 
 ```java
-public java.lang.Object getDestinationInput();
+public IResolvable|java.util.List<IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigDestination> getDestinationInput();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigDestination">IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigDestination</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigDestination">IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigDestination</a>>
 
 ---
 
@@ -18752,9 +18722,9 @@ public void resetReason()
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionLockConfigOutputReference.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionLockConfigOutputReference.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionLockConfigOutputReference.property.lockedInput">lockedInput</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionLockConfigOutputReference.property.lockedInput">lockedInput</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionLockConfigOutputReference.property.reasonInput">reasonInput</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionLockConfigOutputReference.property.locked">locked</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionLockConfigOutputReference.property.locked">locked</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionLockConfigOutputReference.property.reason">reason</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionLockConfigOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionLockConfig">IntegrationConnectorsConnectionLockConfig</a></code> | *No description.* |
 
@@ -18787,10 +18757,10 @@ public java.lang.String getFqn();
 ##### `lockedInput`<sup>Optional</sup> <a name="lockedInput" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionLockConfigOutputReference.property.lockedInput"></a>
 
 ```java
-public java.lang.Object getLockedInput();
+public java.lang.Boolean|IResolvable getLockedInput();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
@@ -18807,10 +18777,10 @@ public java.lang.String getReasonInput();
 ##### `locked`<sup>Required</sup> <a name="locked" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionLockConfigOutputReference.property.locked"></a>
 
 ```java
-public java.lang.Object getLocked();
+public java.lang.Boolean|IResolvable getLocked();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
@@ -19052,9 +19022,9 @@ public void resetLevel()
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionLogConfigOutputReference.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionLogConfigOutputReference.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionLogConfigOutputReference.property.enabledInput">enabledInput</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionLogConfigOutputReference.property.enabledInput">enabledInput</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionLogConfigOutputReference.property.levelInput">levelInput</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionLogConfigOutputReference.property.enabled">enabled</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionLogConfigOutputReference.property.enabled">enabled</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionLogConfigOutputReference.property.level">level</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionLogConfigOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionLogConfig">IntegrationConnectorsConnectionLogConfig</a></code> | *No description.* |
 
@@ -19087,10 +19057,10 @@ public java.lang.String getFqn();
 ##### `enabledInput`<sup>Optional</sup> <a name="enabledInput" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionLogConfigOutputReference.property.enabledInput"></a>
 
 ```java
-public java.lang.Object getEnabledInput();
+public java.lang.Boolean|IResolvable getEnabledInput();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
@@ -19107,10 +19077,10 @@ public java.lang.String getLevelInput();
 ##### `enabled`<sup>Required</sup> <a name="enabled" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionLogConfigOutputReference.property.enabled"></a>
 
 ```java
-public java.lang.Object getEnabled();
+public java.lang.Boolean|IResolvable getEnabled();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
@@ -19870,7 +19840,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigAdditionalVariableList.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigAdditionalVariableList.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigAdditionalVariableList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigAdditionalVariable">IntegrationConnectorsConnectionSslConfigAdditionalVariable</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigAdditionalVariableList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigAdditionalVariable">IntegrationConnectorsConnectionSslConfigAdditionalVariable</a>></code> | *No description.* |
 
 ---
 
@@ -19901,10 +19871,10 @@ public java.lang.String getFqn();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigAdditionalVariableList.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|java.util.List<IntegrationConnectorsConnectionSslConfigAdditionalVariable> getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigAdditionalVariable">IntegrationConnectorsConnectionSslConfigAdditionalVariable</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigAdditionalVariable">IntegrationConnectorsConnectionSslConfigAdditionalVariable</a>>
 
 ---
 
@@ -20200,17 +20170,17 @@ public void resetStringValue()
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigAdditionalVariableOutputReference.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigAdditionalVariableOutputReference.property.encryptionKeyValue">encryptionKeyValue</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigAdditionalVariableEncryptionKeyValueOutputReference">IntegrationConnectorsConnectionSslConfigAdditionalVariableEncryptionKeyValueOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigAdditionalVariableOutputReference.property.secretValue">secretValue</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigAdditionalVariableSecretValueOutputReference">IntegrationConnectorsConnectionSslConfigAdditionalVariableSecretValueOutputReference</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigAdditionalVariableOutputReference.property.booleanValueInput">booleanValueInput</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigAdditionalVariableOutputReference.property.booleanValueInput">booleanValueInput</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigAdditionalVariableOutputReference.property.encryptionKeyValueInput">encryptionKeyValueInput</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigAdditionalVariableEncryptionKeyValue">IntegrationConnectorsConnectionSslConfigAdditionalVariableEncryptionKeyValue</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigAdditionalVariableOutputReference.property.integerValueInput">integerValueInput</a></code> | <code>java.lang.Number</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigAdditionalVariableOutputReference.property.keyInput">keyInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigAdditionalVariableOutputReference.property.secretValueInput">secretValueInput</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigAdditionalVariableSecretValue">IntegrationConnectorsConnectionSslConfigAdditionalVariableSecretValue</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigAdditionalVariableOutputReference.property.stringValueInput">stringValueInput</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigAdditionalVariableOutputReference.property.booleanValue">booleanValue</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigAdditionalVariableOutputReference.property.booleanValue">booleanValue</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigAdditionalVariableOutputReference.property.integerValue">integerValue</a></code> | <code>java.lang.Number</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigAdditionalVariableOutputReference.property.key">key</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigAdditionalVariableOutputReference.property.stringValue">stringValue</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigAdditionalVariableOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigAdditionalVariable">IntegrationConnectorsConnectionSslConfigAdditionalVariable</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigAdditionalVariableOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigAdditionalVariable">IntegrationConnectorsConnectionSslConfigAdditionalVariable</a></code> | *No description.* |
 
 ---
 
@@ -20261,10 +20231,10 @@ public IntegrationConnectorsConnectionSslConfigAdditionalVariableSecretValueOutp
 ##### `booleanValueInput`<sup>Optional</sup> <a name="booleanValueInput" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigAdditionalVariableOutputReference.property.booleanValueInput"></a>
 
 ```java
-public java.lang.Object getBooleanValueInput();
+public java.lang.Boolean|IResolvable getBooleanValueInput();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
@@ -20321,10 +20291,10 @@ public java.lang.String getStringValueInput();
 ##### `booleanValue`<sup>Required</sup> <a name="booleanValue" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigAdditionalVariableOutputReference.property.booleanValue"></a>
 
 ```java
-public java.lang.Object getBooleanValue();
+public java.lang.Boolean|IResolvable getBooleanValue();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
@@ -20361,10 +20331,10 @@ public java.lang.String getStringValue();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigAdditionalVariableOutputReference.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|IntegrationConnectorsConnectionSslConfigAdditionalVariable getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigAdditionalVariable">IntegrationConnectorsConnectionSslConfigAdditionalVariable</a>
+- *Type:* com.hashicorp.cdktf.IResolvable|<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigAdditionalVariable">IntegrationConnectorsConnectionSslConfigAdditionalVariable</a>
 
 ---
 
@@ -21673,12 +21643,12 @@ Returns a reversible string representation.
 ##### `putAdditionalVariable` <a name="putAdditionalVariable" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigOutputReference.putAdditionalVariable"></a>
 
 ```java
-public void putAdditionalVariable(IResolvable OR java.util.List<IntegrationConnectorsConnectionSslConfigAdditionalVariable> value)
+public void putAdditionalVariable(IResolvable|java.util.List<IntegrationConnectorsConnectionSslConfigAdditionalVariable> value)
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigOutputReference.putAdditionalVariable.parameter.value"></a>
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigAdditionalVariable">IntegrationConnectorsConnectionSslConfigAdditionalVariable</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigAdditionalVariable">IntegrationConnectorsConnectionSslConfigAdditionalVariable</a>>
 
 ---
 
@@ -21796,7 +21766,7 @@ public void resetUseSsl()
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigOutputReference.property.clientPrivateKey">clientPrivateKey</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigClientPrivateKeyOutputReference">IntegrationConnectorsConnectionSslConfigClientPrivateKeyOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigOutputReference.property.clientPrivateKeyPass">clientPrivateKeyPass</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigClientPrivateKeyPassOutputReference">IntegrationConnectorsConnectionSslConfigClientPrivateKeyPassOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigOutputReference.property.privateServerCertificate">privateServerCertificate</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigPrivateServerCertificateOutputReference">IntegrationConnectorsConnectionSslConfigPrivateServerCertificateOutputReference</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigOutputReference.property.additionalVariableInput">additionalVariableInput</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigAdditionalVariable">IntegrationConnectorsConnectionSslConfigAdditionalVariable</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigOutputReference.property.additionalVariableInput">additionalVariableInput</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigAdditionalVariable">IntegrationConnectorsConnectionSslConfigAdditionalVariable</a>></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigOutputReference.property.clientCertificateInput">clientCertificateInput</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigClientCertificate">IntegrationConnectorsConnectionSslConfigClientCertificate</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigOutputReference.property.clientCertTypeInput">clientCertTypeInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigOutputReference.property.clientPrivateKeyInput">clientPrivateKeyInput</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigClientPrivateKey">IntegrationConnectorsConnectionSslConfigClientPrivateKey</a></code> | *No description.* |
@@ -21805,12 +21775,12 @@ public void resetUseSsl()
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigOutputReference.property.serverCertTypeInput">serverCertTypeInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigOutputReference.property.trustModelInput">trustModelInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigOutputReference.property.typeInput">typeInput</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigOutputReference.property.useSslInput">useSslInput</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigOutputReference.property.useSslInput">useSslInput</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigOutputReference.property.clientCertType">clientCertType</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigOutputReference.property.serverCertType">serverCertType</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigOutputReference.property.trustModel">trustModel</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigOutputReference.property.type">type</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigOutputReference.property.useSsl">useSsl</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigOutputReference.property.useSsl">useSsl</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfig">IntegrationConnectorsConnectionSslConfig</a></code> | *No description.* |
 
 ---
@@ -21892,10 +21862,10 @@ public IntegrationConnectorsConnectionSslConfigPrivateServerCertificateOutputRef
 ##### `additionalVariableInput`<sup>Optional</sup> <a name="additionalVariableInput" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigOutputReference.property.additionalVariableInput"></a>
 
 ```java
-public java.lang.Object getAdditionalVariableInput();
+public IResolvable|java.util.List<IntegrationConnectorsConnectionSslConfigAdditionalVariable> getAdditionalVariableInput();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigAdditionalVariable">IntegrationConnectorsConnectionSslConfigAdditionalVariable</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigAdditionalVariable">IntegrationConnectorsConnectionSslConfigAdditionalVariable</a>>
 
 ---
 
@@ -21982,10 +21952,10 @@ public java.lang.String getTypeInput();
 ##### `useSslInput`<sup>Optional</sup> <a name="useSslInput" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigOutputReference.property.useSslInput"></a>
 
 ```java
-public java.lang.Object getUseSslInput();
+public java.lang.Boolean|IResolvable getUseSslInput();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
@@ -22032,10 +22002,10 @@ public java.lang.String getType();
 ##### `useSsl`<sup>Required</sup> <a name="useSsl" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigOutputReference.property.useSsl"></a>
 
 ```java
-public java.lang.Object getUseSsl();
+public java.lang.Boolean|IResolvable getUseSsl();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
@@ -23007,7 +22977,7 @@ public void resetUpdate()
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionTimeoutsOutputReference.property.create">create</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionTimeoutsOutputReference.property.delete">delete</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionTimeoutsOutputReference.property.update">update</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionTimeouts">IntegrationConnectorsConnectionTimeouts</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionTimeouts">IntegrationConnectorsConnectionTimeouts</a></code> | *No description.* |
 
 ---
 
@@ -23098,10 +23068,10 @@ public java.lang.String getUpdate();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionTimeoutsOutputReference.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|IntegrationConnectorsConnectionTimeouts getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionTimeouts">IntegrationConnectorsConnectionTimeouts</a>
+- *Type:* com.hashicorp.cdktf.IResolvable|<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionTimeouts">IntegrationConnectorsConnectionTimeouts</a>
 
 ---
 

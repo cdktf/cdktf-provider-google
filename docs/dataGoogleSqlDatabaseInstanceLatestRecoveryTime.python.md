@@ -14,13 +14,13 @@ from cdktf_cdktf_provider_google import data_google_sql_database_instance_latest
 dataGoogleSqlDatabaseInstanceLatestRecoveryTime.DataGoogleSqlDatabaseInstanceLatestRecoveryTime(
   scope: Construct,
   id: str,
-  connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection] = None,
-  count: typing.Union[typing.Union[int, float], TerraformCount] = None,
+  connection: SSHProvisionerConnection | WinrmProvisionerConnection = None,
+  count: typing.Union[int, float] | TerraformCount = None,
   depends_on: typing.List[ITerraformDependable] = None,
   for_each: ITerraformIterator = None,
   lifecycle: TerraformResourceLifecycle = None,
   provider: TerraformProvider = None,
-  provisioners: typing.List[typing.Union[FileProvisioner, LocalExecProvisioner, RemoteExecProvisioner]] = None,
+  provisioners: typing.List[FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner] = None,
   instance: str,
   id: str = None,
   project: str = None
@@ -31,13 +31,13 @@ dataGoogleSqlDatabaseInstanceLatestRecoveryTime.DataGoogleSqlDatabaseInstanceLat
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.dataGoogleSqlDatabaseInstanceLatestRecoveryTime.DataGoogleSqlDatabaseInstanceLatestRecoveryTime.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | The scope in which to define this construct. |
 | <code><a href="#@cdktf/provider-google.dataGoogleSqlDatabaseInstanceLatestRecoveryTime.DataGoogleSqlDatabaseInstanceLatestRecoveryTime.Initializer.parameter.id">id</a></code> | <code>str</code> | The scoped construct ID. |
-| <code><a href="#@cdktf/provider-google.dataGoogleSqlDatabaseInstanceLatestRecoveryTime.DataGoogleSqlDatabaseInstanceLatestRecoveryTime.Initializer.parameter.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleSqlDatabaseInstanceLatestRecoveryTime.DataGoogleSqlDatabaseInstanceLatestRecoveryTime.Initializer.parameter.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleSqlDatabaseInstanceLatestRecoveryTime.DataGoogleSqlDatabaseInstanceLatestRecoveryTime.Initializer.parameter.connection">connection</a></code> | <code>cdktf.SSHProvisionerConnection \| cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleSqlDatabaseInstanceLatestRecoveryTime.DataGoogleSqlDatabaseInstanceLatestRecoveryTime.Initializer.parameter.count">count</a></code> | <code>typing.Union[int, float] \| cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleSqlDatabaseInstanceLatestRecoveryTime.DataGoogleSqlDatabaseInstanceLatestRecoveryTime.Initializer.parameter.dependsOn">depends_on</a></code> | <code>typing.List[cdktf.ITerraformDependable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleSqlDatabaseInstanceLatestRecoveryTime.DataGoogleSqlDatabaseInstanceLatestRecoveryTime.Initializer.parameter.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleSqlDatabaseInstanceLatestRecoveryTime.DataGoogleSqlDatabaseInstanceLatestRecoveryTime.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleSqlDatabaseInstanceLatestRecoveryTime.DataGoogleSqlDatabaseInstanceLatestRecoveryTime.Initializer.parameter.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleSqlDatabaseInstanceLatestRecoveryTime.DataGoogleSqlDatabaseInstanceLatestRecoveryTime.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleSqlDatabaseInstanceLatestRecoveryTime.DataGoogleSqlDatabaseInstanceLatestRecoveryTime.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleSqlDatabaseInstanceLatestRecoveryTime.DataGoogleSqlDatabaseInstanceLatestRecoveryTime.Initializer.parameter.instance">instance</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/data-sources/sql_database_instance_latest_recovery_time#instance DataGoogleSqlDatabaseInstanceLatestRecoveryTime#instance}. |
 | <code><a href="#@cdktf/provider-google.dataGoogleSqlDatabaseInstanceLatestRecoveryTime.DataGoogleSqlDatabaseInstanceLatestRecoveryTime.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/data-sources/sql_database_instance_latest_recovery_time#id DataGoogleSqlDatabaseInstanceLatestRecoveryTime#id}. |
 | <code><a href="#@cdktf/provider-google.dataGoogleSqlDatabaseInstanceLatestRecoveryTime.DataGoogleSqlDatabaseInstanceLatestRecoveryTime.Initializer.parameter.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/data-sources/sql_database_instance_latest_recovery_time#project DataGoogleSqlDatabaseInstanceLatestRecoveryTime#project}. |
@@ -64,13 +64,13 @@ Must be unique amongst siblings in the same scope
 
 ##### `connection`<sup>Optional</sup> <a name="connection" id="@cdktf/provider-google.dataGoogleSqlDatabaseInstanceLatestRecoveryTime.DataGoogleSqlDatabaseInstanceLatestRecoveryTime.Initializer.parameter.connection"></a>
 
-- *Type:* typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]
+- *Type:* cdktf.SSHProvisionerConnection | cdktf.WinrmProvisionerConnection
 
 ---
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.dataGoogleSqlDatabaseInstanceLatestRecoveryTime.DataGoogleSqlDatabaseInstanceLatestRecoveryTime.Initializer.parameter.count"></a>
 
-- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
+- *Type:* typing.Union[int, float] | cdktf.TerraformCount
 
 ---
 
@@ -100,7 +100,7 @@ Must be unique amongst siblings in the same scope
 
 ##### `provisioners`<sup>Optional</sup> <a name="provisioners" id="@cdktf/provider-google.dataGoogleSqlDatabaseInstanceLatestRecoveryTime.DataGoogleSqlDatabaseInstanceLatestRecoveryTime.Initializer.parameter.provisioners"></a>
 
-- *Type:* typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]
+- *Type:* typing.List[cdktf.FileProvisioner | cdktf.LocalExecProvisioner | cdktf.RemoteExecProvisioner]
 
 ---
 
@@ -523,7 +523,7 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.5
 | <code><a href="#@cdktf/provider-google.dataGoogleSqlDatabaseInstanceLatestRecoveryTime.DataGoogleSqlDatabaseInstanceLatestRecoveryTime.property.terraformMetaArguments">terraform_meta_arguments</a></code> | <code>typing.Mapping[typing.Any]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleSqlDatabaseInstanceLatestRecoveryTime.DataGoogleSqlDatabaseInstanceLatestRecoveryTime.property.terraformResourceType">terraform_resource_type</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleSqlDatabaseInstanceLatestRecoveryTime.DataGoogleSqlDatabaseInstanceLatestRecoveryTime.property.terraformGeneratorMetadata">terraform_generator_metadata</a></code> | <code>cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleSqlDatabaseInstanceLatestRecoveryTime.DataGoogleSqlDatabaseInstanceLatestRecoveryTime.property.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleSqlDatabaseInstanceLatestRecoveryTime.DataGoogleSqlDatabaseInstanceLatestRecoveryTime.property.count">count</a></code> | <code>typing.Union[int, float] \| cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleSqlDatabaseInstanceLatestRecoveryTime.DataGoogleSqlDatabaseInstanceLatestRecoveryTime.property.dependsOn">depends_on</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleSqlDatabaseInstanceLatestRecoveryTime.DataGoogleSqlDatabaseInstanceLatestRecoveryTime.property.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleSqlDatabaseInstanceLatestRecoveryTime.DataGoogleSqlDatabaseInstanceLatestRecoveryTime.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -613,10 +613,10 @@ terraform_generator_metadata: TerraformProviderGeneratorMetadata
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.dataGoogleSqlDatabaseInstanceLatestRecoveryTime.DataGoogleSqlDatabaseInstanceLatestRecoveryTime.property.count"></a>
 
 ```python
-count: typing.Union[typing.Union[int, float], TerraformCount]
+count: typing.Union[int, float] | TerraformCount
 ```
 
-- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
+- *Type:* typing.Union[int, float] | cdktf.TerraformCount
 
 ---
 
@@ -758,13 +758,13 @@ tfResourceType: str
 from cdktf_cdktf_provider_google import data_google_sql_database_instance_latest_recovery_time
 
 dataGoogleSqlDatabaseInstanceLatestRecoveryTime.DataGoogleSqlDatabaseInstanceLatestRecoveryTimeConfig(
-  connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection] = None,
-  count: typing.Union[typing.Union[int, float], TerraformCount] = None,
+  connection: SSHProvisionerConnection | WinrmProvisionerConnection = None,
+  count: typing.Union[int, float] | TerraformCount = None,
   depends_on: typing.List[ITerraformDependable] = None,
   for_each: ITerraformIterator = None,
   lifecycle: TerraformResourceLifecycle = None,
   provider: TerraformProvider = None,
-  provisioners: typing.List[typing.Union[FileProvisioner, LocalExecProvisioner, RemoteExecProvisioner]] = None,
+  provisioners: typing.List[FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner] = None,
   instance: str,
   id: str = None,
   project: str = None
@@ -775,13 +775,13 @@ dataGoogleSqlDatabaseInstanceLatestRecoveryTime.DataGoogleSqlDatabaseInstanceLat
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.dataGoogleSqlDatabaseInstanceLatestRecoveryTime.DataGoogleSqlDatabaseInstanceLatestRecoveryTimeConfig.property.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleSqlDatabaseInstanceLatestRecoveryTime.DataGoogleSqlDatabaseInstanceLatestRecoveryTimeConfig.property.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleSqlDatabaseInstanceLatestRecoveryTime.DataGoogleSqlDatabaseInstanceLatestRecoveryTimeConfig.property.connection">connection</a></code> | <code>cdktf.SSHProvisionerConnection \| cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleSqlDatabaseInstanceLatestRecoveryTime.DataGoogleSqlDatabaseInstanceLatestRecoveryTimeConfig.property.count">count</a></code> | <code>typing.Union[int, float] \| cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleSqlDatabaseInstanceLatestRecoveryTime.DataGoogleSqlDatabaseInstanceLatestRecoveryTimeConfig.property.dependsOn">depends_on</a></code> | <code>typing.List[cdktf.ITerraformDependable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleSqlDatabaseInstanceLatestRecoveryTime.DataGoogleSqlDatabaseInstanceLatestRecoveryTimeConfig.property.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleSqlDatabaseInstanceLatestRecoveryTime.DataGoogleSqlDatabaseInstanceLatestRecoveryTimeConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleSqlDatabaseInstanceLatestRecoveryTime.DataGoogleSqlDatabaseInstanceLatestRecoveryTimeConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleSqlDatabaseInstanceLatestRecoveryTime.DataGoogleSqlDatabaseInstanceLatestRecoveryTimeConfig.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleSqlDatabaseInstanceLatestRecoveryTime.DataGoogleSqlDatabaseInstanceLatestRecoveryTimeConfig.property.provisioners">provisioners</a></code> | <code>typing.List[cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleSqlDatabaseInstanceLatestRecoveryTime.DataGoogleSqlDatabaseInstanceLatestRecoveryTimeConfig.property.instance">instance</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/data-sources/sql_database_instance_latest_recovery_time#instance DataGoogleSqlDatabaseInstanceLatestRecoveryTime#instance}. |
 | <code><a href="#@cdktf/provider-google.dataGoogleSqlDatabaseInstanceLatestRecoveryTime.DataGoogleSqlDatabaseInstanceLatestRecoveryTimeConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/data-sources/sql_database_instance_latest_recovery_time#id DataGoogleSqlDatabaseInstanceLatestRecoveryTime#id}. |
 | <code><a href="#@cdktf/provider-google.dataGoogleSqlDatabaseInstanceLatestRecoveryTime.DataGoogleSqlDatabaseInstanceLatestRecoveryTimeConfig.property.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/data-sources/sql_database_instance_latest_recovery_time#project DataGoogleSqlDatabaseInstanceLatestRecoveryTime#project}. |
@@ -791,20 +791,20 @@ dataGoogleSqlDatabaseInstanceLatestRecoveryTime.DataGoogleSqlDatabaseInstanceLat
 ##### `connection`<sup>Optional</sup> <a name="connection" id="@cdktf/provider-google.dataGoogleSqlDatabaseInstanceLatestRecoveryTime.DataGoogleSqlDatabaseInstanceLatestRecoveryTimeConfig.property.connection"></a>
 
 ```python
-connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection]
+connection: SSHProvisionerConnection | WinrmProvisionerConnection
 ```
 
-- *Type:* typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]
+- *Type:* cdktf.SSHProvisionerConnection | cdktf.WinrmProvisionerConnection
 
 ---
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.dataGoogleSqlDatabaseInstanceLatestRecoveryTime.DataGoogleSqlDatabaseInstanceLatestRecoveryTimeConfig.property.count"></a>
 
 ```python
-count: typing.Union[typing.Union[int, float], TerraformCount]
+count: typing.Union[int, float] | TerraformCount
 ```
 
-- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
+- *Type:* typing.Union[int, float] | cdktf.TerraformCount
 
 ---
 
@@ -851,10 +851,10 @@ provider: TerraformProvider
 ##### `provisioners`<sup>Optional</sup> <a name="provisioners" id="@cdktf/provider-google.dataGoogleSqlDatabaseInstanceLatestRecoveryTime.DataGoogleSqlDatabaseInstanceLatestRecoveryTimeConfig.property.provisioners"></a>
 
 ```python
-provisioners: typing.List[typing.Union[FileProvisioner, LocalExecProvisioner, RemoteExecProvisioner]]
+provisioners: typing.List[FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner]
 ```
 
-- *Type:* typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]
+- *Type:* typing.List[cdktf.FileProvisioner | cdktf.LocalExecProvisioner | cdktf.RemoteExecProvisioner]
 
 ---
 

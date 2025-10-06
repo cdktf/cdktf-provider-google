@@ -14,20 +14,20 @@ from cdktf_cdktf_provider_google import service_networking_connection
 serviceNetworkingConnection.ServiceNetworkingConnection(
   scope: Construct,
   id: str,
-  connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection] = None,
-  count: typing.Union[typing.Union[int, float], TerraformCount] = None,
+  connection: SSHProvisionerConnection | WinrmProvisionerConnection = None,
+  count: typing.Union[int, float] | TerraformCount = None,
   depends_on: typing.List[ITerraformDependable] = None,
   for_each: ITerraformIterator = None,
   lifecycle: TerraformResourceLifecycle = None,
   provider: TerraformProvider = None,
-  provisioners: typing.List[typing.Union[FileProvisioner, LocalExecProvisioner, RemoteExecProvisioner]] = None,
+  provisioners: typing.List[FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner] = None,
   network: str,
   reserved_peering_ranges: typing.List[str],
   service: str,
   deletion_policy: str = None,
   id: str = None,
   timeouts: ServiceNetworkingConnectionTimeouts = None,
-  update_on_creation_fail: typing.Union[bool, IResolvable] = None
+  update_on_creation_fail: bool | IResolvable = None
 )
 ```
 
@@ -35,20 +35,20 @@ serviceNetworkingConnection.ServiceNetworkingConnection(
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.serviceNetworkingConnection.ServiceNetworkingConnection.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | The scope in which to define this construct. |
 | <code><a href="#@cdktf/provider-google.serviceNetworkingConnection.ServiceNetworkingConnection.Initializer.parameter.id">id</a></code> | <code>str</code> | The scoped construct ID. |
-| <code><a href="#@cdktf/provider-google.serviceNetworkingConnection.ServiceNetworkingConnection.Initializer.parameter.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.serviceNetworkingConnection.ServiceNetworkingConnection.Initializer.parameter.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.serviceNetworkingConnection.ServiceNetworkingConnection.Initializer.parameter.connection">connection</a></code> | <code>cdktf.SSHProvisionerConnection \| cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.serviceNetworkingConnection.ServiceNetworkingConnection.Initializer.parameter.count">count</a></code> | <code>typing.Union[int, float] \| cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.serviceNetworkingConnection.ServiceNetworkingConnection.Initializer.parameter.dependsOn">depends_on</a></code> | <code>typing.List[cdktf.ITerraformDependable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.serviceNetworkingConnection.ServiceNetworkingConnection.Initializer.parameter.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.serviceNetworkingConnection.ServiceNetworkingConnection.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.serviceNetworkingConnection.ServiceNetworkingConnection.Initializer.parameter.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.serviceNetworkingConnection.ServiceNetworkingConnection.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.serviceNetworkingConnection.ServiceNetworkingConnection.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.serviceNetworkingConnection.ServiceNetworkingConnection.Initializer.parameter.network">network</a></code> | <code>str</code> | Name of VPC network connected with service producers using VPC peering. |
 | <code><a href="#@cdktf/provider-google.serviceNetworkingConnection.ServiceNetworkingConnection.Initializer.parameter.reservedPeeringRanges">reserved_peering_ranges</a></code> | <code>typing.List[str]</code> | Named IP address range(s) of PEERING type reserved for this service provider. |
 | <code><a href="#@cdktf/provider-google.serviceNetworkingConnection.ServiceNetworkingConnection.Initializer.parameter.service">service</a></code> | <code>str</code> | Provider peering service that is managing peering connectivity for a service provider organization. |
 | <code><a href="#@cdktf/provider-google.serviceNetworkingConnection.ServiceNetworkingConnection.Initializer.parameter.deletionPolicy">deletion_policy</a></code> | <code>str</code> | When set to ABANDON, terraform will abandon management of the resource instead of deleting it. |
 | <code><a href="#@cdktf/provider-google.serviceNetworkingConnection.ServiceNetworkingConnection.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/service_networking_connection#id ServiceNetworkingConnection#id}. |
 | <code><a href="#@cdktf/provider-google.serviceNetworkingConnection.ServiceNetworkingConnection.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-google.serviceNetworkingConnection.ServiceNetworkingConnectionTimeouts">ServiceNetworkingConnectionTimeouts</a></code> | timeouts block. |
-| <code><a href="#@cdktf/provider-google.serviceNetworkingConnection.ServiceNetworkingConnection.Initializer.parameter.updateOnCreationFail">update_on_creation_fail</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | When set to true, enforce an update of the reserved peering ranges on the existing service networking connection in case of a new connection creation failure. |
+| <code><a href="#@cdktf/provider-google.serviceNetworkingConnection.ServiceNetworkingConnection.Initializer.parameter.updateOnCreationFail">update_on_creation_fail</a></code> | <code>bool \| cdktf.IResolvable</code> | When set to true, enforce an update of the reserved peering ranges on the existing service networking connection in case of a new connection creation failure. |
 
 ---
 
@@ -72,13 +72,13 @@ Must be unique amongst siblings in the same scope
 
 ##### `connection`<sup>Optional</sup> <a name="connection" id="@cdktf/provider-google.serviceNetworkingConnection.ServiceNetworkingConnection.Initializer.parameter.connection"></a>
 
-- *Type:* typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]
+- *Type:* cdktf.SSHProvisionerConnection | cdktf.WinrmProvisionerConnection
 
 ---
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.serviceNetworkingConnection.ServiceNetworkingConnection.Initializer.parameter.count"></a>
 
-- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
+- *Type:* typing.Union[int, float] | cdktf.TerraformCount
 
 ---
 
@@ -108,7 +108,7 @@ Must be unique amongst siblings in the same scope
 
 ##### `provisioners`<sup>Optional</sup> <a name="provisioners" id="@cdktf/provider-google.serviceNetworkingConnection.ServiceNetworkingConnection.Initializer.parameter.provisioners"></a>
 
-- *Type:* typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]
+- *Type:* typing.List[cdktf.FileProvisioner | cdktf.LocalExecProvisioner | cdktf.RemoteExecProvisioner]
 
 ---
 
@@ -181,7 +181,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `update_on_creation_fail`<sup>Optional</sup> <a name="update_on_creation_fail" id="@cdktf/provider-google.serviceNetworkingConnection.ServiceNetworkingConnection.Initializer.parameter.updateOnCreationFail"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 When set to true, enforce an update of the reserved peering ranges on the existing service networking connection in case of a new connection creation failure.
 
@@ -446,7 +446,7 @@ def get_string_map_attribute(
 ##### `has_resource_move` <a name="has_resource_move" id="@cdktf/provider-google.serviceNetworkingConnection.ServiceNetworkingConnection.hasResourceMove"></a>
 
 ```python
-def has_resource_move() -> typing.Union[TerraformResourceMoveByTarget, TerraformResourceMoveById]
+def has_resource_move() -> TerraformResourceMoveByTarget | TerraformResourceMoveById
 ```
 
 ##### `import_from` <a name="import_from" id="@cdktf/provider-google.serviceNetworkingConnection.ServiceNetworkingConnection.importFrom"></a>
@@ -509,7 +509,7 @@ Full id of resource being moved from, e.g. "aws_s3_bucket.example".
 ```python
 def move_to(
   move_target: str,
-  index: typing.Union[str, typing.Union[int, float]] = None
+  index: str | typing.Union[int, float] = None
 ) -> None
 ```
 
@@ -525,7 +525,7 @@ The previously set user defined string set by .addMoveTarget() corresponding to 
 
 ###### `index`<sup>Optional</sup> <a name="index" id="@cdktf/provider-google.serviceNetworkingConnection.ServiceNetworkingConnection.moveTo.parameter.index"></a>
 
-- *Type:* typing.Union[str, typing.Union[int, float]]
+- *Type:* str | typing.Union[int, float]
 
 Optional The index corresponding to the key the resource is to appear in the foreach of a resource to move to.
 
@@ -744,13 +744,13 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.5
 | <code><a href="#@cdktf/provider-google.serviceNetworkingConnection.ServiceNetworkingConnection.property.terraformMetaArguments">terraform_meta_arguments</a></code> | <code>typing.Mapping[typing.Any]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.serviceNetworkingConnection.ServiceNetworkingConnection.property.terraformResourceType">terraform_resource_type</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.serviceNetworkingConnection.ServiceNetworkingConnection.property.terraformGeneratorMetadata">terraform_generator_metadata</a></code> | <code>cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.serviceNetworkingConnection.ServiceNetworkingConnection.property.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.serviceNetworkingConnection.ServiceNetworkingConnection.property.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.serviceNetworkingConnection.ServiceNetworkingConnection.property.connection">connection</a></code> | <code>cdktf.SSHProvisionerConnection \| cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.serviceNetworkingConnection.ServiceNetworkingConnection.property.count">count</a></code> | <code>typing.Union[int, float] \| cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.serviceNetworkingConnection.ServiceNetworkingConnection.property.dependsOn">depends_on</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.serviceNetworkingConnection.ServiceNetworkingConnection.property.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.serviceNetworkingConnection.ServiceNetworkingConnection.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.serviceNetworkingConnection.ServiceNetworkingConnection.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.serviceNetworkingConnection.ServiceNetworkingConnection.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.serviceNetworkingConnection.ServiceNetworkingConnection.property.provisioners">provisioners</a></code> | <code>typing.List[cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.serviceNetworkingConnection.ServiceNetworkingConnection.property.peering">peering</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.serviceNetworkingConnection.ServiceNetworkingConnection.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-google.serviceNetworkingConnection.ServiceNetworkingConnectionTimeoutsOutputReference">ServiceNetworkingConnectionTimeoutsOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.serviceNetworkingConnection.ServiceNetworkingConnection.property.deletionPolicyInput">deletion_policy_input</a></code> | <code>str</code> | *No description.* |
@@ -758,14 +758,14 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.5
 | <code><a href="#@cdktf/provider-google.serviceNetworkingConnection.ServiceNetworkingConnection.property.networkInput">network_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.serviceNetworkingConnection.ServiceNetworkingConnection.property.reservedPeeringRangesInput">reserved_peering_ranges_input</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.serviceNetworkingConnection.ServiceNetworkingConnection.property.serviceInput">service_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.serviceNetworkingConnection.ServiceNetworkingConnection.property.timeoutsInput">timeouts_input</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.serviceNetworkingConnection.ServiceNetworkingConnectionTimeouts">ServiceNetworkingConnectionTimeouts</a>]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.serviceNetworkingConnection.ServiceNetworkingConnection.property.updateOnCreationFailInput">update_on_creation_fail_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.serviceNetworkingConnection.ServiceNetworkingConnection.property.timeoutsInput">timeouts_input</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.serviceNetworkingConnection.ServiceNetworkingConnectionTimeouts">ServiceNetworkingConnectionTimeouts</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.serviceNetworkingConnection.ServiceNetworkingConnection.property.updateOnCreationFailInput">update_on_creation_fail_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.serviceNetworkingConnection.ServiceNetworkingConnection.property.deletionPolicy">deletion_policy</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.serviceNetworkingConnection.ServiceNetworkingConnection.property.id">id</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.serviceNetworkingConnection.ServiceNetworkingConnection.property.network">network</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.serviceNetworkingConnection.ServiceNetworkingConnection.property.reservedPeeringRanges">reserved_peering_ranges</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.serviceNetworkingConnection.ServiceNetworkingConnection.property.service">service</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.serviceNetworkingConnection.ServiceNetworkingConnection.property.updateOnCreationFail">update_on_creation_fail</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.serviceNetworkingConnection.ServiceNetworkingConnection.property.updateOnCreationFail">update_on_creation_fail</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 
 ---
 
@@ -844,20 +844,20 @@ terraform_generator_metadata: TerraformProviderGeneratorMetadata
 ##### `connection`<sup>Optional</sup> <a name="connection" id="@cdktf/provider-google.serviceNetworkingConnection.ServiceNetworkingConnection.property.connection"></a>
 
 ```python
-connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection]
+connection: SSHProvisionerConnection | WinrmProvisionerConnection
 ```
 
-- *Type:* typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]
+- *Type:* cdktf.SSHProvisionerConnection | cdktf.WinrmProvisionerConnection
 
 ---
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.serviceNetworkingConnection.ServiceNetworkingConnection.property.count"></a>
 
 ```python
-count: typing.Union[typing.Union[int, float], TerraformCount]
+count: typing.Union[int, float] | TerraformCount
 ```
 
-- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
+- *Type:* typing.Union[int, float] | cdktf.TerraformCount
 
 ---
 
@@ -904,10 +904,10 @@ provider: TerraformProvider
 ##### `provisioners`<sup>Optional</sup> <a name="provisioners" id="@cdktf/provider-google.serviceNetworkingConnection.ServiceNetworkingConnection.property.provisioners"></a>
 
 ```python
-provisioners: typing.List[typing.Union[FileProvisioner, LocalExecProvisioner, RemoteExecProvisioner]]
+provisioners: typing.List[FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner]
 ```
 
-- *Type:* typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]
+- *Type:* typing.List[cdktf.FileProvisioner | cdktf.LocalExecProvisioner | cdktf.RemoteExecProvisioner]
 
 ---
 
@@ -984,20 +984,20 @@ service_input: str
 ##### `timeouts_input`<sup>Optional</sup> <a name="timeouts_input" id="@cdktf/provider-google.serviceNetworkingConnection.ServiceNetworkingConnection.property.timeoutsInput"></a>
 
 ```python
-timeouts_input: typing.Union[IResolvable, ServiceNetworkingConnectionTimeouts]
+timeouts_input: IResolvable | ServiceNetworkingConnectionTimeouts
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.serviceNetworkingConnection.ServiceNetworkingConnectionTimeouts">ServiceNetworkingConnectionTimeouts</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.serviceNetworkingConnection.ServiceNetworkingConnectionTimeouts">ServiceNetworkingConnectionTimeouts</a>
 
 ---
 
 ##### `update_on_creation_fail_input`<sup>Optional</sup> <a name="update_on_creation_fail_input" id="@cdktf/provider-google.serviceNetworkingConnection.ServiceNetworkingConnection.property.updateOnCreationFailInput"></a>
 
 ```python
-update_on_creation_fail_input: typing.Union[bool, IResolvable]
+update_on_creation_fail_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -1054,10 +1054,10 @@ service: str
 ##### `update_on_creation_fail`<sup>Required</sup> <a name="update_on_creation_fail" id="@cdktf/provider-google.serviceNetworkingConnection.ServiceNetworkingConnection.property.updateOnCreationFail"></a>
 
 ```python
-update_on_creation_fail: typing.Union[bool, IResolvable]
+update_on_creation_fail: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -1089,20 +1089,20 @@ tfResourceType: str
 from cdktf_cdktf_provider_google import service_networking_connection
 
 serviceNetworkingConnection.ServiceNetworkingConnectionConfig(
-  connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection] = None,
-  count: typing.Union[typing.Union[int, float], TerraformCount] = None,
+  connection: SSHProvisionerConnection | WinrmProvisionerConnection = None,
+  count: typing.Union[int, float] | TerraformCount = None,
   depends_on: typing.List[ITerraformDependable] = None,
   for_each: ITerraformIterator = None,
   lifecycle: TerraformResourceLifecycle = None,
   provider: TerraformProvider = None,
-  provisioners: typing.List[typing.Union[FileProvisioner, LocalExecProvisioner, RemoteExecProvisioner]] = None,
+  provisioners: typing.List[FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner] = None,
   network: str,
   reserved_peering_ranges: typing.List[str],
   service: str,
   deletion_policy: str = None,
   id: str = None,
   timeouts: ServiceNetworkingConnectionTimeouts = None,
-  update_on_creation_fail: typing.Union[bool, IResolvable] = None
+  update_on_creation_fail: bool | IResolvable = None
 )
 ```
 
@@ -1110,40 +1110,40 @@ serviceNetworkingConnection.ServiceNetworkingConnectionConfig(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.serviceNetworkingConnection.ServiceNetworkingConnectionConfig.property.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.serviceNetworkingConnection.ServiceNetworkingConnectionConfig.property.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.serviceNetworkingConnection.ServiceNetworkingConnectionConfig.property.connection">connection</a></code> | <code>cdktf.SSHProvisionerConnection \| cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.serviceNetworkingConnection.ServiceNetworkingConnectionConfig.property.count">count</a></code> | <code>typing.Union[int, float] \| cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.serviceNetworkingConnection.ServiceNetworkingConnectionConfig.property.dependsOn">depends_on</a></code> | <code>typing.List[cdktf.ITerraformDependable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.serviceNetworkingConnection.ServiceNetworkingConnectionConfig.property.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.serviceNetworkingConnection.ServiceNetworkingConnectionConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.serviceNetworkingConnection.ServiceNetworkingConnectionConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.serviceNetworkingConnection.ServiceNetworkingConnectionConfig.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.serviceNetworkingConnection.ServiceNetworkingConnectionConfig.property.provisioners">provisioners</a></code> | <code>typing.List[cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.serviceNetworkingConnection.ServiceNetworkingConnectionConfig.property.network">network</a></code> | <code>str</code> | Name of VPC network connected with service producers using VPC peering. |
 | <code><a href="#@cdktf/provider-google.serviceNetworkingConnection.ServiceNetworkingConnectionConfig.property.reservedPeeringRanges">reserved_peering_ranges</a></code> | <code>typing.List[str]</code> | Named IP address range(s) of PEERING type reserved for this service provider. |
 | <code><a href="#@cdktf/provider-google.serviceNetworkingConnection.ServiceNetworkingConnectionConfig.property.service">service</a></code> | <code>str</code> | Provider peering service that is managing peering connectivity for a service provider organization. |
 | <code><a href="#@cdktf/provider-google.serviceNetworkingConnection.ServiceNetworkingConnectionConfig.property.deletionPolicy">deletion_policy</a></code> | <code>str</code> | When set to ABANDON, terraform will abandon management of the resource instead of deleting it. |
 | <code><a href="#@cdktf/provider-google.serviceNetworkingConnection.ServiceNetworkingConnectionConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/service_networking_connection#id ServiceNetworkingConnection#id}. |
 | <code><a href="#@cdktf/provider-google.serviceNetworkingConnection.ServiceNetworkingConnectionConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-google.serviceNetworkingConnection.ServiceNetworkingConnectionTimeouts">ServiceNetworkingConnectionTimeouts</a></code> | timeouts block. |
-| <code><a href="#@cdktf/provider-google.serviceNetworkingConnection.ServiceNetworkingConnectionConfig.property.updateOnCreationFail">update_on_creation_fail</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | When set to true, enforce an update of the reserved peering ranges on the existing service networking connection in case of a new connection creation failure. |
+| <code><a href="#@cdktf/provider-google.serviceNetworkingConnection.ServiceNetworkingConnectionConfig.property.updateOnCreationFail">update_on_creation_fail</a></code> | <code>bool \| cdktf.IResolvable</code> | When set to true, enforce an update of the reserved peering ranges on the existing service networking connection in case of a new connection creation failure. |
 
 ---
 
 ##### `connection`<sup>Optional</sup> <a name="connection" id="@cdktf/provider-google.serviceNetworkingConnection.ServiceNetworkingConnectionConfig.property.connection"></a>
 
 ```python
-connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection]
+connection: SSHProvisionerConnection | WinrmProvisionerConnection
 ```
 
-- *Type:* typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]
+- *Type:* cdktf.SSHProvisionerConnection | cdktf.WinrmProvisionerConnection
 
 ---
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.serviceNetworkingConnection.ServiceNetworkingConnectionConfig.property.count"></a>
 
 ```python
-count: typing.Union[typing.Union[int, float], TerraformCount]
+count: typing.Union[int, float] | TerraformCount
 ```
 
-- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
+- *Type:* typing.Union[int, float] | cdktf.TerraformCount
 
 ---
 
@@ -1190,10 +1190,10 @@ provider: TerraformProvider
 ##### `provisioners`<sup>Optional</sup> <a name="provisioners" id="@cdktf/provider-google.serviceNetworkingConnection.ServiceNetworkingConnectionConfig.property.provisioners"></a>
 
 ```python
-provisioners: typing.List[typing.Union[FileProvisioner, LocalExecProvisioner, RemoteExecProvisioner]]
+provisioners: typing.List[FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner]
 ```
 
-- *Type:* typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]
+- *Type:* typing.List[cdktf.FileProvisioner | cdktf.LocalExecProvisioner | cdktf.RemoteExecProvisioner]
 
 ---
 
@@ -1291,10 +1291,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `update_on_creation_fail`<sup>Optional</sup> <a name="update_on_creation_fail" id="@cdktf/provider-google.serviceNetworkingConnection.ServiceNetworkingConnectionConfig.property.updateOnCreationFail"></a>
 
 ```python
-update_on_creation_fail: typing.Union[bool, IResolvable]
+update_on_creation_fail: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 When set to true, enforce an update of the reserved peering ranges on the existing service networking connection in case of a new connection creation failure.
 
@@ -1626,7 +1626,7 @@ def reset_update() -> None
 | <code><a href="#@cdktf/provider-google.serviceNetworkingConnection.ServiceNetworkingConnectionTimeoutsOutputReference.property.create">create</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.serviceNetworkingConnection.ServiceNetworkingConnectionTimeoutsOutputReference.property.delete">delete</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.serviceNetworkingConnection.ServiceNetworkingConnectionTimeoutsOutputReference.property.update">update</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.serviceNetworkingConnection.ServiceNetworkingConnectionTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.serviceNetworkingConnection.ServiceNetworkingConnectionTimeouts">ServiceNetworkingConnectionTimeouts</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.serviceNetworkingConnection.ServiceNetworkingConnectionTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.serviceNetworkingConnection.ServiceNetworkingConnectionTimeouts">ServiceNetworkingConnectionTimeouts</a></code> | *No description.* |
 
 ---
 
@@ -1717,10 +1717,10 @@ update: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.serviceNetworkingConnection.ServiceNetworkingConnectionTimeoutsOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, ServiceNetworkingConnectionTimeouts]
+internal_value: IResolvable | ServiceNetworkingConnectionTimeouts
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.serviceNetworkingConnection.ServiceNetworkingConnectionTimeouts">ServiceNetworkingConnectionTimeouts</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.serviceNetworkingConnection.ServiceNetworkingConnectionTimeouts">ServiceNetworkingConnectionTimeouts</a>
 
 ---
 

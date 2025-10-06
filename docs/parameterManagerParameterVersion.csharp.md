@@ -277,7 +277,7 @@ private System.Collections.Generic.IDictionary<string, string> GetStringMapAttri
 ##### `HasResourceMove` <a name="HasResourceMove" id="@cdktf/provider-google.parameterManagerParameterVersion.ParameterManagerParameterVersion.hasResourceMove"></a>
 
 ```csharp
-private object HasResourceMove()
+private TerraformResourceMoveByTarget|TerraformResourceMoveById HasResourceMove()
 ```
 
 ##### `ImportFrom` <a name="ImportFrom" id="@cdktf/provider-google.parameterManagerParameterVersion.ParameterManagerParameterVersion.importFrom"></a>
@@ -331,7 +331,7 @@ Full id of resource being moved from, e.g. "aws_s3_bucket.example".
 ##### `MoveTo` <a name="MoveTo" id="@cdktf/provider-google.parameterManagerParameterVersion.ParameterManagerParameterVersion.moveTo"></a>
 
 ```csharp
-private void MoveTo(string MoveTarget, object Index = null)
+private void MoveTo(string MoveTarget, string|double Index = null)
 ```
 
 Moves this resource to the target resource given by moveTarget.
@@ -346,7 +346,7 @@ The previously set user defined string set by .addMoveTarget() corresponding to 
 
 ###### `Index`<sup>Optional</sup> <a name="Index" id="@cdktf/provider-google.parameterManagerParameterVersion.ParameterManagerParameterVersion.moveTo.parameter.index"></a>
 
-- *Type:* object
+- *Type:* string|double
 
 Optional The index corresponding to the key the resource is to appear in the foreach of a resource to move to.
 
@@ -524,25 +524,25 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.5
 | <code><a href="#@cdktf/provider-google.parameterManagerParameterVersion.ParameterManagerParameterVersion.property.terraformMetaArguments">TerraformMetaArguments</a></code> | <code>System.Collections.Generic.IDictionary<string, object></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.parameterManagerParameterVersion.ParameterManagerParameterVersion.property.terraformResourceType">TerraformResourceType</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.parameterManagerParameterVersion.ParameterManagerParameterVersion.property.terraformGeneratorMetadata">TerraformGeneratorMetadata</a></code> | <code>HashiCorp.Cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.parameterManagerParameterVersion.ParameterManagerParameterVersion.property.connection">Connection</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.parameterManagerParameterVersion.ParameterManagerParameterVersion.property.count">Count</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.parameterManagerParameterVersion.ParameterManagerParameterVersion.property.connection">Connection</a></code> | <code>HashiCorp.Cdktf.SSHProvisionerConnection\|HashiCorp.Cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.parameterManagerParameterVersion.ParameterManagerParameterVersion.property.count">Count</a></code> | <code>double\|HashiCorp.Cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.parameterManagerParameterVersion.ParameterManagerParameterVersion.property.dependsOn">DependsOn</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.parameterManagerParameterVersion.ParameterManagerParameterVersion.property.forEach">ForEach</a></code> | <code>HashiCorp.Cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.parameterManagerParameterVersion.ParameterManagerParameterVersion.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.parameterManagerParameterVersion.ParameterManagerParameterVersion.property.provider">Provider</a></code> | <code>HashiCorp.Cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.parameterManagerParameterVersion.ParameterManagerParameterVersion.property.provisioners">Provisioners</a></code> | <code>object[]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.parameterManagerParameterVersion.ParameterManagerParameterVersion.property.provisioners">Provisioners</a></code> | <code>HashiCorp.Cdktf.FileProvisioner\|HashiCorp.Cdktf.LocalExecProvisioner\|HashiCorp.Cdktf.RemoteExecProvisioner[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.parameterManagerParameterVersion.ParameterManagerParameterVersion.property.createTime">CreateTime</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.parameterManagerParameterVersion.ParameterManagerParameterVersion.property.kmsKeyVersion">KmsKeyVersion</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.parameterManagerParameterVersion.ParameterManagerParameterVersion.property.name">Name</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.parameterManagerParameterVersion.ParameterManagerParameterVersion.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-google.parameterManagerParameterVersion.ParameterManagerParameterVersionTimeoutsOutputReference">ParameterManagerParameterVersionTimeoutsOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.parameterManagerParameterVersion.ParameterManagerParameterVersion.property.updateTime">UpdateTime</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.parameterManagerParameterVersion.ParameterManagerParameterVersion.property.disabledInput">DisabledInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.parameterManagerParameterVersion.ParameterManagerParameterVersion.property.disabledInput">DisabledInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.parameterManagerParameterVersion.ParameterManagerParameterVersion.property.idInput">IdInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.parameterManagerParameterVersion.ParameterManagerParameterVersion.property.parameterDataInput">ParameterDataInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.parameterManagerParameterVersion.ParameterManagerParameterVersion.property.parameterInput">ParameterInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.parameterManagerParameterVersion.ParameterManagerParameterVersion.property.parameterVersionIdInput">ParameterVersionIdInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.parameterManagerParameterVersion.ParameterManagerParameterVersion.property.timeoutsInput">TimeoutsInput</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.parameterManagerParameterVersion.ParameterManagerParameterVersion.property.disabled">Disabled</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.parameterManagerParameterVersion.ParameterManagerParameterVersion.property.timeoutsInput">TimeoutsInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.parameterManagerParameterVersion.ParameterManagerParameterVersionTimeouts">ParameterManagerParameterVersionTimeouts</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.parameterManagerParameterVersion.ParameterManagerParameterVersion.property.disabled">Disabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.parameterManagerParameterVersion.ParameterManagerParameterVersion.property.id">Id</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.parameterManagerParameterVersion.ParameterManagerParameterVersion.property.parameter">Parameter</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.parameterManagerParameterVersion.ParameterManagerParameterVersion.property.parameterData">ParameterData</a></code> | <code>string</code> | *No description.* |
@@ -625,20 +625,20 @@ public TerraformProviderGeneratorMetadata TerraformGeneratorMetadata { get; }
 ##### `Connection`<sup>Optional</sup> <a name="Connection" id="@cdktf/provider-google.parameterManagerParameterVersion.ParameterManagerParameterVersion.property.connection"></a>
 
 ```csharp
-public object Connection { get; }
+public SSHProvisionerConnection|WinrmProvisionerConnection Connection { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.SSHProvisionerConnection|HashiCorp.Cdktf.WinrmProvisionerConnection
 
 ---
 
 ##### `Count`<sup>Optional</sup> <a name="Count" id="@cdktf/provider-google.parameterManagerParameterVersion.ParameterManagerParameterVersion.property.count"></a>
 
 ```csharp
-public object Count { get; }
+public double|TerraformCount Count { get; }
 ```
 
-- *Type:* object
+- *Type:* double|HashiCorp.Cdktf.TerraformCount
 
 ---
 
@@ -685,10 +685,10 @@ public TerraformProvider Provider { get; }
 ##### `Provisioners`<sup>Optional</sup> <a name="Provisioners" id="@cdktf/provider-google.parameterManagerParameterVersion.ParameterManagerParameterVersion.property.provisioners"></a>
 
 ```csharp
-public object[] Provisioners { get; }
+public (FileProvisioner|LocalExecProvisioner|RemoteExecProvisioner)[] Provisioners { get; }
 ```
 
-- *Type:* object[]
+- *Type:* HashiCorp.Cdktf.FileProvisioner|HashiCorp.Cdktf.LocalExecProvisioner|HashiCorp.Cdktf.RemoteExecProvisioner[]
 
 ---
 
@@ -745,10 +745,10 @@ public string UpdateTime { get; }
 ##### `DisabledInput`<sup>Optional</sup> <a name="DisabledInput" id="@cdktf/provider-google.parameterManagerParameterVersion.ParameterManagerParameterVersion.property.disabledInput"></a>
 
 ```csharp
-public object DisabledInput { get; }
+public bool|IResolvable DisabledInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -795,20 +795,20 @@ public string ParameterVersionIdInput { get; }
 ##### `TimeoutsInput`<sup>Optional</sup> <a name="TimeoutsInput" id="@cdktf/provider-google.parameterManagerParameterVersion.ParameterManagerParameterVersion.property.timeoutsInput"></a>
 
 ```csharp
-public object TimeoutsInput { get; }
+public IResolvable|ParameterManagerParameterVersionTimeouts TimeoutsInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.parameterManagerParameterVersion.ParameterManagerParameterVersionTimeouts">ParameterManagerParameterVersionTimeouts</a>
 
 ---
 
 ##### `Disabled`<sup>Required</sup> <a name="Disabled" id="@cdktf/provider-google.parameterManagerParameterVersion.ParameterManagerParameterVersion.property.disabled"></a>
 
 ```csharp
-public object Disabled { get; }
+public bool|IResolvable Disabled { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -880,17 +880,17 @@ public string TfResourceType { get; }
 using HashiCorp.Cdktf.Providers.Google;
 
 new ParameterManagerParameterVersionConfig {
-    object Connection = null,
-    object Count = null,
+    SSHProvisionerConnection|WinrmProvisionerConnection Connection = null,
+    double|TerraformCount Count = null,
     ITerraformDependable[] DependsOn = null,
     ITerraformIterator ForEach = null,
     TerraformResourceLifecycle Lifecycle = null,
     TerraformProvider Provider = null,
-    object[] Provisioners = null,
+    (FileProvisioner|LocalExecProvisioner|RemoteExecProvisioner)[] Provisioners = null,
     string Parameter,
     string ParameterData,
     string ParameterVersionId,
-    object Disabled = null,
+    bool|IResolvable Disabled = null,
     string Id = null,
     ParameterManagerParameterVersionTimeouts Timeouts = null
 };
@@ -900,17 +900,17 @@ new ParameterManagerParameterVersionConfig {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.parameterManagerParameterVersion.ParameterManagerParameterVersionConfig.property.connection">Connection</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.parameterManagerParameterVersion.ParameterManagerParameterVersionConfig.property.count">Count</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.parameterManagerParameterVersion.ParameterManagerParameterVersionConfig.property.connection">Connection</a></code> | <code>HashiCorp.Cdktf.SSHProvisionerConnection\|HashiCorp.Cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.parameterManagerParameterVersion.ParameterManagerParameterVersionConfig.property.count">Count</a></code> | <code>double\|HashiCorp.Cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.parameterManagerParameterVersion.ParameterManagerParameterVersionConfig.property.dependsOn">DependsOn</a></code> | <code>HashiCorp.Cdktf.ITerraformDependable[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.parameterManagerParameterVersion.ParameterManagerParameterVersionConfig.property.forEach">ForEach</a></code> | <code>HashiCorp.Cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.parameterManagerParameterVersion.ParameterManagerParameterVersionConfig.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.parameterManagerParameterVersion.ParameterManagerParameterVersionConfig.property.provider">Provider</a></code> | <code>HashiCorp.Cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.parameterManagerParameterVersion.ParameterManagerParameterVersionConfig.property.provisioners">Provisioners</a></code> | <code>object[]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.parameterManagerParameterVersion.ParameterManagerParameterVersionConfig.property.provisioners">Provisioners</a></code> | <code>HashiCorp.Cdktf.FileProvisioner\|HashiCorp.Cdktf.LocalExecProvisioner\|HashiCorp.Cdktf.RemoteExecProvisioner[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.parameterManagerParameterVersion.ParameterManagerParameterVersionConfig.property.parameter">Parameter</a></code> | <code>string</code> | Parameter Manager Parameter resource. |
 | <code><a href="#@cdktf/provider-google.parameterManagerParameterVersion.ParameterManagerParameterVersionConfig.property.parameterData">ParameterData</a></code> | <code>string</code> | The Parameter data. |
 | <code><a href="#@cdktf/provider-google.parameterManagerParameterVersion.ParameterManagerParameterVersionConfig.property.parameterVersionId">ParameterVersionId</a></code> | <code>string</code> | Version ID of the Parameter Version Resource. This must be unique within the Parameter. |
-| <code><a href="#@cdktf/provider-google.parameterManagerParameterVersion.ParameterManagerParameterVersionConfig.property.disabled">Disabled</a></code> | <code>object</code> | The current state of Parameter Version. This field is only applicable for updating Parameter Version. |
+| <code><a href="#@cdktf/provider-google.parameterManagerParameterVersion.ParameterManagerParameterVersionConfig.property.disabled">Disabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | The current state of Parameter Version. This field is only applicable for updating Parameter Version. |
 | <code><a href="#@cdktf/provider-google.parameterManagerParameterVersion.ParameterManagerParameterVersionConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/parameter_manager_parameter_version#id ParameterManagerParameterVersion#id}. |
 | <code><a href="#@cdktf/provider-google.parameterManagerParameterVersion.ParameterManagerParameterVersionConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-google.parameterManagerParameterVersion.ParameterManagerParameterVersionTimeouts">ParameterManagerParameterVersionTimeouts</a></code> | timeouts block. |
 
@@ -919,20 +919,20 @@ new ParameterManagerParameterVersionConfig {
 ##### `Connection`<sup>Optional</sup> <a name="Connection" id="@cdktf/provider-google.parameterManagerParameterVersion.ParameterManagerParameterVersionConfig.property.connection"></a>
 
 ```csharp
-public object Connection { get; set; }
+public SSHProvisionerConnection|WinrmProvisionerConnection Connection { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.SSHProvisionerConnection|HashiCorp.Cdktf.WinrmProvisionerConnection
 
 ---
 
 ##### `Count`<sup>Optional</sup> <a name="Count" id="@cdktf/provider-google.parameterManagerParameterVersion.ParameterManagerParameterVersionConfig.property.count"></a>
 
 ```csharp
-public object Count { get; set; }
+public double|TerraformCount Count { get; set; }
 ```
 
-- *Type:* object
+- *Type:* double|HashiCorp.Cdktf.TerraformCount
 
 ---
 
@@ -979,10 +979,10 @@ public TerraformProvider Provider { get; set; }
 ##### `Provisioners`<sup>Optional</sup> <a name="Provisioners" id="@cdktf/provider-google.parameterManagerParameterVersion.ParameterManagerParameterVersionConfig.property.provisioners"></a>
 
 ```csharp
-public object[] Provisioners { get; set; }
+public (FileProvisioner|LocalExecProvisioner|RemoteExecProvisioner)[] Provisioners { get; set; }
 ```
 
-- *Type:* object[]
+- *Type:* HashiCorp.Cdktf.FileProvisioner|HashiCorp.Cdktf.LocalExecProvisioner|HashiCorp.Cdktf.RemoteExecProvisioner[]
 
 ---
 
@@ -1031,10 +1031,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `Disabled`<sup>Optional</sup> <a name="Disabled" id="@cdktf/provider-google.parameterManagerParameterVersion.ParameterManagerParameterVersionConfig.property.disabled"></a>
 
 ```csharp
-public object Disabled { get; set; }
+public bool|IResolvable Disabled { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 The current state of Parameter Version. This field is only applicable for updating Parameter Version.
 
@@ -1370,7 +1370,7 @@ private void ResetUpdate()
 | <code><a href="#@cdktf/provider-google.parameterManagerParameterVersion.ParameterManagerParameterVersionTimeoutsOutputReference.property.create">Create</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.parameterManagerParameterVersion.ParameterManagerParameterVersionTimeoutsOutputReference.property.delete">Delete</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.parameterManagerParameterVersion.ParameterManagerParameterVersionTimeoutsOutputReference.property.update">Update</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.parameterManagerParameterVersion.ParameterManagerParameterVersionTimeoutsOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.parameterManagerParameterVersion.ParameterManagerParameterVersionTimeoutsOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.parameterManagerParameterVersion.ParameterManagerParameterVersionTimeouts">ParameterManagerParameterVersionTimeouts</a></code> | *No description.* |
 
 ---
 
@@ -1461,10 +1461,10 @@ public string Update { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.parameterManagerParameterVersion.ParameterManagerParameterVersionTimeoutsOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|ParameterManagerParameterVersionTimeouts InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.parameterManagerParameterVersion.ParameterManagerParameterVersionTimeouts">ParameterManagerParameterVersionTimeouts</a>
 
 ---
 

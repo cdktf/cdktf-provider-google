@@ -851,7 +851,7 @@ public readonly provider: TerraformProvider;
 ##### `provisioners`<sup>Optional</sup> <a name="provisioners" id="@cdktf/provider-google.cloudRunV2WorkerPool.CloudRunV2WorkerPool.property.provisioners"></a>
 
 ```typescript
-public readonly provisioners: FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner[];
+public readonly provisioners: (FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner)[];
 ```
 
 - *Type:* cdktf.FileProvisioner | cdktf.LocalExecProvisioner | cdktf.RemoteExecProvisioner[]
@@ -1587,7 +1587,7 @@ public readonly provider: TerraformProvider;
 ##### `provisioners`<sup>Optional</sup> <a name="provisioners" id="@cdktf/provider-google.cloudRunV2WorkerPool.CloudRunV2WorkerPoolConfig.property.provisioners"></a>
 
 ```typescript
-public readonly provisioners: FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner[];
+public readonly provisioners: (FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner)[];
 ```
 
 - *Type:* cdktf.FileProvisioner | cdktf.LocalExecProvisioner | cdktf.RemoteExecProvisioner[]

@@ -12,17 +12,13 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.5
 import com.hashicorp.cdktf.providers.google.container_node_pool.ContainerNodePool;
 
 ContainerNodePool.Builder.create(Construct scope, java.lang.String id)
-//  .connection(SSHProvisionerConnection)
-//  .connection(WinrmProvisionerConnection)
-//  .count(java.lang.Number)
-//  .count(TerraformCount)
+//  .connection(SSHProvisionerConnection|WinrmProvisionerConnection)
+//  .count(java.lang.Number|TerraformCount)
 //  .dependsOn(java.util.List<ITerraformDependable>)
 //  .forEach(ITerraformIterator)
 //  .lifecycle(TerraformResourceLifecycle)
 //  .provider(TerraformProvider)
-//  .provisioners(java.util.List<FileProvisioner)
-//  .provisioners(LocalExecProvisioner)
-//  .provisioners(RemoteExecProvisioner>)
+//  .provisioners(java.util.List<FileProvisioner|LocalExecProvisioner|RemoteExecProvisioner>)
     .cluster(java.lang.String)
 //  .autoscaling(ContainerNodePoolAutoscaling)
 //  .id(java.lang.String)
@@ -49,13 +45,13 @@ ContainerNodePool.Builder.create(Construct scope, java.lang.String id)
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePool.Initializer.parameter.scope">scope</a></code> | <code>software.constructs.Construct</code> | The scope in which to define this construct. |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePool.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | The scoped construct ID. |
-| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePool.Initializer.parameter.connection">connection</a></code> | <code>com.hashicorp.cdktf.SSHProvisionerConnection OR com.hashicorp.cdktf.WinrmProvisionerConnection</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePool.Initializer.parameter.count">count</a></code> | <code>java.lang.Number OR com.hashicorp.cdktf.TerraformCount</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePool.Initializer.parameter.connection">connection</a></code> | <code>com.hashicorp.cdktf.SSHProvisionerConnection\|com.hashicorp.cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePool.Initializer.parameter.count">count</a></code> | <code>java.lang.Number\|com.hashicorp.cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePool.Initializer.parameter.dependsOn">dependsOn</a></code> | <code>java.util.List<com.hashicorp.cdktf.ITerraformDependable></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePool.Initializer.parameter.forEach">forEach</a></code> | <code>com.hashicorp.cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePool.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePool.Initializer.parameter.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePool.Initializer.parameter.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePool.Initializer.parameter.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner\|com.hashicorp.cdktf.LocalExecProvisioner\|com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePool.Initializer.parameter.cluster">cluster</a></code> | <code>java.lang.String</code> | The cluster to create the node pool for. Cluster must be present in location provided for zonal clusters. |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePool.Initializer.parameter.autoscaling">autoscaling</a></code> | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolAutoscaling">ContainerNodePoolAutoscaling</a></code> | autoscaling block. |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePool.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/container_node_pool#id ContainerNodePool#id}. |
@@ -98,13 +94,13 @@ Must be unique amongst siblings in the same scope
 
 ##### `connection`<sup>Optional</sup> <a name="connection" id="@cdktf/provider-google.containerNodePool.ContainerNodePool.Initializer.parameter.connection"></a>
 
-- *Type:* com.hashicorp.cdktf.SSHProvisionerConnection OR com.hashicorp.cdktf.WinrmProvisionerConnection
+- *Type:* com.hashicorp.cdktf.SSHProvisionerConnection|com.hashicorp.cdktf.WinrmProvisionerConnection
 
 ---
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.containerNodePool.ContainerNodePool.Initializer.parameter.count"></a>
 
-- *Type:* java.lang.Number OR com.hashicorp.cdktf.TerraformCount
+- *Type:* java.lang.Number|com.hashicorp.cdktf.TerraformCount
 
 ---
 
@@ -134,7 +130,7 @@ Must be unique amongst siblings in the same scope
 
 ##### `provisioners`<sup>Optional</sup> <a name="provisioners" id="@cdktf/provider-google.containerNodePool.ContainerNodePool.Initializer.parameter.provisioners"></a>
 
-- *Type:* java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner>
+- *Type:* java.util.List<com.hashicorp.cdktf.FileProvisioner|com.hashicorp.cdktf.LocalExecProvisioner|com.hashicorp.cdktf.RemoteExecProvisioner>
 
 ---
 
@@ -594,7 +590,7 @@ public java.util.Map<java.lang.String, java.lang.String> getStringMapAttribute(j
 ##### `hasResourceMove` <a name="hasResourceMove" id="@cdktf/provider-google.containerNodePool.ContainerNodePool.hasResourceMove"></a>
 
 ```java
-public TerraformResourceMoveByTarget OR TerraformResourceMoveById hasResourceMove()
+public TerraformResourceMoveByTarget|TerraformResourceMoveById hasResourceMove()
 ```
 
 ##### `importFrom` <a name="importFrom" id="@cdktf/provider-google.containerNodePool.ContainerNodePool.importFrom"></a>
@@ -650,7 +646,7 @@ Full id of resource being moved from, e.g. "aws_s3_bucket.example".
 
 ```java
 public void moveTo(java.lang.String moveTarget)
-public void moveTo(java.lang.String moveTarget, java.lang.String OR java.lang.Number index)
+public void moveTo(java.lang.String moveTarget, java.lang.String|java.lang.Number index)
 ```
 
 Moves this resource to the target resource given by moveTarget.
@@ -665,7 +661,7 @@ The previously set user defined string set by .addMoveTarget() corresponding to 
 
 ###### `index`<sup>Optional</sup> <a name="index" id="@cdktf/provider-google.containerNodePool.ContainerNodePool.moveTo.parameter.index"></a>
 
-- *Type:* java.lang.String OR java.lang.Number
+- *Type:* java.lang.String|java.lang.Number
 
 Optional The index corresponding to the key the resource is to appear in the foreach of a resource to move to.
 
@@ -1017,13 +1013,13 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.5
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePool.property.terraformMetaArguments">terraformMetaArguments</a></code> | <code>java.util.Map<java.lang.String, java.lang.Object></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePool.property.terraformResourceType">terraformResourceType</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePool.property.terraformGeneratorMetadata">terraformGeneratorMetadata</a></code> | <code>com.hashicorp.cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePool.property.connection">connection</a></code> | <code>com.hashicorp.cdktf.SSHProvisionerConnection OR com.hashicorp.cdktf.WinrmProvisionerConnection</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePool.property.count">count</a></code> | <code>java.lang.Number OR com.hashicorp.cdktf.TerraformCount</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePool.property.connection">connection</a></code> | <code>com.hashicorp.cdktf.SSHProvisionerConnection\|com.hashicorp.cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePool.property.count">count</a></code> | <code>java.lang.Number\|com.hashicorp.cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePool.property.dependsOn">dependsOn</a></code> | <code>java.util.List<java.lang.String></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePool.property.forEach">forEach</a></code> | <code>com.hashicorp.cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePool.property.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePool.property.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePool.property.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePool.property.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner\|com.hashicorp.cdktf.LocalExecProvisioner\|com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePool.property.autoscaling">autoscaling</a></code> | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolAutoscalingOutputReference">ContainerNodePoolAutoscalingOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePool.property.instanceGroupUrls">instanceGroupUrls</a></code> | <code>java.util.List<java.lang.String></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePool.property.managedInstanceGroupUrls">managedInstanceGroupUrls</a></code> | <code>java.util.List<java.lang.String></code> | *No description.* |
@@ -1051,7 +1047,7 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.5
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePool.property.placementPolicyInput">placementPolicyInput</a></code> | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolPlacementPolicy">ContainerNodePoolPlacementPolicy</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePool.property.projectInput">projectInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePool.property.queuedProvisioningInput">queuedProvisioningInput</a></code> | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolQueuedProvisioning">ContainerNodePoolQueuedProvisioning</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePool.property.timeoutsInput">timeoutsInput</a></code> | <code>com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolTimeouts">ContainerNodePoolTimeouts</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePool.property.timeoutsInput">timeoutsInput</a></code> | <code>com.hashicorp.cdktf.IResolvable\|<a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolTimeouts">ContainerNodePoolTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePool.property.upgradeSettingsInput">upgradeSettingsInput</a></code> | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolUpgradeSettings">ContainerNodePoolUpgradeSettings</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePool.property.versionInput">versionInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePool.property.cluster">cluster</a></code> | <code>java.lang.String</code> | *No description.* |
@@ -1143,20 +1139,20 @@ public TerraformProviderGeneratorMetadata getTerraformGeneratorMetadata();
 ##### `connection`<sup>Optional</sup> <a name="connection" id="@cdktf/provider-google.containerNodePool.ContainerNodePool.property.connection"></a>
 
 ```java
-public java.lang.Object getConnection();
+public SSHProvisionerConnection|WinrmProvisionerConnection getConnection();
 ```
 
-- *Type:* com.hashicorp.cdktf.SSHProvisionerConnection OR com.hashicorp.cdktf.WinrmProvisionerConnection
+- *Type:* com.hashicorp.cdktf.SSHProvisionerConnection|com.hashicorp.cdktf.WinrmProvisionerConnection
 
 ---
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.containerNodePool.ContainerNodePool.property.count"></a>
 
 ```java
-public java.lang.Object getCount();
+public java.lang.Number|TerraformCount getCount();
 ```
 
-- *Type:* java.lang.Number OR com.hashicorp.cdktf.TerraformCount
+- *Type:* java.lang.Number|com.hashicorp.cdktf.TerraformCount
 
 ---
 
@@ -1203,10 +1199,10 @@ public TerraformProvider getProvider();
 ##### `provisioners`<sup>Optional</sup> <a name="provisioners" id="@cdktf/provider-google.containerNodePool.ContainerNodePool.property.provisioners"></a>
 
 ```java
-public java.lang.Object getProvisioners();
+public java.util.List<FileProvisioner|LocalExecProvisioner|RemoteExecProvisioner> getProvisioners();
 ```
 
-- *Type:* java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner>
+- *Type:* java.util.List<com.hashicorp.cdktf.FileProvisioner|com.hashicorp.cdktf.LocalExecProvisioner|com.hashicorp.cdktf.RemoteExecProvisioner>
 
 ---
 
@@ -1483,10 +1479,10 @@ public ContainerNodePoolQueuedProvisioning getQueuedProvisioningInput();
 ##### `timeoutsInput`<sup>Optional</sup> <a name="timeoutsInput" id="@cdktf/provider-google.containerNodePool.ContainerNodePool.property.timeoutsInput"></a>
 
 ```java
-public java.lang.Object getTimeoutsInput();
+public IResolvable|ContainerNodePoolTimeouts getTimeoutsInput();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolTimeouts">ContainerNodePoolTimeouts</a>
+- *Type:* com.hashicorp.cdktf.IResolvable|<a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolTimeouts">ContainerNodePoolTimeouts</a>
 
 ---
 
@@ -1756,17 +1752,13 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 import com.hashicorp.cdktf.providers.google.container_node_pool.ContainerNodePoolConfig;
 
 ContainerNodePoolConfig.builder()
-//  .connection(SSHProvisionerConnection)
-//  .connection(WinrmProvisionerConnection)
-//  .count(java.lang.Number)
-//  .count(TerraformCount)
+//  .connection(SSHProvisionerConnection|WinrmProvisionerConnection)
+//  .count(java.lang.Number|TerraformCount)
 //  .dependsOn(java.util.List<ITerraformDependable>)
 //  .forEach(ITerraformIterator)
 //  .lifecycle(TerraformResourceLifecycle)
 //  .provider(TerraformProvider)
-//  .provisioners(java.util.List<FileProvisioner)
-//  .provisioners(LocalExecProvisioner)
-//  .provisioners(RemoteExecProvisioner>)
+//  .provisioners(java.util.List<FileProvisioner|LocalExecProvisioner|RemoteExecProvisioner>)
     .cluster(java.lang.String)
 //  .autoscaling(ContainerNodePoolAutoscaling)
 //  .id(java.lang.String)
@@ -1793,13 +1785,13 @@ ContainerNodePoolConfig.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolConfig.property.connection">connection</a></code> | <code>com.hashicorp.cdktf.SSHProvisionerConnection OR com.hashicorp.cdktf.WinrmProvisionerConnection</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolConfig.property.count">count</a></code> | <code>java.lang.Number OR com.hashicorp.cdktf.TerraformCount</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolConfig.property.connection">connection</a></code> | <code>com.hashicorp.cdktf.SSHProvisionerConnection\|com.hashicorp.cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolConfig.property.count">count</a></code> | <code>java.lang.Number\|com.hashicorp.cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolConfig.property.dependsOn">dependsOn</a></code> | <code>java.util.List<com.hashicorp.cdktf.ITerraformDependable></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolConfig.property.forEach">forEach</a></code> | <code>com.hashicorp.cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolConfig.property.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolConfig.property.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolConfig.property.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolConfig.property.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner\|com.hashicorp.cdktf.LocalExecProvisioner\|com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolConfig.property.cluster">cluster</a></code> | <code>java.lang.String</code> | The cluster to create the node pool for. Cluster must be present in location provided for zonal clusters. |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolConfig.property.autoscaling">autoscaling</a></code> | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolAutoscaling">ContainerNodePoolAutoscaling</a></code> | autoscaling block. |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/container_node_pool#id ContainerNodePool#id}. |
@@ -1825,20 +1817,20 @@ ContainerNodePoolConfig.builder()
 ##### `connection`<sup>Optional</sup> <a name="connection" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolConfig.property.connection"></a>
 
 ```java
-public java.lang.Object getConnection();
+public SSHProvisionerConnection|WinrmProvisionerConnection getConnection();
 ```
 
-- *Type:* com.hashicorp.cdktf.SSHProvisionerConnection OR com.hashicorp.cdktf.WinrmProvisionerConnection
+- *Type:* com.hashicorp.cdktf.SSHProvisionerConnection|com.hashicorp.cdktf.WinrmProvisionerConnection
 
 ---
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolConfig.property.count"></a>
 
 ```java
-public java.lang.Object getCount();
+public java.lang.Number|TerraformCount getCount();
 ```
 
-- *Type:* java.lang.Number OR com.hashicorp.cdktf.TerraformCount
+- *Type:* java.lang.Number|com.hashicorp.cdktf.TerraformCount
 
 ---
 
@@ -1885,10 +1877,10 @@ public TerraformProvider getProvider();
 ##### `provisioners`<sup>Optional</sup> <a name="provisioners" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolConfig.property.provisioners"></a>
 
 ```java
-public java.lang.Object getProvisioners();
+public java.util.List<FileProvisioner|LocalExecProvisioner|RemoteExecProvisioner> getProvisioners();
 ```
 
-- *Type:* java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner>
+- *Type:* java.util.List<com.hashicorp.cdktf.FileProvisioner|com.hashicorp.cdktf.LocalExecProvisioner|com.hashicorp.cdktf.RemoteExecProvisioner>
 
 ---
 
@@ -2179,10 +2171,8 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 import com.hashicorp.cdktf.providers.google.container_node_pool.ContainerNodePoolManagement;
 
 ContainerNodePoolManagement.builder()
-//  .autoRepair(java.lang.Boolean)
-//  .autoRepair(IResolvable)
-//  .autoUpgrade(java.lang.Boolean)
-//  .autoUpgrade(IResolvable)
+//  .autoRepair(java.lang.Boolean|IResolvable)
+//  .autoUpgrade(java.lang.Boolean|IResolvable)
     .build();
 ```
 
@@ -2190,18 +2180,18 @@ ContainerNodePoolManagement.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolManagement.property.autoRepair">autoRepair</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Whether the nodes will be automatically repaired. Enabled by default. |
-| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolManagement.property.autoUpgrade">autoUpgrade</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Whether the nodes will be automatically upgraded. Enabled by default. |
+| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolManagement.property.autoRepair">autoRepair</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Whether the nodes will be automatically repaired. Enabled by default. |
+| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolManagement.property.autoUpgrade">autoUpgrade</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Whether the nodes will be automatically upgraded. Enabled by default. |
 
 ---
 
 ##### `autoRepair`<sup>Optional</sup> <a name="autoRepair" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolManagement.property.autoRepair"></a>
 
 ```java
-public java.lang.Object getAutoRepair();
+public java.lang.Boolean|IResolvable getAutoRepair();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 Whether the nodes will be automatically repaired. Enabled by default.
 
@@ -2212,10 +2202,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `autoUpgrade`<sup>Optional</sup> <a name="autoUpgrade" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolManagement.property.autoUpgrade"></a>
 
 ```java
-public java.lang.Object getAutoUpgrade();
+public java.lang.Boolean|IResolvable getAutoUpgrade();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 Whether the nodes will be automatically upgraded. Enabled by default.
 
@@ -2231,14 +2221,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 import com.hashicorp.cdktf.providers.google.container_node_pool.ContainerNodePoolNetworkConfig;
 
 ContainerNodePoolNetworkConfig.builder()
-//  .additionalNodeNetworkConfigs(IResolvable)
-//  .additionalNodeNetworkConfigs(java.util.List<ContainerNodePoolNetworkConfigAdditionalNodeNetworkConfigs>)
-//  .additionalPodNetworkConfigs(IResolvable)
-//  .additionalPodNetworkConfigs(java.util.List<ContainerNodePoolNetworkConfigAdditionalPodNetworkConfigs>)
-//  .createPodRange(java.lang.Boolean)
-//  .createPodRange(IResolvable)
-//  .enablePrivateNodes(java.lang.Boolean)
-//  .enablePrivateNodes(IResolvable)
+//  .additionalNodeNetworkConfigs(IResolvable|java.util.List<ContainerNodePoolNetworkConfigAdditionalNodeNetworkConfigs>)
+//  .additionalPodNetworkConfigs(IResolvable|java.util.List<ContainerNodePoolNetworkConfigAdditionalPodNetworkConfigs>)
+//  .createPodRange(java.lang.Boolean|IResolvable)
+//  .enablePrivateNodes(java.lang.Boolean|IResolvable)
 //  .networkPerformanceConfig(ContainerNodePoolNetworkConfigNetworkPerformanceConfig)
 //  .podCidrOverprovisionConfig(ContainerNodePoolNetworkConfigPodCidrOverprovisionConfig)
 //  .podIpv4CidrBlock(java.lang.String)
@@ -2250,10 +2236,10 @@ ContainerNodePoolNetworkConfig.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNetworkConfig.property.additionalNodeNetworkConfigs">additionalNodeNetworkConfigs</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNetworkConfigAdditionalNodeNetworkConfigs">ContainerNodePoolNetworkConfigAdditionalNodeNetworkConfigs</a>></code> | additional_node_network_configs block. |
-| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNetworkConfig.property.additionalPodNetworkConfigs">additionalPodNetworkConfigs</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNetworkConfigAdditionalPodNetworkConfigs">ContainerNodePoolNetworkConfigAdditionalPodNetworkConfigs</a>></code> | additional_pod_network_configs block. |
-| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNetworkConfig.property.createPodRange">createPodRange</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Whether to create a new range for pod IPs in this node pool. |
-| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNetworkConfig.property.enablePrivateNodes">enablePrivateNodes</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Whether nodes have internal IP addresses only. |
+| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNetworkConfig.property.additionalNodeNetworkConfigs">additionalNodeNetworkConfigs</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNetworkConfigAdditionalNodeNetworkConfigs">ContainerNodePoolNetworkConfigAdditionalNodeNetworkConfigs</a>></code> | additional_node_network_configs block. |
+| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNetworkConfig.property.additionalPodNetworkConfigs">additionalPodNetworkConfigs</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNetworkConfigAdditionalPodNetworkConfigs">ContainerNodePoolNetworkConfigAdditionalPodNetworkConfigs</a>></code> | additional_pod_network_configs block. |
+| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNetworkConfig.property.createPodRange">createPodRange</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Whether to create a new range for pod IPs in this node pool. |
+| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNetworkConfig.property.enablePrivateNodes">enablePrivateNodes</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Whether nodes have internal IP addresses only. |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNetworkConfig.property.networkPerformanceConfig">networkPerformanceConfig</a></code> | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNetworkConfigNetworkPerformanceConfig">ContainerNodePoolNetworkConfigNetworkPerformanceConfig</a></code> | network_performance_config block. |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNetworkConfig.property.podCidrOverprovisionConfig">podCidrOverprovisionConfig</a></code> | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNetworkConfigPodCidrOverprovisionConfig">ContainerNodePoolNetworkConfigPodCidrOverprovisionConfig</a></code> | pod_cidr_overprovision_config block. |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNetworkConfig.property.podIpv4CidrBlock">podIpv4CidrBlock</a></code> | <code>java.lang.String</code> | The IP address range for pod IPs in this node pool. |
@@ -2264,10 +2250,10 @@ ContainerNodePoolNetworkConfig.builder()
 ##### `additionalNodeNetworkConfigs`<sup>Optional</sup> <a name="additionalNodeNetworkConfigs" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNetworkConfig.property.additionalNodeNetworkConfigs"></a>
 
 ```java
-public java.lang.Object getAdditionalNodeNetworkConfigs();
+public IResolvable|java.util.List<ContainerNodePoolNetworkConfigAdditionalNodeNetworkConfigs> getAdditionalNodeNetworkConfigs();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNetworkConfigAdditionalNodeNetworkConfigs">ContainerNodePoolNetworkConfigAdditionalNodeNetworkConfigs</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNetworkConfigAdditionalNodeNetworkConfigs">ContainerNodePoolNetworkConfigAdditionalNodeNetworkConfigs</a>>
 
 additional_node_network_configs block.
 
@@ -2278,10 +2264,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `additionalPodNetworkConfigs`<sup>Optional</sup> <a name="additionalPodNetworkConfigs" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNetworkConfig.property.additionalPodNetworkConfigs"></a>
 
 ```java
-public java.lang.Object getAdditionalPodNetworkConfigs();
+public IResolvable|java.util.List<ContainerNodePoolNetworkConfigAdditionalPodNetworkConfigs> getAdditionalPodNetworkConfigs();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNetworkConfigAdditionalPodNetworkConfigs">ContainerNodePoolNetworkConfigAdditionalPodNetworkConfigs</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNetworkConfigAdditionalPodNetworkConfigs">ContainerNodePoolNetworkConfigAdditionalPodNetworkConfigs</a>>
 
 additional_pod_network_configs block.
 
@@ -2292,10 +2278,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `createPodRange`<sup>Optional</sup> <a name="createPodRange" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNetworkConfig.property.createPodRange"></a>
 
 ```java
-public java.lang.Object getCreatePodRange();
+public java.lang.Boolean|IResolvable getCreatePodRange();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 Whether to create a new range for pod IPs in this node pool.
 
@@ -2308,10 +2294,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `enablePrivateNodes`<sup>Optional</sup> <a name="enablePrivateNodes" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNetworkConfig.property.enablePrivateNodes"></a>
 
 ```java
-public java.lang.Object getEnablePrivateNodes();
+public java.lang.Boolean|IResolvable getEnablePrivateNodes();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 Whether nodes have internal IP addresses only.
 
@@ -2537,8 +2523,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 import com.hashicorp.cdktf.providers.google.container_node_pool.ContainerNodePoolNetworkConfigPodCidrOverprovisionConfig;
 
 ContainerNodePoolNetworkConfigPodCidrOverprovisionConfig.builder()
-    .disabled(java.lang.Boolean)
-    .disabled(IResolvable)
+    .disabled(java.lang.Boolean|IResolvable)
     .build();
 ```
 
@@ -2546,17 +2531,17 @@ ContainerNodePoolNetworkConfigPodCidrOverprovisionConfig.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNetworkConfigPodCidrOverprovisionConfig.property.disabled">disabled</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/container_node_pool#disabled ContainerNodePool#disabled}. |
+| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNetworkConfigPodCidrOverprovisionConfig.property.disabled">disabled</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/container_node_pool#disabled ContainerNodePool#disabled}. |
 
 ---
 
 ##### `disabled`<sup>Required</sup> <a name="disabled" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNetworkConfigPodCidrOverprovisionConfig.property.disabled"></a>
 
 ```java
-public java.lang.Object getDisabled();
+public java.lang.Boolean|IResolvable getDisabled();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/container_node_pool#disabled ContainerNodePool#disabled}.
 
@@ -2577,15 +2562,12 @@ ContainerNodePoolNodeConfig.builder()
 //  .containerdConfig(ContainerNodePoolNodeConfigContainerdConfig)
 //  .diskSizeGb(java.lang.Number)
 //  .diskType(java.lang.String)
-//  .enableConfidentialStorage(java.lang.Boolean)
-//  .enableConfidentialStorage(IResolvable)
+//  .enableConfidentialStorage(java.lang.Boolean|IResolvable)
 //  .ephemeralStorageLocalSsdConfig(ContainerNodePoolNodeConfigEphemeralStorageLocalSsdConfig)
 //  .fastSocket(ContainerNodePoolNodeConfigFastSocket)
-//  .flexStart(java.lang.Boolean)
-//  .flexStart(IResolvable)
+//  .flexStart(java.lang.Boolean|IResolvable)
 //  .gcfsConfig(ContainerNodePoolNodeConfigGcfsConfig)
-//  .guestAccelerator(IResolvable)
-//  .guestAccelerator(java.util.List<ContainerNodePoolNodeConfigGuestAccelerator>)
+//  .guestAccelerator(IResolvable|java.util.List<ContainerNodePoolNodeConfigGuestAccelerator>)
 //  .gvnic(ContainerNodePoolNodeConfigGvnic)
 //  .hostMaintenancePolicy(ContainerNodePoolNodeConfigHostMaintenancePolicy)
 //  .imageType(java.lang.String)
@@ -2602,22 +2584,18 @@ ContainerNodePoolNodeConfig.builder()
 //  .minCpuPlatform(java.lang.String)
 //  .nodeGroup(java.lang.String)
 //  .oauthScopes(java.util.List<java.lang.String>)
-//  .preemptible(java.lang.Boolean)
-//  .preemptible(IResolvable)
+//  .preemptible(java.lang.Boolean|IResolvable)
 //  .reservationAffinity(ContainerNodePoolNodeConfigReservationAffinity)
 //  .resourceLabels(java.util.Map<java.lang.String, java.lang.String>)
 //  .resourceManagerTags(java.util.Map<java.lang.String, java.lang.String>)
-//  .secondaryBootDisks(IResolvable)
-//  .secondaryBootDisks(java.util.List<ContainerNodePoolNodeConfigSecondaryBootDisks>)
+//  .secondaryBootDisks(IResolvable|java.util.List<ContainerNodePoolNodeConfigSecondaryBootDisks>)
 //  .serviceAccount(java.lang.String)
 //  .shieldedInstanceConfig(ContainerNodePoolNodeConfigShieldedInstanceConfig)
 //  .soleTenantConfig(ContainerNodePoolNodeConfigSoleTenantConfig)
-//  .spot(java.lang.Boolean)
-//  .spot(IResolvable)
+//  .spot(java.lang.Boolean|IResolvable)
 //  .storagePools(java.util.List<java.lang.String>)
 //  .tags(java.util.List<java.lang.String>)
-//  .taint(IResolvable)
-//  .taint(java.util.List<ContainerNodePoolNodeConfigTaint>)
+//  .taint(IResolvable|java.util.List<ContainerNodePoolNodeConfigTaint>)
 //  .windowsNodeConfig(ContainerNodePoolNodeConfigWindowsNodeConfig)
 //  .workloadMetadataConfig(ContainerNodePoolNodeConfigWorkloadMetadataConfig)
     .build();
@@ -2634,12 +2612,12 @@ ContainerNodePoolNodeConfig.builder()
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfig.property.containerdConfig">containerdConfig</a></code> | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigContainerdConfig">ContainerNodePoolNodeConfigContainerdConfig</a></code> | containerd_config block. |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfig.property.diskSizeGb">diskSizeGb</a></code> | <code>java.lang.Number</code> | Size of the disk attached to each node, specified in GB. The smallest allowed disk size is 10GB. |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfig.property.diskType">diskType</a></code> | <code>java.lang.String</code> | Type of the disk attached to each node. Such as pd-standard, pd-balanced or pd-ssd. |
-| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfig.property.enableConfidentialStorage">enableConfidentialStorage</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | If enabled boot disks are configured with confidential mode. |
+| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfig.property.enableConfidentialStorage">enableConfidentialStorage</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | If enabled boot disks are configured with confidential mode. |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfig.property.ephemeralStorageLocalSsdConfig">ephemeralStorageLocalSsdConfig</a></code> | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigEphemeralStorageLocalSsdConfig">ContainerNodePoolNodeConfigEphemeralStorageLocalSsdConfig</a></code> | ephemeral_storage_local_ssd_config block. |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfig.property.fastSocket">fastSocket</a></code> | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigFastSocket">ContainerNodePoolNodeConfigFastSocket</a></code> | fast_socket block. |
-| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfig.property.flexStart">flexStart</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Enables Flex Start provisioning model for the node pool. |
+| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfig.property.flexStart">flexStart</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Enables Flex Start provisioning model for the node pool. |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfig.property.gcfsConfig">gcfsConfig</a></code> | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigGcfsConfig">ContainerNodePoolNodeConfigGcfsConfig</a></code> | gcfs_config block. |
-| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfig.property.guestAccelerator">guestAccelerator</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigGuestAccelerator">ContainerNodePoolNodeConfigGuestAccelerator</a>></code> | guest_accelerator block. |
+| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfig.property.guestAccelerator">guestAccelerator</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigGuestAccelerator">ContainerNodePoolNodeConfigGuestAccelerator</a>></code> | guest_accelerator block. |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfig.property.gvnic">gvnic</a></code> | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigGvnic">ContainerNodePoolNodeConfigGvnic</a></code> | gvnic block. |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfig.property.hostMaintenancePolicy">hostMaintenancePolicy</a></code> | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigHostMaintenancePolicy">ContainerNodePoolNodeConfigHostMaintenancePolicy</a></code> | host_maintenance_policy block. |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfig.property.imageType">imageType</a></code> | <code>java.lang.String</code> | The image type to use for this node. |
@@ -2656,18 +2634,18 @@ ContainerNodePoolNodeConfig.builder()
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfig.property.minCpuPlatform">minCpuPlatform</a></code> | <code>java.lang.String</code> | Minimum CPU platform to be used by this instance. |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfig.property.nodeGroup">nodeGroup</a></code> | <code>java.lang.String</code> | Setting this field will assign instances of this pool to run on the specified node group. |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfig.property.oauthScopes">oauthScopes</a></code> | <code>java.util.List<java.lang.String></code> | The set of Google API scopes to be made available on all of the node VMs. |
-| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfig.property.preemptible">preemptible</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Whether the nodes are created as preemptible VM instances. |
+| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfig.property.preemptible">preemptible</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Whether the nodes are created as preemptible VM instances. |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfig.property.reservationAffinity">reservationAffinity</a></code> | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigReservationAffinity">ContainerNodePoolNodeConfigReservationAffinity</a></code> | reservation_affinity block. |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfig.property.resourceLabels">resourceLabels</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | The GCE resource labels (a map of key/value pairs) to be applied to the node pool. |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfig.property.resourceManagerTags">resourceManagerTags</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | A map of resource manager tags. |
-| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfig.property.secondaryBootDisks">secondaryBootDisks</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigSecondaryBootDisks">ContainerNodePoolNodeConfigSecondaryBootDisks</a>></code> | secondary_boot_disks block. |
+| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfig.property.secondaryBootDisks">secondaryBootDisks</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigSecondaryBootDisks">ContainerNodePoolNodeConfigSecondaryBootDisks</a>></code> | secondary_boot_disks block. |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfig.property.serviceAccount">serviceAccount</a></code> | <code>java.lang.String</code> | The Google Cloud Platform Service Account to be used by the node VMs. |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfig.property.shieldedInstanceConfig">shieldedInstanceConfig</a></code> | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigShieldedInstanceConfig">ContainerNodePoolNodeConfigShieldedInstanceConfig</a></code> | shielded_instance_config block. |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfig.property.soleTenantConfig">soleTenantConfig</a></code> | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigSoleTenantConfig">ContainerNodePoolNodeConfigSoleTenantConfig</a></code> | sole_tenant_config block. |
-| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfig.property.spot">spot</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Whether the nodes are created as spot VM instances. |
+| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfig.property.spot">spot</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Whether the nodes are created as spot VM instances. |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfig.property.storagePools">storagePools</a></code> | <code>java.util.List<java.lang.String></code> | The list of Storage Pools where boot disks are provisioned. |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfig.property.tags">tags</a></code> | <code>java.util.List<java.lang.String></code> | The list of instance tags applied to all nodes. |
-| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfig.property.taint">taint</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigTaint">ContainerNodePoolNodeConfigTaint</a>></code> | taint block. |
+| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfig.property.taint">taint</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigTaint">ContainerNodePoolNodeConfigTaint</a>></code> | taint block. |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfig.property.windowsNodeConfig">windowsNodeConfig</a></code> | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigWindowsNodeConfig">ContainerNodePoolNodeConfigWindowsNodeConfig</a></code> | windows_node_config block. |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfig.property.workloadMetadataConfig">workloadMetadataConfig</a></code> | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigWorkloadMetadataConfig">ContainerNodePoolNodeConfigWorkloadMetadataConfig</a></code> | workload_metadata_config block. |
 
@@ -2774,10 +2752,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `enableConfidentialStorage`<sup>Optional</sup> <a name="enableConfidentialStorage" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfig.property.enableConfidentialStorage"></a>
 
 ```java
-public java.lang.Object getEnableConfidentialStorage();
+public java.lang.Boolean|IResolvable getEnableConfidentialStorage();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 If enabled boot disks are configured with confidential mode.
 
@@ -2816,10 +2794,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `flexStart`<sup>Optional</sup> <a name="flexStart" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfig.property.flexStart"></a>
 
 ```java
-public java.lang.Object getFlexStart();
+public java.lang.Boolean|IResolvable getFlexStart();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 Enables Flex Start provisioning model for the node pool.
 
@@ -2844,10 +2822,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `guestAccelerator`<sup>Optional</sup> <a name="guestAccelerator" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfig.property.guestAccelerator"></a>
 
 ```java
-public java.lang.Object getGuestAccelerator();
+public IResolvable|java.util.List<ContainerNodePoolNodeConfigGuestAccelerator> getGuestAccelerator();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigGuestAccelerator">ContainerNodePoolNodeConfigGuestAccelerator</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigGuestAccelerator">ContainerNodePoolNodeConfigGuestAccelerator</a>>
 
 guest_accelerator block.
 
@@ -3092,10 +3070,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `preemptible`<sup>Optional</sup> <a name="preemptible" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfig.property.preemptible"></a>
 
 ```java
-public java.lang.Object getPreemptible();
+public java.lang.Boolean|IResolvable getPreemptible();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 Whether the nodes are created as preemptible VM instances.
 
@@ -3150,10 +3128,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `secondaryBootDisks`<sup>Optional</sup> <a name="secondaryBootDisks" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfig.property.secondaryBootDisks"></a>
 
 ```java
-public java.lang.Object getSecondaryBootDisks();
+public IResolvable|java.util.List<ContainerNodePoolNodeConfigSecondaryBootDisks> getSecondaryBootDisks();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigSecondaryBootDisks">ContainerNodePoolNodeConfigSecondaryBootDisks</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigSecondaryBootDisks">ContainerNodePoolNodeConfigSecondaryBootDisks</a>>
 
 secondary_boot_disks block.
 
@@ -3206,10 +3184,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `spot`<sup>Optional</sup> <a name="spot" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfig.property.spot"></a>
 
 ```java
-public java.lang.Object getSpot();
+public java.lang.Boolean|IResolvable getSpot();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 Whether the nodes are created as spot VM instances.
 
@@ -3248,10 +3226,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `taint`<sup>Optional</sup> <a name="taint" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfig.property.taint"></a>
 
 ```java
-public java.lang.Object getTaint();
+public IResolvable|java.util.List<ContainerNodePoolNodeConfigTaint> getTaint();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigTaint">ContainerNodePoolNodeConfigTaint</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigTaint">ContainerNodePoolNodeConfigTaint</a>>
 
 taint block.
 
@@ -3296,8 +3274,7 @@ import com.hashicorp.cdktf.providers.google.container_node_pool.ContainerNodePoo
 
 ContainerNodePoolNodeConfigAdvancedMachineFeatures.builder()
     .threadsPerCore(java.lang.Number)
-//  .enableNestedVirtualization(java.lang.Boolean)
-//  .enableNestedVirtualization(IResolvable)
+//  .enableNestedVirtualization(java.lang.Boolean|IResolvable)
 //  .performanceMonitoringUnit(java.lang.String)
     .build();
 ```
@@ -3307,7 +3284,7 @@ ContainerNodePoolNodeConfigAdvancedMachineFeatures.builder()
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigAdvancedMachineFeatures.property.threadsPerCore">threadsPerCore</a></code> | <code>java.lang.Number</code> | The number of threads per physical core. |
-| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigAdvancedMachineFeatures.property.enableNestedVirtualization">enableNestedVirtualization</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Whether the node should have nested virtualization enabled. |
+| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigAdvancedMachineFeatures.property.enableNestedVirtualization">enableNestedVirtualization</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Whether the node should have nested virtualization enabled. |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigAdvancedMachineFeatures.property.performanceMonitoringUnit">performanceMonitoringUnit</a></code> | <code>java.lang.String</code> | Level of Performance Monitoring Unit (PMU) requested. If unset, no access to the PMU is assumed. |
 
 ---
@@ -3331,10 +3308,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `enableNestedVirtualization`<sup>Optional</sup> <a name="enableNestedVirtualization" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigAdvancedMachineFeatures.property.enableNestedVirtualization"></a>
 
 ```java
-public java.lang.Object getEnableNestedVirtualization();
+public java.lang.Boolean|IResolvable getEnableNestedVirtualization();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 Whether the node should have nested virtualization enabled.
 
@@ -3446,8 +3423,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 import com.hashicorp.cdktf.providers.google.container_node_pool.ContainerNodePoolNodeConfigConfidentialNodes;
 
 ContainerNodePoolNodeConfigConfidentialNodes.builder()
-    .enabled(java.lang.Boolean)
-    .enabled(IResolvable)
+    .enabled(java.lang.Boolean|IResolvable)
 //  .confidentialInstanceType(java.lang.String)
     .build();
 ```
@@ -3456,7 +3432,7 @@ ContainerNodePoolNodeConfigConfidentialNodes.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigConfidentialNodes.property.enabled">enabled</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Whether Confidential Nodes feature is enabled for all nodes in this pool. |
+| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigConfidentialNodes.property.enabled">enabled</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Whether Confidential Nodes feature is enabled for all nodes in this pool. |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigConfidentialNodes.property.confidentialInstanceType">confidentialInstanceType</a></code> | <code>java.lang.String</code> | Defines the type of technology used by the confidential node. |
 
 ---
@@ -3464,10 +3440,10 @@ ContainerNodePoolNodeConfigConfidentialNodes.builder()
 ##### `enabled`<sup>Required</sup> <a name="enabled" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigConfidentialNodes.property.enabled"></a>
 
 ```java
-public java.lang.Object getEnabled();
+public java.lang.Boolean|IResolvable getEnabled();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 Whether Confidential Nodes feature is enabled for all nodes in this pool.
 
@@ -3531,10 +3507,8 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 import com.hashicorp.cdktf.providers.google.container_node_pool.ContainerNodePoolNodeConfigContainerdConfigPrivateRegistryAccessConfig;
 
 ContainerNodePoolNodeConfigContainerdConfigPrivateRegistryAccessConfig.builder()
-    .enabled(java.lang.Boolean)
-    .enabled(IResolvable)
-//  .certificateAuthorityDomainConfig(IResolvable)
-//  .certificateAuthorityDomainConfig(java.util.List<ContainerNodePoolNodeConfigContainerdConfigPrivateRegistryAccessConfigCertificateAuthorityDomainConfig>)
+    .enabled(java.lang.Boolean|IResolvable)
+//  .certificateAuthorityDomainConfig(IResolvable|java.util.List<ContainerNodePoolNodeConfigContainerdConfigPrivateRegistryAccessConfigCertificateAuthorityDomainConfig>)
     .build();
 ```
 
@@ -3542,18 +3516,18 @@ ContainerNodePoolNodeConfigContainerdConfigPrivateRegistryAccessConfig.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigContainerdConfigPrivateRegistryAccessConfig.property.enabled">enabled</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Whether or not private registries are configured. |
-| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigContainerdConfigPrivateRegistryAccessConfig.property.certificateAuthorityDomainConfig">certificateAuthorityDomainConfig</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigContainerdConfigPrivateRegistryAccessConfigCertificateAuthorityDomainConfig">ContainerNodePoolNodeConfigContainerdConfigPrivateRegistryAccessConfigCertificateAuthorityDomainConfig</a>></code> | certificate_authority_domain_config block. |
+| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigContainerdConfigPrivateRegistryAccessConfig.property.enabled">enabled</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Whether or not private registries are configured. |
+| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigContainerdConfigPrivateRegistryAccessConfig.property.certificateAuthorityDomainConfig">certificateAuthorityDomainConfig</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigContainerdConfigPrivateRegistryAccessConfigCertificateAuthorityDomainConfig">ContainerNodePoolNodeConfigContainerdConfigPrivateRegistryAccessConfigCertificateAuthorityDomainConfig</a>></code> | certificate_authority_domain_config block. |
 
 ---
 
 ##### `enabled`<sup>Required</sup> <a name="enabled" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigContainerdConfigPrivateRegistryAccessConfig.property.enabled"></a>
 
 ```java
-public java.lang.Object getEnabled();
+public java.lang.Boolean|IResolvable getEnabled();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 Whether or not private registries are configured.
 
@@ -3564,10 +3538,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `certificateAuthorityDomainConfig`<sup>Optional</sup> <a name="certificateAuthorityDomainConfig" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigContainerdConfigPrivateRegistryAccessConfig.property.certificateAuthorityDomainConfig"></a>
 
 ```java
-public java.lang.Object getCertificateAuthorityDomainConfig();
+public IResolvable|java.util.List<ContainerNodePoolNodeConfigContainerdConfigPrivateRegistryAccessConfigCertificateAuthorityDomainConfig> getCertificateAuthorityDomainConfig();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigContainerdConfigPrivateRegistryAccessConfigCertificateAuthorityDomainConfig">ContainerNodePoolNodeConfigContainerdConfigPrivateRegistryAccessConfigCertificateAuthorityDomainConfig</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigContainerdConfigPrivateRegistryAccessConfigCertificateAuthorityDomainConfig">ContainerNodePoolNodeConfigContainerdConfigPrivateRegistryAccessConfigCertificateAuthorityDomainConfig</a>>
 
 certificate_authority_domain_config block.
 
@@ -3731,8 +3705,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 import com.hashicorp.cdktf.providers.google.container_node_pool.ContainerNodePoolNodeConfigFastSocket;
 
 ContainerNodePoolNodeConfigFastSocket.builder()
-    .enabled(java.lang.Boolean)
-    .enabled(IResolvable)
+    .enabled(java.lang.Boolean|IResolvable)
     .build();
 ```
 
@@ -3740,17 +3713,17 @@ ContainerNodePoolNodeConfigFastSocket.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigFastSocket.property.enabled">enabled</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Whether or not NCCL Fast Socket is enabled. |
+| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigFastSocket.property.enabled">enabled</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Whether or not NCCL Fast Socket is enabled. |
 
 ---
 
 ##### `enabled`<sup>Required</sup> <a name="enabled" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigFastSocket.property.enabled"></a>
 
 ```java
-public java.lang.Object getEnabled();
+public java.lang.Boolean|IResolvable getEnabled();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 Whether or not NCCL Fast Socket is enabled.
 
@@ -3766,8 +3739,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 import com.hashicorp.cdktf.providers.google.container_node_pool.ContainerNodePoolNodeConfigGcfsConfig;
 
 ContainerNodePoolNodeConfigGcfsConfig.builder()
-    .enabled(java.lang.Boolean)
-    .enabled(IResolvable)
+    .enabled(java.lang.Boolean|IResolvable)
     .build();
 ```
 
@@ -3775,17 +3747,17 @@ ContainerNodePoolNodeConfigGcfsConfig.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigGcfsConfig.property.enabled">enabled</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Whether or not GCFS is enabled. |
+| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigGcfsConfig.property.enabled">enabled</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Whether or not GCFS is enabled. |
 
 ---
 
 ##### `enabled`<sup>Required</sup> <a name="enabled" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigGcfsConfig.property.enabled"></a>
 
 ```java
-public java.lang.Object getEnabled();
+public java.lang.Boolean|IResolvable getEnabled();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 Whether or not GCFS is enabled.
 
@@ -3985,8 +3957,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 import com.hashicorp.cdktf.providers.google.container_node_pool.ContainerNodePoolNodeConfigGvnic;
 
 ContainerNodePoolNodeConfigGvnic.builder()
-    .enabled(java.lang.Boolean)
-    .enabled(IResolvable)
+    .enabled(java.lang.Boolean|IResolvable)
     .build();
 ```
 
@@ -3994,17 +3965,17 @@ ContainerNodePoolNodeConfigGvnic.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigGvnic.property.enabled">enabled</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Whether or not gvnic is enabled. |
+| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigGvnic.property.enabled">enabled</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Whether or not gvnic is enabled. |
 
 ---
 
 ##### `enabled`<sup>Required</sup> <a name="enabled" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigGvnic.property.enabled"></a>
 
 ```java
-public java.lang.Object getEnabled();
+public java.lang.Boolean|IResolvable getEnabled();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 Whether or not gvnic is enabled.
 
@@ -4057,8 +4028,7 @@ ContainerNodePoolNodeConfigKubeletConfig.builder()
 //  .allowedUnsafeSysctls(java.util.List<java.lang.String>)
 //  .containerLogMaxFiles(java.lang.Number)
 //  .containerLogMaxSize(java.lang.String)
-//  .cpuCfsQuota(java.lang.Boolean)
-//  .cpuCfsQuota(IResolvable)
+//  .cpuCfsQuota(java.lang.Boolean|IResolvable)
 //  .cpuCfsQuotaPeriod(java.lang.String)
 //  .cpuManagerPolicy(java.lang.String)
 //  .evictionMaxPodGracePeriodSeconds(java.lang.Number)
@@ -4072,8 +4042,7 @@ ContainerNodePoolNodeConfigKubeletConfig.builder()
 //  .insecureKubeletReadonlyPortEnabled(java.lang.String)
 //  .maxParallelImagePulls(java.lang.Number)
 //  .podPidsLimit(java.lang.Number)
-//  .singleProcessOomKill(java.lang.Boolean)
-//  .singleProcessOomKill(IResolvable)
+//  .singleProcessOomKill(java.lang.Boolean|IResolvable)
     .build();
 ```
 
@@ -4084,7 +4053,7 @@ ContainerNodePoolNodeConfigKubeletConfig.builder()
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigKubeletConfig.property.allowedUnsafeSysctls">allowedUnsafeSysctls</a></code> | <code>java.util.List<java.lang.String></code> | Defines a comma-separated allowlist of unsafe sysctls or sysctl patterns which can be set on the Pods. |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigKubeletConfig.property.containerLogMaxFiles">containerLogMaxFiles</a></code> | <code>java.lang.Number</code> | Defines the maximum number of container log files that can be present for a container. |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigKubeletConfig.property.containerLogMaxSize">containerLogMaxSize</a></code> | <code>java.lang.String</code> | Defines the maximum size of the container log file before it is rotated. |
-| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigKubeletConfig.property.cpuCfsQuota">cpuCfsQuota</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Enable CPU CFS quota enforcement for containers that specify CPU limits. |
+| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigKubeletConfig.property.cpuCfsQuota">cpuCfsQuota</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Enable CPU CFS quota enforcement for containers that specify CPU limits. |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigKubeletConfig.property.cpuCfsQuotaPeriod">cpuCfsQuotaPeriod</a></code> | <code>java.lang.String</code> | Set the CPU CFS quota period value 'cpu.cfs_period_us'. |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigKubeletConfig.property.cpuManagerPolicy">cpuManagerPolicy</a></code> | <code>java.lang.String</code> | Control the CPU management policy on the node. |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigKubeletConfig.property.evictionMaxPodGracePeriodSeconds">evictionMaxPodGracePeriodSeconds</a></code> | <code>java.lang.Number</code> | Defines the maximum allowed grace period (in seconds) to use when terminating pods in response to a soft eviction threshold being met. |
@@ -4098,7 +4067,7 @@ ContainerNodePoolNodeConfigKubeletConfig.builder()
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigKubeletConfig.property.insecureKubeletReadonlyPortEnabled">insecureKubeletReadonlyPortEnabled</a></code> | <code>java.lang.String</code> | Controls whether the kubelet read-only port is enabled. |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigKubeletConfig.property.maxParallelImagePulls">maxParallelImagePulls</a></code> | <code>java.lang.Number</code> | Set the maximum number of image pulls in parallel. |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigKubeletConfig.property.podPidsLimit">podPidsLimit</a></code> | <code>java.lang.Number</code> | Controls the maximum number of processes allowed to run in a pod. |
-| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigKubeletConfig.property.singleProcessOomKill">singleProcessOomKill</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Defines whether to enable single process OOM killer. |
+| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigKubeletConfig.property.singleProcessOomKill">singleProcessOomKill</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Defines whether to enable single process OOM killer. |
 
 ---
 
@@ -4147,10 +4116,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `cpuCfsQuota`<sup>Optional</sup> <a name="cpuCfsQuota" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigKubeletConfig.property.cpuCfsQuota"></a>
 
 ```java
-public java.lang.Object getCpuCfsQuota();
+public java.lang.Boolean|IResolvable getCpuCfsQuota();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 Enable CPU CFS quota enforcement for containers that specify CPU limits.
 
@@ -4347,10 +4316,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `singleProcessOomKill`<sup>Optional</sup> <a name="singleProcessOomKill" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigKubeletConfig.property.singleProcessOomKill"></a>
 
 ```java
-public java.lang.Object getSingleProcessOomKill();
+public java.lang.Boolean|IResolvable getSingleProcessOomKill();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 Defines whether to enable single process OOM killer.
 
@@ -5008,10 +4977,8 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 import com.hashicorp.cdktf.providers.google.container_node_pool.ContainerNodePoolNodeConfigShieldedInstanceConfig;
 
 ContainerNodePoolNodeConfigShieldedInstanceConfig.builder()
-//  .enableIntegrityMonitoring(java.lang.Boolean)
-//  .enableIntegrityMonitoring(IResolvable)
-//  .enableSecureBoot(java.lang.Boolean)
-//  .enableSecureBoot(IResolvable)
+//  .enableIntegrityMonitoring(java.lang.Boolean|IResolvable)
+//  .enableSecureBoot(java.lang.Boolean|IResolvable)
     .build();
 ```
 
@@ -5019,18 +4986,18 @@ ContainerNodePoolNodeConfigShieldedInstanceConfig.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigShieldedInstanceConfig.property.enableIntegrityMonitoring">enableIntegrityMonitoring</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Defines whether the instance has integrity monitoring enabled. |
-| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigShieldedInstanceConfig.property.enableSecureBoot">enableSecureBoot</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Defines whether the instance has Secure Boot enabled. |
+| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigShieldedInstanceConfig.property.enableIntegrityMonitoring">enableIntegrityMonitoring</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Defines whether the instance has integrity monitoring enabled. |
+| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigShieldedInstanceConfig.property.enableSecureBoot">enableSecureBoot</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Defines whether the instance has Secure Boot enabled. |
 
 ---
 
 ##### `enableIntegrityMonitoring`<sup>Optional</sup> <a name="enableIntegrityMonitoring" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigShieldedInstanceConfig.property.enableIntegrityMonitoring"></a>
 
 ```java
-public java.lang.Object getEnableIntegrityMonitoring();
+public java.lang.Boolean|IResolvable getEnableIntegrityMonitoring();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 Defines whether the instance has integrity monitoring enabled.
 
@@ -5041,10 +5008,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `enableSecureBoot`<sup>Optional</sup> <a name="enableSecureBoot" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigShieldedInstanceConfig.property.enableSecureBoot"></a>
 
 ```java
-public java.lang.Object getEnableSecureBoot();
+public java.lang.Boolean|IResolvable getEnableSecureBoot();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 Defines whether the instance has Secure Boot enabled.
 
@@ -5060,8 +5027,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 import com.hashicorp.cdktf.providers.google.container_node_pool.ContainerNodePoolNodeConfigSoleTenantConfig;
 
 ContainerNodePoolNodeConfigSoleTenantConfig.builder()
-    .nodeAffinity(IResolvable)
-    .nodeAffinity(java.util.List<ContainerNodePoolNodeConfigSoleTenantConfigNodeAffinity>)
+    .nodeAffinity(IResolvable|java.util.List<ContainerNodePoolNodeConfigSoleTenantConfigNodeAffinity>)
 //  .minNodeCpus(java.lang.Number)
     .build();
 ```
@@ -5070,7 +5036,7 @@ ContainerNodePoolNodeConfigSoleTenantConfig.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigSoleTenantConfig.property.nodeAffinity">nodeAffinity</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigSoleTenantConfigNodeAffinity">ContainerNodePoolNodeConfigSoleTenantConfigNodeAffinity</a>></code> | node_affinity block. |
+| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigSoleTenantConfig.property.nodeAffinity">nodeAffinity</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigSoleTenantConfigNodeAffinity">ContainerNodePoolNodeConfigSoleTenantConfigNodeAffinity</a>></code> | node_affinity block. |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigSoleTenantConfig.property.minNodeCpus">minNodeCpus</a></code> | <code>java.lang.Number</code> | Specifies the minimum number of vCPUs that each sole tenant node must have to use CPU overcommit. |
 
 ---
@@ -5078,10 +5044,10 @@ ContainerNodePoolNodeConfigSoleTenantConfig.builder()
 ##### `nodeAffinity`<sup>Required</sup> <a name="nodeAffinity" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigSoleTenantConfig.property.nodeAffinity"></a>
 
 ```java
-public java.lang.Object getNodeAffinity();
+public IResolvable|java.util.List<ContainerNodePoolNodeConfigSoleTenantConfigNodeAffinity> getNodeAffinity();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigSoleTenantConfigNodeAffinity">ContainerNodePoolNodeConfigSoleTenantConfigNodeAffinity</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigSoleTenantConfigNodeAffinity">ContainerNodePoolNodeConfigSoleTenantConfigNodeAffinity</a>>
 
 node_affinity block.
 
@@ -5381,8 +5347,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 import com.hashicorp.cdktf.providers.google.container_node_pool.ContainerNodePoolQueuedProvisioning;
 
 ContainerNodePoolQueuedProvisioning.builder()
-    .enabled(java.lang.Boolean)
-    .enabled(IResolvable)
+    .enabled(java.lang.Boolean|IResolvable)
     .build();
 ```
 
@@ -5390,17 +5355,17 @@ ContainerNodePoolQueuedProvisioning.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolQueuedProvisioning.property.enabled">enabled</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Whether nodes in this node pool are obtainable solely through the ProvisioningRequest API. |
+| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolQueuedProvisioning.property.enabled">enabled</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Whether nodes in this node pool are obtainable solely through the ProvisioningRequest API. |
 
 ---
 
 ##### `enabled`<sup>Required</sup> <a name="enabled" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolQueuedProvisioning.property.enabled"></a>
 
 ```java
-public java.lang.Object getEnabled();
+public java.lang.Boolean|IResolvable getEnabled();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 Whether nodes in this node pool are obtainable solely through the ProvisioningRequest API.
 
@@ -6290,10 +6255,10 @@ public void resetAutoUpgrade()
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolManagementOutputReference.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolManagementOutputReference.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolManagementOutputReference.property.autoRepairInput">autoRepairInput</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolManagementOutputReference.property.autoUpgradeInput">autoUpgradeInput</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolManagementOutputReference.property.autoRepair">autoRepair</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolManagementOutputReference.property.autoUpgrade">autoUpgrade</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolManagementOutputReference.property.autoRepairInput">autoRepairInput</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolManagementOutputReference.property.autoUpgradeInput">autoUpgradeInput</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolManagementOutputReference.property.autoRepair">autoRepair</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolManagementOutputReference.property.autoUpgrade">autoUpgrade</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolManagementOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolManagement">ContainerNodePoolManagement</a></code> | *No description.* |
 
 ---
@@ -6325,40 +6290,40 @@ public java.lang.String getFqn();
 ##### `autoRepairInput`<sup>Optional</sup> <a name="autoRepairInput" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolManagementOutputReference.property.autoRepairInput"></a>
 
 ```java
-public java.lang.Object getAutoRepairInput();
+public java.lang.Boolean|IResolvable getAutoRepairInput();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
 ##### `autoUpgradeInput`<sup>Optional</sup> <a name="autoUpgradeInput" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolManagementOutputReference.property.autoUpgradeInput"></a>
 
 ```java
-public java.lang.Object getAutoUpgradeInput();
+public java.lang.Boolean|IResolvable getAutoUpgradeInput();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
 ##### `autoRepair`<sup>Required</sup> <a name="autoRepair" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolManagementOutputReference.property.autoRepair"></a>
 
 ```java
-public java.lang.Object getAutoRepair();
+public java.lang.Boolean|IResolvable getAutoRepair();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
 ##### `autoUpgrade`<sup>Required</sup> <a name="autoUpgrade" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolManagementOutputReference.property.autoUpgrade"></a>
 
 ```java
-public java.lang.Object getAutoUpgrade();
+public java.lang.Boolean|IResolvable getAutoUpgrade();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
@@ -6494,7 +6459,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNetworkConfigAdditionalNodeNetworkConfigsList.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNetworkConfigAdditionalNodeNetworkConfigsList.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNetworkConfigAdditionalNodeNetworkConfigsList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNetworkConfigAdditionalNodeNetworkConfigs">ContainerNodePoolNetworkConfigAdditionalNodeNetworkConfigs</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNetworkConfigAdditionalNodeNetworkConfigsList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNetworkConfigAdditionalNodeNetworkConfigs">ContainerNodePoolNetworkConfigAdditionalNodeNetworkConfigs</a>></code> | *No description.* |
 
 ---
 
@@ -6525,10 +6490,10 @@ public java.lang.String getFqn();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNetworkConfigAdditionalNodeNetworkConfigsList.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|java.util.List<ContainerNodePoolNetworkConfigAdditionalNodeNetworkConfigs> getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNetworkConfigAdditionalNodeNetworkConfigs">ContainerNodePoolNetworkConfigAdditionalNodeNetworkConfigs</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNetworkConfigAdditionalNodeNetworkConfigs">ContainerNodePoolNetworkConfigAdditionalNodeNetworkConfigs</a>>
 
 ---
 
@@ -6779,7 +6744,7 @@ public void resetSubnetwork()
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNetworkConfigAdditionalNodeNetworkConfigsOutputReference.property.subnetworkInput">subnetworkInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNetworkConfigAdditionalNodeNetworkConfigsOutputReference.property.network">network</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNetworkConfigAdditionalNodeNetworkConfigsOutputReference.property.subnetwork">subnetwork</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNetworkConfigAdditionalNodeNetworkConfigsOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNetworkConfigAdditionalNodeNetworkConfigs">ContainerNodePoolNetworkConfigAdditionalNodeNetworkConfigs</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNetworkConfigAdditionalNodeNetworkConfigsOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|<a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNetworkConfigAdditionalNodeNetworkConfigs">ContainerNodePoolNetworkConfigAdditionalNodeNetworkConfigs</a></code> | *No description.* |
 
 ---
 
@@ -6850,10 +6815,10 @@ public java.lang.String getSubnetwork();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNetworkConfigAdditionalNodeNetworkConfigsOutputReference.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|ContainerNodePoolNetworkConfigAdditionalNodeNetworkConfigs getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNetworkConfigAdditionalNodeNetworkConfigs">ContainerNodePoolNetworkConfigAdditionalNodeNetworkConfigs</a>
+- *Type:* com.hashicorp.cdktf.IResolvable|<a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNetworkConfigAdditionalNodeNetworkConfigs">ContainerNodePoolNetworkConfigAdditionalNodeNetworkConfigs</a>
 
 ---
 
@@ -6979,7 +6944,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNetworkConfigAdditionalPodNetworkConfigsList.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNetworkConfigAdditionalPodNetworkConfigsList.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNetworkConfigAdditionalPodNetworkConfigsList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNetworkConfigAdditionalPodNetworkConfigs">ContainerNodePoolNetworkConfigAdditionalPodNetworkConfigs</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNetworkConfigAdditionalPodNetworkConfigsList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNetworkConfigAdditionalPodNetworkConfigs">ContainerNodePoolNetworkConfigAdditionalPodNetworkConfigs</a>></code> | *No description.* |
 
 ---
 
@@ -7010,10 +6975,10 @@ public java.lang.String getFqn();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNetworkConfigAdditionalPodNetworkConfigsList.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|java.util.List<ContainerNodePoolNetworkConfigAdditionalPodNetworkConfigs> getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNetworkConfigAdditionalPodNetworkConfigs">ContainerNodePoolNetworkConfigAdditionalPodNetworkConfigs</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNetworkConfigAdditionalPodNetworkConfigs">ContainerNodePoolNetworkConfigAdditionalPodNetworkConfigs</a>>
 
 ---
 
@@ -7273,7 +7238,7 @@ public void resetSubnetwork()
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNetworkConfigAdditionalPodNetworkConfigsOutputReference.property.maxPodsPerNode">maxPodsPerNode</a></code> | <code>java.lang.Number</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNetworkConfigAdditionalPodNetworkConfigsOutputReference.property.secondaryPodRange">secondaryPodRange</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNetworkConfigAdditionalPodNetworkConfigsOutputReference.property.subnetwork">subnetwork</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNetworkConfigAdditionalPodNetworkConfigsOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNetworkConfigAdditionalPodNetworkConfigs">ContainerNodePoolNetworkConfigAdditionalPodNetworkConfigs</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNetworkConfigAdditionalPodNetworkConfigsOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|<a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNetworkConfigAdditionalPodNetworkConfigs">ContainerNodePoolNetworkConfigAdditionalPodNetworkConfigs</a></code> | *No description.* |
 
 ---
 
@@ -7364,10 +7329,10 @@ public java.lang.String getSubnetwork();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNetworkConfigAdditionalPodNetworkConfigsOutputReference.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|ContainerNodePoolNetworkConfigAdditionalPodNetworkConfigs getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNetworkConfigAdditionalPodNetworkConfigs">ContainerNodePoolNetworkConfigAdditionalPodNetworkConfigs</a>
+- *Type:* com.hashicorp.cdktf.IResolvable|<a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNetworkConfigAdditionalPodNetworkConfigs">ContainerNodePoolNetworkConfigAdditionalPodNetworkConfigs</a>
 
 ---
 
@@ -7861,24 +7826,24 @@ Returns a reversible string representation.
 ##### `putAdditionalNodeNetworkConfigs` <a name="putAdditionalNodeNetworkConfigs" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNetworkConfigOutputReference.putAdditionalNodeNetworkConfigs"></a>
 
 ```java
-public void putAdditionalNodeNetworkConfigs(IResolvable OR java.util.List<ContainerNodePoolNetworkConfigAdditionalNodeNetworkConfigs> value)
+public void putAdditionalNodeNetworkConfigs(IResolvable|java.util.List<ContainerNodePoolNetworkConfigAdditionalNodeNetworkConfigs> value)
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNetworkConfigOutputReference.putAdditionalNodeNetworkConfigs.parameter.value"></a>
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNetworkConfigAdditionalNodeNetworkConfigs">ContainerNodePoolNetworkConfigAdditionalNodeNetworkConfigs</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNetworkConfigAdditionalNodeNetworkConfigs">ContainerNodePoolNetworkConfigAdditionalNodeNetworkConfigs</a>>
 
 ---
 
 ##### `putAdditionalPodNetworkConfigs` <a name="putAdditionalPodNetworkConfigs" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNetworkConfigOutputReference.putAdditionalPodNetworkConfigs"></a>
 
 ```java
-public void putAdditionalPodNetworkConfigs(IResolvable OR java.util.List<ContainerNodePoolNetworkConfigAdditionalPodNetworkConfigs> value)
+public void putAdditionalPodNetworkConfigs(IResolvable|java.util.List<ContainerNodePoolNetworkConfigAdditionalPodNetworkConfigs> value)
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNetworkConfigOutputReference.putAdditionalPodNetworkConfigs.parameter.value"></a>
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNetworkConfigAdditionalPodNetworkConfigs">ContainerNodePoolNetworkConfigAdditionalPodNetworkConfigs</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNetworkConfigAdditionalPodNetworkConfigs">ContainerNodePoolNetworkConfigAdditionalPodNetworkConfigs</a>>
 
 ---
 
@@ -7966,16 +7931,16 @@ public void resetPodRange()
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNetworkConfigOutputReference.property.networkPerformanceConfig">networkPerformanceConfig</a></code> | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNetworkConfigNetworkPerformanceConfigOutputReference">ContainerNodePoolNetworkConfigNetworkPerformanceConfigOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNetworkConfigOutputReference.property.podCidrOverprovisionConfig">podCidrOverprovisionConfig</a></code> | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNetworkConfigPodCidrOverprovisionConfigOutputReference">ContainerNodePoolNetworkConfigPodCidrOverprovisionConfigOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNetworkConfigOutputReference.property.subnetwork">subnetwork</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNetworkConfigOutputReference.property.additionalNodeNetworkConfigsInput">additionalNodeNetworkConfigsInput</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNetworkConfigAdditionalNodeNetworkConfigs">ContainerNodePoolNetworkConfigAdditionalNodeNetworkConfigs</a>></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNetworkConfigOutputReference.property.additionalPodNetworkConfigsInput">additionalPodNetworkConfigsInput</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNetworkConfigAdditionalPodNetworkConfigs">ContainerNodePoolNetworkConfigAdditionalPodNetworkConfigs</a>></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNetworkConfigOutputReference.property.createPodRangeInput">createPodRangeInput</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNetworkConfigOutputReference.property.enablePrivateNodesInput">enablePrivateNodesInput</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNetworkConfigOutputReference.property.additionalNodeNetworkConfigsInput">additionalNodeNetworkConfigsInput</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNetworkConfigAdditionalNodeNetworkConfigs">ContainerNodePoolNetworkConfigAdditionalNodeNetworkConfigs</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNetworkConfigOutputReference.property.additionalPodNetworkConfigsInput">additionalPodNetworkConfigsInput</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNetworkConfigAdditionalPodNetworkConfigs">ContainerNodePoolNetworkConfigAdditionalPodNetworkConfigs</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNetworkConfigOutputReference.property.createPodRangeInput">createPodRangeInput</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNetworkConfigOutputReference.property.enablePrivateNodesInput">enablePrivateNodesInput</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNetworkConfigOutputReference.property.networkPerformanceConfigInput">networkPerformanceConfigInput</a></code> | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNetworkConfigNetworkPerformanceConfig">ContainerNodePoolNetworkConfigNetworkPerformanceConfig</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNetworkConfigOutputReference.property.podCidrOverprovisionConfigInput">podCidrOverprovisionConfigInput</a></code> | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNetworkConfigPodCidrOverprovisionConfig">ContainerNodePoolNetworkConfigPodCidrOverprovisionConfig</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNetworkConfigOutputReference.property.podIpv4CidrBlockInput">podIpv4CidrBlockInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNetworkConfigOutputReference.property.podRangeInput">podRangeInput</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNetworkConfigOutputReference.property.createPodRange">createPodRange</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNetworkConfigOutputReference.property.enablePrivateNodes">enablePrivateNodes</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNetworkConfigOutputReference.property.createPodRange">createPodRange</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNetworkConfigOutputReference.property.enablePrivateNodes">enablePrivateNodes</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNetworkConfigOutputReference.property.podIpv4CidrBlock">podIpv4CidrBlock</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNetworkConfigOutputReference.property.podRange">podRange</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNetworkConfigOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNetworkConfig">ContainerNodePoolNetworkConfig</a></code> | *No description.* |
@@ -8059,40 +8024,40 @@ public java.lang.String getSubnetwork();
 ##### `additionalNodeNetworkConfigsInput`<sup>Optional</sup> <a name="additionalNodeNetworkConfigsInput" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNetworkConfigOutputReference.property.additionalNodeNetworkConfigsInput"></a>
 
 ```java
-public java.lang.Object getAdditionalNodeNetworkConfigsInput();
+public IResolvable|java.util.List<ContainerNodePoolNetworkConfigAdditionalNodeNetworkConfigs> getAdditionalNodeNetworkConfigsInput();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNetworkConfigAdditionalNodeNetworkConfigs">ContainerNodePoolNetworkConfigAdditionalNodeNetworkConfigs</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNetworkConfigAdditionalNodeNetworkConfigs">ContainerNodePoolNetworkConfigAdditionalNodeNetworkConfigs</a>>
 
 ---
 
 ##### `additionalPodNetworkConfigsInput`<sup>Optional</sup> <a name="additionalPodNetworkConfigsInput" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNetworkConfigOutputReference.property.additionalPodNetworkConfigsInput"></a>
 
 ```java
-public java.lang.Object getAdditionalPodNetworkConfigsInput();
+public IResolvable|java.util.List<ContainerNodePoolNetworkConfigAdditionalPodNetworkConfigs> getAdditionalPodNetworkConfigsInput();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNetworkConfigAdditionalPodNetworkConfigs">ContainerNodePoolNetworkConfigAdditionalPodNetworkConfigs</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNetworkConfigAdditionalPodNetworkConfigs">ContainerNodePoolNetworkConfigAdditionalPodNetworkConfigs</a>>
 
 ---
 
 ##### `createPodRangeInput`<sup>Optional</sup> <a name="createPodRangeInput" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNetworkConfigOutputReference.property.createPodRangeInput"></a>
 
 ```java
-public java.lang.Object getCreatePodRangeInput();
+public java.lang.Boolean|IResolvable getCreatePodRangeInput();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
 ##### `enablePrivateNodesInput`<sup>Optional</sup> <a name="enablePrivateNodesInput" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNetworkConfigOutputReference.property.enablePrivateNodesInput"></a>
 
 ```java
-public java.lang.Object getEnablePrivateNodesInput();
+public java.lang.Boolean|IResolvable getEnablePrivateNodesInput();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
@@ -8139,20 +8104,20 @@ public java.lang.String getPodRangeInput();
 ##### `createPodRange`<sup>Required</sup> <a name="createPodRange" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNetworkConfigOutputReference.property.createPodRange"></a>
 
 ```java
-public java.lang.Object getCreatePodRange();
+public java.lang.Boolean|IResolvable getCreatePodRange();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
 ##### `enablePrivateNodes`<sup>Required</sup> <a name="enablePrivateNodes" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNetworkConfigOutputReference.property.enablePrivateNodes"></a>
 
 ```java
-public java.lang.Object getEnablePrivateNodes();
+public java.lang.Boolean|IResolvable getEnablePrivateNodes();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
@@ -8397,8 +8362,8 @@ Returns a reversible string representation.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNetworkConfigPodCidrOverprovisionConfigOutputReference.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNetworkConfigPodCidrOverprovisionConfigOutputReference.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNetworkConfigPodCidrOverprovisionConfigOutputReference.property.disabledInput">disabledInput</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNetworkConfigPodCidrOverprovisionConfigOutputReference.property.disabled">disabled</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNetworkConfigPodCidrOverprovisionConfigOutputReference.property.disabledInput">disabledInput</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNetworkConfigPodCidrOverprovisionConfigOutputReference.property.disabled">disabled</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNetworkConfigPodCidrOverprovisionConfigOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNetworkConfigPodCidrOverprovisionConfig">ContainerNodePoolNetworkConfigPodCidrOverprovisionConfig</a></code> | *No description.* |
 
 ---
@@ -8430,20 +8395,20 @@ public java.lang.String getFqn();
 ##### `disabledInput`<sup>Optional</sup> <a name="disabledInput" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNetworkConfigPodCidrOverprovisionConfigOutputReference.property.disabledInput"></a>
 
 ```java
-public java.lang.Object getDisabledInput();
+public java.lang.Boolean|IResolvable getDisabledInput();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
 ##### `disabled`<sup>Required</sup> <a name="disabled" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNetworkConfigPodCidrOverprovisionConfigOutputReference.property.disabled"></a>
 
 ```java
-public java.lang.Object getDisabled();
+public java.lang.Boolean|IResolvable getDisabled();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
@@ -8682,10 +8647,10 @@ public void resetPerformanceMonitoringUnit()
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigAdvancedMachineFeaturesOutputReference.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigAdvancedMachineFeaturesOutputReference.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigAdvancedMachineFeaturesOutputReference.property.enableNestedVirtualizationInput">enableNestedVirtualizationInput</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigAdvancedMachineFeaturesOutputReference.property.enableNestedVirtualizationInput">enableNestedVirtualizationInput</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigAdvancedMachineFeaturesOutputReference.property.performanceMonitoringUnitInput">performanceMonitoringUnitInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigAdvancedMachineFeaturesOutputReference.property.threadsPerCoreInput">threadsPerCoreInput</a></code> | <code>java.lang.Number</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigAdvancedMachineFeaturesOutputReference.property.enableNestedVirtualization">enableNestedVirtualization</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigAdvancedMachineFeaturesOutputReference.property.enableNestedVirtualization">enableNestedVirtualization</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigAdvancedMachineFeaturesOutputReference.property.performanceMonitoringUnit">performanceMonitoringUnit</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigAdvancedMachineFeaturesOutputReference.property.threadsPerCore">threadsPerCore</a></code> | <code>java.lang.Number</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigAdvancedMachineFeaturesOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigAdvancedMachineFeatures">ContainerNodePoolNodeConfigAdvancedMachineFeatures</a></code> | *No description.* |
@@ -8719,10 +8684,10 @@ public java.lang.String getFqn();
 ##### `enableNestedVirtualizationInput`<sup>Optional</sup> <a name="enableNestedVirtualizationInput" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigAdvancedMachineFeaturesOutputReference.property.enableNestedVirtualizationInput"></a>
 
 ```java
-public java.lang.Object getEnableNestedVirtualizationInput();
+public java.lang.Boolean|IResolvable getEnableNestedVirtualizationInput();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
@@ -8749,10 +8714,10 @@ public java.lang.Number getThreadsPerCoreInput();
 ##### `enableNestedVirtualization`<sup>Required</sup> <a name="enableNestedVirtualization" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigAdvancedMachineFeaturesOutputReference.property.enableNestedVirtualization"></a>
 
 ```java
-public java.lang.Object getEnableNestedVirtualization();
+public java.lang.Boolean|IResolvable getEnableNestedVirtualization();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
@@ -9370,9 +9335,9 @@ public void resetConfidentialInstanceType()
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigConfidentialNodesOutputReference.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigConfidentialNodesOutputReference.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigConfidentialNodesOutputReference.property.confidentialInstanceTypeInput">confidentialInstanceTypeInput</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigConfidentialNodesOutputReference.property.enabledInput">enabledInput</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigConfidentialNodesOutputReference.property.enabledInput">enabledInput</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigConfidentialNodesOutputReference.property.confidentialInstanceType">confidentialInstanceType</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigConfidentialNodesOutputReference.property.enabled">enabled</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigConfidentialNodesOutputReference.property.enabled">enabled</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigConfidentialNodesOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigConfidentialNodes">ContainerNodePoolNodeConfigConfidentialNodes</a></code> | *No description.* |
 
 ---
@@ -9414,10 +9379,10 @@ public java.lang.String getConfidentialInstanceTypeInput();
 ##### `enabledInput`<sup>Optional</sup> <a name="enabledInput" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigConfidentialNodesOutputReference.property.enabledInput"></a>
 
 ```java
-public java.lang.Object getEnabledInput();
+public java.lang.Boolean|IResolvable getEnabledInput();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
@@ -9434,10 +9399,10 @@ public java.lang.String getConfidentialInstanceType();
 ##### `enabled`<sup>Required</sup> <a name="enabled" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigConfidentialNodesOutputReference.property.enabled"></a>
 
 ```java
-public java.lang.Object getEnabled();
+public java.lang.Boolean|IResolvable getEnabled();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
@@ -10135,7 +10100,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigContainerdConfigPrivateRegistryAccessConfigCertificateAuthorityDomainConfigList.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigContainerdConfigPrivateRegistryAccessConfigCertificateAuthorityDomainConfigList.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigContainerdConfigPrivateRegistryAccessConfigCertificateAuthorityDomainConfigList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigContainerdConfigPrivateRegistryAccessConfigCertificateAuthorityDomainConfig">ContainerNodePoolNodeConfigContainerdConfigPrivateRegistryAccessConfigCertificateAuthorityDomainConfig</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigContainerdConfigPrivateRegistryAccessConfigCertificateAuthorityDomainConfigList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigContainerdConfigPrivateRegistryAccessConfigCertificateAuthorityDomainConfig">ContainerNodePoolNodeConfigContainerdConfigPrivateRegistryAccessConfigCertificateAuthorityDomainConfig</a>></code> | *No description.* |
 
 ---
 
@@ -10166,10 +10131,10 @@ public java.lang.String getFqn();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigContainerdConfigPrivateRegistryAccessConfigCertificateAuthorityDomainConfigList.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|java.util.List<ContainerNodePoolNodeConfigContainerdConfigPrivateRegistryAccessConfigCertificateAuthorityDomainConfig> getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigContainerdConfigPrivateRegistryAccessConfigCertificateAuthorityDomainConfig">ContainerNodePoolNodeConfigContainerdConfigPrivateRegistryAccessConfigCertificateAuthorityDomainConfig</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigContainerdConfigPrivateRegistryAccessConfigCertificateAuthorityDomainConfig">ContainerNodePoolNodeConfigContainerdConfigPrivateRegistryAccessConfigCertificateAuthorityDomainConfig</a>>
 
 ---
 
@@ -10419,7 +10384,7 @@ public void putGcpSecretManagerCertificateConfig(ContainerNodePoolNodeConfigCont
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigContainerdConfigPrivateRegistryAccessConfigCertificateAuthorityDomainConfigOutputReference.property.fqdnsInput">fqdnsInput</a></code> | <code>java.util.List<java.lang.String></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigContainerdConfigPrivateRegistryAccessConfigCertificateAuthorityDomainConfigOutputReference.property.gcpSecretManagerCertificateConfigInput">gcpSecretManagerCertificateConfigInput</a></code> | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigContainerdConfigPrivateRegistryAccessConfigCertificateAuthorityDomainConfigGcpSecretManagerCertificateConfig">ContainerNodePoolNodeConfigContainerdConfigPrivateRegistryAccessConfigCertificateAuthorityDomainConfigGcpSecretManagerCertificateConfig</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigContainerdConfigPrivateRegistryAccessConfigCertificateAuthorityDomainConfigOutputReference.property.fqdns">fqdns</a></code> | <code>java.util.List<java.lang.String></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigContainerdConfigPrivateRegistryAccessConfigCertificateAuthorityDomainConfigOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigContainerdConfigPrivateRegistryAccessConfigCertificateAuthorityDomainConfig">ContainerNodePoolNodeConfigContainerdConfigPrivateRegistryAccessConfigCertificateAuthorityDomainConfig</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigContainerdConfigPrivateRegistryAccessConfigCertificateAuthorityDomainConfigOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|<a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigContainerdConfigPrivateRegistryAccessConfigCertificateAuthorityDomainConfig">ContainerNodePoolNodeConfigContainerdConfigPrivateRegistryAccessConfigCertificateAuthorityDomainConfig</a></code> | *No description.* |
 
 ---
 
@@ -10490,10 +10455,10 @@ public java.util.List<java.lang.String> getFqdns();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigContainerdConfigPrivateRegistryAccessConfigCertificateAuthorityDomainConfigOutputReference.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|ContainerNodePoolNodeConfigContainerdConfigPrivateRegistryAccessConfigCertificateAuthorityDomainConfig getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigContainerdConfigPrivateRegistryAccessConfigCertificateAuthorityDomainConfig">ContainerNodePoolNodeConfigContainerdConfigPrivateRegistryAccessConfigCertificateAuthorityDomainConfig</a>
+- *Type:* com.hashicorp.cdktf.IResolvable|<a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigContainerdConfigPrivateRegistryAccessConfigCertificateAuthorityDomainConfig">ContainerNodePoolNodeConfigContainerdConfigPrivateRegistryAccessConfigCertificateAuthorityDomainConfig</a>
 
 ---
 
@@ -10706,12 +10671,12 @@ Returns a reversible string representation.
 ##### `putCertificateAuthorityDomainConfig` <a name="putCertificateAuthorityDomainConfig" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigContainerdConfigPrivateRegistryAccessConfigOutputReference.putCertificateAuthorityDomainConfig"></a>
 
 ```java
-public void putCertificateAuthorityDomainConfig(IResolvable OR java.util.List<ContainerNodePoolNodeConfigContainerdConfigPrivateRegistryAccessConfigCertificateAuthorityDomainConfig> value)
+public void putCertificateAuthorityDomainConfig(IResolvable|java.util.List<ContainerNodePoolNodeConfigContainerdConfigPrivateRegistryAccessConfigCertificateAuthorityDomainConfig> value)
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigContainerdConfigPrivateRegistryAccessConfigOutputReference.putCertificateAuthorityDomainConfig.parameter.value"></a>
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigContainerdConfigPrivateRegistryAccessConfigCertificateAuthorityDomainConfig">ContainerNodePoolNodeConfigContainerdConfigPrivateRegistryAccessConfigCertificateAuthorityDomainConfig</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigContainerdConfigPrivateRegistryAccessConfigCertificateAuthorityDomainConfig">ContainerNodePoolNodeConfigContainerdConfigPrivateRegistryAccessConfigCertificateAuthorityDomainConfig</a>>
 
 ---
 
@@ -10729,9 +10694,9 @@ public void resetCertificateAuthorityDomainConfig()
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigContainerdConfigPrivateRegistryAccessConfigOutputReference.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigContainerdConfigPrivateRegistryAccessConfigOutputReference.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigContainerdConfigPrivateRegistryAccessConfigOutputReference.property.certificateAuthorityDomainConfig">certificateAuthorityDomainConfig</a></code> | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigContainerdConfigPrivateRegistryAccessConfigCertificateAuthorityDomainConfigList">ContainerNodePoolNodeConfigContainerdConfigPrivateRegistryAccessConfigCertificateAuthorityDomainConfigList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigContainerdConfigPrivateRegistryAccessConfigOutputReference.property.certificateAuthorityDomainConfigInput">certificateAuthorityDomainConfigInput</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigContainerdConfigPrivateRegistryAccessConfigCertificateAuthorityDomainConfig">ContainerNodePoolNodeConfigContainerdConfigPrivateRegistryAccessConfigCertificateAuthorityDomainConfig</a>></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigContainerdConfigPrivateRegistryAccessConfigOutputReference.property.enabledInput">enabledInput</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigContainerdConfigPrivateRegistryAccessConfigOutputReference.property.enabled">enabled</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigContainerdConfigPrivateRegistryAccessConfigOutputReference.property.certificateAuthorityDomainConfigInput">certificateAuthorityDomainConfigInput</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigContainerdConfigPrivateRegistryAccessConfigCertificateAuthorityDomainConfig">ContainerNodePoolNodeConfigContainerdConfigPrivateRegistryAccessConfigCertificateAuthorityDomainConfig</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigContainerdConfigPrivateRegistryAccessConfigOutputReference.property.enabledInput">enabledInput</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigContainerdConfigPrivateRegistryAccessConfigOutputReference.property.enabled">enabled</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigContainerdConfigPrivateRegistryAccessConfigOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigContainerdConfigPrivateRegistryAccessConfig">ContainerNodePoolNodeConfigContainerdConfigPrivateRegistryAccessConfig</a></code> | *No description.* |
 
 ---
@@ -10773,30 +10738,30 @@ public ContainerNodePoolNodeConfigContainerdConfigPrivateRegistryAccessConfigCer
 ##### `certificateAuthorityDomainConfigInput`<sup>Optional</sup> <a name="certificateAuthorityDomainConfigInput" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigContainerdConfigPrivateRegistryAccessConfigOutputReference.property.certificateAuthorityDomainConfigInput"></a>
 
 ```java
-public java.lang.Object getCertificateAuthorityDomainConfigInput();
+public IResolvable|java.util.List<ContainerNodePoolNodeConfigContainerdConfigPrivateRegistryAccessConfigCertificateAuthorityDomainConfig> getCertificateAuthorityDomainConfigInput();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigContainerdConfigPrivateRegistryAccessConfigCertificateAuthorityDomainConfig">ContainerNodePoolNodeConfigContainerdConfigPrivateRegistryAccessConfigCertificateAuthorityDomainConfig</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigContainerdConfigPrivateRegistryAccessConfigCertificateAuthorityDomainConfig">ContainerNodePoolNodeConfigContainerdConfigPrivateRegistryAccessConfigCertificateAuthorityDomainConfig</a>>
 
 ---
 
 ##### `enabledInput`<sup>Optional</sup> <a name="enabledInput" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigContainerdConfigPrivateRegistryAccessConfigOutputReference.property.enabledInput"></a>
 
 ```java
-public java.lang.Object getEnabledInput();
+public java.lang.Boolean|IResolvable getEnabledInput();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
 ##### `enabled`<sup>Required</sup> <a name="enabled" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigContainerdConfigPrivateRegistryAccessConfigOutputReference.property.enabled"></a>
 
 ```java
-public java.lang.Object getEnabled();
+public java.lang.Boolean|IResolvable getEnabled();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
@@ -11770,8 +11735,8 @@ Returns a reversible string representation.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigFastSocketOutputReference.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigFastSocketOutputReference.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigFastSocketOutputReference.property.enabledInput">enabledInput</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigFastSocketOutputReference.property.enabled">enabled</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigFastSocketOutputReference.property.enabledInput">enabledInput</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigFastSocketOutputReference.property.enabled">enabled</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigFastSocketOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigFastSocket">ContainerNodePoolNodeConfigFastSocket</a></code> | *No description.* |
 
 ---
@@ -11803,20 +11768,20 @@ public java.lang.String getFqn();
 ##### `enabledInput`<sup>Optional</sup> <a name="enabledInput" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigFastSocketOutputReference.property.enabledInput"></a>
 
 ```java
-public java.lang.Object getEnabledInput();
+public java.lang.Boolean|IResolvable getEnabledInput();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
 ##### `enabled`<sup>Required</sup> <a name="enabled" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigFastSocketOutputReference.property.enabled"></a>
 
 ```java
-public java.lang.Object getEnabled();
+public java.lang.Boolean|IResolvable getEnabled();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
@@ -12041,8 +12006,8 @@ Returns a reversible string representation.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigGcfsConfigOutputReference.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigGcfsConfigOutputReference.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigGcfsConfigOutputReference.property.enabledInput">enabledInput</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigGcfsConfigOutputReference.property.enabled">enabled</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigGcfsConfigOutputReference.property.enabledInput">enabledInput</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigGcfsConfigOutputReference.property.enabled">enabled</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigGcfsConfigOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigGcfsConfig">ContainerNodePoolNodeConfigGcfsConfig</a></code> | *No description.* |
 
 ---
@@ -12074,20 +12039,20 @@ public java.lang.String getFqn();
 ##### `enabledInput`<sup>Optional</sup> <a name="enabledInput" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigGcfsConfigOutputReference.property.enabledInput"></a>
 
 ```java
-public java.lang.Object getEnabledInput();
+public java.lang.Boolean|IResolvable getEnabledInput();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
 ##### `enabled`<sup>Required</sup> <a name="enabled" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigGcfsConfigOutputReference.property.enabled"></a>
 
 ```java
-public java.lang.Object getEnabled();
+public java.lang.Boolean|IResolvable getEnabled();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
@@ -12787,7 +12752,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigGuestAcceleratorList.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigGuestAcceleratorList.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigGuestAcceleratorList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigGuestAccelerator">ContainerNodePoolNodeConfigGuestAccelerator</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigGuestAcceleratorList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigGuestAccelerator">ContainerNodePoolNodeConfigGuestAccelerator</a>></code> | *No description.* |
 
 ---
 
@@ -12818,10 +12783,10 @@ public java.lang.String getFqn();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigGuestAcceleratorList.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|java.util.List<ContainerNodePoolNodeConfigGuestAccelerator> getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigGuestAccelerator">ContainerNodePoolNodeConfigGuestAccelerator</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigGuestAccelerator">ContainerNodePoolNodeConfigGuestAccelerator</a>>
 
 ---
 
@@ -13111,7 +13076,7 @@ public void resetGpuSharingConfig()
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigGuestAcceleratorOutputReference.property.count">count</a></code> | <code>java.lang.Number</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigGuestAcceleratorOutputReference.property.gpuPartitionSize">gpuPartitionSize</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigGuestAcceleratorOutputReference.property.type">type</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigGuestAcceleratorOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigGuestAccelerator">ContainerNodePoolNodeConfigGuestAccelerator</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigGuestAcceleratorOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|<a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigGuestAccelerator">ContainerNodePoolNodeConfigGuestAccelerator</a></code> | *No description.* |
 
 ---
 
@@ -13242,10 +13207,10 @@ public java.lang.String getType();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigGuestAcceleratorOutputReference.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|ContainerNodePoolNodeConfigGuestAccelerator getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigGuestAccelerator">ContainerNodePoolNodeConfigGuestAccelerator</a>
+- *Type:* com.hashicorp.cdktf.IResolvable|<a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigGuestAccelerator">ContainerNodePoolNodeConfigGuestAccelerator</a>
 
 ---
 
@@ -13460,8 +13425,8 @@ Returns a reversible string representation.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigGvnicOutputReference.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigGvnicOutputReference.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigGvnicOutputReference.property.enabledInput">enabledInput</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigGvnicOutputReference.property.enabled">enabled</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigGvnicOutputReference.property.enabledInput">enabledInput</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigGvnicOutputReference.property.enabled">enabled</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigGvnicOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigGvnic">ContainerNodePoolNodeConfigGvnic</a></code> | *No description.* |
 
 ---
@@ -13493,20 +13458,20 @@ public java.lang.String getFqn();
 ##### `enabledInput`<sup>Optional</sup> <a name="enabledInput" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigGvnicOutputReference.property.enabledInput"></a>
 
 ```java
-public java.lang.Object getEnabledInput();
+public java.lang.Boolean|IResolvable getEnabledInput();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
 ##### `enabled`<sup>Required</sup> <a name="enabled" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigGvnicOutputReference.property.enabled"></a>
 
 ```java
-public java.lang.Object getEnabled();
+public java.lang.Boolean|IResolvable getEnabled();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
@@ -15442,7 +15407,7 @@ public void resetSingleProcessOomKill()
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigKubeletConfigOutputReference.property.allowedUnsafeSysctlsInput">allowedUnsafeSysctlsInput</a></code> | <code>java.util.List<java.lang.String></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigKubeletConfigOutputReference.property.containerLogMaxFilesInput">containerLogMaxFilesInput</a></code> | <code>java.lang.Number</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigKubeletConfigOutputReference.property.containerLogMaxSizeInput">containerLogMaxSizeInput</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigKubeletConfigOutputReference.property.cpuCfsQuotaInput">cpuCfsQuotaInput</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigKubeletConfigOutputReference.property.cpuCfsQuotaInput">cpuCfsQuotaInput</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigKubeletConfigOutputReference.property.cpuCfsQuotaPeriodInput">cpuCfsQuotaPeriodInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigKubeletConfigOutputReference.property.cpuManagerPolicyInput">cpuManagerPolicyInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigKubeletConfigOutputReference.property.evictionMaxPodGracePeriodSecondsInput">evictionMaxPodGracePeriodSecondsInput</a></code> | <code>java.lang.Number</code> | *No description.* |
@@ -15456,11 +15421,11 @@ public void resetSingleProcessOomKill()
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigKubeletConfigOutputReference.property.insecureKubeletReadonlyPortEnabledInput">insecureKubeletReadonlyPortEnabledInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigKubeletConfigOutputReference.property.maxParallelImagePullsInput">maxParallelImagePullsInput</a></code> | <code>java.lang.Number</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigKubeletConfigOutputReference.property.podPidsLimitInput">podPidsLimitInput</a></code> | <code>java.lang.Number</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigKubeletConfigOutputReference.property.singleProcessOomKillInput">singleProcessOomKillInput</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigKubeletConfigOutputReference.property.singleProcessOomKillInput">singleProcessOomKillInput</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigKubeletConfigOutputReference.property.allowedUnsafeSysctls">allowedUnsafeSysctls</a></code> | <code>java.util.List<java.lang.String></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigKubeletConfigOutputReference.property.containerLogMaxFiles">containerLogMaxFiles</a></code> | <code>java.lang.Number</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigKubeletConfigOutputReference.property.containerLogMaxSize">containerLogMaxSize</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigKubeletConfigOutputReference.property.cpuCfsQuota">cpuCfsQuota</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigKubeletConfigOutputReference.property.cpuCfsQuota">cpuCfsQuota</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigKubeletConfigOutputReference.property.cpuCfsQuotaPeriod">cpuCfsQuotaPeriod</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigKubeletConfigOutputReference.property.cpuManagerPolicy">cpuManagerPolicy</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigKubeletConfigOutputReference.property.evictionMaxPodGracePeriodSeconds">evictionMaxPodGracePeriodSeconds</a></code> | <code>java.lang.Number</code> | *No description.* |
@@ -15471,7 +15436,7 @@ public void resetSingleProcessOomKill()
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigKubeletConfigOutputReference.property.insecureKubeletReadonlyPortEnabled">insecureKubeletReadonlyPortEnabled</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigKubeletConfigOutputReference.property.maxParallelImagePulls">maxParallelImagePulls</a></code> | <code>java.lang.Number</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigKubeletConfigOutputReference.property.podPidsLimit">podPidsLimit</a></code> | <code>java.lang.Number</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigKubeletConfigOutputReference.property.singleProcessOomKill">singleProcessOomKill</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigKubeletConfigOutputReference.property.singleProcessOomKill">singleProcessOomKill</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigKubeletConfigOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigKubeletConfig">ContainerNodePoolNodeConfigKubeletConfig</a></code> | *No description.* |
 
 ---
@@ -15563,10 +15528,10 @@ public java.lang.String getContainerLogMaxSizeInput();
 ##### `cpuCfsQuotaInput`<sup>Optional</sup> <a name="cpuCfsQuotaInput" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigKubeletConfigOutputReference.property.cpuCfsQuotaInput"></a>
 
 ```java
-public java.lang.Object getCpuCfsQuotaInput();
+public java.lang.Boolean|IResolvable getCpuCfsQuotaInput();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
@@ -15703,10 +15668,10 @@ public java.lang.Number getPodPidsLimitInput();
 ##### `singleProcessOomKillInput`<sup>Optional</sup> <a name="singleProcessOomKillInput" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigKubeletConfigOutputReference.property.singleProcessOomKillInput"></a>
 
 ```java
-public java.lang.Object getSingleProcessOomKillInput();
+public java.lang.Boolean|IResolvable getSingleProcessOomKillInput();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
@@ -15743,10 +15708,10 @@ public java.lang.String getContainerLogMaxSize();
 ##### `cpuCfsQuota`<sup>Required</sup> <a name="cpuCfsQuota" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigKubeletConfigOutputReference.property.cpuCfsQuota"></a>
 
 ```java
-public java.lang.Object getCpuCfsQuota();
+public java.lang.Boolean|IResolvable getCpuCfsQuota();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
@@ -15853,10 +15818,10 @@ public java.lang.Number getPodPidsLimit();
 ##### `singleProcessOomKill`<sup>Required</sup> <a name="singleProcessOomKill" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigKubeletConfigOutputReference.property.singleProcessOomKill"></a>
 
 ```java
-public java.lang.Object getSingleProcessOomKill();
+public java.lang.Boolean|IResolvable getSingleProcessOomKill();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
@@ -17209,12 +17174,12 @@ public void putGcfsConfig(ContainerNodePoolNodeConfigGcfsConfig value)
 ##### `putGuestAccelerator` <a name="putGuestAccelerator" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigOutputReference.putGuestAccelerator"></a>
 
 ```java
-public void putGuestAccelerator(IResolvable OR java.util.List<ContainerNodePoolNodeConfigGuestAccelerator> value)
+public void putGuestAccelerator(IResolvable|java.util.List<ContainerNodePoolNodeConfigGuestAccelerator> value)
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigOutputReference.putGuestAccelerator.parameter.value"></a>
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigGuestAccelerator">ContainerNodePoolNodeConfigGuestAccelerator</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigGuestAccelerator">ContainerNodePoolNodeConfigGuestAccelerator</a>>
 
 ---
 
@@ -17293,12 +17258,12 @@ public void putReservationAffinity(ContainerNodePoolNodeConfigReservationAffinit
 ##### `putSecondaryBootDisks` <a name="putSecondaryBootDisks" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigOutputReference.putSecondaryBootDisks"></a>
 
 ```java
-public void putSecondaryBootDisks(IResolvable OR java.util.List<ContainerNodePoolNodeConfigSecondaryBootDisks> value)
+public void putSecondaryBootDisks(IResolvable|java.util.List<ContainerNodePoolNodeConfigSecondaryBootDisks> value)
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigOutputReference.putSecondaryBootDisks.parameter.value"></a>
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigSecondaryBootDisks">ContainerNodePoolNodeConfigSecondaryBootDisks</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigSecondaryBootDisks">ContainerNodePoolNodeConfigSecondaryBootDisks</a>>
 
 ---
 
@@ -17329,12 +17294,12 @@ public void putSoleTenantConfig(ContainerNodePoolNodeConfigSoleTenantConfig valu
 ##### `putTaint` <a name="putTaint" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigOutputReference.putTaint"></a>
 
 ```java
-public void putTaint(IResolvable OR java.util.List<ContainerNodePoolNodeConfigTaint> value)
+public void putTaint(IResolvable|java.util.List<ContainerNodePoolNodeConfigTaint> value)
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigOutputReference.putTaint.parameter.value"></a>
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigTaint">ContainerNodePoolNodeConfigTaint</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigTaint">ContainerNodePoolNodeConfigTaint</a>>
 
 ---
 
@@ -17655,12 +17620,12 @@ public void resetWorkloadMetadataConfig()
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigOutputReference.property.containerdConfigInput">containerdConfigInput</a></code> | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigContainerdConfig">ContainerNodePoolNodeConfigContainerdConfig</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigOutputReference.property.diskSizeGbInput">diskSizeGbInput</a></code> | <code>java.lang.Number</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigOutputReference.property.diskTypeInput">diskTypeInput</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigOutputReference.property.enableConfidentialStorageInput">enableConfidentialStorageInput</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigOutputReference.property.enableConfidentialStorageInput">enableConfidentialStorageInput</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigOutputReference.property.ephemeralStorageLocalSsdConfigInput">ephemeralStorageLocalSsdConfigInput</a></code> | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigEphemeralStorageLocalSsdConfig">ContainerNodePoolNodeConfigEphemeralStorageLocalSsdConfig</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigOutputReference.property.fastSocketInput">fastSocketInput</a></code> | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigFastSocket">ContainerNodePoolNodeConfigFastSocket</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigOutputReference.property.flexStartInput">flexStartInput</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigOutputReference.property.flexStartInput">flexStartInput</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigOutputReference.property.gcfsConfigInput">gcfsConfigInput</a></code> | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigGcfsConfig">ContainerNodePoolNodeConfigGcfsConfig</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigOutputReference.property.guestAcceleratorInput">guestAcceleratorInput</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigGuestAccelerator">ContainerNodePoolNodeConfigGuestAccelerator</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigOutputReference.property.guestAcceleratorInput">guestAcceleratorInput</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigGuestAccelerator">ContainerNodePoolNodeConfigGuestAccelerator</a>></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigOutputReference.property.gvnicInput">gvnicInput</a></code> | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigGvnic">ContainerNodePoolNodeConfigGvnic</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigOutputReference.property.hostMaintenancePolicyInput">hostMaintenancePolicyInput</a></code> | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigHostMaintenancePolicy">ContainerNodePoolNodeConfigHostMaintenancePolicy</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigOutputReference.property.imageTypeInput">imageTypeInput</a></code> | <code>java.lang.String</code> | *No description.* |
@@ -17677,25 +17642,25 @@ public void resetWorkloadMetadataConfig()
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigOutputReference.property.minCpuPlatformInput">minCpuPlatformInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigOutputReference.property.nodeGroupInput">nodeGroupInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigOutputReference.property.oauthScopesInput">oauthScopesInput</a></code> | <code>java.util.List<java.lang.String></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigOutputReference.property.preemptibleInput">preemptibleInput</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigOutputReference.property.preemptibleInput">preemptibleInput</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigOutputReference.property.reservationAffinityInput">reservationAffinityInput</a></code> | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigReservationAffinity">ContainerNodePoolNodeConfigReservationAffinity</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigOutputReference.property.resourceLabelsInput">resourceLabelsInput</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigOutputReference.property.resourceManagerTagsInput">resourceManagerTagsInput</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigOutputReference.property.secondaryBootDisksInput">secondaryBootDisksInput</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigSecondaryBootDisks">ContainerNodePoolNodeConfigSecondaryBootDisks</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigOutputReference.property.secondaryBootDisksInput">secondaryBootDisksInput</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigSecondaryBootDisks">ContainerNodePoolNodeConfigSecondaryBootDisks</a>></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigOutputReference.property.serviceAccountInput">serviceAccountInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigOutputReference.property.shieldedInstanceConfigInput">shieldedInstanceConfigInput</a></code> | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigShieldedInstanceConfig">ContainerNodePoolNodeConfigShieldedInstanceConfig</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigOutputReference.property.soleTenantConfigInput">soleTenantConfigInput</a></code> | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigSoleTenantConfig">ContainerNodePoolNodeConfigSoleTenantConfig</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigOutputReference.property.spotInput">spotInput</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigOutputReference.property.spotInput">spotInput</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigOutputReference.property.storagePoolsInput">storagePoolsInput</a></code> | <code>java.util.List<java.lang.String></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigOutputReference.property.tagsInput">tagsInput</a></code> | <code>java.util.List<java.lang.String></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigOutputReference.property.taintInput">taintInput</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigTaint">ContainerNodePoolNodeConfigTaint</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigOutputReference.property.taintInput">taintInput</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigTaint">ContainerNodePoolNodeConfigTaint</a>></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigOutputReference.property.windowsNodeConfigInput">windowsNodeConfigInput</a></code> | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigWindowsNodeConfig">ContainerNodePoolNodeConfigWindowsNodeConfig</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigOutputReference.property.workloadMetadataConfigInput">workloadMetadataConfigInput</a></code> | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigWorkloadMetadataConfig">ContainerNodePoolNodeConfigWorkloadMetadataConfig</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigOutputReference.property.bootDiskKmsKey">bootDiskKmsKey</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigOutputReference.property.diskSizeGb">diskSizeGb</a></code> | <code>java.lang.Number</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigOutputReference.property.diskType">diskType</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigOutputReference.property.enableConfidentialStorage">enableConfidentialStorage</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigOutputReference.property.flexStart">flexStart</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigOutputReference.property.enableConfidentialStorage">enableConfidentialStorage</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigOutputReference.property.flexStart">flexStart</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigOutputReference.property.imageType">imageType</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigOutputReference.property.labels">labels</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigOutputReference.property.localSsdCount">localSsdCount</a></code> | <code>java.lang.Number</code> | *No description.* |
@@ -17707,11 +17672,11 @@ public void resetWorkloadMetadataConfig()
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigOutputReference.property.minCpuPlatform">minCpuPlatform</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigOutputReference.property.nodeGroup">nodeGroup</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigOutputReference.property.oauthScopes">oauthScopes</a></code> | <code>java.util.List<java.lang.String></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigOutputReference.property.preemptible">preemptible</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigOutputReference.property.preemptible">preemptible</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigOutputReference.property.resourceLabels">resourceLabels</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigOutputReference.property.resourceManagerTags">resourceManagerTags</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigOutputReference.property.serviceAccount">serviceAccount</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigOutputReference.property.spot">spot</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigOutputReference.property.spot">spot</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigOutputReference.property.storagePools">storagePools</a></code> | <code>java.util.List<java.lang.String></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigOutputReference.property.tags">tags</a></code> | <code>java.util.List<java.lang.String></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfig">ContainerNodePoolNodeConfig</a></code> | *No description.* |
@@ -18025,10 +17990,10 @@ public java.lang.String getDiskTypeInput();
 ##### `enableConfidentialStorageInput`<sup>Optional</sup> <a name="enableConfidentialStorageInput" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigOutputReference.property.enableConfidentialStorageInput"></a>
 
 ```java
-public java.lang.Object getEnableConfidentialStorageInput();
+public java.lang.Boolean|IResolvable getEnableConfidentialStorageInput();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
@@ -18055,10 +18020,10 @@ public ContainerNodePoolNodeConfigFastSocket getFastSocketInput();
 ##### `flexStartInput`<sup>Optional</sup> <a name="flexStartInput" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigOutputReference.property.flexStartInput"></a>
 
 ```java
-public java.lang.Object getFlexStartInput();
+public java.lang.Boolean|IResolvable getFlexStartInput();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
@@ -18075,10 +18040,10 @@ public ContainerNodePoolNodeConfigGcfsConfig getGcfsConfigInput();
 ##### `guestAcceleratorInput`<sup>Optional</sup> <a name="guestAcceleratorInput" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigOutputReference.property.guestAcceleratorInput"></a>
 
 ```java
-public java.lang.Object getGuestAcceleratorInput();
+public IResolvable|java.util.List<ContainerNodePoolNodeConfigGuestAccelerator> getGuestAcceleratorInput();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigGuestAccelerator">ContainerNodePoolNodeConfigGuestAccelerator</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigGuestAccelerator">ContainerNodePoolNodeConfigGuestAccelerator</a>>
 
 ---
 
@@ -18245,10 +18210,10 @@ public java.util.List<java.lang.String> getOauthScopesInput();
 ##### `preemptibleInput`<sup>Optional</sup> <a name="preemptibleInput" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigOutputReference.property.preemptibleInput"></a>
 
 ```java
-public java.lang.Object getPreemptibleInput();
+public java.lang.Boolean|IResolvable getPreemptibleInput();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
@@ -18285,10 +18250,10 @@ public java.util.Map<java.lang.String, java.lang.String> getResourceManagerTagsI
 ##### `secondaryBootDisksInput`<sup>Optional</sup> <a name="secondaryBootDisksInput" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigOutputReference.property.secondaryBootDisksInput"></a>
 
 ```java
-public java.lang.Object getSecondaryBootDisksInput();
+public IResolvable|java.util.List<ContainerNodePoolNodeConfigSecondaryBootDisks> getSecondaryBootDisksInput();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigSecondaryBootDisks">ContainerNodePoolNodeConfigSecondaryBootDisks</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigSecondaryBootDisks">ContainerNodePoolNodeConfigSecondaryBootDisks</a>>
 
 ---
 
@@ -18325,10 +18290,10 @@ public ContainerNodePoolNodeConfigSoleTenantConfig getSoleTenantConfigInput();
 ##### `spotInput`<sup>Optional</sup> <a name="spotInput" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigOutputReference.property.spotInput"></a>
 
 ```java
-public java.lang.Object getSpotInput();
+public java.lang.Boolean|IResolvable getSpotInput();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
@@ -18355,10 +18320,10 @@ public java.util.List<java.lang.String> getTagsInput();
 ##### `taintInput`<sup>Optional</sup> <a name="taintInput" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigOutputReference.property.taintInput"></a>
 
 ```java
-public java.lang.Object getTaintInput();
+public IResolvable|java.util.List<ContainerNodePoolNodeConfigTaint> getTaintInput();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigTaint">ContainerNodePoolNodeConfigTaint</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigTaint">ContainerNodePoolNodeConfigTaint</a>>
 
 ---
 
@@ -18415,20 +18380,20 @@ public java.lang.String getDiskType();
 ##### `enableConfidentialStorage`<sup>Required</sup> <a name="enableConfidentialStorage" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigOutputReference.property.enableConfidentialStorage"></a>
 
 ```java
-public java.lang.Object getEnableConfidentialStorage();
+public java.lang.Boolean|IResolvable getEnableConfidentialStorage();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
 ##### `flexStart`<sup>Required</sup> <a name="flexStart" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigOutputReference.property.flexStart"></a>
 
 ```java
-public java.lang.Object getFlexStart();
+public java.lang.Boolean|IResolvable getFlexStart();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
@@ -18545,10 +18510,10 @@ public java.util.List<java.lang.String> getOauthScopes();
 ##### `preemptible`<sup>Required</sup> <a name="preemptible" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigOutputReference.property.preemptible"></a>
 
 ```java
-public java.lang.Object getPreemptible();
+public java.lang.Boolean|IResolvable getPreemptible();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
@@ -18585,10 +18550,10 @@ public java.lang.String getServiceAccount();
 ##### `spot`<sup>Required</sup> <a name="spot" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigOutputReference.property.spot"></a>
 
 ```java
-public java.lang.Object getSpot();
+public java.lang.Boolean|IResolvable getSpot();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
@@ -19073,7 +19038,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigSecondaryBootDisksList.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigSecondaryBootDisksList.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigSecondaryBootDisksList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigSecondaryBootDisks">ContainerNodePoolNodeConfigSecondaryBootDisks</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigSecondaryBootDisksList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigSecondaryBootDisks">ContainerNodePoolNodeConfigSecondaryBootDisks</a>></code> | *No description.* |
 
 ---
 
@@ -19104,10 +19069,10 @@ public java.lang.String getFqn();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigSecondaryBootDisksList.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|java.util.List<ContainerNodePoolNodeConfigSecondaryBootDisks> getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigSecondaryBootDisks">ContainerNodePoolNodeConfigSecondaryBootDisks</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigSecondaryBootDisks">ContainerNodePoolNodeConfigSecondaryBootDisks</a>>
 
 ---
 
@@ -19351,7 +19316,7 @@ public void resetMode()
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigSecondaryBootDisksOutputReference.property.modeInput">modeInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigSecondaryBootDisksOutputReference.property.diskImage">diskImage</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigSecondaryBootDisksOutputReference.property.mode">mode</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigSecondaryBootDisksOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigSecondaryBootDisks">ContainerNodePoolNodeConfigSecondaryBootDisks</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigSecondaryBootDisksOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|<a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigSecondaryBootDisks">ContainerNodePoolNodeConfigSecondaryBootDisks</a></code> | *No description.* |
 
 ---
 
@@ -19422,10 +19387,10 @@ public java.lang.String getMode();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigSecondaryBootDisksOutputReference.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|ContainerNodePoolNodeConfigSecondaryBootDisks getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigSecondaryBootDisks">ContainerNodePoolNodeConfigSecondaryBootDisks</a>
+- *Type:* com.hashicorp.cdktf.IResolvable|<a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigSecondaryBootDisks">ContainerNodePoolNodeConfigSecondaryBootDisks</a>
 
 ---
 
@@ -19654,10 +19619,10 @@ public void resetEnableSecureBoot()
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigShieldedInstanceConfigOutputReference.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigShieldedInstanceConfigOutputReference.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigShieldedInstanceConfigOutputReference.property.enableIntegrityMonitoringInput">enableIntegrityMonitoringInput</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigShieldedInstanceConfigOutputReference.property.enableSecureBootInput">enableSecureBootInput</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigShieldedInstanceConfigOutputReference.property.enableIntegrityMonitoring">enableIntegrityMonitoring</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigShieldedInstanceConfigOutputReference.property.enableSecureBoot">enableSecureBoot</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigShieldedInstanceConfigOutputReference.property.enableIntegrityMonitoringInput">enableIntegrityMonitoringInput</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigShieldedInstanceConfigOutputReference.property.enableSecureBootInput">enableSecureBootInput</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigShieldedInstanceConfigOutputReference.property.enableIntegrityMonitoring">enableIntegrityMonitoring</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigShieldedInstanceConfigOutputReference.property.enableSecureBoot">enableSecureBoot</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigShieldedInstanceConfigOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigShieldedInstanceConfig">ContainerNodePoolNodeConfigShieldedInstanceConfig</a></code> | *No description.* |
 
 ---
@@ -19689,40 +19654,40 @@ public java.lang.String getFqn();
 ##### `enableIntegrityMonitoringInput`<sup>Optional</sup> <a name="enableIntegrityMonitoringInput" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigShieldedInstanceConfigOutputReference.property.enableIntegrityMonitoringInput"></a>
 
 ```java
-public java.lang.Object getEnableIntegrityMonitoringInput();
+public java.lang.Boolean|IResolvable getEnableIntegrityMonitoringInput();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
 ##### `enableSecureBootInput`<sup>Optional</sup> <a name="enableSecureBootInput" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigShieldedInstanceConfigOutputReference.property.enableSecureBootInput"></a>
 
 ```java
-public java.lang.Object getEnableSecureBootInput();
+public java.lang.Boolean|IResolvable getEnableSecureBootInput();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
 ##### `enableIntegrityMonitoring`<sup>Required</sup> <a name="enableIntegrityMonitoring" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigShieldedInstanceConfigOutputReference.property.enableIntegrityMonitoring"></a>
 
 ```java
-public java.lang.Object getEnableIntegrityMonitoring();
+public java.lang.Boolean|IResolvable getEnableIntegrityMonitoring();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
 ##### `enableSecureBoot`<sup>Required</sup> <a name="enableSecureBoot" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigShieldedInstanceConfigOutputReference.property.enableSecureBoot"></a>
 
 ```java
-public java.lang.Object getEnableSecureBoot();
+public java.lang.Boolean|IResolvable getEnableSecureBoot();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
@@ -19858,7 +19823,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigSoleTenantConfigNodeAffinityList.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigSoleTenantConfigNodeAffinityList.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigSoleTenantConfigNodeAffinityList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigSoleTenantConfigNodeAffinity">ContainerNodePoolNodeConfigSoleTenantConfigNodeAffinity</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigSoleTenantConfigNodeAffinityList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigSoleTenantConfigNodeAffinity">ContainerNodePoolNodeConfigSoleTenantConfigNodeAffinity</a>></code> | *No description.* |
 
 ---
 
@@ -19889,10 +19854,10 @@ public java.lang.String getFqn();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigSoleTenantConfigNodeAffinityList.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|java.util.List<ContainerNodePoolNodeConfigSoleTenantConfigNodeAffinity> getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigSoleTenantConfigNodeAffinity">ContainerNodePoolNodeConfigSoleTenantConfigNodeAffinity</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigSoleTenantConfigNodeAffinity">ContainerNodePoolNodeConfigSoleTenantConfigNodeAffinity</a>>
 
 ---
 
@@ -20131,7 +20096,7 @@ Returns a reversible string representation.
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigSoleTenantConfigNodeAffinityOutputReference.property.key">key</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigSoleTenantConfigNodeAffinityOutputReference.property.operator">operator</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigSoleTenantConfigNodeAffinityOutputReference.property.values">values</a></code> | <code>java.util.List<java.lang.String></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigSoleTenantConfigNodeAffinityOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigSoleTenantConfigNodeAffinity">ContainerNodePoolNodeConfigSoleTenantConfigNodeAffinity</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigSoleTenantConfigNodeAffinityOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|<a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigSoleTenantConfigNodeAffinity">ContainerNodePoolNodeConfigSoleTenantConfigNodeAffinity</a></code> | *No description.* |
 
 ---
 
@@ -20222,10 +20187,10 @@ public java.util.List<java.lang.String> getValues();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigSoleTenantConfigNodeAffinityOutputReference.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|ContainerNodePoolNodeConfigSoleTenantConfigNodeAffinity getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigSoleTenantConfigNodeAffinity">ContainerNodePoolNodeConfigSoleTenantConfigNodeAffinity</a>
+- *Type:* com.hashicorp.cdktf.IResolvable|<a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigSoleTenantConfigNodeAffinity">ContainerNodePoolNodeConfigSoleTenantConfigNodeAffinity</a>
 
 ---
 
@@ -20438,12 +20403,12 @@ Returns a reversible string representation.
 ##### `putNodeAffinity` <a name="putNodeAffinity" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigSoleTenantConfigOutputReference.putNodeAffinity"></a>
 
 ```java
-public void putNodeAffinity(IResolvable OR java.util.List<ContainerNodePoolNodeConfigSoleTenantConfigNodeAffinity> value)
+public void putNodeAffinity(IResolvable|java.util.List<ContainerNodePoolNodeConfigSoleTenantConfigNodeAffinity> value)
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigSoleTenantConfigOutputReference.putNodeAffinity.parameter.value"></a>
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigSoleTenantConfigNodeAffinity">ContainerNodePoolNodeConfigSoleTenantConfigNodeAffinity</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigSoleTenantConfigNodeAffinity">ContainerNodePoolNodeConfigSoleTenantConfigNodeAffinity</a>>
 
 ---
 
@@ -20462,7 +20427,7 @@ public void resetMinNodeCpus()
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigSoleTenantConfigOutputReference.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigSoleTenantConfigOutputReference.property.nodeAffinity">nodeAffinity</a></code> | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigSoleTenantConfigNodeAffinityList">ContainerNodePoolNodeConfigSoleTenantConfigNodeAffinityList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigSoleTenantConfigOutputReference.property.minNodeCpusInput">minNodeCpusInput</a></code> | <code>java.lang.Number</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigSoleTenantConfigOutputReference.property.nodeAffinityInput">nodeAffinityInput</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigSoleTenantConfigNodeAffinity">ContainerNodePoolNodeConfigSoleTenantConfigNodeAffinity</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigSoleTenantConfigOutputReference.property.nodeAffinityInput">nodeAffinityInput</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigSoleTenantConfigNodeAffinity">ContainerNodePoolNodeConfigSoleTenantConfigNodeAffinity</a>></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigSoleTenantConfigOutputReference.property.minNodeCpus">minNodeCpus</a></code> | <code>java.lang.Number</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigSoleTenantConfigOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigSoleTenantConfig">ContainerNodePoolNodeConfigSoleTenantConfig</a></code> | *No description.* |
 
@@ -20515,10 +20480,10 @@ public java.lang.Number getMinNodeCpusInput();
 ##### `nodeAffinityInput`<sup>Optional</sup> <a name="nodeAffinityInput" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigSoleTenantConfigOutputReference.property.nodeAffinityInput"></a>
 
 ```java
-public java.lang.Object getNodeAffinityInput();
+public IResolvable|java.util.List<ContainerNodePoolNodeConfigSoleTenantConfigNodeAffinity> getNodeAffinityInput();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigSoleTenantConfigNodeAffinity">ContainerNodePoolNodeConfigSoleTenantConfigNodeAffinity</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigSoleTenantConfigNodeAffinity">ContainerNodePoolNodeConfigSoleTenantConfigNodeAffinity</a>>
 
 ---
 
@@ -20664,7 +20629,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigTaintList.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigTaintList.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigTaintList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigTaint">ContainerNodePoolNodeConfigTaint</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigTaintList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigTaint">ContainerNodePoolNodeConfigTaint</a>></code> | *No description.* |
 
 ---
 
@@ -20695,10 +20660,10 @@ public java.lang.String getFqn();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigTaintList.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|java.util.List<ContainerNodePoolNodeConfigTaint> getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigTaint">ContainerNodePoolNodeConfigTaint</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigTaint">ContainerNodePoolNodeConfigTaint</a>>
 
 ---
 
@@ -20937,7 +20902,7 @@ Returns a reversible string representation.
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigTaintOutputReference.property.effect">effect</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigTaintOutputReference.property.key">key</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigTaintOutputReference.property.value">value</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigTaintOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigTaint">ContainerNodePoolNodeConfigTaint</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigTaintOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|<a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigTaint">ContainerNodePoolNodeConfigTaint</a></code> | *No description.* |
 
 ---
 
@@ -21028,10 +20993,10 @@ public java.lang.String getValue();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigTaintOutputReference.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|ContainerNodePoolNodeConfigTaint getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigTaint">ContainerNodePoolNodeConfigTaint</a>
+- *Type:* com.hashicorp.cdktf.IResolvable|<a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigTaint">ContainerNodePoolNodeConfigTaint</a>
 
 ---
 
@@ -22124,8 +22089,8 @@ Returns a reversible string representation.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolQueuedProvisioningOutputReference.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolQueuedProvisioningOutputReference.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolQueuedProvisioningOutputReference.property.enabledInput">enabledInput</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolQueuedProvisioningOutputReference.property.enabled">enabled</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolQueuedProvisioningOutputReference.property.enabledInput">enabledInput</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolQueuedProvisioningOutputReference.property.enabled">enabled</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolQueuedProvisioningOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolQueuedProvisioning">ContainerNodePoolQueuedProvisioning</a></code> | *No description.* |
 
 ---
@@ -22157,20 +22122,20 @@ public java.lang.String getFqn();
 ##### `enabledInput`<sup>Optional</sup> <a name="enabledInput" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolQueuedProvisioningOutputReference.property.enabledInput"></a>
 
 ```java
-public java.lang.Object getEnabledInput();
+public java.lang.Boolean|IResolvable getEnabledInput();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
 ##### `enabled`<sup>Required</sup> <a name="enabled" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolQueuedProvisioningOutputReference.property.enabled"></a>
 
 ```java
-public java.lang.Object getEnabled();
+public java.lang.Boolean|IResolvable getEnabled();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
@@ -22422,7 +22387,7 @@ public void resetUpdate()
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolTimeoutsOutputReference.property.create">create</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolTimeoutsOutputReference.property.delete">delete</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolTimeoutsOutputReference.property.update">update</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolTimeouts">ContainerNodePoolTimeouts</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|<a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolTimeouts">ContainerNodePoolTimeouts</a></code> | *No description.* |
 
 ---
 
@@ -22513,10 +22478,10 @@ public java.lang.String getUpdate();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolTimeoutsOutputReference.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|ContainerNodePoolTimeouts getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolTimeouts">ContainerNodePoolTimeouts</a>
+- *Type:* com.hashicorp.cdktf.IResolvable|<a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolTimeouts">ContainerNodePoolTimeouts</a>
 
 ---
 

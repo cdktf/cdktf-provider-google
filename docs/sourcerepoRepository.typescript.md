@@ -710,7 +710,7 @@ public readonly provider: TerraformProvider;
 ##### `provisioners`<sup>Optional</sup> <a name="provisioners" id="@cdktf/provider-google.sourcerepoRepository.SourcerepoRepository.property.provisioners"></a>
 
 ```typescript
-public readonly provisioners: FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner[];
+public readonly provisioners: (FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner)[];
 ```
 
 - *Type:* cdktf.FileProvisioner | cdktf.LocalExecProvisioner | cdktf.RemoteExecProvisioner[]
@@ -970,7 +970,7 @@ public readonly provider: TerraformProvider;
 ##### `provisioners`<sup>Optional</sup> <a name="provisioners" id="@cdktf/provider-google.sourcerepoRepository.SourcerepoRepositoryConfig.property.provisioners"></a>
 
 ```typescript
-public readonly provisioners: FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner[];
+public readonly provisioners: (FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner)[];
 ```
 
 - *Type:* cdktf.FileProvisioner | cdktf.LocalExecProvisioner | cdktf.RemoteExecProvisioner[]

@@ -14,13 +14,13 @@ from cdktf_cdktf_provider_google import bigquery_job
 bigqueryJob.BigqueryJob(
   scope: Construct,
   id: str,
-  connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection] = None,
-  count: typing.Union[typing.Union[int, float], TerraformCount] = None,
+  connection: SSHProvisionerConnection | WinrmProvisionerConnection = None,
+  count: typing.Union[int, float] | TerraformCount = None,
   depends_on: typing.List[ITerraformDependable] = None,
   for_each: ITerraformIterator = None,
   lifecycle: TerraformResourceLifecycle = None,
   provider: TerraformProvider = None,
-  provisioners: typing.List[typing.Union[FileProvisioner, LocalExecProvisioner, RemoteExecProvisioner]] = None,
+  provisioners: typing.List[FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner] = None,
   job_id: str,
   copy: BigqueryJobCopy = None,
   extract: BigqueryJobExtract = None,
@@ -39,13 +39,13 @@ bigqueryJob.BigqueryJob(
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJob.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | The scope in which to define this construct. |
 | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJob.Initializer.parameter.id">id</a></code> | <code>str</code> | The scoped construct ID. |
-| <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJob.Initializer.parameter.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJob.Initializer.parameter.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJob.Initializer.parameter.connection">connection</a></code> | <code>cdktf.SSHProvisionerConnection \| cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJob.Initializer.parameter.count">count</a></code> | <code>typing.Union[int, float] \| cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJob.Initializer.parameter.dependsOn">depends_on</a></code> | <code>typing.List[cdktf.ITerraformDependable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJob.Initializer.parameter.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJob.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJob.Initializer.parameter.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJob.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJob.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJob.Initializer.parameter.jobId">job_id</a></code> | <code>str</code> | The ID of the job. |
 | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJob.Initializer.parameter.copy">copy</a></code> | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobCopy">BigqueryJobCopy</a></code> | copy block. |
 | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJob.Initializer.parameter.extract">extract</a></code> | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobExtract">BigqueryJobExtract</a></code> | extract block. |
@@ -80,13 +80,13 @@ Must be unique amongst siblings in the same scope
 
 ##### `connection`<sup>Optional</sup> <a name="connection" id="@cdktf/provider-google.bigqueryJob.BigqueryJob.Initializer.parameter.connection"></a>
 
-- *Type:* typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]
+- *Type:* cdktf.SSHProvisionerConnection | cdktf.WinrmProvisionerConnection
 
 ---
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.bigqueryJob.BigqueryJob.Initializer.parameter.count"></a>
 
-- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
+- *Type:* typing.Union[int, float] | cdktf.TerraformCount
 
 ---
 
@@ -116,7 +116,7 @@ Must be unique amongst siblings in the same scope
 
 ##### `provisioners`<sup>Optional</sup> <a name="provisioners" id="@cdktf/provider-google.bigqueryJob.BigqueryJob.Initializer.parameter.provisioners"></a>
 
-- *Type:* typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]
+- *Type:* typing.List[cdktf.FileProvisioner | cdktf.LocalExecProvisioner | cdktf.RemoteExecProvisioner]
 
 ---
 
@@ -501,7 +501,7 @@ def get_string_map_attribute(
 ##### `has_resource_move` <a name="has_resource_move" id="@cdktf/provider-google.bigqueryJob.BigqueryJob.hasResourceMove"></a>
 
 ```python
-def has_resource_move() -> typing.Union[TerraformResourceMoveByTarget, TerraformResourceMoveById]
+def has_resource_move() -> TerraformResourceMoveByTarget | TerraformResourceMoveById
 ```
 
 ##### `import_from` <a name="import_from" id="@cdktf/provider-google.bigqueryJob.BigqueryJob.importFrom"></a>
@@ -564,7 +564,7 @@ Full id of resource being moved from, e.g. "aws_s3_bucket.example".
 ```python
 def move_to(
   move_target: str,
-  index: typing.Union[str, typing.Union[int, float]] = None
+  index: str | typing.Union[int, float] = None
 ) -> None
 ```
 
@@ -580,7 +580,7 @@ The previously set user defined string set by .addMoveTarget() corresponding to 
 
 ###### `index`<sup>Optional</sup> <a name="index" id="@cdktf/provider-google.bigqueryJob.BigqueryJob.moveTo.parameter.index"></a>
 
-- *Type:* typing.Union[str, typing.Union[int, float]]
+- *Type:* str | typing.Union[int, float]
 
 Optional The index corresponding to the key the resource is to appear in the foreach of a resource to move to.
 
@@ -608,7 +608,7 @@ Full id of resource to move to, e.g. "aws_s3_bucket.example".
 
 ```python
 def put_copy(
-  source_tables: typing.Union[IResolvable, typing.List[BigqueryJobCopySourceTables]],
+  source_tables: IResolvable | typing.List[BigqueryJobCopySourceTables],
   create_disposition: str = None,
   destination_encryption_configuration: BigqueryJobCopyDestinationEncryptionConfiguration = None,
   destination_table: BigqueryJobCopyDestinationTable = None,
@@ -618,7 +618,7 @@ def put_copy(
 
 ###### `source_tables`<sup>Required</sup> <a name="source_tables" id="@cdktf/provider-google.bigqueryJob.BigqueryJob.putCopy.parameter.sourceTables"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobCopySourceTables">BigqueryJobCopySourceTables</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobCopySourceTables">BigqueryJobCopySourceTables</a>]
 
 source_tables block.
 
@@ -686,10 +686,10 @@ def put_extract(
   compression: str = None,
   destination_format: str = None,
   field_delimiter: str = None,
-  print_header: typing.Union[bool, IResolvable] = None,
+  print_header: bool | IResolvable = None,
   source_model: BigqueryJobExtractSourceModel = None,
   source_table: BigqueryJobExtractSourceTable = None,
-  use_avro_logical_types: typing.Union[bool, IResolvable] = None
+  use_avro_logical_types: bool | IResolvable = None
 ) -> None
 ```
 
@@ -744,7 +744,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `print_header`<sup>Optional</sup> <a name="print_header" id="@cdktf/provider-google.bigqueryJob.BigqueryJob.putExtract.parameter.printHeader"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Whether to print out a header row in the results. Default is true.
 
@@ -774,7 +774,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `use_avro_logical_types`<sup>Optional</sup> <a name="use_avro_logical_types" id="@cdktf/provider-google.bigqueryJob.BigqueryJob.putExtract.parameter.useAvroLogicalTypes"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Whether to use logical types when extracting to AVRO format.
 
@@ -788,14 +788,14 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 def put_load(
   destination_table: BigqueryJobLoadDestinationTable,
   source_uris: typing.List[str],
-  allow_jagged_rows: typing.Union[bool, IResolvable] = None,
-  allow_quoted_newlines: typing.Union[bool, IResolvable] = None,
-  autodetect: typing.Union[bool, IResolvable] = None,
+  allow_jagged_rows: bool | IResolvable = None,
+  allow_quoted_newlines: bool | IResolvable = None,
+  autodetect: bool | IResolvable = None,
   create_disposition: str = None,
   destination_encryption_configuration: BigqueryJobLoadDestinationEncryptionConfiguration = None,
   encoding: str = None,
   field_delimiter: str = None,
-  ignore_unknown_values: typing.Union[bool, IResolvable] = None,
+  ignore_unknown_values: bool | IResolvable = None,
   json_extension: str = None,
   max_bad_records: typing.Union[int, float] = None,
   null_marker: str = None,
@@ -838,7 +838,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `allow_jagged_rows`<sup>Optional</sup> <a name="allow_jagged_rows" id="@cdktf/provider-google.bigqueryJob.BigqueryJob.putLoad.parameter.allowJaggedRows"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Accept rows that are missing trailing optional columns.
 
@@ -852,7 +852,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `allow_quoted_newlines`<sup>Optional</sup> <a name="allow_quoted_newlines" id="@cdktf/provider-google.bigqueryJob.BigqueryJob.putLoad.parameter.allowQuotedNewlines"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Indicates if BigQuery should allow quoted data sections that contain newline characters in a CSV file.
 
@@ -864,7 +864,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `autodetect`<sup>Optional</sup> <a name="autodetect" id="@cdktf/provider-google.bigqueryJob.BigqueryJob.putLoad.parameter.autodetect"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Indicates if we should automatically infer the options and schema for CSV and JSON sources.
 
@@ -929,7 +929,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `ignore_unknown_values`<sup>Optional</sup> <a name="ignore_unknown_values" id="@cdktf/provider-google.bigqueryJob.BigqueryJob.putLoad.parameter.ignoreUnknownValues"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Indicates if BigQuery should allow extra values that are not represented in the table schema.
 
@@ -1103,21 +1103,21 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ```python
 def put_query(
   query: str,
-  allow_large_results: typing.Union[bool, IResolvable] = None,
+  allow_large_results: bool | IResolvable = None,
   create_disposition: str = None,
   default_dataset: BigqueryJobQueryDefaultDataset = None,
   destination_encryption_configuration: BigqueryJobQueryDestinationEncryptionConfiguration = None,
   destination_table: BigqueryJobQueryDestinationTable = None,
-  flatten_results: typing.Union[bool, IResolvable] = None,
+  flatten_results: bool | IResolvable = None,
   maximum_billing_tier: typing.Union[int, float] = None,
   maximum_bytes_billed: str = None,
   parameter_mode: str = None,
   priority: str = None,
   schema_update_options: typing.List[str] = None,
   script_options: BigqueryJobQueryScriptOptions = None,
-  use_legacy_sql: typing.Union[bool, IResolvable] = None,
-  use_query_cache: typing.Union[bool, IResolvable] = None,
-  user_defined_function_resources: typing.Union[IResolvable, typing.List[BigqueryJobQueryUserDefinedFunctionResources]] = None,
+  use_legacy_sql: bool | IResolvable = None,
+  use_query_cache: bool | IResolvable = None,
+  user_defined_function_resources: IResolvable | typing.List[BigqueryJobQueryUserDefinedFunctionResources] = None,
   write_disposition: str = None
 ) -> None
 ```
@@ -1138,7 +1138,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `allow_large_results`<sup>Optional</sup> <a name="allow_large_results" id="@cdktf/provider-google.bigqueryJob.BigqueryJob.putQuery.parameter.allowLargeResults"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 If true and query uses legacy SQL dialect, allows the query to produce arbitrarily large result tables at a slight cost in performance.
 
@@ -1196,7 +1196,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `flatten_results`<sup>Optional</sup> <a name="flatten_results" id="@cdktf/provider-google.bigqueryJob.BigqueryJob.putQuery.parameter.flattenResults"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 If true and query uses legacy SQL dialect, flattens all nested and repeated fields in the query results.
 
@@ -1283,7 +1283,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `use_legacy_sql`<sup>Optional</sup> <a name="use_legacy_sql" id="@cdktf/provider-google.bigqueryJob.BigqueryJob.putQuery.parameter.useLegacySql"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Specifies whether to use BigQuery's legacy SQL dialect for this query.
 
@@ -1296,7 +1296,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `use_query_cache`<sup>Optional</sup> <a name="use_query_cache" id="@cdktf/provider-google.bigqueryJob.BigqueryJob.putQuery.parameter.useQueryCache"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Whether to look for the result in the query cache.
 
@@ -1310,7 +1310,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `user_defined_function_resources`<sup>Optional</sup> <a name="user_defined_function_resources" id="@cdktf/provider-google.bigqueryJob.BigqueryJob.putQuery.parameter.userDefinedFunctionResources"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobQueryUserDefinedFunctionResources">BigqueryJobQueryUserDefinedFunctionResources</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobQueryUserDefinedFunctionResources">BigqueryJobQueryUserDefinedFunctionResources</a>]
 
 user_defined_function_resources block.
 
@@ -1566,13 +1566,13 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.5
 | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJob.property.terraformMetaArguments">terraform_meta_arguments</a></code> | <code>typing.Mapping[typing.Any]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJob.property.terraformResourceType">terraform_resource_type</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJob.property.terraformGeneratorMetadata">terraform_generator_metadata</a></code> | <code>cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJob.property.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJob.property.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJob.property.connection">connection</a></code> | <code>cdktf.SSHProvisionerConnection \| cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJob.property.count">count</a></code> | <code>typing.Union[int, float] \| cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJob.property.dependsOn">depends_on</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJob.property.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJob.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJob.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJob.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJob.property.provisioners">provisioners</a></code> | <code>typing.List[cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJob.property.copy">copy</a></code> | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobCopyOutputReference">BigqueryJobCopyOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJob.property.effectiveLabels">effective_labels</a></code> | <code>cdktf.StringMap</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJob.property.extract">extract</a></code> | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobExtractOutputReference">BigqueryJobExtractOutputReference</a></code> | *No description.* |
@@ -1593,7 +1593,7 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.5
 | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJob.property.locationInput">location_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJob.property.projectInput">project_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJob.property.queryInput">query_input</a></code> | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobQuery">BigqueryJobQuery</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJob.property.timeoutsInput">timeouts_input</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobTimeouts">BigqueryJobTimeouts</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJob.property.timeoutsInput">timeouts_input</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobTimeouts">BigqueryJobTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJob.property.id">id</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJob.property.jobId">job_id</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJob.property.jobTimeoutMs">job_timeout_ms</a></code> | <code>str</code> | *No description.* |
@@ -1678,20 +1678,20 @@ terraform_generator_metadata: TerraformProviderGeneratorMetadata
 ##### `connection`<sup>Optional</sup> <a name="connection" id="@cdktf/provider-google.bigqueryJob.BigqueryJob.property.connection"></a>
 
 ```python
-connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection]
+connection: SSHProvisionerConnection | WinrmProvisionerConnection
 ```
 
-- *Type:* typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]
+- *Type:* cdktf.SSHProvisionerConnection | cdktf.WinrmProvisionerConnection
 
 ---
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.bigqueryJob.BigqueryJob.property.count"></a>
 
 ```python
-count: typing.Union[typing.Union[int, float], TerraformCount]
+count: typing.Union[int, float] | TerraformCount
 ```
 
-- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
+- *Type:* typing.Union[int, float] | cdktf.TerraformCount
 
 ---
 
@@ -1738,10 +1738,10 @@ provider: TerraformProvider
 ##### `provisioners`<sup>Optional</sup> <a name="provisioners" id="@cdktf/provider-google.bigqueryJob.BigqueryJob.property.provisioners"></a>
 
 ```python
-provisioners: typing.List[typing.Union[FileProvisioner, LocalExecProvisioner, RemoteExecProvisioner]]
+provisioners: typing.List[FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner]
 ```
 
-- *Type:* typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]
+- *Type:* typing.List[cdktf.FileProvisioner | cdktf.LocalExecProvisioner | cdktf.RemoteExecProvisioner]
 
 ---
 
@@ -1948,10 +1948,10 @@ query_input: BigqueryJobQuery
 ##### `timeouts_input`<sup>Optional</sup> <a name="timeouts_input" id="@cdktf/provider-google.bigqueryJob.BigqueryJob.property.timeoutsInput"></a>
 
 ```python
-timeouts_input: typing.Union[IResolvable, BigqueryJobTimeouts]
+timeouts_input: IResolvable | BigqueryJobTimeouts
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobTimeouts">BigqueryJobTimeouts</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobTimeouts">BigqueryJobTimeouts</a>
 
 ---
 
@@ -2043,13 +2043,13 @@ tfResourceType: str
 from cdktf_cdktf_provider_google import bigquery_job
 
 bigqueryJob.BigqueryJobConfig(
-  connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection] = None,
-  count: typing.Union[typing.Union[int, float], TerraformCount] = None,
+  connection: SSHProvisionerConnection | WinrmProvisionerConnection = None,
+  count: typing.Union[int, float] | TerraformCount = None,
   depends_on: typing.List[ITerraformDependable] = None,
   for_each: ITerraformIterator = None,
   lifecycle: TerraformResourceLifecycle = None,
   provider: TerraformProvider = None,
-  provisioners: typing.List[typing.Union[FileProvisioner, LocalExecProvisioner, RemoteExecProvisioner]] = None,
+  provisioners: typing.List[FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner] = None,
   job_id: str,
   copy: BigqueryJobCopy = None,
   extract: BigqueryJobExtract = None,
@@ -2068,13 +2068,13 @@ bigqueryJob.BigqueryJobConfig(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobConfig.property.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobConfig.property.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobConfig.property.connection">connection</a></code> | <code>cdktf.SSHProvisionerConnection \| cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobConfig.property.count">count</a></code> | <code>typing.Union[int, float] \| cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobConfig.property.dependsOn">depends_on</a></code> | <code>typing.List[cdktf.ITerraformDependable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobConfig.property.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobConfig.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobConfig.property.provisioners">provisioners</a></code> | <code>typing.List[cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobConfig.property.jobId">job_id</a></code> | <code>str</code> | The ID of the job. |
 | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobConfig.property.copy">copy</a></code> | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobCopy">BigqueryJobCopy</a></code> | copy block. |
 | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobConfig.property.extract">extract</a></code> | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobExtract">BigqueryJobExtract</a></code> | extract block. |
@@ -2092,20 +2092,20 @@ bigqueryJob.BigqueryJobConfig(
 ##### `connection`<sup>Optional</sup> <a name="connection" id="@cdktf/provider-google.bigqueryJob.BigqueryJobConfig.property.connection"></a>
 
 ```python
-connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection]
+connection: SSHProvisionerConnection | WinrmProvisionerConnection
 ```
 
-- *Type:* typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]
+- *Type:* cdktf.SSHProvisionerConnection | cdktf.WinrmProvisionerConnection
 
 ---
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.bigqueryJob.BigqueryJobConfig.property.count"></a>
 
 ```python
-count: typing.Union[typing.Union[int, float], TerraformCount]
+count: typing.Union[int, float] | TerraformCount
 ```
 
-- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
+- *Type:* typing.Union[int, float] | cdktf.TerraformCount
 
 ---
 
@@ -2152,10 +2152,10 @@ provider: TerraformProvider
 ##### `provisioners`<sup>Optional</sup> <a name="provisioners" id="@cdktf/provider-google.bigqueryJob.BigqueryJobConfig.property.provisioners"></a>
 
 ```python
-provisioners: typing.List[typing.Union[FileProvisioner, LocalExecProvisioner, RemoteExecProvisioner]]
+provisioners: typing.List[FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner]
 ```
 
-- *Type:* typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]
+- *Type:* typing.List[cdktf.FileProvisioner | cdktf.LocalExecProvisioner | cdktf.RemoteExecProvisioner]
 
 ---
 
@@ -2325,7 +2325,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 from cdktf_cdktf_provider_google import bigquery_job
 
 bigqueryJob.BigqueryJobCopy(
-  source_tables: typing.Union[IResolvable, typing.List[BigqueryJobCopySourceTables]],
+  source_tables: IResolvable | typing.List[BigqueryJobCopySourceTables],
   create_disposition: str = None,
   destination_encryption_configuration: BigqueryJobCopyDestinationEncryptionConfiguration = None,
   destination_table: BigqueryJobCopyDestinationTable = None,
@@ -2337,7 +2337,7 @@ bigqueryJob.BigqueryJobCopy(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobCopy.property.sourceTables">source_tables</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobCopySourceTables">BigqueryJobCopySourceTables</a>]]</code> | source_tables block. |
+| <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobCopy.property.sourceTables">source_tables</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobCopySourceTables">BigqueryJobCopySourceTables</a>]</code> | source_tables block. |
 | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobCopy.property.createDisposition">create_disposition</a></code> | <code>str</code> | Specifies whether the job is allowed to create new tables. |
 | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobCopy.property.destinationEncryptionConfiguration">destination_encryption_configuration</a></code> | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobCopyDestinationEncryptionConfiguration">BigqueryJobCopyDestinationEncryptionConfiguration</a></code> | destination_encryption_configuration block. |
 | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobCopy.property.destinationTable">destination_table</a></code> | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobCopyDestinationTable">BigqueryJobCopyDestinationTable</a></code> | destination_table block. |
@@ -2348,10 +2348,10 @@ bigqueryJob.BigqueryJobCopy(
 ##### `source_tables`<sup>Required</sup> <a name="source_tables" id="@cdktf/provider-google.bigqueryJob.BigqueryJobCopy.property.sourceTables"></a>
 
 ```python
-source_tables: typing.Union[IResolvable, typing.List[BigqueryJobCopySourceTables]]
+source_tables: IResolvable | typing.List[BigqueryJobCopySourceTables]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobCopySourceTables">BigqueryJobCopySourceTables</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobCopySourceTables">BigqueryJobCopySourceTables</a>]
 
 source_tables block.
 
@@ -2607,10 +2607,10 @@ bigqueryJob.BigqueryJobExtract(
   compression: str = None,
   destination_format: str = None,
   field_delimiter: str = None,
-  print_header: typing.Union[bool, IResolvable] = None,
+  print_header: bool | IResolvable = None,
   source_model: BigqueryJobExtractSourceModel = None,
   source_table: BigqueryJobExtractSourceTable = None,
-  use_avro_logical_types: typing.Union[bool, IResolvable] = None
+  use_avro_logical_types: bool | IResolvable = None
 )
 ```
 
@@ -2622,10 +2622,10 @@ bigqueryJob.BigqueryJobExtract(
 | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobExtract.property.compression">compression</a></code> | <code>str</code> | The compression type to use for exported files. |
 | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobExtract.property.destinationFormat">destination_format</a></code> | <code>str</code> | The exported file format. |
 | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobExtract.property.fieldDelimiter">field_delimiter</a></code> | <code>str</code> | When extracting data in CSV format, this defines the delimiter to use between fields in the exported data. |
-| <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobExtract.property.printHeader">print_header</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Whether to print out a header row in the results. Default is true. |
+| <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobExtract.property.printHeader">print_header</a></code> | <code>bool \| cdktf.IResolvable</code> | Whether to print out a header row in the results. Default is true. |
 | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobExtract.property.sourceModel">source_model</a></code> | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobExtractSourceModel">BigqueryJobExtractSourceModel</a></code> | source_model block. |
 | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobExtract.property.sourceTable">source_table</a></code> | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobExtractSourceTable">BigqueryJobExtractSourceTable</a></code> | source_table block. |
-| <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobExtract.property.useAvroLogicalTypes">use_avro_logical_types</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Whether to use logical types when extracting to AVRO format. |
+| <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobExtract.property.useAvroLogicalTypes">use_avro_logical_types</a></code> | <code>bool \| cdktf.IResolvable</code> | Whether to use logical types when extracting to AVRO format. |
 
 ---
 
@@ -2697,10 +2697,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `print_header`<sup>Optional</sup> <a name="print_header" id="@cdktf/provider-google.bigqueryJob.BigqueryJobExtract.property.printHeader"></a>
 
 ```python
-print_header: typing.Union[bool, IResolvable]
+print_header: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Whether to print out a header row in the results. Default is true.
 
@@ -2739,10 +2739,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `use_avro_logical_types`<sup>Optional</sup> <a name="use_avro_logical_types" id="@cdktf/provider-google.bigqueryJob.BigqueryJobExtract.property.useAvroLogicalTypes"></a>
 
 ```python
-use_avro_logical_types: typing.Union[bool, IResolvable]
+use_avro_logical_types: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Whether to use logical types when extracting to AVRO format.
 
@@ -2892,14 +2892,14 @@ from cdktf_cdktf_provider_google import bigquery_job
 bigqueryJob.BigqueryJobLoad(
   destination_table: BigqueryJobLoadDestinationTable,
   source_uris: typing.List[str],
-  allow_jagged_rows: typing.Union[bool, IResolvable] = None,
-  allow_quoted_newlines: typing.Union[bool, IResolvable] = None,
-  autodetect: typing.Union[bool, IResolvable] = None,
+  allow_jagged_rows: bool | IResolvable = None,
+  allow_quoted_newlines: bool | IResolvable = None,
+  autodetect: bool | IResolvable = None,
   create_disposition: str = None,
   destination_encryption_configuration: BigqueryJobLoadDestinationEncryptionConfiguration = None,
   encoding: str = None,
   field_delimiter: str = None,
-  ignore_unknown_values: typing.Union[bool, IResolvable] = None,
+  ignore_unknown_values: bool | IResolvable = None,
   json_extension: str = None,
   max_bad_records: typing.Union[int, float] = None,
   null_marker: str = None,
@@ -2920,14 +2920,14 @@ bigqueryJob.BigqueryJobLoad(
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobLoad.property.destinationTable">destination_table</a></code> | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobLoadDestinationTable">BigqueryJobLoadDestinationTable</a></code> | destination_table block. |
 | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobLoad.property.sourceUris">source_uris</a></code> | <code>typing.List[str]</code> | The fully-qualified URIs that point to your data in Google Cloud. |
-| <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobLoad.property.allowJaggedRows">allow_jagged_rows</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Accept rows that are missing trailing optional columns. |
-| <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobLoad.property.allowQuotedNewlines">allow_quoted_newlines</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Indicates if BigQuery should allow quoted data sections that contain newline characters in a CSV file. |
-| <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobLoad.property.autodetect">autodetect</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Indicates if we should automatically infer the options and schema for CSV and JSON sources. |
+| <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobLoad.property.allowJaggedRows">allow_jagged_rows</a></code> | <code>bool \| cdktf.IResolvable</code> | Accept rows that are missing trailing optional columns. |
+| <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobLoad.property.allowQuotedNewlines">allow_quoted_newlines</a></code> | <code>bool \| cdktf.IResolvable</code> | Indicates if BigQuery should allow quoted data sections that contain newline characters in a CSV file. |
+| <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobLoad.property.autodetect">autodetect</a></code> | <code>bool \| cdktf.IResolvable</code> | Indicates if we should automatically infer the options and schema for CSV and JSON sources. |
 | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobLoad.property.createDisposition">create_disposition</a></code> | <code>str</code> | Specifies whether the job is allowed to create new tables. |
 | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobLoad.property.destinationEncryptionConfiguration">destination_encryption_configuration</a></code> | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobLoadDestinationEncryptionConfiguration">BigqueryJobLoadDestinationEncryptionConfiguration</a></code> | destination_encryption_configuration block. |
 | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobLoad.property.encoding">encoding</a></code> | <code>str</code> | The character encoding of the data. |
 | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobLoad.property.fieldDelimiter">field_delimiter</a></code> | <code>str</code> | The separator for fields in a CSV file. |
-| <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobLoad.property.ignoreUnknownValues">ignore_unknown_values</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Indicates if BigQuery should allow extra values that are not represented in the table schema. |
+| <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobLoad.property.ignoreUnknownValues">ignore_unknown_values</a></code> | <code>bool \| cdktf.IResolvable</code> | Indicates if BigQuery should allow extra values that are not represented in the table schema. |
 | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobLoad.property.jsonExtension">json_extension</a></code> | <code>str</code> | If sourceFormat is set to newline-delimited JSON, indicates whether it should be processed as a JSON variant such as GeoJSON. |
 | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobLoad.property.maxBadRecords">max_bad_records</a></code> | <code>typing.Union[int, float]</code> | The maximum number of bad records that BigQuery can ignore when running the job. |
 | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobLoad.property.nullMarker">null_marker</a></code> | <code>str</code> | Specifies a string that represents a null value in a CSV file. |
@@ -2979,10 +2979,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `allow_jagged_rows`<sup>Optional</sup> <a name="allow_jagged_rows" id="@cdktf/provider-google.bigqueryJob.BigqueryJobLoad.property.allowJaggedRows"></a>
 
 ```python
-allow_jagged_rows: typing.Union[bool, IResolvable]
+allow_jagged_rows: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Accept rows that are missing trailing optional columns.
 
@@ -2997,10 +2997,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `allow_quoted_newlines`<sup>Optional</sup> <a name="allow_quoted_newlines" id="@cdktf/provider-google.bigqueryJob.BigqueryJobLoad.property.allowQuotedNewlines"></a>
 
 ```python
-allow_quoted_newlines: typing.Union[bool, IResolvable]
+allow_quoted_newlines: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Indicates if BigQuery should allow quoted data sections that contain newline characters in a CSV file.
 
@@ -3013,10 +3013,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `autodetect`<sup>Optional</sup> <a name="autodetect" id="@cdktf/provider-google.bigqueryJob.BigqueryJobLoad.property.autodetect"></a>
 
 ```python
-autodetect: typing.Union[bool, IResolvable]
+autodetect: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Indicates if we should automatically infer the options and schema for CSV and JSON sources.
 
@@ -3098,10 +3098,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `ignore_unknown_values`<sup>Optional</sup> <a name="ignore_unknown_values" id="@cdktf/provider-google.bigqueryJob.BigqueryJobLoad.property.ignoreUnknownValues"></a>
 
 ```python
-ignore_unknown_values: typing.Union[bool, IResolvable]
+ignore_unknown_values: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Indicates if BigQuery should allow extra values that are not represented in the table schema.
 
@@ -3424,8 +3424,8 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 from cdktf_cdktf_provider_google import bigquery_job
 
 bigqueryJob.BigqueryJobLoadParquetOptions(
-  enable_list_inference: typing.Union[bool, IResolvable] = None,
-  enum_as_string: typing.Union[bool, IResolvable] = None
+  enable_list_inference: bool | IResolvable = None,
+  enum_as_string: bool | IResolvable = None
 )
 ```
 
@@ -3433,18 +3433,18 @@ bigqueryJob.BigqueryJobLoadParquetOptions(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobLoadParquetOptions.property.enableListInference">enable_list_inference</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | If sourceFormat is set to PARQUET, indicates whether to use schema inference specifically for Parquet LIST logical type. |
-| <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobLoadParquetOptions.property.enumAsString">enum_as_string</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | If sourceFormat is set to PARQUET, indicates whether to infer Parquet ENUM logical type as STRING instead of BYTES by default. |
+| <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobLoadParquetOptions.property.enableListInference">enable_list_inference</a></code> | <code>bool \| cdktf.IResolvable</code> | If sourceFormat is set to PARQUET, indicates whether to use schema inference specifically for Parquet LIST logical type. |
+| <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobLoadParquetOptions.property.enumAsString">enum_as_string</a></code> | <code>bool \| cdktf.IResolvable</code> | If sourceFormat is set to PARQUET, indicates whether to infer Parquet ENUM logical type as STRING instead of BYTES by default. |
 
 ---
 
 ##### `enable_list_inference`<sup>Optional</sup> <a name="enable_list_inference" id="@cdktf/provider-google.bigqueryJob.BigqueryJobLoadParquetOptions.property.enableListInference"></a>
 
 ```python
-enable_list_inference: typing.Union[bool, IResolvable]
+enable_list_inference: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 If sourceFormat is set to PARQUET, indicates whether to use schema inference specifically for Parquet LIST logical type.
 
@@ -3455,10 +3455,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `enum_as_string`<sup>Optional</sup> <a name="enum_as_string" id="@cdktf/provider-google.bigqueryJob.BigqueryJobLoadParquetOptions.property.enumAsString"></a>
 
 ```python
-enum_as_string: typing.Union[bool, IResolvable]
+enum_as_string: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 If sourceFormat is set to PARQUET, indicates whether to infer Parquet ENUM logical type as STRING instead of BYTES by default.
 
@@ -3550,21 +3550,21 @@ from cdktf_cdktf_provider_google import bigquery_job
 
 bigqueryJob.BigqueryJobQuery(
   query: str,
-  allow_large_results: typing.Union[bool, IResolvable] = None,
+  allow_large_results: bool | IResolvable = None,
   create_disposition: str = None,
   default_dataset: BigqueryJobQueryDefaultDataset = None,
   destination_encryption_configuration: BigqueryJobQueryDestinationEncryptionConfiguration = None,
   destination_table: BigqueryJobQueryDestinationTable = None,
-  flatten_results: typing.Union[bool, IResolvable] = None,
+  flatten_results: bool | IResolvable = None,
   maximum_billing_tier: typing.Union[int, float] = None,
   maximum_bytes_billed: str = None,
   parameter_mode: str = None,
   priority: str = None,
   schema_update_options: typing.List[str] = None,
   script_options: BigqueryJobQueryScriptOptions = None,
-  use_legacy_sql: typing.Union[bool, IResolvable] = None,
-  use_query_cache: typing.Union[bool, IResolvable] = None,
-  user_defined_function_resources: typing.Union[IResolvable, typing.List[BigqueryJobQueryUserDefinedFunctionResources]] = None,
+  use_legacy_sql: bool | IResolvable = None,
+  use_query_cache: bool | IResolvable = None,
+  user_defined_function_resources: IResolvable | typing.List[BigqueryJobQueryUserDefinedFunctionResources] = None,
   write_disposition: str = None
 )
 ```
@@ -3574,21 +3574,21 @@ bigqueryJob.BigqueryJobQuery(
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobQuery.property.query">query</a></code> | <code>str</code> | SQL query text to execute. |
-| <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobQuery.property.allowLargeResults">allow_large_results</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | If true and query uses legacy SQL dialect, allows the query to produce arbitrarily large result tables at a slight cost in performance. |
+| <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobQuery.property.allowLargeResults">allow_large_results</a></code> | <code>bool \| cdktf.IResolvable</code> | If true and query uses legacy SQL dialect, allows the query to produce arbitrarily large result tables at a slight cost in performance. |
 | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobQuery.property.createDisposition">create_disposition</a></code> | <code>str</code> | Specifies whether the job is allowed to create new tables. |
 | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobQuery.property.defaultDataset">default_dataset</a></code> | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobQueryDefaultDataset">BigqueryJobQueryDefaultDataset</a></code> | default_dataset block. |
 | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobQuery.property.destinationEncryptionConfiguration">destination_encryption_configuration</a></code> | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobQueryDestinationEncryptionConfiguration">BigqueryJobQueryDestinationEncryptionConfiguration</a></code> | destination_encryption_configuration block. |
 | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobQuery.property.destinationTable">destination_table</a></code> | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobQueryDestinationTable">BigqueryJobQueryDestinationTable</a></code> | destination_table block. |
-| <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobQuery.property.flattenResults">flatten_results</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | If true and query uses legacy SQL dialect, flattens all nested and repeated fields in the query results. |
+| <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobQuery.property.flattenResults">flatten_results</a></code> | <code>bool \| cdktf.IResolvable</code> | If true and query uses legacy SQL dialect, flattens all nested and repeated fields in the query results. |
 | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobQuery.property.maximumBillingTier">maximum_billing_tier</a></code> | <code>typing.Union[int, float]</code> | Limits the billing tier for this job. |
 | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobQuery.property.maximumBytesBilled">maximum_bytes_billed</a></code> | <code>str</code> | Limits the bytes billed for this job. |
 | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobQuery.property.parameterMode">parameter_mode</a></code> | <code>str</code> | Standard SQL only. |
 | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobQuery.property.priority">priority</a></code> | <code>str</code> | Specifies a priority for the query. Default value: "INTERACTIVE" Possible values: ["INTERACTIVE", "BATCH"]. |
 | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobQuery.property.schemaUpdateOptions">schema_update_options</a></code> | <code>typing.List[str]</code> | Allows the schema of the destination table to be updated as a side effect of the query job. |
 | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobQuery.property.scriptOptions">script_options</a></code> | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobQueryScriptOptions">BigqueryJobQueryScriptOptions</a></code> | script_options block. |
-| <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobQuery.property.useLegacySql">use_legacy_sql</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Specifies whether to use BigQuery's legacy SQL dialect for this query. |
-| <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobQuery.property.useQueryCache">use_query_cache</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Whether to look for the result in the query cache. |
-| <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobQuery.property.userDefinedFunctionResources">user_defined_function_resources</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobQueryUserDefinedFunctionResources">BigqueryJobQueryUserDefinedFunctionResources</a>]]</code> | user_defined_function_resources block. |
+| <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobQuery.property.useLegacySql">use_legacy_sql</a></code> | <code>bool \| cdktf.IResolvable</code> | Specifies whether to use BigQuery's legacy SQL dialect for this query. |
+| <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobQuery.property.useQueryCache">use_query_cache</a></code> | <code>bool \| cdktf.IResolvable</code> | Whether to look for the result in the query cache. |
+| <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobQuery.property.userDefinedFunctionResources">user_defined_function_resources</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobQueryUserDefinedFunctionResources">BigqueryJobQueryUserDefinedFunctionResources</a>]</code> | user_defined_function_resources block. |
 | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobQuery.property.writeDisposition">write_disposition</a></code> | <code>str</code> | Specifies the action that occurs if the destination table already exists. |
 
 ---
@@ -3614,10 +3614,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `allow_large_results`<sup>Optional</sup> <a name="allow_large_results" id="@cdktf/provider-google.bigqueryJob.BigqueryJobQuery.property.allowLargeResults"></a>
 
 ```python
-allow_large_results: typing.Union[bool, IResolvable]
+allow_large_results: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 If true and query uses legacy SQL dialect, allows the query to produce arbitrarily large result tables at a slight cost in performance.
 
@@ -3692,10 +3692,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `flatten_results`<sup>Optional</sup> <a name="flatten_results" id="@cdktf/provider-google.bigqueryJob.BigqueryJobQuery.property.flattenResults"></a>
 
 ```python
-flatten_results: typing.Union[bool, IResolvable]
+flatten_results: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 If true and query uses legacy SQL dialect, flattens all nested and repeated fields in the query results.
 
@@ -3807,10 +3807,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `use_legacy_sql`<sup>Optional</sup> <a name="use_legacy_sql" id="@cdktf/provider-google.bigqueryJob.BigqueryJobQuery.property.useLegacySql"></a>
 
 ```python
-use_legacy_sql: typing.Union[bool, IResolvable]
+use_legacy_sql: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Specifies whether to use BigQuery's legacy SQL dialect for this query.
 
@@ -3824,10 +3824,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `use_query_cache`<sup>Optional</sup> <a name="use_query_cache" id="@cdktf/provider-google.bigqueryJob.BigqueryJobQuery.property.useQueryCache"></a>
 
 ```python
-use_query_cache: typing.Union[bool, IResolvable]
+use_query_cache: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Whether to look for the result in the query cache.
 
@@ -3842,10 +3842,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `user_defined_function_resources`<sup>Optional</sup> <a name="user_defined_function_resources" id="@cdktf/provider-google.bigqueryJob.BigqueryJobQuery.property.userDefinedFunctionResources"></a>
 
 ```python
-user_defined_function_resources: typing.Union[IResolvable, typing.List[BigqueryJobQueryUserDefinedFunctionResources]]
+user_defined_function_resources: IResolvable | typing.List[BigqueryJobQueryUserDefinedFunctionResources]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobQueryUserDefinedFunctionResources">BigqueryJobQueryUserDefinedFunctionResources</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobQueryUserDefinedFunctionResources">BigqueryJobQueryUserDefinedFunctionResources</a>]
 
 user_defined_function_resources block.
 
@@ -5201,13 +5201,13 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ```python
 def put_source_tables(
-  value: typing.Union[IResolvable, typing.List[BigqueryJobCopySourceTables]]
+  value: IResolvable | typing.List[BigqueryJobCopySourceTables]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.bigqueryJob.BigqueryJobCopyOutputReference.putSourceTables.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobCopySourceTables">BigqueryJobCopySourceTables</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobCopySourceTables">BigqueryJobCopySourceTables</a>]
 
 ---
 
@@ -5248,7 +5248,7 @@ def reset_write_disposition() -> None
 | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobCopyOutputReference.property.createDispositionInput">create_disposition_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobCopyOutputReference.property.destinationEncryptionConfigurationInput">destination_encryption_configuration_input</a></code> | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobCopyDestinationEncryptionConfiguration">BigqueryJobCopyDestinationEncryptionConfiguration</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobCopyOutputReference.property.destinationTableInput">destination_table_input</a></code> | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobCopyDestinationTable">BigqueryJobCopyDestinationTable</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobCopyOutputReference.property.sourceTablesInput">source_tables_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobCopySourceTables">BigqueryJobCopySourceTables</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobCopyOutputReference.property.sourceTablesInput">source_tables_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobCopySourceTables">BigqueryJobCopySourceTables</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobCopyOutputReference.property.writeDispositionInput">write_disposition_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobCopyOutputReference.property.createDisposition">create_disposition</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobCopyOutputReference.property.writeDisposition">write_disposition</a></code> | <code>str</code> | *No description.* |
@@ -5343,10 +5343,10 @@ destination_table_input: BigqueryJobCopyDestinationTable
 ##### `source_tables_input`<sup>Optional</sup> <a name="source_tables_input" id="@cdktf/provider-google.bigqueryJob.BigqueryJobCopyOutputReference.property.sourceTablesInput"></a>
 
 ```python
-source_tables_input: typing.Union[IResolvable, typing.List[BigqueryJobCopySourceTables]]
+source_tables_input: IResolvable | typing.List[BigqueryJobCopySourceTables]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobCopySourceTables">BigqueryJobCopySourceTables</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobCopySourceTables">BigqueryJobCopySourceTables</a>]
 
 ---
 
@@ -5522,7 +5522,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobCopySourceTablesList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobCopySourceTablesList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobCopySourceTablesList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobCopySourceTables">BigqueryJobCopySourceTables</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobCopySourceTablesList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobCopySourceTables">BigqueryJobCopySourceTables</a>]</code> | *No description.* |
 
 ---
 
@@ -5553,10 +5553,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.bigqueryJob.BigqueryJobCopySourceTablesList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[BigqueryJobCopySourceTables]]
+internal_value: IResolvable | typing.List[BigqueryJobCopySourceTables]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobCopySourceTables">BigqueryJobCopySourceTables</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobCopySourceTables">BigqueryJobCopySourceTables</a>]
 
 ---
 
@@ -5836,7 +5836,7 @@ def reset_project_id() -> None
 | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobCopySourceTablesOutputReference.property.datasetId">dataset_id</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobCopySourceTablesOutputReference.property.projectId">project_id</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobCopySourceTablesOutputReference.property.tableId">table_id</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobCopySourceTablesOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobCopySourceTables">BigqueryJobCopySourceTables</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobCopySourceTablesOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobCopySourceTables">BigqueryJobCopySourceTables</a></code> | *No description.* |
 
 ---
 
@@ -5927,10 +5927,10 @@ table_id: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.bigqueryJob.BigqueryJobCopySourceTablesOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, BigqueryJobCopySourceTables]
+internal_value: IResolvable | BigqueryJobCopySourceTables
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobCopySourceTables">BigqueryJobCopySourceTables</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobCopySourceTables">BigqueryJobCopySourceTables</a>
 
 ---
 
@@ -6307,16 +6307,16 @@ def reset_use_avro_logical_types() -> None
 | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobExtractOutputReference.property.destinationFormatInput">destination_format_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobExtractOutputReference.property.destinationUrisInput">destination_uris_input</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobExtractOutputReference.property.fieldDelimiterInput">field_delimiter_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobExtractOutputReference.property.printHeaderInput">print_header_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobExtractOutputReference.property.printHeaderInput">print_header_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobExtractOutputReference.property.sourceModelInput">source_model_input</a></code> | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobExtractSourceModel">BigqueryJobExtractSourceModel</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobExtractOutputReference.property.sourceTableInput">source_table_input</a></code> | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobExtractSourceTable">BigqueryJobExtractSourceTable</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobExtractOutputReference.property.useAvroLogicalTypesInput">use_avro_logical_types_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobExtractOutputReference.property.useAvroLogicalTypesInput">use_avro_logical_types_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobExtractOutputReference.property.compression">compression</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobExtractOutputReference.property.destinationFormat">destination_format</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobExtractOutputReference.property.destinationUris">destination_uris</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobExtractOutputReference.property.fieldDelimiter">field_delimiter</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobExtractOutputReference.property.printHeader">print_header</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobExtractOutputReference.property.useAvroLogicalTypes">use_avro_logical_types</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobExtractOutputReference.property.printHeader">print_header</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobExtractOutputReference.property.useAvroLogicalTypes">use_avro_logical_types</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobExtractOutputReference.property.internalValue">internal_value</a></code> | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobExtract">BigqueryJobExtract</a></code> | *No description.* |
 
 ---
@@ -6408,10 +6408,10 @@ field_delimiter_input: str
 ##### `print_header_input`<sup>Optional</sup> <a name="print_header_input" id="@cdktf/provider-google.bigqueryJob.BigqueryJobExtractOutputReference.property.printHeaderInput"></a>
 
 ```python
-print_header_input: typing.Union[bool, IResolvable]
+print_header_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -6438,10 +6438,10 @@ source_table_input: BigqueryJobExtractSourceTable
 ##### `use_avro_logical_types_input`<sup>Optional</sup> <a name="use_avro_logical_types_input" id="@cdktf/provider-google.bigqueryJob.BigqueryJobExtractOutputReference.property.useAvroLogicalTypesInput"></a>
 
 ```python
-use_avro_logical_types_input: typing.Union[bool, IResolvable]
+use_avro_logical_types_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -6488,20 +6488,20 @@ field_delimiter: str
 ##### `print_header`<sup>Required</sup> <a name="print_header" id="@cdktf/provider-google.bigqueryJob.BigqueryJobExtractOutputReference.property.printHeader"></a>
 
 ```python
-print_header: typing.Union[bool, IResolvable]
+print_header: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `use_avro_logical_types`<sup>Required</sup> <a name="use_avro_logical_types" id="@cdktf/provider-google.bigqueryJob.BigqueryJobExtractOutputReference.property.useAvroLogicalTypes"></a>
 
 ```python
-use_avro_logical_types: typing.Union[bool, IResolvable]
+use_avro_logical_types: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -8186,14 +8186,14 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ```python
 def put_parquet_options(
-  enable_list_inference: typing.Union[bool, IResolvable] = None,
-  enum_as_string: typing.Union[bool, IResolvable] = None
+  enable_list_inference: bool | IResolvable = None,
+  enum_as_string: bool | IResolvable = None
 ) -> None
 ```
 
 ###### `enable_list_inference`<sup>Optional</sup> <a name="enable_list_inference" id="@cdktf/provider-google.bigqueryJob.BigqueryJobLoadOutputReference.putParquetOptions.parameter.enableListInference"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 If sourceFormat is set to PARQUET, indicates whether to use schema inference specifically for Parquet LIST logical type.
 
@@ -8203,7 +8203,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `enum_as_string`<sup>Optional</sup> <a name="enum_as_string" id="@cdktf/provider-google.bigqueryJob.BigqueryJobLoadOutputReference.putParquetOptions.parameter.enumAsString"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 If sourceFormat is set to PARQUET, indicates whether to infer Parquet ENUM logical type as STRING instead of BYTES by default.
 
@@ -8385,15 +8385,15 @@ def reset_write_disposition() -> None
 | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobLoadOutputReference.property.destinationTable">destination_table</a></code> | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobLoadDestinationTableOutputReference">BigqueryJobLoadDestinationTableOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobLoadOutputReference.property.parquetOptions">parquet_options</a></code> | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobLoadParquetOptionsOutputReference">BigqueryJobLoadParquetOptionsOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobLoadOutputReference.property.timePartitioning">time_partitioning</a></code> | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobLoadTimePartitioningOutputReference">BigqueryJobLoadTimePartitioningOutputReference</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobLoadOutputReference.property.allowJaggedRowsInput">allow_jagged_rows_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobLoadOutputReference.property.allowQuotedNewlinesInput">allow_quoted_newlines_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobLoadOutputReference.property.autodetectInput">autodetect_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobLoadOutputReference.property.allowJaggedRowsInput">allow_jagged_rows_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobLoadOutputReference.property.allowQuotedNewlinesInput">allow_quoted_newlines_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobLoadOutputReference.property.autodetectInput">autodetect_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobLoadOutputReference.property.createDispositionInput">create_disposition_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobLoadOutputReference.property.destinationEncryptionConfigurationInput">destination_encryption_configuration_input</a></code> | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobLoadDestinationEncryptionConfiguration">BigqueryJobLoadDestinationEncryptionConfiguration</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobLoadOutputReference.property.destinationTableInput">destination_table_input</a></code> | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobLoadDestinationTable">BigqueryJobLoadDestinationTable</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobLoadOutputReference.property.encodingInput">encoding_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobLoadOutputReference.property.fieldDelimiterInput">field_delimiter_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobLoadOutputReference.property.ignoreUnknownValuesInput">ignore_unknown_values_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobLoadOutputReference.property.ignoreUnknownValuesInput">ignore_unknown_values_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobLoadOutputReference.property.jsonExtensionInput">json_extension_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobLoadOutputReference.property.maxBadRecordsInput">max_bad_records_input</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobLoadOutputReference.property.nullMarkerInput">null_marker_input</a></code> | <code>str</code> | *No description.* |
@@ -8406,13 +8406,13 @@ def reset_write_disposition() -> None
 | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobLoadOutputReference.property.sourceUrisInput">source_uris_input</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobLoadOutputReference.property.timePartitioningInput">time_partitioning_input</a></code> | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobLoadTimePartitioning">BigqueryJobLoadTimePartitioning</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobLoadOutputReference.property.writeDispositionInput">write_disposition_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobLoadOutputReference.property.allowJaggedRows">allow_jagged_rows</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobLoadOutputReference.property.allowQuotedNewlines">allow_quoted_newlines</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobLoadOutputReference.property.autodetect">autodetect</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobLoadOutputReference.property.allowJaggedRows">allow_jagged_rows</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobLoadOutputReference.property.allowQuotedNewlines">allow_quoted_newlines</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobLoadOutputReference.property.autodetect">autodetect</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobLoadOutputReference.property.createDisposition">create_disposition</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobLoadOutputReference.property.encoding">encoding</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobLoadOutputReference.property.fieldDelimiter">field_delimiter</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobLoadOutputReference.property.ignoreUnknownValues">ignore_unknown_values</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobLoadOutputReference.property.ignoreUnknownValues">ignore_unknown_values</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobLoadOutputReference.property.jsonExtension">json_extension</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobLoadOutputReference.property.maxBadRecords">max_bad_records</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobLoadOutputReference.property.nullMarker">null_marker</a></code> | <code>str</code> | *No description.* |
@@ -8494,30 +8494,30 @@ time_partitioning: BigqueryJobLoadTimePartitioningOutputReference
 ##### `allow_jagged_rows_input`<sup>Optional</sup> <a name="allow_jagged_rows_input" id="@cdktf/provider-google.bigqueryJob.BigqueryJobLoadOutputReference.property.allowJaggedRowsInput"></a>
 
 ```python
-allow_jagged_rows_input: typing.Union[bool, IResolvable]
+allow_jagged_rows_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `allow_quoted_newlines_input`<sup>Optional</sup> <a name="allow_quoted_newlines_input" id="@cdktf/provider-google.bigqueryJob.BigqueryJobLoadOutputReference.property.allowQuotedNewlinesInput"></a>
 
 ```python
-allow_quoted_newlines_input: typing.Union[bool, IResolvable]
+allow_quoted_newlines_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `autodetect_input`<sup>Optional</sup> <a name="autodetect_input" id="@cdktf/provider-google.bigqueryJob.BigqueryJobLoadOutputReference.property.autodetectInput"></a>
 
 ```python
-autodetect_input: typing.Union[bool, IResolvable]
+autodetect_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -8574,10 +8574,10 @@ field_delimiter_input: str
 ##### `ignore_unknown_values_input`<sup>Optional</sup> <a name="ignore_unknown_values_input" id="@cdktf/provider-google.bigqueryJob.BigqueryJobLoadOutputReference.property.ignoreUnknownValuesInput"></a>
 
 ```python
-ignore_unknown_values_input: typing.Union[bool, IResolvable]
+ignore_unknown_values_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -8704,30 +8704,30 @@ write_disposition_input: str
 ##### `allow_jagged_rows`<sup>Required</sup> <a name="allow_jagged_rows" id="@cdktf/provider-google.bigqueryJob.BigqueryJobLoadOutputReference.property.allowJaggedRows"></a>
 
 ```python
-allow_jagged_rows: typing.Union[bool, IResolvable]
+allow_jagged_rows: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `allow_quoted_newlines`<sup>Required</sup> <a name="allow_quoted_newlines" id="@cdktf/provider-google.bigqueryJob.BigqueryJobLoadOutputReference.property.allowQuotedNewlines"></a>
 
 ```python
-allow_quoted_newlines: typing.Union[bool, IResolvable]
+allow_quoted_newlines: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `autodetect`<sup>Required</sup> <a name="autodetect" id="@cdktf/provider-google.bigqueryJob.BigqueryJobLoadOutputReference.property.autodetect"></a>
 
 ```python
-autodetect: typing.Union[bool, IResolvable]
+autodetect: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -8764,10 +8764,10 @@ field_delimiter: str
 ##### `ignore_unknown_values`<sup>Required</sup> <a name="ignore_unknown_values" id="@cdktf/provider-google.bigqueryJob.BigqueryJobLoadOutputReference.property.ignoreUnknownValues"></a>
 
 ```python
-ignore_unknown_values: typing.Union[bool, IResolvable]
+ignore_unknown_values: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -9131,10 +9131,10 @@ def reset_enum_as_string() -> None
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobLoadParquetOptionsOutputReference.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobLoadParquetOptionsOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobLoadParquetOptionsOutputReference.property.enableListInferenceInput">enable_list_inference_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobLoadParquetOptionsOutputReference.property.enumAsStringInput">enum_as_string_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobLoadParquetOptionsOutputReference.property.enableListInference">enable_list_inference</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobLoadParquetOptionsOutputReference.property.enumAsString">enum_as_string</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobLoadParquetOptionsOutputReference.property.enableListInferenceInput">enable_list_inference_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobLoadParquetOptionsOutputReference.property.enumAsStringInput">enum_as_string_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobLoadParquetOptionsOutputReference.property.enableListInference">enable_list_inference</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobLoadParquetOptionsOutputReference.property.enumAsString">enum_as_string</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobLoadParquetOptionsOutputReference.property.internalValue">internal_value</a></code> | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobLoadParquetOptions">BigqueryJobLoadParquetOptions</a></code> | *No description.* |
 
 ---
@@ -9166,40 +9166,40 @@ fqn: str
 ##### `enable_list_inference_input`<sup>Optional</sup> <a name="enable_list_inference_input" id="@cdktf/provider-google.bigqueryJob.BigqueryJobLoadParquetOptionsOutputReference.property.enableListInferenceInput"></a>
 
 ```python
-enable_list_inference_input: typing.Union[bool, IResolvable]
+enable_list_inference_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `enum_as_string_input`<sup>Optional</sup> <a name="enum_as_string_input" id="@cdktf/provider-google.bigqueryJob.BigqueryJobLoadParquetOptionsOutputReference.property.enumAsStringInput"></a>
 
 ```python
-enum_as_string_input: typing.Union[bool, IResolvable]
+enum_as_string_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `enable_list_inference`<sup>Required</sup> <a name="enable_list_inference" id="@cdktf/provider-google.bigqueryJob.BigqueryJobLoadParquetOptionsOutputReference.property.enableListInference"></a>
 
 ```python
-enable_list_inference: typing.Union[bool, IResolvable]
+enable_list_inference: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `enum_as_string`<sup>Required</sup> <a name="enum_as_string" id="@cdktf/provider-google.bigqueryJob.BigqueryJobLoadParquetOptionsOutputReference.property.enumAsString"></a>
 
 ```python
-enum_as_string: typing.Union[bool, IResolvable]
+enum_as_string: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -10938,13 +10938,13 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ```python
 def put_user_defined_function_resources(
-  value: typing.Union[IResolvable, typing.List[BigqueryJobQueryUserDefinedFunctionResources]]
+  value: IResolvable | typing.List[BigqueryJobQueryUserDefinedFunctionResources]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.bigqueryJob.BigqueryJobQueryOutputReference.putUserDefinedFunctionResources.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobQueryUserDefinedFunctionResources">BigqueryJobQueryUserDefinedFunctionResources</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobQueryUserDefinedFunctionResources">BigqueryJobQueryUserDefinedFunctionResources</a>]
 
 ---
 
@@ -11056,12 +11056,12 @@ def reset_write_disposition() -> None
 | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobQueryOutputReference.property.destinationTable">destination_table</a></code> | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobQueryDestinationTableOutputReference">BigqueryJobQueryDestinationTableOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobQueryOutputReference.property.scriptOptions">script_options</a></code> | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobQueryScriptOptionsOutputReference">BigqueryJobQueryScriptOptionsOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobQueryOutputReference.property.userDefinedFunctionResources">user_defined_function_resources</a></code> | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobQueryUserDefinedFunctionResourcesList">BigqueryJobQueryUserDefinedFunctionResourcesList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobQueryOutputReference.property.allowLargeResultsInput">allow_large_results_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobQueryOutputReference.property.allowLargeResultsInput">allow_large_results_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobQueryOutputReference.property.createDispositionInput">create_disposition_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobQueryOutputReference.property.defaultDatasetInput">default_dataset_input</a></code> | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobQueryDefaultDataset">BigqueryJobQueryDefaultDataset</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobQueryOutputReference.property.destinationEncryptionConfigurationInput">destination_encryption_configuration_input</a></code> | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobQueryDestinationEncryptionConfiguration">BigqueryJobQueryDestinationEncryptionConfiguration</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobQueryOutputReference.property.destinationTableInput">destination_table_input</a></code> | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobQueryDestinationTable">BigqueryJobQueryDestinationTable</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobQueryOutputReference.property.flattenResultsInput">flatten_results_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobQueryOutputReference.property.flattenResultsInput">flatten_results_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobQueryOutputReference.property.maximumBillingTierInput">maximum_billing_tier_input</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobQueryOutputReference.property.maximumBytesBilledInput">maximum_bytes_billed_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobQueryOutputReference.property.parameterModeInput">parameter_mode_input</a></code> | <code>str</code> | *No description.* |
@@ -11069,21 +11069,21 @@ def reset_write_disposition() -> None
 | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobQueryOutputReference.property.queryInput">query_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobQueryOutputReference.property.schemaUpdateOptionsInput">schema_update_options_input</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobQueryOutputReference.property.scriptOptionsInput">script_options_input</a></code> | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobQueryScriptOptions">BigqueryJobQueryScriptOptions</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobQueryOutputReference.property.useLegacySqlInput">use_legacy_sql_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobQueryOutputReference.property.useQueryCacheInput">use_query_cache_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobQueryOutputReference.property.userDefinedFunctionResourcesInput">user_defined_function_resources_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobQueryUserDefinedFunctionResources">BigqueryJobQueryUserDefinedFunctionResources</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobQueryOutputReference.property.useLegacySqlInput">use_legacy_sql_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobQueryOutputReference.property.useQueryCacheInput">use_query_cache_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobQueryOutputReference.property.userDefinedFunctionResourcesInput">user_defined_function_resources_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobQueryUserDefinedFunctionResources">BigqueryJobQueryUserDefinedFunctionResources</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobQueryOutputReference.property.writeDispositionInput">write_disposition_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobQueryOutputReference.property.allowLargeResults">allow_large_results</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobQueryOutputReference.property.allowLargeResults">allow_large_results</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobQueryOutputReference.property.createDisposition">create_disposition</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobQueryOutputReference.property.flattenResults">flatten_results</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobQueryOutputReference.property.flattenResults">flatten_results</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobQueryOutputReference.property.maximumBillingTier">maximum_billing_tier</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobQueryOutputReference.property.maximumBytesBilled">maximum_bytes_billed</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobQueryOutputReference.property.parameterMode">parameter_mode</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobQueryOutputReference.property.priority">priority</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobQueryOutputReference.property.query">query</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobQueryOutputReference.property.schemaUpdateOptions">schema_update_options</a></code> | <code>typing.List[str]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobQueryOutputReference.property.useLegacySql">use_legacy_sql</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobQueryOutputReference.property.useQueryCache">use_query_cache</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobQueryOutputReference.property.useLegacySql">use_legacy_sql</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobQueryOutputReference.property.useQueryCache">use_query_cache</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobQueryOutputReference.property.writeDisposition">write_disposition</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobQueryOutputReference.property.internalValue">internal_value</a></code> | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobQuery">BigqueryJobQuery</a></code> | *No description.* |
 
@@ -11166,10 +11166,10 @@ user_defined_function_resources: BigqueryJobQueryUserDefinedFunctionResourcesLis
 ##### `allow_large_results_input`<sup>Optional</sup> <a name="allow_large_results_input" id="@cdktf/provider-google.bigqueryJob.BigqueryJobQueryOutputReference.property.allowLargeResultsInput"></a>
 
 ```python
-allow_large_results_input: typing.Union[bool, IResolvable]
+allow_large_results_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -11216,10 +11216,10 @@ destination_table_input: BigqueryJobQueryDestinationTable
 ##### `flatten_results_input`<sup>Optional</sup> <a name="flatten_results_input" id="@cdktf/provider-google.bigqueryJob.BigqueryJobQueryOutputReference.property.flattenResultsInput"></a>
 
 ```python
-flatten_results_input: typing.Union[bool, IResolvable]
+flatten_results_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -11296,30 +11296,30 @@ script_options_input: BigqueryJobQueryScriptOptions
 ##### `use_legacy_sql_input`<sup>Optional</sup> <a name="use_legacy_sql_input" id="@cdktf/provider-google.bigqueryJob.BigqueryJobQueryOutputReference.property.useLegacySqlInput"></a>
 
 ```python
-use_legacy_sql_input: typing.Union[bool, IResolvable]
+use_legacy_sql_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `use_query_cache_input`<sup>Optional</sup> <a name="use_query_cache_input" id="@cdktf/provider-google.bigqueryJob.BigqueryJobQueryOutputReference.property.useQueryCacheInput"></a>
 
 ```python
-use_query_cache_input: typing.Union[bool, IResolvable]
+use_query_cache_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `user_defined_function_resources_input`<sup>Optional</sup> <a name="user_defined_function_resources_input" id="@cdktf/provider-google.bigqueryJob.BigqueryJobQueryOutputReference.property.userDefinedFunctionResourcesInput"></a>
 
 ```python
-user_defined_function_resources_input: typing.Union[IResolvable, typing.List[BigqueryJobQueryUserDefinedFunctionResources]]
+user_defined_function_resources_input: IResolvable | typing.List[BigqueryJobQueryUserDefinedFunctionResources]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobQueryUserDefinedFunctionResources">BigqueryJobQueryUserDefinedFunctionResources</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobQueryUserDefinedFunctionResources">BigqueryJobQueryUserDefinedFunctionResources</a>]
 
 ---
 
@@ -11336,10 +11336,10 @@ write_disposition_input: str
 ##### `allow_large_results`<sup>Required</sup> <a name="allow_large_results" id="@cdktf/provider-google.bigqueryJob.BigqueryJobQueryOutputReference.property.allowLargeResults"></a>
 
 ```python
-allow_large_results: typing.Union[bool, IResolvable]
+allow_large_results: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -11356,10 +11356,10 @@ create_disposition: str
 ##### `flatten_results`<sup>Required</sup> <a name="flatten_results" id="@cdktf/provider-google.bigqueryJob.BigqueryJobQueryOutputReference.property.flattenResults"></a>
 
 ```python
-flatten_results: typing.Union[bool, IResolvable]
+flatten_results: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -11426,20 +11426,20 @@ schema_update_options: typing.List[str]
 ##### `use_legacy_sql`<sup>Required</sup> <a name="use_legacy_sql" id="@cdktf/provider-google.bigqueryJob.BigqueryJobQueryOutputReference.property.useLegacySql"></a>
 
 ```python
-use_legacy_sql: typing.Union[bool, IResolvable]
+use_legacy_sql: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `use_query_cache`<sup>Required</sup> <a name="use_query_cache" id="@cdktf/provider-google.bigqueryJob.BigqueryJobQueryOutputReference.property.useQueryCache"></a>
 
 ```python
-use_query_cache: typing.Union[bool, IResolvable]
+use_query_cache: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -11956,7 +11956,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobQueryUserDefinedFunctionResourcesList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobQueryUserDefinedFunctionResourcesList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobQueryUserDefinedFunctionResourcesList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobQueryUserDefinedFunctionResources">BigqueryJobQueryUserDefinedFunctionResources</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobQueryUserDefinedFunctionResourcesList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobQueryUserDefinedFunctionResources">BigqueryJobQueryUserDefinedFunctionResources</a>]</code> | *No description.* |
 
 ---
 
@@ -11987,10 +11987,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.bigqueryJob.BigqueryJobQueryUserDefinedFunctionResourcesList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[BigqueryJobQueryUserDefinedFunctionResources]]
+internal_value: IResolvable | typing.List[BigqueryJobQueryUserDefinedFunctionResources]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobQueryUserDefinedFunctionResources">BigqueryJobQueryUserDefinedFunctionResources</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobQueryUserDefinedFunctionResources">BigqueryJobQueryUserDefinedFunctionResources</a>]
 
 ---
 
@@ -12268,7 +12268,7 @@ def reset_resource_uri() -> None
 | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobQueryUserDefinedFunctionResourcesOutputReference.property.resourceUriInput">resource_uri_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobQueryUserDefinedFunctionResourcesOutputReference.property.inlineCode">inline_code</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobQueryUserDefinedFunctionResourcesOutputReference.property.resourceUri">resource_uri</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobQueryUserDefinedFunctionResourcesOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobQueryUserDefinedFunctionResources">BigqueryJobQueryUserDefinedFunctionResources</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobQueryUserDefinedFunctionResourcesOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobQueryUserDefinedFunctionResources">BigqueryJobQueryUserDefinedFunctionResources</a></code> | *No description.* |
 
 ---
 
@@ -12339,10 +12339,10 @@ resource_uri: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.bigqueryJob.BigqueryJobQueryUserDefinedFunctionResourcesOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, BigqueryJobQueryUserDefinedFunctionResources]
+internal_value: IResolvable | BigqueryJobQueryUserDefinedFunctionResources
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobQueryUserDefinedFunctionResources">BigqueryJobQueryUserDefinedFunctionResources</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobQueryUserDefinedFunctionResources">BigqueryJobQueryUserDefinedFunctionResources</a>
 
 ---
 
@@ -14067,7 +14067,7 @@ def reset_update() -> None
 | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobTimeoutsOutputReference.property.create">create</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobTimeoutsOutputReference.property.delete">delete</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobTimeoutsOutputReference.property.update">update</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobTimeouts">BigqueryJobTimeouts</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobTimeouts">BigqueryJobTimeouts</a></code> | *No description.* |
 
 ---
 
@@ -14158,10 +14158,10 @@ update: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.bigqueryJob.BigqueryJobTimeoutsOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, BigqueryJobTimeouts]
+internal_value: IResolvable | BigqueryJobTimeouts
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobTimeouts">BigqueryJobTimeouts</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.bigqueryJob.BigqueryJobTimeouts">BigqueryJobTimeouts</a>
 
 ---
 

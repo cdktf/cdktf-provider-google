@@ -301,7 +301,7 @@ private System.Collections.Generic.IDictionary<string, string> GetStringMapAttri
 ##### `HasResourceMove` <a name="HasResourceMove" id="@cdktf/provider-google.lookerInstance.LookerInstance.hasResourceMove"></a>
 
 ```csharp
-private object HasResourceMove()
+private TerraformResourceMoveByTarget|TerraformResourceMoveById HasResourceMove()
 ```
 
 ##### `ImportFrom` <a name="ImportFrom" id="@cdktf/provider-google.lookerInstance.LookerInstance.importFrom"></a>
@@ -355,7 +355,7 @@ Full id of resource being moved from, e.g. "aws_s3_bucket.example".
 ##### `MoveTo` <a name="MoveTo" id="@cdktf/provider-google.lookerInstance.LookerInstance.moveTo"></a>
 
 ```csharp
-private void MoveTo(string MoveTarget, object Index = null)
+private void MoveTo(string MoveTarget, string|double Index = null)
 ```
 
 Moves this resource to the target resource given by moveTarget.
@@ -370,7 +370,7 @@ The previously set user defined string set by .addMoveTarget() corresponding to 
 
 ###### `Index`<sup>Optional</sup> <a name="Index" id="@cdktf/provider-google.lookerInstance.LookerInstance.moveTo.parameter.index"></a>
 
-- *Type:* object
+- *Type:* string|double
 
 Optional The index corresponding to the key the resource is to appear in the foreach of a resource to move to.
 
@@ -740,13 +740,13 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.5
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.property.terraformMetaArguments">TerraformMetaArguments</a></code> | <code>System.Collections.Generic.IDictionary<string, object></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.property.terraformResourceType">TerraformResourceType</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.property.terraformGeneratorMetadata">TerraformGeneratorMetadata</a></code> | <code>HashiCorp.Cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.property.connection">Connection</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.property.count">Count</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.property.connection">Connection</a></code> | <code>HashiCorp.Cdktf.SSHProvisionerConnection\|HashiCorp.Cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.property.count">Count</a></code> | <code>double\|HashiCorp.Cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.property.dependsOn">DependsOn</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.property.forEach">ForEach</a></code> | <code>HashiCorp.Cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.property.provider">Provider</a></code> | <code>HashiCorp.Cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.property.provisioners">Provisioners</a></code> | <code>object[]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.property.provisioners">Provisioners</a></code> | <code>HashiCorp.Cdktf.FileProvisioner\|HashiCorp.Cdktf.LocalExecProvisioner\|HashiCorp.Cdktf.RemoteExecProvisioner[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.property.adminSettings">AdminSettings</a></code> | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceAdminSettingsOutputReference">LookerInstanceAdminSettingsOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.property.createTime">CreateTime</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.property.customDomain">CustomDomain</a></code> | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceCustomDomainOutputReference">LookerInstanceCustomDomainOutputReference</a></code> | *No description.* |
@@ -769,31 +769,31 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.5
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.property.deletionPolicyInput">DeletionPolicyInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.property.denyMaintenancePeriodInput">DenyMaintenancePeriodInput</a></code> | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceDenyMaintenancePeriod">LookerInstanceDenyMaintenancePeriod</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.property.encryptionConfigInput">EncryptionConfigInput</a></code> | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceEncryptionConfig">LookerInstanceEncryptionConfig</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.property.fipsEnabledInput">FipsEnabledInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.property.fipsEnabledInput">FipsEnabledInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.property.idInput">IdInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.property.maintenanceWindowInput">MaintenanceWindowInput</a></code> | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceMaintenanceWindow">LookerInstanceMaintenanceWindow</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.property.nameInput">NameInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.property.oauthConfigInput">OauthConfigInput</a></code> | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceOauthConfig">LookerInstanceOauthConfig</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.property.platformEditionInput">PlatformEditionInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.property.privateIpEnabledInput">PrivateIpEnabledInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.property.privateIpEnabledInput">PrivateIpEnabledInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.property.projectInput">ProjectInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.property.pscConfigInput">PscConfigInput</a></code> | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstancePscConfig">LookerInstancePscConfig</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.property.pscEnabledInput">PscEnabledInput</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.property.publicIpEnabledInput">PublicIpEnabledInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.property.pscEnabledInput">PscEnabledInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.property.publicIpEnabledInput">PublicIpEnabledInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.property.regionInput">RegionInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.property.reservedRangeInput">ReservedRangeInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.property.timeoutsInput">TimeoutsInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.property.timeoutsInput">TimeoutsInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.lookerInstance.LookerInstanceTimeouts">LookerInstanceTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.property.userMetadataInput">UserMetadataInput</a></code> | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceUserMetadata">LookerInstanceUserMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.property.consumerNetwork">ConsumerNetwork</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.property.deletionPolicy">DeletionPolicy</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.property.fipsEnabled">FipsEnabled</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.property.fipsEnabled">FipsEnabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.property.id">Id</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.property.name">Name</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.property.platformEdition">PlatformEdition</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.property.privateIpEnabled">PrivateIpEnabled</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.property.privateIpEnabled">PrivateIpEnabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.property.project">Project</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.property.pscEnabled">PscEnabled</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.property.publicIpEnabled">PublicIpEnabled</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.property.pscEnabled">PscEnabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.property.publicIpEnabled">PublicIpEnabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.property.region">Region</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.property.reservedRange">ReservedRange</a></code> | <code>string</code> | *No description.* |
 
@@ -874,20 +874,20 @@ public TerraformProviderGeneratorMetadata TerraformGeneratorMetadata { get; }
 ##### `Connection`<sup>Optional</sup> <a name="Connection" id="@cdktf/provider-google.lookerInstance.LookerInstance.property.connection"></a>
 
 ```csharp
-public object Connection { get; }
+public SSHProvisionerConnection|WinrmProvisionerConnection Connection { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.SSHProvisionerConnection|HashiCorp.Cdktf.WinrmProvisionerConnection
 
 ---
 
 ##### `Count`<sup>Optional</sup> <a name="Count" id="@cdktf/provider-google.lookerInstance.LookerInstance.property.count"></a>
 
 ```csharp
-public object Count { get; }
+public double|TerraformCount Count { get; }
 ```
 
-- *Type:* object
+- *Type:* double|HashiCorp.Cdktf.TerraformCount
 
 ---
 
@@ -934,10 +934,10 @@ public TerraformProvider Provider { get; }
 ##### `Provisioners`<sup>Optional</sup> <a name="Provisioners" id="@cdktf/provider-google.lookerInstance.LookerInstance.property.provisioners"></a>
 
 ```csharp
-public object[] Provisioners { get; }
+public (FileProvisioner|LocalExecProvisioner|RemoteExecProvisioner)[] Provisioners { get; }
 ```
 
-- *Type:* object[]
+- *Type:* HashiCorp.Cdktf.FileProvisioner|HashiCorp.Cdktf.LocalExecProvisioner|HashiCorp.Cdktf.RemoteExecProvisioner[]
 
 ---
 
@@ -1164,10 +1164,10 @@ public LookerInstanceEncryptionConfig EncryptionConfigInput { get; }
 ##### `FipsEnabledInput`<sup>Optional</sup> <a name="FipsEnabledInput" id="@cdktf/provider-google.lookerInstance.LookerInstance.property.fipsEnabledInput"></a>
 
 ```csharp
-public object FipsEnabledInput { get; }
+public bool|IResolvable FipsEnabledInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -1224,10 +1224,10 @@ public string PlatformEditionInput { get; }
 ##### `PrivateIpEnabledInput`<sup>Optional</sup> <a name="PrivateIpEnabledInput" id="@cdktf/provider-google.lookerInstance.LookerInstance.property.privateIpEnabledInput"></a>
 
 ```csharp
-public object PrivateIpEnabledInput { get; }
+public bool|IResolvable PrivateIpEnabledInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -1254,20 +1254,20 @@ public LookerInstancePscConfig PscConfigInput { get; }
 ##### `PscEnabledInput`<sup>Optional</sup> <a name="PscEnabledInput" id="@cdktf/provider-google.lookerInstance.LookerInstance.property.pscEnabledInput"></a>
 
 ```csharp
-public object PscEnabledInput { get; }
+public bool|IResolvable PscEnabledInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
 ##### `PublicIpEnabledInput`<sup>Optional</sup> <a name="PublicIpEnabledInput" id="@cdktf/provider-google.lookerInstance.LookerInstance.property.publicIpEnabledInput"></a>
 
 ```csharp
-public object PublicIpEnabledInput { get; }
+public bool|IResolvable PublicIpEnabledInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -1294,10 +1294,10 @@ public string ReservedRangeInput { get; }
 ##### `TimeoutsInput`<sup>Optional</sup> <a name="TimeoutsInput" id="@cdktf/provider-google.lookerInstance.LookerInstance.property.timeoutsInput"></a>
 
 ```csharp
-public object TimeoutsInput { get; }
+public IResolvable|LookerInstanceTimeouts TimeoutsInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.lookerInstance.LookerInstanceTimeouts">LookerInstanceTimeouts</a>
 
 ---
 
@@ -1334,10 +1334,10 @@ public string DeletionPolicy { get; }
 ##### `FipsEnabled`<sup>Required</sup> <a name="FipsEnabled" id="@cdktf/provider-google.lookerInstance.LookerInstance.property.fipsEnabled"></a>
 
 ```csharp
-public object FipsEnabled { get; }
+public bool|IResolvable FipsEnabled { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -1374,10 +1374,10 @@ public string PlatformEdition { get; }
 ##### `PrivateIpEnabled`<sup>Required</sup> <a name="PrivateIpEnabled" id="@cdktf/provider-google.lookerInstance.LookerInstance.property.privateIpEnabled"></a>
 
 ```csharp
-public object PrivateIpEnabled { get; }
+public bool|IResolvable PrivateIpEnabled { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -1394,20 +1394,20 @@ public string Project { get; }
 ##### `PscEnabled`<sup>Required</sup> <a name="PscEnabled" id="@cdktf/provider-google.lookerInstance.LookerInstance.property.pscEnabled"></a>
 
 ```csharp
-public object PscEnabled { get; }
+public bool|IResolvable PscEnabled { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
 ##### `PublicIpEnabled`<sup>Required</sup> <a name="PublicIpEnabled" id="@cdktf/provider-google.lookerInstance.LookerInstance.property.publicIpEnabled"></a>
 
 ```csharp
-public object PublicIpEnabled { get; }
+public bool|IResolvable PublicIpEnabled { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -1498,13 +1498,13 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 using HashiCorp.Cdktf.Providers.Google;
 
 new LookerInstanceConfig {
-    object Connection = null,
-    object Count = null,
+    SSHProvisionerConnection|WinrmProvisionerConnection Connection = null,
+    double|TerraformCount Count = null,
     ITerraformDependable[] DependsOn = null,
     ITerraformIterator ForEach = null,
     TerraformResourceLifecycle Lifecycle = null,
     TerraformProvider Provider = null,
-    object[] Provisioners = null,
+    (FileProvisioner|LocalExecProvisioner|RemoteExecProvisioner)[] Provisioners = null,
     string Name,
     LookerInstanceOauthConfig OauthConfig,
     LookerInstanceAdminSettings AdminSettings = null,
@@ -1513,15 +1513,15 @@ new LookerInstanceConfig {
     string DeletionPolicy = null,
     LookerInstanceDenyMaintenancePeriod DenyMaintenancePeriod = null,
     LookerInstanceEncryptionConfig EncryptionConfig = null,
-    object FipsEnabled = null,
+    bool|IResolvable FipsEnabled = null,
     string Id = null,
     LookerInstanceMaintenanceWindow MaintenanceWindow = null,
     string PlatformEdition = null,
-    object PrivateIpEnabled = null,
+    bool|IResolvable PrivateIpEnabled = null,
     string Project = null,
     LookerInstancePscConfig PscConfig = null,
-    object PscEnabled = null,
-    object PublicIpEnabled = null,
+    bool|IResolvable PscEnabled = null,
+    bool|IResolvable PublicIpEnabled = null,
     string Region = null,
     string ReservedRange = null,
     LookerInstanceTimeouts Timeouts = null,
@@ -1533,13 +1533,13 @@ new LookerInstanceConfig {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceConfig.property.connection">Connection</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceConfig.property.count">Count</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceConfig.property.connection">Connection</a></code> | <code>HashiCorp.Cdktf.SSHProvisionerConnection\|HashiCorp.Cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceConfig.property.count">Count</a></code> | <code>double\|HashiCorp.Cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceConfig.property.dependsOn">DependsOn</a></code> | <code>HashiCorp.Cdktf.ITerraformDependable[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceConfig.property.forEach">ForEach</a></code> | <code>HashiCorp.Cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceConfig.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceConfig.property.provider">Provider</a></code> | <code>HashiCorp.Cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceConfig.property.provisioners">Provisioners</a></code> | <code>object[]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceConfig.property.provisioners">Provisioners</a></code> | <code>HashiCorp.Cdktf.FileProvisioner\|HashiCorp.Cdktf.LocalExecProvisioner\|HashiCorp.Cdktf.RemoteExecProvisioner[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceConfig.property.name">Name</a></code> | <code>string</code> | The ID of the instance or a fully qualified identifier for the instance. |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceConfig.property.oauthConfig">OauthConfig</a></code> | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceOauthConfig">LookerInstanceOauthConfig</a></code> | oauth_config block. |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceConfig.property.adminSettings">AdminSettings</a></code> | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceAdminSettings">LookerInstanceAdminSettings</a></code> | admin_settings block. |
@@ -1548,15 +1548,15 @@ new LookerInstanceConfig {
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceConfig.property.deletionPolicy">DeletionPolicy</a></code> | <code>string</code> | Policy to determine if the cluster should be deleted forcefully. |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceConfig.property.denyMaintenancePeriod">DenyMaintenancePeriod</a></code> | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceDenyMaintenancePeriod">LookerInstanceDenyMaintenancePeriod</a></code> | deny_maintenance_period block. |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceConfig.property.encryptionConfig">EncryptionConfig</a></code> | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceEncryptionConfig">LookerInstanceEncryptionConfig</a></code> | encryption_config block. |
-| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceConfig.property.fipsEnabled">FipsEnabled</a></code> | <code>object</code> | FIPS 140-2 Encryption enablement for Looker (Google Cloud Core). |
+| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceConfig.property.fipsEnabled">FipsEnabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | FIPS 140-2 Encryption enablement for Looker (Google Cloud Core). |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/looker_instance#id LookerInstance#id}. |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceConfig.property.maintenanceWindow">MaintenanceWindow</a></code> | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceMaintenanceWindow">LookerInstanceMaintenanceWindow</a></code> | maintenance_window block. |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceConfig.property.platformEdition">PlatformEdition</a></code> | <code>string</code> | Platform editions for a Looker instance. |
-| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceConfig.property.privateIpEnabled">PrivateIpEnabled</a></code> | <code>object</code> | Whether private IP is enabled on the Looker instance. |
+| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceConfig.property.privateIpEnabled">PrivateIpEnabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Whether private IP is enabled on the Looker instance. |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceConfig.property.project">Project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/looker_instance#project LookerInstance#project}. |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceConfig.property.pscConfig">PscConfig</a></code> | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstancePscConfig">LookerInstancePscConfig</a></code> | psc_config block. |
-| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceConfig.property.pscEnabled">PscEnabled</a></code> | <code>object</code> | Whether Public Service Connect (PSC) is enabled on the Looker instance. |
-| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceConfig.property.publicIpEnabled">PublicIpEnabled</a></code> | <code>object</code> | Whether public IP is enabled on the Looker instance. |
+| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceConfig.property.pscEnabled">PscEnabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Whether Public Service Connect (PSC) is enabled on the Looker instance. |
+| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceConfig.property.publicIpEnabled">PublicIpEnabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Whether public IP is enabled on the Looker instance. |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceConfig.property.region">Region</a></code> | <code>string</code> | The name of the Looker region of the instance. |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceConfig.property.reservedRange">ReservedRange</a></code> | <code>string</code> | Name of a reserved IP address range within the consumer network, to be used for private service access connection. |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceTimeouts">LookerInstanceTimeouts</a></code> | timeouts block. |
@@ -1567,20 +1567,20 @@ new LookerInstanceConfig {
 ##### `Connection`<sup>Optional</sup> <a name="Connection" id="@cdktf/provider-google.lookerInstance.LookerInstanceConfig.property.connection"></a>
 
 ```csharp
-public object Connection { get; set; }
+public SSHProvisionerConnection|WinrmProvisionerConnection Connection { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.SSHProvisionerConnection|HashiCorp.Cdktf.WinrmProvisionerConnection
 
 ---
 
 ##### `Count`<sup>Optional</sup> <a name="Count" id="@cdktf/provider-google.lookerInstance.LookerInstanceConfig.property.count"></a>
 
 ```csharp
-public object Count { get; set; }
+public double|TerraformCount Count { get; set; }
 ```
 
-- *Type:* object
+- *Type:* double|HashiCorp.Cdktf.TerraformCount
 
 ---
 
@@ -1627,10 +1627,10 @@ public TerraformProvider Provider { get; set; }
 ##### `Provisioners`<sup>Optional</sup> <a name="Provisioners" id="@cdktf/provider-google.lookerInstance.LookerInstanceConfig.property.provisioners"></a>
 
 ```csharp
-public object[] Provisioners { get; set; }
+public (FileProvisioner|LocalExecProvisioner|RemoteExecProvisioner)[] Provisioners { get; set; }
 ```
 
-- *Type:* object[]
+- *Type:* HashiCorp.Cdktf.FileProvisioner|HashiCorp.Cdktf.LocalExecProvisioner|HashiCorp.Cdktf.RemoteExecProvisioner[]
 
 ---
 
@@ -1753,10 +1753,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `FipsEnabled`<sup>Optional</sup> <a name="FipsEnabled" id="@cdktf/provider-google.lookerInstance.LookerInstanceConfig.property.fipsEnabled"></a>
 
 ```csharp
-public object FipsEnabled { get; set; }
+public bool|IResolvable FipsEnabled { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 FIPS 140-2 Encryption enablement for Looker (Google Cloud Core).
 
@@ -1824,10 +1824,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `PrivateIpEnabled`<sup>Optional</sup> <a name="PrivateIpEnabled" id="@cdktf/provider-google.lookerInstance.LookerInstanceConfig.property.privateIpEnabled"></a>
 
 ```csharp
-public object PrivateIpEnabled { get; set; }
+public bool|IResolvable PrivateIpEnabled { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Whether private IP is enabled on the Looker instance.
 
@@ -1864,10 +1864,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `PscEnabled`<sup>Optional</sup> <a name="PscEnabled" id="@cdktf/provider-google.lookerInstance.LookerInstanceConfig.property.pscEnabled"></a>
 
 ```csharp
-public object PscEnabled { get; set; }
+public bool|IResolvable PscEnabled { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Whether Public Service Connect (PSC) is enabled on the Looker instance.
 
@@ -1878,10 +1878,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `PublicIpEnabled`<sup>Optional</sup> <a name="PublicIpEnabled" id="@cdktf/provider-google.lookerInstance.LookerInstanceConfig.property.publicIpEnabled"></a>
 
 ```csharp
-public object PublicIpEnabled { get; set; }
+public bool|IResolvable PublicIpEnabled { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Whether public IP is enabled on the Looker instance.
 
@@ -2506,7 +2506,7 @@ using HashiCorp.Cdktf.Providers.Google;
 
 new LookerInstancePscConfig {
     string[] AllowedVpcs = null,
-    object ServiceAttachments = null
+    IResolvable|LookerInstancePscConfigServiceAttachments[] ServiceAttachments = null
 };
 ```
 
@@ -2515,7 +2515,7 @@ new LookerInstancePscConfig {
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstancePscConfig.property.allowedVpcs">AllowedVpcs</a></code> | <code>string[]</code> | List of VPCs that are allowed ingress into the Looker instance. |
-| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstancePscConfig.property.serviceAttachments">ServiceAttachments</a></code> | <code>object</code> | service_attachments block. |
+| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstancePscConfig.property.serviceAttachments">ServiceAttachments</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.lookerInstance.LookerInstancePscConfigServiceAttachments">LookerInstancePscConfigServiceAttachments</a>[]</code> | service_attachments block. |
 
 ---
 
@@ -2536,10 +2536,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `ServiceAttachments`<sup>Optional</sup> <a name="ServiceAttachments" id="@cdktf/provider-google.lookerInstance.LookerInstancePscConfig.property.serviceAttachments"></a>
 
 ```csharp
-public object ServiceAttachments { get; set; }
+public IResolvable|LookerInstancePscConfigServiceAttachments[] ServiceAttachments { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.lookerInstance.LookerInstancePscConfigServiceAttachments">LookerInstancePscConfigServiceAttachments</a>[]
 
 service_attachments block.
 
@@ -6156,12 +6156,12 @@ Returns a reversible string representation.
 ##### `PutServiceAttachments` <a name="PutServiceAttachments" id="@cdktf/provider-google.lookerInstance.LookerInstancePscConfigOutputReference.putServiceAttachments"></a>
 
 ```csharp
-private void PutServiceAttachments(object Value)
+private void PutServiceAttachments(IResolvable|LookerInstancePscConfigServiceAttachments[] Value)
 ```
 
 ###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-google.lookerInstance.LookerInstancePscConfigOutputReference.putServiceAttachments.parameter.value"></a>
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.lookerInstance.LookerInstancePscConfigServiceAttachments">LookerInstancePscConfigServiceAttachments</a>[]
 
 ---
 
@@ -6187,7 +6187,7 @@ private void ResetServiceAttachments()
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstancePscConfigOutputReference.property.lookerServiceAttachmentUri">LookerServiceAttachmentUri</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstancePscConfigOutputReference.property.serviceAttachments">ServiceAttachments</a></code> | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstancePscConfigServiceAttachmentsList">LookerInstancePscConfigServiceAttachmentsList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstancePscConfigOutputReference.property.allowedVpcsInput">AllowedVpcsInput</a></code> | <code>string[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstancePscConfigOutputReference.property.serviceAttachmentsInput">ServiceAttachmentsInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstancePscConfigOutputReference.property.serviceAttachmentsInput">ServiceAttachmentsInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.lookerInstance.LookerInstancePscConfigServiceAttachments">LookerInstancePscConfigServiceAttachments</a>[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstancePscConfigOutputReference.property.allowedVpcs">AllowedVpcs</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstancePscConfigOutputReference.property.internalValue">InternalValue</a></code> | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstancePscConfig">LookerInstancePscConfig</a></code> | *No description.* |
 
@@ -6250,10 +6250,10 @@ public string[] AllowedVpcsInput { get; }
 ##### `ServiceAttachmentsInput`<sup>Optional</sup> <a name="ServiceAttachmentsInput" id="@cdktf/provider-google.lookerInstance.LookerInstancePscConfigOutputReference.property.serviceAttachmentsInput"></a>
 
 ```csharp
-public object ServiceAttachmentsInput { get; }
+public IResolvable|LookerInstancePscConfigServiceAttachments[] ServiceAttachmentsInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.lookerInstance.LookerInstancePscConfigServiceAttachments">LookerInstancePscConfigServiceAttachments</a>[]
 
 ---
 
@@ -6399,7 +6399,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstancePscConfigServiceAttachmentsList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstancePscConfigServiceAttachmentsList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstancePscConfigServiceAttachmentsList.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstancePscConfigServiceAttachmentsList.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.lookerInstance.LookerInstancePscConfigServiceAttachments">LookerInstancePscConfigServiceAttachments</a>[]</code> | *No description.* |
 
 ---
 
@@ -6430,10 +6430,10 @@ public string Fqn { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.lookerInstance.LookerInstancePscConfigServiceAttachmentsList.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|LookerInstancePscConfigServiceAttachments[] InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.lookerInstance.LookerInstancePscConfigServiceAttachments">LookerInstancePscConfigServiceAttachments</a>[]
 
 ---
 
@@ -6685,7 +6685,7 @@ private void ResetTargetServiceAttachmentUri()
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstancePscConfigServiceAttachmentsOutputReference.property.targetServiceAttachmentUriInput">TargetServiceAttachmentUriInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstancePscConfigServiceAttachmentsOutputReference.property.localFqdn">LocalFqdn</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstancePscConfigServiceAttachmentsOutputReference.property.targetServiceAttachmentUri">TargetServiceAttachmentUri</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstancePscConfigServiceAttachmentsOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstancePscConfigServiceAttachmentsOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.lookerInstance.LookerInstancePscConfigServiceAttachments">LookerInstancePscConfigServiceAttachments</a></code> | *No description.* |
 
 ---
 
@@ -6766,10 +6766,10 @@ public string TargetServiceAttachmentUri { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.lookerInstance.LookerInstancePscConfigServiceAttachmentsOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|LookerInstancePscConfigServiceAttachments InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.lookerInstance.LookerInstancePscConfigServiceAttachments">LookerInstancePscConfigServiceAttachments</a>
 
 ---
 
@@ -7011,7 +7011,7 @@ private void ResetUpdate()
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceTimeoutsOutputReference.property.create">Create</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceTimeoutsOutputReference.property.delete">Delete</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceTimeoutsOutputReference.property.update">Update</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceTimeoutsOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceTimeoutsOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.lookerInstance.LookerInstanceTimeouts">LookerInstanceTimeouts</a></code> | *No description.* |
 
 ---
 
@@ -7102,10 +7102,10 @@ public string Update { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.lookerInstance.LookerInstanceTimeoutsOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|LookerInstanceTimeouts InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.lookerInstance.LookerInstanceTimeouts">LookerInstanceTimeouts</a>
 
 ---
 

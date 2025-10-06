@@ -14,22 +14,22 @@ from cdktf_cdktf_provider_google import compute_firewall
 computeFirewall.ComputeFirewall(
   scope: Construct,
   id: str,
-  connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection] = None,
-  count: typing.Union[typing.Union[int, float], TerraformCount] = None,
+  connection: SSHProvisionerConnection | WinrmProvisionerConnection = None,
+  count: typing.Union[int, float] | TerraformCount = None,
   depends_on: typing.List[ITerraformDependable] = None,
   for_each: ITerraformIterator = None,
   lifecycle: TerraformResourceLifecycle = None,
   provider: TerraformProvider = None,
-  provisioners: typing.List[typing.Union[FileProvisioner, LocalExecProvisioner, RemoteExecProvisioner]] = None,
+  provisioners: typing.List[FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner] = None,
   name: str,
   network: str,
-  allow: typing.Union[IResolvable, typing.List[ComputeFirewallAllow]] = None,
-  deny: typing.Union[IResolvable, typing.List[ComputeFirewallDeny]] = None,
+  allow: IResolvable | typing.List[ComputeFirewallAllow] = None,
+  deny: IResolvable | typing.List[ComputeFirewallDeny] = None,
   description: str = None,
   destination_ranges: typing.List[str] = None,
   direction: str = None,
-  disabled: typing.Union[bool, IResolvable] = None,
-  enable_logging: typing.Union[bool, IResolvable] = None,
+  disabled: bool | IResolvable = None,
+  enable_logging: bool | IResolvable = None,
   id: str = None,
   log_config: ComputeFirewallLogConfig = None,
   params: ComputeFirewallParams = None,
@@ -48,22 +48,22 @@ computeFirewall.ComputeFirewall(
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.computeFirewall.ComputeFirewall.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | The scope in which to define this construct. |
 | <code><a href="#@cdktf/provider-google.computeFirewall.ComputeFirewall.Initializer.parameter.id">id</a></code> | <code>str</code> | The scoped construct ID. |
-| <code><a href="#@cdktf/provider-google.computeFirewall.ComputeFirewall.Initializer.parameter.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.computeFirewall.ComputeFirewall.Initializer.parameter.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeFirewall.ComputeFirewall.Initializer.parameter.connection">connection</a></code> | <code>cdktf.SSHProvisionerConnection \| cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeFirewall.ComputeFirewall.Initializer.parameter.count">count</a></code> | <code>typing.Union[int, float] \| cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeFirewall.ComputeFirewall.Initializer.parameter.dependsOn">depends_on</a></code> | <code>typing.List[cdktf.ITerraformDependable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeFirewall.ComputeFirewall.Initializer.parameter.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeFirewall.ComputeFirewall.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeFirewall.ComputeFirewall.Initializer.parameter.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.computeFirewall.ComputeFirewall.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeFirewall.ComputeFirewall.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeFirewall.ComputeFirewall.Initializer.parameter.name">name</a></code> | <code>str</code> | Name of the resource. |
 | <code><a href="#@cdktf/provider-google.computeFirewall.ComputeFirewall.Initializer.parameter.network">network</a></code> | <code>str</code> | The name or self_link of the network to attach this firewall to. |
-| <code><a href="#@cdktf/provider-google.computeFirewall.ComputeFirewall.Initializer.parameter.allow">allow</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.computeFirewall.ComputeFirewallAllow">ComputeFirewallAllow</a>]]</code> | allow block. |
-| <code><a href="#@cdktf/provider-google.computeFirewall.ComputeFirewall.Initializer.parameter.deny">deny</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.computeFirewall.ComputeFirewallDeny">ComputeFirewallDeny</a>]]</code> | deny block. |
+| <code><a href="#@cdktf/provider-google.computeFirewall.ComputeFirewall.Initializer.parameter.allow">allow</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.computeFirewall.ComputeFirewallAllow">ComputeFirewallAllow</a>]</code> | allow block. |
+| <code><a href="#@cdktf/provider-google.computeFirewall.ComputeFirewall.Initializer.parameter.deny">deny</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.computeFirewall.ComputeFirewallDeny">ComputeFirewallDeny</a>]</code> | deny block. |
 | <code><a href="#@cdktf/provider-google.computeFirewall.ComputeFirewall.Initializer.parameter.description">description</a></code> | <code>str</code> | An optional description of this resource. Provide this property when you create the resource. |
 | <code><a href="#@cdktf/provider-google.computeFirewall.ComputeFirewall.Initializer.parameter.destinationRanges">destination_ranges</a></code> | <code>typing.List[str]</code> | If destination ranges are specified, the firewall will apply only to traffic that has destination IP address in these ranges. |
 | <code><a href="#@cdktf/provider-google.computeFirewall.ComputeFirewall.Initializer.parameter.direction">direction</a></code> | <code>str</code> | Direction of traffic to which this firewall applies; |
-| <code><a href="#@cdktf/provider-google.computeFirewall.ComputeFirewall.Initializer.parameter.disabled">disabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Denotes whether the firewall rule is disabled, i.e not applied to the network it is associated with. When set to true, the firewall rule is not enforced and the network behaves as if it did not exist. If this is unspecified, the firewall rule will be enabled. |
-| <code><a href="#@cdktf/provider-google.computeFirewall.ComputeFirewall.Initializer.parameter.enableLogging">enable_logging</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | This field denotes whether to enable logging for a particular firewall rule. |
+| <code><a href="#@cdktf/provider-google.computeFirewall.ComputeFirewall.Initializer.parameter.disabled">disabled</a></code> | <code>bool \| cdktf.IResolvable</code> | Denotes whether the firewall rule is disabled, i.e not applied to the network it is associated with. When set to true, the firewall rule is not enforced and the network behaves as if it did not exist. If this is unspecified, the firewall rule will be enabled. |
+| <code><a href="#@cdktf/provider-google.computeFirewall.ComputeFirewall.Initializer.parameter.enableLogging">enable_logging</a></code> | <code>bool \| cdktf.IResolvable</code> | This field denotes whether to enable logging for a particular firewall rule. |
 | <code><a href="#@cdktf/provider-google.computeFirewall.ComputeFirewall.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/compute_firewall#id ComputeFirewall#id}. |
 | <code><a href="#@cdktf/provider-google.computeFirewall.ComputeFirewall.Initializer.parameter.logConfig">log_config</a></code> | <code><a href="#@cdktf/provider-google.computeFirewall.ComputeFirewallLogConfig">ComputeFirewallLogConfig</a></code> | log_config block. |
 | <code><a href="#@cdktf/provider-google.computeFirewall.ComputeFirewall.Initializer.parameter.params">params</a></code> | <code><a href="#@cdktf/provider-google.computeFirewall.ComputeFirewallParams">ComputeFirewallParams</a></code> | params block. |
@@ -98,13 +98,13 @@ Must be unique amongst siblings in the same scope
 
 ##### `connection`<sup>Optional</sup> <a name="connection" id="@cdktf/provider-google.computeFirewall.ComputeFirewall.Initializer.parameter.connection"></a>
 
-- *Type:* typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]
+- *Type:* cdktf.SSHProvisionerConnection | cdktf.WinrmProvisionerConnection
 
 ---
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.computeFirewall.ComputeFirewall.Initializer.parameter.count"></a>
 
-- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
+- *Type:* typing.Union[int, float] | cdktf.TerraformCount
 
 ---
 
@@ -134,7 +134,7 @@ Must be unique amongst siblings in the same scope
 
 ##### `provisioners`<sup>Optional</sup> <a name="provisioners" id="@cdktf/provider-google.computeFirewall.ComputeFirewall.Initializer.parameter.provisioners"></a>
 
-- *Type:* typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]
+- *Type:* typing.List[cdktf.FileProvisioner | cdktf.LocalExecProvisioner | cdktf.RemoteExecProvisioner]
 
 ---
 
@@ -168,7 +168,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `allow`<sup>Optional</sup> <a name="allow" id="@cdktf/provider-google.computeFirewall.ComputeFirewall.Initializer.parameter.allow"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.computeFirewall.ComputeFirewallAllow">ComputeFirewallAllow</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.computeFirewall.ComputeFirewallAllow">ComputeFirewallAllow</a>]
 
 allow block.
 
@@ -178,7 +178,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `deny`<sup>Optional</sup> <a name="deny" id="@cdktf/provider-google.computeFirewall.ComputeFirewall.Initializer.parameter.deny"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.computeFirewall.ComputeFirewallDeny">ComputeFirewallDeny</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.computeFirewall.ComputeFirewallDeny">ComputeFirewallDeny</a>]
 
 deny block.
 
@@ -225,7 +225,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `disabled`<sup>Optional</sup> <a name="disabled" id="@cdktf/provider-google.computeFirewall.ComputeFirewall.Initializer.parameter.disabled"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Denotes whether the firewall rule is disabled, i.e not applied to the network it is associated with. When set to true, the firewall rule is not enforced and the network behaves as if it did not exist. If this is unspecified, the firewall rule will be enabled.
 
@@ -235,7 +235,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `enable_logging`<sup>Optional</sup> <a name="enable_logging" id="@cdktf/provider-google.computeFirewall.ComputeFirewall.Initializer.parameter.enableLogging"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 This field denotes whether to enable logging for a particular firewall rule.
 
@@ -674,7 +674,7 @@ def get_string_map_attribute(
 ##### `has_resource_move` <a name="has_resource_move" id="@cdktf/provider-google.computeFirewall.ComputeFirewall.hasResourceMove"></a>
 
 ```python
-def has_resource_move() -> typing.Union[TerraformResourceMoveByTarget, TerraformResourceMoveById]
+def has_resource_move() -> TerraformResourceMoveByTarget | TerraformResourceMoveById
 ```
 
 ##### `import_from` <a name="import_from" id="@cdktf/provider-google.computeFirewall.ComputeFirewall.importFrom"></a>
@@ -737,7 +737,7 @@ Full id of resource being moved from, e.g. "aws_s3_bucket.example".
 ```python
 def move_to(
   move_target: str,
-  index: typing.Union[str, typing.Union[int, float]] = None
+  index: str | typing.Union[int, float] = None
 ) -> None
 ```
 
@@ -753,7 +753,7 @@ The previously set user defined string set by .addMoveTarget() corresponding to 
 
 ###### `index`<sup>Optional</sup> <a name="index" id="@cdktf/provider-google.computeFirewall.ComputeFirewall.moveTo.parameter.index"></a>
 
-- *Type:* typing.Union[str, typing.Union[int, float]]
+- *Type:* str | typing.Union[int, float]
 
 Optional The index corresponding to the key the resource is to appear in the foreach of a resource to move to.
 
@@ -781,13 +781,13 @@ Full id of resource to move to, e.g. "aws_s3_bucket.example".
 
 ```python
 def put_allow(
-  value: typing.Union[IResolvable, typing.List[ComputeFirewallAllow]]
+  value: IResolvable | typing.List[ComputeFirewallAllow]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.computeFirewall.ComputeFirewall.putAllow.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.computeFirewall.ComputeFirewallAllow">ComputeFirewallAllow</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.computeFirewall.ComputeFirewallAllow">ComputeFirewallAllow</a>]
 
 ---
 
@@ -795,13 +795,13 @@ def put_allow(
 
 ```python
 def put_deny(
-  value: typing.Union[IResolvable, typing.List[ComputeFirewallDeny]]
+  value: IResolvable | typing.List[ComputeFirewallDeny]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.computeFirewall.ComputeFirewall.putDeny.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.computeFirewall.ComputeFirewallDeny">ComputeFirewallDeny</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.computeFirewall.ComputeFirewallDeny">ComputeFirewallDeny</a>]
 
 ---
 
@@ -1127,13 +1127,13 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.5
 | <code><a href="#@cdktf/provider-google.computeFirewall.ComputeFirewall.property.terraformMetaArguments">terraform_meta_arguments</a></code> | <code>typing.Mapping[typing.Any]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeFirewall.ComputeFirewall.property.terraformResourceType">terraform_resource_type</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeFirewall.ComputeFirewall.property.terraformGeneratorMetadata">terraform_generator_metadata</a></code> | <code>cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.computeFirewall.ComputeFirewall.property.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.computeFirewall.ComputeFirewall.property.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeFirewall.ComputeFirewall.property.connection">connection</a></code> | <code>cdktf.SSHProvisionerConnection \| cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeFirewall.ComputeFirewall.property.count">count</a></code> | <code>typing.Union[int, float] \| cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeFirewall.ComputeFirewall.property.dependsOn">depends_on</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeFirewall.ComputeFirewall.property.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeFirewall.ComputeFirewall.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeFirewall.ComputeFirewall.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.computeFirewall.ComputeFirewall.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeFirewall.ComputeFirewall.property.provisioners">provisioners</a></code> | <code>typing.List[cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeFirewall.ComputeFirewall.property.allow">allow</a></code> | <code><a href="#@cdktf/provider-google.computeFirewall.ComputeFirewallAllowList">ComputeFirewallAllowList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeFirewall.ComputeFirewall.property.creationTimestamp">creation_timestamp</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeFirewall.ComputeFirewall.property.deny">deny</a></code> | <code><a href="#@cdktf/provider-google.computeFirewall.ComputeFirewallDenyList">ComputeFirewallDenyList</a></code> | *No description.* |
@@ -1141,13 +1141,13 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.5
 | <code><a href="#@cdktf/provider-google.computeFirewall.ComputeFirewall.property.params">params</a></code> | <code><a href="#@cdktf/provider-google.computeFirewall.ComputeFirewallParamsOutputReference">ComputeFirewallParamsOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeFirewall.ComputeFirewall.property.selfLink">self_link</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeFirewall.ComputeFirewall.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-google.computeFirewall.ComputeFirewallTimeoutsOutputReference">ComputeFirewallTimeoutsOutputReference</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.computeFirewall.ComputeFirewall.property.allowInput">allow_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.computeFirewall.ComputeFirewallAllow">ComputeFirewallAllow</a>]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.computeFirewall.ComputeFirewall.property.denyInput">deny_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.computeFirewall.ComputeFirewallDeny">ComputeFirewallDeny</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeFirewall.ComputeFirewall.property.allowInput">allow_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.computeFirewall.ComputeFirewallAllow">ComputeFirewallAllow</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeFirewall.ComputeFirewall.property.denyInput">deny_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.computeFirewall.ComputeFirewallDeny">ComputeFirewallDeny</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeFirewall.ComputeFirewall.property.descriptionInput">description_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeFirewall.ComputeFirewall.property.destinationRangesInput">destination_ranges_input</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeFirewall.ComputeFirewall.property.directionInput">direction_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.computeFirewall.ComputeFirewall.property.disabledInput">disabled_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.computeFirewall.ComputeFirewall.property.enableLoggingInput">enable_logging_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeFirewall.ComputeFirewall.property.disabledInput">disabled_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeFirewall.ComputeFirewall.property.enableLoggingInput">enable_logging_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeFirewall.ComputeFirewall.property.idInput">id_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeFirewall.ComputeFirewall.property.logConfigInput">log_config_input</a></code> | <code><a href="#@cdktf/provider-google.computeFirewall.ComputeFirewallLogConfig">ComputeFirewallLogConfig</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeFirewall.ComputeFirewall.property.nameInput">name_input</a></code> | <code>str</code> | *No description.* |
@@ -1160,12 +1160,12 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.5
 | <code><a href="#@cdktf/provider-google.computeFirewall.ComputeFirewall.property.sourceTagsInput">source_tags_input</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeFirewall.ComputeFirewall.property.targetServiceAccountsInput">target_service_accounts_input</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeFirewall.ComputeFirewall.property.targetTagsInput">target_tags_input</a></code> | <code>typing.List[str]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.computeFirewall.ComputeFirewall.property.timeoutsInput">timeouts_input</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.computeFirewall.ComputeFirewallTimeouts">ComputeFirewallTimeouts</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeFirewall.ComputeFirewall.property.timeoutsInput">timeouts_input</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.computeFirewall.ComputeFirewallTimeouts">ComputeFirewallTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeFirewall.ComputeFirewall.property.description">description</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeFirewall.ComputeFirewall.property.destinationRanges">destination_ranges</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeFirewall.ComputeFirewall.property.direction">direction</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.computeFirewall.ComputeFirewall.property.disabled">disabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.computeFirewall.ComputeFirewall.property.enableLogging">enable_logging</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeFirewall.ComputeFirewall.property.disabled">disabled</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeFirewall.ComputeFirewall.property.enableLogging">enable_logging</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeFirewall.ComputeFirewall.property.id">id</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeFirewall.ComputeFirewall.property.name">name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeFirewall.ComputeFirewall.property.network">network</a></code> | <code>str</code> | *No description.* |
@@ -1254,20 +1254,20 @@ terraform_generator_metadata: TerraformProviderGeneratorMetadata
 ##### `connection`<sup>Optional</sup> <a name="connection" id="@cdktf/provider-google.computeFirewall.ComputeFirewall.property.connection"></a>
 
 ```python
-connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection]
+connection: SSHProvisionerConnection | WinrmProvisionerConnection
 ```
 
-- *Type:* typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]
+- *Type:* cdktf.SSHProvisionerConnection | cdktf.WinrmProvisionerConnection
 
 ---
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.computeFirewall.ComputeFirewall.property.count"></a>
 
 ```python
-count: typing.Union[typing.Union[int, float], TerraformCount]
+count: typing.Union[int, float] | TerraformCount
 ```
 
-- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
+- *Type:* typing.Union[int, float] | cdktf.TerraformCount
 
 ---
 
@@ -1314,10 +1314,10 @@ provider: TerraformProvider
 ##### `provisioners`<sup>Optional</sup> <a name="provisioners" id="@cdktf/provider-google.computeFirewall.ComputeFirewall.property.provisioners"></a>
 
 ```python
-provisioners: typing.List[typing.Union[FileProvisioner, LocalExecProvisioner, RemoteExecProvisioner]]
+provisioners: typing.List[FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner]
 ```
 
-- *Type:* typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]
+- *Type:* typing.List[cdktf.FileProvisioner | cdktf.LocalExecProvisioner | cdktf.RemoteExecProvisioner]
 
 ---
 
@@ -1394,20 +1394,20 @@ timeouts: ComputeFirewallTimeoutsOutputReference
 ##### `allow_input`<sup>Optional</sup> <a name="allow_input" id="@cdktf/provider-google.computeFirewall.ComputeFirewall.property.allowInput"></a>
 
 ```python
-allow_input: typing.Union[IResolvable, typing.List[ComputeFirewallAllow]]
+allow_input: IResolvable | typing.List[ComputeFirewallAllow]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.computeFirewall.ComputeFirewallAllow">ComputeFirewallAllow</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.computeFirewall.ComputeFirewallAllow">ComputeFirewallAllow</a>]
 
 ---
 
 ##### `deny_input`<sup>Optional</sup> <a name="deny_input" id="@cdktf/provider-google.computeFirewall.ComputeFirewall.property.denyInput"></a>
 
 ```python
-deny_input: typing.Union[IResolvable, typing.List[ComputeFirewallDeny]]
+deny_input: IResolvable | typing.List[ComputeFirewallDeny]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.computeFirewall.ComputeFirewallDeny">ComputeFirewallDeny</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.computeFirewall.ComputeFirewallDeny">ComputeFirewallDeny</a>]
 
 ---
 
@@ -1444,20 +1444,20 @@ direction_input: str
 ##### `disabled_input`<sup>Optional</sup> <a name="disabled_input" id="@cdktf/provider-google.computeFirewall.ComputeFirewall.property.disabledInput"></a>
 
 ```python
-disabled_input: typing.Union[bool, IResolvable]
+disabled_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `enable_logging_input`<sup>Optional</sup> <a name="enable_logging_input" id="@cdktf/provider-google.computeFirewall.ComputeFirewall.property.enableLoggingInput"></a>
 
 ```python
-enable_logging_input: typing.Union[bool, IResolvable]
+enable_logging_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -1584,10 +1584,10 @@ target_tags_input: typing.List[str]
 ##### `timeouts_input`<sup>Optional</sup> <a name="timeouts_input" id="@cdktf/provider-google.computeFirewall.ComputeFirewall.property.timeoutsInput"></a>
 
 ```python
-timeouts_input: typing.Union[IResolvable, ComputeFirewallTimeouts]
+timeouts_input: IResolvable | ComputeFirewallTimeouts
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.computeFirewall.ComputeFirewallTimeouts">ComputeFirewallTimeouts</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.computeFirewall.ComputeFirewallTimeouts">ComputeFirewallTimeouts</a>
 
 ---
 
@@ -1624,20 +1624,20 @@ direction: str
 ##### `disabled`<sup>Required</sup> <a name="disabled" id="@cdktf/provider-google.computeFirewall.ComputeFirewall.property.disabled"></a>
 
 ```python
-disabled: typing.Union[bool, IResolvable]
+disabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `enable_logging`<sup>Required</sup> <a name="enable_logging" id="@cdktf/provider-google.computeFirewall.ComputeFirewall.property.enableLogging"></a>
 
 ```python
-enable_logging: typing.Union[bool, IResolvable]
+enable_logging: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -1832,22 +1832,22 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 from cdktf_cdktf_provider_google import compute_firewall
 
 computeFirewall.ComputeFirewallConfig(
-  connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection] = None,
-  count: typing.Union[typing.Union[int, float], TerraformCount] = None,
+  connection: SSHProvisionerConnection | WinrmProvisionerConnection = None,
+  count: typing.Union[int, float] | TerraformCount = None,
   depends_on: typing.List[ITerraformDependable] = None,
   for_each: ITerraformIterator = None,
   lifecycle: TerraformResourceLifecycle = None,
   provider: TerraformProvider = None,
-  provisioners: typing.List[typing.Union[FileProvisioner, LocalExecProvisioner, RemoteExecProvisioner]] = None,
+  provisioners: typing.List[FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner] = None,
   name: str,
   network: str,
-  allow: typing.Union[IResolvable, typing.List[ComputeFirewallAllow]] = None,
-  deny: typing.Union[IResolvable, typing.List[ComputeFirewallDeny]] = None,
+  allow: IResolvable | typing.List[ComputeFirewallAllow] = None,
+  deny: IResolvable | typing.List[ComputeFirewallDeny] = None,
   description: str = None,
   destination_ranges: typing.List[str] = None,
   direction: str = None,
-  disabled: typing.Union[bool, IResolvable] = None,
-  enable_logging: typing.Union[bool, IResolvable] = None,
+  disabled: bool | IResolvable = None,
+  enable_logging: bool | IResolvable = None,
   id: str = None,
   log_config: ComputeFirewallLogConfig = None,
   params: ComputeFirewallParams = None,
@@ -1866,22 +1866,22 @@ computeFirewall.ComputeFirewallConfig(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.computeFirewall.ComputeFirewallConfig.property.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.computeFirewall.ComputeFirewallConfig.property.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeFirewall.ComputeFirewallConfig.property.connection">connection</a></code> | <code>cdktf.SSHProvisionerConnection \| cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeFirewall.ComputeFirewallConfig.property.count">count</a></code> | <code>typing.Union[int, float] \| cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeFirewall.ComputeFirewallConfig.property.dependsOn">depends_on</a></code> | <code>typing.List[cdktf.ITerraformDependable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeFirewall.ComputeFirewallConfig.property.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeFirewall.ComputeFirewallConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeFirewall.ComputeFirewallConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.computeFirewall.ComputeFirewallConfig.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeFirewall.ComputeFirewallConfig.property.provisioners">provisioners</a></code> | <code>typing.List[cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeFirewall.ComputeFirewallConfig.property.name">name</a></code> | <code>str</code> | Name of the resource. |
 | <code><a href="#@cdktf/provider-google.computeFirewall.ComputeFirewallConfig.property.network">network</a></code> | <code>str</code> | The name or self_link of the network to attach this firewall to. |
-| <code><a href="#@cdktf/provider-google.computeFirewall.ComputeFirewallConfig.property.allow">allow</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.computeFirewall.ComputeFirewallAllow">ComputeFirewallAllow</a>]]</code> | allow block. |
-| <code><a href="#@cdktf/provider-google.computeFirewall.ComputeFirewallConfig.property.deny">deny</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.computeFirewall.ComputeFirewallDeny">ComputeFirewallDeny</a>]]</code> | deny block. |
+| <code><a href="#@cdktf/provider-google.computeFirewall.ComputeFirewallConfig.property.allow">allow</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.computeFirewall.ComputeFirewallAllow">ComputeFirewallAllow</a>]</code> | allow block. |
+| <code><a href="#@cdktf/provider-google.computeFirewall.ComputeFirewallConfig.property.deny">deny</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.computeFirewall.ComputeFirewallDeny">ComputeFirewallDeny</a>]</code> | deny block. |
 | <code><a href="#@cdktf/provider-google.computeFirewall.ComputeFirewallConfig.property.description">description</a></code> | <code>str</code> | An optional description of this resource. Provide this property when you create the resource. |
 | <code><a href="#@cdktf/provider-google.computeFirewall.ComputeFirewallConfig.property.destinationRanges">destination_ranges</a></code> | <code>typing.List[str]</code> | If destination ranges are specified, the firewall will apply only to traffic that has destination IP address in these ranges. |
 | <code><a href="#@cdktf/provider-google.computeFirewall.ComputeFirewallConfig.property.direction">direction</a></code> | <code>str</code> | Direction of traffic to which this firewall applies; |
-| <code><a href="#@cdktf/provider-google.computeFirewall.ComputeFirewallConfig.property.disabled">disabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Denotes whether the firewall rule is disabled, i.e not applied to the network it is associated with. When set to true, the firewall rule is not enforced and the network behaves as if it did not exist. If this is unspecified, the firewall rule will be enabled. |
-| <code><a href="#@cdktf/provider-google.computeFirewall.ComputeFirewallConfig.property.enableLogging">enable_logging</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | This field denotes whether to enable logging for a particular firewall rule. |
+| <code><a href="#@cdktf/provider-google.computeFirewall.ComputeFirewallConfig.property.disabled">disabled</a></code> | <code>bool \| cdktf.IResolvable</code> | Denotes whether the firewall rule is disabled, i.e not applied to the network it is associated with. When set to true, the firewall rule is not enforced and the network behaves as if it did not exist. If this is unspecified, the firewall rule will be enabled. |
+| <code><a href="#@cdktf/provider-google.computeFirewall.ComputeFirewallConfig.property.enableLogging">enable_logging</a></code> | <code>bool \| cdktf.IResolvable</code> | This field denotes whether to enable logging for a particular firewall rule. |
 | <code><a href="#@cdktf/provider-google.computeFirewall.ComputeFirewallConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/compute_firewall#id ComputeFirewall#id}. |
 | <code><a href="#@cdktf/provider-google.computeFirewall.ComputeFirewallConfig.property.logConfig">log_config</a></code> | <code><a href="#@cdktf/provider-google.computeFirewall.ComputeFirewallLogConfig">ComputeFirewallLogConfig</a></code> | log_config block. |
 | <code><a href="#@cdktf/provider-google.computeFirewall.ComputeFirewallConfig.property.params">params</a></code> | <code><a href="#@cdktf/provider-google.computeFirewall.ComputeFirewallParams">ComputeFirewallParams</a></code> | params block. |
@@ -1899,20 +1899,20 @@ computeFirewall.ComputeFirewallConfig(
 ##### `connection`<sup>Optional</sup> <a name="connection" id="@cdktf/provider-google.computeFirewall.ComputeFirewallConfig.property.connection"></a>
 
 ```python
-connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection]
+connection: SSHProvisionerConnection | WinrmProvisionerConnection
 ```
 
-- *Type:* typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]
+- *Type:* cdktf.SSHProvisionerConnection | cdktf.WinrmProvisionerConnection
 
 ---
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.computeFirewall.ComputeFirewallConfig.property.count"></a>
 
 ```python
-count: typing.Union[typing.Union[int, float], TerraformCount]
+count: typing.Union[int, float] | TerraformCount
 ```
 
-- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
+- *Type:* typing.Union[int, float] | cdktf.TerraformCount
 
 ---
 
@@ -1959,10 +1959,10 @@ provider: TerraformProvider
 ##### `provisioners`<sup>Optional</sup> <a name="provisioners" id="@cdktf/provider-google.computeFirewall.ComputeFirewallConfig.property.provisioners"></a>
 
 ```python
-provisioners: typing.List[typing.Union[FileProvisioner, LocalExecProvisioner, RemoteExecProvisioner]]
+provisioners: typing.List[FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner]
 ```
 
-- *Type:* typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]
+- *Type:* typing.List[cdktf.FileProvisioner | cdktf.LocalExecProvisioner | cdktf.RemoteExecProvisioner]
 
 ---
 
@@ -2005,10 +2005,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `allow`<sup>Optional</sup> <a name="allow" id="@cdktf/provider-google.computeFirewall.ComputeFirewallConfig.property.allow"></a>
 
 ```python
-allow: typing.Union[IResolvable, typing.List[ComputeFirewallAllow]]
+allow: IResolvable | typing.List[ComputeFirewallAllow]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.computeFirewall.ComputeFirewallAllow">ComputeFirewallAllow</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.computeFirewall.ComputeFirewallAllow">ComputeFirewallAllow</a>]
 
 allow block.
 
@@ -2019,10 +2019,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `deny`<sup>Optional</sup> <a name="deny" id="@cdktf/provider-google.computeFirewall.ComputeFirewallConfig.property.deny"></a>
 
 ```python
-deny: typing.Union[IResolvable, typing.List[ComputeFirewallDeny]]
+deny: IResolvable | typing.List[ComputeFirewallDeny]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.computeFirewall.ComputeFirewallDeny">ComputeFirewallDeny</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.computeFirewall.ComputeFirewallDeny">ComputeFirewallDeny</a>]
 
 deny block.
 
@@ -2082,10 +2082,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `disabled`<sup>Optional</sup> <a name="disabled" id="@cdktf/provider-google.computeFirewall.ComputeFirewallConfig.property.disabled"></a>
 
 ```python
-disabled: typing.Union[bool, IResolvable]
+disabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Denotes whether the firewall rule is disabled, i.e not applied to the network it is associated with. When set to true, the firewall rule is not enforced and the network behaves as if it did not exist. If this is unspecified, the firewall rule will be enabled.
 
@@ -2096,10 +2096,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `enable_logging`<sup>Optional</sup> <a name="enable_logging" id="@cdktf/provider-google.computeFirewall.ComputeFirewallConfig.property.enableLogging"></a>
 
 ```python
-enable_logging: typing.Union[bool, IResolvable]
+enable_logging: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 This field denotes whether to enable logging for a particular firewall rule.
 
@@ -2638,7 +2638,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.computeFirewall.ComputeFirewallAllowList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.computeFirewall.ComputeFirewallAllowList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.computeFirewall.ComputeFirewallAllowList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.computeFirewall.ComputeFirewallAllow">ComputeFirewallAllow</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeFirewall.ComputeFirewallAllowList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.computeFirewall.ComputeFirewallAllow">ComputeFirewallAllow</a>]</code> | *No description.* |
 
 ---
 
@@ -2669,10 +2669,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.computeFirewall.ComputeFirewallAllowList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[ComputeFirewallAllow]]
+internal_value: IResolvable | typing.List[ComputeFirewallAllow]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.computeFirewall.ComputeFirewallAllow">ComputeFirewallAllow</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.computeFirewall.ComputeFirewallAllow">ComputeFirewallAllow</a>]
 
 ---
 
@@ -2943,7 +2943,7 @@ def reset_ports() -> None
 | <code><a href="#@cdktf/provider-google.computeFirewall.ComputeFirewallAllowOutputReference.property.protocolInput">protocol_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeFirewall.ComputeFirewallAllowOutputReference.property.ports">ports</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeFirewall.ComputeFirewallAllowOutputReference.property.protocol">protocol</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.computeFirewall.ComputeFirewallAllowOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.computeFirewall.ComputeFirewallAllow">ComputeFirewallAllow</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeFirewall.ComputeFirewallAllowOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.computeFirewall.ComputeFirewallAllow">ComputeFirewallAllow</a></code> | *No description.* |
 
 ---
 
@@ -3014,10 +3014,10 @@ protocol: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.computeFirewall.ComputeFirewallAllowOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, ComputeFirewallAllow]
+internal_value: IResolvable | ComputeFirewallAllow
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.computeFirewall.ComputeFirewallAllow">ComputeFirewallAllow</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.computeFirewall.ComputeFirewallAllow">ComputeFirewallAllow</a>
 
 ---
 
@@ -3153,7 +3153,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.computeFirewall.ComputeFirewallDenyList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.computeFirewall.ComputeFirewallDenyList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.computeFirewall.ComputeFirewallDenyList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.computeFirewall.ComputeFirewallDeny">ComputeFirewallDeny</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeFirewall.ComputeFirewallDenyList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.computeFirewall.ComputeFirewallDeny">ComputeFirewallDeny</a>]</code> | *No description.* |
 
 ---
 
@@ -3184,10 +3184,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.computeFirewall.ComputeFirewallDenyList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[ComputeFirewallDeny]]
+internal_value: IResolvable | typing.List[ComputeFirewallDeny]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.computeFirewall.ComputeFirewallDeny">ComputeFirewallDeny</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.computeFirewall.ComputeFirewallDeny">ComputeFirewallDeny</a>]
 
 ---
 
@@ -3458,7 +3458,7 @@ def reset_ports() -> None
 | <code><a href="#@cdktf/provider-google.computeFirewall.ComputeFirewallDenyOutputReference.property.protocolInput">protocol_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeFirewall.ComputeFirewallDenyOutputReference.property.ports">ports</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeFirewall.ComputeFirewallDenyOutputReference.property.protocol">protocol</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.computeFirewall.ComputeFirewallDenyOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.computeFirewall.ComputeFirewallDeny">ComputeFirewallDeny</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeFirewall.ComputeFirewallDenyOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.computeFirewall.ComputeFirewallDeny">ComputeFirewallDeny</a></code> | *No description.* |
 
 ---
 
@@ -3529,10 +3529,10 @@ protocol: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.computeFirewall.ComputeFirewallDenyOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, ComputeFirewallDeny]
+internal_value: IResolvable | ComputeFirewallDeny
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.computeFirewall.ComputeFirewallDeny">ComputeFirewallDeny</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.computeFirewall.ComputeFirewallDeny">ComputeFirewallDeny</a>
 
 ---
 
@@ -4398,7 +4398,7 @@ def reset_update() -> None
 | <code><a href="#@cdktf/provider-google.computeFirewall.ComputeFirewallTimeoutsOutputReference.property.create">create</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeFirewall.ComputeFirewallTimeoutsOutputReference.property.delete">delete</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeFirewall.ComputeFirewallTimeoutsOutputReference.property.update">update</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.computeFirewall.ComputeFirewallTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.computeFirewall.ComputeFirewallTimeouts">ComputeFirewallTimeouts</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeFirewall.ComputeFirewallTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.computeFirewall.ComputeFirewallTimeouts">ComputeFirewallTimeouts</a></code> | *No description.* |
 
 ---
 
@@ -4489,10 +4489,10 @@ update: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.computeFirewall.ComputeFirewallTimeoutsOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, ComputeFirewallTimeouts]
+internal_value: IResolvable | ComputeFirewallTimeouts
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.computeFirewall.ComputeFirewallTimeouts">ComputeFirewallTimeouts</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.computeFirewall.ComputeFirewallTimeouts">ComputeFirewallTimeouts</a>
 
 ---
 

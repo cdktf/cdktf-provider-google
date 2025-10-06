@@ -14,20 +14,20 @@ from cdktf_cdktf_provider_google import integration_connectors_connection
 integrationConnectorsConnection.IntegrationConnectorsConnection(
   scope: Construct,
   id: str,
-  connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection] = None,
-  count: typing.Union[typing.Union[int, float], TerraformCount] = None,
+  connection: SSHProvisionerConnection | WinrmProvisionerConnection = None,
+  count: typing.Union[int, float] | TerraformCount = None,
   depends_on: typing.List[ITerraformDependable] = None,
   for_each: ITerraformIterator = None,
   lifecycle: TerraformResourceLifecycle = None,
   provider: TerraformProvider = None,
-  provisioners: typing.List[typing.Union[FileProvisioner, LocalExecProvisioner, RemoteExecProvisioner]] = None,
+  provisioners: typing.List[FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner] = None,
   connector_version: str,
   location: str,
   name: str,
   auth_config: IntegrationConnectorsConnectionAuthConfig = None,
-  config_variable: typing.Union[IResolvable, typing.List[IntegrationConnectorsConnectionConfigVariable]] = None,
+  config_variable: IResolvable | typing.List[IntegrationConnectorsConnectionConfigVariable] = None,
   description: str = None,
-  destination_config: typing.Union[IResolvable, typing.List[IntegrationConnectorsConnectionDestinationConfig]] = None,
+  destination_config: IResolvable | typing.List[IntegrationConnectorsConnectionDestinationConfig] = None,
   eventing_config: IntegrationConnectorsConnectionEventingConfig = None,
   eventing_enablement_type: str = None,
   id: str = None,
@@ -38,7 +38,7 @@ integrationConnectorsConnection.IntegrationConnectorsConnection(
   project: str = None,
   service_account: str = None,
   ssl_config: IntegrationConnectorsConnectionSslConfig = None,
-  suspended: typing.Union[bool, IResolvable] = None,
+  suspended: bool | IResolvable = None,
   timeouts: IntegrationConnectorsConnectionTimeouts = None
 )
 ```
@@ -47,20 +47,20 @@ integrationConnectorsConnection.IntegrationConnectorsConnection(
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | The scope in which to define this construct. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.Initializer.parameter.id">id</a></code> | <code>str</code> | The scoped construct ID. |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.Initializer.parameter.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.Initializer.parameter.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.Initializer.parameter.connection">connection</a></code> | <code>cdktf.SSHProvisionerConnection \| cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.Initializer.parameter.count">count</a></code> | <code>typing.Union[int, float] \| cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.Initializer.parameter.dependsOn">depends_on</a></code> | <code>typing.List[cdktf.ITerraformDependable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.Initializer.parameter.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.Initializer.parameter.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.Initializer.parameter.connectorVersion">connector_version</a></code> | <code>str</code> | connectorVersion of the Connector. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.Initializer.parameter.location">location</a></code> | <code>str</code> | Location in which Connection needs to be created. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.Initializer.parameter.name">name</a></code> | <code>str</code> | Name of Connection needs to be created. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.Initializer.parameter.authConfig">auth_config</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfig">IntegrationConnectorsConnectionAuthConfig</a></code> | auth_config block. |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.Initializer.parameter.configVariable">config_variable</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfigVariable">IntegrationConnectorsConnectionConfigVariable</a>]]</code> | config_variable block. |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.Initializer.parameter.configVariable">config_variable</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfigVariable">IntegrationConnectorsConnectionConfigVariable</a>]</code> | config_variable block. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.Initializer.parameter.description">description</a></code> | <code>str</code> | An arbitrary description for the Connection. |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.Initializer.parameter.destinationConfig">destination_config</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfig">IntegrationConnectorsConnectionDestinationConfig</a>]]</code> | destination_config block. |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.Initializer.parameter.destinationConfig">destination_config</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfig">IntegrationConnectorsConnectionDestinationConfig</a>]</code> | destination_config block. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.Initializer.parameter.eventingConfig">eventing_config</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfig">IntegrationConnectorsConnectionEventingConfig</a></code> | eventing_config block. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.Initializer.parameter.eventingEnablementType">eventing_enablement_type</a></code> | <code>str</code> | Eventing enablement type. Will be nil if eventing is not enabled. Possible values: ["EVENTING_AND_CONNECTION", "ONLY_EVENTING"]. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/integration_connectors_connection#id IntegrationConnectorsConnection#id}. |
@@ -71,7 +71,7 @@ integrationConnectorsConnection.IntegrationConnectorsConnection(
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.Initializer.parameter.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/integration_connectors_connection#project IntegrationConnectorsConnection#project}. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.Initializer.parameter.serviceAccount">service_account</a></code> | <code>str</code> | Service account needed for runtime plane to access Google Cloud resources. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.Initializer.parameter.sslConfig">ssl_config</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfig">IntegrationConnectorsConnectionSslConfig</a></code> | ssl_config block. |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.Initializer.parameter.suspended">suspended</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Suspended indicates if a user has suspended a connection or not. |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.Initializer.parameter.suspended">suspended</a></code> | <code>bool \| cdktf.IResolvable</code> | Suspended indicates if a user has suspended a connection or not. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionTimeouts">IntegrationConnectorsConnectionTimeouts</a></code> | timeouts block. |
 
 ---
@@ -96,13 +96,13 @@ Must be unique amongst siblings in the same scope
 
 ##### `connection`<sup>Optional</sup> <a name="connection" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.Initializer.parameter.connection"></a>
 
-- *Type:* typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]
+- *Type:* cdktf.SSHProvisionerConnection | cdktf.WinrmProvisionerConnection
 
 ---
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.Initializer.parameter.count"></a>
 
-- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
+- *Type:* typing.Union[int, float] | cdktf.TerraformCount
 
 ---
 
@@ -132,7 +132,7 @@ Must be unique amongst siblings in the same scope
 
 ##### `provisioners`<sup>Optional</sup> <a name="provisioners" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.Initializer.parameter.provisioners"></a>
 
-- *Type:* typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]
+- *Type:* typing.List[cdktf.FileProvisioner | cdktf.LocalExecProvisioner | cdktf.RemoteExecProvisioner]
 
 ---
 
@@ -178,7 +178,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `config_variable`<sup>Optional</sup> <a name="config_variable" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.Initializer.parameter.configVariable"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfigVariable">IntegrationConnectorsConnectionConfigVariable</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfigVariable">IntegrationConnectorsConnectionConfigVariable</a>]
 
 config_variable block.
 
@@ -198,7 +198,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `destination_config`<sup>Optional</sup> <a name="destination_config" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.Initializer.parameter.destinationConfig"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfig">IntegrationConnectorsConnectionDestinationConfig</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfig">IntegrationConnectorsConnectionDestinationConfig</a>]
 
 destination_config block.
 
@@ -310,7 +310,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `suspended`<sup>Optional</sup> <a name="suspended" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.Initializer.parameter.suspended"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Suspended indicates if a user has suspended a connection or not.
 
@@ -605,7 +605,7 @@ def get_string_map_attribute(
 ##### `has_resource_move` <a name="has_resource_move" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.hasResourceMove"></a>
 
 ```python
-def has_resource_move() -> typing.Union[TerraformResourceMoveByTarget, TerraformResourceMoveById]
+def has_resource_move() -> TerraformResourceMoveByTarget | TerraformResourceMoveById
 ```
 
 ##### `import_from` <a name="import_from" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.importFrom"></a>
@@ -668,7 +668,7 @@ Full id of resource being moved from, e.g. "aws_s3_bucket.example".
 ```python
 def move_to(
   move_target: str,
-  index: typing.Union[str, typing.Union[int, float]] = None
+  index: str | typing.Union[int, float] = None
 ) -> None
 ```
 
@@ -684,7 +684,7 @@ The previously set user defined string set by .addMoveTarget() corresponding to 
 
 ###### `index`<sup>Optional</sup> <a name="index" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.moveTo.parameter.index"></a>
 
-- *Type:* typing.Union[str, typing.Union[int, float]]
+- *Type:* str | typing.Union[int, float]
 
 Optional The index corresponding to the key the resource is to appear in the foreach of a resource to move to.
 
@@ -713,7 +713,7 @@ Full id of resource to move to, e.g. "aws_s3_bucket.example".
 ```python
 def put_auth_config(
   auth_type: str,
-  additional_variable: typing.Union[IResolvable, typing.List[IntegrationConnectorsConnectionAuthConfigAdditionalVariable]] = None,
+  additional_variable: IResolvable | typing.List[IntegrationConnectorsConnectionAuthConfigAdditionalVariable] = None,
   auth_key: str = None,
   oauth2_auth_code_flow: IntegrationConnectorsConnectionAuthConfigOauth2AuthCodeFlow = None,
   oauth2_client_credentials: IntegrationConnectorsConnectionAuthConfigOauth2ClientCredentials = None,
@@ -735,7 +735,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `additional_variable`<sup>Optional</sup> <a name="additional_variable" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.putAuthConfig.parameter.additionalVariable"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigAdditionalVariable">IntegrationConnectorsConnectionAuthConfigAdditionalVariable</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigAdditionalVariable">IntegrationConnectorsConnectionAuthConfigAdditionalVariable</a>]
 
 additional_variable block.
 
@@ -807,13 +807,13 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ```python
 def put_config_variable(
-  value: typing.Union[IResolvable, typing.List[IntegrationConnectorsConnectionConfigVariable]]
+  value: IResolvable | typing.List[IntegrationConnectorsConnectionConfigVariable]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.putConfigVariable.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfigVariable">IntegrationConnectorsConnectionConfigVariable</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfigVariable">IntegrationConnectorsConnectionConfigVariable</a>]
 
 ---
 
@@ -821,13 +821,13 @@ def put_config_variable(
 
 ```python
 def put_destination_config(
-  value: typing.Union[IResolvable, typing.List[IntegrationConnectorsConnectionDestinationConfig]]
+  value: IResolvable | typing.List[IntegrationConnectorsConnectionDestinationConfig]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.putDestinationConfig.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfig">IntegrationConnectorsConnectionDestinationConfig</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfig">IntegrationConnectorsConnectionDestinationConfig</a>]
 
 ---
 
@@ -836,9 +836,9 @@ def put_destination_config(
 ```python
 def put_eventing_config(
   registration_destination_config: IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfig,
-  additional_variable: typing.Union[IResolvable, typing.List[IntegrationConnectorsConnectionEventingConfigAdditionalVariable]] = None,
+  additional_variable: IResolvable | typing.List[IntegrationConnectorsConnectionEventingConfigAdditionalVariable] = None,
   auth_config: IntegrationConnectorsConnectionEventingConfigAuthConfig = None,
-  enrichment_enabled: typing.Union[bool, IResolvable] = None
+  enrichment_enabled: bool | IResolvable = None
 ) -> None
 ```
 
@@ -854,7 +854,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `additional_variable`<sup>Optional</sup> <a name="additional_variable" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.putEventingConfig.parameter.additionalVariable"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAdditionalVariable">IntegrationConnectorsConnectionEventingConfigAdditionalVariable</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAdditionalVariable">IntegrationConnectorsConnectionEventingConfigAdditionalVariable</a>]
 
 additional_variable block.
 
@@ -874,7 +874,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `enrichment_enabled`<sup>Optional</sup> <a name="enrichment_enabled" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.putEventingConfig.parameter.enrichmentEnabled"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Enrichment Enabled.
 
@@ -886,14 +886,14 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ```python
 def put_lock_config(
-  locked: typing.Union[bool, IResolvable],
+  locked: bool | IResolvable,
   reason: str = None
 ) -> None
 ```
 
 ###### `locked`<sup>Required</sup> <a name="locked" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.putLockConfig.parameter.locked"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Indicates whether or not the connection is locked.
 
@@ -915,14 +915,14 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ```python
 def put_log_config(
-  enabled: typing.Union[bool, IResolvable],
+  enabled: bool | IResolvable,
   level: str = None
 ) -> None
 ```
 
 ###### `enabled`<sup>Required</sup> <a name="enabled" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.putLogConfig.parameter.enabled"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Enabled represents whether logging is enabled or not for a connection.
 
@@ -974,7 +974,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ```python
 def put_ssl_config(
   type: str,
-  additional_variable: typing.Union[IResolvable, typing.List[IntegrationConnectorsConnectionSslConfigAdditionalVariable]] = None,
+  additional_variable: IResolvable | typing.List[IntegrationConnectorsConnectionSslConfigAdditionalVariable] = None,
   client_certificate: IntegrationConnectorsConnectionSslConfigClientCertificate = None,
   client_cert_type: str = None,
   client_private_key: IntegrationConnectorsConnectionSslConfigClientPrivateKey = None,
@@ -982,7 +982,7 @@ def put_ssl_config(
   private_server_certificate: IntegrationConnectorsConnectionSslConfigPrivateServerCertificate = None,
   server_cert_type: str = None,
   trust_model: str = None,
-  use_ssl: typing.Union[bool, IResolvable] = None
+  use_ssl: bool | IResolvable = None
 ) -> None
 ```
 
@@ -998,7 +998,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `additional_variable`<sup>Optional</sup> <a name="additional_variable" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.putSslConfig.parameter.additionalVariable"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigAdditionalVariable">IntegrationConnectorsConnectionSslConfigAdditionalVariable</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigAdditionalVariable">IntegrationConnectorsConnectionSslConfigAdditionalVariable</a>]
 
 additional_variable block.
 
@@ -1078,7 +1078,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `use_ssl`<sup>Optional</sup> <a name="use_ssl" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.putSslConfig.parameter.useSsl"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Bool for enabling SSL.
 
@@ -1353,13 +1353,13 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.5
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.property.terraformMetaArguments">terraform_meta_arguments</a></code> | <code>typing.Mapping[typing.Any]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.property.terraformResourceType">terraform_resource_type</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.property.terraformGeneratorMetadata">terraform_generator_metadata</a></code> | <code>cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.property.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.property.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.property.connection">connection</a></code> | <code>cdktf.SSHProvisionerConnection \| cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.property.count">count</a></code> | <code>typing.Union[int, float] \| cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.property.dependsOn">depends_on</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.property.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.property.provisioners">provisioners</a></code> | <code>typing.List[cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.property.authConfig">auth_config</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigOutputReference">IntegrationConnectorsConnectionAuthConfigOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.property.configVariable">config_variable</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfigVariableList">IntegrationConnectorsConnectionConfigVariableList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.property.connectionRevision">connection_revision</a></code> | <code>str</code> | *No description.* |
@@ -1381,10 +1381,10 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.5
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionTimeoutsOutputReference">IntegrationConnectorsConnectionTimeoutsOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.property.updateTime">update_time</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.property.authConfigInput">auth_config_input</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfig">IntegrationConnectorsConnectionAuthConfig</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.property.configVariableInput">config_variable_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfigVariable">IntegrationConnectorsConnectionConfigVariable</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.property.configVariableInput">config_variable_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfigVariable">IntegrationConnectorsConnectionConfigVariable</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.property.connectorVersionInput">connector_version_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.property.descriptionInput">description_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.property.destinationConfigInput">destination_config_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfig">IntegrationConnectorsConnectionDestinationConfig</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.property.destinationConfigInput">destination_config_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfig">IntegrationConnectorsConnectionDestinationConfig</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.property.eventingConfigInput">eventing_config_input</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfig">IntegrationConnectorsConnectionEventingConfig</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.property.eventingEnablementTypeInput">eventing_enablement_type_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.property.idInput">id_input</a></code> | <code>str</code> | *No description.* |
@@ -1397,8 +1397,8 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.5
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.property.projectInput">project_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.property.serviceAccountInput">service_account_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.property.sslConfigInput">ssl_config_input</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfig">IntegrationConnectorsConnectionSslConfig</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.property.suspendedInput">suspended_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.property.timeoutsInput">timeouts_input</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionTimeouts">IntegrationConnectorsConnectionTimeouts</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.property.suspendedInput">suspended_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.property.timeoutsInput">timeouts_input</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionTimeouts">IntegrationConnectorsConnectionTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.property.connectorVersion">connector_version</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.property.description">description</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.property.eventingEnablementType">eventing_enablement_type</a></code> | <code>str</code> | *No description.* |
@@ -1408,7 +1408,7 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.5
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.property.name">name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.property.project">project</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.property.serviceAccount">service_account</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.property.suspended">suspended</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.property.suspended">suspended</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 
 ---
 
@@ -1487,20 +1487,20 @@ terraform_generator_metadata: TerraformProviderGeneratorMetadata
 ##### `connection`<sup>Optional</sup> <a name="connection" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.property.connection"></a>
 
 ```python
-connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection]
+connection: SSHProvisionerConnection | WinrmProvisionerConnection
 ```
 
-- *Type:* typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]
+- *Type:* cdktf.SSHProvisionerConnection | cdktf.WinrmProvisionerConnection
 
 ---
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.property.count"></a>
 
 ```python
-count: typing.Union[typing.Union[int, float], TerraformCount]
+count: typing.Union[int, float] | TerraformCount
 ```
 
-- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
+- *Type:* typing.Union[int, float] | cdktf.TerraformCount
 
 ---
 
@@ -1547,10 +1547,10 @@ provider: TerraformProvider
 ##### `provisioners`<sup>Optional</sup> <a name="provisioners" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.property.provisioners"></a>
 
 ```python
-provisioners: typing.List[typing.Union[FileProvisioner, LocalExecProvisioner, RemoteExecProvisioner]]
+provisioners: typing.List[FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner]
 ```
 
-- *Type:* typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]
+- *Type:* typing.List[cdktf.FileProvisioner | cdktf.LocalExecProvisioner | cdktf.RemoteExecProvisioner]
 
 ---
 
@@ -1767,10 +1767,10 @@ auth_config_input: IntegrationConnectorsConnectionAuthConfig
 ##### `config_variable_input`<sup>Optional</sup> <a name="config_variable_input" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.property.configVariableInput"></a>
 
 ```python
-config_variable_input: typing.Union[IResolvable, typing.List[IntegrationConnectorsConnectionConfigVariable]]
+config_variable_input: IResolvable | typing.List[IntegrationConnectorsConnectionConfigVariable]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfigVariable">IntegrationConnectorsConnectionConfigVariable</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfigVariable">IntegrationConnectorsConnectionConfigVariable</a>]
 
 ---
 
@@ -1797,10 +1797,10 @@ description_input: str
 ##### `destination_config_input`<sup>Optional</sup> <a name="destination_config_input" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.property.destinationConfigInput"></a>
 
 ```python
-destination_config_input: typing.Union[IResolvable, typing.List[IntegrationConnectorsConnectionDestinationConfig]]
+destination_config_input: IResolvable | typing.List[IntegrationConnectorsConnectionDestinationConfig]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfig">IntegrationConnectorsConnectionDestinationConfig</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfig">IntegrationConnectorsConnectionDestinationConfig</a>]
 
 ---
 
@@ -1927,20 +1927,20 @@ ssl_config_input: IntegrationConnectorsConnectionSslConfig
 ##### `suspended_input`<sup>Optional</sup> <a name="suspended_input" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.property.suspendedInput"></a>
 
 ```python
-suspended_input: typing.Union[bool, IResolvable]
+suspended_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `timeouts_input`<sup>Optional</sup> <a name="timeouts_input" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.property.timeoutsInput"></a>
 
 ```python
-timeouts_input: typing.Union[IResolvable, IntegrationConnectorsConnectionTimeouts]
+timeouts_input: IResolvable | IntegrationConnectorsConnectionTimeouts
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionTimeouts">IntegrationConnectorsConnectionTimeouts</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionTimeouts">IntegrationConnectorsConnectionTimeouts</a>
 
 ---
 
@@ -2037,10 +2037,10 @@ service_account: str
 ##### `suspended`<sup>Required</sup> <a name="suspended" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.property.suspended"></a>
 
 ```python
-suspended: typing.Union[bool, IResolvable]
+suspended: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -2073,7 +2073,7 @@ from cdktf_cdktf_provider_google import integration_connectors_connection
 
 integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfig(
   auth_type: str,
-  additional_variable: typing.Union[IResolvable, typing.List[IntegrationConnectorsConnectionAuthConfigAdditionalVariable]] = None,
+  additional_variable: IResolvable | typing.List[IntegrationConnectorsConnectionAuthConfigAdditionalVariable] = None,
   auth_key: str = None,
   oauth2_auth_code_flow: IntegrationConnectorsConnectionAuthConfigOauth2AuthCodeFlow = None,
   oauth2_client_credentials: IntegrationConnectorsConnectionAuthConfigOauth2ClientCredentials = None,
@@ -2088,7 +2088,7 @@ integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfig(
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfig.property.authType">auth_type</a></code> | <code>str</code> | authType of the Connection Possible values: ["AUTH_TYPE_UNSPECIFIED", "USER_PASSWORD", "OAUTH2_JWT_BEARER", "OAUTH2_CLIENT_CREDENTIALS", "SSH_PUBLIC_KEY", "OAUTH2_AUTH_CODE_FLOW"]. |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfig.property.additionalVariable">additional_variable</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigAdditionalVariable">IntegrationConnectorsConnectionAuthConfigAdditionalVariable</a>]]</code> | additional_variable block. |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfig.property.additionalVariable">additional_variable</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigAdditionalVariable">IntegrationConnectorsConnectionAuthConfigAdditionalVariable</a>]</code> | additional_variable block. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfig.property.authKey">auth_key</a></code> | <code>str</code> | The type of authentication configured. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfig.property.oauth2AuthCodeFlow">oauth2_auth_code_flow</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigOauth2AuthCodeFlow">IntegrationConnectorsConnectionAuthConfigOauth2AuthCodeFlow</a></code> | oauth2_auth_code_flow block. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfig.property.oauth2ClientCredentials">oauth2_client_credentials</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigOauth2ClientCredentials">IntegrationConnectorsConnectionAuthConfigOauth2ClientCredentials</a></code> | oauth2_client_credentials block. |
@@ -2115,10 +2115,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `additional_variable`<sup>Optional</sup> <a name="additional_variable" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfig.property.additionalVariable"></a>
 
 ```python
-additional_variable: typing.Union[IResolvable, typing.List[IntegrationConnectorsConnectionAuthConfigAdditionalVariable]]
+additional_variable: IResolvable | typing.List[IntegrationConnectorsConnectionAuthConfigAdditionalVariable]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigAdditionalVariable">IntegrationConnectorsConnectionAuthConfigAdditionalVariable</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigAdditionalVariable">IntegrationConnectorsConnectionAuthConfigAdditionalVariable</a>]
 
 additional_variable block.
 
@@ -2219,7 +2219,7 @@ from cdktf_cdktf_provider_google import integration_connectors_connection
 
 integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigAdditionalVariable(
   key: str,
-  boolean_value: typing.Union[bool, IResolvable] = None,
+  boolean_value: bool | IResolvable = None,
   encryption_key_value: IntegrationConnectorsConnectionAuthConfigAdditionalVariableEncryptionKeyValue = None,
   integer_value: typing.Union[int, float] = None,
   secret_value: IntegrationConnectorsConnectionAuthConfigAdditionalVariableSecretValue = None,
@@ -2232,7 +2232,7 @@ integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigAdditio
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigAdditionalVariable.property.key">key</a></code> | <code>str</code> | Key for the configVariable. |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigAdditionalVariable.property.booleanValue">boolean_value</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Boolean Value of configVariable. |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigAdditionalVariable.property.booleanValue">boolean_value</a></code> | <code>bool \| cdktf.IResolvable</code> | Boolean Value of configVariable. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigAdditionalVariable.property.encryptionKeyValue">encryption_key_value</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigAdditionalVariableEncryptionKeyValue">IntegrationConnectorsConnectionAuthConfigAdditionalVariableEncryptionKeyValue</a></code> | encryption_key_value block. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigAdditionalVariable.property.integerValue">integer_value</a></code> | <code>typing.Union[int, float]</code> | Integer Value of configVariable. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigAdditionalVariable.property.secretValue">secret_value</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigAdditionalVariableSecretValue">IntegrationConnectorsConnectionAuthConfigAdditionalVariableSecretValue</a></code> | secret_value block. |
@@ -2257,10 +2257,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `boolean_value`<sup>Optional</sup> <a name="boolean_value" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigAdditionalVariable.property.booleanValue"></a>
 
 ```python
-boolean_value: typing.Union[bool, IResolvable]
+boolean_value: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Boolean Value of configVariable.
 
@@ -2425,7 +2425,7 @@ integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigOauth2A
   auth_uri: str = None,
   client_id: str = None,
   client_secret: IntegrationConnectorsConnectionAuthConfigOauth2AuthCodeFlowClientSecret = None,
-  enable_pkce: typing.Union[bool, IResolvable] = None,
+  enable_pkce: bool | IResolvable = None,
   scopes: typing.List[str] = None
 )
 ```
@@ -2437,7 +2437,7 @@ integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigOauth2A
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigOauth2AuthCodeFlow.property.authUri">auth_uri</a></code> | <code>str</code> | Auth URL for Authorization Code Flow. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigOauth2AuthCodeFlow.property.clientId">client_id</a></code> | <code>str</code> | Client ID for user-provided OAuth app. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigOauth2AuthCodeFlow.property.clientSecret">client_secret</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigOauth2AuthCodeFlowClientSecret">IntegrationConnectorsConnectionAuthConfigOauth2AuthCodeFlowClientSecret</a></code> | client_secret block. |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigOauth2AuthCodeFlow.property.enablePkce">enable_pkce</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Whether to enable PKCE when the user performs the auth code flow. |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigOauth2AuthCodeFlow.property.enablePkce">enable_pkce</a></code> | <code>bool \| cdktf.IResolvable</code> | Whether to enable PKCE when the user performs the auth code flow. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigOauth2AuthCodeFlow.property.scopes">scopes</a></code> | <code>typing.List[str]</code> | Scopes the connection will request when the user performs the auth code flow. |
 
 ---
@@ -2487,10 +2487,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `enable_pkce`<sup>Optional</sup> <a name="enable_pkce" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigOauth2AuthCodeFlow.property.enablePkce"></a>
 
 ```python
-enable_pkce: typing.Union[bool, IResolvable]
+enable_pkce: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Whether to enable PKCE when the user performs the auth code flow.
 
@@ -3034,20 +3034,20 @@ Note: The above comment contained a comment block ending sequence (* followed by
 from cdktf_cdktf_provider_google import integration_connectors_connection
 
 integrationConnectorsConnection.IntegrationConnectorsConnectionConfig(
-  connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection] = None,
-  count: typing.Union[typing.Union[int, float], TerraformCount] = None,
+  connection: SSHProvisionerConnection | WinrmProvisionerConnection = None,
+  count: typing.Union[int, float] | TerraformCount = None,
   depends_on: typing.List[ITerraformDependable] = None,
   for_each: ITerraformIterator = None,
   lifecycle: TerraformResourceLifecycle = None,
   provider: TerraformProvider = None,
-  provisioners: typing.List[typing.Union[FileProvisioner, LocalExecProvisioner, RemoteExecProvisioner]] = None,
+  provisioners: typing.List[FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner] = None,
   connector_version: str,
   location: str,
   name: str,
   auth_config: IntegrationConnectorsConnectionAuthConfig = None,
-  config_variable: typing.Union[IResolvable, typing.List[IntegrationConnectorsConnectionConfigVariable]] = None,
+  config_variable: IResolvable | typing.List[IntegrationConnectorsConnectionConfigVariable] = None,
   description: str = None,
-  destination_config: typing.Union[IResolvable, typing.List[IntegrationConnectorsConnectionDestinationConfig]] = None,
+  destination_config: IResolvable | typing.List[IntegrationConnectorsConnectionDestinationConfig] = None,
   eventing_config: IntegrationConnectorsConnectionEventingConfig = None,
   eventing_enablement_type: str = None,
   id: str = None,
@@ -3058,7 +3058,7 @@ integrationConnectorsConnection.IntegrationConnectorsConnectionConfig(
   project: str = None,
   service_account: str = None,
   ssl_config: IntegrationConnectorsConnectionSslConfig = None,
-  suspended: typing.Union[bool, IResolvable] = None,
+  suspended: bool | IResolvable = None,
   timeouts: IntegrationConnectorsConnectionTimeouts = None
 )
 ```
@@ -3067,20 +3067,20 @@ integrationConnectorsConnection.IntegrationConnectorsConnectionConfig(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfig.property.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfig.property.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfig.property.connection">connection</a></code> | <code>cdktf.SSHProvisionerConnection \| cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfig.property.count">count</a></code> | <code>typing.Union[int, float] \| cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfig.property.dependsOn">depends_on</a></code> | <code>typing.List[cdktf.ITerraformDependable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfig.property.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfig.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfig.property.provisioners">provisioners</a></code> | <code>typing.List[cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfig.property.connectorVersion">connector_version</a></code> | <code>str</code> | connectorVersion of the Connector. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfig.property.location">location</a></code> | <code>str</code> | Location in which Connection needs to be created. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfig.property.name">name</a></code> | <code>str</code> | Name of Connection needs to be created. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfig.property.authConfig">auth_config</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfig">IntegrationConnectorsConnectionAuthConfig</a></code> | auth_config block. |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfig.property.configVariable">config_variable</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfigVariable">IntegrationConnectorsConnectionConfigVariable</a>]]</code> | config_variable block. |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfig.property.configVariable">config_variable</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfigVariable">IntegrationConnectorsConnectionConfigVariable</a>]</code> | config_variable block. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfig.property.description">description</a></code> | <code>str</code> | An arbitrary description for the Connection. |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfig.property.destinationConfig">destination_config</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfig">IntegrationConnectorsConnectionDestinationConfig</a>]]</code> | destination_config block. |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfig.property.destinationConfig">destination_config</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfig">IntegrationConnectorsConnectionDestinationConfig</a>]</code> | destination_config block. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfig.property.eventingConfig">eventing_config</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfig">IntegrationConnectorsConnectionEventingConfig</a></code> | eventing_config block. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfig.property.eventingEnablementType">eventing_enablement_type</a></code> | <code>str</code> | Eventing enablement type. Will be nil if eventing is not enabled. Possible values: ["EVENTING_AND_CONNECTION", "ONLY_EVENTING"]. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/integration_connectors_connection#id IntegrationConnectorsConnection#id}. |
@@ -3091,7 +3091,7 @@ integrationConnectorsConnection.IntegrationConnectorsConnectionConfig(
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfig.property.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/integration_connectors_connection#project IntegrationConnectorsConnection#project}. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfig.property.serviceAccount">service_account</a></code> | <code>str</code> | Service account needed for runtime plane to access Google Cloud resources. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfig.property.sslConfig">ssl_config</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfig">IntegrationConnectorsConnectionSslConfig</a></code> | ssl_config block. |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfig.property.suspended">suspended</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Suspended indicates if a user has suspended a connection or not. |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfig.property.suspended">suspended</a></code> | <code>bool \| cdktf.IResolvable</code> | Suspended indicates if a user has suspended a connection or not. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionTimeouts">IntegrationConnectorsConnectionTimeouts</a></code> | timeouts block. |
 
 ---
@@ -3099,20 +3099,20 @@ integrationConnectorsConnection.IntegrationConnectorsConnectionConfig(
 ##### `connection`<sup>Optional</sup> <a name="connection" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfig.property.connection"></a>
 
 ```python
-connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection]
+connection: SSHProvisionerConnection | WinrmProvisionerConnection
 ```
 
-- *Type:* typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]
+- *Type:* cdktf.SSHProvisionerConnection | cdktf.WinrmProvisionerConnection
 
 ---
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfig.property.count"></a>
 
 ```python
-count: typing.Union[typing.Union[int, float], TerraformCount]
+count: typing.Union[int, float] | TerraformCount
 ```
 
-- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
+- *Type:* typing.Union[int, float] | cdktf.TerraformCount
 
 ---
 
@@ -3159,10 +3159,10 @@ provider: TerraformProvider
 ##### `provisioners`<sup>Optional</sup> <a name="provisioners" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfig.property.provisioners"></a>
 
 ```python
-provisioners: typing.List[typing.Union[FileProvisioner, LocalExecProvisioner, RemoteExecProvisioner]]
+provisioners: typing.List[FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner]
 ```
 
-- *Type:* typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]
+- *Type:* typing.List[cdktf.FileProvisioner | cdktf.LocalExecProvisioner | cdktf.RemoteExecProvisioner]
 
 ---
 
@@ -3225,10 +3225,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `config_variable`<sup>Optional</sup> <a name="config_variable" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfig.property.configVariable"></a>
 
 ```python
-config_variable: typing.Union[IResolvable, typing.List[IntegrationConnectorsConnectionConfigVariable]]
+config_variable: IResolvable | typing.List[IntegrationConnectorsConnectionConfigVariable]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfigVariable">IntegrationConnectorsConnectionConfigVariable</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfigVariable">IntegrationConnectorsConnectionConfigVariable</a>]
 
 config_variable block.
 
@@ -3253,10 +3253,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `destination_config`<sup>Optional</sup> <a name="destination_config" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfig.property.destinationConfig"></a>
 
 ```python
-destination_config: typing.Union[IResolvable, typing.List[IntegrationConnectorsConnectionDestinationConfig]]
+destination_config: IResolvable | typing.List[IntegrationConnectorsConnectionDestinationConfig]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfig">IntegrationConnectorsConnectionDestinationConfig</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfig">IntegrationConnectorsConnectionDestinationConfig</a>]
 
 destination_config block.
 
@@ -3409,10 +3409,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `suspended`<sup>Optional</sup> <a name="suspended" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfig.property.suspended"></a>
 
 ```python
-suspended: typing.Union[bool, IResolvable]
+suspended: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Suspended indicates if a user has suspended a connection or not.
 
@@ -3443,7 +3443,7 @@ from cdktf_cdktf_provider_google import integration_connectors_connection
 
 integrationConnectorsConnection.IntegrationConnectorsConnectionConfigVariable(
   key: str,
-  boolean_value: typing.Union[bool, IResolvable] = None,
+  boolean_value: bool | IResolvable = None,
   encryption_key_value: IntegrationConnectorsConnectionConfigVariableEncryptionKeyValue = None,
   integer_value: typing.Union[int, float] = None,
   secret_value: IntegrationConnectorsConnectionConfigVariableSecretValue = None,
@@ -3456,7 +3456,7 @@ integrationConnectorsConnection.IntegrationConnectorsConnectionConfigVariable(
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfigVariable.property.key">key</a></code> | <code>str</code> | Key for the configVariable. |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfigVariable.property.booleanValue">boolean_value</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Boolean Value of configVariable. |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfigVariable.property.booleanValue">boolean_value</a></code> | <code>bool \| cdktf.IResolvable</code> | Boolean Value of configVariable. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfigVariable.property.encryptionKeyValue">encryption_key_value</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfigVariableEncryptionKeyValue">IntegrationConnectorsConnectionConfigVariableEncryptionKeyValue</a></code> | encryption_key_value block. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfigVariable.property.integerValue">integer_value</a></code> | <code>typing.Union[int, float]</code> | Integer Value of configVariable. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfigVariable.property.secretValue">secret_value</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfigVariableSecretValue">IntegrationConnectorsConnectionConfigVariableSecretValue</a></code> | secret_value block. |
@@ -3481,10 +3481,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `boolean_value`<sup>Optional</sup> <a name="boolean_value" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfigVariable.property.booleanValue"></a>
 
 ```python
-boolean_value: typing.Union[bool, IResolvable]
+boolean_value: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Boolean Value of configVariable.
 
@@ -3658,7 +3658,7 @@ from cdktf_cdktf_provider_google import integration_connectors_connection
 
 integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfig(
   key: str,
-  destination: typing.Union[IResolvable, typing.List[IntegrationConnectorsConnectionDestinationConfigDestination]] = None
+  destination: IResolvable | typing.List[IntegrationConnectorsConnectionDestinationConfigDestination] = None
 )
 ```
 
@@ -3667,7 +3667,7 @@ integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfig
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfig.property.key">key</a></code> | <code>str</code> | The key is the destination identifier that is supported by the Connector. |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfig.property.destination">destination</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfigDestination">IntegrationConnectorsConnectionDestinationConfigDestination</a>]]</code> | destination block. |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfig.property.destination">destination</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfigDestination">IntegrationConnectorsConnectionDestinationConfigDestination</a>]</code> | destination block. |
 
 ---
 
@@ -3688,10 +3688,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `destination`<sup>Optional</sup> <a name="destination" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfig.property.destination"></a>
 
 ```python
-destination: typing.Union[IResolvable, typing.List[IntegrationConnectorsConnectionDestinationConfigDestination]]
+destination: IResolvable | typing.List[IntegrationConnectorsConnectionDestinationConfigDestination]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfigDestination">IntegrationConnectorsConnectionDestinationConfigDestination</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfigDestination">IntegrationConnectorsConnectionDestinationConfigDestination</a>]
 
 destination block.
 
@@ -3776,9 +3776,9 @@ from cdktf_cdktf_provider_google import integration_connectors_connection
 
 integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfig(
   registration_destination_config: IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfig,
-  additional_variable: typing.Union[IResolvable, typing.List[IntegrationConnectorsConnectionEventingConfigAdditionalVariable]] = None,
+  additional_variable: IResolvable | typing.List[IntegrationConnectorsConnectionEventingConfigAdditionalVariable] = None,
   auth_config: IntegrationConnectorsConnectionEventingConfigAuthConfig = None,
-  enrichment_enabled: typing.Union[bool, IResolvable] = None
+  enrichment_enabled: bool | IResolvable = None
 )
 ```
 
@@ -3787,9 +3787,9 @@ integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfig(
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfig.property.registrationDestinationConfig">registration_destination_config</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfig">IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfig</a></code> | registration_destination_config block. |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfig.property.additionalVariable">additional_variable</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAdditionalVariable">IntegrationConnectorsConnectionEventingConfigAdditionalVariable</a>]]</code> | additional_variable block. |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfig.property.additionalVariable">additional_variable</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAdditionalVariable">IntegrationConnectorsConnectionEventingConfigAdditionalVariable</a>]</code> | additional_variable block. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfig.property.authConfig">auth_config</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfig">IntegrationConnectorsConnectionEventingConfigAuthConfig</a></code> | auth_config block. |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfig.property.enrichmentEnabled">enrichment_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Enrichment Enabled. |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfig.property.enrichmentEnabled">enrichment_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | Enrichment Enabled. |
 
 ---
 
@@ -3810,10 +3810,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `additional_variable`<sup>Optional</sup> <a name="additional_variable" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfig.property.additionalVariable"></a>
 
 ```python
-additional_variable: typing.Union[IResolvable, typing.List[IntegrationConnectorsConnectionEventingConfigAdditionalVariable]]
+additional_variable: IResolvable | typing.List[IntegrationConnectorsConnectionEventingConfigAdditionalVariable]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAdditionalVariable">IntegrationConnectorsConnectionEventingConfigAdditionalVariable</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAdditionalVariable">IntegrationConnectorsConnectionEventingConfigAdditionalVariable</a>]
 
 additional_variable block.
 
@@ -3838,10 +3838,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `enrichment_enabled`<sup>Optional</sup> <a name="enrichment_enabled" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfig.property.enrichmentEnabled"></a>
 
 ```python
-enrichment_enabled: typing.Union[bool, IResolvable]
+enrichment_enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Enrichment Enabled.
 
@@ -3858,7 +3858,7 @@ from cdktf_cdktf_provider_google import integration_connectors_connection
 
 integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAdditionalVariable(
   key: str,
-  boolean_value: typing.Union[bool, IResolvable] = None,
+  boolean_value: bool | IResolvable = None,
   encryption_key_value: IntegrationConnectorsConnectionEventingConfigAdditionalVariableEncryptionKeyValue = None,
   integer_value: typing.Union[int, float] = None,
   secret_value: IntegrationConnectorsConnectionEventingConfigAdditionalVariableSecretValue = None,
@@ -3871,7 +3871,7 @@ integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAdd
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAdditionalVariable.property.key">key</a></code> | <code>str</code> | Key for the configVariable. |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAdditionalVariable.property.booleanValue">boolean_value</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Boolean Value of configVariable. |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAdditionalVariable.property.booleanValue">boolean_value</a></code> | <code>bool \| cdktf.IResolvable</code> | Boolean Value of configVariable. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAdditionalVariable.property.encryptionKeyValue">encryption_key_value</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAdditionalVariableEncryptionKeyValue">IntegrationConnectorsConnectionEventingConfigAdditionalVariableEncryptionKeyValue</a></code> | encryption_key_value block. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAdditionalVariable.property.integerValue">integer_value</a></code> | <code>typing.Union[int, float]</code> | Integer Value of configVariable. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAdditionalVariable.property.secretValue">secret_value</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAdditionalVariableSecretValue">IntegrationConnectorsConnectionEventingConfigAdditionalVariableSecretValue</a></code> | secret_value block. |
@@ -3896,10 +3896,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `boolean_value`<sup>Optional</sup> <a name="boolean_value" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAdditionalVariable.property.booleanValue"></a>
 
 ```python
-boolean_value: typing.Union[bool, IResolvable]
+boolean_value: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Boolean Value of configVariable.
 
@@ -4063,7 +4063,7 @@ from cdktf_cdktf_provider_google import integration_connectors_connection
 integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfig(
   auth_type: str,
   user_password: IntegrationConnectorsConnectionEventingConfigAuthConfigUserPassword,
-  additional_variable: typing.Union[IResolvable, typing.List[IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariable]] = None,
+  additional_variable: IResolvable | typing.List[IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariable] = None,
   auth_key: str = None
 )
 ```
@@ -4074,7 +4074,7 @@ integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAut
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfig.property.authType">auth_type</a></code> | <code>str</code> | authType of the Connection Possible values: ["USER_PASSWORD"]. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfig.property.userPassword">user_password</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigUserPassword">IntegrationConnectorsConnectionEventingConfigAuthConfigUserPassword</a></code> | user_password block. |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfig.property.additionalVariable">additional_variable</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariable">IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariable</a>]]</code> | additional_variable block. |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfig.property.additionalVariable">additional_variable</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariable">IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariable</a>]</code> | additional_variable block. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfig.property.authKey">auth_key</a></code> | <code>str</code> | The type of authentication configured. |
 
 ---
@@ -4110,10 +4110,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `additional_variable`<sup>Optional</sup> <a name="additional_variable" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfig.property.additionalVariable"></a>
 
 ```python
-additional_variable: typing.Union[IResolvable, typing.List[IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariable]]
+additional_variable: IResolvable | typing.List[IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariable]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariable">IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariable</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariable">IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariable</a>]
 
 additional_variable block.
 
@@ -4144,7 +4144,7 @@ from cdktf_cdktf_provider_google import integration_connectors_connection
 
 integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariable(
   key: str,
-  boolean_value: typing.Union[bool, IResolvable] = None,
+  boolean_value: bool | IResolvable = None,
   encryption_key_value: IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariableEncryptionKeyValue = None,
   integer_value: typing.Union[int, float] = None,
   secret_value: IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariableSecretValue = None,
@@ -4157,7 +4157,7 @@ integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAut
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariable.property.key">key</a></code> | <code>str</code> | Key for the configVariable. |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariable.property.booleanValue">boolean_value</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Boolean Value of configVariable. |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariable.property.booleanValue">boolean_value</a></code> | <code>bool \| cdktf.IResolvable</code> | Boolean Value of configVariable. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariable.property.encryptionKeyValue">encryption_key_value</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariableEncryptionKeyValue">IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariableEncryptionKeyValue</a></code> | encryption_key_value block. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariable.property.integerValue">integer_value</a></code> | <code>typing.Union[int, float]</code> | Integer Value of configVariable. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariable.property.secretValue">secret_value</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariableSecretValue">IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariableSecretValue</a></code> | secret_value block. |
@@ -4182,10 +4182,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `boolean_value`<sup>Optional</sup> <a name="boolean_value" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariable.property.booleanValue"></a>
 
 ```python
-boolean_value: typing.Union[bool, IResolvable]
+boolean_value: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Boolean Value of configVariable.
 
@@ -4433,7 +4433,7 @@ Note: The above comment contained a comment block ending sequence (* followed by
 from cdktf_cdktf_provider_google import integration_connectors_connection
 
 integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfig(
-  destination: typing.Union[IResolvable, typing.List[IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigDestination]] = None,
+  destination: IResolvable | typing.List[IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigDestination] = None,
   key: str = None
 )
 ```
@@ -4442,7 +4442,7 @@ integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigReg
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfig.property.destination">destination</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigDestination">IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigDestination</a>]]</code> | destination block. |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfig.property.destination">destination</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigDestination">IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigDestination</a>]</code> | destination block. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfig.property.key">key</a></code> | <code>str</code> | Key for the connection. |
 
 ---
@@ -4450,10 +4450,10 @@ integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigReg
 ##### `destination`<sup>Optional</sup> <a name="destination" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfig.property.destination"></a>
 
 ```python
-destination: typing.Union[IResolvable, typing.List[IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigDestination]]
+destination: IResolvable | typing.List[IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigDestination]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigDestination">IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigDestination</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigDestination">IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigDestination</a>]
 
 destination block.
 
@@ -4571,7 +4571,7 @@ integrationConnectorsConnection.IntegrationConnectorsConnectionEventingRuntimeDa
 from cdktf_cdktf_provider_google import integration_connectors_connection
 
 integrationConnectorsConnection.IntegrationConnectorsConnectionLockConfig(
-  locked: typing.Union[bool, IResolvable],
+  locked: bool | IResolvable,
   reason: str = None
 )
 ```
@@ -4580,7 +4580,7 @@ integrationConnectorsConnection.IntegrationConnectorsConnectionLockConfig(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionLockConfig.property.locked">locked</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Indicates whether or not the connection is locked. |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionLockConfig.property.locked">locked</a></code> | <code>bool \| cdktf.IResolvable</code> | Indicates whether or not the connection is locked. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionLockConfig.property.reason">reason</a></code> | <code>str</code> | Describes why a connection is locked. |
 
 ---
@@ -4588,10 +4588,10 @@ integrationConnectorsConnection.IntegrationConnectorsConnectionLockConfig(
 ##### `locked`<sup>Required</sup> <a name="locked" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionLockConfig.property.locked"></a>
 
 ```python
-locked: typing.Union[bool, IResolvable]
+locked: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Indicates whether or not the connection is locked.
 
@@ -4621,7 +4621,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 from cdktf_cdktf_provider_google import integration_connectors_connection
 
 integrationConnectorsConnection.IntegrationConnectorsConnectionLogConfig(
-  enabled: typing.Union[bool, IResolvable],
+  enabled: bool | IResolvable,
   level: str = None
 )
 ```
@@ -4630,7 +4630,7 @@ integrationConnectorsConnection.IntegrationConnectorsConnectionLogConfig(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionLogConfig.property.enabled">enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Enabled represents whether logging is enabled or not for a connection. |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionLogConfig.property.enabled">enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | Enabled represents whether logging is enabled or not for a connection. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionLogConfig.property.level">level</a></code> | <code>str</code> | Log configuration level. Possible values: ["LOG_LEVEL_UNSPECIFIED", "ERROR", "INFO", "DEBUG"]. |
 
 ---
@@ -4638,10 +4638,10 @@ integrationConnectorsConnection.IntegrationConnectorsConnectionLogConfig(
 ##### `enabled`<sup>Required</sup> <a name="enabled" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionLogConfig.property.enabled"></a>
 
 ```python
-enabled: typing.Union[bool, IResolvable]
+enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Enabled represents whether logging is enabled or not for a connection.
 
@@ -4722,7 +4722,7 @@ from cdktf_cdktf_provider_google import integration_connectors_connection
 
 integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfig(
   type: str,
-  additional_variable: typing.Union[IResolvable, typing.List[IntegrationConnectorsConnectionSslConfigAdditionalVariable]] = None,
+  additional_variable: IResolvable | typing.List[IntegrationConnectorsConnectionSslConfigAdditionalVariable] = None,
   client_certificate: IntegrationConnectorsConnectionSslConfigClientCertificate = None,
   client_cert_type: str = None,
   client_private_key: IntegrationConnectorsConnectionSslConfigClientPrivateKey = None,
@@ -4730,7 +4730,7 @@ integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfig(
   private_server_certificate: IntegrationConnectorsConnectionSslConfigPrivateServerCertificate = None,
   server_cert_type: str = None,
   trust_model: str = None,
-  use_ssl: typing.Union[bool, IResolvable] = None
+  use_ssl: bool | IResolvable = None
 )
 ```
 
@@ -4739,7 +4739,7 @@ integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfig(
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfig.property.type">type</a></code> | <code>str</code> | Enum for controlling the SSL Type (TLS/MTLS) Possible values: ["TLS", "MTLS"]. |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfig.property.additionalVariable">additional_variable</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigAdditionalVariable">IntegrationConnectorsConnectionSslConfigAdditionalVariable</a>]]</code> | additional_variable block. |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfig.property.additionalVariable">additional_variable</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigAdditionalVariable">IntegrationConnectorsConnectionSslConfigAdditionalVariable</a>]</code> | additional_variable block. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfig.property.clientCertificate">client_certificate</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigClientCertificate">IntegrationConnectorsConnectionSslConfigClientCertificate</a></code> | client_certificate block. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfig.property.clientCertType">client_cert_type</a></code> | <code>str</code> | Type of Client Cert (PEM/JKS/.. etc.) Possible values: ["PEM"]. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfig.property.clientPrivateKey">client_private_key</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigClientPrivateKey">IntegrationConnectorsConnectionSslConfigClientPrivateKey</a></code> | client_private_key block. |
@@ -4747,7 +4747,7 @@ integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfig(
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfig.property.privateServerCertificate">private_server_certificate</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigPrivateServerCertificate">IntegrationConnectorsConnectionSslConfigPrivateServerCertificate</a></code> | private_server_certificate block. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfig.property.serverCertType">server_cert_type</a></code> | <code>str</code> | Type of Server Cert (PEM/JKS/.. etc.) Possible values: ["PEM"]. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfig.property.trustModel">trust_model</a></code> | <code>str</code> | Enum for Trust Model Possible values: ["PUBLIC", "PRIVATE", "INSECURE"]. |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfig.property.useSsl">use_ssl</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Bool for enabling SSL. |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfig.property.useSsl">use_ssl</a></code> | <code>bool \| cdktf.IResolvable</code> | Bool for enabling SSL. |
 
 ---
 
@@ -4768,10 +4768,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `additional_variable`<sup>Optional</sup> <a name="additional_variable" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfig.property.additionalVariable"></a>
 
 ```python
-additional_variable: typing.Union[IResolvable, typing.List[IntegrationConnectorsConnectionSslConfigAdditionalVariable]]
+additional_variable: IResolvable | typing.List[IntegrationConnectorsConnectionSslConfigAdditionalVariable]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigAdditionalVariable">IntegrationConnectorsConnectionSslConfigAdditionalVariable</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigAdditionalVariable">IntegrationConnectorsConnectionSslConfigAdditionalVariable</a>]
 
 additional_variable block.
 
@@ -4880,10 +4880,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `use_ssl`<sup>Optional</sup> <a name="use_ssl" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfig.property.useSsl"></a>
 
 ```python
-use_ssl: typing.Union[bool, IResolvable]
+use_ssl: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Bool for enabling SSL.
 
@@ -4900,7 +4900,7 @@ from cdktf_cdktf_provider_google import integration_connectors_connection
 
 integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigAdditionalVariable(
   key: str,
-  boolean_value: typing.Union[bool, IResolvable] = None,
+  boolean_value: bool | IResolvable = None,
   encryption_key_value: IntegrationConnectorsConnectionSslConfigAdditionalVariableEncryptionKeyValue = None,
   integer_value: typing.Union[int, float] = None,
   secret_value: IntegrationConnectorsConnectionSslConfigAdditionalVariableSecretValue = None,
@@ -4913,7 +4913,7 @@ integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigAddition
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigAdditionalVariable.property.key">key</a></code> | <code>str</code> | Key for the configVariable. |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigAdditionalVariable.property.booleanValue">boolean_value</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Boolean Value of configVariable. |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigAdditionalVariable.property.booleanValue">boolean_value</a></code> | <code>bool \| cdktf.IResolvable</code> | Boolean Value of configVariable. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigAdditionalVariable.property.encryptionKeyValue">encryption_key_value</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigAdditionalVariableEncryptionKeyValue">IntegrationConnectorsConnectionSslConfigAdditionalVariableEncryptionKeyValue</a></code> | encryption_key_value block. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigAdditionalVariable.property.integerValue">integer_value</a></code> | <code>typing.Union[int, float]</code> | Integer Value of configVariable. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigAdditionalVariable.property.secretValue">secret_value</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigAdditionalVariableSecretValue">IntegrationConnectorsConnectionSslConfigAdditionalVariableSecretValue</a></code> | secret_value block. |
@@ -4938,10 +4938,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `boolean_value`<sup>Optional</sup> <a name="boolean_value" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigAdditionalVariable.property.booleanValue"></a>
 
 ```python
-boolean_value: typing.Union[bool, IResolvable]
+boolean_value: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Boolean Value of configVariable.
 
@@ -5760,7 +5760,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigAdditionalVariableList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigAdditionalVariableList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigAdditionalVariableList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigAdditionalVariable">IntegrationConnectorsConnectionAuthConfigAdditionalVariable</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigAdditionalVariableList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigAdditionalVariable">IntegrationConnectorsConnectionAuthConfigAdditionalVariable</a>]</code> | *No description.* |
 
 ---
 
@@ -5791,10 +5791,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigAdditionalVariableList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[IntegrationConnectorsConnectionAuthConfigAdditionalVariable]]
+internal_value: IResolvable | typing.List[IntegrationConnectorsConnectionAuthConfigAdditionalVariable]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigAdditionalVariable">IntegrationConnectorsConnectionAuthConfigAdditionalVariable</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigAdditionalVariable">IntegrationConnectorsConnectionAuthConfigAdditionalVariable</a>]
 
 ---
 
@@ -6146,17 +6146,17 @@ def reset_string_value() -> None
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigAdditionalVariableOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigAdditionalVariableOutputReference.property.encryptionKeyValue">encryption_key_value</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigAdditionalVariableEncryptionKeyValueOutputReference">IntegrationConnectorsConnectionAuthConfigAdditionalVariableEncryptionKeyValueOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigAdditionalVariableOutputReference.property.secretValue">secret_value</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigAdditionalVariableSecretValueOutputReference">IntegrationConnectorsConnectionAuthConfigAdditionalVariableSecretValueOutputReference</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigAdditionalVariableOutputReference.property.booleanValueInput">boolean_value_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigAdditionalVariableOutputReference.property.booleanValueInput">boolean_value_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigAdditionalVariableOutputReference.property.encryptionKeyValueInput">encryption_key_value_input</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigAdditionalVariableEncryptionKeyValue">IntegrationConnectorsConnectionAuthConfigAdditionalVariableEncryptionKeyValue</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigAdditionalVariableOutputReference.property.integerValueInput">integer_value_input</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigAdditionalVariableOutputReference.property.keyInput">key_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigAdditionalVariableOutputReference.property.secretValueInput">secret_value_input</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigAdditionalVariableSecretValue">IntegrationConnectorsConnectionAuthConfigAdditionalVariableSecretValue</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigAdditionalVariableOutputReference.property.stringValueInput">string_value_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigAdditionalVariableOutputReference.property.booleanValue">boolean_value</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigAdditionalVariableOutputReference.property.booleanValue">boolean_value</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigAdditionalVariableOutputReference.property.integerValue">integer_value</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigAdditionalVariableOutputReference.property.key">key</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigAdditionalVariableOutputReference.property.stringValue">string_value</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigAdditionalVariableOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigAdditionalVariable">IntegrationConnectorsConnectionAuthConfigAdditionalVariable</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigAdditionalVariableOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigAdditionalVariable">IntegrationConnectorsConnectionAuthConfigAdditionalVariable</a></code> | *No description.* |
 
 ---
 
@@ -6207,10 +6207,10 @@ secret_value: IntegrationConnectorsConnectionAuthConfigAdditionalVariableSecretV
 ##### `boolean_value_input`<sup>Optional</sup> <a name="boolean_value_input" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigAdditionalVariableOutputReference.property.booleanValueInput"></a>
 
 ```python
-boolean_value_input: typing.Union[bool, IResolvable]
+boolean_value_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -6267,10 +6267,10 @@ string_value_input: str
 ##### `boolean_value`<sup>Required</sup> <a name="boolean_value" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigAdditionalVariableOutputReference.property.booleanValue"></a>
 
 ```python
-boolean_value: typing.Union[bool, IResolvable]
+boolean_value: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -6307,10 +6307,10 @@ string_value: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigAdditionalVariableOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, IntegrationConnectorsConnectionAuthConfigAdditionalVariable]
+internal_value: IResolvable | IntegrationConnectorsConnectionAuthConfigAdditionalVariable
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigAdditionalVariable">IntegrationConnectorsConnectionAuthConfigAdditionalVariable</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigAdditionalVariable">IntegrationConnectorsConnectionAuthConfigAdditionalVariable</a>
 
 ---
 
@@ -7202,11 +7202,11 @@ def reset_scopes() -> None
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigOauth2AuthCodeFlowOutputReference.property.authUriInput">auth_uri_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigOauth2AuthCodeFlowOutputReference.property.clientIdInput">client_id_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigOauth2AuthCodeFlowOutputReference.property.clientSecretInput">client_secret_input</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigOauth2AuthCodeFlowClientSecret">IntegrationConnectorsConnectionAuthConfigOauth2AuthCodeFlowClientSecret</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigOauth2AuthCodeFlowOutputReference.property.enablePkceInput">enable_pkce_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigOauth2AuthCodeFlowOutputReference.property.enablePkceInput">enable_pkce_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigOauth2AuthCodeFlowOutputReference.property.scopesInput">scopes_input</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigOauth2AuthCodeFlowOutputReference.property.authUri">auth_uri</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigOauth2AuthCodeFlowOutputReference.property.clientId">client_id</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigOauth2AuthCodeFlowOutputReference.property.enablePkce">enable_pkce</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigOauth2AuthCodeFlowOutputReference.property.enablePkce">enable_pkce</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigOauth2AuthCodeFlowOutputReference.property.scopes">scopes</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigOauth2AuthCodeFlowOutputReference.property.internalValue">internal_value</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigOauth2AuthCodeFlow">IntegrationConnectorsConnectionAuthConfigOauth2AuthCodeFlow</a></code> | *No description.* |
 
@@ -7279,10 +7279,10 @@ client_secret_input: IntegrationConnectorsConnectionAuthConfigOauth2AuthCodeFlow
 ##### `enable_pkce_input`<sup>Optional</sup> <a name="enable_pkce_input" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigOauth2AuthCodeFlowOutputReference.property.enablePkceInput"></a>
 
 ```python
-enable_pkce_input: typing.Union[bool, IResolvable]
+enable_pkce_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -7319,10 +7319,10 @@ client_id: str
 ##### `enable_pkce`<sup>Required</sup> <a name="enable_pkce" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigOauth2AuthCodeFlowOutputReference.property.enablePkce"></a>
 
 ```python
-enable_pkce: typing.Union[bool, IResolvable]
+enable_pkce: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -9285,13 +9285,13 @@ Returns a reversible string representation.
 
 ```python
 def put_additional_variable(
-  value: typing.Union[IResolvable, typing.List[IntegrationConnectorsConnectionAuthConfigAdditionalVariable]]
+  value: IResolvable | typing.List[IntegrationConnectorsConnectionAuthConfigAdditionalVariable]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigOutputReference.putAdditionalVariable.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigAdditionalVariable">IntegrationConnectorsConnectionAuthConfigAdditionalVariable</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigAdditionalVariable">IntegrationConnectorsConnectionAuthConfigAdditionalVariable</a>]
 
 ---
 
@@ -9302,7 +9302,7 @@ def put_oauth2_auth_code_flow(
   auth_uri: str = None,
   client_id: str = None,
   client_secret: IntegrationConnectorsConnectionAuthConfigOauth2AuthCodeFlowClientSecret = None,
-  enable_pkce: typing.Union[bool, IResolvable] = None,
+  enable_pkce: bool | IResolvable = None,
   scopes: typing.List[str] = None
 ) -> None
 ```
@@ -9339,7 +9339,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `enable_pkce`<sup>Optional</sup> <a name="enable_pkce" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigOutputReference.putOauth2AuthCodeFlow.parameter.enablePkce"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Whether to enable PKCE when the user performs the auth code flow.
 
@@ -9550,7 +9550,7 @@ def reset_user_password() -> None
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigOutputReference.property.oauth2JwtBearer">oauth2_jwt_bearer</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigOauth2JwtBearerOutputReference">IntegrationConnectorsConnectionAuthConfigOauth2JwtBearerOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigOutputReference.property.sshPublicKey">ssh_public_key</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigSshPublicKeyOutputReference">IntegrationConnectorsConnectionAuthConfigSshPublicKeyOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigOutputReference.property.userPassword">user_password</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigUserPasswordOutputReference">IntegrationConnectorsConnectionAuthConfigUserPasswordOutputReference</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigOutputReference.property.additionalVariableInput">additional_variable_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigAdditionalVariable">IntegrationConnectorsConnectionAuthConfigAdditionalVariable</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigOutputReference.property.additionalVariableInput">additional_variable_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigAdditionalVariable">IntegrationConnectorsConnectionAuthConfigAdditionalVariable</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigOutputReference.property.authKeyInput">auth_key_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigOutputReference.property.authTypeInput">auth_type_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigOutputReference.property.oauth2AuthCodeFlowInput">oauth2_auth_code_flow_input</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigOauth2AuthCodeFlow">IntegrationConnectorsConnectionAuthConfigOauth2AuthCodeFlow</a></code> | *No description.* |
@@ -9651,10 +9651,10 @@ user_password: IntegrationConnectorsConnectionAuthConfigUserPasswordOutputRefere
 ##### `additional_variable_input`<sup>Optional</sup> <a name="additional_variable_input" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigOutputReference.property.additionalVariableInput"></a>
 
 ```python
-additional_variable_input: typing.Union[IResolvable, typing.List[IntegrationConnectorsConnectionAuthConfigAdditionalVariable]]
+additional_variable_input: IResolvable | typing.List[IntegrationConnectorsConnectionAuthConfigAdditionalVariable]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigAdditionalVariable">IntegrationConnectorsConnectionAuthConfigAdditionalVariable</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigAdditionalVariable">IntegrationConnectorsConnectionAuthConfigAdditionalVariable</a>]
 
 ---
 
@@ -11874,7 +11874,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfigVariableList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfigVariableList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfigVariableList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfigVariable">IntegrationConnectorsConnectionConfigVariable</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfigVariableList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfigVariable">IntegrationConnectorsConnectionConfigVariable</a>]</code> | *No description.* |
 
 ---
 
@@ -11905,10 +11905,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfigVariableList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[IntegrationConnectorsConnectionConfigVariable]]
+internal_value: IResolvable | typing.List[IntegrationConnectorsConnectionConfigVariable]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfigVariable">IntegrationConnectorsConnectionConfigVariable</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfigVariable">IntegrationConnectorsConnectionConfigVariable</a>]
 
 ---
 
@@ -12260,17 +12260,17 @@ def reset_string_value() -> None
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfigVariableOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfigVariableOutputReference.property.encryptionKeyValue">encryption_key_value</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfigVariableEncryptionKeyValueOutputReference">IntegrationConnectorsConnectionConfigVariableEncryptionKeyValueOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfigVariableOutputReference.property.secretValue">secret_value</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfigVariableSecretValueOutputReference">IntegrationConnectorsConnectionConfigVariableSecretValueOutputReference</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfigVariableOutputReference.property.booleanValueInput">boolean_value_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfigVariableOutputReference.property.booleanValueInput">boolean_value_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfigVariableOutputReference.property.encryptionKeyValueInput">encryption_key_value_input</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfigVariableEncryptionKeyValue">IntegrationConnectorsConnectionConfigVariableEncryptionKeyValue</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfigVariableOutputReference.property.integerValueInput">integer_value_input</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfigVariableOutputReference.property.keyInput">key_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfigVariableOutputReference.property.secretValueInput">secret_value_input</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfigVariableSecretValue">IntegrationConnectorsConnectionConfigVariableSecretValue</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfigVariableOutputReference.property.stringValueInput">string_value_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfigVariableOutputReference.property.booleanValue">boolean_value</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfigVariableOutputReference.property.booleanValue">boolean_value</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfigVariableOutputReference.property.integerValue">integer_value</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfigVariableOutputReference.property.key">key</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfigVariableOutputReference.property.stringValue">string_value</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfigVariableOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfigVariable">IntegrationConnectorsConnectionConfigVariable</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfigVariableOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfigVariable">IntegrationConnectorsConnectionConfigVariable</a></code> | *No description.* |
 
 ---
 
@@ -12321,10 +12321,10 @@ secret_value: IntegrationConnectorsConnectionConfigVariableSecretValueOutputRefe
 ##### `boolean_value_input`<sup>Optional</sup> <a name="boolean_value_input" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfigVariableOutputReference.property.booleanValueInput"></a>
 
 ```python
-boolean_value_input: typing.Union[bool, IResolvable]
+boolean_value_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -12381,10 +12381,10 @@ string_value_input: str
 ##### `boolean_value`<sup>Required</sup> <a name="boolean_value" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfigVariableOutputReference.property.booleanValue"></a>
 
 ```python
-boolean_value: typing.Union[bool, IResolvable]
+boolean_value: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -12421,10 +12421,10 @@ string_value: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfigVariableOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, IntegrationConnectorsConnectionConfigVariable]
+internal_value: IResolvable | IntegrationConnectorsConnectionConfigVariable
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfigVariable">IntegrationConnectorsConnectionConfigVariable</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfigVariable">IntegrationConnectorsConnectionConfigVariable</a>
 
 ---
 
@@ -13320,7 +13320,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfigDestinationList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfigDestinationList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfigDestinationList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfigDestination">IntegrationConnectorsConnectionDestinationConfigDestination</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfigDestinationList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfigDestination">IntegrationConnectorsConnectionDestinationConfigDestination</a>]</code> | *No description.* |
 
 ---
 
@@ -13351,10 +13351,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfigDestinationList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[IntegrationConnectorsConnectionDestinationConfigDestination]]
+internal_value: IResolvable | typing.List[IntegrationConnectorsConnectionDestinationConfigDestination]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfigDestination">IntegrationConnectorsConnectionDestinationConfigDestination</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfigDestination">IntegrationConnectorsConnectionDestinationConfigDestination</a>]
 
 ---
 
@@ -13641,7 +13641,7 @@ def reset_service_attachment() -> None
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfigDestinationOutputReference.property.host">host</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfigDestinationOutputReference.property.port">port</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfigDestinationOutputReference.property.serviceAttachment">service_attachment</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfigDestinationOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfigDestination">IntegrationConnectorsConnectionDestinationConfigDestination</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfigDestinationOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfigDestination">IntegrationConnectorsConnectionDestinationConfigDestination</a></code> | *No description.* |
 
 ---
 
@@ -13732,10 +13732,10 @@ service_attachment: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfigDestinationOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, IntegrationConnectorsConnectionDestinationConfigDestination]
+internal_value: IResolvable | IntegrationConnectorsConnectionDestinationConfigDestination
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfigDestination">IntegrationConnectorsConnectionDestinationConfigDestination</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfigDestination">IntegrationConnectorsConnectionDestinationConfigDestination</a>
 
 ---
 
@@ -13871,7 +13871,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfigList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfigList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfigList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfig">IntegrationConnectorsConnectionDestinationConfig</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfigList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfig">IntegrationConnectorsConnectionDestinationConfig</a>]</code> | *No description.* |
 
 ---
 
@@ -13902,10 +13902,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfigList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[IntegrationConnectorsConnectionDestinationConfig]]
+internal_value: IResolvable | typing.List[IntegrationConnectorsConnectionDestinationConfig]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfig">IntegrationConnectorsConnectionDestinationConfig</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfig">IntegrationConnectorsConnectionDestinationConfig</a>]
 
 ---
 
@@ -14164,13 +14164,13 @@ Returns a reversible string representation.
 
 ```python
 def put_destination(
-  value: typing.Union[IResolvable, typing.List[IntegrationConnectorsConnectionDestinationConfigDestination]]
+  value: IResolvable | typing.List[IntegrationConnectorsConnectionDestinationConfigDestination]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfigOutputReference.putDestination.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfigDestination">IntegrationConnectorsConnectionDestinationConfigDestination</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfigDestination">IntegrationConnectorsConnectionDestinationConfigDestination</a>]
 
 ---
 
@@ -14188,10 +14188,10 @@ def reset_destination() -> None
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfigOutputReference.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfigOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfigOutputReference.property.destination">destination</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfigDestinationList">IntegrationConnectorsConnectionDestinationConfigDestinationList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfigOutputReference.property.destinationInput">destination_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfigDestination">IntegrationConnectorsConnectionDestinationConfigDestination</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfigOutputReference.property.destinationInput">destination_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfigDestination">IntegrationConnectorsConnectionDestinationConfigDestination</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfigOutputReference.property.keyInput">key_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfigOutputReference.property.key">key</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfigOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfig">IntegrationConnectorsConnectionDestinationConfig</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfigOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfig">IntegrationConnectorsConnectionDestinationConfig</a></code> | *No description.* |
 
 ---
 
@@ -14232,10 +14232,10 @@ destination: IntegrationConnectorsConnectionDestinationConfigDestinationList
 ##### `destination_input`<sup>Optional</sup> <a name="destination_input" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfigOutputReference.property.destinationInput"></a>
 
 ```python
-destination_input: typing.Union[IResolvable, typing.List[IntegrationConnectorsConnectionDestinationConfigDestination]]
+destination_input: IResolvable | typing.List[IntegrationConnectorsConnectionDestinationConfigDestination]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfigDestination">IntegrationConnectorsConnectionDestinationConfigDestination</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfigDestination">IntegrationConnectorsConnectionDestinationConfigDestination</a>]
 
 ---
 
@@ -14262,10 +14262,10 @@ key: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfigOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, IntegrationConnectorsConnectionDestinationConfig]
+internal_value: IResolvable | IntegrationConnectorsConnectionDestinationConfig
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfig">IntegrationConnectorsConnectionDestinationConfig</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfig">IntegrationConnectorsConnectionDestinationConfig</a>
 
 ---
 
@@ -14733,7 +14733,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAdditionalVariableList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAdditionalVariableList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAdditionalVariableList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAdditionalVariable">IntegrationConnectorsConnectionEventingConfigAdditionalVariable</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAdditionalVariableList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAdditionalVariable">IntegrationConnectorsConnectionEventingConfigAdditionalVariable</a>]</code> | *No description.* |
 
 ---
 
@@ -14764,10 +14764,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAdditionalVariableList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[IntegrationConnectorsConnectionEventingConfigAdditionalVariable]]
+internal_value: IResolvable | typing.List[IntegrationConnectorsConnectionEventingConfigAdditionalVariable]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAdditionalVariable">IntegrationConnectorsConnectionEventingConfigAdditionalVariable</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAdditionalVariable">IntegrationConnectorsConnectionEventingConfigAdditionalVariable</a>]
 
 ---
 
@@ -15119,17 +15119,17 @@ def reset_string_value() -> None
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAdditionalVariableOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAdditionalVariableOutputReference.property.encryptionKeyValue">encryption_key_value</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAdditionalVariableEncryptionKeyValueOutputReference">IntegrationConnectorsConnectionEventingConfigAdditionalVariableEncryptionKeyValueOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAdditionalVariableOutputReference.property.secretValue">secret_value</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAdditionalVariableSecretValueOutputReference">IntegrationConnectorsConnectionEventingConfigAdditionalVariableSecretValueOutputReference</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAdditionalVariableOutputReference.property.booleanValueInput">boolean_value_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAdditionalVariableOutputReference.property.booleanValueInput">boolean_value_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAdditionalVariableOutputReference.property.encryptionKeyValueInput">encryption_key_value_input</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAdditionalVariableEncryptionKeyValue">IntegrationConnectorsConnectionEventingConfigAdditionalVariableEncryptionKeyValue</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAdditionalVariableOutputReference.property.integerValueInput">integer_value_input</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAdditionalVariableOutputReference.property.keyInput">key_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAdditionalVariableOutputReference.property.secretValueInput">secret_value_input</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAdditionalVariableSecretValue">IntegrationConnectorsConnectionEventingConfigAdditionalVariableSecretValue</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAdditionalVariableOutputReference.property.stringValueInput">string_value_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAdditionalVariableOutputReference.property.booleanValue">boolean_value</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAdditionalVariableOutputReference.property.booleanValue">boolean_value</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAdditionalVariableOutputReference.property.integerValue">integer_value</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAdditionalVariableOutputReference.property.key">key</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAdditionalVariableOutputReference.property.stringValue">string_value</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAdditionalVariableOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAdditionalVariable">IntegrationConnectorsConnectionEventingConfigAdditionalVariable</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAdditionalVariableOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAdditionalVariable">IntegrationConnectorsConnectionEventingConfigAdditionalVariable</a></code> | *No description.* |
 
 ---
 
@@ -15180,10 +15180,10 @@ secret_value: IntegrationConnectorsConnectionEventingConfigAdditionalVariableSec
 ##### `boolean_value_input`<sup>Optional</sup> <a name="boolean_value_input" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAdditionalVariableOutputReference.property.booleanValueInput"></a>
 
 ```python
-boolean_value_input: typing.Union[bool, IResolvable]
+boolean_value_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -15240,10 +15240,10 @@ string_value_input: str
 ##### `boolean_value`<sup>Required</sup> <a name="boolean_value" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAdditionalVariableOutputReference.property.booleanValue"></a>
 
 ```python
-boolean_value: typing.Union[bool, IResolvable]
+boolean_value: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -15280,10 +15280,10 @@ string_value: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAdditionalVariableOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, IntegrationConnectorsConnectionEventingConfigAdditionalVariable]
+internal_value: IResolvable | IntegrationConnectorsConnectionEventingConfigAdditionalVariable
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAdditionalVariable">IntegrationConnectorsConnectionEventingConfigAdditionalVariable</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAdditionalVariable">IntegrationConnectorsConnectionEventingConfigAdditionalVariable</a>
 
 ---
 
@@ -16047,7 +16047,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariableList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariableList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariableList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariable">IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariable</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariableList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariable">IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariable</a>]</code> | *No description.* |
 
 ---
 
@@ -16078,10 +16078,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariableList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariable]]
+internal_value: IResolvable | typing.List[IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariable]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariable">IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariable</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariable">IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariable</a>]
 
 ---
 
@@ -16433,17 +16433,17 @@ def reset_string_value() -> None
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariableOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariableOutputReference.property.encryptionKeyValue">encryption_key_value</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariableEncryptionKeyValueOutputReference">IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariableEncryptionKeyValueOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariableOutputReference.property.secretValue">secret_value</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariableSecretValueOutputReference">IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariableSecretValueOutputReference</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariableOutputReference.property.booleanValueInput">boolean_value_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariableOutputReference.property.booleanValueInput">boolean_value_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariableOutputReference.property.encryptionKeyValueInput">encryption_key_value_input</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariableEncryptionKeyValue">IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariableEncryptionKeyValue</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariableOutputReference.property.integerValueInput">integer_value_input</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariableOutputReference.property.keyInput">key_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariableOutputReference.property.secretValueInput">secret_value_input</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariableSecretValue">IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariableSecretValue</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariableOutputReference.property.stringValueInput">string_value_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariableOutputReference.property.booleanValue">boolean_value</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariableOutputReference.property.booleanValue">boolean_value</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariableOutputReference.property.integerValue">integer_value</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariableOutputReference.property.key">key</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariableOutputReference.property.stringValue">string_value</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariableOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariable">IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariable</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariableOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariable">IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariable</a></code> | *No description.* |
 
 ---
 
@@ -16494,10 +16494,10 @@ secret_value: IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalV
 ##### `boolean_value_input`<sup>Optional</sup> <a name="boolean_value_input" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariableOutputReference.property.booleanValueInput"></a>
 
 ```python
-boolean_value_input: typing.Union[bool, IResolvable]
+boolean_value_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -16554,10 +16554,10 @@ string_value_input: str
 ##### `boolean_value`<sup>Required</sup> <a name="boolean_value" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariableOutputReference.property.booleanValue"></a>
 
 ```python
-boolean_value: typing.Union[bool, IResolvable]
+boolean_value: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -16594,10 +16594,10 @@ string_value: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariableOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariable]
+internal_value: IResolvable | IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariable
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariable">IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariable</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariable">IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariable</a>
 
 ---
 
@@ -17134,13 +17134,13 @@ Returns a reversible string representation.
 
 ```python
 def put_additional_variable(
-  value: typing.Union[IResolvable, typing.List[IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariable]]
+  value: IResolvable | typing.List[IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariable]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigOutputReference.putAdditionalVariable.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariable">IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariable</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariable">IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariable</a>]
 
 ---
 
@@ -17194,7 +17194,7 @@ def reset_auth_key() -> None
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigOutputReference.property.additionalVariable">additional_variable</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariableList">IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariableList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigOutputReference.property.userPassword">user_password</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigUserPasswordOutputReference">IntegrationConnectorsConnectionEventingConfigAuthConfigUserPasswordOutputReference</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigOutputReference.property.additionalVariableInput">additional_variable_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariable">IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariable</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigOutputReference.property.additionalVariableInput">additional_variable_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariable">IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariable</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigOutputReference.property.authKeyInput">auth_key_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigOutputReference.property.authTypeInput">auth_type_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigOutputReference.property.userPasswordInput">user_password_input</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigUserPassword">IntegrationConnectorsConnectionEventingConfigAuthConfigUserPassword</a></code> | *No description.* |
@@ -17251,10 +17251,10 @@ user_password: IntegrationConnectorsConnectionEventingConfigAuthConfigUserPasswo
 ##### `additional_variable_input`<sup>Optional</sup> <a name="additional_variable_input" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigOutputReference.property.additionalVariableInput"></a>
 
 ```python
-additional_variable_input: typing.Union[IResolvable, typing.List[IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariable]]
+additional_variable_input: IResolvable | typing.List[IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariable]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariable">IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariable</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariable">IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariable</a>]
 
 ---
 
@@ -18206,13 +18206,13 @@ Returns a reversible string representation.
 
 ```python
 def put_additional_variable(
-  value: typing.Union[IResolvable, typing.List[IntegrationConnectorsConnectionEventingConfigAdditionalVariable]]
+  value: IResolvable | typing.List[IntegrationConnectorsConnectionEventingConfigAdditionalVariable]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigOutputReference.putAdditionalVariable.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAdditionalVariable">IntegrationConnectorsConnectionEventingConfigAdditionalVariable</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAdditionalVariable">IntegrationConnectorsConnectionEventingConfigAdditionalVariable</a>]
 
 ---
 
@@ -18222,7 +18222,7 @@ def put_additional_variable(
 def put_auth_config(
   auth_type: str,
   user_password: IntegrationConnectorsConnectionEventingConfigAuthConfigUserPassword,
-  additional_variable: typing.Union[IResolvable, typing.List[IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariable]] = None,
+  additional_variable: IResolvable | typing.List[IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariable] = None,
   auth_key: str = None
 ) -> None
 ```
@@ -18249,7 +18249,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `additional_variable`<sup>Optional</sup> <a name="additional_variable" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigOutputReference.putAuthConfig.parameter.additionalVariable"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariable">IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariable</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariable">IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariable</a>]
 
 additional_variable block.
 
@@ -18271,14 +18271,14 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ```python
 def put_registration_destination_config(
-  destination: typing.Union[IResolvable, typing.List[IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigDestination]] = None,
+  destination: IResolvable | typing.List[IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigDestination] = None,
   key: str = None
 ) -> None
 ```
 
 ###### `destination`<sup>Optional</sup> <a name="destination" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigOutputReference.putRegistrationDestinationConfig.parameter.destination"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigDestination">IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigDestination</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigDestination">IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigDestination</a>]
 
 destination block.
 
@@ -18324,11 +18324,11 @@ def reset_enrichment_enabled() -> None
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigOutputReference.property.additionalVariable">additional_variable</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAdditionalVariableList">IntegrationConnectorsConnectionEventingConfigAdditionalVariableList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigOutputReference.property.authConfig">auth_config</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigOutputReference">IntegrationConnectorsConnectionEventingConfigAuthConfigOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigOutputReference.property.registrationDestinationConfig">registration_destination_config</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigOutputReference">IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigOutputReference</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigOutputReference.property.additionalVariableInput">additional_variable_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAdditionalVariable">IntegrationConnectorsConnectionEventingConfigAdditionalVariable</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigOutputReference.property.additionalVariableInput">additional_variable_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAdditionalVariable">IntegrationConnectorsConnectionEventingConfigAdditionalVariable</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigOutputReference.property.authConfigInput">auth_config_input</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfig">IntegrationConnectorsConnectionEventingConfigAuthConfig</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigOutputReference.property.enrichmentEnabledInput">enrichment_enabled_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigOutputReference.property.enrichmentEnabledInput">enrichment_enabled_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigOutputReference.property.registrationDestinationConfigInput">registration_destination_config_input</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfig">IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfig</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigOutputReference.property.enrichmentEnabled">enrichment_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigOutputReference.property.enrichmentEnabled">enrichment_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigOutputReference.property.internalValue">internal_value</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfig">IntegrationConnectorsConnectionEventingConfig</a></code> | *No description.* |
 
 ---
@@ -18390,10 +18390,10 @@ registration_destination_config: IntegrationConnectorsConnectionEventingConfigRe
 ##### `additional_variable_input`<sup>Optional</sup> <a name="additional_variable_input" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigOutputReference.property.additionalVariableInput"></a>
 
 ```python
-additional_variable_input: typing.Union[IResolvable, typing.List[IntegrationConnectorsConnectionEventingConfigAdditionalVariable]]
+additional_variable_input: IResolvable | typing.List[IntegrationConnectorsConnectionEventingConfigAdditionalVariable]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAdditionalVariable">IntegrationConnectorsConnectionEventingConfigAdditionalVariable</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAdditionalVariable">IntegrationConnectorsConnectionEventingConfigAdditionalVariable</a>]
 
 ---
 
@@ -18410,10 +18410,10 @@ auth_config_input: IntegrationConnectorsConnectionEventingConfigAuthConfig
 ##### `enrichment_enabled_input`<sup>Optional</sup> <a name="enrichment_enabled_input" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigOutputReference.property.enrichmentEnabledInput"></a>
 
 ```python
-enrichment_enabled_input: typing.Union[bool, IResolvable]
+enrichment_enabled_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -18430,10 +18430,10 @@ registration_destination_config_input: IntegrationConnectorsConnectionEventingCo
 ##### `enrichment_enabled`<sup>Required</sup> <a name="enrichment_enabled" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigOutputReference.property.enrichmentEnabled"></a>
 
 ```python
-enrichment_enabled: typing.Union[bool, IResolvable]
+enrichment_enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -18579,7 +18579,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigDestinationList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigDestinationList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigDestinationList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigDestination">IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigDestination</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigDestinationList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigDestination">IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigDestination</a>]</code> | *No description.* |
 
 ---
 
@@ -18610,10 +18610,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigDestinationList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigDestination]]
+internal_value: IResolvable | typing.List[IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigDestination]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigDestination">IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigDestination</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigDestination">IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigDestination</a>]
 
 ---
 
@@ -18900,7 +18900,7 @@ def reset_service_attachment() -> None
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigDestinationOutputReference.property.host">host</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigDestinationOutputReference.property.port">port</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigDestinationOutputReference.property.serviceAttachment">service_attachment</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigDestinationOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigDestination">IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigDestination</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigDestinationOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigDestination">IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigDestination</a></code> | *No description.* |
 
 ---
 
@@ -18991,10 +18991,10 @@ service_attachment: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigDestinationOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigDestination]
+internal_value: IResolvable | IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigDestination
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigDestination">IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigDestination</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigDestination">IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigDestination</a>
 
 ---
 
@@ -19234,13 +19234,13 @@ Returns a reversible string representation.
 
 ```python
 def put_destination(
-  value: typing.Union[IResolvable, typing.List[IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigDestination]]
+  value: IResolvable | typing.List[IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigDestination]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigOutputReference.putDestination.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigDestination">IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigDestination</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigDestination">IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigDestination</a>]
 
 ---
 
@@ -19264,7 +19264,7 @@ def reset_key() -> None
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigOutputReference.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigOutputReference.property.destination">destination</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigDestinationList">IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigDestinationList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigOutputReference.property.destinationInput">destination_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigDestination">IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigDestination</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigOutputReference.property.destinationInput">destination_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigDestination">IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigDestination</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigOutputReference.property.keyInput">key_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigOutputReference.property.key">key</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigOutputReference.property.internalValue">internal_value</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfig">IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfig</a></code> | *No description.* |
@@ -19308,10 +19308,10 @@ destination: IntegrationConnectorsConnectionEventingConfigRegistrationDestinatio
 ##### `destination_input`<sup>Optional</sup> <a name="destination_input" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigOutputReference.property.destinationInput"></a>
 
 ```python
-destination_input: typing.Union[IResolvable, typing.List[IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigDestination]]
+destination_input: IResolvable | typing.List[IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigDestination]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigDestination">IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigDestination</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigDestination">IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigDestination</a>]
 
 ---
 
@@ -20538,9 +20538,9 @@ def reset_reason() -> None
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionLockConfigOutputReference.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionLockConfigOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionLockConfigOutputReference.property.lockedInput">locked_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionLockConfigOutputReference.property.lockedInput">locked_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionLockConfigOutputReference.property.reasonInput">reason_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionLockConfigOutputReference.property.locked">locked</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionLockConfigOutputReference.property.locked">locked</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionLockConfigOutputReference.property.reason">reason</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionLockConfigOutputReference.property.internalValue">internal_value</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionLockConfig">IntegrationConnectorsConnectionLockConfig</a></code> | *No description.* |
 
@@ -20573,10 +20573,10 @@ fqn: str
 ##### `locked_input`<sup>Optional</sup> <a name="locked_input" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionLockConfigOutputReference.property.lockedInput"></a>
 
 ```python
-locked_input: typing.Union[bool, IResolvable]
+locked_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -20593,10 +20593,10 @@ reason_input: str
 ##### `locked`<sup>Required</sup> <a name="locked" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionLockConfigOutputReference.property.locked"></a>
 
 ```python
-locked: typing.Union[bool, IResolvable]
+locked: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -20863,9 +20863,9 @@ def reset_level() -> None
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionLogConfigOutputReference.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionLogConfigOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionLogConfigOutputReference.property.enabledInput">enabled_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionLogConfigOutputReference.property.enabledInput">enabled_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionLogConfigOutputReference.property.levelInput">level_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionLogConfigOutputReference.property.enabled">enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionLogConfigOutputReference.property.enabled">enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionLogConfigOutputReference.property.level">level</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionLogConfigOutputReference.property.internalValue">internal_value</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionLogConfig">IntegrationConnectorsConnectionLogConfig</a></code> | *No description.* |
 
@@ -20898,10 +20898,10 @@ fqn: str
 ##### `enabled_input`<sup>Optional</sup> <a name="enabled_input" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionLogConfigOutputReference.property.enabledInput"></a>
 
 ```python
-enabled_input: typing.Union[bool, IResolvable]
+enabled_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -20918,10 +20918,10 @@ level_input: str
 ##### `enabled`<sup>Required</sup> <a name="enabled" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionLogConfigOutputReference.property.enabled"></a>
 
 ```python
-enabled: typing.Union[bool, IResolvable]
+enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -21741,7 +21741,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigAdditionalVariableList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigAdditionalVariableList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigAdditionalVariableList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigAdditionalVariable">IntegrationConnectorsConnectionSslConfigAdditionalVariable</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigAdditionalVariableList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigAdditionalVariable">IntegrationConnectorsConnectionSslConfigAdditionalVariable</a>]</code> | *No description.* |
 
 ---
 
@@ -21772,10 +21772,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigAdditionalVariableList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[IntegrationConnectorsConnectionSslConfigAdditionalVariable]]
+internal_value: IResolvable | typing.List[IntegrationConnectorsConnectionSslConfigAdditionalVariable]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigAdditionalVariable">IntegrationConnectorsConnectionSslConfigAdditionalVariable</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigAdditionalVariable">IntegrationConnectorsConnectionSslConfigAdditionalVariable</a>]
 
 ---
 
@@ -22127,17 +22127,17 @@ def reset_string_value() -> None
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigAdditionalVariableOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigAdditionalVariableOutputReference.property.encryptionKeyValue">encryption_key_value</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigAdditionalVariableEncryptionKeyValueOutputReference">IntegrationConnectorsConnectionSslConfigAdditionalVariableEncryptionKeyValueOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigAdditionalVariableOutputReference.property.secretValue">secret_value</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigAdditionalVariableSecretValueOutputReference">IntegrationConnectorsConnectionSslConfigAdditionalVariableSecretValueOutputReference</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigAdditionalVariableOutputReference.property.booleanValueInput">boolean_value_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigAdditionalVariableOutputReference.property.booleanValueInput">boolean_value_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigAdditionalVariableOutputReference.property.encryptionKeyValueInput">encryption_key_value_input</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigAdditionalVariableEncryptionKeyValue">IntegrationConnectorsConnectionSslConfigAdditionalVariableEncryptionKeyValue</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigAdditionalVariableOutputReference.property.integerValueInput">integer_value_input</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigAdditionalVariableOutputReference.property.keyInput">key_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigAdditionalVariableOutputReference.property.secretValueInput">secret_value_input</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigAdditionalVariableSecretValue">IntegrationConnectorsConnectionSslConfigAdditionalVariableSecretValue</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigAdditionalVariableOutputReference.property.stringValueInput">string_value_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigAdditionalVariableOutputReference.property.booleanValue">boolean_value</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigAdditionalVariableOutputReference.property.booleanValue">boolean_value</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigAdditionalVariableOutputReference.property.integerValue">integer_value</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigAdditionalVariableOutputReference.property.key">key</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigAdditionalVariableOutputReference.property.stringValue">string_value</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigAdditionalVariableOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigAdditionalVariable">IntegrationConnectorsConnectionSslConfigAdditionalVariable</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigAdditionalVariableOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigAdditionalVariable">IntegrationConnectorsConnectionSslConfigAdditionalVariable</a></code> | *No description.* |
 
 ---
 
@@ -22188,10 +22188,10 @@ secret_value: IntegrationConnectorsConnectionSslConfigAdditionalVariableSecretVa
 ##### `boolean_value_input`<sup>Optional</sup> <a name="boolean_value_input" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigAdditionalVariableOutputReference.property.booleanValueInput"></a>
 
 ```python
-boolean_value_input: typing.Union[bool, IResolvable]
+boolean_value_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -22248,10 +22248,10 @@ string_value_input: str
 ##### `boolean_value`<sup>Required</sup> <a name="boolean_value" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigAdditionalVariableOutputReference.property.booleanValue"></a>
 
 ```python
-boolean_value: typing.Union[bool, IResolvable]
+boolean_value: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -22288,10 +22288,10 @@ string_value: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigAdditionalVariableOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, IntegrationConnectorsConnectionSslConfigAdditionalVariable]
+internal_value: IResolvable | IntegrationConnectorsConnectionSslConfigAdditionalVariable
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigAdditionalVariable">IntegrationConnectorsConnectionSslConfigAdditionalVariable</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigAdditionalVariable">IntegrationConnectorsConnectionSslConfigAdditionalVariable</a>
 
 ---
 
@@ -23726,13 +23726,13 @@ Returns a reversible string representation.
 
 ```python
 def put_additional_variable(
-  value: typing.Union[IResolvable, typing.List[IntegrationConnectorsConnectionSslConfigAdditionalVariable]]
+  value: IResolvable | typing.List[IntegrationConnectorsConnectionSslConfigAdditionalVariable]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigOutputReference.putAdditionalVariable.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigAdditionalVariable">IntegrationConnectorsConnectionSslConfigAdditionalVariable</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigAdditionalVariable">IntegrationConnectorsConnectionSslConfigAdditionalVariable</a>]
 
 ---
 
@@ -23874,7 +23874,7 @@ def reset_use_ssl() -> None
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigOutputReference.property.clientPrivateKey">client_private_key</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigClientPrivateKeyOutputReference">IntegrationConnectorsConnectionSslConfigClientPrivateKeyOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigOutputReference.property.clientPrivateKeyPass">client_private_key_pass</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigClientPrivateKeyPassOutputReference">IntegrationConnectorsConnectionSslConfigClientPrivateKeyPassOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigOutputReference.property.privateServerCertificate">private_server_certificate</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigPrivateServerCertificateOutputReference">IntegrationConnectorsConnectionSslConfigPrivateServerCertificateOutputReference</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigOutputReference.property.additionalVariableInput">additional_variable_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigAdditionalVariable">IntegrationConnectorsConnectionSslConfigAdditionalVariable</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigOutputReference.property.additionalVariableInput">additional_variable_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigAdditionalVariable">IntegrationConnectorsConnectionSslConfigAdditionalVariable</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigOutputReference.property.clientCertificateInput">client_certificate_input</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigClientCertificate">IntegrationConnectorsConnectionSslConfigClientCertificate</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigOutputReference.property.clientCertTypeInput">client_cert_type_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigOutputReference.property.clientPrivateKeyInput">client_private_key_input</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigClientPrivateKey">IntegrationConnectorsConnectionSslConfigClientPrivateKey</a></code> | *No description.* |
@@ -23883,12 +23883,12 @@ def reset_use_ssl() -> None
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigOutputReference.property.serverCertTypeInput">server_cert_type_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigOutputReference.property.trustModelInput">trust_model_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigOutputReference.property.typeInput">type_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigOutputReference.property.useSslInput">use_ssl_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigOutputReference.property.useSslInput">use_ssl_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigOutputReference.property.clientCertType">client_cert_type</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigOutputReference.property.serverCertType">server_cert_type</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigOutputReference.property.trustModel">trust_model</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigOutputReference.property.type">type</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigOutputReference.property.useSsl">use_ssl</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigOutputReference.property.useSsl">use_ssl</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigOutputReference.property.internalValue">internal_value</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfig">IntegrationConnectorsConnectionSslConfig</a></code> | *No description.* |
 
 ---
@@ -23970,10 +23970,10 @@ private_server_certificate: IntegrationConnectorsConnectionSslConfigPrivateServe
 ##### `additional_variable_input`<sup>Optional</sup> <a name="additional_variable_input" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigOutputReference.property.additionalVariableInput"></a>
 
 ```python
-additional_variable_input: typing.Union[IResolvable, typing.List[IntegrationConnectorsConnectionSslConfigAdditionalVariable]]
+additional_variable_input: IResolvable | typing.List[IntegrationConnectorsConnectionSslConfigAdditionalVariable]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigAdditionalVariable">IntegrationConnectorsConnectionSslConfigAdditionalVariable</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigAdditionalVariable">IntegrationConnectorsConnectionSslConfigAdditionalVariable</a>]
 
 ---
 
@@ -24060,10 +24060,10 @@ type_input: str
 ##### `use_ssl_input`<sup>Optional</sup> <a name="use_ssl_input" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigOutputReference.property.useSslInput"></a>
 
 ```python
-use_ssl_input: typing.Union[bool, IResolvable]
+use_ssl_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -24110,10 +24110,10 @@ type: str
 ##### `use_ssl`<sup>Required</sup> <a name="use_ssl" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigOutputReference.property.useSsl"></a>
 
 ```python
-use_ssl: typing.Union[bool, IResolvable]
+use_ssl: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -25172,7 +25172,7 @@ def reset_update() -> None
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionTimeoutsOutputReference.property.create">create</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionTimeoutsOutputReference.property.delete">delete</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionTimeoutsOutputReference.property.update">update</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionTimeouts">IntegrationConnectorsConnectionTimeouts</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionTimeouts">IntegrationConnectorsConnectionTimeouts</a></code> | *No description.* |
 
 ---
 
@@ -25263,10 +25263,10 @@ update: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionTimeoutsOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, IntegrationConnectorsConnectionTimeouts]
+internal_value: IResolvable | IntegrationConnectorsConnectionTimeouts
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionTimeouts">IntegrationConnectorsConnectionTimeouts</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionTimeouts">IntegrationConnectorsConnectionTimeouts</a>
 
 ---
 

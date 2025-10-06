@@ -14,13 +14,13 @@ from cdktf_cdktf_provider_google import datastream_stream
 datastreamStream.DatastreamStream(
   scope: Construct,
   id: str,
-  connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection] = None,
-  count: typing.Union[typing.Union[int, float], TerraformCount] = None,
+  connection: SSHProvisionerConnection | WinrmProvisionerConnection = None,
+  count: typing.Union[int, float] | TerraformCount = None,
   depends_on: typing.List[ITerraformDependable] = None,
   for_each: ITerraformIterator = None,
   lifecycle: TerraformResourceLifecycle = None,
   provider: TerraformProvider = None,
-  provisioners: typing.List[typing.Union[FileProvisioner, LocalExecProvisioner, RemoteExecProvisioner]] = None,
+  provisioners: typing.List[FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner] = None,
   destination_config: DatastreamStreamDestinationConfig,
   display_name: str,
   location: str,
@@ -28,7 +28,7 @@ datastreamStream.DatastreamStream(
   stream_id: str,
   backfill_all: DatastreamStreamBackfillAll = None,
   backfill_none: DatastreamStreamBackfillNone = None,
-  create_without_validation: typing.Union[bool, IResolvable] = None,
+  create_without_validation: bool | IResolvable = None,
   customer_managed_encryption_key: str = None,
   desired_state: str = None,
   id: str = None,
@@ -42,13 +42,13 @@ datastreamStream.DatastreamStream(
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStream.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | The scope in which to define this construct. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStream.Initializer.parameter.id">id</a></code> | <code>str</code> | The scoped construct ID. |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStream.Initializer.parameter.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStream.Initializer.parameter.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStream.Initializer.parameter.connection">connection</a></code> | <code>cdktf.SSHProvisionerConnection \| cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStream.Initializer.parameter.count">count</a></code> | <code>typing.Union[int, float] \| cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStream.Initializer.parameter.dependsOn">depends_on</a></code> | <code>typing.List[cdktf.ITerraformDependable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStream.Initializer.parameter.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStream.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStream.Initializer.parameter.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStream.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStream.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStream.Initializer.parameter.destinationConfig">destination_config</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamDestinationConfig">DatastreamStreamDestinationConfig</a></code> | destination_config block. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStream.Initializer.parameter.displayName">display_name</a></code> | <code>str</code> | Display name. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStream.Initializer.parameter.location">location</a></code> | <code>str</code> | The name of the location this stream is located in. |
@@ -56,7 +56,7 @@ datastreamStream.DatastreamStream(
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStream.Initializer.parameter.streamId">stream_id</a></code> | <code>str</code> | The stream identifier. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStream.Initializer.parameter.backfillAll">backfill_all</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAll">DatastreamStreamBackfillAll</a></code> | backfill_all block. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStream.Initializer.parameter.backfillNone">backfill_none</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillNone">DatastreamStreamBackfillNone</a></code> | backfill_none block. |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStream.Initializer.parameter.createWithoutValidation">create_without_validation</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Create the stream without validating it. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStream.Initializer.parameter.createWithoutValidation">create_without_validation</a></code> | <code>bool \| cdktf.IResolvable</code> | Create the stream without validating it. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStream.Initializer.parameter.customerManagedEncryptionKey">customer_managed_encryption_key</a></code> | <code>str</code> | A reference to a KMS encryption key. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStream.Initializer.parameter.desiredState">desired_state</a></code> | <code>str</code> | Desired state of the Stream. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStream.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/datastream_stream#id DatastreamStream#id}. |
@@ -86,13 +86,13 @@ Must be unique amongst siblings in the same scope
 
 ##### `connection`<sup>Optional</sup> <a name="connection" id="@cdktf/provider-google.datastreamStream.DatastreamStream.Initializer.parameter.connection"></a>
 
-- *Type:* typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]
+- *Type:* cdktf.SSHProvisionerConnection | cdktf.WinrmProvisionerConnection
 
 ---
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.datastreamStream.DatastreamStream.Initializer.parameter.count"></a>
 
-- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
+- *Type:* typing.Union[int, float] | cdktf.TerraformCount
 
 ---
 
@@ -122,7 +122,7 @@ Must be unique amongst siblings in the same scope
 
 ##### `provisioners`<sup>Optional</sup> <a name="provisioners" id="@cdktf/provider-google.datastreamStream.DatastreamStream.Initializer.parameter.provisioners"></a>
 
-- *Type:* typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]
+- *Type:* typing.List[cdktf.FileProvisioner | cdktf.LocalExecProvisioner | cdktf.RemoteExecProvisioner]
 
 ---
 
@@ -198,7 +198,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `create_without_validation`<sup>Optional</sup> <a name="create_without_validation" id="@cdktf/provider-google.datastreamStream.DatastreamStream.Initializer.parameter.createWithoutValidation"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Create the stream without validating it.
 
@@ -542,7 +542,7 @@ def get_string_map_attribute(
 ##### `has_resource_move` <a name="has_resource_move" id="@cdktf/provider-google.datastreamStream.DatastreamStream.hasResourceMove"></a>
 
 ```python
-def has_resource_move() -> typing.Union[TerraformResourceMoveByTarget, TerraformResourceMoveById]
+def has_resource_move() -> TerraformResourceMoveByTarget | TerraformResourceMoveById
 ```
 
 ##### `import_from` <a name="import_from" id="@cdktf/provider-google.datastreamStream.DatastreamStream.importFrom"></a>
@@ -605,7 +605,7 @@ Full id of resource being moved from, e.g. "aws_s3_bucket.example".
 ```python
 def move_to(
   move_target: str,
-  index: typing.Union[str, typing.Union[int, float]] = None
+  index: str | typing.Union[int, float] = None
 ) -> None
 ```
 
@@ -621,7 +621,7 @@ The previously set user defined string set by .addMoveTarget() corresponding to 
 
 ###### `index`<sup>Optional</sup> <a name="index" id="@cdktf/provider-google.datastreamStream.DatastreamStream.moveTo.parameter.index"></a>
 
-- *Type:* typing.Union[str, typing.Union[int, float]]
+- *Type:* str | typing.Union[int, float]
 
 Optional The index corresponding to the key the resource is to appear in the foreach of a resource to move to.
 
@@ -1051,13 +1051,13 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.5
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStream.property.terraformMetaArguments">terraform_meta_arguments</a></code> | <code>typing.Mapping[typing.Any]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStream.property.terraformResourceType">terraform_resource_type</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStream.property.terraformGeneratorMetadata">terraform_generator_metadata</a></code> | <code>cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStream.property.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStream.property.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStream.property.connection">connection</a></code> | <code>cdktf.SSHProvisionerConnection \| cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStream.property.count">count</a></code> | <code>typing.Union[int, float] \| cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStream.property.dependsOn">depends_on</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStream.property.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStream.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStream.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStream.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStream.property.provisioners">provisioners</a></code> | <code>typing.List[cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStream.property.backfillAll">backfill_all</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOutputReference">DatastreamStreamBackfillAllOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStream.property.backfillNone">backfill_none</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillNoneOutputReference">DatastreamStreamBackfillNoneOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStream.property.destinationConfig">destination_config</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamDestinationConfigOutputReference">DatastreamStreamDestinationConfigOutputReference</a></code> | *No description.* |
@@ -1069,7 +1069,7 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.5
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStream.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamTimeoutsOutputReference">DatastreamStreamTimeoutsOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStream.property.backfillAllInput">backfill_all_input</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAll">DatastreamStreamBackfillAll</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStream.property.backfillNoneInput">backfill_none_input</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillNone">DatastreamStreamBackfillNone</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStream.property.createWithoutValidationInput">create_without_validation_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStream.property.createWithoutValidationInput">create_without_validation_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStream.property.customerManagedEncryptionKeyInput">customer_managed_encryption_key_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStream.property.desiredStateInput">desired_state_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStream.property.destinationConfigInput">destination_config_input</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamDestinationConfig">DatastreamStreamDestinationConfig</a></code> | *No description.* |
@@ -1080,8 +1080,8 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.5
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStream.property.projectInput">project_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStream.property.sourceConfigInput">source_config_input</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfig">DatastreamStreamSourceConfig</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStream.property.streamIdInput">stream_id_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStream.property.timeoutsInput">timeouts_input</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamTimeouts">DatastreamStreamTimeouts</a>]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStream.property.createWithoutValidation">create_without_validation</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStream.property.timeoutsInput">timeouts_input</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamTimeouts">DatastreamStreamTimeouts</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStream.property.createWithoutValidation">create_without_validation</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStream.property.customerManagedEncryptionKey">customer_managed_encryption_key</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStream.property.desiredState">desired_state</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStream.property.displayName">display_name</a></code> | <code>str</code> | *No description.* |
@@ -1168,20 +1168,20 @@ terraform_generator_metadata: TerraformProviderGeneratorMetadata
 ##### `connection`<sup>Optional</sup> <a name="connection" id="@cdktf/provider-google.datastreamStream.DatastreamStream.property.connection"></a>
 
 ```python
-connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection]
+connection: SSHProvisionerConnection | WinrmProvisionerConnection
 ```
 
-- *Type:* typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]
+- *Type:* cdktf.SSHProvisionerConnection | cdktf.WinrmProvisionerConnection
 
 ---
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.datastreamStream.DatastreamStream.property.count"></a>
 
 ```python
-count: typing.Union[typing.Union[int, float], TerraformCount]
+count: typing.Union[int, float] | TerraformCount
 ```
 
-- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
+- *Type:* typing.Union[int, float] | cdktf.TerraformCount
 
 ---
 
@@ -1228,10 +1228,10 @@ provider: TerraformProvider
 ##### `provisioners`<sup>Optional</sup> <a name="provisioners" id="@cdktf/provider-google.datastreamStream.DatastreamStream.property.provisioners"></a>
 
 ```python
-provisioners: typing.List[typing.Union[FileProvisioner, LocalExecProvisioner, RemoteExecProvisioner]]
+provisioners: typing.List[FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner]
 ```
 
-- *Type:* typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]
+- *Type:* typing.List[cdktf.FileProvisioner | cdktf.LocalExecProvisioner | cdktf.RemoteExecProvisioner]
 
 ---
 
@@ -1348,10 +1348,10 @@ backfill_none_input: DatastreamStreamBackfillNone
 ##### `create_without_validation_input`<sup>Optional</sup> <a name="create_without_validation_input" id="@cdktf/provider-google.datastreamStream.DatastreamStream.property.createWithoutValidationInput"></a>
 
 ```python
-create_without_validation_input: typing.Union[bool, IResolvable]
+create_without_validation_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -1458,20 +1458,20 @@ stream_id_input: str
 ##### `timeouts_input`<sup>Optional</sup> <a name="timeouts_input" id="@cdktf/provider-google.datastreamStream.DatastreamStream.property.timeoutsInput"></a>
 
 ```python
-timeouts_input: typing.Union[IResolvable, DatastreamStreamTimeouts]
+timeouts_input: IResolvable | DatastreamStreamTimeouts
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamTimeouts">DatastreamStreamTimeouts</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamTimeouts">DatastreamStreamTimeouts</a>
 
 ---
 
 ##### `create_without_validation`<sup>Required</sup> <a name="create_without_validation" id="@cdktf/provider-google.datastreamStream.DatastreamStream.property.createWithoutValidation"></a>
 
 ```python
-create_without_validation: typing.Union[bool, IResolvable]
+create_without_validation: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -1681,7 +1681,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 from cdktf_cdktf_provider_google import datastream_stream
 
 datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjects(
-  mysql_databases: typing.Union[IResolvable, typing.List[DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabases]]
+  mysql_databases: IResolvable | typing.List[DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabases]
 )
 ```
 
@@ -1689,17 +1689,17 @@ datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjects(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjects.property.mysqlDatabases">mysql_databases</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabases">DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabases</a>]]</code> | mysql_databases block. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjects.property.mysqlDatabases">mysql_databases</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabases">DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabases</a>]</code> | mysql_databases block. |
 
 ---
 
 ##### `mysql_databases`<sup>Required</sup> <a name="mysql_databases" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjects.property.mysqlDatabases"></a>
 
 ```python
-mysql_databases: typing.Union[IResolvable, typing.List[DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabases]]
+mysql_databases: IResolvable | typing.List[DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabases]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabases">DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabases</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabases">DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabases</a>]
 
 mysql_databases block.
 
@@ -1716,7 +1716,7 @@ from cdktf_cdktf_provider_google import datastream_stream
 
 datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabases(
   database: str,
-  mysql_tables: typing.Union[IResolvable, typing.List[DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTables]] = None
+  mysql_tables: IResolvable | typing.List[DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTables] = None
 )
 ```
 
@@ -1725,7 +1725,7 @@ datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabases(
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabases.property.database">database</a></code> | <code>str</code> | Database name. |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabases.property.mysqlTables">mysql_tables</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTables">DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTables</a>]]</code> | mysql_tables block. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabases.property.mysqlTables">mysql_tables</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTables">DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTables</a>]</code> | mysql_tables block. |
 
 ---
 
@@ -1746,10 +1746,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `mysql_tables`<sup>Optional</sup> <a name="mysql_tables" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabases.property.mysqlTables"></a>
 
 ```python
-mysql_tables: typing.Union[IResolvable, typing.List[DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTables]]
+mysql_tables: IResolvable | typing.List[DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTables]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTables">DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTables</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTables">DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTables</a>]
 
 mysql_tables block.
 
@@ -1766,7 +1766,7 @@ from cdktf_cdktf_provider_google import datastream_stream
 
 datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTables(
   table: str,
-  mysql_columns: typing.Union[IResolvable, typing.List[DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns]] = None
+  mysql_columns: IResolvable | typing.List[DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns] = None
 )
 ```
 
@@ -1775,7 +1775,7 @@ datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMy
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTables.property.table">table</a></code> | <code>str</code> | Table name. |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTables.property.mysqlColumns">mysql_columns</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns">DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns</a>]]</code> | mysql_columns block. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTables.property.mysqlColumns">mysql_columns</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns">DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns</a>]</code> | mysql_columns block. |
 
 ---
 
@@ -1796,10 +1796,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `mysql_columns`<sup>Optional</sup> <a name="mysql_columns" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTables.property.mysqlColumns"></a>
 
 ```python
-mysql_columns: typing.Union[IResolvable, typing.List[DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns]]
+mysql_columns: IResolvable | typing.List[DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns">DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns">DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns</a>]
 
 mysql_columns block.
 
@@ -1818,9 +1818,9 @@ datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMy
   collation: str = None,
   column: str = None,
   data_type: str = None,
-  nullable: typing.Union[bool, IResolvable] = None,
+  nullable: bool | IResolvable = None,
   ordinal_position: typing.Union[int, float] = None,
-  primary_key: typing.Union[bool, IResolvable] = None
+  primary_key: bool | IResolvable = None
 )
 ```
 
@@ -1831,9 +1831,9 @@ datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMy
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns.property.collation">collation</a></code> | <code>str</code> | Column collation. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns.property.column">column</a></code> | <code>str</code> | Column name. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns.property.dataType">data_type</a></code> | <code>str</code> | The MySQL data type. Full data types list can be found here: https://dev.mysql.com/doc/refman/8.0/en/data-types.html. |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns.property.nullable">nullable</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Whether or not the column can accept a null value. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns.property.nullable">nullable</a></code> | <code>bool \| cdktf.IResolvable</code> | Whether or not the column can accept a null value. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns.property.ordinalPosition">ordinal_position</a></code> | <code>typing.Union[int, float]</code> | The ordinal position of the column in the table. |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns.property.primaryKey">primary_key</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Whether or not the column represents a primary key. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns.property.primaryKey">primary_key</a></code> | <code>bool \| cdktf.IResolvable</code> | Whether or not the column represents a primary key. |
 
 ---
 
@@ -1882,10 +1882,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `nullable`<sup>Optional</sup> <a name="nullable" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns.property.nullable"></a>
 
 ```python
-nullable: typing.Union[bool, IResolvable]
+nullable: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Whether or not the column can accept a null value.
 
@@ -1910,10 +1910,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `primary_key`<sup>Optional</sup> <a name="primary_key" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns.property.primaryKey"></a>
 
 ```python
-primary_key: typing.Union[bool, IResolvable]
+primary_key: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Whether or not the column represents a primary key.
 
@@ -1929,7 +1929,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 from cdktf_cdktf_provider_google import datastream_stream
 
 datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjects(
-  oracle_schemas: typing.Union[IResolvable, typing.List[DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemas]]
+  oracle_schemas: IResolvable | typing.List[DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemas]
 )
 ```
 
@@ -1937,17 +1937,17 @@ datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjects(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjects.property.oracleSchemas">oracle_schemas</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemas">DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemas</a>]]</code> | oracle_schemas block. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjects.property.oracleSchemas">oracle_schemas</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemas">DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemas</a>]</code> | oracle_schemas block. |
 
 ---
 
 ##### `oracle_schemas`<sup>Required</sup> <a name="oracle_schemas" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjects.property.oracleSchemas"></a>
 
 ```python
-oracle_schemas: typing.Union[IResolvable, typing.List[DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemas]]
+oracle_schemas: IResolvable | typing.List[DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemas]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemas">DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemas</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemas">DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemas</a>]
 
 oracle_schemas block.
 
@@ -1964,7 +1964,7 @@ from cdktf_cdktf_provider_google import datastream_stream
 
 datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemas(
   schema: str,
-  oracle_tables: typing.Union[IResolvable, typing.List[DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTables]] = None
+  oracle_tables: IResolvable | typing.List[DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTables] = None
 )
 ```
 
@@ -1973,7 +1973,7 @@ datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemas(
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemas.property.schema">schema</a></code> | <code>str</code> | Schema name. |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemas.property.oracleTables">oracle_tables</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTables">DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTables</a>]]</code> | oracle_tables block. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemas.property.oracleTables">oracle_tables</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTables">DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTables</a>]</code> | oracle_tables block. |
 
 ---
 
@@ -1994,10 +1994,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `oracle_tables`<sup>Optional</sup> <a name="oracle_tables" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemas.property.oracleTables"></a>
 
 ```python
-oracle_tables: typing.Union[IResolvable, typing.List[DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTables]]
+oracle_tables: IResolvable | typing.List[DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTables]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTables">DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTables</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTables">DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTables</a>]
 
 oracle_tables block.
 
@@ -2014,7 +2014,7 @@ from cdktf_cdktf_provider_google import datastream_stream
 
 datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTables(
   table: str,
-  oracle_columns: typing.Union[IResolvable, typing.List[DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumns]] = None
+  oracle_columns: IResolvable | typing.List[DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumns] = None
 )
 ```
 
@@ -2023,7 +2023,7 @@ datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOr
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTables.property.table">table</a></code> | <code>str</code> | Table name. |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTables.property.oracleColumns">oracle_columns</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumns">DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumns</a>]]</code> | oracle_columns block. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTables.property.oracleColumns">oracle_columns</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumns">DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumns</a>]</code> | oracle_columns block. |
 
 ---
 
@@ -2044,10 +2044,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `oracle_columns`<sup>Optional</sup> <a name="oracle_columns" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTables.property.oracleColumns"></a>
 
 ```python
-oracle_columns: typing.Union[IResolvable, typing.List[DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumns]]
+oracle_columns: IResolvable | typing.List[DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumns]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumns">DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumns</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumns">DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumns</a>]
 
 oracle_columns block.
 
@@ -2113,7 +2113,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 from cdktf_cdktf_provider_google import datastream_stream
 
 datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjects(
-  postgresql_schemas: typing.Union[IResolvable, typing.List[DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas]]
+  postgresql_schemas: IResolvable | typing.List[DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas]
 )
 ```
 
@@ -2121,17 +2121,17 @@ datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjects(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjects.property.postgresqlSchemas">postgresql_schemas</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas">DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas</a>]]</code> | postgresql_schemas block. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjects.property.postgresqlSchemas">postgresql_schemas</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas">DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas</a>]</code> | postgresql_schemas block. |
 
 ---
 
 ##### `postgresql_schemas`<sup>Required</sup> <a name="postgresql_schemas" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjects.property.postgresqlSchemas"></a>
 
 ```python
-postgresql_schemas: typing.Union[IResolvable, typing.List[DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas]]
+postgresql_schemas: IResolvable | typing.List[DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas">DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas">DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas</a>]
 
 postgresql_schemas block.
 
@@ -2148,7 +2148,7 @@ from cdktf_cdktf_provider_google import datastream_stream
 
 datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas(
   schema: str,
-  postgresql_tables: typing.Union[IResolvable, typing.List[DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTables]] = None
+  postgresql_tables: IResolvable | typing.List[DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTables] = None
 )
 ```
 
@@ -2157,7 +2157,7 @@ datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlS
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas.property.schema">schema</a></code> | <code>str</code> | Database name. |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas.property.postgresqlTables">postgresql_tables</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTables">DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTables</a>]]</code> | postgresql_tables block. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas.property.postgresqlTables">postgresql_tables</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTables">DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTables</a>]</code> | postgresql_tables block. |
 
 ---
 
@@ -2178,10 +2178,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `postgresql_tables`<sup>Optional</sup> <a name="postgresql_tables" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas.property.postgresqlTables"></a>
 
 ```python
-postgresql_tables: typing.Union[IResolvable, typing.List[DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTables]]
+postgresql_tables: IResolvable | typing.List[DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTables]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTables">DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTables</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTables">DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTables</a>]
 
 postgresql_tables block.
 
@@ -2198,7 +2198,7 @@ from cdktf_cdktf_provider_google import datastream_stream
 
 datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTables(
   table: str,
-  postgresql_columns: typing.Union[IResolvable, typing.List[DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns]] = None
+  postgresql_columns: IResolvable | typing.List[DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns] = None
 )
 ```
 
@@ -2207,7 +2207,7 @@ datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlS
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTables.property.table">table</a></code> | <code>str</code> | Table name. |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTables.property.postgresqlColumns">postgresql_columns</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns">DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns</a>]]</code> | postgresql_columns block. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTables.property.postgresqlColumns">postgresql_columns</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns">DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns</a>]</code> | postgresql_columns block. |
 
 ---
 
@@ -2228,10 +2228,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `postgresql_columns`<sup>Optional</sup> <a name="postgresql_columns" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTables.property.postgresqlColumns"></a>
 
 ```python
-postgresql_columns: typing.Union[IResolvable, typing.List[DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns]]
+postgresql_columns: IResolvable | typing.List[DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns">DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns">DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns</a>]
 
 postgresql_columns block.
 
@@ -2249,9 +2249,9 @@ from cdktf_cdktf_provider_google import datastream_stream
 datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns(
   column: str = None,
   data_type: str = None,
-  nullable: typing.Union[bool, IResolvable] = None,
+  nullable: bool | IResolvable = None,
   ordinal_position: typing.Union[int, float] = None,
-  primary_key: typing.Union[bool, IResolvable] = None
+  primary_key: bool | IResolvable = None
 )
 ```
 
@@ -2261,9 +2261,9 @@ datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlS
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns.property.column">column</a></code> | <code>str</code> | Column name. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns.property.dataType">data_type</a></code> | <code>str</code> | The PostgreSQL data type. Full data types list can be found here: https://www.postgresql.org/docs/current/datatype.html. |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns.property.nullable">nullable</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Whether or not the column can accept a null value. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns.property.nullable">nullable</a></code> | <code>bool \| cdktf.IResolvable</code> | Whether or not the column can accept a null value. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns.property.ordinalPosition">ordinal_position</a></code> | <code>typing.Union[int, float]</code> | The ordinal position of the column in the table. |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns.property.primaryKey">primary_key</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Whether or not the column represents a primary key. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns.property.primaryKey">primary_key</a></code> | <code>bool \| cdktf.IResolvable</code> | Whether or not the column represents a primary key. |
 
 ---
 
@@ -2298,10 +2298,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `nullable`<sup>Optional</sup> <a name="nullable" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns.property.nullable"></a>
 
 ```python
-nullable: typing.Union[bool, IResolvable]
+nullable: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Whether or not the column can accept a null value.
 
@@ -2326,10 +2326,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `primary_key`<sup>Optional</sup> <a name="primary_key" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns.property.primaryKey"></a>
 
 ```python
-primary_key: typing.Union[bool, IResolvable]
+primary_key: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Whether or not the column represents a primary key.
 
@@ -2345,7 +2345,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 from cdktf_cdktf_provider_google import datastream_stream
 
 datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjects(
-  objects: typing.Union[IResolvable, typing.List[DatastreamStreamBackfillAllSalesforceExcludedObjectsObjects]]
+  objects: IResolvable | typing.List[DatastreamStreamBackfillAllSalesforceExcludedObjectsObjects]
 )
 ```
 
@@ -2353,17 +2353,17 @@ datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjects(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjects.property.objects">objects</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjects">DatastreamStreamBackfillAllSalesforceExcludedObjectsObjects</a>]]</code> | objects block. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjects.property.objects">objects</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjects">DatastreamStreamBackfillAllSalesforceExcludedObjectsObjects</a>]</code> | objects block. |
 
 ---
 
 ##### `objects`<sup>Required</sup> <a name="objects" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjects.property.objects"></a>
 
 ```python
-objects: typing.Union[IResolvable, typing.List[DatastreamStreamBackfillAllSalesforceExcludedObjectsObjects]]
+objects: IResolvable | typing.List[DatastreamStreamBackfillAllSalesforceExcludedObjectsObjects]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjects">DatastreamStreamBackfillAllSalesforceExcludedObjectsObjects</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjects">DatastreamStreamBackfillAllSalesforceExcludedObjectsObjects</a>]
 
 objects block.
 
@@ -2379,7 +2379,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 from cdktf_cdktf_provider_google import datastream_stream
 
 datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjects(
-  fields: typing.Union[IResolvable, typing.List[DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFields]] = None,
+  fields: IResolvable | typing.List[DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFields] = None,
   object_name: str = None
 )
 ```
@@ -2388,7 +2388,7 @@ datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjects(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjects.property.fields">fields</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFields">DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFields</a>]]</code> | fields block. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjects.property.fields">fields</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFields">DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFields</a>]</code> | fields block. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjects.property.objectName">object_name</a></code> | <code>str</code> | Name of object in Salesforce Org. |
 
 ---
@@ -2396,10 +2396,10 @@ datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjects(
 ##### `fields`<sup>Optional</sup> <a name="fields" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjects.property.fields"></a>
 
 ```python
-fields: typing.Union[IResolvable, typing.List[DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFields]]
+fields: IResolvable | typing.List[DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFields]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFields">DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFields</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFields">DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFields</a>]
 
 fields block.
 
@@ -2463,7 +2463,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 from cdktf_cdktf_provider_google import datastream_stream
 
 datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjects(
-  schemas: typing.Union[IResolvable, typing.List[DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemas]]
+  schemas: IResolvable | typing.List[DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemas]
 )
 ```
 
@@ -2471,17 +2471,17 @@ datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjects(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjects.property.schemas">schemas</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemas">DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemas</a>]]</code> | schemas block. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjects.property.schemas">schemas</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemas">DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemas</a>]</code> | schemas block. |
 
 ---
 
 ##### `schemas`<sup>Required</sup> <a name="schemas" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjects.property.schemas"></a>
 
 ```python
-schemas: typing.Union[IResolvable, typing.List[DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemas]]
+schemas: IResolvable | typing.List[DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemas]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemas">DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemas</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemas">DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemas</a>]
 
 schemas block.
 
@@ -2498,7 +2498,7 @@ from cdktf_cdktf_provider_google import datastream_stream
 
 datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemas(
   schema: str,
-  tables: typing.Union[IResolvable, typing.List[DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTables]] = None
+  tables: IResolvable | typing.List[DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTables] = None
 )
 ```
 
@@ -2507,7 +2507,7 @@ datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemas(
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemas.property.schema">schema</a></code> | <code>str</code> | Schema name. |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemas.property.tables">tables</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTables">DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTables</a>]]</code> | tables block. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemas.property.tables">tables</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTables">DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTables</a>]</code> | tables block. |
 
 ---
 
@@ -2528,10 +2528,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `tables`<sup>Optional</sup> <a name="tables" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemas.property.tables"></a>
 
 ```python
-tables: typing.Union[IResolvable, typing.List[DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTables]]
+tables: IResolvable | typing.List[DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTables]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTables">DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTables</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTables">DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTables</a>]
 
 tables block.
 
@@ -2548,7 +2548,7 @@ from cdktf_cdktf_provider_google import datastream_stream
 
 datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTables(
   table: str,
-  columns: typing.Union[IResolvable, typing.List[DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumns]] = None
+  columns: IResolvable | typing.List[DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumns] = None
 )
 ```
 
@@ -2557,7 +2557,7 @@ datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTable
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTables.property.table">table</a></code> | <code>str</code> | Table name. |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTables.property.columns">columns</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumns">DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumns</a>]]</code> | columns block. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTables.property.columns">columns</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumns">DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumns</a>]</code> | columns block. |
 
 ---
 
@@ -2578,10 +2578,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `columns`<sup>Optional</sup> <a name="columns" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTables.property.columns"></a>
 
 ```python
-columns: typing.Union[IResolvable, typing.List[DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumns]]
+columns: IResolvable | typing.List[DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumns]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumns">DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumns</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumns">DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumns</a>]
 
 columns block.
 
@@ -2658,13 +2658,13 @@ datastreamStream.DatastreamStreamBackfillNone()
 from cdktf_cdktf_provider_google import datastream_stream
 
 datastreamStream.DatastreamStreamConfig(
-  connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection] = None,
-  count: typing.Union[typing.Union[int, float], TerraformCount] = None,
+  connection: SSHProvisionerConnection | WinrmProvisionerConnection = None,
+  count: typing.Union[int, float] | TerraformCount = None,
   depends_on: typing.List[ITerraformDependable] = None,
   for_each: ITerraformIterator = None,
   lifecycle: TerraformResourceLifecycle = None,
   provider: TerraformProvider = None,
-  provisioners: typing.List[typing.Union[FileProvisioner, LocalExecProvisioner, RemoteExecProvisioner]] = None,
+  provisioners: typing.List[FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner] = None,
   destination_config: DatastreamStreamDestinationConfig,
   display_name: str,
   location: str,
@@ -2672,7 +2672,7 @@ datastreamStream.DatastreamStreamConfig(
   stream_id: str,
   backfill_all: DatastreamStreamBackfillAll = None,
   backfill_none: DatastreamStreamBackfillNone = None,
-  create_without_validation: typing.Union[bool, IResolvable] = None,
+  create_without_validation: bool | IResolvable = None,
   customer_managed_encryption_key: str = None,
   desired_state: str = None,
   id: str = None,
@@ -2686,13 +2686,13 @@ datastreamStream.DatastreamStreamConfig(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamConfig.property.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamConfig.property.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamConfig.property.connection">connection</a></code> | <code>cdktf.SSHProvisionerConnection \| cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamConfig.property.count">count</a></code> | <code>typing.Union[int, float] \| cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamConfig.property.dependsOn">depends_on</a></code> | <code>typing.List[cdktf.ITerraformDependable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamConfig.property.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamConfig.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamConfig.property.provisioners">provisioners</a></code> | <code>typing.List[cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamConfig.property.destinationConfig">destination_config</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamDestinationConfig">DatastreamStreamDestinationConfig</a></code> | destination_config block. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamConfig.property.displayName">display_name</a></code> | <code>str</code> | Display name. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamConfig.property.location">location</a></code> | <code>str</code> | The name of the location this stream is located in. |
@@ -2700,7 +2700,7 @@ datastreamStream.DatastreamStreamConfig(
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamConfig.property.streamId">stream_id</a></code> | <code>str</code> | The stream identifier. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamConfig.property.backfillAll">backfill_all</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAll">DatastreamStreamBackfillAll</a></code> | backfill_all block. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamConfig.property.backfillNone">backfill_none</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillNone">DatastreamStreamBackfillNone</a></code> | backfill_none block. |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamConfig.property.createWithoutValidation">create_without_validation</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Create the stream without validating it. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamConfig.property.createWithoutValidation">create_without_validation</a></code> | <code>bool \| cdktf.IResolvable</code> | Create the stream without validating it. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamConfig.property.customerManagedEncryptionKey">customer_managed_encryption_key</a></code> | <code>str</code> | A reference to a KMS encryption key. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamConfig.property.desiredState">desired_state</a></code> | <code>str</code> | Desired state of the Stream. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/datastream_stream#id DatastreamStream#id}. |
@@ -2713,20 +2713,20 @@ datastreamStream.DatastreamStreamConfig(
 ##### `connection`<sup>Optional</sup> <a name="connection" id="@cdktf/provider-google.datastreamStream.DatastreamStreamConfig.property.connection"></a>
 
 ```python
-connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection]
+connection: SSHProvisionerConnection | WinrmProvisionerConnection
 ```
 
-- *Type:* typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]
+- *Type:* cdktf.SSHProvisionerConnection | cdktf.WinrmProvisionerConnection
 
 ---
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.datastreamStream.DatastreamStreamConfig.property.count"></a>
 
 ```python
-count: typing.Union[typing.Union[int, float], TerraformCount]
+count: typing.Union[int, float] | TerraformCount
 ```
 
-- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
+- *Type:* typing.Union[int, float] | cdktf.TerraformCount
 
 ---
 
@@ -2773,10 +2773,10 @@ provider: TerraformProvider
 ##### `provisioners`<sup>Optional</sup> <a name="provisioners" id="@cdktf/provider-google.datastreamStream.DatastreamStreamConfig.property.provisioners"></a>
 
 ```python
-provisioners: typing.List[typing.Union[FileProvisioner, LocalExecProvisioner, RemoteExecProvisioner]]
+provisioners: typing.List[FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner]
 ```
 
-- *Type:* typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]
+- *Type:* typing.List[cdktf.FileProvisioner | cdktf.LocalExecProvisioner | cdktf.RemoteExecProvisioner]
 
 ---
 
@@ -2881,10 +2881,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `create_without_validation`<sup>Optional</sup> <a name="create_without_validation" id="@cdktf/provider-google.datastreamStream.DatastreamStreamConfig.property.createWithoutValidation"></a>
 
 ```python
-create_without_validation: typing.Union[bool, IResolvable]
+create_without_validation: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Create the stream without validating it.
 
@@ -3844,7 +3844,7 @@ datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigBinaryLogPosition(
 from cdktf_cdktf_provider_google import datastream_stream
 
 datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjects(
-  mysql_databases: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases]]
+  mysql_databases: IResolvable | typing.List[DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases]
 )
 ```
 
@@ -3852,17 +3852,17 @@ datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjects(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjects.property.mysqlDatabases">mysql_databases</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases">DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases</a>]]</code> | mysql_databases block. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjects.property.mysqlDatabases">mysql_databases</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases">DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases</a>]</code> | mysql_databases block. |
 
 ---
 
 ##### `mysql_databases`<sup>Required</sup> <a name="mysql_databases" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjects.property.mysqlDatabases"></a>
 
 ```python
-mysql_databases: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases]]
+mysql_databases: IResolvable | typing.List[DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases">DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases">DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases</a>]
 
 mysql_databases block.
 
@@ -3879,7 +3879,7 @@ from cdktf_cdktf_provider_google import datastream_stream
 
 datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases(
   database: str,
-  mysql_tables: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTables]] = None
+  mysql_tables: IResolvable | typing.List[DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTables] = None
 )
 ```
 
@@ -3888,7 +3888,7 @@ datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysq
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases.property.database">database</a></code> | <code>str</code> | Database name. |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases.property.mysqlTables">mysql_tables</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTables">DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTables</a>]]</code> | mysql_tables block. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases.property.mysqlTables">mysql_tables</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTables">DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTables</a>]</code> | mysql_tables block. |
 
 ---
 
@@ -3909,10 +3909,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `mysql_tables`<sup>Optional</sup> <a name="mysql_tables" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases.property.mysqlTables"></a>
 
 ```python
-mysql_tables: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTables]]
+mysql_tables: IResolvable | typing.List[DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTables]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTables">DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTables</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTables">DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTables</a>]
 
 mysql_tables block.
 
@@ -3929,7 +3929,7 @@ from cdktf_cdktf_provider_google import datastream_stream
 
 datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTables(
   table: str,
-  mysql_columns: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns]] = None
+  mysql_columns: IResolvable | typing.List[DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns] = None
 )
 ```
 
@@ -3938,7 +3938,7 @@ datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysq
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTables.property.table">table</a></code> | <code>str</code> | Table name. |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTables.property.mysqlColumns">mysql_columns</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns">DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns</a>]]</code> | mysql_columns block. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTables.property.mysqlColumns">mysql_columns</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns">DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns</a>]</code> | mysql_columns block. |
 
 ---
 
@@ -3959,10 +3959,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `mysql_columns`<sup>Optional</sup> <a name="mysql_columns" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTables.property.mysqlColumns"></a>
 
 ```python
-mysql_columns: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns]]
+mysql_columns: IResolvable | typing.List[DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns">DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns">DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns</a>]
 
 mysql_columns block.
 
@@ -3981,9 +3981,9 @@ datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysq
   collation: str = None,
   column: str = None,
   data_type: str = None,
-  nullable: typing.Union[bool, IResolvable] = None,
+  nullable: bool | IResolvable = None,
   ordinal_position: typing.Union[int, float] = None,
-  primary_key: typing.Union[bool, IResolvable] = None
+  primary_key: bool | IResolvable = None
 )
 ```
 
@@ -3994,9 +3994,9 @@ datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysq
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns.property.collation">collation</a></code> | <code>str</code> | Column collation. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns.property.column">column</a></code> | <code>str</code> | Column name. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns.property.dataType">data_type</a></code> | <code>str</code> | The MySQL data type. Full data types list can be found here: https://dev.mysql.com/doc/refman/8.0/en/data-types.html. |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns.property.nullable">nullable</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Whether or not the column can accept a null value. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns.property.nullable">nullable</a></code> | <code>bool \| cdktf.IResolvable</code> | Whether or not the column can accept a null value. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns.property.ordinalPosition">ordinal_position</a></code> | <code>typing.Union[int, float]</code> | The ordinal position of the column in the table. |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns.property.primaryKey">primary_key</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Whether or not the column represents a primary key. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns.property.primaryKey">primary_key</a></code> | <code>bool \| cdktf.IResolvable</code> | Whether or not the column represents a primary key. |
 
 ---
 
@@ -4045,10 +4045,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `nullable`<sup>Optional</sup> <a name="nullable" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns.property.nullable"></a>
 
 ```python
-nullable: typing.Union[bool, IResolvable]
+nullable: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Whether or not the column can accept a null value.
 
@@ -4073,10 +4073,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `primary_key`<sup>Optional</sup> <a name="primary_key" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns.property.primaryKey"></a>
 
 ```python
-primary_key: typing.Union[bool, IResolvable]
+primary_key: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Whether or not the column represents a primary key.
 
@@ -4103,7 +4103,7 @@ datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigGtid()
 from cdktf_cdktf_provider_google import datastream_stream
 
 datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjects(
-  mysql_databases: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases]]
+  mysql_databases: IResolvable | typing.List[DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases]
 )
 ```
 
@@ -4111,17 +4111,17 @@ datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjects(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjects.property.mysqlDatabases">mysql_databases</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases">DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases</a>]]</code> | mysql_databases block. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjects.property.mysqlDatabases">mysql_databases</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases">DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases</a>]</code> | mysql_databases block. |
 
 ---
 
 ##### `mysql_databases`<sup>Required</sup> <a name="mysql_databases" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjects.property.mysqlDatabases"></a>
 
 ```python
-mysql_databases: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases]]
+mysql_databases: IResolvable | typing.List[DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases">DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases">DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases</a>]
 
 mysql_databases block.
 
@@ -4138,7 +4138,7 @@ from cdktf_cdktf_provider_google import datastream_stream
 
 datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases(
   database: str,
-  mysql_tables: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTables]] = None
+  mysql_tables: IResolvable | typing.List[DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTables] = None
 )
 ```
 
@@ -4147,7 +4147,7 @@ datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysq
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases.property.database">database</a></code> | <code>str</code> | Database name. |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases.property.mysqlTables">mysql_tables</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTables">DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTables</a>]]</code> | mysql_tables block. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases.property.mysqlTables">mysql_tables</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTables">DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTables</a>]</code> | mysql_tables block. |
 
 ---
 
@@ -4168,10 +4168,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `mysql_tables`<sup>Optional</sup> <a name="mysql_tables" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases.property.mysqlTables"></a>
 
 ```python
-mysql_tables: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTables]]
+mysql_tables: IResolvable | typing.List[DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTables]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTables">DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTables</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTables">DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTables</a>]
 
 mysql_tables block.
 
@@ -4188,7 +4188,7 @@ from cdktf_cdktf_provider_google import datastream_stream
 
 datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTables(
   table: str,
-  mysql_columns: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns]] = None
+  mysql_columns: IResolvable | typing.List[DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns] = None
 )
 ```
 
@@ -4197,7 +4197,7 @@ datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysq
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTables.property.table">table</a></code> | <code>str</code> | Table name. |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTables.property.mysqlColumns">mysql_columns</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns">DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns</a>]]</code> | mysql_columns block. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTables.property.mysqlColumns">mysql_columns</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns">DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns</a>]</code> | mysql_columns block. |
 
 ---
 
@@ -4218,10 +4218,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `mysql_columns`<sup>Optional</sup> <a name="mysql_columns" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTables.property.mysqlColumns"></a>
 
 ```python
-mysql_columns: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns]]
+mysql_columns: IResolvable | typing.List[DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns">DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns">DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns</a>]
 
 mysql_columns block.
 
@@ -4240,9 +4240,9 @@ datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysq
   collation: str = None,
   column: str = None,
   data_type: str = None,
-  nullable: typing.Union[bool, IResolvable] = None,
+  nullable: bool | IResolvable = None,
   ordinal_position: typing.Union[int, float] = None,
-  primary_key: typing.Union[bool, IResolvable] = None
+  primary_key: bool | IResolvable = None
 )
 ```
 
@@ -4253,9 +4253,9 @@ datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysq
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns.property.collation">collation</a></code> | <code>str</code> | Column collation. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns.property.column">column</a></code> | <code>str</code> | Column name. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns.property.dataType">data_type</a></code> | <code>str</code> | The MySQL data type. Full data types list can be found here: https://dev.mysql.com/doc/refman/8.0/en/data-types.html. |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns.property.nullable">nullable</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Whether or not the column can accept a null value. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns.property.nullable">nullable</a></code> | <code>bool \| cdktf.IResolvable</code> | Whether or not the column can accept a null value. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns.property.ordinalPosition">ordinal_position</a></code> | <code>typing.Union[int, float]</code> | The ordinal position of the column in the table. |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns.property.primaryKey">primary_key</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Whether or not the column represents a primary key. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns.property.primaryKey">primary_key</a></code> | <code>bool \| cdktf.IResolvable</code> | Whether or not the column represents a primary key. |
 
 ---
 
@@ -4304,10 +4304,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `nullable`<sup>Optional</sup> <a name="nullable" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns.property.nullable"></a>
 
 ```python
-nullable: typing.Union[bool, IResolvable]
+nullable: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Whether or not the column can accept a null value.
 
@@ -4332,10 +4332,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `primary_key`<sup>Optional</sup> <a name="primary_key" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns.property.primaryKey"></a>
 
 ```python
-primary_key: typing.Union[bool, IResolvable]
+primary_key: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Whether or not the column represents a primary key.
 
@@ -4482,7 +4482,7 @@ datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigDropLargeObjects(
 from cdktf_cdktf_provider_google import datastream_stream
 
 datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjects(
-  oracle_schemas: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas]]
+  oracle_schemas: IResolvable | typing.List[DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas]
 )
 ```
 
@@ -4490,17 +4490,17 @@ datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjects(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjects.property.oracleSchemas">oracle_schemas</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas">DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas</a>]]</code> | oracle_schemas block. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjects.property.oracleSchemas">oracle_schemas</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas">DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas</a>]</code> | oracle_schemas block. |
 
 ---
 
 ##### `oracle_schemas`<sup>Required</sup> <a name="oracle_schemas" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjects.property.oracleSchemas"></a>
 
 ```python
-oracle_schemas: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas]]
+oracle_schemas: IResolvable | typing.List[DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas">DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas">DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas</a>]
 
 oracle_schemas block.
 
@@ -4517,7 +4517,7 @@ from cdktf_cdktf_provider_google import datastream_stream
 
 datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas(
   schema: str,
-  oracle_tables: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTables]] = None
+  oracle_tables: IResolvable | typing.List[DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTables] = None
 )
 ```
 
@@ -4526,7 +4526,7 @@ datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOra
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas.property.schema">schema</a></code> | <code>str</code> | Schema name. |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas.property.oracleTables">oracle_tables</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTables">DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTables</a>]]</code> | oracle_tables block. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas.property.oracleTables">oracle_tables</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTables">DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTables</a>]</code> | oracle_tables block. |
 
 ---
 
@@ -4547,10 +4547,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `oracle_tables`<sup>Optional</sup> <a name="oracle_tables" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas.property.oracleTables"></a>
 
 ```python
-oracle_tables: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTables]]
+oracle_tables: IResolvable | typing.List[DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTables]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTables">DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTables</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTables">DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTables</a>]
 
 oracle_tables block.
 
@@ -4567,7 +4567,7 @@ from cdktf_cdktf_provider_google import datastream_stream
 
 datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTables(
   table: str,
-  oracle_columns: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumns]] = None
+  oracle_columns: IResolvable | typing.List[DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumns] = None
 )
 ```
 
@@ -4576,7 +4576,7 @@ datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOra
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTables.property.table">table</a></code> | <code>str</code> | Table name. |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTables.property.oracleColumns">oracle_columns</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumns">DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumns</a>]]</code> | oracle_columns block. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTables.property.oracleColumns">oracle_columns</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumns">DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumns</a>]</code> | oracle_columns block. |
 
 ---
 
@@ -4597,10 +4597,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `oracle_columns`<sup>Optional</sup> <a name="oracle_columns" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTables.property.oracleColumns"></a>
 
 ```python
-oracle_columns: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumns]]
+oracle_columns: IResolvable | typing.List[DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumns]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumns">DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumns</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumns">DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumns</a>]
 
 oracle_columns block.
 
@@ -4666,7 +4666,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 from cdktf_cdktf_provider_google import datastream_stream
 
 datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjects(
-  oracle_schemas: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas]]
+  oracle_schemas: IResolvable | typing.List[DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas]
 )
 ```
 
@@ -4674,17 +4674,17 @@ datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjects(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjects.property.oracleSchemas">oracle_schemas</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas">DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas</a>]]</code> | oracle_schemas block. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjects.property.oracleSchemas">oracle_schemas</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas">DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas</a>]</code> | oracle_schemas block. |
 
 ---
 
 ##### `oracle_schemas`<sup>Required</sup> <a name="oracle_schemas" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjects.property.oracleSchemas"></a>
 
 ```python
-oracle_schemas: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas]]
+oracle_schemas: IResolvable | typing.List[DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas">DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas">DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas</a>]
 
 oracle_schemas block.
 
@@ -4701,7 +4701,7 @@ from cdktf_cdktf_provider_google import datastream_stream
 
 datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas(
   schema: str,
-  oracle_tables: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTables]] = None
+  oracle_tables: IResolvable | typing.List[DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTables] = None
 )
 ```
 
@@ -4710,7 +4710,7 @@ datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOra
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas.property.schema">schema</a></code> | <code>str</code> | Schema name. |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas.property.oracleTables">oracle_tables</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTables">DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTables</a>]]</code> | oracle_tables block. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas.property.oracleTables">oracle_tables</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTables">DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTables</a>]</code> | oracle_tables block. |
 
 ---
 
@@ -4731,10 +4731,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `oracle_tables`<sup>Optional</sup> <a name="oracle_tables" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas.property.oracleTables"></a>
 
 ```python
-oracle_tables: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTables]]
+oracle_tables: IResolvable | typing.List[DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTables]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTables">DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTables</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTables">DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTables</a>]
 
 oracle_tables block.
 
@@ -4751,7 +4751,7 @@ from cdktf_cdktf_provider_google import datastream_stream
 
 datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTables(
   table: str,
-  oracle_columns: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumns]] = None
+  oracle_columns: IResolvable | typing.List[DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumns] = None
 )
 ```
 
@@ -4760,7 +4760,7 @@ datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOra
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTables.property.table">table</a></code> | <code>str</code> | Table name. |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTables.property.oracleColumns">oracle_columns</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumns">DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumns</a>]]</code> | oracle_columns block. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTables.property.oracleColumns">oracle_columns</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumns">DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumns</a>]</code> | oracle_columns block. |
 
 ---
 
@@ -4781,10 +4781,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `oracle_columns`<sup>Optional</sup> <a name="oracle_columns" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTables.property.oracleColumns"></a>
 
 ```python
-oracle_columns: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumns]]
+oracle_columns: IResolvable | typing.List[DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumns]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumns">DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumns</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumns">DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumns</a>]
 
 oracle_columns block.
 
@@ -4962,7 +4962,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 from cdktf_cdktf_provider_google import datastream_stream
 
 datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjects(
-  postgresql_schemas: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas]]
+  postgresql_schemas: IResolvable | typing.List[DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas]
 )
 ```
 
@@ -4970,17 +4970,17 @@ datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObject
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjects.property.postgresqlSchemas">postgresql_schemas</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas">DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas</a>]]</code> | postgresql_schemas block. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjects.property.postgresqlSchemas">postgresql_schemas</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas">DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas</a>]</code> | postgresql_schemas block. |
 
 ---
 
 ##### `postgresql_schemas`<sup>Required</sup> <a name="postgresql_schemas" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjects.property.postgresqlSchemas"></a>
 
 ```python
-postgresql_schemas: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas]]
+postgresql_schemas: IResolvable | typing.List[DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas">DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas">DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas</a>]
 
 postgresql_schemas block.
 
@@ -4997,7 +4997,7 @@ from cdktf_cdktf_provider_google import datastream_stream
 
 datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas(
   schema: str,
-  postgresql_tables: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTables]] = None
+  postgresql_tables: IResolvable | typing.List[DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTables] = None
 )
 ```
 
@@ -5006,7 +5006,7 @@ datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObject
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas.property.schema">schema</a></code> | <code>str</code> | Database name. |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas.property.postgresqlTables">postgresql_tables</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTables">DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTables</a>]]</code> | postgresql_tables block. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas.property.postgresqlTables">postgresql_tables</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTables">DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTables</a>]</code> | postgresql_tables block. |
 
 ---
 
@@ -5027,10 +5027,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `postgresql_tables`<sup>Optional</sup> <a name="postgresql_tables" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas.property.postgresqlTables"></a>
 
 ```python
-postgresql_tables: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTables]]
+postgresql_tables: IResolvable | typing.List[DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTables]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTables">DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTables</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTables">DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTables</a>]
 
 postgresql_tables block.
 
@@ -5047,7 +5047,7 @@ from cdktf_cdktf_provider_google import datastream_stream
 
 datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTables(
   table: str,
-  postgresql_columns: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns]] = None
+  postgresql_columns: IResolvable | typing.List[DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns] = None
 )
 ```
 
@@ -5056,7 +5056,7 @@ datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObject
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTables.property.table">table</a></code> | <code>str</code> | Table name. |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTables.property.postgresqlColumns">postgresql_columns</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns">DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns</a>]]</code> | postgresql_columns block. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTables.property.postgresqlColumns">postgresql_columns</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns">DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns</a>]</code> | postgresql_columns block. |
 
 ---
 
@@ -5077,10 +5077,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `postgresql_columns`<sup>Optional</sup> <a name="postgresql_columns" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTables.property.postgresqlColumns"></a>
 
 ```python
-postgresql_columns: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns]]
+postgresql_columns: IResolvable | typing.List[DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns">DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns">DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns</a>]
 
 postgresql_columns block.
 
@@ -5098,9 +5098,9 @@ from cdktf_cdktf_provider_google import datastream_stream
 datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns(
   column: str = None,
   data_type: str = None,
-  nullable: typing.Union[bool, IResolvable] = None,
+  nullable: bool | IResolvable = None,
   ordinal_position: typing.Union[int, float] = None,
-  primary_key: typing.Union[bool, IResolvable] = None
+  primary_key: bool | IResolvable = None
 )
 ```
 
@@ -5110,9 +5110,9 @@ datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObject
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns.property.column">column</a></code> | <code>str</code> | Column name. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns.property.dataType">data_type</a></code> | <code>str</code> | The PostgreSQL data type. Full data types list can be found here: https://www.postgresql.org/docs/current/datatype.html. |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns.property.nullable">nullable</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Whether or not the column can accept a null value. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns.property.nullable">nullable</a></code> | <code>bool \| cdktf.IResolvable</code> | Whether or not the column can accept a null value. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns.property.ordinalPosition">ordinal_position</a></code> | <code>typing.Union[int, float]</code> | The ordinal position of the column in the table. |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns.property.primaryKey">primary_key</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Whether or not the column represents a primary key. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns.property.primaryKey">primary_key</a></code> | <code>bool \| cdktf.IResolvable</code> | Whether or not the column represents a primary key. |
 
 ---
 
@@ -5147,10 +5147,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `nullable`<sup>Optional</sup> <a name="nullable" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns.property.nullable"></a>
 
 ```python
-nullable: typing.Union[bool, IResolvable]
+nullable: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Whether or not the column can accept a null value.
 
@@ -5175,10 +5175,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `primary_key`<sup>Optional</sup> <a name="primary_key" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns.property.primaryKey"></a>
 
 ```python
-primary_key: typing.Union[bool, IResolvable]
+primary_key: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Whether or not the column represents a primary key.
 
@@ -5194,7 +5194,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 from cdktf_cdktf_provider_google import datastream_stream
 
 datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjects(
-  postgresql_schemas: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas]]
+  postgresql_schemas: IResolvable | typing.List[DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas]
 )
 ```
 
@@ -5202,17 +5202,17 @@ datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObject
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjects.property.postgresqlSchemas">postgresql_schemas</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas">DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas</a>]]</code> | postgresql_schemas block. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjects.property.postgresqlSchemas">postgresql_schemas</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas">DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas</a>]</code> | postgresql_schemas block. |
 
 ---
 
 ##### `postgresql_schemas`<sup>Required</sup> <a name="postgresql_schemas" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjects.property.postgresqlSchemas"></a>
 
 ```python
-postgresql_schemas: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas]]
+postgresql_schemas: IResolvable | typing.List[DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas">DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas">DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas</a>]
 
 postgresql_schemas block.
 
@@ -5229,7 +5229,7 @@ from cdktf_cdktf_provider_google import datastream_stream
 
 datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas(
   schema: str,
-  postgresql_tables: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTables]] = None
+  postgresql_tables: IResolvable | typing.List[DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTables] = None
 )
 ```
 
@@ -5238,7 +5238,7 @@ datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObject
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas.property.schema">schema</a></code> | <code>str</code> | Database name. |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas.property.postgresqlTables">postgresql_tables</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTables">DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTables</a>]]</code> | postgresql_tables block. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas.property.postgresqlTables">postgresql_tables</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTables">DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTables</a>]</code> | postgresql_tables block. |
 
 ---
 
@@ -5259,10 +5259,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `postgresql_tables`<sup>Optional</sup> <a name="postgresql_tables" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas.property.postgresqlTables"></a>
 
 ```python
-postgresql_tables: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTables]]
+postgresql_tables: IResolvable | typing.List[DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTables]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTables">DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTables</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTables">DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTables</a>]
 
 postgresql_tables block.
 
@@ -5279,7 +5279,7 @@ from cdktf_cdktf_provider_google import datastream_stream
 
 datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTables(
   table: str,
-  postgresql_columns: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns]] = None
+  postgresql_columns: IResolvable | typing.List[DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns] = None
 )
 ```
 
@@ -5288,7 +5288,7 @@ datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObject
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTables.property.table">table</a></code> | <code>str</code> | Table name. |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTables.property.postgresqlColumns">postgresql_columns</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns">DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns</a>]]</code> | postgresql_columns block. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTables.property.postgresqlColumns">postgresql_columns</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns">DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns</a>]</code> | postgresql_columns block. |
 
 ---
 
@@ -5309,10 +5309,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `postgresql_columns`<sup>Optional</sup> <a name="postgresql_columns" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTables.property.postgresqlColumns"></a>
 
 ```python
-postgresql_columns: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns]]
+postgresql_columns: IResolvable | typing.List[DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns">DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns">DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns</a>]
 
 postgresql_columns block.
 
@@ -5330,9 +5330,9 @@ from cdktf_cdktf_provider_google import datastream_stream
 datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns(
   column: str = None,
   data_type: str = None,
-  nullable: typing.Union[bool, IResolvable] = None,
+  nullable: bool | IResolvable = None,
   ordinal_position: typing.Union[int, float] = None,
-  primary_key: typing.Union[bool, IResolvable] = None
+  primary_key: bool | IResolvable = None
 )
 ```
 
@@ -5342,9 +5342,9 @@ datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObject
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns.property.column">column</a></code> | <code>str</code> | Column name. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns.property.dataType">data_type</a></code> | <code>str</code> | The PostgreSQL data type. Full data types list can be found here: https://www.postgresql.org/docs/current/datatype.html. |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns.property.nullable">nullable</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Whether or not the column can accept a null value. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns.property.nullable">nullable</a></code> | <code>bool \| cdktf.IResolvable</code> | Whether or not the column can accept a null value. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns.property.ordinalPosition">ordinal_position</a></code> | <code>typing.Union[int, float]</code> | The ordinal position of the column in the table. |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns.property.primaryKey">primary_key</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Whether or not the column represents a primary key. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns.property.primaryKey">primary_key</a></code> | <code>bool \| cdktf.IResolvable</code> | Whether or not the column represents a primary key. |
 
 ---
 
@@ -5379,10 +5379,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `nullable`<sup>Optional</sup> <a name="nullable" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns.property.nullable"></a>
 
 ```python
-nullable: typing.Union[bool, IResolvable]
+nullable: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Whether or not the column can accept a null value.
 
@@ -5407,10 +5407,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `primary_key`<sup>Optional</sup> <a name="primary_key" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns.property.primaryKey"></a>
 
 ```python
-primary_key: typing.Union[bool, IResolvable]
+primary_key: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Whether or not the column represents a primary key.
 
@@ -5494,7 +5494,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 from cdktf_cdktf_provider_google import datastream_stream
 
 datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjects(
-  objects: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjects]]
+  objects: IResolvable | typing.List[DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjects]
 )
 ```
 
@@ -5502,17 +5502,17 @@ datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObject
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjects.property.objects">objects</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjects">DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjects</a>]]</code> | objects block. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjects.property.objects">objects</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjects">DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjects</a>]</code> | objects block. |
 
 ---
 
 ##### `objects`<sup>Required</sup> <a name="objects" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjects.property.objects"></a>
 
 ```python
-objects: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjects]]
+objects: IResolvable | typing.List[DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjects]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjects">DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjects</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjects">DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjects</a>]
 
 objects block.
 
@@ -5528,7 +5528,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 from cdktf_cdktf_provider_google import datastream_stream
 
 datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjects(
-  fields: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFields]] = None,
+  fields: IResolvable | typing.List[DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFields] = None,
   object_name: str = None
 )
 ```
@@ -5537,7 +5537,7 @@ datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObject
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjects.property.fields">fields</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFields">DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFields</a>]]</code> | fields block. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjects.property.fields">fields</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFields">DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFields</a>]</code> | fields block. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjects.property.objectName">object_name</a></code> | <code>str</code> | Name of object in Salesforce Org. |
 
 ---
@@ -5545,10 +5545,10 @@ datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObject
 ##### `fields`<sup>Optional</sup> <a name="fields" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjects.property.fields"></a>
 
 ```python
-fields: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFields]]
+fields: IResolvable | typing.List[DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFields]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFields">DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFields</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFields">DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFields</a>]
 
 fields block.
 
@@ -5612,7 +5612,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 from cdktf_cdktf_provider_google import datastream_stream
 
 datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjects(
-  objects: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjects]]
+  objects: IResolvable | typing.List[DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjects]
 )
 ```
 
@@ -5620,17 +5620,17 @@ datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObject
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjects.property.objects">objects</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjects">DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjects</a>]]</code> | objects block. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjects.property.objects">objects</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjects">DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjects</a>]</code> | objects block. |
 
 ---
 
 ##### `objects`<sup>Required</sup> <a name="objects" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjects.property.objects"></a>
 
 ```python
-objects: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjects]]
+objects: IResolvable | typing.List[DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjects]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjects">DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjects</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjects">DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjects</a>]
 
 objects block.
 
@@ -5646,7 +5646,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 from cdktf_cdktf_provider_google import datastream_stream
 
 datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjects(
-  fields: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFields]] = None,
+  fields: IResolvable | typing.List[DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFields] = None,
   object_name: str = None
 )
 ```
@@ -5655,7 +5655,7 @@ datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObject
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjects.property.fields">fields</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFields">DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFields</a>]]</code> | fields block. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjects.property.fields">fields</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFields">DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFields</a>]</code> | fields block. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjects.property.objectName">object_name</a></code> | <code>str</code> | Name of object in Salesforce Org. |
 
 ---
@@ -5663,10 +5663,10 @@ datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObject
 ##### `fields`<sup>Optional</sup> <a name="fields" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjects.property.fields"></a>
 
 ```python
-fields: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFields]]
+fields: IResolvable | typing.List[DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFields]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFields">DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFields</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFields">DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFields</a>]
 
 fields block.
 
@@ -5855,7 +5855,7 @@ datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigChangeTables()
 from cdktf_cdktf_provider_google import datastream_stream
 
 datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjects(
-  schemas: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemas]]
+  schemas: IResolvable | typing.List[DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemas]
 )
 ```
 
@@ -5863,17 +5863,17 @@ datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjects
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjects.property.schemas">schemas</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemas">DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemas</a>]]</code> | schemas block. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjects.property.schemas">schemas</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemas">DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemas</a>]</code> | schemas block. |
 
 ---
 
 ##### `schemas`<sup>Required</sup> <a name="schemas" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjects.property.schemas"></a>
 
 ```python
-schemas: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemas]]
+schemas: IResolvable | typing.List[DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemas]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemas">DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemas</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemas">DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemas</a>]
 
 schemas block.
 
@@ -5890,7 +5890,7 @@ from cdktf_cdktf_provider_google import datastream_stream
 
 datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemas(
   schema: str,
-  tables: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTables]] = None
+  tables: IResolvable | typing.List[DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTables] = None
 )
 ```
 
@@ -5899,7 +5899,7 @@ datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjects
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemas.property.schema">schema</a></code> | <code>str</code> | Schema name. |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemas.property.tables">tables</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTables">DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTables</a>]]</code> | tables block. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemas.property.tables">tables</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTables">DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTables</a>]</code> | tables block. |
 
 ---
 
@@ -5920,10 +5920,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `tables`<sup>Optional</sup> <a name="tables" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemas.property.tables"></a>
 
 ```python
-tables: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTables]]
+tables: IResolvable | typing.List[DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTables]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTables">DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTables</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTables">DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTables</a>]
 
 tables block.
 
@@ -5940,7 +5940,7 @@ from cdktf_cdktf_provider_google import datastream_stream
 
 datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTables(
   table: str,
-  columns: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumns]] = None
+  columns: IResolvable | typing.List[DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumns] = None
 )
 ```
 
@@ -5949,7 +5949,7 @@ datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjects
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTables.property.table">table</a></code> | <code>str</code> | Table name. |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTables.property.columns">columns</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumns">DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumns</a>]]</code> | columns block. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTables.property.columns">columns</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumns">DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumns</a>]</code> | columns block. |
 
 ---
 
@@ -5970,10 +5970,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `columns`<sup>Optional</sup> <a name="columns" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTables.property.columns"></a>
 
 ```python
-columns: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumns]]
+columns: IResolvable | typing.List[DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumns]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumns">DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumns</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumns">DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumns</a>]
 
 columns block.
 
@@ -6039,7 +6039,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 from cdktf_cdktf_provider_google import datastream_stream
 
 datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjects(
-  schemas: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemas]]
+  schemas: IResolvable | typing.List[DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemas]
 )
 ```
 
@@ -6047,17 +6047,17 @@ datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjects
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjects.property.schemas">schemas</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemas">DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemas</a>]]</code> | schemas block. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjects.property.schemas">schemas</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemas">DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemas</a>]</code> | schemas block. |
 
 ---
 
 ##### `schemas`<sup>Required</sup> <a name="schemas" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjects.property.schemas"></a>
 
 ```python
-schemas: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemas]]
+schemas: IResolvable | typing.List[DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemas]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemas">DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemas</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemas">DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemas</a>]
 
 schemas block.
 
@@ -6074,7 +6074,7 @@ from cdktf_cdktf_provider_google import datastream_stream
 
 datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemas(
   schema: str,
-  tables: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTables]] = None
+  tables: IResolvable | typing.List[DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTables] = None
 )
 ```
 
@@ -6083,7 +6083,7 @@ datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjects
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemas.property.schema">schema</a></code> | <code>str</code> | Schema name. |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemas.property.tables">tables</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTables">DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTables</a>]]</code> | tables block. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemas.property.tables">tables</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTables">DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTables</a>]</code> | tables block. |
 
 ---
 
@@ -6104,10 +6104,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `tables`<sup>Optional</sup> <a name="tables" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemas.property.tables"></a>
 
 ```python
-tables: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTables]]
+tables: IResolvable | typing.List[DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTables]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTables">DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTables</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTables">DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTables</a>]
 
 tables block.
 
@@ -6124,7 +6124,7 @@ from cdktf_cdktf_provider_google import datastream_stream
 
 datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTables(
   table: str,
-  columns: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumns]] = None
+  columns: IResolvable | typing.List[DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumns] = None
 )
 ```
 
@@ -6133,7 +6133,7 @@ datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjects
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTables.property.table">table</a></code> | <code>str</code> | Table name. |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTables.property.columns">columns</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumns">DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumns</a>]]</code> | columns block. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTables.property.columns">columns</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumns">DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumns</a>]</code> | columns block. |
 
 ---
 
@@ -6154,10 +6154,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `columns`<sup>Optional</sup> <a name="columns" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTables.property.columns"></a>
 
 ```python
-columns: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumns]]
+columns: IResolvable | typing.List[DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumns]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumns">DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumns</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumns">DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumns</a>]
 
 columns block.
 
@@ -6419,7 +6419,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabases">DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabases</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabases">DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabases</a>]</code> | *No description.* |
 
 ---
 
@@ -6450,10 +6450,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabases]]
+internal_value: IResolvable | typing.List[DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabases]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabases">DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabases</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabases">DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabases</a>]
 
 ---
 
@@ -6589,7 +6589,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTables">DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTables</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTables">DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTables</a>]</code> | *No description.* |
 
 ---
 
@@ -6620,10 +6620,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTables]]
+internal_value: IResolvable | typing.List[DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTables]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTables">DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTables</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTables">DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTables</a>]
 
 ---
 
@@ -6759,7 +6759,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumnsList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumnsList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumnsList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns">DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumnsList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns">DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns</a>]</code> | *No description.* |
 
 ---
 
@@ -6790,10 +6790,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumnsList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns]]
+internal_value: IResolvable | typing.List[DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns">DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns">DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns</a>]
 
 ---
 
@@ -7099,16 +7099,16 @@ def reset_primary_key() -> None
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.collationInput">collation_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.columnInput">column_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.dataTypeInput">data_type_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.nullableInput">nullable_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.nullableInput">nullable_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.ordinalPositionInput">ordinal_position_input</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.primaryKeyInput">primary_key_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.primaryKeyInput">primary_key_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.collation">collation</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.column">column</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.dataType">data_type</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.nullable">nullable</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.nullable">nullable</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.ordinalPosition">ordinal_position</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.primaryKey">primary_key</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns">DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.primaryKey">primary_key</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns">DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns</a></code> | *No description.* |
 
 ---
 
@@ -7179,10 +7179,10 @@ data_type_input: str
 ##### `nullable_input`<sup>Optional</sup> <a name="nullable_input" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.nullableInput"></a>
 
 ```python
-nullable_input: typing.Union[bool, IResolvable]
+nullable_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -7199,10 +7199,10 @@ ordinal_position_input: typing.Union[int, float]
 ##### `primary_key_input`<sup>Optional</sup> <a name="primary_key_input" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.primaryKeyInput"></a>
 
 ```python
-primary_key_input: typing.Union[bool, IResolvable]
+primary_key_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -7239,10 +7239,10 @@ data_type: str
 ##### `nullable`<sup>Required</sup> <a name="nullable" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.nullable"></a>
 
 ```python
-nullable: typing.Union[bool, IResolvable]
+nullable: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -7259,20 +7259,20 @@ ordinal_position: typing.Union[int, float]
 ##### `primary_key`<sup>Required</sup> <a name="primary_key" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.primaryKey"></a>
 
 ```python
-primary_key: typing.Union[bool, IResolvable]
+primary_key: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns]
+internal_value: IResolvable | DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns">DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns">DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns</a>
 
 ---
 
@@ -7531,13 +7531,13 @@ Returns a reversible string representation.
 
 ```python
 def put_mysql_columns(
-  value: typing.Union[IResolvable, typing.List[DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns]]
+  value: IResolvable | typing.List[DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesOutputReference.putMysqlColumns.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns">DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns">DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns</a>]
 
 ---
 
@@ -7555,10 +7555,10 @@ def reset_mysql_columns() -> None
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesOutputReference.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesOutputReference.property.mysqlColumns">mysql_columns</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumnsList">DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumnsList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesOutputReference.property.mysqlColumnsInput">mysql_columns_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns">DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesOutputReference.property.mysqlColumnsInput">mysql_columns_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns">DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesOutputReference.property.tableInput">table_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesOutputReference.property.table">table</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTables">DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTables</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTables">DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTables</a></code> | *No description.* |
 
 ---
 
@@ -7599,10 +7599,10 @@ mysql_columns: DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysq
 ##### `mysql_columns_input`<sup>Optional</sup> <a name="mysql_columns_input" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesOutputReference.property.mysqlColumnsInput"></a>
 
 ```python
-mysql_columns_input: typing.Union[IResolvable, typing.List[DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns]]
+mysql_columns_input: IResolvable | typing.List[DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns">DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns">DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns</a>]
 
 ---
 
@@ -7629,10 +7629,10 @@ table: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTables]
+internal_value: IResolvable | DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTables
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTables">DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTables</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTables">DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTables</a>
 
 ---
 
@@ -7891,13 +7891,13 @@ Returns a reversible string representation.
 
 ```python
 def put_mysql_tables(
-  value: typing.Union[IResolvable, typing.List[DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTables]]
+  value: IResolvable | typing.List[DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTables]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesOutputReference.putMysqlTables.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTables">DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTables</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTables">DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTables</a>]
 
 ---
 
@@ -7916,9 +7916,9 @@ def reset_mysql_tables() -> None
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesOutputReference.property.mysqlTables">mysql_tables</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesList">DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesOutputReference.property.databaseInput">database_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesOutputReference.property.mysqlTablesInput">mysql_tables_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTables">DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTables</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesOutputReference.property.mysqlTablesInput">mysql_tables_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTables">DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTables</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesOutputReference.property.database">database</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabases">DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabases</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabases">DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabases</a></code> | *No description.* |
 
 ---
 
@@ -7969,10 +7969,10 @@ database_input: str
 ##### `mysql_tables_input`<sup>Optional</sup> <a name="mysql_tables_input" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesOutputReference.property.mysqlTablesInput"></a>
 
 ```python
-mysql_tables_input: typing.Union[IResolvable, typing.List[DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTables]]
+mysql_tables_input: IResolvable | typing.List[DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTables]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTables">DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTables</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTables">DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTables</a>]
 
 ---
 
@@ -7989,10 +7989,10 @@ database: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabases]
+internal_value: IResolvable | DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabases
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabases">DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabases</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabases">DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabases</a>
 
 ---
 
@@ -8230,13 +8230,13 @@ Returns a reversible string representation.
 
 ```python
 def put_mysql_databases(
-  value: typing.Union[IResolvable, typing.List[DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabases]]
+  value: IResolvable | typing.List[DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabases]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsOutputReference.putMysqlDatabases.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabases">DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabases</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabases">DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabases</a>]
 
 ---
 
@@ -8248,7 +8248,7 @@ def put_mysql_databases(
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsOutputReference.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsOutputReference.property.mysqlDatabases">mysql_databases</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesList">DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsOutputReference.property.mysqlDatabasesInput">mysql_databases_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabases">DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabases</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsOutputReference.property.mysqlDatabasesInput">mysql_databases_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabases">DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabases</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsOutputReference.property.internalValue">internal_value</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjects">DatastreamStreamBackfillAllMysqlExcludedObjects</a></code> | *No description.* |
 
 ---
@@ -8290,10 +8290,10 @@ mysql_databases: DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesLi
 ##### `mysql_databases_input`<sup>Optional</sup> <a name="mysql_databases_input" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsOutputReference.property.mysqlDatabasesInput"></a>
 
 ```python
-mysql_databases_input: typing.Union[IResolvable, typing.List[DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabases]]
+mysql_databases_input: IResolvable | typing.List[DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabases]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabases">DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabases</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabases">DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabases</a>]
 
 ---
 
@@ -8439,7 +8439,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemas">DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemas</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemas">DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemas</a>]</code> | *No description.* |
 
 ---
 
@@ -8470,10 +8470,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemas]]
+internal_value: IResolvable | typing.List[DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemas]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemas">DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemas</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemas">DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemas</a>]
 
 ---
 
@@ -8609,7 +8609,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTables">DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTables</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTables">DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTables</a>]</code> | *No description.* |
 
 ---
 
@@ -8640,10 +8640,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTables]]
+internal_value: IResolvable | typing.List[DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTables]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTables">DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTables</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTables">DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTables</a>]
 
 ---
 
@@ -8779,7 +8779,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumnsList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumnsList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumnsList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumns">DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumns</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumnsList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumns">DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumns</a>]</code> | *No description.* |
 
 ---
 
@@ -8810,10 +8810,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumnsList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumns]]
+internal_value: IResolvable | typing.List[DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumns]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumns">DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumns</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumns">DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumns</a>]
 
 ---
 
@@ -9098,7 +9098,7 @@ def reset_data_type() -> None
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumnsOutputReference.property.dataTypeInput">data_type_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumnsOutputReference.property.column">column</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumnsOutputReference.property.dataType">data_type</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumnsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumns">DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumns</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumnsOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumns">DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumns</a></code> | *No description.* |
 
 ---
 
@@ -9239,10 +9239,10 @@ data_type: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumnsOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumns]
+internal_value: IResolvable | DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumns
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumns">DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumns</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumns">DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumns</a>
 
 ---
 
@@ -9501,13 +9501,13 @@ Returns a reversible string representation.
 
 ```python
 def put_oracle_columns(
-  value: typing.Union[IResolvable, typing.List[DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumns]]
+  value: IResolvable | typing.List[DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumns]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOutputReference.putOracleColumns.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumns">DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumns</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumns">DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumns</a>]
 
 ---
 
@@ -9525,10 +9525,10 @@ def reset_oracle_columns() -> None
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOutputReference.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOutputReference.property.oracleColumns">oracle_columns</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumnsList">DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumnsList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOutputReference.property.oracleColumnsInput">oracle_columns_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumns">DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumns</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOutputReference.property.oracleColumnsInput">oracle_columns_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumns">DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumns</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOutputReference.property.tableInput">table_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOutputReference.property.table">table</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTables">DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTables</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTables">DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTables</a></code> | *No description.* |
 
 ---
 
@@ -9569,10 +9569,10 @@ oracle_columns: DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOra
 ##### `oracle_columns_input`<sup>Optional</sup> <a name="oracle_columns_input" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOutputReference.property.oracleColumnsInput"></a>
 
 ```python
-oracle_columns_input: typing.Union[IResolvable, typing.List[DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumns]]
+oracle_columns_input: IResolvable | typing.List[DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumns]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumns">DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumns</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumns">DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumns</a>]
 
 ---
 
@@ -9599,10 +9599,10 @@ table: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTables]
+internal_value: IResolvable | DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTables
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTables">DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTables</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTables">DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTables</a>
 
 ---
 
@@ -9861,13 +9861,13 @@ Returns a reversible string representation.
 
 ```python
 def put_oracle_tables(
-  value: typing.Union[IResolvable, typing.List[DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTables]]
+  value: IResolvable | typing.List[DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTables]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOutputReference.putOracleTables.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTables">DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTables</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTables">DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTables</a>]
 
 ---
 
@@ -9885,10 +9885,10 @@ def reset_oracle_tables() -> None
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOutputReference.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOutputReference.property.oracleTables">oracle_tables</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesList">DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOutputReference.property.oracleTablesInput">oracle_tables_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTables">DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTables</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOutputReference.property.oracleTablesInput">oracle_tables_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTables">DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTables</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOutputReference.property.schemaInput">schema_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOutputReference.property.schema">schema</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemas">DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemas</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemas">DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemas</a></code> | *No description.* |
 
 ---
 
@@ -9929,10 +9929,10 @@ oracle_tables: DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOrac
 ##### `oracle_tables_input`<sup>Optional</sup> <a name="oracle_tables_input" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOutputReference.property.oracleTablesInput"></a>
 
 ```python
-oracle_tables_input: typing.Union[IResolvable, typing.List[DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTables]]
+oracle_tables_input: IResolvable | typing.List[DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTables]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTables">DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTables</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTables">DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTables</a>]
 
 ---
 
@@ -9959,10 +9959,10 @@ schema: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemas]
+internal_value: IResolvable | DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemas
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemas">DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemas</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemas">DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemas</a>
 
 ---
 
@@ -10200,13 +10200,13 @@ Returns a reversible string representation.
 
 ```python
 def put_oracle_schemas(
-  value: typing.Union[IResolvable, typing.List[DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemas]]
+  value: IResolvable | typing.List[DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemas]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOutputReference.putOracleSchemas.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemas">DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemas</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemas">DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemas</a>]
 
 ---
 
@@ -10218,7 +10218,7 @@ def put_oracle_schemas(
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOutputReference.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOutputReference.property.oracleSchemas">oracle_schemas</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasList">DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOutputReference.property.oracleSchemasInput">oracle_schemas_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemas">DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemas</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOutputReference.property.oracleSchemasInput">oracle_schemas_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemas">DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemas</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOutputReference.property.internalValue">internal_value</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjects">DatastreamStreamBackfillAllOracleExcludedObjects</a></code> | *No description.* |
 
 ---
@@ -10260,10 +10260,10 @@ oracle_schemas: DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasLis
 ##### `oracle_schemas_input`<sup>Optional</sup> <a name="oracle_schemas_input" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOutputReference.property.oracleSchemasInput"></a>
 
 ```python
-oracle_schemas_input: typing.Union[IResolvable, typing.List[DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemas]]
+oracle_schemas_input: IResolvable | typing.List[DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemas]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemas">DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemas</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemas">DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemas</a>]
 
 ---
 
@@ -10520,13 +10520,13 @@ Returns a reversible string representation.
 
 ```python
 def put_mysql_excluded_objects(
-  mysql_databases: typing.Union[IResolvable, typing.List[DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabases]]
+  mysql_databases: IResolvable | typing.List[DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabases]
 ) -> None
 ```
 
 ###### `mysql_databases`<sup>Required</sup> <a name="mysql_databases" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOutputReference.putMysqlExcludedObjects.parameter.mysqlDatabases"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabases">DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabases</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabases">DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabases</a>]
 
 mysql_databases block.
 
@@ -10538,13 +10538,13 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ```python
 def put_oracle_excluded_objects(
-  oracle_schemas: typing.Union[IResolvable, typing.List[DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemas]]
+  oracle_schemas: IResolvable | typing.List[DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemas]
 ) -> None
 ```
 
 ###### `oracle_schemas`<sup>Required</sup> <a name="oracle_schemas" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOutputReference.putOracleExcludedObjects.parameter.oracleSchemas"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemas">DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemas</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemas">DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemas</a>]
 
 oracle_schemas block.
 
@@ -10556,13 +10556,13 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ```python
 def put_postgresql_excluded_objects(
-  postgresql_schemas: typing.Union[IResolvable, typing.List[DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas]]
+  postgresql_schemas: IResolvable | typing.List[DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas]
 ) -> None
 ```
 
 ###### `postgresql_schemas`<sup>Required</sup> <a name="postgresql_schemas" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOutputReference.putPostgresqlExcludedObjects.parameter.postgresqlSchemas"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas">DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas">DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas</a>]
 
 postgresql_schemas block.
 
@@ -10574,13 +10574,13 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ```python
 def put_salesforce_excluded_objects(
-  objects: typing.Union[IResolvable, typing.List[DatastreamStreamBackfillAllSalesforceExcludedObjectsObjects]]
+  objects: IResolvable | typing.List[DatastreamStreamBackfillAllSalesforceExcludedObjectsObjects]
 ) -> None
 ```
 
 ###### `objects`<sup>Required</sup> <a name="objects" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOutputReference.putSalesforceExcludedObjects.parameter.objects"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjects">DatastreamStreamBackfillAllSalesforceExcludedObjectsObjects</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjects">DatastreamStreamBackfillAllSalesforceExcludedObjectsObjects</a>]
 
 objects block.
 
@@ -10592,13 +10592,13 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ```python
 def put_sql_server_excluded_objects(
-  schemas: typing.Union[IResolvable, typing.List[DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemas]]
+  schemas: IResolvable | typing.List[DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemas]
 ) -> None
 ```
 
 ###### `schemas`<sup>Required</sup> <a name="schemas" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOutputReference.putSqlServerExcludedObjects.parameter.schemas"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemas">DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemas</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemas">DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemas</a>]
 
 schemas block.
 
@@ -11025,13 +11025,13 @@ Returns a reversible string representation.
 
 ```python
 def put_postgresql_schemas(
-  value: typing.Union[IResolvable, typing.List[DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas]]
+  value: IResolvable | typing.List[DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsOutputReference.putPostgresqlSchemas.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas">DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas">DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas</a>]
 
 ---
 
@@ -11043,7 +11043,7 @@ def put_postgresql_schemas(
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsOutputReference.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsOutputReference.property.postgresqlSchemas">postgresql_schemas</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasList">DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsOutputReference.property.postgresqlSchemasInput">postgresql_schemas_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas">DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsOutputReference.property.postgresqlSchemasInput">postgresql_schemas_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas">DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsOutputReference.property.internalValue">internal_value</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjects">DatastreamStreamBackfillAllPostgresqlExcludedObjects</a></code> | *No description.* |
 
 ---
@@ -11085,10 +11085,10 @@ postgresql_schemas: DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgres
 ##### `postgresql_schemas_input`<sup>Optional</sup> <a name="postgresql_schemas_input" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsOutputReference.property.postgresqlSchemasInput"></a>
 
 ```python
-postgresql_schemas_input: typing.Union[IResolvable, typing.List[DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas]]
+postgresql_schemas_input: IResolvable | typing.List[DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas">DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas">DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas</a>]
 
 ---
 
@@ -11234,7 +11234,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas">DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas">DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas</a>]</code> | *No description.* |
 
 ---
 
@@ -11265,10 +11265,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas]]
+internal_value: IResolvable | typing.List[DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas">DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas">DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas</a>]
 
 ---
 
@@ -11527,13 +11527,13 @@ Returns a reversible string representation.
 
 ```python
 def put_postgresql_tables(
-  value: typing.Union[IResolvable, typing.List[DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTables]]
+  value: IResolvable | typing.List[DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTables]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasOutputReference.putPostgresqlTables.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTables">DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTables</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTables">DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTables</a>]
 
 ---
 
@@ -11551,10 +11551,10 @@ def reset_postgresql_tables() -> None
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasOutputReference.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasOutputReference.property.postgresqlTables">postgresql_tables</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesList">DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasOutputReference.property.postgresqlTablesInput">postgresql_tables_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTables">DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTables</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasOutputReference.property.postgresqlTablesInput">postgresql_tables_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTables">DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTables</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasOutputReference.property.schemaInput">schema_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasOutputReference.property.schema">schema</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas">DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas">DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas</a></code> | *No description.* |
 
 ---
 
@@ -11595,10 +11595,10 @@ postgresql_tables: DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresq
 ##### `postgresql_tables_input`<sup>Optional</sup> <a name="postgresql_tables_input" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasOutputReference.property.postgresqlTablesInput"></a>
 
 ```python
-postgresql_tables_input: typing.Union[IResolvable, typing.List[DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTables]]
+postgresql_tables_input: IResolvable | typing.List[DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTables]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTables">DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTables</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTables">DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTables</a>]
 
 ---
 
@@ -11625,10 +11625,10 @@ schema: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas]
+internal_value: IResolvable | DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas">DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas">DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas</a>
 
 ---
 
@@ -11764,7 +11764,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTables">DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTables</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTables">DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTables</a>]</code> | *No description.* |
 
 ---
 
@@ -11795,10 +11795,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTables]]
+internal_value: IResolvable | typing.List[DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTables]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTables">DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTables</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTables">DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTables</a>]
 
 ---
 
@@ -12057,13 +12057,13 @@ Returns a reversible string representation.
 
 ```python
 def put_postgresql_columns(
-  value: typing.Union[IResolvable, typing.List[DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns]]
+  value: IResolvable | typing.List[DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesOutputReference.putPostgresqlColumns.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns">DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns">DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns</a>]
 
 ---
 
@@ -12081,10 +12081,10 @@ def reset_postgresql_columns() -> None
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesOutputReference.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesOutputReference.property.postgresqlColumns">postgresql_columns</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsList">DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesOutputReference.property.postgresqlColumnsInput">postgresql_columns_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns">DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesOutputReference.property.postgresqlColumnsInput">postgresql_columns_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns">DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesOutputReference.property.tableInput">table_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesOutputReference.property.table">table</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTables">DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTables</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTables">DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTables</a></code> | *No description.* |
 
 ---
 
@@ -12125,10 +12125,10 @@ postgresql_columns: DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgres
 ##### `postgresql_columns_input`<sup>Optional</sup> <a name="postgresql_columns_input" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesOutputReference.property.postgresqlColumnsInput"></a>
 
 ```python
-postgresql_columns_input: typing.Union[IResolvable, typing.List[DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns]]
+postgresql_columns_input: IResolvable | typing.List[DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns">DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns">DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns</a>]
 
 ---
 
@@ -12155,10 +12155,10 @@ table: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTables]
+internal_value: IResolvable | DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTables
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTables">DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTables</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTables">DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTables</a>
 
 ---
 
@@ -12294,7 +12294,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns">DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns">DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns</a>]</code> | *No description.* |
 
 ---
 
@@ -12325,10 +12325,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns]]
+internal_value: IResolvable | typing.List[DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns">DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns">DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns</a>]
 
 ---
 
@@ -12628,15 +12628,15 @@ def reset_primary_key() -> None
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.scale">scale</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.columnInput">column_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.dataTypeInput">data_type_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.nullableInput">nullable_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.nullableInput">nullable_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.ordinalPositionInput">ordinal_position_input</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.primaryKeyInput">primary_key_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.primaryKeyInput">primary_key_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.column">column</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.dataType">data_type</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.nullable">nullable</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.nullable">nullable</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.ordinalPosition">ordinal_position</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.primaryKey">primary_key</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns">DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.primaryKey">primary_key</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns">DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns</a></code> | *No description.* |
 
 ---
 
@@ -12717,10 +12717,10 @@ data_type_input: str
 ##### `nullable_input`<sup>Optional</sup> <a name="nullable_input" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.nullableInput"></a>
 
 ```python
-nullable_input: typing.Union[bool, IResolvable]
+nullable_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -12737,10 +12737,10 @@ ordinal_position_input: typing.Union[int, float]
 ##### `primary_key_input`<sup>Optional</sup> <a name="primary_key_input" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.primaryKeyInput"></a>
 
 ```python
-primary_key_input: typing.Union[bool, IResolvable]
+primary_key_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -12767,10 +12767,10 @@ data_type: str
 ##### `nullable`<sup>Required</sup> <a name="nullable" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.nullable"></a>
 
 ```python
-nullable: typing.Union[bool, IResolvable]
+nullable: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -12787,20 +12787,20 @@ ordinal_position: typing.Union[int, float]
 ##### `primary_key`<sup>Required</sup> <a name="primary_key" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.primaryKey"></a>
 
 ```python
-primary_key: typing.Union[bool, IResolvable]
+primary_key: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns]
+internal_value: IResolvable | DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns">DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns">DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns</a>
 
 ---
 
@@ -12936,7 +12936,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFieldsList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFieldsList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFieldsList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFields">DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFields</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFieldsList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFields">DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFields</a>]</code> | *No description.* |
 
 ---
 
@@ -12967,10 +12967,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFieldsList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFields]]
+internal_value: IResolvable | typing.List[DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFields]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFields">DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFields</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFields">DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFields</a>]
 
 ---
 
@@ -13239,7 +13239,7 @@ def reset_name() -> None
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFieldsOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFieldsOutputReference.property.nameInput">name_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFieldsOutputReference.property.name">name</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFieldsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFields">DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFields</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFieldsOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFields">DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFields</a></code> | *No description.* |
 
 ---
 
@@ -13290,10 +13290,10 @@ name: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFieldsOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFields]
+internal_value: IResolvable | DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFields
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFields">DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFields</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFields">DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFields</a>
 
 ---
 
@@ -13429,7 +13429,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjects">DatastreamStreamBackfillAllSalesforceExcludedObjectsObjects</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjects">DatastreamStreamBackfillAllSalesforceExcludedObjectsObjects</a>]</code> | *No description.* |
 
 ---
 
@@ -13460,10 +13460,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[DatastreamStreamBackfillAllSalesforceExcludedObjectsObjects]]
+internal_value: IResolvable | typing.List[DatastreamStreamBackfillAllSalesforceExcludedObjectsObjects]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjects">DatastreamStreamBackfillAllSalesforceExcludedObjectsObjects</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjects">DatastreamStreamBackfillAllSalesforceExcludedObjectsObjects</a>]
 
 ---
 
@@ -13723,13 +13723,13 @@ Returns a reversible string representation.
 
 ```python
 def put_fields(
-  value: typing.Union[IResolvable, typing.List[DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFields]]
+  value: IResolvable | typing.List[DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFields]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsOutputReference.putFields.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFields">DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFields</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFields">DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFields</a>]
 
 ---
 
@@ -13753,10 +13753,10 @@ def reset_object_name() -> None
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsOutputReference.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsOutputReference.property.fields">fields</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFieldsList">DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFieldsList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsOutputReference.property.fieldsInput">fields_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFields">DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFields</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsOutputReference.property.fieldsInput">fields_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFields">DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFields</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsOutputReference.property.objectNameInput">object_name_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsOutputReference.property.objectName">object_name</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjects">DatastreamStreamBackfillAllSalesforceExcludedObjectsObjects</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjects">DatastreamStreamBackfillAllSalesforceExcludedObjectsObjects</a></code> | *No description.* |
 
 ---
 
@@ -13797,10 +13797,10 @@ fields: DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFieldsList
 ##### `fields_input`<sup>Optional</sup> <a name="fields_input" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsOutputReference.property.fieldsInput"></a>
 
 ```python
-fields_input: typing.Union[IResolvable, typing.List[DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFields]]
+fields_input: IResolvable | typing.List[DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFields]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFields">DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFields</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFields">DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFields</a>]
 
 ---
 
@@ -13827,10 +13827,10 @@ object_name: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, DatastreamStreamBackfillAllSalesforceExcludedObjectsObjects]
+internal_value: IResolvable | DatastreamStreamBackfillAllSalesforceExcludedObjectsObjects
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjects">DatastreamStreamBackfillAllSalesforceExcludedObjectsObjects</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjects">DatastreamStreamBackfillAllSalesforceExcludedObjectsObjects</a>
 
 ---
 
@@ -14068,13 +14068,13 @@ Returns a reversible string representation.
 
 ```python
 def put_objects(
-  value: typing.Union[IResolvable, typing.List[DatastreamStreamBackfillAllSalesforceExcludedObjectsObjects]]
+  value: IResolvable | typing.List[DatastreamStreamBackfillAllSalesforceExcludedObjectsObjects]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsOutputReference.putObjects.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjects">DatastreamStreamBackfillAllSalesforceExcludedObjectsObjects</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjects">DatastreamStreamBackfillAllSalesforceExcludedObjectsObjects</a>]
 
 ---
 
@@ -14086,7 +14086,7 @@ def put_objects(
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsOutputReference.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsOutputReference.property.objects">objects</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsList">DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsOutputReference.property.objectsInput">objects_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjects">DatastreamStreamBackfillAllSalesforceExcludedObjectsObjects</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsOutputReference.property.objectsInput">objects_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjects">DatastreamStreamBackfillAllSalesforceExcludedObjectsObjects</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsOutputReference.property.internalValue">internal_value</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjects">DatastreamStreamBackfillAllSalesforceExcludedObjects</a></code> | *No description.* |
 
 ---
@@ -14128,10 +14128,10 @@ objects: DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsList
 ##### `objects_input`<sup>Optional</sup> <a name="objects_input" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsOutputReference.property.objectsInput"></a>
 
 ```python
-objects_input: typing.Union[IResolvable, typing.List[DatastreamStreamBackfillAllSalesforceExcludedObjectsObjects]]
+objects_input: IResolvable | typing.List[DatastreamStreamBackfillAllSalesforceExcludedObjectsObjects]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjects">DatastreamStreamBackfillAllSalesforceExcludedObjectsObjects</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjects">DatastreamStreamBackfillAllSalesforceExcludedObjectsObjects</a>]
 
 ---
 
@@ -14379,13 +14379,13 @@ Returns a reversible string representation.
 
 ```python
 def put_schemas(
-  value: typing.Union[IResolvable, typing.List[DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemas]]
+  value: IResolvable | typing.List[DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemas]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsOutputReference.putSchemas.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemas">DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemas</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemas">DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemas</a>]
 
 ---
 
@@ -14397,7 +14397,7 @@ def put_schemas(
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsOutputReference.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsOutputReference.property.schemas">schemas</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasList">DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsOutputReference.property.schemasInput">schemas_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemas">DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemas</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsOutputReference.property.schemasInput">schemas_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemas">DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemas</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsOutputReference.property.internalValue">internal_value</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjects">DatastreamStreamBackfillAllSqlServerExcludedObjects</a></code> | *No description.* |
 
 ---
@@ -14439,10 +14439,10 @@ schemas: DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasList
 ##### `schemas_input`<sup>Optional</sup> <a name="schemas_input" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsOutputReference.property.schemasInput"></a>
 
 ```python
-schemas_input: typing.Union[IResolvable, typing.List[DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemas]]
+schemas_input: IResolvable | typing.List[DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemas]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemas">DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemas</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemas">DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemas</a>]
 
 ---
 
@@ -14588,7 +14588,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemas">DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemas</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemas">DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemas</a>]</code> | *No description.* |
 
 ---
 
@@ -14619,10 +14619,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemas]]
+internal_value: IResolvable | typing.List[DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemas]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemas">DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemas</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemas">DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemas</a>]
 
 ---
 
@@ -14881,13 +14881,13 @@ Returns a reversible string representation.
 
 ```python
 def put_tables(
-  value: typing.Union[IResolvable, typing.List[DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTables]]
+  value: IResolvable | typing.List[DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTables]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasOutputReference.putTables.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTables">DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTables</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTables">DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTables</a>]
 
 ---
 
@@ -14906,9 +14906,9 @@ def reset_tables() -> None
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasOutputReference.property.tables">tables</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesList">DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasOutputReference.property.schemaInput">schema_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasOutputReference.property.tablesInput">tables_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTables">DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTables</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasOutputReference.property.tablesInput">tables_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTables">DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTables</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasOutputReference.property.schema">schema</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemas">DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemas</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemas">DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemas</a></code> | *No description.* |
 
 ---
 
@@ -14959,10 +14959,10 @@ schema_input: str
 ##### `tables_input`<sup>Optional</sup> <a name="tables_input" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasOutputReference.property.tablesInput"></a>
 
 ```python
-tables_input: typing.Union[IResolvable, typing.List[DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTables]]
+tables_input: IResolvable | typing.List[DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTables]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTables">DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTables</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTables">DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTables</a>]
 
 ---
 
@@ -14979,10 +14979,10 @@ schema: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemas]
+internal_value: IResolvable | DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemas
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemas">DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemas</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemas">DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemas</a>
 
 ---
 
@@ -15118,7 +15118,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumnsList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumnsList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumnsList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumns">DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumns</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumnsList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumns">DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumns</a>]</code> | *No description.* |
 
 ---
 
@@ -15149,10 +15149,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumnsList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumns]]
+internal_value: IResolvable | typing.List[DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumns]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumns">DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumns</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumns">DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumns</a>]
 
 ---
 
@@ -15436,7 +15436,7 @@ def reset_data_type() -> None
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumnsOutputReference.property.dataTypeInput">data_type_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumnsOutputReference.property.column">column</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumnsOutputReference.property.dataType">data_type</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumnsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumns">DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumns</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumnsOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumns">DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumns</a></code> | *No description.* |
 
 ---
 
@@ -15567,10 +15567,10 @@ data_type: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumnsOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumns]
+internal_value: IResolvable | DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumns
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumns">DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumns</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumns">DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumns</a>
 
 ---
 
@@ -15706,7 +15706,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTables">DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTables</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTables">DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTables</a>]</code> | *No description.* |
 
 ---
 
@@ -15737,10 +15737,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTables]]
+internal_value: IResolvable | typing.List[DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTables]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTables">DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTables</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTables">DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTables</a>]
 
 ---
 
@@ -15999,13 +15999,13 @@ Returns a reversible string representation.
 
 ```python
 def put_columns(
-  value: typing.Union[IResolvable, typing.List[DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumns]]
+  value: IResolvable | typing.List[DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumns]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesOutputReference.putColumns.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumns">DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumns</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumns">DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumns</a>]
 
 ---
 
@@ -16023,10 +16023,10 @@ def reset_columns() -> None
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesOutputReference.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesOutputReference.property.columns">columns</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumnsList">DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumnsList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesOutputReference.property.columnsInput">columns_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumns">DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumns</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesOutputReference.property.columnsInput">columns_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumns">DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumns</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesOutputReference.property.tableInput">table_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesOutputReference.property.table">table</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTables">DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTables</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTables">DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTables</a></code> | *No description.* |
 
 ---
 
@@ -16067,10 +16067,10 @@ columns: DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumns
 ##### `columns_input`<sup>Optional</sup> <a name="columns_input" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesOutputReference.property.columnsInput"></a>
 
 ```python
-columns_input: typing.Union[IResolvable, typing.List[DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumns]]
+columns_input: IResolvable | typing.List[DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumns]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumns">DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumns</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumns">DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumns</a>]
 
 ---
 
@@ -16097,10 +16097,10 @@ table: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTables]
+internal_value: IResolvable | DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTables
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTables">DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTables</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTables">DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTables</a>
 
 ---
 
@@ -20838,7 +20838,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases">DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases">DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases</a>]</code> | *No description.* |
 
 ---
 
@@ -20869,10 +20869,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases]]
+internal_value: IResolvable | typing.List[DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases">DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases">DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases</a>]
 
 ---
 
@@ -21008,7 +21008,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTables">DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTables</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTables">DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTables</a>]</code> | *No description.* |
 
 ---
 
@@ -21039,10 +21039,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTables]]
+internal_value: IResolvable | typing.List[DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTables]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTables">DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTables</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTables">DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTables</a>]
 
 ---
 
@@ -21178,7 +21178,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns">DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns">DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns</a>]</code> | *No description.* |
 
 ---
 
@@ -21209,10 +21209,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns]]
+internal_value: IResolvable | typing.List[DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns">DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns">DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns</a>]
 
 ---
 
@@ -21518,16 +21518,16 @@ def reset_primary_key() -> None
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.collationInput">collation_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.columnInput">column_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.dataTypeInput">data_type_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.nullableInput">nullable_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.nullableInput">nullable_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.ordinalPositionInput">ordinal_position_input</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.primaryKeyInput">primary_key_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.primaryKeyInput">primary_key_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.collation">collation</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.column">column</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.dataType">data_type</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.nullable">nullable</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.nullable">nullable</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.ordinalPosition">ordinal_position</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.primaryKey">primary_key</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns">DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.primaryKey">primary_key</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns">DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns</a></code> | *No description.* |
 
 ---
 
@@ -21598,10 +21598,10 @@ data_type_input: str
 ##### `nullable_input`<sup>Optional</sup> <a name="nullable_input" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.nullableInput"></a>
 
 ```python
-nullable_input: typing.Union[bool, IResolvable]
+nullable_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -21618,10 +21618,10 @@ ordinal_position_input: typing.Union[int, float]
 ##### `primary_key_input`<sup>Optional</sup> <a name="primary_key_input" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.primaryKeyInput"></a>
 
 ```python
-primary_key_input: typing.Union[bool, IResolvable]
+primary_key_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -21658,10 +21658,10 @@ data_type: str
 ##### `nullable`<sup>Required</sup> <a name="nullable" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.nullable"></a>
 
 ```python
-nullable: typing.Union[bool, IResolvable]
+nullable: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -21678,20 +21678,20 @@ ordinal_position: typing.Union[int, float]
 ##### `primary_key`<sup>Required</sup> <a name="primary_key" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.primaryKey"></a>
 
 ```python
-primary_key: typing.Union[bool, IResolvable]
+primary_key: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns]
+internal_value: IResolvable | DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns">DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns">DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns</a>
 
 ---
 
@@ -21950,13 +21950,13 @@ Returns a reversible string representation.
 
 ```python
 def put_mysql_columns(
-  value: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns]]
+  value: IResolvable | typing.List[DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesOutputReference.putMysqlColumns.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns">DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns">DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns</a>]
 
 ---
 
@@ -21974,10 +21974,10 @@ def reset_mysql_columns() -> None
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesOutputReference.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesOutputReference.property.mysqlColumns">mysql_columns</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsList">DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesOutputReference.property.mysqlColumnsInput">mysql_columns_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns">DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesOutputReference.property.mysqlColumnsInput">mysql_columns_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns">DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesOutputReference.property.tableInput">table_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesOutputReference.property.table">table</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTables">DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTables</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTables">DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTables</a></code> | *No description.* |
 
 ---
 
@@ -22018,10 +22018,10 @@ mysql_columns: DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlD
 ##### `mysql_columns_input`<sup>Optional</sup> <a name="mysql_columns_input" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesOutputReference.property.mysqlColumnsInput"></a>
 
 ```python
-mysql_columns_input: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns]]
+mysql_columns_input: IResolvable | typing.List[DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns">DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns">DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns</a>]
 
 ---
 
@@ -22048,10 +22048,10 @@ table: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTables]
+internal_value: IResolvable | DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTables
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTables">DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTables</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTables">DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTables</a>
 
 ---
 
@@ -22310,13 +22310,13 @@ Returns a reversible string representation.
 
 ```python
 def put_mysql_tables(
-  value: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTables]]
+  value: IResolvable | typing.List[DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTables]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesOutputReference.putMysqlTables.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTables">DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTables</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTables">DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTables</a>]
 
 ---
 
@@ -22335,9 +22335,9 @@ def reset_mysql_tables() -> None
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesOutputReference.property.mysqlTables">mysql_tables</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesList">DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesOutputReference.property.databaseInput">database_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesOutputReference.property.mysqlTablesInput">mysql_tables_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTables">DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTables</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesOutputReference.property.mysqlTablesInput">mysql_tables_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTables">DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTables</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesOutputReference.property.database">database</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases">DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases">DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases</a></code> | *No description.* |
 
 ---
 
@@ -22388,10 +22388,10 @@ database_input: str
 ##### `mysql_tables_input`<sup>Optional</sup> <a name="mysql_tables_input" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesOutputReference.property.mysqlTablesInput"></a>
 
 ```python
-mysql_tables_input: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTables]]
+mysql_tables_input: IResolvable | typing.List[DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTables]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTables">DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTables</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTables">DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTables</a>]
 
 ---
 
@@ -22408,10 +22408,10 @@ database: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases]
+internal_value: IResolvable | DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases">DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases">DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases</a>
 
 ---
 
@@ -22649,13 +22649,13 @@ Returns a reversible string representation.
 
 ```python
 def put_mysql_databases(
-  value: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases]]
+  value: IResolvable | typing.List[DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsOutputReference.putMysqlDatabases.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases">DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases">DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases</a>]
 
 ---
 
@@ -22667,7 +22667,7 @@ def put_mysql_databases(
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsOutputReference.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsOutputReference.property.mysqlDatabases">mysql_databases</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesList">DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsOutputReference.property.mysqlDatabasesInput">mysql_databases_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases">DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsOutputReference.property.mysqlDatabasesInput">mysql_databases_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases">DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsOutputReference.property.internalValue">internal_value</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjects">DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjects</a></code> | *No description.* |
 
 ---
@@ -22709,10 +22709,10 @@ mysql_databases: DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysq
 ##### `mysql_databases_input`<sup>Optional</sup> <a name="mysql_databases_input" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsOutputReference.property.mysqlDatabasesInput"></a>
 
 ```python
-mysql_databases_input: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases]]
+mysql_databases_input: IResolvable | typing.List[DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases">DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases">DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases</a>]
 
 ---
 
@@ -23132,7 +23132,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases">DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases">DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases</a>]</code> | *No description.* |
 
 ---
 
@@ -23163,10 +23163,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases]]
+internal_value: IResolvable | typing.List[DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases">DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases">DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases</a>]
 
 ---
 
@@ -23302,7 +23302,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTables">DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTables</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTables">DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTables</a>]</code> | *No description.* |
 
 ---
 
@@ -23333,10 +23333,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTables]]
+internal_value: IResolvable | typing.List[DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTables]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTables">DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTables</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTables">DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTables</a>]
 
 ---
 
@@ -23472,7 +23472,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns">DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns">DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns</a>]</code> | *No description.* |
 
 ---
 
@@ -23503,10 +23503,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns]]
+internal_value: IResolvable | typing.List[DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns">DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns">DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns</a>]
 
 ---
 
@@ -23812,16 +23812,16 @@ def reset_primary_key() -> None
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.collationInput">collation_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.columnInput">column_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.dataTypeInput">data_type_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.nullableInput">nullable_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.nullableInput">nullable_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.ordinalPositionInput">ordinal_position_input</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.primaryKeyInput">primary_key_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.primaryKeyInput">primary_key_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.collation">collation</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.column">column</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.dataType">data_type</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.nullable">nullable</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.nullable">nullable</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.ordinalPosition">ordinal_position</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.primaryKey">primary_key</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns">DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.primaryKey">primary_key</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns">DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns</a></code> | *No description.* |
 
 ---
 
@@ -23892,10 +23892,10 @@ data_type_input: str
 ##### `nullable_input`<sup>Optional</sup> <a name="nullable_input" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.nullableInput"></a>
 
 ```python
-nullable_input: typing.Union[bool, IResolvable]
+nullable_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -23912,10 +23912,10 @@ ordinal_position_input: typing.Union[int, float]
 ##### `primary_key_input`<sup>Optional</sup> <a name="primary_key_input" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.primaryKeyInput"></a>
 
 ```python
-primary_key_input: typing.Union[bool, IResolvable]
+primary_key_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -23952,10 +23952,10 @@ data_type: str
 ##### `nullable`<sup>Required</sup> <a name="nullable" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.nullable"></a>
 
 ```python
-nullable: typing.Union[bool, IResolvable]
+nullable: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -23972,20 +23972,20 @@ ordinal_position: typing.Union[int, float]
 ##### `primary_key`<sup>Required</sup> <a name="primary_key" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.primaryKey"></a>
 
 ```python
-primary_key: typing.Union[bool, IResolvable]
+primary_key: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns]
+internal_value: IResolvable | DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns">DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns">DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns</a>
 
 ---
 
@@ -24244,13 +24244,13 @@ Returns a reversible string representation.
 
 ```python
 def put_mysql_columns(
-  value: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns]]
+  value: IResolvable | typing.List[DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesOutputReference.putMysqlColumns.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns">DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns">DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns</a>]
 
 ---
 
@@ -24268,10 +24268,10 @@ def reset_mysql_columns() -> None
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesOutputReference.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesOutputReference.property.mysqlColumns">mysql_columns</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsList">DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesOutputReference.property.mysqlColumnsInput">mysql_columns_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns">DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesOutputReference.property.mysqlColumnsInput">mysql_columns_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns">DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesOutputReference.property.tableInput">table_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesOutputReference.property.table">table</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTables">DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTables</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTables">DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTables</a></code> | *No description.* |
 
 ---
 
@@ -24312,10 +24312,10 @@ mysql_columns: DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlD
 ##### `mysql_columns_input`<sup>Optional</sup> <a name="mysql_columns_input" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesOutputReference.property.mysqlColumnsInput"></a>
 
 ```python
-mysql_columns_input: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns]]
+mysql_columns_input: IResolvable | typing.List[DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns">DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns">DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns</a>]
 
 ---
 
@@ -24342,10 +24342,10 @@ table: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTables]
+internal_value: IResolvable | DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTables
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTables">DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTables</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTables">DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTables</a>
 
 ---
 
@@ -24604,13 +24604,13 @@ Returns a reversible string representation.
 
 ```python
 def put_mysql_tables(
-  value: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTables]]
+  value: IResolvable | typing.List[DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTables]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesOutputReference.putMysqlTables.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTables">DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTables</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTables">DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTables</a>]
 
 ---
 
@@ -24629,9 +24629,9 @@ def reset_mysql_tables() -> None
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesOutputReference.property.mysqlTables">mysql_tables</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesList">DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesOutputReference.property.databaseInput">database_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesOutputReference.property.mysqlTablesInput">mysql_tables_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTables">DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTables</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesOutputReference.property.mysqlTablesInput">mysql_tables_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTables">DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTables</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesOutputReference.property.database">database</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases">DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases">DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases</a></code> | *No description.* |
 
 ---
 
@@ -24682,10 +24682,10 @@ database_input: str
 ##### `mysql_tables_input`<sup>Optional</sup> <a name="mysql_tables_input" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesOutputReference.property.mysqlTablesInput"></a>
 
 ```python
-mysql_tables_input: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTables]]
+mysql_tables_input: IResolvable | typing.List[DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTables]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTables">DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTables</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTables">DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTables</a>]
 
 ---
 
@@ -24702,10 +24702,10 @@ database: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases]
+internal_value: IResolvable | DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases">DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases">DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases</a>
 
 ---
 
@@ -24943,13 +24943,13 @@ Returns a reversible string representation.
 
 ```python
 def put_mysql_databases(
-  value: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases]]
+  value: IResolvable | typing.List[DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsOutputReference.putMysqlDatabases.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases">DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases">DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases</a>]
 
 ---
 
@@ -24961,7 +24961,7 @@ def put_mysql_databases(
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsOutputReference.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsOutputReference.property.mysqlDatabases">mysql_databases</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesList">DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsOutputReference.property.mysqlDatabasesInput">mysql_databases_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases">DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsOutputReference.property.mysqlDatabasesInput">mysql_databases_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases">DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsOutputReference.property.internalValue">internal_value</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjects">DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjects</a></code> | *No description.* |
 
 ---
@@ -25003,10 +25003,10 @@ mysql_databases: DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysq
 ##### `mysql_databases_input`<sup>Optional</sup> <a name="mysql_databases_input" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsOutputReference.property.mysqlDatabasesInput"></a>
 
 ```python
-mysql_databases_input: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases]]
+mysql_databases_input: IResolvable | typing.List[DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases">DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases">DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases</a>]
 
 ---
 
@@ -25269,13 +25269,13 @@ def put_binary_log_position() -> None
 
 ```python
 def put_exclude_objects(
-  mysql_databases: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases]]
+  mysql_databases: IResolvable | typing.List[DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases]
 ) -> None
 ```
 
 ###### `mysql_databases`<sup>Required</sup> <a name="mysql_databases" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigOutputReference.putExcludeObjects.parameter.mysqlDatabases"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases">DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases">DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases</a>]
 
 mysql_databases block.
 
@@ -25293,13 +25293,13 @@ def put_gtid() -> None
 
 ```python
 def put_include_objects(
-  mysql_databases: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases]]
+  mysql_databases: IResolvable | typing.List[DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases]
 ) -> None
 ```
 
 ###### `mysql_databases`<sup>Required</sup> <a name="mysql_databases" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigOutputReference.putIncludeObjects.parameter.mysqlDatabases"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases">DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases">DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases</a>]
 
 mysql_databases block.
 
@@ -25926,7 +25926,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas">DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas">DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas</a>]</code> | *No description.* |
 
 ---
 
@@ -25957,10 +25957,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas]]
+internal_value: IResolvable | typing.List[DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas">DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas">DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas</a>]
 
 ---
 
@@ -26096,7 +26096,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTables">DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTables</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTables">DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTables</a>]</code> | *No description.* |
 
 ---
 
@@ -26127,10 +26127,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTables]]
+internal_value: IResolvable | typing.List[DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTables]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTables">DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTables</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTables">DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTables</a>]
 
 ---
 
@@ -26266,7 +26266,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumnsList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumnsList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumnsList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumns">DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumns</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumnsList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumns">DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumns</a>]</code> | *No description.* |
 
 ---
 
@@ -26297,10 +26297,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumnsList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumns]]
+internal_value: IResolvable | typing.List[DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumns]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumns">DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumns</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumns">DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumns</a>]
 
 ---
 
@@ -26585,7 +26585,7 @@ def reset_data_type() -> None
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumnsOutputReference.property.dataTypeInput">data_type_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumnsOutputReference.property.column">column</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumnsOutputReference.property.dataType">data_type</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumnsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumns">DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumns</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumnsOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumns">DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumns</a></code> | *No description.* |
 
 ---
 
@@ -26726,10 +26726,10 @@ data_type: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumnsOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumns]
+internal_value: IResolvable | DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumns
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumns">DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumns</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumns">DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumns</a>
 
 ---
 
@@ -26988,13 +26988,13 @@ Returns a reversible string representation.
 
 ```python
 def put_oracle_columns(
-  value: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumns]]
+  value: IResolvable | typing.List[DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumns]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOutputReference.putOracleColumns.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumns">DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumns</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumns">DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumns</a>]
 
 ---
 
@@ -27012,10 +27012,10 @@ def reset_oracle_columns() -> None
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOutputReference.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOutputReference.property.oracleColumns">oracle_columns</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumnsList">DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumnsList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOutputReference.property.oracleColumnsInput">oracle_columns_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumns">DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumns</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOutputReference.property.oracleColumnsInput">oracle_columns_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumns">DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumns</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOutputReference.property.tableInput">table_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOutputReference.property.table">table</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTables">DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTables</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTables">DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTables</a></code> | *No description.* |
 
 ---
 
@@ -27056,10 +27056,10 @@ oracle_columns: DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOrac
 ##### `oracle_columns_input`<sup>Optional</sup> <a name="oracle_columns_input" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOutputReference.property.oracleColumnsInput"></a>
 
 ```python
-oracle_columns_input: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumns]]
+oracle_columns_input: IResolvable | typing.List[DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumns]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumns">DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumns</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumns">DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumns</a>]
 
 ---
 
@@ -27086,10 +27086,10 @@ table: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTables]
+internal_value: IResolvable | DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTables
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTables">DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTables</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTables">DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTables</a>
 
 ---
 
@@ -27348,13 +27348,13 @@ Returns a reversible string representation.
 
 ```python
 def put_oracle_tables(
-  value: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTables]]
+  value: IResolvable | typing.List[DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTables]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOutputReference.putOracleTables.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTables">DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTables</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTables">DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTables</a>]
 
 ---
 
@@ -27372,10 +27372,10 @@ def reset_oracle_tables() -> None
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOutputReference.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOutputReference.property.oracleTables">oracle_tables</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesList">DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOutputReference.property.oracleTablesInput">oracle_tables_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTables">DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTables</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOutputReference.property.oracleTablesInput">oracle_tables_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTables">DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTables</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOutputReference.property.schemaInput">schema_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOutputReference.property.schema">schema</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas">DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas">DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas</a></code> | *No description.* |
 
 ---
 
@@ -27416,10 +27416,10 @@ oracle_tables: DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracl
 ##### `oracle_tables_input`<sup>Optional</sup> <a name="oracle_tables_input" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOutputReference.property.oracleTablesInput"></a>
 
 ```python
-oracle_tables_input: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTables]]
+oracle_tables_input: IResolvable | typing.List[DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTables]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTables">DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTables</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTables">DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTables</a>]
 
 ---
 
@@ -27446,10 +27446,10 @@ schema: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas]
+internal_value: IResolvable | DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas">DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas">DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas</a>
 
 ---
 
@@ -27687,13 +27687,13 @@ Returns a reversible string representation.
 
 ```python
 def put_oracle_schemas(
-  value: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas]]
+  value: IResolvable | typing.List[DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOutputReference.putOracleSchemas.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas">DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas">DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas</a>]
 
 ---
 
@@ -27705,7 +27705,7 @@ def put_oracle_schemas(
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOutputReference.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOutputReference.property.oracleSchemas">oracle_schemas</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasList">DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOutputReference.property.oracleSchemasInput">oracle_schemas_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas">DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOutputReference.property.oracleSchemasInput">oracle_schemas_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas">DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOutputReference.property.internalValue">internal_value</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjects">DatastreamStreamSourceConfigOracleSourceConfigExcludeObjects</a></code> | *No description.* |
 
 ---
@@ -27747,10 +27747,10 @@ oracle_schemas: DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOrac
 ##### `oracle_schemas_input`<sup>Optional</sup> <a name="oracle_schemas_input" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOutputReference.property.oracleSchemasInput"></a>
 
 ```python
-oracle_schemas_input: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas]]
+oracle_schemas_input: IResolvable | typing.List[DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas">DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas">DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas</a>]
 
 ---
 
@@ -27896,7 +27896,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas">DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas">DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas</a>]</code> | *No description.* |
 
 ---
 
@@ -27927,10 +27927,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas]]
+internal_value: IResolvable | typing.List[DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas">DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas">DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas</a>]
 
 ---
 
@@ -28066,7 +28066,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTables">DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTables</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTables">DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTables</a>]</code> | *No description.* |
 
 ---
 
@@ -28097,10 +28097,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTables]]
+internal_value: IResolvable | typing.List[DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTables]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTables">DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTables</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTables">DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTables</a>]
 
 ---
 
@@ -28236,7 +28236,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumnsList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumnsList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumnsList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumns">DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumns</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumnsList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumns">DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumns</a>]</code> | *No description.* |
 
 ---
 
@@ -28267,10 +28267,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumnsList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumns]]
+internal_value: IResolvable | typing.List[DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumns]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumns">DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumns</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumns">DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumns</a>]
 
 ---
 
@@ -28555,7 +28555,7 @@ def reset_data_type() -> None
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumnsOutputReference.property.dataTypeInput">data_type_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumnsOutputReference.property.column">column</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumnsOutputReference.property.dataType">data_type</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumnsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumns">DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumns</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumnsOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumns">DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumns</a></code> | *No description.* |
 
 ---
 
@@ -28696,10 +28696,10 @@ data_type: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumnsOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumns]
+internal_value: IResolvable | DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumns
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumns">DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumns</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumns">DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumns</a>
 
 ---
 
@@ -28958,13 +28958,13 @@ Returns a reversible string representation.
 
 ```python
 def put_oracle_columns(
-  value: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumns]]
+  value: IResolvable | typing.List[DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumns]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOutputReference.putOracleColumns.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumns">DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumns</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumns">DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumns</a>]
 
 ---
 
@@ -28982,10 +28982,10 @@ def reset_oracle_columns() -> None
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOutputReference.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOutputReference.property.oracleColumns">oracle_columns</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumnsList">DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumnsList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOutputReference.property.oracleColumnsInput">oracle_columns_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumns">DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumns</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOutputReference.property.oracleColumnsInput">oracle_columns_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumns">DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumns</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOutputReference.property.tableInput">table_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOutputReference.property.table">table</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTables">DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTables</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTables">DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTables</a></code> | *No description.* |
 
 ---
 
@@ -29026,10 +29026,10 @@ oracle_columns: DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOrac
 ##### `oracle_columns_input`<sup>Optional</sup> <a name="oracle_columns_input" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOutputReference.property.oracleColumnsInput"></a>
 
 ```python
-oracle_columns_input: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumns]]
+oracle_columns_input: IResolvable | typing.List[DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumns]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumns">DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumns</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumns">DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumns</a>]
 
 ---
 
@@ -29056,10 +29056,10 @@ table: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTables]
+internal_value: IResolvable | DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTables
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTables">DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTables</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTables">DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTables</a>
 
 ---
 
@@ -29318,13 +29318,13 @@ Returns a reversible string representation.
 
 ```python
 def put_oracle_tables(
-  value: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTables]]
+  value: IResolvable | typing.List[DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTables]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOutputReference.putOracleTables.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTables">DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTables</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTables">DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTables</a>]
 
 ---
 
@@ -29342,10 +29342,10 @@ def reset_oracle_tables() -> None
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOutputReference.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOutputReference.property.oracleTables">oracle_tables</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesList">DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOutputReference.property.oracleTablesInput">oracle_tables_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTables">DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTables</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOutputReference.property.oracleTablesInput">oracle_tables_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTables">DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTables</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOutputReference.property.schemaInput">schema_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOutputReference.property.schema">schema</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas">DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas">DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas</a></code> | *No description.* |
 
 ---
 
@@ -29386,10 +29386,10 @@ oracle_tables: DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracl
 ##### `oracle_tables_input`<sup>Optional</sup> <a name="oracle_tables_input" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOutputReference.property.oracleTablesInput"></a>
 
 ```python
-oracle_tables_input: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTables]]
+oracle_tables_input: IResolvable | typing.List[DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTables]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTables">DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTables</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTables">DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTables</a>]
 
 ---
 
@@ -29416,10 +29416,10 @@ schema: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas]
+internal_value: IResolvable | DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas">DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas">DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas</a>
 
 ---
 
@@ -29657,13 +29657,13 @@ Returns a reversible string representation.
 
 ```python
 def put_oracle_schemas(
-  value: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas]]
+  value: IResolvable | typing.List[DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOutputReference.putOracleSchemas.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas">DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas">DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas</a>]
 
 ---
 
@@ -29675,7 +29675,7 @@ def put_oracle_schemas(
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOutputReference.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOutputReference.property.oracleSchemas">oracle_schemas</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasList">DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOutputReference.property.oracleSchemasInput">oracle_schemas_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas">DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOutputReference.property.oracleSchemasInput">oracle_schemas_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas">DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOutputReference.property.internalValue">internal_value</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjects">DatastreamStreamSourceConfigOracleSourceConfigIncludeObjects</a></code> | *No description.* |
 
 ---
@@ -29717,10 +29717,10 @@ oracle_schemas: DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOrac
 ##### `oracle_schemas_input`<sup>Optional</sup> <a name="oracle_schemas_input" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOutputReference.property.oracleSchemasInput"></a>
 
 ```python
-oracle_schemas_input: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas]]
+oracle_schemas_input: IResolvable | typing.List[DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas">DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas">DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas</a>]
 
 ---
 
@@ -29983,13 +29983,13 @@ def put_drop_large_objects() -> None
 
 ```python
 def put_exclude_objects(
-  oracle_schemas: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas]]
+  oracle_schemas: IResolvable | typing.List[DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas]
 ) -> None
 ```
 
 ###### `oracle_schemas`<sup>Required</sup> <a name="oracle_schemas" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigOutputReference.putExcludeObjects.parameter.oracleSchemas"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas">DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas">DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas</a>]
 
 oracle_schemas block.
 
@@ -30001,13 +30001,13 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ```python
 def put_include_objects(
-  oracle_schemas: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas]]
+  oracle_schemas: IResolvable | typing.List[DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas]
 ) -> None
 ```
 
 ###### `oracle_schemas`<sup>Required</sup> <a name="oracle_schemas" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigOutputReference.putIncludeObjects.parameter.oracleSchemas"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas">DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas">DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas</a>]
 
 oracle_schemas block.
 
@@ -31526,13 +31526,13 @@ Returns a reversible string representation.
 
 ```python
 def put_postgresql_schemas(
-  value: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas]]
+  value: IResolvable | typing.List[DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsOutputReference.putPostgresqlSchemas.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas">DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas">DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas</a>]
 
 ---
 
@@ -31544,7 +31544,7 @@ def put_postgresql_schemas(
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsOutputReference.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsOutputReference.property.postgresqlSchemas">postgresql_schemas</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasList">DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsOutputReference.property.postgresqlSchemasInput">postgresql_schemas_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas">DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsOutputReference.property.postgresqlSchemasInput">postgresql_schemas_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas">DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsOutputReference.property.internalValue">internal_value</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjects">DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjects</a></code> | *No description.* |
 
 ---
@@ -31586,10 +31586,10 @@ postgresql_schemas: DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObj
 ##### `postgresql_schemas_input`<sup>Optional</sup> <a name="postgresql_schemas_input" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsOutputReference.property.postgresqlSchemasInput"></a>
 
 ```python
-postgresql_schemas_input: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas]]
+postgresql_schemas_input: IResolvable | typing.List[DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas">DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas">DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas</a>]
 
 ---
 
@@ -31735,7 +31735,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas">DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas">DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas</a>]</code> | *No description.* |
 
 ---
 
@@ -31766,10 +31766,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas]]
+internal_value: IResolvable | typing.List[DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas">DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas">DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas</a>]
 
 ---
 
@@ -32028,13 +32028,13 @@ Returns a reversible string representation.
 
 ```python
 def put_postgresql_tables(
-  value: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTables]]
+  value: IResolvable | typing.List[DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTables]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasOutputReference.putPostgresqlTables.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTables">DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTables</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTables">DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTables</a>]
 
 ---
 
@@ -32052,10 +32052,10 @@ def reset_postgresql_tables() -> None
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasOutputReference.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasOutputReference.property.postgresqlTables">postgresql_tables</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesList">DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasOutputReference.property.postgresqlTablesInput">postgresql_tables_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTables">DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTables</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasOutputReference.property.postgresqlTablesInput">postgresql_tables_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTables">DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTables</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasOutputReference.property.schemaInput">schema_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasOutputReference.property.schema">schema</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas">DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas">DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas</a></code> | *No description.* |
 
 ---
 
@@ -32096,10 +32096,10 @@ postgresql_tables: DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObje
 ##### `postgresql_tables_input`<sup>Optional</sup> <a name="postgresql_tables_input" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasOutputReference.property.postgresqlTablesInput"></a>
 
 ```python
-postgresql_tables_input: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTables]]
+postgresql_tables_input: IResolvable | typing.List[DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTables]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTables">DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTables</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTables">DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTables</a>]
 
 ---
 
@@ -32126,10 +32126,10 @@ schema: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas]
+internal_value: IResolvable | DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas">DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas">DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas</a>
 
 ---
 
@@ -32265,7 +32265,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTables">DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTables</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTables">DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTables</a>]</code> | *No description.* |
 
 ---
 
@@ -32296,10 +32296,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTables]]
+internal_value: IResolvable | typing.List[DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTables]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTables">DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTables</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTables">DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTables</a>]
 
 ---
 
@@ -32558,13 +32558,13 @@ Returns a reversible string representation.
 
 ```python
 def put_postgresql_columns(
-  value: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns]]
+  value: IResolvable | typing.List[DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesOutputReference.putPostgresqlColumns.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns">DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns">DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns</a>]
 
 ---
 
@@ -32582,10 +32582,10 @@ def reset_postgresql_columns() -> None
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesOutputReference.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesOutputReference.property.postgresqlColumns">postgresql_columns</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsList">DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesOutputReference.property.postgresqlColumnsInput">postgresql_columns_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns">DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesOutputReference.property.postgresqlColumnsInput">postgresql_columns_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns">DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesOutputReference.property.tableInput">table_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesOutputReference.property.table">table</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTables">DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTables</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTables">DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTables</a></code> | *No description.* |
 
 ---
 
@@ -32626,10 +32626,10 @@ postgresql_columns: DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObj
 ##### `postgresql_columns_input`<sup>Optional</sup> <a name="postgresql_columns_input" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesOutputReference.property.postgresqlColumnsInput"></a>
 
 ```python
-postgresql_columns_input: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns]]
+postgresql_columns_input: IResolvable | typing.List[DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns">DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns">DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns</a>]
 
 ---
 
@@ -32656,10 +32656,10 @@ table: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTables]
+internal_value: IResolvable | DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTables
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTables">DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTables</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTables">DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTables</a>
 
 ---
 
@@ -32795,7 +32795,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns">DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns">DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns</a>]</code> | *No description.* |
 
 ---
 
@@ -32826,10 +32826,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns]]
+internal_value: IResolvable | typing.List[DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns">DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns">DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns</a>]
 
 ---
 
@@ -33129,15 +33129,15 @@ def reset_primary_key() -> None
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.scale">scale</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.columnInput">column_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.dataTypeInput">data_type_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.nullableInput">nullable_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.nullableInput">nullable_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.ordinalPositionInput">ordinal_position_input</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.primaryKeyInput">primary_key_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.primaryKeyInput">primary_key_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.column">column</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.dataType">data_type</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.nullable">nullable</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.nullable">nullable</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.ordinalPosition">ordinal_position</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.primaryKey">primary_key</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns">DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.primaryKey">primary_key</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns">DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns</a></code> | *No description.* |
 
 ---
 
@@ -33218,10 +33218,10 @@ data_type_input: str
 ##### `nullable_input`<sup>Optional</sup> <a name="nullable_input" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.nullableInput"></a>
 
 ```python
-nullable_input: typing.Union[bool, IResolvable]
+nullable_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -33238,10 +33238,10 @@ ordinal_position_input: typing.Union[int, float]
 ##### `primary_key_input`<sup>Optional</sup> <a name="primary_key_input" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.primaryKeyInput"></a>
 
 ```python
-primary_key_input: typing.Union[bool, IResolvable]
+primary_key_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -33268,10 +33268,10 @@ data_type: str
 ##### `nullable`<sup>Required</sup> <a name="nullable" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.nullable"></a>
 
 ```python
-nullable: typing.Union[bool, IResolvable]
+nullable: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -33288,20 +33288,20 @@ ordinal_position: typing.Union[int, float]
 ##### `primary_key`<sup>Required</sup> <a name="primary_key" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.primaryKey"></a>
 
 ```python
-primary_key: typing.Union[bool, IResolvable]
+primary_key: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns]
+internal_value: IResolvable | DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns">DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns">DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns</a>
 
 ---
 
@@ -33539,13 +33539,13 @@ Returns a reversible string representation.
 
 ```python
 def put_postgresql_schemas(
-  value: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas]]
+  value: IResolvable | typing.List[DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsOutputReference.putPostgresqlSchemas.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas">DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas">DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas</a>]
 
 ---
 
@@ -33557,7 +33557,7 @@ def put_postgresql_schemas(
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsOutputReference.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsOutputReference.property.postgresqlSchemas">postgresql_schemas</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasList">DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsOutputReference.property.postgresqlSchemasInput">postgresql_schemas_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas">DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsOutputReference.property.postgresqlSchemasInput">postgresql_schemas_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas">DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsOutputReference.property.internalValue">internal_value</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjects">DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjects</a></code> | *No description.* |
 
 ---
@@ -33599,10 +33599,10 @@ postgresql_schemas: DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObj
 ##### `postgresql_schemas_input`<sup>Optional</sup> <a name="postgresql_schemas_input" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsOutputReference.property.postgresqlSchemasInput"></a>
 
 ```python
-postgresql_schemas_input: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas]]
+postgresql_schemas_input: IResolvable | typing.List[DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas">DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas">DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas</a>]
 
 ---
 
@@ -33748,7 +33748,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas">DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas">DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas</a>]</code> | *No description.* |
 
 ---
 
@@ -33779,10 +33779,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas]]
+internal_value: IResolvable | typing.List[DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas">DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas">DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas</a>]
 
 ---
 
@@ -34041,13 +34041,13 @@ Returns a reversible string representation.
 
 ```python
 def put_postgresql_tables(
-  value: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTables]]
+  value: IResolvable | typing.List[DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTables]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasOutputReference.putPostgresqlTables.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTables">DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTables</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTables">DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTables</a>]
 
 ---
 
@@ -34065,10 +34065,10 @@ def reset_postgresql_tables() -> None
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasOutputReference.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasOutputReference.property.postgresqlTables">postgresql_tables</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesList">DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasOutputReference.property.postgresqlTablesInput">postgresql_tables_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTables">DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTables</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasOutputReference.property.postgresqlTablesInput">postgresql_tables_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTables">DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTables</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasOutputReference.property.schemaInput">schema_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasOutputReference.property.schema">schema</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas">DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas">DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas</a></code> | *No description.* |
 
 ---
 
@@ -34109,10 +34109,10 @@ postgresql_tables: DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObje
 ##### `postgresql_tables_input`<sup>Optional</sup> <a name="postgresql_tables_input" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasOutputReference.property.postgresqlTablesInput"></a>
 
 ```python
-postgresql_tables_input: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTables]]
+postgresql_tables_input: IResolvable | typing.List[DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTables]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTables">DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTables</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTables">DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTables</a>]
 
 ---
 
@@ -34139,10 +34139,10 @@ schema: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas]
+internal_value: IResolvable | DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas">DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas">DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas</a>
 
 ---
 
@@ -34278,7 +34278,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTables">DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTables</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTables">DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTables</a>]</code> | *No description.* |
 
 ---
 
@@ -34309,10 +34309,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTables]]
+internal_value: IResolvable | typing.List[DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTables]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTables">DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTables</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTables">DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTables</a>]
 
 ---
 
@@ -34571,13 +34571,13 @@ Returns a reversible string representation.
 
 ```python
 def put_postgresql_columns(
-  value: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns]]
+  value: IResolvable | typing.List[DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesOutputReference.putPostgresqlColumns.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns">DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns">DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns</a>]
 
 ---
 
@@ -34595,10 +34595,10 @@ def reset_postgresql_columns() -> None
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesOutputReference.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesOutputReference.property.postgresqlColumns">postgresql_columns</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsList">DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesOutputReference.property.postgresqlColumnsInput">postgresql_columns_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns">DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesOutputReference.property.postgresqlColumnsInput">postgresql_columns_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns">DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesOutputReference.property.tableInput">table_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesOutputReference.property.table">table</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTables">DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTables</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTables">DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTables</a></code> | *No description.* |
 
 ---
 
@@ -34639,10 +34639,10 @@ postgresql_columns: DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObj
 ##### `postgresql_columns_input`<sup>Optional</sup> <a name="postgresql_columns_input" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesOutputReference.property.postgresqlColumnsInput"></a>
 
 ```python
-postgresql_columns_input: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns]]
+postgresql_columns_input: IResolvable | typing.List[DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns">DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns">DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns</a>]
 
 ---
 
@@ -34669,10 +34669,10 @@ table: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTables]
+internal_value: IResolvable | DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTables
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTables">DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTables</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTables">DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTables</a>
 
 ---
 
@@ -34808,7 +34808,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns">DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns">DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns</a>]</code> | *No description.* |
 
 ---
 
@@ -34839,10 +34839,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns]]
+internal_value: IResolvable | typing.List[DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns">DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns">DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns</a>]
 
 ---
 
@@ -35142,15 +35142,15 @@ def reset_primary_key() -> None
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.scale">scale</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.columnInput">column_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.dataTypeInput">data_type_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.nullableInput">nullable_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.nullableInput">nullable_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.ordinalPositionInput">ordinal_position_input</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.primaryKeyInput">primary_key_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.primaryKeyInput">primary_key_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.column">column</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.dataType">data_type</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.nullable">nullable</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.nullable">nullable</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.ordinalPosition">ordinal_position</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.primaryKey">primary_key</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns">DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.primaryKey">primary_key</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns">DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns</a></code> | *No description.* |
 
 ---
 
@@ -35231,10 +35231,10 @@ data_type_input: str
 ##### `nullable_input`<sup>Optional</sup> <a name="nullable_input" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.nullableInput"></a>
 
 ```python
-nullable_input: typing.Union[bool, IResolvable]
+nullable_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -35251,10 +35251,10 @@ ordinal_position_input: typing.Union[int, float]
 ##### `primary_key_input`<sup>Optional</sup> <a name="primary_key_input" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.primaryKeyInput"></a>
 
 ```python
-primary_key_input: typing.Union[bool, IResolvable]
+primary_key_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -35281,10 +35281,10 @@ data_type: str
 ##### `nullable`<sup>Required</sup> <a name="nullable" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.nullable"></a>
 
 ```python
-nullable: typing.Union[bool, IResolvable]
+nullable: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -35301,20 +35301,20 @@ ordinal_position: typing.Union[int, float]
 ##### `primary_key`<sup>Required</sup> <a name="primary_key" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.primaryKey"></a>
 
 ```python
-primary_key: typing.Union[bool, IResolvable]
+primary_key: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns]
+internal_value: IResolvable | DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns">DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns">DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns</a>
 
 ---
 
@@ -35556,13 +35556,13 @@ Returns a reversible string representation.
 
 ```python
 def put_exclude_objects(
-  postgresql_schemas: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas]]
+  postgresql_schemas: IResolvable | typing.List[DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas]
 ) -> None
 ```
 
 ###### `postgresql_schemas`<sup>Required</sup> <a name="postgresql_schemas" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigOutputReference.putExcludeObjects.parameter.postgresqlSchemas"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas">DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas">DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas</a>]
 
 postgresql_schemas block.
 
@@ -35574,13 +35574,13 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ```python
 def put_include_objects(
-  postgresql_schemas: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas]]
+  postgresql_schemas: IResolvable | typing.List[DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas]
 ) -> None
 ```
 
 ###### `postgresql_schemas`<sup>Required</sup> <a name="postgresql_schemas" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigOutputReference.putIncludeObjects.parameter.postgresqlSchemas"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas">DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas">DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas</a>]
 
 postgresql_schemas block.
 
@@ -35893,7 +35893,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFieldsList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFieldsList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFieldsList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFields">DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFields</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFieldsList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFields">DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFields</a>]</code> | *No description.* |
 
 ---
 
@@ -35924,10 +35924,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFieldsList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFields]]
+internal_value: IResolvable | typing.List[DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFields]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFields">DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFields</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFields">DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFields</a>]
 
 ---
 
@@ -36196,7 +36196,7 @@ def reset_name() -> None
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFieldsOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFieldsOutputReference.property.nameInput">name_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFieldsOutputReference.property.name">name</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFieldsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFields">DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFields</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFieldsOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFields">DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFields</a></code> | *No description.* |
 
 ---
 
@@ -36247,10 +36247,10 @@ name: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFieldsOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFields]
+internal_value: IResolvable | DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFields
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFields">DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFields</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFields">DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFields</a>
 
 ---
 
@@ -36386,7 +36386,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjects">DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjects</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjects">DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjects</a>]</code> | *No description.* |
 
 ---
 
@@ -36417,10 +36417,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjects]]
+internal_value: IResolvable | typing.List[DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjects]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjects">DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjects</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjects">DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjects</a>]
 
 ---
 
@@ -36680,13 +36680,13 @@ Returns a reversible string representation.
 
 ```python
 def put_fields(
-  value: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFields]]
+  value: IResolvable | typing.List[DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFields]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsOutputReference.putFields.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFields">DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFields</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFields">DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFields</a>]
 
 ---
 
@@ -36710,10 +36710,10 @@ def reset_object_name() -> None
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsOutputReference.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsOutputReference.property.fields">fields</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFieldsList">DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFieldsList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsOutputReference.property.fieldsInput">fields_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFields">DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFields</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsOutputReference.property.fieldsInput">fields_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFields">DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFields</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsOutputReference.property.objectNameInput">object_name_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsOutputReference.property.objectName">object_name</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjects">DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjects</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjects">DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjects</a></code> | *No description.* |
 
 ---
 
@@ -36754,10 +36754,10 @@ fields: DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsF
 ##### `fields_input`<sup>Optional</sup> <a name="fields_input" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsOutputReference.property.fieldsInput"></a>
 
 ```python
-fields_input: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFields]]
+fields_input: IResolvable | typing.List[DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFields]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFields">DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFields</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFields">DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFields</a>]
 
 ---
 
@@ -36784,10 +36784,10 @@ object_name: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjects]
+internal_value: IResolvable | DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjects
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjects">DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjects</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjects">DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjects</a>
 
 ---
 
@@ -37025,13 +37025,13 @@ Returns a reversible string representation.
 
 ```python
 def put_objects(
-  value: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjects]]
+  value: IResolvable | typing.List[DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjects]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsOutputReference.putObjects.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjects">DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjects</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjects">DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjects</a>]
 
 ---
 
@@ -37043,7 +37043,7 @@ def put_objects(
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsOutputReference.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsOutputReference.property.objects">objects</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsList">DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsOutputReference.property.objectsInput">objects_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjects">DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjects</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsOutputReference.property.objectsInput">objects_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjects">DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjects</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsOutputReference.property.internalValue">internal_value</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjects">DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjects</a></code> | *No description.* |
 
 ---
@@ -37085,10 +37085,10 @@ objects: DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjects
 ##### `objects_input`<sup>Optional</sup> <a name="objects_input" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsOutputReference.property.objectsInput"></a>
 
 ```python
-objects_input: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjects]]
+objects_input: IResolvable | typing.List[DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjects]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjects">DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjects</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjects">DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjects</a>]
 
 ---
 
@@ -37234,7 +37234,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFieldsList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFieldsList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFieldsList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFields">DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFields</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFieldsList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFields">DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFields</a>]</code> | *No description.* |
 
 ---
 
@@ -37265,10 +37265,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFieldsList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFields]]
+internal_value: IResolvable | typing.List[DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFields]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFields">DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFields</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFields">DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFields</a>]
 
 ---
 
@@ -37537,7 +37537,7 @@ def reset_name() -> None
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFieldsOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFieldsOutputReference.property.nameInput">name_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFieldsOutputReference.property.name">name</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFieldsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFields">DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFields</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFieldsOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFields">DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFields</a></code> | *No description.* |
 
 ---
 
@@ -37588,10 +37588,10 @@ name: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFieldsOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFields]
+internal_value: IResolvable | DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFields
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFields">DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFields</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFields">DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFields</a>
 
 ---
 
@@ -37727,7 +37727,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjects">DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjects</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjects">DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjects</a>]</code> | *No description.* |
 
 ---
 
@@ -37758,10 +37758,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjects]]
+internal_value: IResolvable | typing.List[DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjects]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjects">DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjects</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjects">DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjects</a>]
 
 ---
 
@@ -38021,13 +38021,13 @@ Returns a reversible string representation.
 
 ```python
 def put_fields(
-  value: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFields]]
+  value: IResolvable | typing.List[DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFields]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsOutputReference.putFields.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFields">DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFields</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFields">DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFields</a>]
 
 ---
 
@@ -38051,10 +38051,10 @@ def reset_object_name() -> None
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsOutputReference.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsOutputReference.property.fields">fields</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFieldsList">DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFieldsList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsOutputReference.property.fieldsInput">fields_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFields">DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFields</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsOutputReference.property.fieldsInput">fields_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFields">DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFields</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsOutputReference.property.objectNameInput">object_name_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsOutputReference.property.objectName">object_name</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjects">DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjects</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjects">DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjects</a></code> | *No description.* |
 
 ---
 
@@ -38095,10 +38095,10 @@ fields: DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsF
 ##### `fields_input`<sup>Optional</sup> <a name="fields_input" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsOutputReference.property.fieldsInput"></a>
 
 ```python
-fields_input: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFields]]
+fields_input: IResolvable | typing.List[DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFields]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFields">DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFields</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFields">DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFields</a>]
 
 ---
 
@@ -38125,10 +38125,10 @@ object_name: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjects]
+internal_value: IResolvable | DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjects
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjects">DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjects</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjects">DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjects</a>
 
 ---
 
@@ -38366,13 +38366,13 @@ Returns a reversible string representation.
 
 ```python
 def put_objects(
-  value: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjects]]
+  value: IResolvable | typing.List[DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjects]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsOutputReference.putObjects.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjects">DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjects</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjects">DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjects</a>]
 
 ---
 
@@ -38384,7 +38384,7 @@ def put_objects(
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsOutputReference.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsOutputReference.property.objects">objects</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsList">DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsOutputReference.property.objectsInput">objects_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjects">DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjects</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsOutputReference.property.objectsInput">objects_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjects">DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjects</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsOutputReference.property.internalValue">internal_value</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjects">DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjects</a></code> | *No description.* |
 
 ---
@@ -38426,10 +38426,10 @@ objects: DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjects
 ##### `objects_input`<sup>Optional</sup> <a name="objects_input" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsOutputReference.property.objectsInput"></a>
 
 ```python
-objects_input: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjects]]
+objects_input: IResolvable | typing.List[DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjects]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjects">DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjects</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjects">DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjects</a>]
 
 ---
 
@@ -38680,13 +38680,13 @@ Returns a reversible string representation.
 
 ```python
 def put_exclude_objects(
-  objects: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjects]]
+  objects: IResolvable | typing.List[DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjects]
 ) -> None
 ```
 
 ###### `objects`<sup>Required</sup> <a name="objects" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigOutputReference.putExcludeObjects.parameter.objects"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjects">DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjects</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjects">DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjects</a>]
 
 objects block.
 
@@ -38698,13 +38698,13 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ```python
 def put_include_objects(
-  objects: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjects]]
+  objects: IResolvable | typing.List[DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjects]
 ) -> None
 ```
 
 ###### `objects`<sup>Required</sup> <a name="objects" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigOutputReference.putIncludeObjects.parameter.objects"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjects">DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjects</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjects">DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjects</a>]
 
 objects block.
 
@@ -39343,13 +39343,13 @@ Returns a reversible string representation.
 
 ```python
 def put_schemas(
-  value: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemas]]
+  value: IResolvable | typing.List[DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemas]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsOutputReference.putSchemas.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemas">DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemas</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemas">DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemas</a>]
 
 ---
 
@@ -39361,7 +39361,7 @@ def put_schemas(
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsOutputReference.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsOutputReference.property.schemas">schemas</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasList">DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsOutputReference.property.schemasInput">schemas_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemas">DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemas</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsOutputReference.property.schemasInput">schemas_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemas">DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemas</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsOutputReference.property.internalValue">internal_value</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjects">DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjects</a></code> | *No description.* |
 
 ---
@@ -39403,10 +39403,10 @@ schemas: DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasL
 ##### `schemas_input`<sup>Optional</sup> <a name="schemas_input" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsOutputReference.property.schemasInput"></a>
 
 ```python
-schemas_input: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemas]]
+schemas_input: IResolvable | typing.List[DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemas]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemas">DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemas</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemas">DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemas</a>]
 
 ---
 
@@ -39552,7 +39552,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemas">DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemas</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemas">DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemas</a>]</code> | *No description.* |
 
 ---
 
@@ -39583,10 +39583,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemas]]
+internal_value: IResolvable | typing.List[DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemas]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemas">DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemas</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemas">DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemas</a>]
 
 ---
 
@@ -39845,13 +39845,13 @@ Returns a reversible string representation.
 
 ```python
 def put_tables(
-  value: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTables]]
+  value: IResolvable | typing.List[DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTables]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasOutputReference.putTables.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTables">DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTables</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTables">DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTables</a>]
 
 ---
 
@@ -39870,9 +39870,9 @@ def reset_tables() -> None
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasOutputReference.property.tables">tables</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesList">DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasOutputReference.property.schemaInput">schema_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasOutputReference.property.tablesInput">tables_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTables">DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTables</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasOutputReference.property.tablesInput">tables_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTables">DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTables</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasOutputReference.property.schema">schema</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemas">DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemas</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemas">DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemas</a></code> | *No description.* |
 
 ---
 
@@ -39923,10 +39923,10 @@ schema_input: str
 ##### `tables_input`<sup>Optional</sup> <a name="tables_input" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasOutputReference.property.tablesInput"></a>
 
 ```python
-tables_input: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTables]]
+tables_input: IResolvable | typing.List[DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTables]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTables">DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTables</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTables">DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTables</a>]
 
 ---
 
@@ -39943,10 +39943,10 @@ schema: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemas]
+internal_value: IResolvable | DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemas
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemas">DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemas</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemas">DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemas</a>
 
 ---
 
@@ -40082,7 +40082,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumnsList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumnsList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumnsList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumns">DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumns</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumnsList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumns">DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumns</a>]</code> | *No description.* |
 
 ---
 
@@ -40113,10 +40113,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumnsList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumns]]
+internal_value: IResolvable | typing.List[DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumns]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumns">DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumns</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumns">DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumns</a>]
 
 ---
 
@@ -40400,7 +40400,7 @@ def reset_data_type() -> None
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumnsOutputReference.property.dataTypeInput">data_type_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumnsOutputReference.property.column">column</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumnsOutputReference.property.dataType">data_type</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumnsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumns">DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumns</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumnsOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumns">DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumns</a></code> | *No description.* |
 
 ---
 
@@ -40531,10 +40531,10 @@ data_type: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumnsOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumns]
+internal_value: IResolvable | DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumns
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumns">DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumns</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumns">DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumns</a>
 
 ---
 
@@ -40670,7 +40670,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTables">DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTables</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTables">DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTables</a>]</code> | *No description.* |
 
 ---
 
@@ -40701,10 +40701,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTables]]
+internal_value: IResolvable | typing.List[DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTables]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTables">DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTables</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTables">DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTables</a>]
 
 ---
 
@@ -40963,13 +40963,13 @@ Returns a reversible string representation.
 
 ```python
 def put_columns(
-  value: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumns]]
+  value: IResolvable | typing.List[DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumns]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesOutputReference.putColumns.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumns">DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumns</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumns">DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumns</a>]
 
 ---
 
@@ -40987,10 +40987,10 @@ def reset_columns() -> None
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesOutputReference.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesOutputReference.property.columns">columns</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumnsList">DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumnsList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesOutputReference.property.columnsInput">columns_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumns">DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumns</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesOutputReference.property.columnsInput">columns_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumns">DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumns</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesOutputReference.property.tableInput">table_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesOutputReference.property.table">table</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTables">DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTables</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTables">DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTables</a></code> | *No description.* |
 
 ---
 
@@ -41031,10 +41031,10 @@ columns: DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasT
 ##### `columns_input`<sup>Optional</sup> <a name="columns_input" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesOutputReference.property.columnsInput"></a>
 
 ```python
-columns_input: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumns]]
+columns_input: IResolvable | typing.List[DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumns]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumns">DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumns</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumns">DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumns</a>]
 
 ---
 
@@ -41061,10 +41061,10 @@ table: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTables]
+internal_value: IResolvable | DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTables
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTables">DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTables</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTables">DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTables</a>
 
 ---
 
@@ -41302,13 +41302,13 @@ Returns a reversible string representation.
 
 ```python
 def put_schemas(
-  value: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemas]]
+  value: IResolvable | typing.List[DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemas]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsOutputReference.putSchemas.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemas">DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemas</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemas">DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemas</a>]
 
 ---
 
@@ -41320,7 +41320,7 @@ def put_schemas(
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsOutputReference.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsOutputReference.property.schemas">schemas</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasList">DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsOutputReference.property.schemasInput">schemas_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemas">DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemas</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsOutputReference.property.schemasInput">schemas_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemas">DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemas</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsOutputReference.property.internalValue">internal_value</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjects">DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjects</a></code> | *No description.* |
 
 ---
@@ -41362,10 +41362,10 @@ schemas: DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasL
 ##### `schemas_input`<sup>Optional</sup> <a name="schemas_input" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsOutputReference.property.schemasInput"></a>
 
 ```python
-schemas_input: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemas]]
+schemas_input: IResolvable | typing.List[DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemas]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemas">DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemas</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemas">DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemas</a>]
 
 ---
 
@@ -41511,7 +41511,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemas">DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemas</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemas">DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemas</a>]</code> | *No description.* |
 
 ---
 
@@ -41542,10 +41542,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemas]]
+internal_value: IResolvable | typing.List[DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemas]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemas">DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemas</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemas">DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemas</a>]
 
 ---
 
@@ -41804,13 +41804,13 @@ Returns a reversible string representation.
 
 ```python
 def put_tables(
-  value: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTables]]
+  value: IResolvable | typing.List[DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTables]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasOutputReference.putTables.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTables">DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTables</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTables">DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTables</a>]
 
 ---
 
@@ -41829,9 +41829,9 @@ def reset_tables() -> None
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasOutputReference.property.tables">tables</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesList">DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasOutputReference.property.schemaInput">schema_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasOutputReference.property.tablesInput">tables_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTables">DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTables</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasOutputReference.property.tablesInput">tables_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTables">DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTables</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasOutputReference.property.schema">schema</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemas">DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemas</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemas">DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemas</a></code> | *No description.* |
 
 ---
 
@@ -41882,10 +41882,10 @@ schema_input: str
 ##### `tables_input`<sup>Optional</sup> <a name="tables_input" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasOutputReference.property.tablesInput"></a>
 
 ```python
-tables_input: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTables]]
+tables_input: IResolvable | typing.List[DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTables]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTables">DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTables</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTables">DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTables</a>]
 
 ---
 
@@ -41902,10 +41902,10 @@ schema: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemas]
+internal_value: IResolvable | DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemas
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemas">DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemas</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemas">DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemas</a>
 
 ---
 
@@ -42041,7 +42041,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumnsList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumnsList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumnsList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumns">DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumns</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumnsList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumns">DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumns</a>]</code> | *No description.* |
 
 ---
 
@@ -42072,10 +42072,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumnsList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumns]]
+internal_value: IResolvable | typing.List[DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumns]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumns">DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumns</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumns">DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumns</a>]
 
 ---
 
@@ -42359,7 +42359,7 @@ def reset_data_type() -> None
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumnsOutputReference.property.dataTypeInput">data_type_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumnsOutputReference.property.column">column</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumnsOutputReference.property.dataType">data_type</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumnsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumns">DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumns</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumnsOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumns">DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumns</a></code> | *No description.* |
 
 ---
 
@@ -42490,10 +42490,10 @@ data_type: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumnsOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumns]
+internal_value: IResolvable | DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumns
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumns">DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumns</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumns">DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumns</a>
 
 ---
 
@@ -42629,7 +42629,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTables">DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTables</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTables">DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTables</a>]</code> | *No description.* |
 
 ---
 
@@ -42660,10 +42660,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTables]]
+internal_value: IResolvable | typing.List[DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTables]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTables">DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTables</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTables">DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTables</a>]
 
 ---
 
@@ -42922,13 +42922,13 @@ Returns a reversible string representation.
 
 ```python
 def put_columns(
-  value: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumns]]
+  value: IResolvable | typing.List[DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumns]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesOutputReference.putColumns.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumns">DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumns</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumns">DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumns</a>]
 
 ---
 
@@ -42946,10 +42946,10 @@ def reset_columns() -> None
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesOutputReference.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesOutputReference.property.columns">columns</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumnsList">DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumnsList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesOutputReference.property.columnsInput">columns_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumns">DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumns</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesOutputReference.property.columnsInput">columns_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumns">DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumns</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesOutputReference.property.tableInput">table_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesOutputReference.property.table">table</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTables">DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTables</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTables">DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTables</a></code> | *No description.* |
 
 ---
 
@@ -42990,10 +42990,10 @@ columns: DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasT
 ##### `columns_input`<sup>Optional</sup> <a name="columns_input" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesOutputReference.property.columnsInput"></a>
 
 ```python
-columns_input: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumns]]
+columns_input: IResolvable | typing.List[DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumns]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumns">DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumns</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumns">DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumns</a>]
 
 ---
 
@@ -43020,10 +43020,10 @@ table: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTables]
+internal_value: IResolvable | DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTables
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTables">DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTables</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTables">DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTables</a>
 
 ---
 
@@ -43276,13 +43276,13 @@ def put_change_tables() -> None
 
 ```python
 def put_exclude_objects(
-  schemas: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemas]]
+  schemas: IResolvable | typing.List[DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemas]
 ) -> None
 ```
 
 ###### `schemas`<sup>Required</sup> <a name="schemas" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigOutputReference.putExcludeObjects.parameter.schemas"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemas">DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemas</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemas">DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemas</a>]
 
 schemas block.
 
@@ -43294,13 +43294,13 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ```python
 def put_include_objects(
-  schemas: typing.Union[IResolvable, typing.List[DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemas]]
+  schemas: IResolvable | typing.List[DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemas]
 ) -> None
 ```
 
 ###### `schemas`<sup>Required</sup> <a name="schemas" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigOutputReference.putIncludeObjects.parameter.schemas"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemas">DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemas</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemas">DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemas</a>]
 
 schemas block.
 
@@ -44064,7 +44064,7 @@ def reset_update() -> None
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamTimeoutsOutputReference.property.create">create</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamTimeoutsOutputReference.property.delete">delete</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamTimeoutsOutputReference.property.update">update</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamTimeouts">DatastreamStreamTimeouts</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamTimeouts">DatastreamStreamTimeouts</a></code> | *No description.* |
 
 ---
 
@@ -44155,10 +44155,10 @@ update: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamTimeoutsOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, DatastreamStreamTimeouts]
+internal_value: IResolvable | DatastreamStreamTimeouts
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamTimeouts">DatastreamStreamTimeouts</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamTimeouts">DatastreamStreamTimeouts</a>
 
 ---
 

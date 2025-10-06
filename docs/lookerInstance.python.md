@@ -14,13 +14,13 @@ from cdktf_cdktf_provider_google import looker_instance
 lookerInstance.LookerInstance(
   scope: Construct,
   id: str,
-  connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection] = None,
-  count: typing.Union[typing.Union[int, float], TerraformCount] = None,
+  connection: SSHProvisionerConnection | WinrmProvisionerConnection = None,
+  count: typing.Union[int, float] | TerraformCount = None,
   depends_on: typing.List[ITerraformDependable] = None,
   for_each: ITerraformIterator = None,
   lifecycle: TerraformResourceLifecycle = None,
   provider: TerraformProvider = None,
-  provisioners: typing.List[typing.Union[FileProvisioner, LocalExecProvisioner, RemoteExecProvisioner]] = None,
+  provisioners: typing.List[FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner] = None,
   name: str,
   oauth_config: LookerInstanceOauthConfig,
   admin_settings: LookerInstanceAdminSettings = None,
@@ -29,15 +29,15 @@ lookerInstance.LookerInstance(
   deletion_policy: str = None,
   deny_maintenance_period: LookerInstanceDenyMaintenancePeriod = None,
   encryption_config: LookerInstanceEncryptionConfig = None,
-  fips_enabled: typing.Union[bool, IResolvable] = None,
+  fips_enabled: bool | IResolvable = None,
   id: str = None,
   maintenance_window: LookerInstanceMaintenanceWindow = None,
   platform_edition: str = None,
-  private_ip_enabled: typing.Union[bool, IResolvable] = None,
+  private_ip_enabled: bool | IResolvable = None,
   project: str = None,
   psc_config: LookerInstancePscConfig = None,
-  psc_enabled: typing.Union[bool, IResolvable] = None,
-  public_ip_enabled: typing.Union[bool, IResolvable] = None,
+  psc_enabled: bool | IResolvable = None,
+  public_ip_enabled: bool | IResolvable = None,
   region: str = None,
   reserved_range: str = None,
   timeouts: LookerInstanceTimeouts = None,
@@ -49,13 +49,13 @@ lookerInstance.LookerInstance(
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | The scope in which to define this construct. |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.Initializer.parameter.id">id</a></code> | <code>str</code> | The scoped construct ID. |
-| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.Initializer.parameter.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.Initializer.parameter.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.Initializer.parameter.connection">connection</a></code> | <code>cdktf.SSHProvisionerConnection \| cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.Initializer.parameter.count">count</a></code> | <code>typing.Union[int, float] \| cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.Initializer.parameter.dependsOn">depends_on</a></code> | <code>typing.List[cdktf.ITerraformDependable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.Initializer.parameter.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.Initializer.parameter.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.Initializer.parameter.name">name</a></code> | <code>str</code> | The ID of the instance or a fully qualified identifier for the instance. |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.Initializer.parameter.oauthConfig">oauth_config</a></code> | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceOauthConfig">LookerInstanceOauthConfig</a></code> | oauth_config block. |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.Initializer.parameter.adminSettings">admin_settings</a></code> | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceAdminSettings">LookerInstanceAdminSettings</a></code> | admin_settings block. |
@@ -64,15 +64,15 @@ lookerInstance.LookerInstance(
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.Initializer.parameter.deletionPolicy">deletion_policy</a></code> | <code>str</code> | Policy to determine if the cluster should be deleted forcefully. |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.Initializer.parameter.denyMaintenancePeriod">deny_maintenance_period</a></code> | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceDenyMaintenancePeriod">LookerInstanceDenyMaintenancePeriod</a></code> | deny_maintenance_period block. |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.Initializer.parameter.encryptionConfig">encryption_config</a></code> | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceEncryptionConfig">LookerInstanceEncryptionConfig</a></code> | encryption_config block. |
-| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.Initializer.parameter.fipsEnabled">fips_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | FIPS 140-2 Encryption enablement for Looker (Google Cloud Core). |
+| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.Initializer.parameter.fipsEnabled">fips_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | FIPS 140-2 Encryption enablement for Looker (Google Cloud Core). |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/looker_instance#id LookerInstance#id}. |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.Initializer.parameter.maintenanceWindow">maintenance_window</a></code> | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceMaintenanceWindow">LookerInstanceMaintenanceWindow</a></code> | maintenance_window block. |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.Initializer.parameter.platformEdition">platform_edition</a></code> | <code>str</code> | Platform editions for a Looker instance. |
-| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.Initializer.parameter.privateIpEnabled">private_ip_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Whether private IP is enabled on the Looker instance. |
+| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.Initializer.parameter.privateIpEnabled">private_ip_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | Whether private IP is enabled on the Looker instance. |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.Initializer.parameter.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/looker_instance#project LookerInstance#project}. |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.Initializer.parameter.pscConfig">psc_config</a></code> | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstancePscConfig">LookerInstancePscConfig</a></code> | psc_config block. |
-| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.Initializer.parameter.pscEnabled">psc_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Whether Public Service Connect (PSC) is enabled on the Looker instance. |
-| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.Initializer.parameter.publicIpEnabled">public_ip_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Whether public IP is enabled on the Looker instance. |
+| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.Initializer.parameter.pscEnabled">psc_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | Whether Public Service Connect (PSC) is enabled on the Looker instance. |
+| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.Initializer.parameter.publicIpEnabled">public_ip_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | Whether public IP is enabled on the Looker instance. |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.Initializer.parameter.region">region</a></code> | <code>str</code> | The name of the Looker region of the instance. |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.Initializer.parameter.reservedRange">reserved_range</a></code> | <code>str</code> | Name of a reserved IP address range within the consumer network, to be used for private service access connection. |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceTimeouts">LookerInstanceTimeouts</a></code> | timeouts block. |
@@ -100,13 +100,13 @@ Must be unique amongst siblings in the same scope
 
 ##### `connection`<sup>Optional</sup> <a name="connection" id="@cdktf/provider-google.lookerInstance.LookerInstance.Initializer.parameter.connection"></a>
 
-- *Type:* typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]
+- *Type:* cdktf.SSHProvisionerConnection | cdktf.WinrmProvisionerConnection
 
 ---
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.lookerInstance.LookerInstance.Initializer.parameter.count"></a>
 
-- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
+- *Type:* typing.Union[int, float] | cdktf.TerraformCount
 
 ---
 
@@ -136,7 +136,7 @@ Must be unique amongst siblings in the same scope
 
 ##### `provisioners`<sup>Optional</sup> <a name="provisioners" id="@cdktf/provider-google.lookerInstance.LookerInstance.Initializer.parameter.provisioners"></a>
 
-- *Type:* typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]
+- *Type:* typing.List[cdktf.FileProvisioner | cdktf.LocalExecProvisioner | cdktf.RemoteExecProvisioner]
 
 ---
 
@@ -226,7 +226,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `fips_enabled`<sup>Optional</sup> <a name="fips_enabled" id="@cdktf/provider-google.lookerInstance.LookerInstance.Initializer.parameter.fipsEnabled"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 FIPS 140-2 Encryption enablement for Looker (Google Cloud Core).
 
@@ -281,7 +281,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `private_ip_enabled`<sup>Optional</sup> <a name="private_ip_enabled" id="@cdktf/provider-google.lookerInstance.LookerInstance.Initializer.parameter.privateIpEnabled"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Whether private IP is enabled on the Looker instance.
 
@@ -309,7 +309,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `psc_enabled`<sup>Optional</sup> <a name="psc_enabled" id="@cdktf/provider-google.lookerInstance.LookerInstance.Initializer.parameter.pscEnabled"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Whether Public Service Connect (PSC) is enabled on the Looker instance.
 
@@ -319,7 +319,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `public_ip_enabled`<sup>Optional</sup> <a name="public_ip_enabled" id="@cdktf/provider-google.lookerInstance.LookerInstance.Initializer.parameter.publicIpEnabled"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Whether public IP is enabled on the Looker instance.
 
@@ -649,7 +649,7 @@ def get_string_map_attribute(
 ##### `has_resource_move` <a name="has_resource_move" id="@cdktf/provider-google.lookerInstance.LookerInstance.hasResourceMove"></a>
 
 ```python
-def has_resource_move() -> typing.Union[TerraformResourceMoveByTarget, TerraformResourceMoveById]
+def has_resource_move() -> TerraformResourceMoveByTarget | TerraformResourceMoveById
 ```
 
 ##### `import_from` <a name="import_from" id="@cdktf/provider-google.lookerInstance.LookerInstance.importFrom"></a>
@@ -712,7 +712,7 @@ Full id of resource being moved from, e.g. "aws_s3_bucket.example".
 ```python
 def move_to(
   move_target: str,
-  index: typing.Union[str, typing.Union[int, float]] = None
+  index: str | typing.Union[int, float] = None
 ) -> None
 ```
 
@@ -728,7 +728,7 @@ The previously set user defined string set by .addMoveTarget() corresponding to 
 
 ###### `index`<sup>Optional</sup> <a name="index" id="@cdktf/provider-google.lookerInstance.LookerInstance.moveTo.parameter.index"></a>
 
-- *Type:* typing.Union[str, typing.Union[int, float]]
+- *Type:* str | typing.Union[int, float]
 
 Optional The index corresponding to the key the resource is to appear in the foreach of a resource to move to.
 
@@ -922,7 +922,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ```python
 def put_psc_config(
   allowed_vpcs: typing.List[str] = None,
-  service_attachments: typing.Union[IResolvable, typing.List[LookerInstancePscConfigServiceAttachments]] = None
+  service_attachments: IResolvable | typing.List[LookerInstancePscConfigServiceAttachments] = None
 ) -> None
 ```
 
@@ -938,7 +938,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `service_attachments`<sup>Optional</sup> <a name="service_attachments" id="@cdktf/provider-google.lookerInstance.LookerInstance.putPscConfig.parameter.serviceAttachments"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.lookerInstance.LookerInstancePscConfigServiceAttachments">LookerInstancePscConfigServiceAttachments</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.lookerInstance.LookerInstancePscConfigServiceAttachments">LookerInstancePscConfigServiceAttachments</a>]
 
 service_attachments block.
 
@@ -1271,13 +1271,13 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.5
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.property.terraformMetaArguments">terraform_meta_arguments</a></code> | <code>typing.Mapping[typing.Any]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.property.terraformResourceType">terraform_resource_type</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.property.terraformGeneratorMetadata">terraform_generator_metadata</a></code> | <code>cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.property.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.property.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.property.connection">connection</a></code> | <code>cdktf.SSHProvisionerConnection \| cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.property.count">count</a></code> | <code>typing.Union[int, float] \| cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.property.dependsOn">depends_on</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.property.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.property.provisioners">provisioners</a></code> | <code>typing.List[cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.property.adminSettings">admin_settings</a></code> | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceAdminSettingsOutputReference">LookerInstanceAdminSettingsOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.property.createTime">create_time</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.property.customDomain">custom_domain</a></code> | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceCustomDomainOutputReference">LookerInstanceCustomDomainOutputReference</a></code> | *No description.* |
@@ -1300,31 +1300,31 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.5
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.property.deletionPolicyInput">deletion_policy_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.property.denyMaintenancePeriodInput">deny_maintenance_period_input</a></code> | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceDenyMaintenancePeriod">LookerInstanceDenyMaintenancePeriod</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.property.encryptionConfigInput">encryption_config_input</a></code> | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceEncryptionConfig">LookerInstanceEncryptionConfig</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.property.fipsEnabledInput">fips_enabled_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.property.fipsEnabledInput">fips_enabled_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.property.idInput">id_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.property.maintenanceWindowInput">maintenance_window_input</a></code> | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceMaintenanceWindow">LookerInstanceMaintenanceWindow</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.property.nameInput">name_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.property.oauthConfigInput">oauth_config_input</a></code> | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceOauthConfig">LookerInstanceOauthConfig</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.property.platformEditionInput">platform_edition_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.property.privateIpEnabledInput">private_ip_enabled_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.property.privateIpEnabledInput">private_ip_enabled_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.property.projectInput">project_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.property.pscConfigInput">psc_config_input</a></code> | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstancePscConfig">LookerInstancePscConfig</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.property.pscEnabledInput">psc_enabled_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.property.publicIpEnabledInput">public_ip_enabled_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.property.pscEnabledInput">psc_enabled_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.property.publicIpEnabledInput">public_ip_enabled_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.property.regionInput">region_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.property.reservedRangeInput">reserved_range_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.property.timeoutsInput">timeouts_input</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.lookerInstance.LookerInstanceTimeouts">LookerInstanceTimeouts</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.property.timeoutsInput">timeouts_input</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.lookerInstance.LookerInstanceTimeouts">LookerInstanceTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.property.userMetadataInput">user_metadata_input</a></code> | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceUserMetadata">LookerInstanceUserMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.property.consumerNetwork">consumer_network</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.property.deletionPolicy">deletion_policy</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.property.fipsEnabled">fips_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.property.fipsEnabled">fips_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.property.id">id</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.property.name">name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.property.platformEdition">platform_edition</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.property.privateIpEnabled">private_ip_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.property.privateIpEnabled">private_ip_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.property.project">project</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.property.pscEnabled">psc_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.property.publicIpEnabled">public_ip_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.property.pscEnabled">psc_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.property.publicIpEnabled">public_ip_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.property.region">region</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.property.reservedRange">reserved_range</a></code> | <code>str</code> | *No description.* |
 
@@ -1405,20 +1405,20 @@ terraform_generator_metadata: TerraformProviderGeneratorMetadata
 ##### `connection`<sup>Optional</sup> <a name="connection" id="@cdktf/provider-google.lookerInstance.LookerInstance.property.connection"></a>
 
 ```python
-connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection]
+connection: SSHProvisionerConnection | WinrmProvisionerConnection
 ```
 
-- *Type:* typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]
+- *Type:* cdktf.SSHProvisionerConnection | cdktf.WinrmProvisionerConnection
 
 ---
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.lookerInstance.LookerInstance.property.count"></a>
 
 ```python
-count: typing.Union[typing.Union[int, float], TerraformCount]
+count: typing.Union[int, float] | TerraformCount
 ```
 
-- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
+- *Type:* typing.Union[int, float] | cdktf.TerraformCount
 
 ---
 
@@ -1465,10 +1465,10 @@ provider: TerraformProvider
 ##### `provisioners`<sup>Optional</sup> <a name="provisioners" id="@cdktf/provider-google.lookerInstance.LookerInstance.property.provisioners"></a>
 
 ```python
-provisioners: typing.List[typing.Union[FileProvisioner, LocalExecProvisioner, RemoteExecProvisioner]]
+provisioners: typing.List[FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner]
 ```
 
-- *Type:* typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]
+- *Type:* typing.List[cdktf.FileProvisioner | cdktf.LocalExecProvisioner | cdktf.RemoteExecProvisioner]
 
 ---
 
@@ -1695,10 +1695,10 @@ encryption_config_input: LookerInstanceEncryptionConfig
 ##### `fips_enabled_input`<sup>Optional</sup> <a name="fips_enabled_input" id="@cdktf/provider-google.lookerInstance.LookerInstance.property.fipsEnabledInput"></a>
 
 ```python
-fips_enabled_input: typing.Union[bool, IResolvable]
+fips_enabled_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -1755,10 +1755,10 @@ platform_edition_input: str
 ##### `private_ip_enabled_input`<sup>Optional</sup> <a name="private_ip_enabled_input" id="@cdktf/provider-google.lookerInstance.LookerInstance.property.privateIpEnabledInput"></a>
 
 ```python
-private_ip_enabled_input: typing.Union[bool, IResolvable]
+private_ip_enabled_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -1785,20 +1785,20 @@ psc_config_input: LookerInstancePscConfig
 ##### `psc_enabled_input`<sup>Optional</sup> <a name="psc_enabled_input" id="@cdktf/provider-google.lookerInstance.LookerInstance.property.pscEnabledInput"></a>
 
 ```python
-psc_enabled_input: typing.Union[bool, IResolvable]
+psc_enabled_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `public_ip_enabled_input`<sup>Optional</sup> <a name="public_ip_enabled_input" id="@cdktf/provider-google.lookerInstance.LookerInstance.property.publicIpEnabledInput"></a>
 
 ```python
-public_ip_enabled_input: typing.Union[bool, IResolvable]
+public_ip_enabled_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -1825,10 +1825,10 @@ reserved_range_input: str
 ##### `timeouts_input`<sup>Optional</sup> <a name="timeouts_input" id="@cdktf/provider-google.lookerInstance.LookerInstance.property.timeoutsInput"></a>
 
 ```python
-timeouts_input: typing.Union[IResolvable, LookerInstanceTimeouts]
+timeouts_input: IResolvable | LookerInstanceTimeouts
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.lookerInstance.LookerInstanceTimeouts">LookerInstanceTimeouts</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.lookerInstance.LookerInstanceTimeouts">LookerInstanceTimeouts</a>
 
 ---
 
@@ -1865,10 +1865,10 @@ deletion_policy: str
 ##### `fips_enabled`<sup>Required</sup> <a name="fips_enabled" id="@cdktf/provider-google.lookerInstance.LookerInstance.property.fipsEnabled"></a>
 
 ```python
-fips_enabled: typing.Union[bool, IResolvable]
+fips_enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -1905,10 +1905,10 @@ platform_edition: str
 ##### `private_ip_enabled`<sup>Required</sup> <a name="private_ip_enabled" id="@cdktf/provider-google.lookerInstance.LookerInstance.property.privateIpEnabled"></a>
 
 ```python
-private_ip_enabled: typing.Union[bool, IResolvable]
+private_ip_enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -1925,20 +1925,20 @@ project: str
 ##### `psc_enabled`<sup>Required</sup> <a name="psc_enabled" id="@cdktf/provider-google.lookerInstance.LookerInstance.property.pscEnabled"></a>
 
 ```python
-psc_enabled: typing.Union[bool, IResolvable]
+psc_enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `public_ip_enabled`<sup>Required</sup> <a name="public_ip_enabled" id="@cdktf/provider-google.lookerInstance.LookerInstance.property.publicIpEnabled"></a>
 
 ```python
-public_ip_enabled: typing.Union[bool, IResolvable]
+public_ip_enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -2029,13 +2029,13 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 from cdktf_cdktf_provider_google import looker_instance
 
 lookerInstance.LookerInstanceConfig(
-  connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection] = None,
-  count: typing.Union[typing.Union[int, float], TerraformCount] = None,
+  connection: SSHProvisionerConnection | WinrmProvisionerConnection = None,
+  count: typing.Union[int, float] | TerraformCount = None,
   depends_on: typing.List[ITerraformDependable] = None,
   for_each: ITerraformIterator = None,
   lifecycle: TerraformResourceLifecycle = None,
   provider: TerraformProvider = None,
-  provisioners: typing.List[typing.Union[FileProvisioner, LocalExecProvisioner, RemoteExecProvisioner]] = None,
+  provisioners: typing.List[FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner] = None,
   name: str,
   oauth_config: LookerInstanceOauthConfig,
   admin_settings: LookerInstanceAdminSettings = None,
@@ -2044,15 +2044,15 @@ lookerInstance.LookerInstanceConfig(
   deletion_policy: str = None,
   deny_maintenance_period: LookerInstanceDenyMaintenancePeriod = None,
   encryption_config: LookerInstanceEncryptionConfig = None,
-  fips_enabled: typing.Union[bool, IResolvable] = None,
+  fips_enabled: bool | IResolvable = None,
   id: str = None,
   maintenance_window: LookerInstanceMaintenanceWindow = None,
   platform_edition: str = None,
-  private_ip_enabled: typing.Union[bool, IResolvable] = None,
+  private_ip_enabled: bool | IResolvable = None,
   project: str = None,
   psc_config: LookerInstancePscConfig = None,
-  psc_enabled: typing.Union[bool, IResolvable] = None,
-  public_ip_enabled: typing.Union[bool, IResolvable] = None,
+  psc_enabled: bool | IResolvable = None,
+  public_ip_enabled: bool | IResolvable = None,
   region: str = None,
   reserved_range: str = None,
   timeouts: LookerInstanceTimeouts = None,
@@ -2064,13 +2064,13 @@ lookerInstance.LookerInstanceConfig(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceConfig.property.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceConfig.property.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceConfig.property.connection">connection</a></code> | <code>cdktf.SSHProvisionerConnection \| cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceConfig.property.count">count</a></code> | <code>typing.Union[int, float] \| cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceConfig.property.dependsOn">depends_on</a></code> | <code>typing.List[cdktf.ITerraformDependable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceConfig.property.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceConfig.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceConfig.property.provisioners">provisioners</a></code> | <code>typing.List[cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceConfig.property.name">name</a></code> | <code>str</code> | The ID of the instance or a fully qualified identifier for the instance. |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceConfig.property.oauthConfig">oauth_config</a></code> | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceOauthConfig">LookerInstanceOauthConfig</a></code> | oauth_config block. |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceConfig.property.adminSettings">admin_settings</a></code> | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceAdminSettings">LookerInstanceAdminSettings</a></code> | admin_settings block. |
@@ -2079,15 +2079,15 @@ lookerInstance.LookerInstanceConfig(
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceConfig.property.deletionPolicy">deletion_policy</a></code> | <code>str</code> | Policy to determine if the cluster should be deleted forcefully. |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceConfig.property.denyMaintenancePeriod">deny_maintenance_period</a></code> | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceDenyMaintenancePeriod">LookerInstanceDenyMaintenancePeriod</a></code> | deny_maintenance_period block. |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceConfig.property.encryptionConfig">encryption_config</a></code> | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceEncryptionConfig">LookerInstanceEncryptionConfig</a></code> | encryption_config block. |
-| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceConfig.property.fipsEnabled">fips_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | FIPS 140-2 Encryption enablement for Looker (Google Cloud Core). |
+| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceConfig.property.fipsEnabled">fips_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | FIPS 140-2 Encryption enablement for Looker (Google Cloud Core). |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/looker_instance#id LookerInstance#id}. |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceConfig.property.maintenanceWindow">maintenance_window</a></code> | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceMaintenanceWindow">LookerInstanceMaintenanceWindow</a></code> | maintenance_window block. |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceConfig.property.platformEdition">platform_edition</a></code> | <code>str</code> | Platform editions for a Looker instance. |
-| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceConfig.property.privateIpEnabled">private_ip_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Whether private IP is enabled on the Looker instance. |
+| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceConfig.property.privateIpEnabled">private_ip_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | Whether private IP is enabled on the Looker instance. |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceConfig.property.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/looker_instance#project LookerInstance#project}. |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceConfig.property.pscConfig">psc_config</a></code> | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstancePscConfig">LookerInstancePscConfig</a></code> | psc_config block. |
-| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceConfig.property.pscEnabled">psc_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Whether Public Service Connect (PSC) is enabled on the Looker instance. |
-| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceConfig.property.publicIpEnabled">public_ip_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Whether public IP is enabled on the Looker instance. |
+| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceConfig.property.pscEnabled">psc_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | Whether Public Service Connect (PSC) is enabled on the Looker instance. |
+| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceConfig.property.publicIpEnabled">public_ip_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | Whether public IP is enabled on the Looker instance. |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceConfig.property.region">region</a></code> | <code>str</code> | The name of the Looker region of the instance. |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceConfig.property.reservedRange">reserved_range</a></code> | <code>str</code> | Name of a reserved IP address range within the consumer network, to be used for private service access connection. |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceTimeouts">LookerInstanceTimeouts</a></code> | timeouts block. |
@@ -2098,20 +2098,20 @@ lookerInstance.LookerInstanceConfig(
 ##### `connection`<sup>Optional</sup> <a name="connection" id="@cdktf/provider-google.lookerInstance.LookerInstanceConfig.property.connection"></a>
 
 ```python
-connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection]
+connection: SSHProvisionerConnection | WinrmProvisionerConnection
 ```
 
-- *Type:* typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]
+- *Type:* cdktf.SSHProvisionerConnection | cdktf.WinrmProvisionerConnection
 
 ---
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.lookerInstance.LookerInstanceConfig.property.count"></a>
 
 ```python
-count: typing.Union[typing.Union[int, float], TerraformCount]
+count: typing.Union[int, float] | TerraformCount
 ```
 
-- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
+- *Type:* typing.Union[int, float] | cdktf.TerraformCount
 
 ---
 
@@ -2158,10 +2158,10 @@ provider: TerraformProvider
 ##### `provisioners`<sup>Optional</sup> <a name="provisioners" id="@cdktf/provider-google.lookerInstance.LookerInstanceConfig.property.provisioners"></a>
 
 ```python
-provisioners: typing.List[typing.Union[FileProvisioner, LocalExecProvisioner, RemoteExecProvisioner]]
+provisioners: typing.List[FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner]
 ```
 
-- *Type:* typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]
+- *Type:* typing.List[cdktf.FileProvisioner | cdktf.LocalExecProvisioner | cdktf.RemoteExecProvisioner]
 
 ---
 
@@ -2284,10 +2284,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `fips_enabled`<sup>Optional</sup> <a name="fips_enabled" id="@cdktf/provider-google.lookerInstance.LookerInstanceConfig.property.fipsEnabled"></a>
 
 ```python
-fips_enabled: typing.Union[bool, IResolvable]
+fips_enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 FIPS 140-2 Encryption enablement for Looker (Google Cloud Core).
 
@@ -2355,10 +2355,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `private_ip_enabled`<sup>Optional</sup> <a name="private_ip_enabled" id="@cdktf/provider-google.lookerInstance.LookerInstanceConfig.property.privateIpEnabled"></a>
 
 ```python
-private_ip_enabled: typing.Union[bool, IResolvable]
+private_ip_enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Whether private IP is enabled on the Looker instance.
 
@@ -2395,10 +2395,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `psc_enabled`<sup>Optional</sup> <a name="psc_enabled" id="@cdktf/provider-google.lookerInstance.LookerInstanceConfig.property.pscEnabled"></a>
 
 ```python
-psc_enabled: typing.Union[bool, IResolvable]
+psc_enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Whether Public Service Connect (PSC) is enabled on the Looker instance.
 
@@ -2409,10 +2409,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `public_ip_enabled`<sup>Optional</sup> <a name="public_ip_enabled" id="@cdktf/provider-google.lookerInstance.LookerInstanceConfig.property.publicIpEnabled"></a>
 
 ```python
-public_ip_enabled: typing.Union[bool, IResolvable]
+public_ip_enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Whether public IP is enabled on the Looker instance.
 
@@ -3037,7 +3037,7 @@ from cdktf_cdktf_provider_google import looker_instance
 
 lookerInstance.LookerInstancePscConfig(
   allowed_vpcs: typing.List[str] = None,
-  service_attachments: typing.Union[IResolvable, typing.List[LookerInstancePscConfigServiceAttachments]] = None
+  service_attachments: IResolvable | typing.List[LookerInstancePscConfigServiceAttachments] = None
 )
 ```
 
@@ -3046,7 +3046,7 @@ lookerInstance.LookerInstancePscConfig(
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstancePscConfig.property.allowedVpcs">allowed_vpcs</a></code> | <code>typing.List[str]</code> | List of VPCs that are allowed ingress into the Looker instance. |
-| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstancePscConfig.property.serviceAttachments">service_attachments</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.lookerInstance.LookerInstancePscConfigServiceAttachments">LookerInstancePscConfigServiceAttachments</a>]]</code> | service_attachments block. |
+| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstancePscConfig.property.serviceAttachments">service_attachments</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.lookerInstance.LookerInstancePscConfigServiceAttachments">LookerInstancePscConfigServiceAttachments</a>]</code> | service_attachments block. |
 
 ---
 
@@ -3067,10 +3067,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `service_attachments`<sup>Optional</sup> <a name="service_attachments" id="@cdktf/provider-google.lookerInstance.LookerInstancePscConfig.property.serviceAttachments"></a>
 
 ```python
-service_attachments: typing.Union[IResolvable, typing.List[LookerInstancePscConfigServiceAttachments]]
+service_attachments: IResolvable | typing.List[LookerInstancePscConfigServiceAttachments]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.lookerInstance.LookerInstancePscConfigServiceAttachments">LookerInstancePscConfigServiceAttachments</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.lookerInstance.LookerInstancePscConfigServiceAttachments">LookerInstancePscConfigServiceAttachments</a>]
 
 service_attachments block.
 
@@ -7109,13 +7109,13 @@ Returns a reversible string representation.
 
 ```python
 def put_service_attachments(
-  value: typing.Union[IResolvable, typing.List[LookerInstancePscConfigServiceAttachments]]
+  value: IResolvable | typing.List[LookerInstancePscConfigServiceAttachments]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.lookerInstance.LookerInstancePscConfigOutputReference.putServiceAttachments.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.lookerInstance.LookerInstancePscConfigServiceAttachments">LookerInstancePscConfigServiceAttachments</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.lookerInstance.LookerInstancePscConfigServiceAttachments">LookerInstancePscConfigServiceAttachments</a>]
 
 ---
 
@@ -7141,7 +7141,7 @@ def reset_service_attachments() -> None
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstancePscConfigOutputReference.property.lookerServiceAttachmentUri">looker_service_attachment_uri</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstancePscConfigOutputReference.property.serviceAttachments">service_attachments</a></code> | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstancePscConfigServiceAttachmentsList">LookerInstancePscConfigServiceAttachmentsList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstancePscConfigOutputReference.property.allowedVpcsInput">allowed_vpcs_input</a></code> | <code>typing.List[str]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstancePscConfigOutputReference.property.serviceAttachmentsInput">service_attachments_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.lookerInstance.LookerInstancePscConfigServiceAttachments">LookerInstancePscConfigServiceAttachments</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstancePscConfigOutputReference.property.serviceAttachmentsInput">service_attachments_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.lookerInstance.LookerInstancePscConfigServiceAttachments">LookerInstancePscConfigServiceAttachments</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstancePscConfigOutputReference.property.allowedVpcs">allowed_vpcs</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstancePscConfigOutputReference.property.internalValue">internal_value</a></code> | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstancePscConfig">LookerInstancePscConfig</a></code> | *No description.* |
 
@@ -7204,10 +7204,10 @@ allowed_vpcs_input: typing.List[str]
 ##### `service_attachments_input`<sup>Optional</sup> <a name="service_attachments_input" id="@cdktf/provider-google.lookerInstance.LookerInstancePscConfigOutputReference.property.serviceAttachmentsInput"></a>
 
 ```python
-service_attachments_input: typing.Union[IResolvable, typing.List[LookerInstancePscConfigServiceAttachments]]
+service_attachments_input: IResolvable | typing.List[LookerInstancePscConfigServiceAttachments]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.lookerInstance.LookerInstancePscConfigServiceAttachments">LookerInstancePscConfigServiceAttachments</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.lookerInstance.LookerInstancePscConfigServiceAttachments">LookerInstancePscConfigServiceAttachments</a>]
 
 ---
 
@@ -7363,7 +7363,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstancePscConfigServiceAttachmentsList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstancePscConfigServiceAttachmentsList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstancePscConfigServiceAttachmentsList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.lookerInstance.LookerInstancePscConfigServiceAttachments">LookerInstancePscConfigServiceAttachments</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstancePscConfigServiceAttachmentsList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.lookerInstance.LookerInstancePscConfigServiceAttachments">LookerInstancePscConfigServiceAttachments</a>]</code> | *No description.* |
 
 ---
 
@@ -7394,10 +7394,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.lookerInstance.LookerInstancePscConfigServiceAttachmentsList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[LookerInstancePscConfigServiceAttachments]]
+internal_value: IResolvable | typing.List[LookerInstancePscConfigServiceAttachments]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.lookerInstance.LookerInstancePscConfigServiceAttachments">LookerInstancePscConfigServiceAttachments</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.lookerInstance.LookerInstancePscConfigServiceAttachments">LookerInstancePscConfigServiceAttachments</a>]
 
 ---
 
@@ -7676,7 +7676,7 @@ def reset_target_service_attachment_uri() -> None
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstancePscConfigServiceAttachmentsOutputReference.property.targetServiceAttachmentUriInput">target_service_attachment_uri_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstancePscConfigServiceAttachmentsOutputReference.property.localFqdn">local_fqdn</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstancePscConfigServiceAttachmentsOutputReference.property.targetServiceAttachmentUri">target_service_attachment_uri</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstancePscConfigServiceAttachmentsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.lookerInstance.LookerInstancePscConfigServiceAttachments">LookerInstancePscConfigServiceAttachments</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstancePscConfigServiceAttachmentsOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.lookerInstance.LookerInstancePscConfigServiceAttachments">LookerInstancePscConfigServiceAttachments</a></code> | *No description.* |
 
 ---
 
@@ -7757,10 +7757,10 @@ target_service_attachment_uri: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.lookerInstance.LookerInstancePscConfigServiceAttachmentsOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, LookerInstancePscConfigServiceAttachments]
+internal_value: IResolvable | LookerInstancePscConfigServiceAttachments
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.lookerInstance.LookerInstancePscConfigServiceAttachments">LookerInstancePscConfigServiceAttachments</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.lookerInstance.LookerInstancePscConfigServiceAttachments">LookerInstancePscConfigServiceAttachments</a>
 
 ---
 
@@ -8027,7 +8027,7 @@ def reset_update() -> None
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceTimeoutsOutputReference.property.create">create</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceTimeoutsOutputReference.property.delete">delete</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceTimeoutsOutputReference.property.update">update</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.lookerInstance.LookerInstanceTimeouts">LookerInstanceTimeouts</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.lookerInstance.LookerInstanceTimeouts">LookerInstanceTimeouts</a></code> | *No description.* |
 
 ---
 
@@ -8118,10 +8118,10 @@ update: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.lookerInstance.LookerInstanceTimeoutsOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, LookerInstanceTimeouts]
+internal_value: IResolvable | LookerInstanceTimeouts
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.lookerInstance.LookerInstanceTimeouts">LookerInstanceTimeouts</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.lookerInstance.LookerInstanceTimeouts">LookerInstanceTimeouts</a>
 
 ---
 

@@ -14,13 +14,13 @@ from cdktf_cdktf_provider_google import composer_environment
 composerEnvironment.ComposerEnvironment(
   scope: Construct,
   id: str,
-  connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection] = None,
-  count: typing.Union[typing.Union[int, float], TerraformCount] = None,
+  connection: SSHProvisionerConnection | WinrmProvisionerConnection = None,
+  count: typing.Union[int, float] | TerraformCount = None,
   depends_on: typing.List[ITerraformDependable] = None,
   for_each: ITerraformIterator = None,
   lifecycle: TerraformResourceLifecycle = None,
   provider: TerraformProvider = None,
-  provisioners: typing.List[typing.Union[FileProvisioner, LocalExecProvisioner, RemoteExecProvisioner]] = None,
+  provisioners: typing.List[FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner] = None,
   name: str,
   config: ComposerEnvironmentConfigA = None,
   id: str = None,
@@ -36,13 +36,13 @@ composerEnvironment.ComposerEnvironment(
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironment.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | The scope in which to define this construct. |
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironment.Initializer.parameter.id">id</a></code> | <code>str</code> | The scoped construct ID. |
-| <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironment.Initializer.parameter.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironment.Initializer.parameter.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironment.Initializer.parameter.connection">connection</a></code> | <code>cdktf.SSHProvisionerConnection \| cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironment.Initializer.parameter.count">count</a></code> | <code>typing.Union[int, float] \| cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironment.Initializer.parameter.dependsOn">depends_on</a></code> | <code>typing.List[cdktf.ITerraformDependable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironment.Initializer.parameter.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironment.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironment.Initializer.parameter.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironment.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironment.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironment.Initializer.parameter.name">name</a></code> | <code>str</code> | Name of the environment. |
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironment.Initializer.parameter.config">config</a></code> | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigA">ComposerEnvironmentConfigA</a></code> | config block. |
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironment.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/composer_environment#id ComposerEnvironment#id}. |
@@ -74,13 +74,13 @@ Must be unique amongst siblings in the same scope
 
 ##### `connection`<sup>Optional</sup> <a name="connection" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironment.Initializer.parameter.connection"></a>
 
-- *Type:* typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]
+- *Type:* cdktf.SSHProvisionerConnection | cdktf.WinrmProvisionerConnection
 
 ---
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironment.Initializer.parameter.count"></a>
 
-- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
+- *Type:* typing.Union[int, float] | cdktf.TerraformCount
 
 ---
 
@@ -110,7 +110,7 @@ Must be unique amongst siblings in the same scope
 
 ##### `provisioners`<sup>Optional</sup> <a name="provisioners" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironment.Initializer.parameter.provisioners"></a>
 
-- *Type:* typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]
+- *Type:* typing.List[cdktf.FileProvisioner | cdktf.LocalExecProvisioner | cdktf.RemoteExecProvisioner]
 
 ---
 
@@ -466,7 +466,7 @@ def get_string_map_attribute(
 ##### `has_resource_move` <a name="has_resource_move" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironment.hasResourceMove"></a>
 
 ```python
-def has_resource_move() -> typing.Union[TerraformResourceMoveByTarget, TerraformResourceMoveById]
+def has_resource_move() -> TerraformResourceMoveByTarget | TerraformResourceMoveById
 ```
 
 ##### `import_from` <a name="import_from" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironment.importFrom"></a>
@@ -529,7 +529,7 @@ Full id of resource being moved from, e.g. "aws_s3_bucket.example".
 ```python
 def move_to(
   move_target: str,
-  index: typing.Union[str, typing.Union[int, float]] = None
+  index: str | typing.Union[int, float] = None
 ) -> None
 ```
 
@@ -545,7 +545,7 @@ The previously set user defined string set by .addMoveTarget() corresponding to 
 
 ###### `index`<sup>Optional</sup> <a name="index" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironment.moveTo.parameter.index"></a>
 
-- *Type:* typing.Union[str, typing.Union[int, float]]
+- *Type:* str | typing.Union[int, float]
 
 Optional The index corresponding to the key the resource is to appear in the foreach of a resource to move to.
 
@@ -575,8 +575,8 @@ Full id of resource to move to, e.g. "aws_s3_bucket.example".
 def put_config(
   database_config: ComposerEnvironmentConfigDatabaseConfig = None,
   data_retention_config: ComposerEnvironmentConfigDataRetentionConfig = None,
-  enable_private_builds_only: typing.Union[bool, IResolvable] = None,
-  enable_private_environment: typing.Union[bool, IResolvable] = None,
+  enable_private_builds_only: bool | IResolvable = None,
+  enable_private_environment: bool | IResolvable = None,
   encryption_config: ComposerEnvironmentConfigEncryptionConfig = None,
   environment_size: str = None,
   maintenance_window: ComposerEnvironmentConfigMaintenanceWindow = None,
@@ -615,7 +615,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `enable_private_builds_only`<sup>Optional</sup> <a name="enable_private_builds_only" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironment.putConfig.parameter.enablePrivateBuildsOnly"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Optional.
 
@@ -627,7 +627,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `enable_private_environment`<sup>Optional</sup> <a name="enable_private_environment" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironment.putConfig.parameter.enablePrivateEnvironment"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Optional. If true, a private Composer environment will be created.
 
@@ -1002,13 +1002,13 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.5
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironment.property.terraformMetaArguments">terraform_meta_arguments</a></code> | <code>typing.Mapping[typing.Any]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironment.property.terraformResourceType">terraform_resource_type</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironment.property.terraformGeneratorMetadata">terraform_generator_metadata</a></code> | <code>cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironment.property.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironment.property.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironment.property.connection">connection</a></code> | <code>cdktf.SSHProvisionerConnection \| cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironment.property.count">count</a></code> | <code>typing.Union[int, float] \| cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironment.property.dependsOn">depends_on</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironment.property.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironment.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironment.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironment.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironment.property.provisioners">provisioners</a></code> | <code>typing.List[cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironment.property.config">config</a></code> | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigAOutputReference">ComposerEnvironmentConfigAOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironment.property.effectiveLabels">effective_labels</a></code> | <code>cdktf.StringMap</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironment.property.storageConfig">storage_config</a></code> | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentStorageConfigOutputReference">ComposerEnvironmentStorageConfigOutputReference</a></code> | *No description.* |
@@ -1021,7 +1021,7 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.5
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironment.property.projectInput">project_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironment.property.regionInput">region_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironment.property.storageConfigInput">storage_config_input</a></code> | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentStorageConfig">ComposerEnvironmentStorageConfig</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironment.property.timeoutsInput">timeouts_input</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentTimeouts">ComposerEnvironmentTimeouts</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironment.property.timeoutsInput">timeouts_input</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentTimeouts">ComposerEnvironmentTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironment.property.id">id</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironment.property.labels">labels</a></code> | <code>typing.Mapping[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironment.property.name">name</a></code> | <code>str</code> | *No description.* |
@@ -1105,20 +1105,20 @@ terraform_generator_metadata: TerraformProviderGeneratorMetadata
 ##### `connection`<sup>Optional</sup> <a name="connection" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironment.property.connection"></a>
 
 ```python
-connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection]
+connection: SSHProvisionerConnection | WinrmProvisionerConnection
 ```
 
-- *Type:* typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]
+- *Type:* cdktf.SSHProvisionerConnection | cdktf.WinrmProvisionerConnection
 
 ---
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironment.property.count"></a>
 
 ```python
-count: typing.Union[typing.Union[int, float], TerraformCount]
+count: typing.Union[int, float] | TerraformCount
 ```
 
-- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
+- *Type:* typing.Union[int, float] | cdktf.TerraformCount
 
 ---
 
@@ -1165,10 +1165,10 @@ provider: TerraformProvider
 ##### `provisioners`<sup>Optional</sup> <a name="provisioners" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironment.property.provisioners"></a>
 
 ```python
-provisioners: typing.List[typing.Union[FileProvisioner, LocalExecProvisioner, RemoteExecProvisioner]]
+provisioners: typing.List[FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner]
 ```
 
-- *Type:* typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]
+- *Type:* typing.List[cdktf.FileProvisioner | cdktf.LocalExecProvisioner | cdktf.RemoteExecProvisioner]
 
 ---
 
@@ -1295,10 +1295,10 @@ storage_config_input: ComposerEnvironmentStorageConfig
 ##### `timeouts_input`<sup>Optional</sup> <a name="timeouts_input" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironment.property.timeoutsInput"></a>
 
 ```python
-timeouts_input: typing.Union[IResolvable, ComposerEnvironmentTimeouts]
+timeouts_input: IResolvable | ComposerEnvironmentTimeouts
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentTimeouts">ComposerEnvironmentTimeouts</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentTimeouts">ComposerEnvironmentTimeouts</a>
 
 ---
 
@@ -1380,13 +1380,13 @@ tfResourceType: str
 from cdktf_cdktf_provider_google import composer_environment
 
 composerEnvironment.ComposerEnvironmentConfig(
-  connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection] = None,
-  count: typing.Union[typing.Union[int, float], TerraformCount] = None,
+  connection: SSHProvisionerConnection | WinrmProvisionerConnection = None,
+  count: typing.Union[int, float] | TerraformCount = None,
   depends_on: typing.List[ITerraformDependable] = None,
   for_each: ITerraformIterator = None,
   lifecycle: TerraformResourceLifecycle = None,
   provider: TerraformProvider = None,
-  provisioners: typing.List[typing.Union[FileProvisioner, LocalExecProvisioner, RemoteExecProvisioner]] = None,
+  provisioners: typing.List[FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner] = None,
   name: str,
   config: ComposerEnvironmentConfigA = None,
   id: str = None,
@@ -1402,13 +1402,13 @@ composerEnvironment.ComposerEnvironmentConfig(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfig.property.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfig.property.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfig.property.connection">connection</a></code> | <code>cdktf.SSHProvisionerConnection \| cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfig.property.count">count</a></code> | <code>typing.Union[int, float] \| cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfig.property.dependsOn">depends_on</a></code> | <code>typing.List[cdktf.ITerraformDependable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfig.property.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfig.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfig.property.provisioners">provisioners</a></code> | <code>typing.List[cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfig.property.name">name</a></code> | <code>str</code> | Name of the environment. |
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfig.property.config">config</a></code> | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigA">ComposerEnvironmentConfigA</a></code> | config block. |
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/composer_environment#id ComposerEnvironment#id}. |
@@ -1423,20 +1423,20 @@ composerEnvironment.ComposerEnvironmentConfig(
 ##### `connection`<sup>Optional</sup> <a name="connection" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfig.property.connection"></a>
 
 ```python
-connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection]
+connection: SSHProvisionerConnection | WinrmProvisionerConnection
 ```
 
-- *Type:* typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]
+- *Type:* cdktf.SSHProvisionerConnection | cdktf.WinrmProvisionerConnection
 
 ---
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfig.property.count"></a>
 
 ```python
-count: typing.Union[typing.Union[int, float], TerraformCount]
+count: typing.Union[int, float] | TerraformCount
 ```
 
-- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
+- *Type:* typing.Union[int, float] | cdktf.TerraformCount
 
 ---
 
@@ -1483,10 +1483,10 @@ provider: TerraformProvider
 ##### `provisioners`<sup>Optional</sup> <a name="provisioners" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfig.property.provisioners"></a>
 
 ```python
-provisioners: typing.List[typing.Union[FileProvisioner, LocalExecProvisioner, RemoteExecProvisioner]]
+provisioners: typing.List[FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner]
 ```
 
-- *Type:* typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]
+- *Type:* typing.List[cdktf.FileProvisioner | cdktf.LocalExecProvisioner | cdktf.RemoteExecProvisioner]
 
 ---
 
@@ -1622,8 +1622,8 @@ from cdktf_cdktf_provider_google import composer_environment
 composerEnvironment.ComposerEnvironmentConfigA(
   database_config: ComposerEnvironmentConfigDatabaseConfig = None,
   data_retention_config: ComposerEnvironmentConfigDataRetentionConfig = None,
-  enable_private_builds_only: typing.Union[bool, IResolvable] = None,
-  enable_private_environment: typing.Union[bool, IResolvable] = None,
+  enable_private_builds_only: bool | IResolvable = None,
+  enable_private_environment: bool | IResolvable = None,
   encryption_config: ComposerEnvironmentConfigEncryptionConfig = None,
   environment_size: str = None,
   maintenance_window: ComposerEnvironmentConfigMaintenanceWindow = None,
@@ -1646,8 +1646,8 @@ composerEnvironment.ComposerEnvironmentConfigA(
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigA.property.databaseConfig">database_config</a></code> | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigDatabaseConfig">ComposerEnvironmentConfigDatabaseConfig</a></code> | database_config block. |
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigA.property.dataRetentionConfig">data_retention_config</a></code> | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigDataRetentionConfig">ComposerEnvironmentConfigDataRetentionConfig</a></code> | data_retention_config block. |
-| <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigA.property.enablePrivateBuildsOnly">enable_private_builds_only</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Optional. |
-| <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigA.property.enablePrivateEnvironment">enable_private_environment</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Optional. If true, a private Composer environment will be created. |
+| <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigA.property.enablePrivateBuildsOnly">enable_private_builds_only</a></code> | <code>bool \| cdktf.IResolvable</code> | Optional. |
+| <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigA.property.enablePrivateEnvironment">enable_private_environment</a></code> | <code>bool \| cdktf.IResolvable</code> | Optional. If true, a private Composer environment will be created. |
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigA.property.encryptionConfig">encryption_config</a></code> | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigEncryptionConfig">ComposerEnvironmentConfigEncryptionConfig</a></code> | encryption_config block. |
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigA.property.environmentSize">environment_size</a></code> | <code>str</code> | The size of the Cloud Composer environment. |
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigA.property.maintenanceWindow">maintenance_window</a></code> | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigMaintenanceWindow">ComposerEnvironmentConfigMaintenanceWindow</a></code> | maintenance_window block. |
@@ -1695,10 +1695,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `enable_private_builds_only`<sup>Optional</sup> <a name="enable_private_builds_only" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigA.property.enablePrivateBuildsOnly"></a>
 
 ```python
-enable_private_builds_only: typing.Union[bool, IResolvable]
+enable_private_builds_only: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Optional.
 
@@ -1711,10 +1711,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `enable_private_environment`<sup>Optional</sup> <a name="enable_private_environment" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigA.property.enablePrivateEnvironment"></a>
 
 ```python
-enable_private_environment: typing.Union[bool, IResolvable]
+enable_private_environment: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Optional. If true, a private Composer environment will be created.
 
@@ -1970,8 +1970,8 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 from cdktf_cdktf_provider_google import composer_environment
 
 composerEnvironment.ComposerEnvironmentConfigDataRetentionConfig(
-  airflow_metadata_retention_config: typing.Union[IResolvable, typing.List[ComposerEnvironmentConfigDataRetentionConfigAirflowMetadataRetentionConfig]] = None,
-  task_logs_retention_config: typing.Union[IResolvable, typing.List[ComposerEnvironmentConfigDataRetentionConfigTaskLogsRetentionConfig]] = None
+  airflow_metadata_retention_config: IResolvable | typing.List[ComposerEnvironmentConfigDataRetentionConfigAirflowMetadataRetentionConfig] = None,
+  task_logs_retention_config: IResolvable | typing.List[ComposerEnvironmentConfigDataRetentionConfigTaskLogsRetentionConfig] = None
 )
 ```
 
@@ -1979,18 +1979,18 @@ composerEnvironment.ComposerEnvironmentConfigDataRetentionConfig(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigDataRetentionConfig.property.airflowMetadataRetentionConfig">airflow_metadata_retention_config</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigDataRetentionConfigAirflowMetadataRetentionConfig">ComposerEnvironmentConfigDataRetentionConfigAirflowMetadataRetentionConfig</a>]]</code> | airflow_metadata_retention_config block. |
-| <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigDataRetentionConfig.property.taskLogsRetentionConfig">task_logs_retention_config</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigDataRetentionConfigTaskLogsRetentionConfig">ComposerEnvironmentConfigDataRetentionConfigTaskLogsRetentionConfig</a>]]</code> | task_logs_retention_config block. |
+| <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigDataRetentionConfig.property.airflowMetadataRetentionConfig">airflow_metadata_retention_config</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigDataRetentionConfigAirflowMetadataRetentionConfig">ComposerEnvironmentConfigDataRetentionConfigAirflowMetadataRetentionConfig</a>]</code> | airflow_metadata_retention_config block. |
+| <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigDataRetentionConfig.property.taskLogsRetentionConfig">task_logs_retention_config</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigDataRetentionConfigTaskLogsRetentionConfig">ComposerEnvironmentConfigDataRetentionConfigTaskLogsRetentionConfig</a>]</code> | task_logs_retention_config block. |
 
 ---
 
 ##### `airflow_metadata_retention_config`<sup>Optional</sup> <a name="airflow_metadata_retention_config" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigDataRetentionConfig.property.airflowMetadataRetentionConfig"></a>
 
 ```python
-airflow_metadata_retention_config: typing.Union[IResolvable, typing.List[ComposerEnvironmentConfigDataRetentionConfigAirflowMetadataRetentionConfig]]
+airflow_metadata_retention_config: IResolvable | typing.List[ComposerEnvironmentConfigDataRetentionConfigAirflowMetadataRetentionConfig]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigDataRetentionConfigAirflowMetadataRetentionConfig">ComposerEnvironmentConfigDataRetentionConfigAirflowMetadataRetentionConfig</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigDataRetentionConfigAirflowMetadataRetentionConfig">ComposerEnvironmentConfigDataRetentionConfigAirflowMetadataRetentionConfig</a>]
 
 airflow_metadata_retention_config block.
 
@@ -2001,10 +2001,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `task_logs_retention_config`<sup>Optional</sup> <a name="task_logs_retention_config" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigDataRetentionConfig.property.taskLogsRetentionConfig"></a>
 
 ```python
-task_logs_retention_config: typing.Union[IResolvable, typing.List[ComposerEnvironmentConfigDataRetentionConfigTaskLogsRetentionConfig]]
+task_logs_retention_config: IResolvable | typing.List[ComposerEnvironmentConfigDataRetentionConfigTaskLogsRetentionConfig]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigDataRetentionConfigTaskLogsRetentionConfig">ComposerEnvironmentConfigDataRetentionConfigTaskLogsRetentionConfig</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigDataRetentionConfigTaskLogsRetentionConfig">ComposerEnvironmentConfigDataRetentionConfigTaskLogsRetentionConfig</a>]
 
 task_logs_retention_config block.
 
@@ -2214,8 +2214,8 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 from cdktf_cdktf_provider_google import composer_environment
 
 composerEnvironment.ComposerEnvironmentConfigMasterAuthorizedNetworksConfig(
-  enabled: typing.Union[bool, IResolvable],
-  cidr_blocks: typing.Union[IResolvable, typing.List[ComposerEnvironmentConfigMasterAuthorizedNetworksConfigCidrBlocks]] = None
+  enabled: bool | IResolvable,
+  cidr_blocks: IResolvable | typing.List[ComposerEnvironmentConfigMasterAuthorizedNetworksConfigCidrBlocks] = None
 )
 ```
 
@@ -2223,18 +2223,18 @@ composerEnvironment.ComposerEnvironmentConfigMasterAuthorizedNetworksConfig(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigMasterAuthorizedNetworksConfig.property.enabled">enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Whether or not master authorized networks is enabled. |
-| <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigMasterAuthorizedNetworksConfig.property.cidrBlocks">cidr_blocks</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigMasterAuthorizedNetworksConfigCidrBlocks">ComposerEnvironmentConfigMasterAuthorizedNetworksConfigCidrBlocks</a>]]</code> | cidr_blocks block. |
+| <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigMasterAuthorizedNetworksConfig.property.enabled">enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | Whether or not master authorized networks is enabled. |
+| <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigMasterAuthorizedNetworksConfig.property.cidrBlocks">cidr_blocks</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigMasterAuthorizedNetworksConfigCidrBlocks">ComposerEnvironmentConfigMasterAuthorizedNetworksConfigCidrBlocks</a>]</code> | cidr_blocks block. |
 
 ---
 
 ##### `enabled`<sup>Required</sup> <a name="enabled" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigMasterAuthorizedNetworksConfig.property.enabled"></a>
 
 ```python
-enabled: typing.Union[bool, IResolvable]
+enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Whether or not master authorized networks is enabled.
 
@@ -2245,10 +2245,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `cidr_blocks`<sup>Optional</sup> <a name="cidr_blocks" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigMasterAuthorizedNetworksConfig.property.cidrBlocks"></a>
 
 ```python
-cidr_blocks: typing.Union[IResolvable, typing.List[ComposerEnvironmentConfigMasterAuthorizedNetworksConfigCidrBlocks]]
+cidr_blocks: IResolvable | typing.List[ComposerEnvironmentConfigMasterAuthorizedNetworksConfigCidrBlocks]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigMasterAuthorizedNetworksConfigCidrBlocks">ComposerEnvironmentConfigMasterAuthorizedNetworksConfigCidrBlocks</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigMasterAuthorizedNetworksConfigCidrBlocks">ComposerEnvironmentConfigMasterAuthorizedNetworksConfigCidrBlocks</a>]
 
 cidr_blocks block.
 
@@ -2317,7 +2317,7 @@ composerEnvironment.ComposerEnvironmentConfigNodeConfig(
   composer_internal_ipv4_cidr_block: str = None,
   composer_network_attachment: str = None,
   disk_size_gb: typing.Union[int, float] = None,
-  enable_ip_masq_agent: typing.Union[bool, IResolvable] = None,
+  enable_ip_masq_agent: bool | IResolvable = None,
   ip_allocation_policy: ComposerEnvironmentConfigNodeConfigIpAllocationPolicy = None,
   machine_type: str = None,
   network: str = None,
@@ -2336,7 +2336,7 @@ composerEnvironment.ComposerEnvironmentConfigNodeConfig(
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigNodeConfig.property.composerInternalIpv4CidrBlock">composer_internal_ipv4_cidr_block</a></code> | <code>str</code> | IPv4 cidr range that will be used by Composer internal components. |
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigNodeConfig.property.composerNetworkAttachment">composer_network_attachment</a></code> | <code>str</code> | PSC (Private Service Connect) Network entry point. |
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigNodeConfig.property.diskSizeGb">disk_size_gb</a></code> | <code>typing.Union[int, float]</code> | The disk size in GB used for node VMs. |
-| <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigNodeConfig.property.enableIpMasqAgent">enable_ip_masq_agent</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Deploys 'ip-masq-agent' daemon set in the GKE cluster and defines nonMasqueradeCIDRs equals to pod IP range so IP masquerading is used for all destination addresses, except between pods traffic. |
+| <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigNodeConfig.property.enableIpMasqAgent">enable_ip_masq_agent</a></code> | <code>bool \| cdktf.IResolvable</code> | Deploys 'ip-masq-agent' daemon set in the GKE cluster and defines nonMasqueradeCIDRs equals to pod IP range so IP masquerading is used for all destination addresses, except between pods traffic. |
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigNodeConfig.property.ipAllocationPolicy">ip_allocation_policy</a></code> | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigNodeConfigIpAllocationPolicy">ComposerEnvironmentConfigNodeConfigIpAllocationPolicy</a></code> | ip_allocation_policy block. |
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigNodeConfig.property.machineType">machine_type</a></code> | <code>str</code> | The Compute Engine machine type used for cluster instances, specified as a name or relative resource name. |
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigNodeConfig.property.network">network</a></code> | <code>str</code> | The Compute Engine machine type used for cluster instances, specified as a name or relative resource name. |
@@ -2397,10 +2397,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `enable_ip_masq_agent`<sup>Optional</sup> <a name="enable_ip_masq_agent" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigNodeConfig.property.enableIpMasqAgent"></a>
 
 ```python
-enable_ip_masq_agent: typing.Union[bool, IResolvable]
+enable_ip_masq_agent: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Deploys 'ip-masq-agent' daemon set in the GKE cluster and defines nonMasqueradeCIDRs equals to pod IP range so IP masquerading is used for all destination addresses, except between pods traffic.
 
@@ -2544,7 +2544,7 @@ composerEnvironment.ComposerEnvironmentConfigNodeConfigIpAllocationPolicy(
   cluster_secondary_range_name: str = None,
   services_ipv4_cidr_block: str = None,
   services_secondary_range_name: str = None,
-  use_ip_aliases: typing.Union[bool, IResolvable] = None
+  use_ip_aliases: bool | IResolvable = None
 )
 ```
 
@@ -2556,7 +2556,7 @@ composerEnvironment.ComposerEnvironmentConfigNodeConfigIpAllocationPolicy(
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigNodeConfigIpAllocationPolicy.property.clusterSecondaryRangeName">cluster_secondary_range_name</a></code> | <code>str</code> | The name of the cluster's secondary range used to allocate IP addresses to pods. |
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigNodeConfigIpAllocationPolicy.property.servicesIpv4CidrBlock">services_ipv4_cidr_block</a></code> | <code>str</code> | The IP address range used to allocate IP addresses in this cluster. |
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigNodeConfigIpAllocationPolicy.property.servicesSecondaryRangeName">services_secondary_range_name</a></code> | <code>str</code> | The name of the services' secondary range used to allocate IP addresses to the cluster. |
-| <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigNodeConfigIpAllocationPolicy.property.useIpAliases">use_ip_aliases</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Whether or not to enable Alias IPs in the GKE cluster. |
+| <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigNodeConfigIpAllocationPolicy.property.useIpAliases">use_ip_aliases</a></code> | <code>bool \| cdktf.IResolvable</code> | Whether or not to enable Alias IPs in the GKE cluster. |
 
 ---
 
@@ -2627,10 +2627,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `use_ip_aliases`<sup>Optional</sup> <a name="use_ip_aliases" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigNodeConfigIpAllocationPolicy.property.useIpAliases"></a>
 
 ```python
-use_ip_aliases: typing.Union[bool, IResolvable]
+use_ip_aliases: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Whether or not to enable Alias IPs in the GKE cluster.
 
@@ -2652,8 +2652,8 @@ composerEnvironment.ComposerEnvironmentConfigPrivateEnvironmentConfig(
   cloud_composer_network_ipv4_cidr_block: str = None,
   cloud_sql_ipv4_cidr_block: str = None,
   connection_type: str = None,
-  enable_private_endpoint: typing.Union[bool, IResolvable] = None,
-  enable_privately_used_public_ips: typing.Union[bool, IResolvable] = None,
+  enable_private_endpoint: bool | IResolvable = None,
+  enable_privately_used_public_ips: bool | IResolvable = None,
   master_ipv4_cidr_block: str = None,
   web_server_ipv4_cidr_block: str = None
 )
@@ -2667,8 +2667,8 @@ composerEnvironment.ComposerEnvironmentConfigPrivateEnvironmentConfig(
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigPrivateEnvironmentConfig.property.cloudComposerNetworkIpv4CidrBlock">cloud_composer_network_ipv4_cidr_block</a></code> | <code>str</code> | The CIDR block from which IP range for Cloud Composer Network in tenant project will be reserved. |
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigPrivateEnvironmentConfig.property.cloudSqlIpv4CidrBlock">cloud_sql_ipv4_cidr_block</a></code> | <code>str</code> | The CIDR block from which IP range in tenant project will be reserved for Cloud SQL. |
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigPrivateEnvironmentConfig.property.connectionType">connection_type</a></code> | <code>str</code> | Mode of internal communication within the Composer environment. Must be one of "VPC_PEERING" or "PRIVATE_SERVICE_CONNECT". |
-| <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigPrivateEnvironmentConfig.property.enablePrivateEndpoint">enable_private_endpoint</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | If true, access to the public endpoint of the GKE cluster is denied. |
-| <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigPrivateEnvironmentConfig.property.enablePrivatelyUsedPublicIps">enable_privately_used_public_ips</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | When enabled, IPs from public (non-RFC1918) ranges can be used for ip_allocation_policy.cluster_ipv4_cidr_block and ip_allocation_policy.service_ipv4_cidr_block. |
+| <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigPrivateEnvironmentConfig.property.enablePrivateEndpoint">enable_private_endpoint</a></code> | <code>bool \| cdktf.IResolvable</code> | If true, access to the public endpoint of the GKE cluster is denied. |
+| <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigPrivateEnvironmentConfig.property.enablePrivatelyUsedPublicIps">enable_privately_used_public_ips</a></code> | <code>bool \| cdktf.IResolvable</code> | When enabled, IPs from public (non-RFC1918) ranges can be used for ip_allocation_policy.cluster_ipv4_cidr_block and ip_allocation_policy.service_ipv4_cidr_block. |
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigPrivateEnvironmentConfig.property.masterIpv4CidrBlock">master_ipv4_cidr_block</a></code> | <code>str</code> | The IP range in CIDR notation to use for the hosted master network. |
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigPrivateEnvironmentConfig.property.webServerIpv4CidrBlock">web_server_ipv4_cidr_block</a></code> | <code>str</code> | The CIDR block from which IP range for web server will be reserved. |
 
@@ -2739,10 +2739,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `enable_private_endpoint`<sup>Optional</sup> <a name="enable_private_endpoint" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigPrivateEnvironmentConfig.property.enablePrivateEndpoint"></a>
 
 ```python
-enable_private_endpoint: typing.Union[bool, IResolvable]
+enable_private_endpoint: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 If true, access to the public endpoint of the GKE cluster is denied.
 
@@ -2755,10 +2755,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `enable_privately_used_public_ips`<sup>Optional</sup> <a name="enable_privately_used_public_ips" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigPrivateEnvironmentConfig.property.enablePrivatelyUsedPublicIps"></a>
 
 ```python
-enable_privately_used_public_ips: typing.Union[bool, IResolvable]
+enable_privately_used_public_ips: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 When enabled, IPs from public (non-RFC1918) ranges can be used for ip_allocation_policy.cluster_ipv4_cidr_block and ip_allocation_policy.service_ipv4_cidr_block.
 
@@ -2840,7 +2840,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 from cdktf_cdktf_provider_google import composer_environment
 
 composerEnvironment.ComposerEnvironmentConfigRecoveryConfigScheduledSnapshotsConfig(
-  enabled: typing.Union[bool, IResolvable],
+  enabled: bool | IResolvable,
   snapshot_creation_schedule: str = None,
   snapshot_location: str = None,
   time_zone: str = None
@@ -2851,7 +2851,7 @@ composerEnvironment.ComposerEnvironmentConfigRecoveryConfigScheduledSnapshotsCon
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigRecoveryConfigScheduledSnapshotsConfig.property.enabled">enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | When enabled, Cloud Composer periodically saves snapshots of your environment to a Cloud Storage bucket. |
+| <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigRecoveryConfigScheduledSnapshotsConfig.property.enabled">enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | When enabled, Cloud Composer periodically saves snapshots of your environment to a Cloud Storage bucket. |
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigRecoveryConfigScheduledSnapshotsConfig.property.snapshotCreationSchedule">snapshot_creation_schedule</a></code> | <code>str</code> | Snapshot schedule, in the unix-cron format. |
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigRecoveryConfigScheduledSnapshotsConfig.property.snapshotLocation">snapshot_location</a></code> | <code>str</code> | the URI of a bucket folder where to save the snapshot. |
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigRecoveryConfigScheduledSnapshotsConfig.property.timeZone">time_zone</a></code> | <code>str</code> | A time zone for the schedule. |
@@ -2861,10 +2861,10 @@ composerEnvironment.ComposerEnvironmentConfigRecoveryConfigScheduledSnapshotsCon
 ##### `enabled`<sup>Required</sup> <a name="enabled" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigRecoveryConfigScheduledSnapshotsConfig.property.enabled"></a>
 
 ```python
-enabled: typing.Union[bool, IResolvable]
+enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 When enabled, Cloud Composer periodically saves snapshots of your environment to a Cloud Storage bucket.
 
@@ -3080,7 +3080,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 from cdktf_cdktf_provider_google import composer_environment
 
 composerEnvironment.ComposerEnvironmentConfigSoftwareConfigCloudDataLineageIntegration(
-  enabled: typing.Union[bool, IResolvable]
+  enabled: bool | IResolvable
 )
 ```
 
@@ -3088,17 +3088,17 @@ composerEnvironment.ComposerEnvironmentConfigSoftwareConfigCloudDataLineageInteg
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigSoftwareConfigCloudDataLineageIntegration.property.enabled">enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Whether or not Cloud Data Lineage integration is enabled. |
+| <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigSoftwareConfigCloudDataLineageIntegration.property.enabled">enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | Whether or not Cloud Data Lineage integration is enabled. |
 
 ---
 
 ##### `enabled`<sup>Required</sup> <a name="enabled" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigSoftwareConfigCloudDataLineageIntegration.property.enabled"></a>
 
 ```python
-enabled: typing.Union[bool, IResolvable]
+enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Whether or not Cloud Data Lineage integration is enabled.
 
@@ -3150,7 +3150,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 from cdktf_cdktf_provider_google import composer_environment
 
 composerEnvironment.ComposerEnvironmentConfigWebServerNetworkAccessControl(
-  allowed_ip_range: typing.Union[IResolvable, typing.List[ComposerEnvironmentConfigWebServerNetworkAccessControlAllowedIpRange]] = None
+  allowed_ip_range: IResolvable | typing.List[ComposerEnvironmentConfigWebServerNetworkAccessControlAllowedIpRange] = None
 )
 ```
 
@@ -3158,17 +3158,17 @@ composerEnvironment.ComposerEnvironmentConfigWebServerNetworkAccessControl(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigWebServerNetworkAccessControl.property.allowedIpRange">allowed_ip_range</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigWebServerNetworkAccessControlAllowedIpRange">ComposerEnvironmentConfigWebServerNetworkAccessControlAllowedIpRange</a>]]</code> | allowed_ip_range block. |
+| <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigWebServerNetworkAccessControl.property.allowedIpRange">allowed_ip_range</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigWebServerNetworkAccessControlAllowedIpRange">ComposerEnvironmentConfigWebServerNetworkAccessControlAllowedIpRange</a>]</code> | allowed_ip_range block. |
 
 ---
 
 ##### `allowed_ip_range`<sup>Optional</sup> <a name="allowed_ip_range" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigWebServerNetworkAccessControl.property.allowedIpRange"></a>
 
 ```python
-allowed_ip_range: typing.Union[IResolvable, typing.List[ComposerEnvironmentConfigWebServerNetworkAccessControlAllowedIpRange]]
+allowed_ip_range: IResolvable | typing.List[ComposerEnvironmentConfigWebServerNetworkAccessControlAllowedIpRange]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigWebServerNetworkAccessControlAllowedIpRange">ComposerEnvironmentConfigWebServerNetworkAccessControlAllowedIpRange</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigWebServerNetworkAccessControlAllowedIpRange">ComposerEnvironmentConfigWebServerNetworkAccessControlAllowedIpRange</a>]
 
 allowed_ip_range block.
 
@@ -4108,14 +4108,14 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ```python
 def put_data_retention_config(
-  airflow_metadata_retention_config: typing.Union[IResolvable, typing.List[ComposerEnvironmentConfigDataRetentionConfigAirflowMetadataRetentionConfig]] = None,
-  task_logs_retention_config: typing.Union[IResolvable, typing.List[ComposerEnvironmentConfigDataRetentionConfigTaskLogsRetentionConfig]] = None
+  airflow_metadata_retention_config: IResolvable | typing.List[ComposerEnvironmentConfigDataRetentionConfigAirflowMetadataRetentionConfig] = None,
+  task_logs_retention_config: IResolvable | typing.List[ComposerEnvironmentConfigDataRetentionConfigTaskLogsRetentionConfig] = None
 ) -> None
 ```
 
 ###### `airflow_metadata_retention_config`<sup>Optional</sup> <a name="airflow_metadata_retention_config" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigAOutputReference.putDataRetentionConfig.parameter.airflowMetadataRetentionConfig"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigDataRetentionConfigAirflowMetadataRetentionConfig">ComposerEnvironmentConfigDataRetentionConfigAirflowMetadataRetentionConfig</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigDataRetentionConfigAirflowMetadataRetentionConfig">ComposerEnvironmentConfigDataRetentionConfigAirflowMetadataRetentionConfig</a>]
 
 airflow_metadata_retention_config block.
 
@@ -4125,7 +4125,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `task_logs_retention_config`<sup>Optional</sup> <a name="task_logs_retention_config" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigAOutputReference.putDataRetentionConfig.parameter.taskLogsRetentionConfig"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigDataRetentionConfigTaskLogsRetentionConfig">ComposerEnvironmentConfigDataRetentionConfigTaskLogsRetentionConfig</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigDataRetentionConfigTaskLogsRetentionConfig">ComposerEnvironmentConfigDataRetentionConfigTaskLogsRetentionConfig</a>]
 
 task_logs_retention_config block.
 
@@ -4199,14 +4199,14 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ```python
 def put_master_authorized_networks_config(
-  enabled: typing.Union[bool, IResolvable],
-  cidr_blocks: typing.Union[IResolvable, typing.List[ComposerEnvironmentConfigMasterAuthorizedNetworksConfigCidrBlocks]] = None
+  enabled: bool | IResolvable,
+  cidr_blocks: IResolvable | typing.List[ComposerEnvironmentConfigMasterAuthorizedNetworksConfigCidrBlocks] = None
 ) -> None
 ```
 
 ###### `enabled`<sup>Required</sup> <a name="enabled" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigAOutputReference.putMasterAuthorizedNetworksConfig.parameter.enabled"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Whether or not master authorized networks is enabled.
 
@@ -4216,7 +4216,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `cidr_blocks`<sup>Optional</sup> <a name="cidr_blocks" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigAOutputReference.putMasterAuthorizedNetworksConfig.parameter.cidrBlocks"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigMasterAuthorizedNetworksConfigCidrBlocks">ComposerEnvironmentConfigMasterAuthorizedNetworksConfigCidrBlocks</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigMasterAuthorizedNetworksConfigCidrBlocks">ComposerEnvironmentConfigMasterAuthorizedNetworksConfigCidrBlocks</a>]
 
 cidr_blocks block.
 
@@ -4231,7 +4231,7 @@ def put_node_config(
   composer_internal_ipv4_cidr_block: str = None,
   composer_network_attachment: str = None,
   disk_size_gb: typing.Union[int, float] = None,
-  enable_ip_masq_agent: typing.Union[bool, IResolvable] = None,
+  enable_ip_masq_agent: bool | IResolvable = None,
   ip_allocation_policy: ComposerEnvironmentConfigNodeConfigIpAllocationPolicy = None,
   machine_type: str = None,
   network: str = None,
@@ -4279,7 +4279,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `enable_ip_masq_agent`<sup>Optional</sup> <a name="enable_ip_masq_agent" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigAOutputReference.putNodeConfig.parameter.enableIpMasqAgent"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Deploys 'ip-masq-agent' daemon set in the GKE cluster and defines nonMasqueradeCIDRs equals to pod IP range so IP masquerading is used for all destination addresses, except between pods traffic.
 
@@ -4387,8 +4387,8 @@ def put_private_environment_config(
   cloud_composer_network_ipv4_cidr_block: str = None,
   cloud_sql_ipv4_cidr_block: str = None,
   connection_type: str = None,
-  enable_private_endpoint: typing.Union[bool, IResolvable] = None,
-  enable_privately_used_public_ips: typing.Union[bool, IResolvable] = None,
+  enable_private_endpoint: bool | IResolvable = None,
+  enable_privately_used_public_ips: bool | IResolvable = None,
   master_ipv4_cidr_block: str = None,
   web_server_ipv4_cidr_block: str = None
 ) -> None
@@ -4442,7 +4442,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `enable_private_endpoint`<sup>Optional</sup> <a name="enable_private_endpoint" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigAOutputReference.putPrivateEnvironmentConfig.parameter.enablePrivateEndpoint"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 If true, access to the public endpoint of the GKE cluster is denied.
 
@@ -4454,7 +4454,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `enable_privately_used_public_ips`<sup>Optional</sup> <a name="enable_privately_used_public_ips" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigAOutputReference.putPrivateEnvironmentConfig.parameter.enablePrivatelyUsedPublicIps"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 When enabled, IPs from public (non-RFC1918) ranges can be used for ip_allocation_policy.cluster_ipv4_cidr_block and ip_allocation_policy.service_ipv4_cidr_block.
 
@@ -4633,13 +4633,13 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ```python
 def put_web_server_network_access_control(
-  allowed_ip_range: typing.Union[IResolvable, typing.List[ComposerEnvironmentConfigWebServerNetworkAccessControlAllowedIpRange]] = None
+  allowed_ip_range: IResolvable | typing.List[ComposerEnvironmentConfigWebServerNetworkAccessControlAllowedIpRange] = None
 ) -> None
 ```
 
 ###### `allowed_ip_range`<sup>Optional</sup> <a name="allowed_ip_range" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigAOutputReference.putWebServerNetworkAccessControl.parameter.allowedIpRange"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigWebServerNetworkAccessControlAllowedIpRange">ComposerEnvironmentConfigWebServerNetworkAccessControlAllowedIpRange</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigWebServerNetworkAccessControlAllowedIpRange">ComposerEnvironmentConfigWebServerNetworkAccessControlAllowedIpRange</a>]
 
 allowed_ip_range block.
 
@@ -4835,8 +4835,8 @@ def reset_workloads_config() -> None
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigAOutputReference.property.workloadsConfig">workloads_config</a></code> | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigWorkloadsConfigOutputReference">ComposerEnvironmentConfigWorkloadsConfigOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigAOutputReference.property.databaseConfigInput">database_config_input</a></code> | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigDatabaseConfig">ComposerEnvironmentConfigDatabaseConfig</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigAOutputReference.property.dataRetentionConfigInput">data_retention_config_input</a></code> | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigDataRetentionConfig">ComposerEnvironmentConfigDataRetentionConfig</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigAOutputReference.property.enablePrivateBuildsOnlyInput">enable_private_builds_only_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigAOutputReference.property.enablePrivateEnvironmentInput">enable_private_environment_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigAOutputReference.property.enablePrivateBuildsOnlyInput">enable_private_builds_only_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigAOutputReference.property.enablePrivateEnvironmentInput">enable_private_environment_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigAOutputReference.property.encryptionConfigInput">encryption_config_input</a></code> | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigEncryptionConfig">ComposerEnvironmentConfigEncryptionConfig</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigAOutputReference.property.environmentSizeInput">environment_size_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigAOutputReference.property.maintenanceWindowInput">maintenance_window_input</a></code> | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigMaintenanceWindow">ComposerEnvironmentConfigMaintenanceWindow</a></code> | *No description.* |
@@ -4850,8 +4850,8 @@ def reset_workloads_config() -> None
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigAOutputReference.property.webServerConfigInput">web_server_config_input</a></code> | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigWebServerConfig">ComposerEnvironmentConfigWebServerConfig</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigAOutputReference.property.webServerNetworkAccessControlInput">web_server_network_access_control_input</a></code> | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigWebServerNetworkAccessControl">ComposerEnvironmentConfigWebServerNetworkAccessControl</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigAOutputReference.property.workloadsConfigInput">workloads_config_input</a></code> | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigWorkloadsConfig">ComposerEnvironmentConfigWorkloadsConfig</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigAOutputReference.property.enablePrivateBuildsOnly">enable_private_builds_only</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigAOutputReference.property.enablePrivateEnvironment">enable_private_environment</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigAOutputReference.property.enablePrivateBuildsOnly">enable_private_builds_only</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigAOutputReference.property.enablePrivateEnvironment">enable_private_environment</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigAOutputReference.property.environmentSize">environment_size</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigAOutputReference.property.nodeCount">node_count</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigAOutputReference.property.resilienceMode">resilience_mode</a></code> | <code>str</code> | *No description.* |
@@ -5056,20 +5056,20 @@ data_retention_config_input: ComposerEnvironmentConfigDataRetentionConfig
 ##### `enable_private_builds_only_input`<sup>Optional</sup> <a name="enable_private_builds_only_input" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigAOutputReference.property.enablePrivateBuildsOnlyInput"></a>
 
 ```python
-enable_private_builds_only_input: typing.Union[bool, IResolvable]
+enable_private_builds_only_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `enable_private_environment_input`<sup>Optional</sup> <a name="enable_private_environment_input" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigAOutputReference.property.enablePrivateEnvironmentInput"></a>
 
 ```python
-enable_private_environment_input: typing.Union[bool, IResolvable]
+enable_private_environment_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -5206,20 +5206,20 @@ workloads_config_input: ComposerEnvironmentConfigWorkloadsConfig
 ##### `enable_private_builds_only`<sup>Required</sup> <a name="enable_private_builds_only" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigAOutputReference.property.enablePrivateBuildsOnly"></a>
 
 ```python
-enable_private_builds_only: typing.Union[bool, IResolvable]
+enable_private_builds_only: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `enable_private_environment`<sup>Required</sup> <a name="enable_private_environment" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigAOutputReference.property.enablePrivateEnvironment"></a>
 
 ```python
-enable_private_environment: typing.Union[bool, IResolvable]
+enable_private_environment: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -5727,7 +5727,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigDataRetentionConfigAirflowMetadataRetentionConfigList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigDataRetentionConfigAirflowMetadataRetentionConfigList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigDataRetentionConfigAirflowMetadataRetentionConfigList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigDataRetentionConfigAirflowMetadataRetentionConfig">ComposerEnvironmentConfigDataRetentionConfigAirflowMetadataRetentionConfig</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigDataRetentionConfigAirflowMetadataRetentionConfigList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigDataRetentionConfigAirflowMetadataRetentionConfig">ComposerEnvironmentConfigDataRetentionConfigAirflowMetadataRetentionConfig</a>]</code> | *No description.* |
 
 ---
 
@@ -5758,10 +5758,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigDataRetentionConfigAirflowMetadataRetentionConfigList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[ComposerEnvironmentConfigDataRetentionConfigAirflowMetadataRetentionConfig]]
+internal_value: IResolvable | typing.List[ComposerEnvironmentConfigDataRetentionConfigAirflowMetadataRetentionConfig]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigDataRetentionConfigAirflowMetadataRetentionConfig">ComposerEnvironmentConfigDataRetentionConfigAirflowMetadataRetentionConfig</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigDataRetentionConfigAirflowMetadataRetentionConfig">ComposerEnvironmentConfigDataRetentionConfigAirflowMetadataRetentionConfig</a>]
 
 ---
 
@@ -6039,7 +6039,7 @@ def reset_retention_mode() -> None
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigDataRetentionConfigAirflowMetadataRetentionConfigOutputReference.property.retentionModeInput">retention_mode_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigDataRetentionConfigAirflowMetadataRetentionConfigOutputReference.property.retentionDays">retention_days</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigDataRetentionConfigAirflowMetadataRetentionConfigOutputReference.property.retentionMode">retention_mode</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigDataRetentionConfigAirflowMetadataRetentionConfigOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigDataRetentionConfigAirflowMetadataRetentionConfig">ComposerEnvironmentConfigDataRetentionConfigAirflowMetadataRetentionConfig</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigDataRetentionConfigAirflowMetadataRetentionConfigOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigDataRetentionConfigAirflowMetadataRetentionConfig">ComposerEnvironmentConfigDataRetentionConfigAirflowMetadataRetentionConfig</a></code> | *No description.* |
 
 ---
 
@@ -6110,10 +6110,10 @@ retention_mode: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigDataRetentionConfigAirflowMetadataRetentionConfigOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, ComposerEnvironmentConfigDataRetentionConfigAirflowMetadataRetentionConfig]
+internal_value: IResolvable | ComposerEnvironmentConfigDataRetentionConfigAirflowMetadataRetentionConfig
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigDataRetentionConfigAirflowMetadataRetentionConfig">ComposerEnvironmentConfigDataRetentionConfigAirflowMetadataRetentionConfig</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigDataRetentionConfigAirflowMetadataRetentionConfig">ComposerEnvironmentConfigDataRetentionConfigAirflowMetadataRetentionConfig</a>
 
 ---
 
@@ -6354,13 +6354,13 @@ Returns a reversible string representation.
 
 ```python
 def put_airflow_metadata_retention_config(
-  value: typing.Union[IResolvable, typing.List[ComposerEnvironmentConfigDataRetentionConfigAirflowMetadataRetentionConfig]]
+  value: IResolvable | typing.List[ComposerEnvironmentConfigDataRetentionConfigAirflowMetadataRetentionConfig]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigDataRetentionConfigOutputReference.putAirflowMetadataRetentionConfig.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigDataRetentionConfigAirflowMetadataRetentionConfig">ComposerEnvironmentConfigDataRetentionConfigAirflowMetadataRetentionConfig</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigDataRetentionConfigAirflowMetadataRetentionConfig">ComposerEnvironmentConfigDataRetentionConfigAirflowMetadataRetentionConfig</a>]
 
 ---
 
@@ -6368,13 +6368,13 @@ def put_airflow_metadata_retention_config(
 
 ```python
 def put_task_logs_retention_config(
-  value: typing.Union[IResolvable, typing.List[ComposerEnvironmentConfigDataRetentionConfigTaskLogsRetentionConfig]]
+  value: IResolvable | typing.List[ComposerEnvironmentConfigDataRetentionConfigTaskLogsRetentionConfig]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigDataRetentionConfigOutputReference.putTaskLogsRetentionConfig.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigDataRetentionConfigTaskLogsRetentionConfig">ComposerEnvironmentConfigDataRetentionConfigTaskLogsRetentionConfig</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigDataRetentionConfigTaskLogsRetentionConfig">ComposerEnvironmentConfigDataRetentionConfigTaskLogsRetentionConfig</a>]
 
 ---
 
@@ -6399,8 +6399,8 @@ def reset_task_logs_retention_config() -> None
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigDataRetentionConfigOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigDataRetentionConfigOutputReference.property.airflowMetadataRetentionConfig">airflow_metadata_retention_config</a></code> | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigDataRetentionConfigAirflowMetadataRetentionConfigList">ComposerEnvironmentConfigDataRetentionConfigAirflowMetadataRetentionConfigList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigDataRetentionConfigOutputReference.property.taskLogsRetentionConfig">task_logs_retention_config</a></code> | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigDataRetentionConfigTaskLogsRetentionConfigList">ComposerEnvironmentConfigDataRetentionConfigTaskLogsRetentionConfigList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigDataRetentionConfigOutputReference.property.airflowMetadataRetentionConfigInput">airflow_metadata_retention_config_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigDataRetentionConfigAirflowMetadataRetentionConfig">ComposerEnvironmentConfigDataRetentionConfigAirflowMetadataRetentionConfig</a>]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigDataRetentionConfigOutputReference.property.taskLogsRetentionConfigInput">task_logs_retention_config_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigDataRetentionConfigTaskLogsRetentionConfig">ComposerEnvironmentConfigDataRetentionConfigTaskLogsRetentionConfig</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigDataRetentionConfigOutputReference.property.airflowMetadataRetentionConfigInput">airflow_metadata_retention_config_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigDataRetentionConfigAirflowMetadataRetentionConfig">ComposerEnvironmentConfigDataRetentionConfigAirflowMetadataRetentionConfig</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigDataRetentionConfigOutputReference.property.taskLogsRetentionConfigInput">task_logs_retention_config_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigDataRetentionConfigTaskLogsRetentionConfig">ComposerEnvironmentConfigDataRetentionConfigTaskLogsRetentionConfig</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigDataRetentionConfigOutputReference.property.internalValue">internal_value</a></code> | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigDataRetentionConfig">ComposerEnvironmentConfigDataRetentionConfig</a></code> | *No description.* |
 
 ---
@@ -6452,20 +6452,20 @@ task_logs_retention_config: ComposerEnvironmentConfigDataRetentionConfigTaskLogs
 ##### `airflow_metadata_retention_config_input`<sup>Optional</sup> <a name="airflow_metadata_retention_config_input" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigDataRetentionConfigOutputReference.property.airflowMetadataRetentionConfigInput"></a>
 
 ```python
-airflow_metadata_retention_config_input: typing.Union[IResolvable, typing.List[ComposerEnvironmentConfigDataRetentionConfigAirflowMetadataRetentionConfig]]
+airflow_metadata_retention_config_input: IResolvable | typing.List[ComposerEnvironmentConfigDataRetentionConfigAirflowMetadataRetentionConfig]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigDataRetentionConfigAirflowMetadataRetentionConfig">ComposerEnvironmentConfigDataRetentionConfigAirflowMetadataRetentionConfig</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigDataRetentionConfigAirflowMetadataRetentionConfig">ComposerEnvironmentConfigDataRetentionConfigAirflowMetadataRetentionConfig</a>]
 
 ---
 
 ##### `task_logs_retention_config_input`<sup>Optional</sup> <a name="task_logs_retention_config_input" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigDataRetentionConfigOutputReference.property.taskLogsRetentionConfigInput"></a>
 
 ```python
-task_logs_retention_config_input: typing.Union[IResolvable, typing.List[ComposerEnvironmentConfigDataRetentionConfigTaskLogsRetentionConfig]]
+task_logs_retention_config_input: IResolvable | typing.List[ComposerEnvironmentConfigDataRetentionConfigTaskLogsRetentionConfig]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigDataRetentionConfigTaskLogsRetentionConfig">ComposerEnvironmentConfigDataRetentionConfigTaskLogsRetentionConfig</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigDataRetentionConfigTaskLogsRetentionConfig">ComposerEnvironmentConfigDataRetentionConfigTaskLogsRetentionConfig</a>]
 
 ---
 
@@ -6611,7 +6611,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigDataRetentionConfigTaskLogsRetentionConfigList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigDataRetentionConfigTaskLogsRetentionConfigList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigDataRetentionConfigTaskLogsRetentionConfigList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigDataRetentionConfigTaskLogsRetentionConfig">ComposerEnvironmentConfigDataRetentionConfigTaskLogsRetentionConfig</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigDataRetentionConfigTaskLogsRetentionConfigList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigDataRetentionConfigTaskLogsRetentionConfig">ComposerEnvironmentConfigDataRetentionConfigTaskLogsRetentionConfig</a>]</code> | *No description.* |
 
 ---
 
@@ -6642,10 +6642,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigDataRetentionConfigTaskLogsRetentionConfigList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[ComposerEnvironmentConfigDataRetentionConfigTaskLogsRetentionConfig]]
+internal_value: IResolvable | typing.List[ComposerEnvironmentConfigDataRetentionConfigTaskLogsRetentionConfig]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigDataRetentionConfigTaskLogsRetentionConfig">ComposerEnvironmentConfigDataRetentionConfigTaskLogsRetentionConfig</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigDataRetentionConfigTaskLogsRetentionConfig">ComposerEnvironmentConfigDataRetentionConfigTaskLogsRetentionConfig</a>]
 
 ---
 
@@ -6914,7 +6914,7 @@ def reset_storage_mode() -> None
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigDataRetentionConfigTaskLogsRetentionConfigOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigDataRetentionConfigTaskLogsRetentionConfigOutputReference.property.storageModeInput">storage_mode_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigDataRetentionConfigTaskLogsRetentionConfigOutputReference.property.storageMode">storage_mode</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigDataRetentionConfigTaskLogsRetentionConfigOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigDataRetentionConfigTaskLogsRetentionConfig">ComposerEnvironmentConfigDataRetentionConfigTaskLogsRetentionConfig</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigDataRetentionConfigTaskLogsRetentionConfigOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigDataRetentionConfigTaskLogsRetentionConfig">ComposerEnvironmentConfigDataRetentionConfigTaskLogsRetentionConfig</a></code> | *No description.* |
 
 ---
 
@@ -6965,10 +6965,10 @@ storage_mode: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigDataRetentionConfigTaskLogsRetentionConfigOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, ComposerEnvironmentConfigDataRetentionConfigTaskLogsRetentionConfig]
+internal_value: IResolvable | ComposerEnvironmentConfigDataRetentionConfigTaskLogsRetentionConfig
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigDataRetentionConfigTaskLogsRetentionConfig">ComposerEnvironmentConfigDataRetentionConfigTaskLogsRetentionConfig</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigDataRetentionConfigTaskLogsRetentionConfig">ComposerEnvironmentConfigDataRetentionConfigTaskLogsRetentionConfig</a>
 
 ---
 
@@ -7740,7 +7740,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigMasterAuthorizedNetworksConfigCidrBlocksList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigMasterAuthorizedNetworksConfigCidrBlocksList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigMasterAuthorizedNetworksConfigCidrBlocksList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigMasterAuthorizedNetworksConfigCidrBlocks">ComposerEnvironmentConfigMasterAuthorizedNetworksConfigCidrBlocks</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigMasterAuthorizedNetworksConfigCidrBlocksList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigMasterAuthorizedNetworksConfigCidrBlocks">ComposerEnvironmentConfigMasterAuthorizedNetworksConfigCidrBlocks</a>]</code> | *No description.* |
 
 ---
 
@@ -7771,10 +7771,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigMasterAuthorizedNetworksConfigCidrBlocksList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[ComposerEnvironmentConfigMasterAuthorizedNetworksConfigCidrBlocks]]
+internal_value: IResolvable | typing.List[ComposerEnvironmentConfigMasterAuthorizedNetworksConfigCidrBlocks]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigMasterAuthorizedNetworksConfigCidrBlocks">ComposerEnvironmentConfigMasterAuthorizedNetworksConfigCidrBlocks</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigMasterAuthorizedNetworksConfigCidrBlocks">ComposerEnvironmentConfigMasterAuthorizedNetworksConfigCidrBlocks</a>]
 
 ---
 
@@ -8045,7 +8045,7 @@ def reset_display_name() -> None
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigMasterAuthorizedNetworksConfigCidrBlocksOutputReference.property.displayNameInput">display_name_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigMasterAuthorizedNetworksConfigCidrBlocksOutputReference.property.cidrBlock">cidr_block</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigMasterAuthorizedNetworksConfigCidrBlocksOutputReference.property.displayName">display_name</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigMasterAuthorizedNetworksConfigCidrBlocksOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigMasterAuthorizedNetworksConfigCidrBlocks">ComposerEnvironmentConfigMasterAuthorizedNetworksConfigCidrBlocks</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigMasterAuthorizedNetworksConfigCidrBlocksOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigMasterAuthorizedNetworksConfigCidrBlocks">ComposerEnvironmentConfigMasterAuthorizedNetworksConfigCidrBlocks</a></code> | *No description.* |
 
 ---
 
@@ -8116,10 +8116,10 @@ display_name: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigMasterAuthorizedNetworksConfigCidrBlocksOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, ComposerEnvironmentConfigMasterAuthorizedNetworksConfigCidrBlocks]
+internal_value: IResolvable | ComposerEnvironmentConfigMasterAuthorizedNetworksConfigCidrBlocks
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigMasterAuthorizedNetworksConfigCidrBlocks">ComposerEnvironmentConfigMasterAuthorizedNetworksConfigCidrBlocks</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigMasterAuthorizedNetworksConfigCidrBlocks">ComposerEnvironmentConfigMasterAuthorizedNetworksConfigCidrBlocks</a>
 
 ---
 
@@ -8358,13 +8358,13 @@ Returns a reversible string representation.
 
 ```python
 def put_cidr_blocks(
-  value: typing.Union[IResolvable, typing.List[ComposerEnvironmentConfigMasterAuthorizedNetworksConfigCidrBlocks]]
+  value: IResolvable | typing.List[ComposerEnvironmentConfigMasterAuthorizedNetworksConfigCidrBlocks]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigMasterAuthorizedNetworksConfigOutputReference.putCidrBlocks.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigMasterAuthorizedNetworksConfigCidrBlocks">ComposerEnvironmentConfigMasterAuthorizedNetworksConfigCidrBlocks</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigMasterAuthorizedNetworksConfigCidrBlocks">ComposerEnvironmentConfigMasterAuthorizedNetworksConfigCidrBlocks</a>]
 
 ---
 
@@ -8382,9 +8382,9 @@ def reset_cidr_blocks() -> None
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigMasterAuthorizedNetworksConfigOutputReference.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigMasterAuthorizedNetworksConfigOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigMasterAuthorizedNetworksConfigOutputReference.property.cidrBlocks">cidr_blocks</a></code> | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigMasterAuthorizedNetworksConfigCidrBlocksList">ComposerEnvironmentConfigMasterAuthorizedNetworksConfigCidrBlocksList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigMasterAuthorizedNetworksConfigOutputReference.property.cidrBlocksInput">cidr_blocks_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigMasterAuthorizedNetworksConfigCidrBlocks">ComposerEnvironmentConfigMasterAuthorizedNetworksConfigCidrBlocks</a>]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigMasterAuthorizedNetworksConfigOutputReference.property.enabledInput">enabled_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigMasterAuthorizedNetworksConfigOutputReference.property.enabled">enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigMasterAuthorizedNetworksConfigOutputReference.property.cidrBlocksInput">cidr_blocks_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigMasterAuthorizedNetworksConfigCidrBlocks">ComposerEnvironmentConfigMasterAuthorizedNetworksConfigCidrBlocks</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigMasterAuthorizedNetworksConfigOutputReference.property.enabledInput">enabled_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigMasterAuthorizedNetworksConfigOutputReference.property.enabled">enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigMasterAuthorizedNetworksConfigOutputReference.property.internalValue">internal_value</a></code> | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigMasterAuthorizedNetworksConfig">ComposerEnvironmentConfigMasterAuthorizedNetworksConfig</a></code> | *No description.* |
 
 ---
@@ -8426,30 +8426,30 @@ cidr_blocks: ComposerEnvironmentConfigMasterAuthorizedNetworksConfigCidrBlocksLi
 ##### `cidr_blocks_input`<sup>Optional</sup> <a name="cidr_blocks_input" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigMasterAuthorizedNetworksConfigOutputReference.property.cidrBlocksInput"></a>
 
 ```python
-cidr_blocks_input: typing.Union[IResolvable, typing.List[ComposerEnvironmentConfigMasterAuthorizedNetworksConfigCidrBlocks]]
+cidr_blocks_input: IResolvable | typing.List[ComposerEnvironmentConfigMasterAuthorizedNetworksConfigCidrBlocks]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigMasterAuthorizedNetworksConfigCidrBlocks">ComposerEnvironmentConfigMasterAuthorizedNetworksConfigCidrBlocks</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigMasterAuthorizedNetworksConfigCidrBlocks">ComposerEnvironmentConfigMasterAuthorizedNetworksConfigCidrBlocks</a>]
 
 ---
 
 ##### `enabled_input`<sup>Optional</sup> <a name="enabled_input" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigMasterAuthorizedNetworksConfigOutputReference.property.enabledInput"></a>
 
 ```python
-enabled_input: typing.Union[bool, IResolvable]
+enabled_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `enabled`<sup>Required</sup> <a name="enabled" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigMasterAuthorizedNetworksConfigOutputReference.property.enabled"></a>
 
 ```python
-enabled: typing.Union[bool, IResolvable]
+enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -8738,12 +8738,12 @@ def reset_use_ip_aliases() -> None
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigNodeConfigIpAllocationPolicyOutputReference.property.clusterSecondaryRangeNameInput">cluster_secondary_range_name_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigNodeConfigIpAllocationPolicyOutputReference.property.servicesIpv4CidrBlockInput">services_ipv4_cidr_block_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigNodeConfigIpAllocationPolicyOutputReference.property.servicesSecondaryRangeNameInput">services_secondary_range_name_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigNodeConfigIpAllocationPolicyOutputReference.property.useIpAliasesInput">use_ip_aliases_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigNodeConfigIpAllocationPolicyOutputReference.property.useIpAliasesInput">use_ip_aliases_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigNodeConfigIpAllocationPolicyOutputReference.property.clusterIpv4CidrBlock">cluster_ipv4_cidr_block</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigNodeConfigIpAllocationPolicyOutputReference.property.clusterSecondaryRangeName">cluster_secondary_range_name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigNodeConfigIpAllocationPolicyOutputReference.property.servicesIpv4CidrBlock">services_ipv4_cidr_block</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigNodeConfigIpAllocationPolicyOutputReference.property.servicesSecondaryRangeName">services_secondary_range_name</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigNodeConfigIpAllocationPolicyOutputReference.property.useIpAliases">use_ip_aliases</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigNodeConfigIpAllocationPolicyOutputReference.property.useIpAliases">use_ip_aliases</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigNodeConfigIpAllocationPolicyOutputReference.property.internalValue">internal_value</a></code> | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigNodeConfigIpAllocationPolicy">ComposerEnvironmentConfigNodeConfigIpAllocationPolicy</a></code> | *No description.* |
 
 ---
@@ -8815,10 +8815,10 @@ services_secondary_range_name_input: str
 ##### `use_ip_aliases_input`<sup>Optional</sup> <a name="use_ip_aliases_input" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigNodeConfigIpAllocationPolicyOutputReference.property.useIpAliasesInput"></a>
 
 ```python
-use_ip_aliases_input: typing.Union[bool, IResolvable]
+use_ip_aliases_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -8865,10 +8865,10 @@ services_secondary_range_name: str
 ##### `use_ip_aliases`<sup>Required</sup> <a name="use_ip_aliases" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigNodeConfigIpAllocationPolicyOutputReference.property.useIpAliases"></a>
 
 ```python
-use_ip_aliases: typing.Union[bool, IResolvable]
+use_ip_aliases: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -9132,7 +9132,7 @@ def put_ip_allocation_policy(
   cluster_secondary_range_name: str = None,
   services_ipv4_cidr_block: str = None,
   services_secondary_range_name: str = None,
-  use_ip_aliases: typing.Union[bool, IResolvable] = None
+  use_ip_aliases: bool | IResolvable = None
 ) -> None
 ```
 
@@ -9186,7 +9186,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `use_ip_aliases`<sup>Optional</sup> <a name="use_ip_aliases" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigNodeConfigOutputReference.putIpAllocationPolicy.parameter.useIpAliases"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Whether or not to enable Alias IPs in the GKE cluster.
 
@@ -9279,7 +9279,7 @@ def reset_zone() -> None
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigNodeConfigOutputReference.property.composerInternalIpv4CidrBlockInput">composer_internal_ipv4_cidr_block_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigNodeConfigOutputReference.property.composerNetworkAttachmentInput">composer_network_attachment_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigNodeConfigOutputReference.property.diskSizeGbInput">disk_size_gb_input</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigNodeConfigOutputReference.property.enableIpMasqAgentInput">enable_ip_masq_agent_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigNodeConfigOutputReference.property.enableIpMasqAgentInput">enable_ip_masq_agent_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigNodeConfigOutputReference.property.ipAllocationPolicyInput">ip_allocation_policy_input</a></code> | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigNodeConfigIpAllocationPolicy">ComposerEnvironmentConfigNodeConfigIpAllocationPolicy</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigNodeConfigOutputReference.property.machineTypeInput">machine_type_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigNodeConfigOutputReference.property.networkInput">network_input</a></code> | <code>str</code> | *No description.* |
@@ -9291,7 +9291,7 @@ def reset_zone() -> None
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigNodeConfigOutputReference.property.composerInternalIpv4CidrBlock">composer_internal_ipv4_cidr_block</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigNodeConfigOutputReference.property.composerNetworkAttachment">composer_network_attachment</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigNodeConfigOutputReference.property.diskSizeGb">disk_size_gb</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigNodeConfigOutputReference.property.enableIpMasqAgent">enable_ip_masq_agent</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigNodeConfigOutputReference.property.enableIpMasqAgent">enable_ip_masq_agent</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigNodeConfigOutputReference.property.machineType">machine_type</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigNodeConfigOutputReference.property.network">network</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigNodeConfigOutputReference.property.oauthScopes">oauth_scopes</a></code> | <code>typing.List[str]</code> | *No description.* |
@@ -9370,10 +9370,10 @@ disk_size_gb_input: typing.Union[int, float]
 ##### `enable_ip_masq_agent_input`<sup>Optional</sup> <a name="enable_ip_masq_agent_input" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigNodeConfigOutputReference.property.enableIpMasqAgentInput"></a>
 
 ```python
-enable_ip_masq_agent_input: typing.Union[bool, IResolvable]
+enable_ip_masq_agent_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -9490,10 +9490,10 @@ disk_size_gb: typing.Union[int, float]
 ##### `enable_ip_masq_agent`<sup>Required</sup> <a name="enable_ip_masq_agent" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigNodeConfigOutputReference.property.enableIpMasqAgent"></a>
 
 ```python
-enable_ip_masq_agent: typing.Union[bool, IResolvable]
+enable_ip_masq_agent: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -9873,16 +9873,16 @@ def reset_web_server_ipv4_cidr_block() -> None
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigPrivateEnvironmentConfigOutputReference.property.cloudComposerNetworkIpv4CidrBlockInput">cloud_composer_network_ipv4_cidr_block_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigPrivateEnvironmentConfigOutputReference.property.cloudSqlIpv4CidrBlockInput">cloud_sql_ipv4_cidr_block_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigPrivateEnvironmentConfigOutputReference.property.connectionTypeInput">connection_type_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigPrivateEnvironmentConfigOutputReference.property.enablePrivateEndpointInput">enable_private_endpoint_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigPrivateEnvironmentConfigOutputReference.property.enablePrivatelyUsedPublicIpsInput">enable_privately_used_public_ips_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigPrivateEnvironmentConfigOutputReference.property.enablePrivateEndpointInput">enable_private_endpoint_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigPrivateEnvironmentConfigOutputReference.property.enablePrivatelyUsedPublicIpsInput">enable_privately_used_public_ips_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigPrivateEnvironmentConfigOutputReference.property.masterIpv4CidrBlockInput">master_ipv4_cidr_block_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigPrivateEnvironmentConfigOutputReference.property.webServerIpv4CidrBlockInput">web_server_ipv4_cidr_block_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigPrivateEnvironmentConfigOutputReference.property.cloudComposerConnectionSubnetwork">cloud_composer_connection_subnetwork</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigPrivateEnvironmentConfigOutputReference.property.cloudComposerNetworkIpv4CidrBlock">cloud_composer_network_ipv4_cidr_block</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigPrivateEnvironmentConfigOutputReference.property.cloudSqlIpv4CidrBlock">cloud_sql_ipv4_cidr_block</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigPrivateEnvironmentConfigOutputReference.property.connectionType">connection_type</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigPrivateEnvironmentConfigOutputReference.property.enablePrivateEndpoint">enable_private_endpoint</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigPrivateEnvironmentConfigOutputReference.property.enablePrivatelyUsedPublicIps">enable_privately_used_public_ips</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigPrivateEnvironmentConfigOutputReference.property.enablePrivateEndpoint">enable_private_endpoint</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigPrivateEnvironmentConfigOutputReference.property.enablePrivatelyUsedPublicIps">enable_privately_used_public_ips</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigPrivateEnvironmentConfigOutputReference.property.masterIpv4CidrBlock">master_ipv4_cidr_block</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigPrivateEnvironmentConfigOutputReference.property.webServerIpv4CidrBlock">web_server_ipv4_cidr_block</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigPrivateEnvironmentConfigOutputReference.property.internalValue">internal_value</a></code> | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigPrivateEnvironmentConfig">ComposerEnvironmentConfigPrivateEnvironmentConfig</a></code> | *No description.* |
@@ -9956,20 +9956,20 @@ connection_type_input: str
 ##### `enable_private_endpoint_input`<sup>Optional</sup> <a name="enable_private_endpoint_input" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigPrivateEnvironmentConfigOutputReference.property.enablePrivateEndpointInput"></a>
 
 ```python
-enable_private_endpoint_input: typing.Union[bool, IResolvable]
+enable_private_endpoint_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `enable_privately_used_public_ips_input`<sup>Optional</sup> <a name="enable_privately_used_public_ips_input" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigPrivateEnvironmentConfigOutputReference.property.enablePrivatelyUsedPublicIpsInput"></a>
 
 ```python
-enable_privately_used_public_ips_input: typing.Union[bool, IResolvable]
+enable_privately_used_public_ips_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -10036,20 +10036,20 @@ connection_type: str
 ##### `enable_private_endpoint`<sup>Required</sup> <a name="enable_private_endpoint" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigPrivateEnvironmentConfigOutputReference.property.enablePrivateEndpoint"></a>
 
 ```python
-enable_private_endpoint: typing.Union[bool, IResolvable]
+enable_private_endpoint: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `enable_privately_used_public_ips`<sup>Required</sup> <a name="enable_privately_used_public_ips" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigPrivateEnvironmentConfigOutputReference.property.enablePrivatelyUsedPublicIps"></a>
 
 ```python
-enable_privately_used_public_ips: typing.Union[bool, IResolvable]
+enable_privately_used_public_ips: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -10318,7 +10318,7 @@ Returns a reversible string representation.
 
 ```python
 def put_scheduled_snapshots_config(
-  enabled: typing.Union[bool, IResolvable],
+  enabled: bool | IResolvable,
   snapshot_creation_schedule: str = None,
   snapshot_location: str = None,
   time_zone: str = None
@@ -10327,7 +10327,7 @@ def put_scheduled_snapshots_config(
 
 ###### `enabled`<sup>Required</sup> <a name="enabled" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigRecoveryConfigOutputReference.putScheduledSnapshotsConfig.parameter.enabled"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 When enabled, Cloud Composer periodically saves snapshots of your environment to a Cloud Storage bucket.
 
@@ -10697,11 +10697,11 @@ def reset_time_zone() -> None
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigRecoveryConfigScheduledSnapshotsConfigOutputReference.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigRecoveryConfigScheduledSnapshotsConfigOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigRecoveryConfigScheduledSnapshotsConfigOutputReference.property.enabledInput">enabled_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigRecoveryConfigScheduledSnapshotsConfigOutputReference.property.enabledInput">enabled_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigRecoveryConfigScheduledSnapshotsConfigOutputReference.property.snapshotCreationScheduleInput">snapshot_creation_schedule_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigRecoveryConfigScheduledSnapshotsConfigOutputReference.property.snapshotLocationInput">snapshot_location_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigRecoveryConfigScheduledSnapshotsConfigOutputReference.property.timeZoneInput">time_zone_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigRecoveryConfigScheduledSnapshotsConfigOutputReference.property.enabled">enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigRecoveryConfigScheduledSnapshotsConfigOutputReference.property.enabled">enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigRecoveryConfigScheduledSnapshotsConfigOutputReference.property.snapshotCreationSchedule">snapshot_creation_schedule</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigRecoveryConfigScheduledSnapshotsConfigOutputReference.property.snapshotLocation">snapshot_location</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigRecoveryConfigScheduledSnapshotsConfigOutputReference.property.timeZone">time_zone</a></code> | <code>str</code> | *No description.* |
@@ -10736,10 +10736,10 @@ fqn: str
 ##### `enabled_input`<sup>Optional</sup> <a name="enabled_input" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigRecoveryConfigScheduledSnapshotsConfigOutputReference.property.enabledInput"></a>
 
 ```python
-enabled_input: typing.Union[bool, IResolvable]
+enabled_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -10776,10 +10776,10 @@ time_zone_input: str
 ##### `enabled`<sup>Required</sup> <a name="enabled" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigRecoveryConfigScheduledSnapshotsConfigOutputReference.property.enabled"></a>
 
 ```python
-enabled: typing.Union[bool, IResolvable]
+enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -11059,8 +11059,8 @@ Returns a reversible string representation.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigSoftwareConfigCloudDataLineageIntegrationOutputReference.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigSoftwareConfigCloudDataLineageIntegrationOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigSoftwareConfigCloudDataLineageIntegrationOutputReference.property.enabledInput">enabled_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigSoftwareConfigCloudDataLineageIntegrationOutputReference.property.enabled">enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigSoftwareConfigCloudDataLineageIntegrationOutputReference.property.enabledInput">enabled_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigSoftwareConfigCloudDataLineageIntegrationOutputReference.property.enabled">enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigSoftwareConfigCloudDataLineageIntegrationOutputReference.property.internalValue">internal_value</a></code> | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigSoftwareConfigCloudDataLineageIntegration">ComposerEnvironmentConfigSoftwareConfigCloudDataLineageIntegration</a></code> | *No description.* |
 
 ---
@@ -11092,20 +11092,20 @@ fqn: str
 ##### `enabled_input`<sup>Optional</sup> <a name="enabled_input" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigSoftwareConfigCloudDataLineageIntegrationOutputReference.property.enabledInput"></a>
 
 ```python
-enabled_input: typing.Union[bool, IResolvable]
+enabled_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `enabled`<sup>Required</sup> <a name="enabled" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigSoftwareConfigCloudDataLineageIntegrationOutputReference.property.enabled"></a>
 
 ```python
-enabled: typing.Union[bool, IResolvable]
+enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -11361,13 +11361,13 @@ Returns a reversible string representation.
 
 ```python
 def put_cloud_data_lineage_integration(
-  enabled: typing.Union[bool, IResolvable]
+  enabled: bool | IResolvable
 ) -> None
 ```
 
 ###### `enabled`<sup>Required</sup> <a name="enabled" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigSoftwareConfigOutputReference.putCloudDataLineageIntegration.parameter.enabled"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Whether or not Cloud Data Lineage integration is enabled.
 
@@ -12072,7 +12072,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigWebServerNetworkAccessControlAllowedIpRangeList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigWebServerNetworkAccessControlAllowedIpRangeList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigWebServerNetworkAccessControlAllowedIpRangeList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigWebServerNetworkAccessControlAllowedIpRange">ComposerEnvironmentConfigWebServerNetworkAccessControlAllowedIpRange</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigWebServerNetworkAccessControlAllowedIpRangeList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigWebServerNetworkAccessControlAllowedIpRange">ComposerEnvironmentConfigWebServerNetworkAccessControlAllowedIpRange</a>]</code> | *No description.* |
 
 ---
 
@@ -12103,10 +12103,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigWebServerNetworkAccessControlAllowedIpRangeList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[ComposerEnvironmentConfigWebServerNetworkAccessControlAllowedIpRange]]
+internal_value: IResolvable | typing.List[ComposerEnvironmentConfigWebServerNetworkAccessControlAllowedIpRange]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigWebServerNetworkAccessControlAllowedIpRange">ComposerEnvironmentConfigWebServerNetworkAccessControlAllowedIpRange</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigWebServerNetworkAccessControlAllowedIpRange">ComposerEnvironmentConfigWebServerNetworkAccessControlAllowedIpRange</a>]
 
 ---
 
@@ -12377,7 +12377,7 @@ def reset_description() -> None
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigWebServerNetworkAccessControlAllowedIpRangeOutputReference.property.valueInput">value_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigWebServerNetworkAccessControlAllowedIpRangeOutputReference.property.description">description</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigWebServerNetworkAccessControlAllowedIpRangeOutputReference.property.value">value</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigWebServerNetworkAccessControlAllowedIpRangeOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigWebServerNetworkAccessControlAllowedIpRange">ComposerEnvironmentConfigWebServerNetworkAccessControlAllowedIpRange</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigWebServerNetworkAccessControlAllowedIpRangeOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigWebServerNetworkAccessControlAllowedIpRange">ComposerEnvironmentConfigWebServerNetworkAccessControlAllowedIpRange</a></code> | *No description.* |
 
 ---
 
@@ -12448,10 +12448,10 @@ value: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigWebServerNetworkAccessControlAllowedIpRangeOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, ComposerEnvironmentConfigWebServerNetworkAccessControlAllowedIpRange]
+internal_value: IResolvable | ComposerEnvironmentConfigWebServerNetworkAccessControlAllowedIpRange
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigWebServerNetworkAccessControlAllowedIpRange">ComposerEnvironmentConfigWebServerNetworkAccessControlAllowedIpRange</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigWebServerNetworkAccessControlAllowedIpRange">ComposerEnvironmentConfigWebServerNetworkAccessControlAllowedIpRange</a>
 
 ---
 
@@ -12690,13 +12690,13 @@ Returns a reversible string representation.
 
 ```python
 def put_allowed_ip_range(
-  value: typing.Union[IResolvable, typing.List[ComposerEnvironmentConfigWebServerNetworkAccessControlAllowedIpRange]]
+  value: IResolvable | typing.List[ComposerEnvironmentConfigWebServerNetworkAccessControlAllowedIpRange]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigWebServerNetworkAccessControlOutputReference.putAllowedIpRange.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigWebServerNetworkAccessControlAllowedIpRange">ComposerEnvironmentConfigWebServerNetworkAccessControlAllowedIpRange</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigWebServerNetworkAccessControlAllowedIpRange">ComposerEnvironmentConfigWebServerNetworkAccessControlAllowedIpRange</a>]
 
 ---
 
@@ -12714,7 +12714,7 @@ def reset_allowed_ip_range() -> None
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigWebServerNetworkAccessControlOutputReference.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigWebServerNetworkAccessControlOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigWebServerNetworkAccessControlOutputReference.property.allowedIpRange">allowed_ip_range</a></code> | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigWebServerNetworkAccessControlAllowedIpRangeList">ComposerEnvironmentConfigWebServerNetworkAccessControlAllowedIpRangeList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigWebServerNetworkAccessControlOutputReference.property.allowedIpRangeInput">allowed_ip_range_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigWebServerNetworkAccessControlAllowedIpRange">ComposerEnvironmentConfigWebServerNetworkAccessControlAllowedIpRange</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigWebServerNetworkAccessControlOutputReference.property.allowedIpRangeInput">allowed_ip_range_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigWebServerNetworkAccessControlAllowedIpRange">ComposerEnvironmentConfigWebServerNetworkAccessControlAllowedIpRange</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigWebServerNetworkAccessControlOutputReference.property.internalValue">internal_value</a></code> | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigWebServerNetworkAccessControl">ComposerEnvironmentConfigWebServerNetworkAccessControl</a></code> | *No description.* |
 
 ---
@@ -12756,10 +12756,10 @@ allowed_ip_range: ComposerEnvironmentConfigWebServerNetworkAccessControlAllowedI
 ##### `allowed_ip_range_input`<sup>Optional</sup> <a name="allowed_ip_range_input" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigWebServerNetworkAccessControlOutputReference.property.allowedIpRangeInput"></a>
 
 ```python
-allowed_ip_range_input: typing.Union[IResolvable, typing.List[ComposerEnvironmentConfigWebServerNetworkAccessControlAllowedIpRange]]
+allowed_ip_range_input: IResolvable | typing.List[ComposerEnvironmentConfigWebServerNetworkAccessControlAllowedIpRange]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigWebServerNetworkAccessControlAllowedIpRange">ComposerEnvironmentConfigWebServerNetworkAccessControlAllowedIpRange</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigWebServerNetworkAccessControlAllowedIpRange">ComposerEnvironmentConfigWebServerNetworkAccessControlAllowedIpRange</a>]
 
 ---
 
@@ -15900,7 +15900,7 @@ def reset_update() -> None
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentTimeoutsOutputReference.property.create">create</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentTimeoutsOutputReference.property.delete">delete</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentTimeoutsOutputReference.property.update">update</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentTimeouts">ComposerEnvironmentTimeouts</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentTimeouts">ComposerEnvironmentTimeouts</a></code> | *No description.* |
 
 ---
 
@@ -15991,10 +15991,10 @@ update: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentTimeoutsOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, ComposerEnvironmentTimeouts]
+internal_value: IResolvable | ComposerEnvironmentTimeouts
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentTimeouts">ComposerEnvironmentTimeouts</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentTimeouts">ComposerEnvironmentTimeouts</a>
 
 ---
 

@@ -18,7 +18,7 @@ provider.GoogleProvider(
   access_context_manager_custom_endpoint: str = None,
   access_token: str = None,
   active_directory_custom_endpoint: str = None,
-  add_terraform_attribution_label: typing.Union[bool, IResolvable] = None,
+  add_terraform_attribution_label: bool | IResolvable = None,
   alias: str = None,
   alloydb_custom_endpoint: str = None,
   apigee_custom_endpoint: str = None,
@@ -29,7 +29,7 @@ provider.GoogleProvider(
   artifact_registry_custom_endpoint: str = None,
   assured_workloads_custom_endpoint: str = None,
   backup_dr_custom_endpoint: str = None,
-  batching: typing.Union[IResolvable, typing.List[GoogleProviderBatching]] = None,
+  batching: IResolvable | typing.List[GoogleProviderBatching] = None,
   beyondcorp_custom_endpoint: str = None,
   biglake_custom_endpoint: str = None,
   bigquery_analytics_hub_custom_endpoint: str = None,
@@ -96,7 +96,7 @@ provider.GoogleProvider(
   edgenetwork_custom_endpoint: str = None,
   essential_contacts_custom_endpoint: str = None,
   eventarc_custom_endpoint: str = None,
-  external_credentials: typing.Union[IResolvable, typing.List[GoogleProviderExternalCredentials]] = None,
+  external_credentials: IResolvable | typing.List[GoogleProviderExternalCredentials] = None,
   filestore_custom_endpoint: str = None,
   firebase_app_check_custom_endpoint: str = None,
   firebase_app_hosting_custom_endpoint: str = None,
@@ -186,7 +186,7 @@ provider.GoogleProvider(
   tpu_custom_endpoint: str = None,
   transcoder_custom_endpoint: str = None,
   universe_domain: str = None,
-  user_project_override: typing.Union[bool, IResolvable] = None,
+  user_project_override: bool | IResolvable = None,
   vertex_ai_custom_endpoint: str = None,
   vmwareengine_custom_endpoint: str = None,
   vpc_access_custom_endpoint: str = None,
@@ -204,7 +204,7 @@ provider.GoogleProvider(
 | <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.accessContextManagerCustomEndpoint">access_context_manager_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs#access_context_manager_custom_endpoint GoogleProvider#access_context_manager_custom_endpoint}. |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.accessToken">access_token</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs#access_token GoogleProvider#access_token}. |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.activeDirectoryCustomEndpoint">active_directory_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs#active_directory_custom_endpoint GoogleProvider#active_directory_custom_endpoint}. |
-| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.addTerraformAttributionLabel">add_terraform_attribution_label</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs#add_terraform_attribution_label GoogleProvider#add_terraform_attribution_label}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.addTerraformAttributionLabel">add_terraform_attribution_label</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs#add_terraform_attribution_label GoogleProvider#add_terraform_attribution_label}. |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.alias">alias</a></code> | <code>str</code> | Alias name. |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.alloydbCustomEndpoint">alloydb_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs#alloydb_custom_endpoint GoogleProvider#alloydb_custom_endpoint}. |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.apigeeCustomEndpoint">apigee_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs#apigee_custom_endpoint GoogleProvider#apigee_custom_endpoint}. |
@@ -215,7 +215,7 @@ provider.GoogleProvider(
 | <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.artifactRegistryCustomEndpoint">artifact_registry_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs#artifact_registry_custom_endpoint GoogleProvider#artifact_registry_custom_endpoint}. |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.assuredWorkloadsCustomEndpoint">assured_workloads_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs#assured_workloads_custom_endpoint GoogleProvider#assured_workloads_custom_endpoint}. |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.backupDrCustomEndpoint">backup_dr_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs#backup_dr_custom_endpoint GoogleProvider#backup_dr_custom_endpoint}. |
-| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.batching">batching</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.provider.GoogleProviderBatching">GoogleProviderBatching</a>]]</code> | batching block. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.batching">batching</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.provider.GoogleProviderBatching">GoogleProviderBatching</a>]</code> | batching block. |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.beyondcorpCustomEndpoint">beyondcorp_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs#beyondcorp_custom_endpoint GoogleProvider#beyondcorp_custom_endpoint}. |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.biglakeCustomEndpoint">biglake_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs#biglake_custom_endpoint GoogleProvider#biglake_custom_endpoint}. |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.bigqueryAnalyticsHubCustomEndpoint">bigquery_analytics_hub_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs#bigquery_analytics_hub_custom_endpoint GoogleProvider#bigquery_analytics_hub_custom_endpoint}. |
@@ -282,7 +282,7 @@ provider.GoogleProvider(
 | <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.edgenetworkCustomEndpoint">edgenetwork_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs#edgenetwork_custom_endpoint GoogleProvider#edgenetwork_custom_endpoint}. |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.essentialContactsCustomEndpoint">essential_contacts_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs#essential_contacts_custom_endpoint GoogleProvider#essential_contacts_custom_endpoint}. |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.eventarcCustomEndpoint">eventarc_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs#eventarc_custom_endpoint GoogleProvider#eventarc_custom_endpoint}. |
-| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.externalCredentials">external_credentials</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.provider.GoogleProviderExternalCredentials">GoogleProviderExternalCredentials</a>]]</code> | external_credentials block. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.externalCredentials">external_credentials</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.provider.GoogleProviderExternalCredentials">GoogleProviderExternalCredentials</a>]</code> | external_credentials block. |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.filestoreCustomEndpoint">filestore_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs#filestore_custom_endpoint GoogleProvider#filestore_custom_endpoint}. |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.firebaseAppCheckCustomEndpoint">firebase_app_check_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs#firebase_app_check_custom_endpoint GoogleProvider#firebase_app_check_custom_endpoint}. |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.firebaseAppHostingCustomEndpoint">firebase_app_hosting_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs#firebase_app_hosting_custom_endpoint GoogleProvider#firebase_app_hosting_custom_endpoint}. |
@@ -372,7 +372,7 @@ provider.GoogleProvider(
 | <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.tpuCustomEndpoint">tpu_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs#tpu_custom_endpoint GoogleProvider#tpu_custom_endpoint}. |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.transcoderCustomEndpoint">transcoder_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs#transcoder_custom_endpoint GoogleProvider#transcoder_custom_endpoint}. |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.universeDomain">universe_domain</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs#universe_domain GoogleProvider#universe_domain}. |
-| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.userProjectOverride">user_project_override</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs#user_project_override GoogleProvider#user_project_override}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.userProjectOverride">user_project_override</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs#user_project_override GoogleProvider#user_project_override}. |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.vertexAiCustomEndpoint">vertex_ai_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs#vertex_ai_custom_endpoint GoogleProvider#vertex_ai_custom_endpoint}. |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.vmwareengineCustomEndpoint">vmwareengine_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs#vmwareengine_custom_endpoint GoogleProvider#vmwareengine_custom_endpoint}. |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.vpcAccessCustomEndpoint">vpc_access_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs#vpc_access_custom_endpoint GoogleProvider#vpc_access_custom_endpoint}. |
@@ -434,7 +434,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `add_terraform_attribution_label`<sup>Optional</sup> <a name="add_terraform_attribution_label" id="@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.addTerraformAttributionLabel"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs#add_terraform_attribution_label GoogleProvider#add_terraform_attribution_label}.
 
@@ -524,7 +524,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `batching`<sup>Optional</sup> <a name="batching" id="@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.batching"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.provider.GoogleProviderBatching">GoogleProviderBatching</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.provider.GoogleProviderBatching">GoogleProviderBatching</a>]
 
 batching block.
 
@@ -1062,7 +1062,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `external_credentials`<sup>Optional</sup> <a name="external_credentials" id="@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.externalCredentials"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.provider.GoogleProviderExternalCredentials">GoogleProviderExternalCredentials</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.provider.GoogleProviderExternalCredentials">GoogleProviderExternalCredentials</a>]
 
 external_credentials block.
 
@@ -1784,7 +1784,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `user_project_override`<sup>Optional</sup> <a name="user_project_override" id="@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.userProjectOverride"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs#user_project_override GoogleProvider#user_project_override}.
 
@@ -3323,7 +3323,7 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.5
 | <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.accessContextManagerCustomEndpointInput">access_context_manager_custom_endpoint_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.accessTokenInput">access_token_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.activeDirectoryCustomEndpointInput">active_directory_custom_endpoint_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.addTerraformAttributionLabelInput">add_terraform_attribution_label_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.addTerraformAttributionLabelInput">add_terraform_attribution_label_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.aliasInput">alias_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.alloydbCustomEndpointInput">alloydb_custom_endpoint_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.apigeeCustomEndpointInput">apigee_custom_endpoint_input</a></code> | <code>str</code> | *No description.* |
@@ -3334,7 +3334,7 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.5
 | <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.artifactRegistryCustomEndpointInput">artifact_registry_custom_endpoint_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.assuredWorkloadsCustomEndpointInput">assured_workloads_custom_endpoint_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.backupDrCustomEndpointInput">backup_dr_custom_endpoint_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.batchingInput">batching_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.provider.GoogleProviderBatching">GoogleProviderBatching</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.batchingInput">batching_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.provider.GoogleProviderBatching">GoogleProviderBatching</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.beyondcorpCustomEndpointInput">beyondcorp_custom_endpoint_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.biglakeCustomEndpointInput">biglake_custom_endpoint_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.bigqueryAnalyticsHubCustomEndpointInput">bigquery_analytics_hub_custom_endpoint_input</a></code> | <code>str</code> | *No description.* |
@@ -3401,7 +3401,7 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.5
 | <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.edgenetworkCustomEndpointInput">edgenetwork_custom_endpoint_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.essentialContactsCustomEndpointInput">essential_contacts_custom_endpoint_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.eventarcCustomEndpointInput">eventarc_custom_endpoint_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.externalCredentialsInput">external_credentials_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.provider.GoogleProviderExternalCredentials">GoogleProviderExternalCredentials</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.externalCredentialsInput">external_credentials_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.provider.GoogleProviderExternalCredentials">GoogleProviderExternalCredentials</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.filestoreCustomEndpointInput">filestore_custom_endpoint_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.firebaseAppCheckCustomEndpointInput">firebase_app_check_custom_endpoint_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.firebaseAppHostingCustomEndpointInput">firebase_app_hosting_custom_endpoint_input</a></code> | <code>str</code> | *No description.* |
@@ -3491,7 +3491,7 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.5
 | <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.tpuCustomEndpointInput">tpu_custom_endpoint_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.transcoderCustomEndpointInput">transcoder_custom_endpoint_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.universeDomainInput">universe_domain_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.userProjectOverrideInput">user_project_override_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.userProjectOverrideInput">user_project_override_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.vertexAiCustomEndpointInput">vertex_ai_custom_endpoint_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.vmwareengineCustomEndpointInput">vmwareengine_custom_endpoint_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.vpcAccessCustomEndpointInput">vpc_access_custom_endpoint_input</a></code> | <code>str</code> | *No description.* |
@@ -3502,7 +3502,7 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.5
 | <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.accessContextManagerCustomEndpoint">access_context_manager_custom_endpoint</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.accessToken">access_token</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.activeDirectoryCustomEndpoint">active_directory_custom_endpoint</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.addTerraformAttributionLabel">add_terraform_attribution_label</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.addTerraformAttributionLabel">add_terraform_attribution_label</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.alloydbCustomEndpoint">alloydb_custom_endpoint</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.apigeeCustomEndpoint">apigee_custom_endpoint</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.apihubCustomEndpoint">apihub_custom_endpoint</a></code> | <code>str</code> | *No description.* |
@@ -3512,7 +3512,7 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.5
 | <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.artifactRegistryCustomEndpoint">artifact_registry_custom_endpoint</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.assuredWorkloadsCustomEndpoint">assured_workloads_custom_endpoint</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.backupDrCustomEndpoint">backup_dr_custom_endpoint</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.batching">batching</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.provider.GoogleProviderBatching">GoogleProviderBatching</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.batching">batching</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.provider.GoogleProviderBatching">GoogleProviderBatching</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.beyondcorpCustomEndpoint">beyondcorp_custom_endpoint</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.biglakeCustomEndpoint">biglake_custom_endpoint</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.bigqueryAnalyticsHubCustomEndpoint">bigquery_analytics_hub_custom_endpoint</a></code> | <code>str</code> | *No description.* |
@@ -3579,7 +3579,7 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.5
 | <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.edgenetworkCustomEndpoint">edgenetwork_custom_endpoint</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.essentialContactsCustomEndpoint">essential_contacts_custom_endpoint</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.eventarcCustomEndpoint">eventarc_custom_endpoint</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.externalCredentials">external_credentials</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.provider.GoogleProviderExternalCredentials">GoogleProviderExternalCredentials</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.externalCredentials">external_credentials</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.provider.GoogleProviderExternalCredentials">GoogleProviderExternalCredentials</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.filestoreCustomEndpoint">filestore_custom_endpoint</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.firebaseAppCheckCustomEndpoint">firebase_app_check_custom_endpoint</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.firebaseAppHostingCustomEndpoint">firebase_app_hosting_custom_endpoint</a></code> | <code>str</code> | *No description.* |
@@ -3669,7 +3669,7 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.5
 | <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.tpuCustomEndpoint">tpu_custom_endpoint</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.transcoderCustomEndpoint">transcoder_custom_endpoint</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.universeDomain">universe_domain</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.userProjectOverride">user_project_override</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.userProjectOverride">user_project_override</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.vertexAiCustomEndpoint">vertex_ai_custom_endpoint</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.vmwareengineCustomEndpoint">vmwareengine_custom_endpoint</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.vpcAccessCustomEndpoint">vpc_access_custom_endpoint</a></code> | <code>str</code> | *No description.* |
@@ -3814,10 +3814,10 @@ active_directory_custom_endpoint_input: str
 ##### `add_terraform_attribution_label_input`<sup>Optional</sup> <a name="add_terraform_attribution_label_input" id="@cdktf/provider-google.provider.GoogleProvider.property.addTerraformAttributionLabelInput"></a>
 
 ```python
-add_terraform_attribution_label_input: typing.Union[bool, IResolvable]
+add_terraform_attribution_label_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -3924,10 +3924,10 @@ backup_dr_custom_endpoint_input: str
 ##### `batching_input`<sup>Optional</sup> <a name="batching_input" id="@cdktf/provider-google.provider.GoogleProvider.property.batchingInput"></a>
 
 ```python
-batching_input: typing.Union[IResolvable, typing.List[GoogleProviderBatching]]
+batching_input: IResolvable | typing.List[GoogleProviderBatching]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.provider.GoogleProviderBatching">GoogleProviderBatching</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.provider.GoogleProviderBatching">GoogleProviderBatching</a>]
 
 ---
 
@@ -4594,10 +4594,10 @@ eventarc_custom_endpoint_input: str
 ##### `external_credentials_input`<sup>Optional</sup> <a name="external_credentials_input" id="@cdktf/provider-google.provider.GoogleProvider.property.externalCredentialsInput"></a>
 
 ```python
-external_credentials_input: typing.Union[IResolvable, typing.List[GoogleProviderExternalCredentials]]
+external_credentials_input: IResolvable | typing.List[GoogleProviderExternalCredentials]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.provider.GoogleProviderExternalCredentials">GoogleProviderExternalCredentials</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.provider.GoogleProviderExternalCredentials">GoogleProviderExternalCredentials</a>]
 
 ---
 
@@ -5494,10 +5494,10 @@ universe_domain_input: str
 ##### `user_project_override_input`<sup>Optional</sup> <a name="user_project_override_input" id="@cdktf/provider-google.provider.GoogleProvider.property.userProjectOverrideInput"></a>
 
 ```python
-user_project_override_input: typing.Union[bool, IResolvable]
+user_project_override_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -5604,10 +5604,10 @@ active_directory_custom_endpoint: str
 ##### `add_terraform_attribution_label`<sup>Optional</sup> <a name="add_terraform_attribution_label" id="@cdktf/provider-google.provider.GoogleProvider.property.addTerraformAttributionLabel"></a>
 
 ```python
-add_terraform_attribution_label: typing.Union[bool, IResolvable]
+add_terraform_attribution_label: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -5704,10 +5704,10 @@ backup_dr_custom_endpoint: str
 ##### `batching`<sup>Optional</sup> <a name="batching" id="@cdktf/provider-google.provider.GoogleProvider.property.batching"></a>
 
 ```python
-batching: typing.Union[IResolvable, typing.List[GoogleProviderBatching]]
+batching: IResolvable | typing.List[GoogleProviderBatching]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.provider.GoogleProviderBatching">GoogleProviderBatching</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.provider.GoogleProviderBatching">GoogleProviderBatching</a>]
 
 ---
 
@@ -6374,10 +6374,10 @@ eventarc_custom_endpoint: str
 ##### `external_credentials`<sup>Optional</sup> <a name="external_credentials" id="@cdktf/provider-google.provider.GoogleProvider.property.externalCredentials"></a>
 
 ```python
-external_credentials: typing.Union[IResolvable, typing.List[GoogleProviderExternalCredentials]]
+external_credentials: IResolvable | typing.List[GoogleProviderExternalCredentials]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.provider.GoogleProviderExternalCredentials">GoogleProviderExternalCredentials</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.provider.GoogleProviderExternalCredentials">GoogleProviderExternalCredentials</a>]
 
 ---
 
@@ -7274,10 +7274,10 @@ universe_domain: str
 ##### `user_project_override`<sup>Optional</sup> <a name="user_project_override" id="@cdktf/provider-google.provider.GoogleProvider.property.userProjectOverride"></a>
 
 ```python
-user_project_override: typing.Union[bool, IResolvable]
+user_project_override: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -7369,7 +7369,7 @@ tfResourceType: str
 from cdktf_cdktf_provider_google import provider
 
 provider.GoogleProviderBatching(
-  enable_batching: typing.Union[bool, IResolvable] = None,
+  enable_batching: bool | IResolvable = None,
   send_after: str = None
 )
 ```
@@ -7378,7 +7378,7 @@ provider.GoogleProviderBatching(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.provider.GoogleProviderBatching.property.enableBatching">enable_batching</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs#enable_batching GoogleProvider#enable_batching}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProviderBatching.property.enableBatching">enable_batching</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs#enable_batching GoogleProvider#enable_batching}. |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProviderBatching.property.sendAfter">send_after</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs#send_after GoogleProvider#send_after}. |
 
 ---
@@ -7386,10 +7386,10 @@ provider.GoogleProviderBatching(
 ##### `enable_batching`<sup>Optional</sup> <a name="enable_batching" id="@cdktf/provider-google.provider.GoogleProviderBatching.property.enableBatching"></a>
 
 ```python
-enable_batching: typing.Union[bool, IResolvable]
+enable_batching: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs#enable_batching GoogleProvider#enable_batching}.
 
@@ -7419,7 +7419,7 @@ provider.GoogleProviderConfig(
   access_context_manager_custom_endpoint: str = None,
   access_token: str = None,
   active_directory_custom_endpoint: str = None,
-  add_terraform_attribution_label: typing.Union[bool, IResolvable] = None,
+  add_terraform_attribution_label: bool | IResolvable = None,
   alias: str = None,
   alloydb_custom_endpoint: str = None,
   apigee_custom_endpoint: str = None,
@@ -7430,7 +7430,7 @@ provider.GoogleProviderConfig(
   artifact_registry_custom_endpoint: str = None,
   assured_workloads_custom_endpoint: str = None,
   backup_dr_custom_endpoint: str = None,
-  batching: typing.Union[IResolvable, typing.List[GoogleProviderBatching]] = None,
+  batching: IResolvable | typing.List[GoogleProviderBatching] = None,
   beyondcorp_custom_endpoint: str = None,
   biglake_custom_endpoint: str = None,
   bigquery_analytics_hub_custom_endpoint: str = None,
@@ -7497,7 +7497,7 @@ provider.GoogleProviderConfig(
   edgenetwork_custom_endpoint: str = None,
   essential_contacts_custom_endpoint: str = None,
   eventarc_custom_endpoint: str = None,
-  external_credentials: typing.Union[IResolvable, typing.List[GoogleProviderExternalCredentials]] = None,
+  external_credentials: IResolvable | typing.List[GoogleProviderExternalCredentials] = None,
   filestore_custom_endpoint: str = None,
   firebase_app_check_custom_endpoint: str = None,
   firebase_app_hosting_custom_endpoint: str = None,
@@ -7587,7 +7587,7 @@ provider.GoogleProviderConfig(
   tpu_custom_endpoint: str = None,
   transcoder_custom_endpoint: str = None,
   universe_domain: str = None,
-  user_project_override: typing.Union[bool, IResolvable] = None,
+  user_project_override: bool | IResolvable = None,
   vertex_ai_custom_endpoint: str = None,
   vmwareengine_custom_endpoint: str = None,
   vpc_access_custom_endpoint: str = None,
@@ -7605,7 +7605,7 @@ provider.GoogleProviderConfig(
 | <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.accessContextManagerCustomEndpoint">access_context_manager_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs#access_context_manager_custom_endpoint GoogleProvider#access_context_manager_custom_endpoint}. |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.accessToken">access_token</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs#access_token GoogleProvider#access_token}. |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.activeDirectoryCustomEndpoint">active_directory_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs#active_directory_custom_endpoint GoogleProvider#active_directory_custom_endpoint}. |
-| <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.addTerraformAttributionLabel">add_terraform_attribution_label</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs#add_terraform_attribution_label GoogleProvider#add_terraform_attribution_label}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.addTerraformAttributionLabel">add_terraform_attribution_label</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs#add_terraform_attribution_label GoogleProvider#add_terraform_attribution_label}. |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.alias">alias</a></code> | <code>str</code> | Alias name. |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.alloydbCustomEndpoint">alloydb_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs#alloydb_custom_endpoint GoogleProvider#alloydb_custom_endpoint}. |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.apigeeCustomEndpoint">apigee_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs#apigee_custom_endpoint GoogleProvider#apigee_custom_endpoint}. |
@@ -7616,7 +7616,7 @@ provider.GoogleProviderConfig(
 | <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.artifactRegistryCustomEndpoint">artifact_registry_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs#artifact_registry_custom_endpoint GoogleProvider#artifact_registry_custom_endpoint}. |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.assuredWorkloadsCustomEndpoint">assured_workloads_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs#assured_workloads_custom_endpoint GoogleProvider#assured_workloads_custom_endpoint}. |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.backupDrCustomEndpoint">backup_dr_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs#backup_dr_custom_endpoint GoogleProvider#backup_dr_custom_endpoint}. |
-| <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.batching">batching</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.provider.GoogleProviderBatching">GoogleProviderBatching</a>]]</code> | batching block. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.batching">batching</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.provider.GoogleProviderBatching">GoogleProviderBatching</a>]</code> | batching block. |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.beyondcorpCustomEndpoint">beyondcorp_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs#beyondcorp_custom_endpoint GoogleProvider#beyondcorp_custom_endpoint}. |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.biglakeCustomEndpoint">biglake_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs#biglake_custom_endpoint GoogleProvider#biglake_custom_endpoint}. |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.bigqueryAnalyticsHubCustomEndpoint">bigquery_analytics_hub_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs#bigquery_analytics_hub_custom_endpoint GoogleProvider#bigquery_analytics_hub_custom_endpoint}. |
@@ -7683,7 +7683,7 @@ provider.GoogleProviderConfig(
 | <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.edgenetworkCustomEndpoint">edgenetwork_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs#edgenetwork_custom_endpoint GoogleProvider#edgenetwork_custom_endpoint}. |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.essentialContactsCustomEndpoint">essential_contacts_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs#essential_contacts_custom_endpoint GoogleProvider#essential_contacts_custom_endpoint}. |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.eventarcCustomEndpoint">eventarc_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs#eventarc_custom_endpoint GoogleProvider#eventarc_custom_endpoint}. |
-| <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.externalCredentials">external_credentials</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.provider.GoogleProviderExternalCredentials">GoogleProviderExternalCredentials</a>]]</code> | external_credentials block. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.externalCredentials">external_credentials</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.provider.GoogleProviderExternalCredentials">GoogleProviderExternalCredentials</a>]</code> | external_credentials block. |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.filestoreCustomEndpoint">filestore_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs#filestore_custom_endpoint GoogleProvider#filestore_custom_endpoint}. |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.firebaseAppCheckCustomEndpoint">firebase_app_check_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs#firebase_app_check_custom_endpoint GoogleProvider#firebase_app_check_custom_endpoint}. |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.firebaseAppHostingCustomEndpoint">firebase_app_hosting_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs#firebase_app_hosting_custom_endpoint GoogleProvider#firebase_app_hosting_custom_endpoint}. |
@@ -7773,7 +7773,7 @@ provider.GoogleProviderConfig(
 | <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.tpuCustomEndpoint">tpu_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs#tpu_custom_endpoint GoogleProvider#tpu_custom_endpoint}. |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.transcoderCustomEndpoint">transcoder_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs#transcoder_custom_endpoint GoogleProvider#transcoder_custom_endpoint}. |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.universeDomain">universe_domain</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs#universe_domain GoogleProvider#universe_domain}. |
-| <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.userProjectOverride">user_project_override</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs#user_project_override GoogleProvider#user_project_override}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.userProjectOverride">user_project_override</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs#user_project_override GoogleProvider#user_project_override}. |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.vertexAiCustomEndpoint">vertex_ai_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs#vertex_ai_custom_endpoint GoogleProvider#vertex_ai_custom_endpoint}. |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.vmwareengineCustomEndpoint">vmwareengine_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs#vmwareengine_custom_endpoint GoogleProvider#vmwareengine_custom_endpoint}. |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.vpcAccessCustomEndpoint">vpc_access_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs#vpc_access_custom_endpoint GoogleProvider#vpc_access_custom_endpoint}. |
@@ -7834,10 +7834,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `add_terraform_attribution_label`<sup>Optional</sup> <a name="add_terraform_attribution_label" id="@cdktf/provider-google.provider.GoogleProviderConfig.property.addTerraformAttributionLabel"></a>
 
 ```python
-add_terraform_attribution_label: typing.Union[bool, IResolvable]
+add_terraform_attribution_label: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs#add_terraform_attribution_label GoogleProvider#add_terraform_attribution_label}.
 
@@ -7968,10 +7968,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `batching`<sup>Optional</sup> <a name="batching" id="@cdktf/provider-google.provider.GoogleProviderConfig.property.batching"></a>
 
 ```python
-batching: typing.Union[IResolvable, typing.List[GoogleProviderBatching]]
+batching: IResolvable | typing.List[GoogleProviderBatching]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.provider.GoogleProviderBatching">GoogleProviderBatching</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.provider.GoogleProviderBatching">GoogleProviderBatching</a>]
 
 batching block.
 
@@ -8774,10 +8774,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `external_credentials`<sup>Optional</sup> <a name="external_credentials" id="@cdktf/provider-google.provider.GoogleProviderConfig.property.externalCredentials"></a>
 
 ```python
-external_credentials: typing.Union[IResolvable, typing.List[GoogleProviderExternalCredentials]]
+external_credentials: IResolvable | typing.List[GoogleProviderExternalCredentials]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.provider.GoogleProviderExternalCredentials">GoogleProviderExternalCredentials</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.provider.GoogleProviderExternalCredentials">GoogleProviderExternalCredentials</a>]
 
 external_credentials block.
 
@@ -9856,10 +9856,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `user_project_override`<sup>Optional</sup> <a name="user_project_override" id="@cdktf/provider-google.provider.GoogleProviderConfig.property.userProjectOverride"></a>
 
 ```python
-user_project_override: typing.Union[bool, IResolvable]
+user_project_override: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs#user_project_override GoogleProvider#user_project_override}.
 

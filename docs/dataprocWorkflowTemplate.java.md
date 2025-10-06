@@ -12,19 +12,14 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.5
 import com.hashicorp.cdktf.providers.google.dataproc_workflow_template.DataprocWorkflowTemplate;
 
 DataprocWorkflowTemplate.Builder.create(Construct scope, java.lang.String id)
-//  .connection(SSHProvisionerConnection)
-//  .connection(WinrmProvisionerConnection)
-//  .count(java.lang.Number)
-//  .count(TerraformCount)
+//  .connection(SSHProvisionerConnection|WinrmProvisionerConnection)
+//  .count(java.lang.Number|TerraformCount)
 //  .dependsOn(java.util.List<ITerraformDependable>)
 //  .forEach(ITerraformIterator)
 //  .lifecycle(TerraformResourceLifecycle)
 //  .provider(TerraformProvider)
-//  .provisioners(java.util.List<FileProvisioner)
-//  .provisioners(LocalExecProvisioner)
-//  .provisioners(RemoteExecProvisioner>)
-    .jobs(IResolvable)
-    .jobs(java.util.List<DataprocWorkflowTemplateJobs>)
+//  .provisioners(java.util.List<FileProvisioner|LocalExecProvisioner|RemoteExecProvisioner>)
+    .jobs(IResolvable|java.util.List<DataprocWorkflowTemplateJobs>)
     .location(java.lang.String)
     .name(java.lang.String)
     .placement(DataprocWorkflowTemplatePlacement)
@@ -32,8 +27,7 @@ DataprocWorkflowTemplate.Builder.create(Construct scope, java.lang.String id)
 //  .encryptionConfig(DataprocWorkflowTemplateEncryptionConfig)
 //  .id(java.lang.String)
 //  .labels(java.util.Map<java.lang.String, java.lang.String>)
-//  .parameters(IResolvable)
-//  .parameters(java.util.List<DataprocWorkflowTemplateParameters>)
+//  .parameters(IResolvable|java.util.List<DataprocWorkflowTemplateParameters>)
 //  .project(java.lang.String)
 //  .timeouts(DataprocWorkflowTemplateTimeouts)
 //  .version(java.lang.Number)
@@ -44,14 +38,14 @@ DataprocWorkflowTemplate.Builder.create(Construct scope, java.lang.String id)
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplate.Initializer.parameter.scope">scope</a></code> | <code>software.constructs.Construct</code> | The scope in which to define this construct. |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplate.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | The scoped construct ID. |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplate.Initializer.parameter.connection">connection</a></code> | <code>com.hashicorp.cdktf.SSHProvisionerConnection OR com.hashicorp.cdktf.WinrmProvisionerConnection</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplate.Initializer.parameter.count">count</a></code> | <code>java.lang.Number OR com.hashicorp.cdktf.TerraformCount</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplate.Initializer.parameter.connection">connection</a></code> | <code>com.hashicorp.cdktf.SSHProvisionerConnection\|com.hashicorp.cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplate.Initializer.parameter.count">count</a></code> | <code>java.lang.Number\|com.hashicorp.cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplate.Initializer.parameter.dependsOn">dependsOn</a></code> | <code>java.util.List<com.hashicorp.cdktf.ITerraformDependable></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplate.Initializer.parameter.forEach">forEach</a></code> | <code>com.hashicorp.cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplate.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplate.Initializer.parameter.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplate.Initializer.parameter.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplate.Initializer.parameter.jobs">jobs</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobs">DataprocWorkflowTemplateJobs</a>></code> | jobs block. |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplate.Initializer.parameter.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner\|com.hashicorp.cdktf.LocalExecProvisioner\|com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplate.Initializer.parameter.jobs">jobs</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobs">DataprocWorkflowTemplateJobs</a>></code> | jobs block. |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplate.Initializer.parameter.location">location</a></code> | <code>java.lang.String</code> | The location for the resource. |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplate.Initializer.parameter.name">name</a></code> | <code>java.lang.String</code> | Output only. |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplate.Initializer.parameter.placement">placement</a></code> | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacement">DataprocWorkflowTemplatePlacement</a></code> | placement block. |
@@ -59,7 +53,7 @@ DataprocWorkflowTemplate.Builder.create(Construct scope, java.lang.String id)
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplate.Initializer.parameter.encryptionConfig">encryptionConfig</a></code> | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateEncryptionConfig">DataprocWorkflowTemplateEncryptionConfig</a></code> | encryption_config block. |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplate.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/dataproc_workflow_template#id DataprocWorkflowTemplate#id}. |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplate.Initializer.parameter.labels">labels</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | Optional. |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplate.Initializer.parameter.parameters">parameters</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateParameters">DataprocWorkflowTemplateParameters</a>></code> | parameters block. |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplate.Initializer.parameter.parameters">parameters</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateParameters">DataprocWorkflowTemplateParameters</a>></code> | parameters block. |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplate.Initializer.parameter.project">project</a></code> | <code>java.lang.String</code> | The project for the resource. |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplate.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateTimeouts">DataprocWorkflowTemplateTimeouts</a></code> | timeouts block. |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplate.Initializer.parameter.version">version</a></code> | <code>java.lang.Number</code> | Output only. The current version of this workflow template. |
@@ -86,13 +80,13 @@ Must be unique amongst siblings in the same scope
 
 ##### `connection`<sup>Optional</sup> <a name="connection" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplate.Initializer.parameter.connection"></a>
 
-- *Type:* com.hashicorp.cdktf.SSHProvisionerConnection OR com.hashicorp.cdktf.WinrmProvisionerConnection
+- *Type:* com.hashicorp.cdktf.SSHProvisionerConnection|com.hashicorp.cdktf.WinrmProvisionerConnection
 
 ---
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplate.Initializer.parameter.count"></a>
 
-- *Type:* java.lang.Number OR com.hashicorp.cdktf.TerraformCount
+- *Type:* java.lang.Number|com.hashicorp.cdktf.TerraformCount
 
 ---
 
@@ -122,13 +116,13 @@ Must be unique amongst siblings in the same scope
 
 ##### `provisioners`<sup>Optional</sup> <a name="provisioners" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplate.Initializer.parameter.provisioners"></a>
 
-- *Type:* java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner>
+- *Type:* java.util.List<com.hashicorp.cdktf.FileProvisioner|com.hashicorp.cdktf.LocalExecProvisioner|com.hashicorp.cdktf.RemoteExecProvisioner>
 
 ---
 
 ##### `jobs`<sup>Required</sup> <a name="jobs" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplate.Initializer.parameter.jobs"></a>
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobs">DataprocWorkflowTemplateJobs</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobs">DataprocWorkflowTemplateJobs</a>>
 
 jobs block.
 
@@ -218,7 +212,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `parameters`<sup>Optional</sup> <a name="parameters" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplate.Initializer.parameter.parameters"></a>
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateParameters">DataprocWorkflowTemplateParameters</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateParameters">DataprocWorkflowTemplateParameters</a>>
 
 parameters block.
 
@@ -496,7 +490,7 @@ public java.util.Map<java.lang.String, java.lang.String> getStringMapAttribute(j
 ##### `hasResourceMove` <a name="hasResourceMove" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplate.hasResourceMove"></a>
 
 ```java
-public TerraformResourceMoveByTarget OR TerraformResourceMoveById hasResourceMove()
+public TerraformResourceMoveByTarget|TerraformResourceMoveById hasResourceMove()
 ```
 
 ##### `importFrom` <a name="importFrom" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplate.importFrom"></a>
@@ -552,7 +546,7 @@ Full id of resource being moved from, e.g. "aws_s3_bucket.example".
 
 ```java
 public void moveTo(java.lang.String moveTarget)
-public void moveTo(java.lang.String moveTarget, java.lang.String OR java.lang.Number index)
+public void moveTo(java.lang.String moveTarget, java.lang.String|java.lang.Number index)
 ```
 
 Moves this resource to the target resource given by moveTarget.
@@ -567,7 +561,7 @@ The previously set user defined string set by .addMoveTarget() corresponding to 
 
 ###### `index`<sup>Optional</sup> <a name="index" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplate.moveTo.parameter.index"></a>
 
-- *Type:* java.lang.String OR java.lang.Number
+- *Type:* java.lang.String|java.lang.Number
 
 Optional The index corresponding to the key the resource is to appear in the foreach of a resource to move to.
 
@@ -604,24 +598,24 @@ public void putEncryptionConfig(DataprocWorkflowTemplateEncryptionConfig value)
 ##### `putJobs` <a name="putJobs" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplate.putJobs"></a>
 
 ```java
-public void putJobs(IResolvable OR java.util.List<DataprocWorkflowTemplateJobs> value)
+public void putJobs(IResolvable|java.util.List<DataprocWorkflowTemplateJobs> value)
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplate.putJobs.parameter.value"></a>
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobs">DataprocWorkflowTemplateJobs</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobs">DataprocWorkflowTemplateJobs</a>>
 
 ---
 
 ##### `putParameters` <a name="putParameters" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplate.putParameters"></a>
 
 ```java
-public void putParameters(IResolvable OR java.util.List<DataprocWorkflowTemplateParameters> value)
+public void putParameters(IResolvable|java.util.List<DataprocWorkflowTemplateParameters> value)
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplate.putParameters.parameter.value"></a>
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateParameters">DataprocWorkflowTemplateParameters</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateParameters">DataprocWorkflowTemplateParameters</a>>
 
 ---
 
@@ -823,13 +817,13 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.5
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplate.property.terraformMetaArguments">terraformMetaArguments</a></code> | <code>java.util.Map<java.lang.String, java.lang.Object></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplate.property.terraformResourceType">terraformResourceType</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplate.property.terraformGeneratorMetadata">terraformGeneratorMetadata</a></code> | <code>com.hashicorp.cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplate.property.connection">connection</a></code> | <code>com.hashicorp.cdktf.SSHProvisionerConnection OR com.hashicorp.cdktf.WinrmProvisionerConnection</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplate.property.count">count</a></code> | <code>java.lang.Number OR com.hashicorp.cdktf.TerraformCount</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplate.property.connection">connection</a></code> | <code>com.hashicorp.cdktf.SSHProvisionerConnection\|com.hashicorp.cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplate.property.count">count</a></code> | <code>java.lang.Number\|com.hashicorp.cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplate.property.dependsOn">dependsOn</a></code> | <code>java.util.List<java.lang.String></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplate.property.forEach">forEach</a></code> | <code>com.hashicorp.cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplate.property.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplate.property.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplate.property.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplate.property.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner\|com.hashicorp.cdktf.LocalExecProvisioner\|com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplate.property.createTime">createTime</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplate.property.effectiveLabels">effectiveLabels</a></code> | <code>com.hashicorp.cdktf.StringMap</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplate.property.encryptionConfig">encryptionConfig</a></code> | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateEncryptionConfigOutputReference">DataprocWorkflowTemplateEncryptionConfigOutputReference</a></code> | *No description.* |
@@ -842,14 +836,14 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.5
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplate.property.dagTimeoutInput">dagTimeoutInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplate.property.encryptionConfigInput">encryptionConfigInput</a></code> | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateEncryptionConfig">DataprocWorkflowTemplateEncryptionConfig</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplate.property.idInput">idInput</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplate.property.jobsInput">jobsInput</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobs">DataprocWorkflowTemplateJobs</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplate.property.jobsInput">jobsInput</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobs">DataprocWorkflowTemplateJobs</a>></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplate.property.labelsInput">labelsInput</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplate.property.locationInput">locationInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplate.property.nameInput">nameInput</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplate.property.parametersInput">parametersInput</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateParameters">DataprocWorkflowTemplateParameters</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplate.property.parametersInput">parametersInput</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateParameters">DataprocWorkflowTemplateParameters</a>></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplate.property.placementInput">placementInput</a></code> | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacement">DataprocWorkflowTemplatePlacement</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplate.property.projectInput">projectInput</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplate.property.timeoutsInput">timeoutsInput</a></code> | <code>com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateTimeouts">DataprocWorkflowTemplateTimeouts</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplate.property.timeoutsInput">timeoutsInput</a></code> | <code>com.hashicorp.cdktf.IResolvable\|<a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateTimeouts">DataprocWorkflowTemplateTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplate.property.versionInput">versionInput</a></code> | <code>java.lang.Number</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplate.property.dagTimeout">dagTimeout</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplate.property.id">id</a></code> | <code>java.lang.String</code> | *No description.* |
@@ -936,20 +930,20 @@ public TerraformProviderGeneratorMetadata getTerraformGeneratorMetadata();
 ##### `connection`<sup>Optional</sup> <a name="connection" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplate.property.connection"></a>
 
 ```java
-public java.lang.Object getConnection();
+public SSHProvisionerConnection|WinrmProvisionerConnection getConnection();
 ```
 
-- *Type:* com.hashicorp.cdktf.SSHProvisionerConnection OR com.hashicorp.cdktf.WinrmProvisionerConnection
+- *Type:* com.hashicorp.cdktf.SSHProvisionerConnection|com.hashicorp.cdktf.WinrmProvisionerConnection
 
 ---
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplate.property.count"></a>
 
 ```java
-public java.lang.Object getCount();
+public java.lang.Number|TerraformCount getCount();
 ```
 
-- *Type:* java.lang.Number OR com.hashicorp.cdktf.TerraformCount
+- *Type:* java.lang.Number|com.hashicorp.cdktf.TerraformCount
 
 ---
 
@@ -996,10 +990,10 @@ public TerraformProvider getProvider();
 ##### `provisioners`<sup>Optional</sup> <a name="provisioners" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplate.property.provisioners"></a>
 
 ```java
-public java.lang.Object getProvisioners();
+public java.util.List<FileProvisioner|LocalExecProvisioner|RemoteExecProvisioner> getProvisioners();
 ```
 
-- *Type:* java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner>
+- *Type:* java.util.List<com.hashicorp.cdktf.FileProvisioner|com.hashicorp.cdktf.LocalExecProvisioner|com.hashicorp.cdktf.RemoteExecProvisioner>
 
 ---
 
@@ -1126,10 +1120,10 @@ public java.lang.String getIdInput();
 ##### `jobsInput`<sup>Optional</sup> <a name="jobsInput" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplate.property.jobsInput"></a>
 
 ```java
-public java.lang.Object getJobsInput();
+public IResolvable|java.util.List<DataprocWorkflowTemplateJobs> getJobsInput();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobs">DataprocWorkflowTemplateJobs</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobs">DataprocWorkflowTemplateJobs</a>>
 
 ---
 
@@ -1166,10 +1160,10 @@ public java.lang.String getNameInput();
 ##### `parametersInput`<sup>Optional</sup> <a name="parametersInput" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplate.property.parametersInput"></a>
 
 ```java
-public java.lang.Object getParametersInput();
+public IResolvable|java.util.List<DataprocWorkflowTemplateParameters> getParametersInput();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateParameters">DataprocWorkflowTemplateParameters</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateParameters">DataprocWorkflowTemplateParameters</a>>
 
 ---
 
@@ -1196,10 +1190,10 @@ public java.lang.String getProjectInput();
 ##### `timeoutsInput`<sup>Optional</sup> <a name="timeoutsInput" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplate.property.timeoutsInput"></a>
 
 ```java
-public java.lang.Object getTimeoutsInput();
+public IResolvable|DataprocWorkflowTemplateTimeouts getTimeoutsInput();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateTimeouts">DataprocWorkflowTemplateTimeouts</a>
+- *Type:* com.hashicorp.cdktf.IResolvable|<a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateTimeouts">DataprocWorkflowTemplateTimeouts</a>
 
 ---
 
@@ -1311,19 +1305,14 @@ public java.lang.String getTfResourceType();
 import com.hashicorp.cdktf.providers.google.dataproc_workflow_template.DataprocWorkflowTemplateConfig;
 
 DataprocWorkflowTemplateConfig.builder()
-//  .connection(SSHProvisionerConnection)
-//  .connection(WinrmProvisionerConnection)
-//  .count(java.lang.Number)
-//  .count(TerraformCount)
+//  .connection(SSHProvisionerConnection|WinrmProvisionerConnection)
+//  .count(java.lang.Number|TerraformCount)
 //  .dependsOn(java.util.List<ITerraformDependable>)
 //  .forEach(ITerraformIterator)
 //  .lifecycle(TerraformResourceLifecycle)
 //  .provider(TerraformProvider)
-//  .provisioners(java.util.List<FileProvisioner)
-//  .provisioners(LocalExecProvisioner)
-//  .provisioners(RemoteExecProvisioner>)
-    .jobs(IResolvable)
-    .jobs(java.util.List<DataprocWorkflowTemplateJobs>)
+//  .provisioners(java.util.List<FileProvisioner|LocalExecProvisioner|RemoteExecProvisioner>)
+    .jobs(IResolvable|java.util.List<DataprocWorkflowTemplateJobs>)
     .location(java.lang.String)
     .name(java.lang.String)
     .placement(DataprocWorkflowTemplatePlacement)
@@ -1331,8 +1320,7 @@ DataprocWorkflowTemplateConfig.builder()
 //  .encryptionConfig(DataprocWorkflowTemplateEncryptionConfig)
 //  .id(java.lang.String)
 //  .labels(java.util.Map<java.lang.String, java.lang.String>)
-//  .parameters(IResolvable)
-//  .parameters(java.util.List<DataprocWorkflowTemplateParameters>)
+//  .parameters(IResolvable|java.util.List<DataprocWorkflowTemplateParameters>)
 //  .project(java.lang.String)
 //  .timeouts(DataprocWorkflowTemplateTimeouts)
 //  .version(java.lang.Number)
@@ -1343,14 +1331,14 @@ DataprocWorkflowTemplateConfig.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateConfig.property.connection">connection</a></code> | <code>com.hashicorp.cdktf.SSHProvisionerConnection OR com.hashicorp.cdktf.WinrmProvisionerConnection</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateConfig.property.count">count</a></code> | <code>java.lang.Number OR com.hashicorp.cdktf.TerraformCount</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateConfig.property.connection">connection</a></code> | <code>com.hashicorp.cdktf.SSHProvisionerConnection\|com.hashicorp.cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateConfig.property.count">count</a></code> | <code>java.lang.Number\|com.hashicorp.cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateConfig.property.dependsOn">dependsOn</a></code> | <code>java.util.List<com.hashicorp.cdktf.ITerraformDependable></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateConfig.property.forEach">forEach</a></code> | <code>com.hashicorp.cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateConfig.property.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateConfig.property.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateConfig.property.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateConfig.property.jobs">jobs</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobs">DataprocWorkflowTemplateJobs</a>></code> | jobs block. |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateConfig.property.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner\|com.hashicorp.cdktf.LocalExecProvisioner\|com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateConfig.property.jobs">jobs</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobs">DataprocWorkflowTemplateJobs</a>></code> | jobs block. |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateConfig.property.location">location</a></code> | <code>java.lang.String</code> | The location for the resource. |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateConfig.property.name">name</a></code> | <code>java.lang.String</code> | Output only. |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateConfig.property.placement">placement</a></code> | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacement">DataprocWorkflowTemplatePlacement</a></code> | placement block. |
@@ -1358,7 +1346,7 @@ DataprocWorkflowTemplateConfig.builder()
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateConfig.property.encryptionConfig">encryptionConfig</a></code> | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateEncryptionConfig">DataprocWorkflowTemplateEncryptionConfig</a></code> | encryption_config block. |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/dataproc_workflow_template#id DataprocWorkflowTemplate#id}. |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateConfig.property.labels">labels</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | Optional. |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateConfig.property.parameters">parameters</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateParameters">DataprocWorkflowTemplateParameters</a>></code> | parameters block. |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateConfig.property.parameters">parameters</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateParameters">DataprocWorkflowTemplateParameters</a>></code> | parameters block. |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateConfig.property.project">project</a></code> | <code>java.lang.String</code> | The project for the resource. |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateTimeouts">DataprocWorkflowTemplateTimeouts</a></code> | timeouts block. |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateConfig.property.version">version</a></code> | <code>java.lang.Number</code> | Output only. The current version of this workflow template. |
@@ -1368,20 +1356,20 @@ DataprocWorkflowTemplateConfig.builder()
 ##### `connection`<sup>Optional</sup> <a name="connection" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateConfig.property.connection"></a>
 
 ```java
-public java.lang.Object getConnection();
+public SSHProvisionerConnection|WinrmProvisionerConnection getConnection();
 ```
 
-- *Type:* com.hashicorp.cdktf.SSHProvisionerConnection OR com.hashicorp.cdktf.WinrmProvisionerConnection
+- *Type:* com.hashicorp.cdktf.SSHProvisionerConnection|com.hashicorp.cdktf.WinrmProvisionerConnection
 
 ---
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateConfig.property.count"></a>
 
 ```java
-public java.lang.Object getCount();
+public java.lang.Number|TerraformCount getCount();
 ```
 
-- *Type:* java.lang.Number OR com.hashicorp.cdktf.TerraformCount
+- *Type:* java.lang.Number|com.hashicorp.cdktf.TerraformCount
 
 ---
 
@@ -1428,20 +1416,20 @@ public TerraformProvider getProvider();
 ##### `provisioners`<sup>Optional</sup> <a name="provisioners" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateConfig.property.provisioners"></a>
 
 ```java
-public java.lang.Object getProvisioners();
+public java.util.List<FileProvisioner|LocalExecProvisioner|RemoteExecProvisioner> getProvisioners();
 ```
 
-- *Type:* java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner>
+- *Type:* java.util.List<com.hashicorp.cdktf.FileProvisioner|com.hashicorp.cdktf.LocalExecProvisioner|com.hashicorp.cdktf.RemoteExecProvisioner>
 
 ---
 
 ##### `jobs`<sup>Required</sup> <a name="jobs" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateConfig.property.jobs"></a>
 
 ```java
-public java.lang.Object getJobs();
+public IResolvable|java.util.List<DataprocWorkflowTemplateJobs> getJobs();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobs">DataprocWorkflowTemplateJobs</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobs">DataprocWorkflowTemplateJobs</a>>
 
 jobs block.
 
@@ -1560,10 +1548,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `parameters`<sup>Optional</sup> <a name="parameters" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateConfig.property.parameters"></a>
 
 ```java
-public java.lang.Object getParameters();
+public IResolvable|java.util.List<DataprocWorkflowTemplateParameters> getParameters();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateParameters">DataprocWorkflowTemplateParameters</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateParameters">DataprocWorkflowTemplateParameters</a>>
 
 parameters block.
 
@@ -2063,8 +2051,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 import com.hashicorp.cdktf.providers.google.dataproc_workflow_template.DataprocWorkflowTemplateJobsHiveJob;
 
 DataprocWorkflowTemplateJobsHiveJob.builder()
-//  .continueOnFailure(java.lang.Boolean)
-//  .continueOnFailure(IResolvable)
+//  .continueOnFailure(java.lang.Boolean|IResolvable)
 //  .jarFileUris(java.util.List<java.lang.String>)
 //  .properties(java.util.Map<java.lang.String, java.lang.String>)
 //  .queryFileUri(java.lang.String)
@@ -2077,7 +2064,7 @@ DataprocWorkflowTemplateJobsHiveJob.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJob.property.continueOnFailure">continueOnFailure</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Optional. |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJob.property.continueOnFailure">continueOnFailure</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Optional. |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJob.property.jarFileUris">jarFileUris</a></code> | <code>java.util.List<java.lang.String></code> | Optional. |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJob.property.properties">properties</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | Optional. |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJob.property.queryFileUri">queryFileUri</a></code> | <code>java.lang.String</code> | The HCFS URI of the script that contains Hive queries. |
@@ -2089,10 +2076,10 @@ DataprocWorkflowTemplateJobsHiveJob.builder()
 ##### `continueOnFailure`<sup>Optional</sup> <a name="continueOnFailure" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJob.property.continueOnFailure"></a>
 
 ```java
-public java.lang.Object getContinueOnFailure();
+public java.lang.Boolean|IResolvable getContinueOnFailure();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 Optional.
 
@@ -2220,8 +2207,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 import com.hashicorp.cdktf.providers.google.dataproc_workflow_template.DataprocWorkflowTemplateJobsPigJob;
 
 DataprocWorkflowTemplateJobsPigJob.builder()
-//  .continueOnFailure(java.lang.Boolean)
-//  .continueOnFailure(IResolvable)
+//  .continueOnFailure(java.lang.Boolean|IResolvable)
 //  .jarFileUris(java.util.List<java.lang.String>)
 //  .loggingConfig(DataprocWorkflowTemplateJobsPigJobLoggingConfig)
 //  .properties(java.util.Map<java.lang.String, java.lang.String>)
@@ -2235,7 +2221,7 @@ DataprocWorkflowTemplateJobsPigJob.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJob.property.continueOnFailure">continueOnFailure</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Optional. |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJob.property.continueOnFailure">continueOnFailure</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Optional. |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJob.property.jarFileUris">jarFileUris</a></code> | <code>java.util.List<java.lang.String></code> | Optional. |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJob.property.loggingConfig">loggingConfig</a></code> | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobLoggingConfig">DataprocWorkflowTemplateJobsPigJobLoggingConfig</a></code> | logging_config block. |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJob.property.properties">properties</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | Optional. |
@@ -2248,10 +2234,10 @@ DataprocWorkflowTemplateJobsPigJob.builder()
 ##### `continueOnFailure`<sup>Optional</sup> <a name="continueOnFailure" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJob.property.continueOnFailure"></a>
 
 ```java
-public java.lang.Object getContinueOnFailure();
+public java.lang.Boolean|IResolvable getContinueOnFailure();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 Optional.
 
@@ -2430,8 +2416,7 @@ import com.hashicorp.cdktf.providers.google.dataproc_workflow_template.DataprocW
 
 DataprocWorkflowTemplateJobsPrestoJob.builder()
 //  .clientTags(java.util.List<java.lang.String>)
-//  .continueOnFailure(java.lang.Boolean)
-//  .continueOnFailure(IResolvable)
+//  .continueOnFailure(java.lang.Boolean|IResolvable)
 //  .loggingConfig(DataprocWorkflowTemplateJobsPrestoJobLoggingConfig)
 //  .outputFormat(java.lang.String)
 //  .properties(java.util.Map<java.lang.String, java.lang.String>)
@@ -2445,7 +2430,7 @@ DataprocWorkflowTemplateJobsPrestoJob.builder()
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJob.property.clientTags">clientTags</a></code> | <code>java.util.List<java.lang.String></code> | Optional. Presto client tags to attach to this query. |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJob.property.continueOnFailure">continueOnFailure</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Optional. |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJob.property.continueOnFailure">continueOnFailure</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Optional. |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJob.property.loggingConfig">loggingConfig</a></code> | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobLoggingConfig">DataprocWorkflowTemplateJobsPrestoJobLoggingConfig</a></code> | logging_config block. |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJob.property.outputFormat">outputFormat</a></code> | <code>java.lang.String</code> | Optional. The format in which query output will be displayed. See the Presto documentation for supported output formats. |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJob.property.properties">properties</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | Optional. |
@@ -2471,10 +2456,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `continueOnFailure`<sup>Optional</sup> <a name="continueOnFailure" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJob.property.continueOnFailure"></a>
 
 ```java
-public java.lang.Object getContinueOnFailure();
+public java.lang.Boolean|IResolvable getContinueOnFailure();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 Optional.
 
@@ -3802,8 +3787,7 @@ DataprocWorkflowTemplatePlacementManagedClusterConfig.builder()
 //  .encryptionConfig(DataprocWorkflowTemplatePlacementManagedClusterConfigEncryptionConfig)
 //  .endpointConfig(DataprocWorkflowTemplatePlacementManagedClusterConfigEndpointConfig)
 //  .gceClusterConfig(DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfig)
-//  .initializationActions(IResolvable)
-//  .initializationActions(java.util.List<DataprocWorkflowTemplatePlacementManagedClusterConfigInitializationActions>)
+//  .initializationActions(IResolvable|java.util.List<DataprocWorkflowTemplatePlacementManagedClusterConfigInitializationActions>)
 //  .lifecycleConfig(DataprocWorkflowTemplatePlacementManagedClusterConfigLifecycleConfig)
 //  .masterConfig(DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfig)
 //  .secondaryWorkerConfig(DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfig)
@@ -3823,7 +3807,7 @@ DataprocWorkflowTemplatePlacementManagedClusterConfig.builder()
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfig.property.encryptionConfig">encryptionConfig</a></code> | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigEncryptionConfig">DataprocWorkflowTemplatePlacementManagedClusterConfigEncryptionConfig</a></code> | encryption_config block. |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfig.property.endpointConfig">endpointConfig</a></code> | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigEndpointConfig">DataprocWorkflowTemplatePlacementManagedClusterConfigEndpointConfig</a></code> | endpoint_config block. |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfig.property.gceClusterConfig">gceClusterConfig</a></code> | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfig">DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfig</a></code> | gce_cluster_config block. |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfig.property.initializationActions">initializationActions</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigInitializationActions">DataprocWorkflowTemplatePlacementManagedClusterConfigInitializationActions</a>></code> | initialization_actions block. |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfig.property.initializationActions">initializationActions</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigInitializationActions">DataprocWorkflowTemplatePlacementManagedClusterConfigInitializationActions</a>></code> | initialization_actions block. |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfig.property.lifecycleConfig">lifecycleConfig</a></code> | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigLifecycleConfig">DataprocWorkflowTemplatePlacementManagedClusterConfigLifecycleConfig</a></code> | lifecycle_config block. |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfig.property.masterConfig">masterConfig</a></code> | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfig">DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfig</a></code> | master_config block. |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfig.property.secondaryWorkerConfig">secondaryWorkerConfig</a></code> | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfig">DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfig</a></code> | secondary_worker_config block. |
@@ -3894,10 +3878,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `initializationActions`<sup>Optional</sup> <a name="initializationActions" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfig.property.initializationActions"></a>
 
 ```java
-public java.lang.Object getInitializationActions();
+public IResolvable|java.util.List<DataprocWorkflowTemplatePlacementManagedClusterConfigInitializationActions> getInitializationActions();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigInitializationActions">DataprocWorkflowTemplatePlacementManagedClusterConfigInitializationActions</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigInitializationActions">DataprocWorkflowTemplatePlacementManagedClusterConfigInitializationActions</a>>
 
 initialization_actions block.
 
@@ -4099,8 +4083,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 import com.hashicorp.cdktf.providers.google.dataproc_workflow_template.DataprocWorkflowTemplatePlacementManagedClusterConfigEndpointConfig;
 
 DataprocWorkflowTemplatePlacementManagedClusterConfigEndpointConfig.builder()
-//  .enableHttpPortAccess(java.lang.Boolean)
-//  .enableHttpPortAccess(IResolvable)
+//  .enableHttpPortAccess(java.lang.Boolean|IResolvable)
     .build();
 ```
 
@@ -4108,17 +4091,17 @@ DataprocWorkflowTemplatePlacementManagedClusterConfigEndpointConfig.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigEndpointConfig.property.enableHttpPortAccess">enableHttpPortAccess</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Optional. If true, enable http access to specific ports on the cluster from external sources. Defaults to false. |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigEndpointConfig.property.enableHttpPortAccess">enableHttpPortAccess</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Optional. If true, enable http access to specific ports on the cluster from external sources. Defaults to false. |
 
 ---
 
 ##### `enableHttpPortAccess`<sup>Optional</sup> <a name="enableHttpPortAccess" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigEndpointConfig.property.enableHttpPortAccess"></a>
 
 ```java
-public java.lang.Object getEnableHttpPortAccess();
+public java.lang.Boolean|IResolvable getEnableHttpPortAccess();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 Optional. If true, enable http access to specific ports on the cluster from external sources. Defaults to false.
 
@@ -4134,8 +4117,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 import com.hashicorp.cdktf.providers.google.dataproc_workflow_template.DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfig;
 
 DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfig.builder()
-//  .internalIpOnly(java.lang.Boolean)
-//  .internalIpOnly(IResolvable)
+//  .internalIpOnly(java.lang.Boolean|IResolvable)
 //  .metadata(java.util.Map<java.lang.String, java.lang.String>)
 //  .network(java.lang.String)
 //  .nodeGroupAffinity(DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfigNodeGroupAffinity)
@@ -4154,7 +4136,7 @@ DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfig.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfig.property.internalIpOnly">internalIpOnly</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Optional. |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfig.property.internalIpOnly">internalIpOnly</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Optional. |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfig.property.metadata">metadata</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | The Compute Engine metadata entries to add to all instances (see [Project and instance metadata](https://cloud.google.com/compute/docs/storing-retrieving-metadata#project_and_instance_metadata)). |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfig.property.network">network</a></code> | <code>java.lang.String</code> | Optional. |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfig.property.nodeGroupAffinity">nodeGroupAffinity</a></code> | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfigNodeGroupAffinity">DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfigNodeGroupAffinity</a></code> | node_group_affinity block. |
@@ -4172,10 +4154,10 @@ DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfig.builder()
 ##### `internalIpOnly`<sup>Optional</sup> <a name="internalIpOnly" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfig.property.internalIpOnly"></a>
 
 ```java
-public java.lang.Object getInternalIpOnly();
+public java.lang.Boolean|IResolvable getInternalIpOnly();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 Optional.
 
@@ -4459,12 +4441,9 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 import com.hashicorp.cdktf.providers.google.dataproc_workflow_template.DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfigShieldedInstanceConfig;
 
 DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfigShieldedInstanceConfig.builder()
-//  .enableIntegrityMonitoring(java.lang.Boolean)
-//  .enableIntegrityMonitoring(IResolvable)
-//  .enableSecureBoot(java.lang.Boolean)
-//  .enableSecureBoot(IResolvable)
-//  .enableVtpm(java.lang.Boolean)
-//  .enableVtpm(IResolvable)
+//  .enableIntegrityMonitoring(java.lang.Boolean|IResolvable)
+//  .enableSecureBoot(java.lang.Boolean|IResolvable)
+//  .enableVtpm(java.lang.Boolean|IResolvable)
     .build();
 ```
 
@@ -4472,19 +4451,19 @@ DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfigShieldedIns
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfigShieldedInstanceConfig.property.enableIntegrityMonitoring">enableIntegrityMonitoring</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Optional. |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfigShieldedInstanceConfig.property.enableSecureBoot">enableSecureBoot</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Optional. |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfigShieldedInstanceConfig.property.enableVtpm">enableVtpm</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Optional. |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfigShieldedInstanceConfig.property.enableIntegrityMonitoring">enableIntegrityMonitoring</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Optional. |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfigShieldedInstanceConfig.property.enableSecureBoot">enableSecureBoot</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Optional. |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfigShieldedInstanceConfig.property.enableVtpm">enableVtpm</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Optional. |
 
 ---
 
 ##### `enableIntegrityMonitoring`<sup>Optional</sup> <a name="enableIntegrityMonitoring" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfigShieldedInstanceConfig.property.enableIntegrityMonitoring"></a>
 
 ```java
-public java.lang.Object getEnableIntegrityMonitoring();
+public java.lang.Boolean|IResolvable getEnableIntegrityMonitoring();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 Optional.
 
@@ -4497,10 +4476,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `enableSecureBoot`<sup>Optional</sup> <a name="enableSecureBoot" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfigShieldedInstanceConfig.property.enableSecureBoot"></a>
 
 ```java
-public java.lang.Object getEnableSecureBoot();
+public java.lang.Boolean|IResolvable getEnableSecureBoot();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 Optional.
 
@@ -4513,10 +4492,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `enableVtpm`<sup>Optional</sup> <a name="enableVtpm" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfigShieldedInstanceConfig.property.enableVtpm"></a>
 
 ```java
-public java.lang.Object getEnableVtpm();
+public java.lang.Boolean|IResolvable getEnableVtpm();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 Optional.
 
@@ -4656,8 +4635,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 import com.hashicorp.cdktf.providers.google.dataproc_workflow_template.DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfig;
 
 DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfig.builder()
-//  .accelerators(IResolvable)
-//  .accelerators(java.util.List<DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigAccelerators>)
+//  .accelerators(IResolvable|java.util.List<DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigAccelerators>)
 //  .diskConfig(DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigDiskConfig)
 //  .image(java.lang.String)
 //  .machineType(java.lang.String)
@@ -4671,7 +4649,7 @@ DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfig.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfig.property.accelerators">accelerators</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigAccelerators">DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigAccelerators</a>></code> | accelerators block. |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfig.property.accelerators">accelerators</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigAccelerators">DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigAccelerators</a>></code> | accelerators block. |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfig.property.diskConfig">diskConfig</a></code> | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigDiskConfig">DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigDiskConfig</a></code> | disk_config block. |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfig.property.image">image</a></code> | <code>java.lang.String</code> | Optional. |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfig.property.machineType">machineType</a></code> | <code>java.lang.String</code> | Optional. |
@@ -4684,10 +4662,10 @@ DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfig.builder()
 ##### `accelerators`<sup>Optional</sup> <a name="accelerators" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfig.property.accelerators"></a>
 
 ```java
-public java.lang.Object getAccelerators();
+public IResolvable|java.util.List<DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigAccelerators> getAccelerators();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigAccelerators">DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigAccelerators</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigAccelerators">DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigAccelerators</a>>
 
 accelerators block.
 
@@ -4929,8 +4907,7 @@ DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigManagedGroupCon
 import com.hashicorp.cdktf.providers.google.dataproc_workflow_template.DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfig;
 
 DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfig.builder()
-//  .accelerators(IResolvable)
-//  .accelerators(java.util.List<DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigAccelerators>)
+//  .accelerators(IResolvable|java.util.List<DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigAccelerators>)
 //  .diskConfig(DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigDiskConfig)
 //  .image(java.lang.String)
 //  .machineType(java.lang.String)
@@ -4944,7 +4921,7 @@ DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfig.build
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfig.property.accelerators">accelerators</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigAccelerators">DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigAccelerators</a>></code> | accelerators block. |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfig.property.accelerators">accelerators</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigAccelerators">DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigAccelerators</a>></code> | accelerators block. |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfig.property.diskConfig">diskConfig</a></code> | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigDiskConfig">DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigDiskConfig</a></code> | disk_config block. |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfig.property.image">image</a></code> | <code>java.lang.String</code> | Optional. |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfig.property.machineType">machineType</a></code> | <code>java.lang.String</code> | Optional. |
@@ -4957,10 +4934,10 @@ DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfig.build
 ##### `accelerators`<sup>Optional</sup> <a name="accelerators" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfig.property.accelerators"></a>
 
 ```java
-public java.lang.Object getAccelerators();
+public IResolvable|java.util.List<DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigAccelerators> getAccelerators();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigAccelerators">DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigAccelerators</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigAccelerators">DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigAccelerators</a>>
 
 accelerators block.
 
@@ -5240,8 +5217,7 @@ DataprocWorkflowTemplatePlacementManagedClusterConfigSecurityConfigKerberosConfi
 //  .crossRealmTrustKdc(java.lang.String)
 //  .crossRealmTrustRealm(java.lang.String)
 //  .crossRealmTrustSharedPassword(java.lang.String)
-//  .enableKerberos(java.lang.Boolean)
-//  .enableKerberos(IResolvable)
+//  .enableKerberos(java.lang.Boolean|IResolvable)
 //  .kdcDbKey(java.lang.String)
 //  .keyPassword(java.lang.String)
 //  .keystore(java.lang.String)
@@ -5263,7 +5239,7 @@ DataprocWorkflowTemplatePlacementManagedClusterConfigSecurityConfigKerberosConfi
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigSecurityConfigKerberosConfig.property.crossRealmTrustKdc">crossRealmTrustKdc</a></code> | <code>java.lang.String</code> | Optional. The KDC (IP or hostname) for the remote trusted realm in a cross realm trust relationship. |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigSecurityConfigKerberosConfig.property.crossRealmTrustRealm">crossRealmTrustRealm</a></code> | <code>java.lang.String</code> | Optional. The remote realm the Dataproc on-cluster KDC will trust, should the user enable cross realm trust. |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigSecurityConfigKerberosConfig.property.crossRealmTrustSharedPassword">crossRealmTrustSharedPassword</a></code> | <code>java.lang.String</code> | Optional. |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigSecurityConfigKerberosConfig.property.enableKerberos">enableKerberos</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Optional. |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigSecurityConfigKerberosConfig.property.enableKerberos">enableKerberos</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Optional. |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigSecurityConfigKerberosConfig.property.kdcDbKey">kdcDbKey</a></code> | <code>java.lang.String</code> | Optional. The Cloud Storage URI of a KMS encrypted file containing the master key of the KDC database. |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigSecurityConfigKerberosConfig.property.keyPassword">keyPassword</a></code> | <code>java.lang.String</code> | Optional. |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigSecurityConfigKerberosConfig.property.keystore">keystore</a></code> | <code>java.lang.String</code> | Optional. |
@@ -5338,10 +5314,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `enableKerberos`<sup>Optional</sup> <a name="enableKerberos" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigSecurityConfigKerberosConfig.property.enableKerberos"></a>
 
 ```java
-public java.lang.Object getEnableKerberos();
+public java.lang.Boolean|IResolvable getEnableKerberos();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 Optional.
 
@@ -5583,8 +5559,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 import com.hashicorp.cdktf.providers.google.dataproc_workflow_template.DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfig;
 
 DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfig.builder()
-//  .accelerators(IResolvable)
-//  .accelerators(java.util.List<DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigAccelerators>)
+//  .accelerators(IResolvable|java.util.List<DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigAccelerators>)
 //  .diskConfig(DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigDiskConfig)
 //  .image(java.lang.String)
 //  .machineType(java.lang.String)
@@ -5598,7 +5573,7 @@ DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfig.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfig.property.accelerators">accelerators</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigAccelerators">DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigAccelerators</a>></code> | accelerators block. |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfig.property.accelerators">accelerators</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigAccelerators">DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigAccelerators</a>></code> | accelerators block. |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfig.property.diskConfig">diskConfig</a></code> | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigDiskConfig">DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigDiskConfig</a></code> | disk_config block. |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfig.property.image">image</a></code> | <code>java.lang.String</code> | Optional. |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfig.property.machineType">machineType</a></code> | <code>java.lang.String</code> | Optional. |
@@ -5611,10 +5586,10 @@ DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfig.builder()
 ##### `accelerators`<sup>Optional</sup> <a name="accelerators" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfig.property.accelerators"></a>
 
 ```java
-public java.lang.Object getAccelerators();
+public IResolvable|java.util.List<DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigAccelerators> getAccelerators();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigAccelerators">DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigAccelerators</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigAccelerators">DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigAccelerators</a>>
 
 accelerators block.
 
@@ -7226,13 +7201,13 @@ public void resetScriptVariables()
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobOutputReference.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobOutputReference.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobOutputReference.property.queryList">queryList</a></code> | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobQueryListStructOutputReference">DataprocWorkflowTemplateJobsHiveJobQueryListStructOutputReference</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobOutputReference.property.continueOnFailureInput">continueOnFailureInput</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobOutputReference.property.continueOnFailureInput">continueOnFailureInput</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobOutputReference.property.jarFileUrisInput">jarFileUrisInput</a></code> | <code>java.util.List<java.lang.String></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobOutputReference.property.propertiesInput">propertiesInput</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobOutputReference.property.queryFileUriInput">queryFileUriInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobOutputReference.property.queryListInput">queryListInput</a></code> | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobQueryListStruct">DataprocWorkflowTemplateJobsHiveJobQueryListStruct</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobOutputReference.property.scriptVariablesInput">scriptVariablesInput</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobOutputReference.property.continueOnFailure">continueOnFailure</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobOutputReference.property.continueOnFailure">continueOnFailure</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobOutputReference.property.jarFileUris">jarFileUris</a></code> | <code>java.util.List<java.lang.String></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobOutputReference.property.properties">properties</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobOutputReference.property.queryFileUri">queryFileUri</a></code> | <code>java.lang.String</code> | *No description.* |
@@ -7278,10 +7253,10 @@ public DataprocWorkflowTemplateJobsHiveJobQueryListStructOutputReference getQuer
 ##### `continueOnFailureInput`<sup>Optional</sup> <a name="continueOnFailureInput" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobOutputReference.property.continueOnFailureInput"></a>
 
 ```java
-public java.lang.Object getContinueOnFailureInput();
+public java.lang.Boolean|IResolvable getContinueOnFailureInput();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
@@ -7338,10 +7313,10 @@ public java.util.Map<java.lang.String, java.lang.String> getScriptVariablesInput
 ##### `continueOnFailure`<sup>Required</sup> <a name="continueOnFailure" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobOutputReference.property.continueOnFailure"></a>
 
 ```java
-public java.lang.Object getContinueOnFailure();
+public java.lang.Boolean|IResolvable getContinueOnFailure();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
@@ -7788,7 +7763,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsList.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsList.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobs">DataprocWorkflowTemplateJobs</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobs">DataprocWorkflowTemplateJobs</a>></code> | *No description.* |
 
 ---
 
@@ -7819,10 +7794,10 @@ public java.lang.String getFqn();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsList.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|java.util.List<DataprocWorkflowTemplateJobs> getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobs">DataprocWorkflowTemplateJobs</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobs">DataprocWorkflowTemplateJobs</a>>
 
 ---
 
@@ -8273,7 +8248,7 @@ public void resetSparkSqlJob()
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsOutputReference.property.labels">labels</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsOutputReference.property.prerequisiteStepIds">prerequisiteStepIds</a></code> | <code>java.util.List<java.lang.String></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsOutputReference.property.stepId">stepId</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobs">DataprocWorkflowTemplateJobs</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|<a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobs">DataprocWorkflowTemplateJobs</a></code> | *No description.* |
 
 ---
 
@@ -8544,10 +8519,10 @@ public java.lang.String getStepId();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsOutputReference.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|DataprocWorkflowTemplateJobs getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobs">DataprocWorkflowTemplateJobs</a>
+- *Type:* com.hashicorp.cdktf.IResolvable|<a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobs">DataprocWorkflowTemplateJobs</a>
 
 ---
 
@@ -9117,14 +9092,14 @@ public void resetScriptVariables()
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobOutputReference.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobOutputReference.property.loggingConfig">loggingConfig</a></code> | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobLoggingConfigOutputReference">DataprocWorkflowTemplateJobsPigJobLoggingConfigOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobOutputReference.property.queryList">queryList</a></code> | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobQueryListStructOutputReference">DataprocWorkflowTemplateJobsPigJobQueryListStructOutputReference</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobOutputReference.property.continueOnFailureInput">continueOnFailureInput</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobOutputReference.property.continueOnFailureInput">continueOnFailureInput</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobOutputReference.property.jarFileUrisInput">jarFileUrisInput</a></code> | <code>java.util.List<java.lang.String></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobOutputReference.property.loggingConfigInput">loggingConfigInput</a></code> | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobLoggingConfig">DataprocWorkflowTemplateJobsPigJobLoggingConfig</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobOutputReference.property.propertiesInput">propertiesInput</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobOutputReference.property.queryFileUriInput">queryFileUriInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobOutputReference.property.queryListInput">queryListInput</a></code> | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobQueryListStruct">DataprocWorkflowTemplateJobsPigJobQueryListStruct</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobOutputReference.property.scriptVariablesInput">scriptVariablesInput</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobOutputReference.property.continueOnFailure">continueOnFailure</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobOutputReference.property.continueOnFailure">continueOnFailure</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobOutputReference.property.jarFileUris">jarFileUris</a></code> | <code>java.util.List<java.lang.String></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobOutputReference.property.properties">properties</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobOutputReference.property.queryFileUri">queryFileUri</a></code> | <code>java.lang.String</code> | *No description.* |
@@ -9180,10 +9155,10 @@ public DataprocWorkflowTemplateJobsPigJobQueryListStructOutputReference getQuery
 ##### `continueOnFailureInput`<sup>Optional</sup> <a name="continueOnFailureInput" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobOutputReference.property.continueOnFailureInput"></a>
 
 ```java
-public java.lang.Object getContinueOnFailureInput();
+public java.lang.Boolean|IResolvable getContinueOnFailureInput();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
@@ -9250,10 +9225,10 @@ public java.util.Map<java.lang.String, java.lang.String> getScriptVariablesInput
 ##### `continueOnFailure`<sup>Required</sup> <a name="continueOnFailure" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobOutputReference.property.continueOnFailure"></a>
 
 ```java
-public java.lang.Object getContinueOnFailure();
+public java.lang.Boolean|IResolvable getContinueOnFailure();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
@@ -10145,14 +10120,14 @@ public void resetQueryList()
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobOutputReference.property.loggingConfig">loggingConfig</a></code> | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobLoggingConfigOutputReference">DataprocWorkflowTemplateJobsPrestoJobLoggingConfigOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobOutputReference.property.queryList">queryList</a></code> | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobQueryListStructOutputReference">DataprocWorkflowTemplateJobsPrestoJobQueryListStructOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobOutputReference.property.clientTagsInput">clientTagsInput</a></code> | <code>java.util.List<java.lang.String></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobOutputReference.property.continueOnFailureInput">continueOnFailureInput</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobOutputReference.property.continueOnFailureInput">continueOnFailureInput</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobOutputReference.property.loggingConfigInput">loggingConfigInput</a></code> | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobLoggingConfig">DataprocWorkflowTemplateJobsPrestoJobLoggingConfig</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobOutputReference.property.outputFormatInput">outputFormatInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobOutputReference.property.propertiesInput">propertiesInput</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobOutputReference.property.queryFileUriInput">queryFileUriInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobOutputReference.property.queryListInput">queryListInput</a></code> | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobQueryListStruct">DataprocWorkflowTemplateJobsPrestoJobQueryListStruct</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobOutputReference.property.clientTags">clientTags</a></code> | <code>java.util.List<java.lang.String></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobOutputReference.property.continueOnFailure">continueOnFailure</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobOutputReference.property.continueOnFailure">continueOnFailure</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobOutputReference.property.outputFormat">outputFormat</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobOutputReference.property.properties">properties</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobOutputReference.property.queryFileUri">queryFileUri</a></code> | <code>java.lang.String</code> | *No description.* |
@@ -10217,10 +10192,10 @@ public java.util.List<java.lang.String> getClientTagsInput();
 ##### `continueOnFailureInput`<sup>Optional</sup> <a name="continueOnFailureInput" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobOutputReference.property.continueOnFailureInput"></a>
 
 ```java
-public java.lang.Object getContinueOnFailureInput();
+public java.lang.Boolean|IResolvable getContinueOnFailureInput();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
@@ -10287,10 +10262,10 @@ public java.util.List<java.lang.String> getClientTags();
 ##### `continueOnFailure`<sup>Required</sup> <a name="continueOnFailure" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobOutputReference.property.continueOnFailure"></a>
 
 ```java
-public java.lang.Object getContinueOnFailure();
+public java.lang.Boolean|IResolvable getContinueOnFailure();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
@@ -14276,7 +14251,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateParametersList.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateParametersList.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateParametersList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateParameters">DataprocWorkflowTemplateParameters</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateParametersList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateParameters">DataprocWorkflowTemplateParameters</a>></code> | *No description.* |
 
 ---
 
@@ -14307,10 +14282,10 @@ public java.lang.String getFqn();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateParametersList.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|java.util.List<DataprocWorkflowTemplateParameters> getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateParameters">DataprocWorkflowTemplateParameters</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateParameters">DataprocWorkflowTemplateParameters</a>>
 
 ---
 
@@ -14578,7 +14553,7 @@ public void resetValidation()
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateParametersOutputReference.property.description">description</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateParametersOutputReference.property.fields">fields</a></code> | <code>java.util.List<java.lang.String></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateParametersOutputReference.property.name">name</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateParametersOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateParameters">DataprocWorkflowTemplateParameters</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateParametersOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|<a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateParameters">DataprocWorkflowTemplateParameters</a></code> | *No description.* |
 
 ---
 
@@ -14689,10 +14664,10 @@ public java.lang.String getName();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateParametersOutputReference.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|DataprocWorkflowTemplateParameters getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateParameters">DataprocWorkflowTemplateParameters</a>
+- *Type:* com.hashicorp.cdktf.IResolvable|<a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateParameters">DataprocWorkflowTemplateParameters</a>
 
 ---
 
@@ -16646,8 +16621,8 @@ public void resetEnableHttpPortAccess()
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigEndpointConfigOutputReference.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigEndpointConfigOutputReference.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigEndpointConfigOutputReference.property.httpPorts">httpPorts</a></code> | <code>com.hashicorp.cdktf.StringMap</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigEndpointConfigOutputReference.property.enableHttpPortAccessInput">enableHttpPortAccessInput</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigEndpointConfigOutputReference.property.enableHttpPortAccess">enableHttpPortAccess</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigEndpointConfigOutputReference.property.enableHttpPortAccessInput">enableHttpPortAccessInput</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigEndpointConfigOutputReference.property.enableHttpPortAccess">enableHttpPortAccess</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigEndpointConfigOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigEndpointConfig">DataprocWorkflowTemplatePlacementManagedClusterConfigEndpointConfig</a></code> | *No description.* |
 
 ---
@@ -16689,20 +16664,20 @@ public StringMap getHttpPorts();
 ##### `enableHttpPortAccessInput`<sup>Optional</sup> <a name="enableHttpPortAccessInput" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigEndpointConfigOutputReference.property.enableHttpPortAccessInput"></a>
 
 ```java
-public java.lang.Object getEnableHttpPortAccessInput();
+public java.lang.Boolean|IResolvable getEnableHttpPortAccessInput();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
 ##### `enableHttpPortAccess`<sup>Required</sup> <a name="enableHttpPortAccess" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigEndpointConfigOutputReference.property.enableHttpPortAccess"></a>
 
 ```java
-public java.lang.Object getEnableHttpPortAccess();
+public java.lang.Boolean|IResolvable getEnableHttpPortAccess();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
@@ -17324,7 +17299,7 @@ public void resetZone()
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfigOutputReference.property.nodeGroupAffinity">nodeGroupAffinity</a></code> | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfigNodeGroupAffinityOutputReference">DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfigNodeGroupAffinityOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfigOutputReference.property.reservationAffinity">reservationAffinity</a></code> | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfigReservationAffinityOutputReference">DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfigReservationAffinityOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfigOutputReference.property.shieldedInstanceConfig">shieldedInstanceConfig</a></code> | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfigShieldedInstanceConfigOutputReference">DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfigShieldedInstanceConfigOutputReference</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfigOutputReference.property.internalIpOnlyInput">internalIpOnlyInput</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfigOutputReference.property.internalIpOnlyInput">internalIpOnlyInput</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfigOutputReference.property.metadataInput">metadataInput</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfigOutputReference.property.networkInput">networkInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfigOutputReference.property.nodeGroupAffinityInput">nodeGroupAffinityInput</a></code> | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfigNodeGroupAffinity">DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfigNodeGroupAffinity</a></code> | *No description.* |
@@ -17336,7 +17311,7 @@ public void resetZone()
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfigOutputReference.property.subnetworkInput">subnetworkInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfigOutputReference.property.tagsInput">tagsInput</a></code> | <code>java.util.List<java.lang.String></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfigOutputReference.property.zoneInput">zoneInput</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfigOutputReference.property.internalIpOnly">internalIpOnly</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfigOutputReference.property.internalIpOnly">internalIpOnly</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfigOutputReference.property.metadata">metadata</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfigOutputReference.property.network">network</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfigOutputReference.property.privateIpv6GoogleAccess">privateIpv6GoogleAccess</a></code> | <code>java.lang.String</code> | *No description.* |
@@ -17406,10 +17381,10 @@ public DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfigShie
 ##### `internalIpOnlyInput`<sup>Optional</sup> <a name="internalIpOnlyInput" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfigOutputReference.property.internalIpOnlyInput"></a>
 
 ```java
-public java.lang.Object getInternalIpOnlyInput();
+public java.lang.Boolean|IResolvable getInternalIpOnlyInput();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
@@ -17526,10 +17501,10 @@ public java.lang.String getZoneInput();
 ##### `internalIpOnly`<sup>Required</sup> <a name="internalIpOnly" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfigOutputReference.property.internalIpOnly"></a>
 
 ```java
-public java.lang.Object getInternalIpOnly();
+public java.lang.Boolean|IResolvable getInternalIpOnly();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
@@ -18191,12 +18166,12 @@ public void resetEnableVtpm()
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfigShieldedInstanceConfigOutputReference.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfigShieldedInstanceConfigOutputReference.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfigShieldedInstanceConfigOutputReference.property.enableIntegrityMonitoringInput">enableIntegrityMonitoringInput</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfigShieldedInstanceConfigOutputReference.property.enableSecureBootInput">enableSecureBootInput</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfigShieldedInstanceConfigOutputReference.property.enableVtpmInput">enableVtpmInput</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfigShieldedInstanceConfigOutputReference.property.enableIntegrityMonitoring">enableIntegrityMonitoring</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfigShieldedInstanceConfigOutputReference.property.enableSecureBoot">enableSecureBoot</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfigShieldedInstanceConfigOutputReference.property.enableVtpm">enableVtpm</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfigShieldedInstanceConfigOutputReference.property.enableIntegrityMonitoringInput">enableIntegrityMonitoringInput</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfigShieldedInstanceConfigOutputReference.property.enableSecureBootInput">enableSecureBootInput</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfigShieldedInstanceConfigOutputReference.property.enableVtpmInput">enableVtpmInput</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfigShieldedInstanceConfigOutputReference.property.enableIntegrityMonitoring">enableIntegrityMonitoring</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfigShieldedInstanceConfigOutputReference.property.enableSecureBoot">enableSecureBoot</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfigShieldedInstanceConfigOutputReference.property.enableVtpm">enableVtpm</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfigShieldedInstanceConfigOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfigShieldedInstanceConfig">DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfigShieldedInstanceConfig</a></code> | *No description.* |
 
 ---
@@ -18228,60 +18203,60 @@ public java.lang.String getFqn();
 ##### `enableIntegrityMonitoringInput`<sup>Optional</sup> <a name="enableIntegrityMonitoringInput" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfigShieldedInstanceConfigOutputReference.property.enableIntegrityMonitoringInput"></a>
 
 ```java
-public java.lang.Object getEnableIntegrityMonitoringInput();
+public java.lang.Boolean|IResolvable getEnableIntegrityMonitoringInput();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
 ##### `enableSecureBootInput`<sup>Optional</sup> <a name="enableSecureBootInput" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfigShieldedInstanceConfigOutputReference.property.enableSecureBootInput"></a>
 
 ```java
-public java.lang.Object getEnableSecureBootInput();
+public java.lang.Boolean|IResolvable getEnableSecureBootInput();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
 ##### `enableVtpmInput`<sup>Optional</sup> <a name="enableVtpmInput" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfigShieldedInstanceConfigOutputReference.property.enableVtpmInput"></a>
 
 ```java
-public java.lang.Object getEnableVtpmInput();
+public java.lang.Boolean|IResolvable getEnableVtpmInput();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
 ##### `enableIntegrityMonitoring`<sup>Required</sup> <a name="enableIntegrityMonitoring" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfigShieldedInstanceConfigOutputReference.property.enableIntegrityMonitoring"></a>
 
 ```java
-public java.lang.Object getEnableIntegrityMonitoring();
+public java.lang.Boolean|IResolvable getEnableIntegrityMonitoring();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
 ##### `enableSecureBoot`<sup>Required</sup> <a name="enableSecureBoot" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfigShieldedInstanceConfigOutputReference.property.enableSecureBoot"></a>
 
 ```java
-public java.lang.Object getEnableSecureBoot();
+public java.lang.Boolean|IResolvable getEnableSecureBoot();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
 ##### `enableVtpm`<sup>Required</sup> <a name="enableVtpm" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfigShieldedInstanceConfigOutputReference.property.enableVtpm"></a>
 
 ```java
-public java.lang.Object getEnableVtpm();
+public java.lang.Boolean|IResolvable getEnableVtpm();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
@@ -18417,7 +18392,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigInitializationActionsList.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigInitializationActionsList.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigInitializationActionsList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigInitializationActions">DataprocWorkflowTemplatePlacementManagedClusterConfigInitializationActions</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigInitializationActionsList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigInitializationActions">DataprocWorkflowTemplatePlacementManagedClusterConfigInitializationActions</a>></code> | *No description.* |
 
 ---
 
@@ -18448,10 +18423,10 @@ public java.lang.String getFqn();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigInitializationActionsList.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|java.util.List<DataprocWorkflowTemplatePlacementManagedClusterConfigInitializationActions> getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigInitializationActions">DataprocWorkflowTemplatePlacementManagedClusterConfigInitializationActions</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigInitializationActions">DataprocWorkflowTemplatePlacementManagedClusterConfigInitializationActions</a>>
 
 ---
 
@@ -18702,7 +18677,7 @@ public void resetExecutionTimeout()
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigInitializationActionsOutputReference.property.executionTimeoutInput">executionTimeoutInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigInitializationActionsOutputReference.property.executableFile">executableFile</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigInitializationActionsOutputReference.property.executionTimeout">executionTimeout</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigInitializationActionsOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigInitializationActions">DataprocWorkflowTemplatePlacementManagedClusterConfigInitializationActions</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigInitializationActionsOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|<a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigInitializationActions">DataprocWorkflowTemplatePlacementManagedClusterConfigInitializationActions</a></code> | *No description.* |
 
 ---
 
@@ -18773,10 +18748,10 @@ public java.lang.String getExecutionTimeout();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigInitializationActionsOutputReference.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|DataprocWorkflowTemplatePlacementManagedClusterConfigInitializationActions getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigInitializationActions">DataprocWorkflowTemplatePlacementManagedClusterConfigInitializationActions</a>
+- *Type:* com.hashicorp.cdktf.IResolvable|<a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigInitializationActions">DataprocWorkflowTemplatePlacementManagedClusterConfigInitializationActions</a>
 
 ---
 
@@ -19249,7 +19224,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigAcceleratorsList.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigAcceleratorsList.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigAcceleratorsList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigAccelerators">DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigAccelerators</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigAcceleratorsList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigAccelerators">DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigAccelerators</a>></code> | *No description.* |
 
 ---
 
@@ -19280,10 +19255,10 @@ public java.lang.String getFqn();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigAcceleratorsList.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|java.util.List<DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigAccelerators> getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigAccelerators">DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigAccelerators</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigAccelerators">DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigAccelerators</a>>
 
 ---
 
@@ -19534,7 +19509,7 @@ public void resetAcceleratorType()
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigAcceleratorsOutputReference.property.acceleratorTypeInput">acceleratorTypeInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigAcceleratorsOutputReference.property.acceleratorCount">acceleratorCount</a></code> | <code>java.lang.Number</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigAcceleratorsOutputReference.property.acceleratorType">acceleratorType</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigAcceleratorsOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigAccelerators">DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigAccelerators</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigAcceleratorsOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|<a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigAccelerators">DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigAccelerators</a></code> | *No description.* |
 
 ---
 
@@ -19605,10 +19580,10 @@ public java.lang.String getAcceleratorType();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigAcceleratorsOutputReference.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigAccelerators getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigAccelerators">DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigAccelerators</a>
+- *Type:* com.hashicorp.cdktf.IResolvable|<a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigAccelerators">DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigAccelerators</a>
 
 ---
 
@@ -20602,12 +20577,12 @@ Returns a reversible string representation.
 ##### `putAccelerators` <a name="putAccelerators" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigOutputReference.putAccelerators"></a>
 
 ```java
-public void putAccelerators(IResolvable OR java.util.List<DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigAccelerators> value)
+public void putAccelerators(IResolvable|java.util.List<DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigAccelerators> value)
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigOutputReference.putAccelerators.parameter.value"></a>
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigAccelerators">DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigAccelerators</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigAccelerators">DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigAccelerators</a>>
 
 ---
 
@@ -20677,7 +20652,7 @@ public void resetPreemptibility()
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigOutputReference.property.instanceNames">instanceNames</a></code> | <code>java.util.List<java.lang.String></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigOutputReference.property.isPreemptible">isPreemptible</a></code> | <code>com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigOutputReference.property.managedGroupConfig">managedGroupConfig</a></code> | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigManagedGroupConfigList">DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigManagedGroupConfigList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigOutputReference.property.acceleratorsInput">acceleratorsInput</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigAccelerators">DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigAccelerators</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigOutputReference.property.acceleratorsInput">acceleratorsInput</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigAccelerators">DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigAccelerators</a>></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigOutputReference.property.diskConfigInput">diskConfigInput</a></code> | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigDiskConfig">DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigDiskConfig</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigOutputReference.property.imageInput">imageInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigOutputReference.property.machineTypeInput">machineTypeInput</a></code> | <code>java.lang.String</code> | *No description.* |
@@ -20770,10 +20745,10 @@ public DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigManagedG
 ##### `acceleratorsInput`<sup>Optional</sup> <a name="acceleratorsInput" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigOutputReference.property.acceleratorsInput"></a>
 
 ```java
-public java.lang.Object getAcceleratorsInput();
+public IResolvable|java.util.List<DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigAccelerators> getAcceleratorsInput();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigAccelerators">DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigAccelerators</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigAccelerators">DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigAccelerators</a>>
 
 ---
 
@@ -21176,12 +21151,12 @@ public void putGceClusterConfig(DataprocWorkflowTemplatePlacementManagedClusterC
 ##### `putInitializationActions` <a name="putInitializationActions" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigOutputReference.putInitializationActions"></a>
 
 ```java
-public void putInitializationActions(IResolvable OR java.util.List<DataprocWorkflowTemplatePlacementManagedClusterConfigInitializationActions> value)
+public void putInitializationActions(IResolvable|java.util.List<DataprocWorkflowTemplatePlacementManagedClusterConfigInitializationActions> value)
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigOutputReference.putInitializationActions.parameter.value"></a>
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigInitializationActions">DataprocWorkflowTemplatePlacementManagedClusterConfigInitializationActions</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigInitializationActions">DataprocWorkflowTemplatePlacementManagedClusterConfigInitializationActions</a>>
 
 ---
 
@@ -21357,7 +21332,7 @@ public void resetWorkerConfig()
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigOutputReference.property.encryptionConfigInput">encryptionConfigInput</a></code> | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigEncryptionConfig">DataprocWorkflowTemplatePlacementManagedClusterConfigEncryptionConfig</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigOutputReference.property.endpointConfigInput">endpointConfigInput</a></code> | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigEndpointConfig">DataprocWorkflowTemplatePlacementManagedClusterConfigEndpointConfig</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigOutputReference.property.gceClusterConfigInput">gceClusterConfigInput</a></code> | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfig">DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfig</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigOutputReference.property.initializationActionsInput">initializationActionsInput</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigInitializationActions">DataprocWorkflowTemplatePlacementManagedClusterConfigInitializationActions</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigOutputReference.property.initializationActionsInput">initializationActionsInput</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigInitializationActions">DataprocWorkflowTemplatePlacementManagedClusterConfigInitializationActions</a>></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigOutputReference.property.lifecycleConfigInput">lifecycleConfigInput</a></code> | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigLifecycleConfig">DataprocWorkflowTemplatePlacementManagedClusterConfigLifecycleConfig</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigOutputReference.property.masterConfigInput">masterConfigInput</a></code> | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfig">DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfig</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigOutputReference.property.secondaryWorkerConfigInput">secondaryWorkerConfigInput</a></code> | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfig">DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfig</a></code> | *No description.* |
@@ -21549,10 +21524,10 @@ public DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfig get
 ##### `initializationActionsInput`<sup>Optional</sup> <a name="initializationActionsInput" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigOutputReference.property.initializationActionsInput"></a>
 
 ```java
-public java.lang.Object getInitializationActionsInput();
+public IResolvable|java.util.List<DataprocWorkflowTemplatePlacementManagedClusterConfigInitializationActions> getInitializationActionsInput();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigInitializationActions">DataprocWorkflowTemplatePlacementManagedClusterConfigInitializationActions</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigInitializationActions">DataprocWorkflowTemplatePlacementManagedClusterConfigInitializationActions</a>>
 
 ---
 
@@ -21788,7 +21763,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigAcceleratorsList.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigAcceleratorsList.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigAcceleratorsList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigAccelerators">DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigAccelerators</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigAcceleratorsList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigAccelerators">DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigAccelerators</a>></code> | *No description.* |
 
 ---
 
@@ -21819,10 +21794,10 @@ public java.lang.String getFqn();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigAcceleratorsList.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|java.util.List<DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigAccelerators> getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigAccelerators">DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigAccelerators</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigAccelerators">DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigAccelerators</a>>
 
 ---
 
@@ -22073,7 +22048,7 @@ public void resetAcceleratorType()
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigAcceleratorsOutputReference.property.acceleratorTypeInput">acceleratorTypeInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigAcceleratorsOutputReference.property.acceleratorCount">acceleratorCount</a></code> | <code>java.lang.Number</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigAcceleratorsOutputReference.property.acceleratorType">acceleratorType</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigAcceleratorsOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigAccelerators">DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigAccelerators</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigAcceleratorsOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|<a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigAccelerators">DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigAccelerators</a></code> | *No description.* |
 
 ---
 
@@ -22144,10 +22119,10 @@ public java.lang.String getAcceleratorType();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigAcceleratorsOutputReference.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigAccelerators getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigAccelerators">DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigAccelerators</a>
+- *Type:* com.hashicorp.cdktf.IResolvable|<a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigAccelerators">DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigAccelerators</a>
 
 ---
 
@@ -23141,12 +23116,12 @@ Returns a reversible string representation.
 ##### `putAccelerators` <a name="putAccelerators" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigOutputReference.putAccelerators"></a>
 
 ```java
-public void putAccelerators(IResolvable OR java.util.List<DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigAccelerators> value)
+public void putAccelerators(IResolvable|java.util.List<DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigAccelerators> value)
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigOutputReference.putAccelerators.parameter.value"></a>
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigAccelerators">DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigAccelerators</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigAccelerators">DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigAccelerators</a>>
 
 ---
 
@@ -23216,7 +23191,7 @@ public void resetPreemptibility()
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigOutputReference.property.instanceNames">instanceNames</a></code> | <code>java.util.List<java.lang.String></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigOutputReference.property.isPreemptible">isPreemptible</a></code> | <code>com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigOutputReference.property.managedGroupConfig">managedGroupConfig</a></code> | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigManagedGroupConfigList">DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigManagedGroupConfigList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigOutputReference.property.acceleratorsInput">acceleratorsInput</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigAccelerators">DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigAccelerators</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigOutputReference.property.acceleratorsInput">acceleratorsInput</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigAccelerators">DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigAccelerators</a>></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigOutputReference.property.diskConfigInput">diskConfigInput</a></code> | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigDiskConfig">DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigDiskConfig</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigOutputReference.property.imageInput">imageInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigOutputReference.property.machineTypeInput">machineTypeInput</a></code> | <code>java.lang.String</code> | *No description.* |
@@ -23309,10 +23284,10 @@ public DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfi
 ##### `acceleratorsInput`<sup>Optional</sup> <a name="acceleratorsInput" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigOutputReference.property.acceleratorsInput"></a>
 
 ```java
-public java.lang.Object getAcceleratorsInput();
+public IResolvable|java.util.List<DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigAccelerators> getAcceleratorsInput();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigAccelerators">DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigAccelerators</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigAccelerators">DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigAccelerators</a>>
 
 ---
 
@@ -23756,7 +23731,7 @@ public void resetTruststorePassword()
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigSecurityConfigKerberosConfigOutputReference.property.crossRealmTrustKdcInput">crossRealmTrustKdcInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigSecurityConfigKerberosConfigOutputReference.property.crossRealmTrustRealmInput">crossRealmTrustRealmInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigSecurityConfigKerberosConfigOutputReference.property.crossRealmTrustSharedPasswordInput">crossRealmTrustSharedPasswordInput</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigSecurityConfigKerberosConfigOutputReference.property.enableKerberosInput">enableKerberosInput</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigSecurityConfigKerberosConfigOutputReference.property.enableKerberosInput">enableKerberosInput</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigSecurityConfigKerberosConfigOutputReference.property.kdcDbKeyInput">kdcDbKeyInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigSecurityConfigKerberosConfigOutputReference.property.keyPasswordInput">keyPasswordInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigSecurityConfigKerberosConfigOutputReference.property.keystoreInput">keystoreInput</a></code> | <code>java.lang.String</code> | *No description.* |
@@ -23771,7 +23746,7 @@ public void resetTruststorePassword()
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigSecurityConfigKerberosConfigOutputReference.property.crossRealmTrustKdc">crossRealmTrustKdc</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigSecurityConfigKerberosConfigOutputReference.property.crossRealmTrustRealm">crossRealmTrustRealm</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigSecurityConfigKerberosConfigOutputReference.property.crossRealmTrustSharedPassword">crossRealmTrustSharedPassword</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigSecurityConfigKerberosConfigOutputReference.property.enableKerberos">enableKerberos</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigSecurityConfigKerberosConfigOutputReference.property.enableKerberos">enableKerberos</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigSecurityConfigKerberosConfigOutputReference.property.kdcDbKey">kdcDbKey</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigSecurityConfigKerberosConfigOutputReference.property.keyPassword">keyPassword</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigSecurityConfigKerberosConfigOutputReference.property.keystore">keystore</a></code> | <code>java.lang.String</code> | *No description.* |
@@ -23853,10 +23828,10 @@ public java.lang.String getCrossRealmTrustSharedPasswordInput();
 ##### `enableKerberosInput`<sup>Optional</sup> <a name="enableKerberosInput" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigSecurityConfigKerberosConfigOutputReference.property.enableKerberosInput"></a>
 
 ```java
-public java.lang.Object getEnableKerberosInput();
+public java.lang.Boolean|IResolvable getEnableKerberosInput();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
@@ -24003,10 +23978,10 @@ public java.lang.String getCrossRealmTrustSharedPassword();
 ##### `enableKerberos`<sup>Required</sup> <a name="enableKerberos" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigSecurityConfigKerberosConfigOutputReference.property.enableKerberos"></a>
 
 ```java
-public java.lang.Object getEnableKerberos();
+public java.lang.Boolean|IResolvable getEnableKerberos();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
@@ -24869,7 +24844,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigAcceleratorsList.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigAcceleratorsList.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigAcceleratorsList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigAccelerators">DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigAccelerators</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigAcceleratorsList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigAccelerators">DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigAccelerators</a>></code> | *No description.* |
 
 ---
 
@@ -24900,10 +24875,10 @@ public java.lang.String getFqn();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigAcceleratorsList.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|java.util.List<DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigAccelerators> getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigAccelerators">DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigAccelerators</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigAccelerators">DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigAccelerators</a>>
 
 ---
 
@@ -25154,7 +25129,7 @@ public void resetAcceleratorType()
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigAcceleratorsOutputReference.property.acceleratorTypeInput">acceleratorTypeInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigAcceleratorsOutputReference.property.acceleratorCount">acceleratorCount</a></code> | <code>java.lang.Number</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigAcceleratorsOutputReference.property.acceleratorType">acceleratorType</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigAcceleratorsOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigAccelerators">DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigAccelerators</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigAcceleratorsOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|<a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigAccelerators">DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigAccelerators</a></code> | *No description.* |
 
 ---
 
@@ -25225,10 +25200,10 @@ public java.lang.String getAcceleratorType();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigAcceleratorsOutputReference.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigAccelerators getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigAccelerators">DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigAccelerators</a>
+- *Type:* com.hashicorp.cdktf.IResolvable|<a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigAccelerators">DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigAccelerators</a>
 
 ---
 
@@ -26222,12 +26197,12 @@ Returns a reversible string representation.
 ##### `putAccelerators` <a name="putAccelerators" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigOutputReference.putAccelerators"></a>
 
 ```java
-public void putAccelerators(IResolvable OR java.util.List<DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigAccelerators> value)
+public void putAccelerators(IResolvable|java.util.List<DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigAccelerators> value)
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigOutputReference.putAccelerators.parameter.value"></a>
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigAccelerators">DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigAccelerators</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigAccelerators">DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigAccelerators</a>>
 
 ---
 
@@ -26297,7 +26272,7 @@ public void resetPreemptibility()
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigOutputReference.property.instanceNames">instanceNames</a></code> | <code>java.util.List<java.lang.String></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigOutputReference.property.isPreemptible">isPreemptible</a></code> | <code>com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigOutputReference.property.managedGroupConfig">managedGroupConfig</a></code> | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigManagedGroupConfigList">DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigManagedGroupConfigList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigOutputReference.property.acceleratorsInput">acceleratorsInput</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigAccelerators">DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigAccelerators</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigOutputReference.property.acceleratorsInput">acceleratorsInput</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigAccelerators">DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigAccelerators</a>></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigOutputReference.property.diskConfigInput">diskConfigInput</a></code> | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigDiskConfig">DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigDiskConfig</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigOutputReference.property.imageInput">imageInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigOutputReference.property.machineTypeInput">machineTypeInput</a></code> | <code>java.lang.String</code> | *No description.* |
@@ -26390,10 +26365,10 @@ public DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigManagedG
 ##### `acceleratorsInput`<sup>Optional</sup> <a name="acceleratorsInput" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigOutputReference.property.acceleratorsInput"></a>
 
 ```java
-public java.lang.Object getAcceleratorsInput();
+public IResolvable|java.util.List<DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigAccelerators> getAcceleratorsInput();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigAccelerators">DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigAccelerators</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigAccelerators">DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigAccelerators</a>>
 
 ---
 
@@ -27423,7 +27398,7 @@ public void resetUpdate()
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateTimeoutsOutputReference.property.create">create</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateTimeoutsOutputReference.property.delete">delete</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateTimeoutsOutputReference.property.update">update</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateTimeouts">DataprocWorkflowTemplateTimeouts</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|<a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateTimeouts">DataprocWorkflowTemplateTimeouts</a></code> | *No description.* |
 
 ---
 
@@ -27514,10 +27489,10 @@ public java.lang.String getUpdate();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateTimeoutsOutputReference.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|DataprocWorkflowTemplateTimeouts getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateTimeouts">DataprocWorkflowTemplateTimeouts</a>
+- *Type:* com.hashicorp.cdktf.IResolvable|<a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateTimeouts">DataprocWorkflowTemplateTimeouts</a>
 
 ---
 

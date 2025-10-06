@@ -12,17 +12,13 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.5
 import com.hashicorp.cdktf.providers.google.datastream_stream.DatastreamStream;
 
 DatastreamStream.Builder.create(Construct scope, java.lang.String id)
-//  .connection(SSHProvisionerConnection)
-//  .connection(WinrmProvisionerConnection)
-//  .count(java.lang.Number)
-//  .count(TerraformCount)
+//  .connection(SSHProvisionerConnection|WinrmProvisionerConnection)
+//  .count(java.lang.Number|TerraformCount)
 //  .dependsOn(java.util.List<ITerraformDependable>)
 //  .forEach(ITerraformIterator)
 //  .lifecycle(TerraformResourceLifecycle)
 //  .provider(TerraformProvider)
-//  .provisioners(java.util.List<FileProvisioner)
-//  .provisioners(LocalExecProvisioner)
-//  .provisioners(RemoteExecProvisioner>)
+//  .provisioners(java.util.List<FileProvisioner|LocalExecProvisioner|RemoteExecProvisioner>)
     .destinationConfig(DatastreamStreamDestinationConfig)
     .displayName(java.lang.String)
     .location(java.lang.String)
@@ -30,8 +26,7 @@ DatastreamStream.Builder.create(Construct scope, java.lang.String id)
     .streamId(java.lang.String)
 //  .backfillAll(DatastreamStreamBackfillAll)
 //  .backfillNone(DatastreamStreamBackfillNone)
-//  .createWithoutValidation(java.lang.Boolean)
-//  .createWithoutValidation(IResolvable)
+//  .createWithoutValidation(java.lang.Boolean|IResolvable)
 //  .customerManagedEncryptionKey(java.lang.String)
 //  .desiredState(java.lang.String)
 //  .id(java.lang.String)
@@ -45,13 +40,13 @@ DatastreamStream.Builder.create(Construct scope, java.lang.String id)
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStream.Initializer.parameter.scope">scope</a></code> | <code>software.constructs.Construct</code> | The scope in which to define this construct. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStream.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | The scoped construct ID. |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStream.Initializer.parameter.connection">connection</a></code> | <code>com.hashicorp.cdktf.SSHProvisionerConnection OR com.hashicorp.cdktf.WinrmProvisionerConnection</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStream.Initializer.parameter.count">count</a></code> | <code>java.lang.Number OR com.hashicorp.cdktf.TerraformCount</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStream.Initializer.parameter.connection">connection</a></code> | <code>com.hashicorp.cdktf.SSHProvisionerConnection\|com.hashicorp.cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStream.Initializer.parameter.count">count</a></code> | <code>java.lang.Number\|com.hashicorp.cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStream.Initializer.parameter.dependsOn">dependsOn</a></code> | <code>java.util.List<com.hashicorp.cdktf.ITerraformDependable></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStream.Initializer.parameter.forEach">forEach</a></code> | <code>com.hashicorp.cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStream.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStream.Initializer.parameter.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStream.Initializer.parameter.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStream.Initializer.parameter.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner\|com.hashicorp.cdktf.LocalExecProvisioner\|com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStream.Initializer.parameter.destinationConfig">destinationConfig</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamDestinationConfig">DatastreamStreamDestinationConfig</a></code> | destination_config block. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStream.Initializer.parameter.displayName">displayName</a></code> | <code>java.lang.String</code> | Display name. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStream.Initializer.parameter.location">location</a></code> | <code>java.lang.String</code> | The name of the location this stream is located in. |
@@ -59,7 +54,7 @@ DatastreamStream.Builder.create(Construct scope, java.lang.String id)
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStream.Initializer.parameter.streamId">streamId</a></code> | <code>java.lang.String</code> | The stream identifier. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStream.Initializer.parameter.backfillAll">backfillAll</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAll">DatastreamStreamBackfillAll</a></code> | backfill_all block. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStream.Initializer.parameter.backfillNone">backfillNone</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillNone">DatastreamStreamBackfillNone</a></code> | backfill_none block. |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStream.Initializer.parameter.createWithoutValidation">createWithoutValidation</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Create the stream without validating it. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStream.Initializer.parameter.createWithoutValidation">createWithoutValidation</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Create the stream without validating it. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStream.Initializer.parameter.customerManagedEncryptionKey">customerManagedEncryptionKey</a></code> | <code>java.lang.String</code> | A reference to a KMS encryption key. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStream.Initializer.parameter.desiredState">desiredState</a></code> | <code>java.lang.String</code> | Desired state of the Stream. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStream.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/datastream_stream#id DatastreamStream#id}. |
@@ -89,13 +84,13 @@ Must be unique amongst siblings in the same scope
 
 ##### `connection`<sup>Optional</sup> <a name="connection" id="@cdktf/provider-google.datastreamStream.DatastreamStream.Initializer.parameter.connection"></a>
 
-- *Type:* com.hashicorp.cdktf.SSHProvisionerConnection OR com.hashicorp.cdktf.WinrmProvisionerConnection
+- *Type:* com.hashicorp.cdktf.SSHProvisionerConnection|com.hashicorp.cdktf.WinrmProvisionerConnection
 
 ---
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.datastreamStream.DatastreamStream.Initializer.parameter.count"></a>
 
-- *Type:* java.lang.Number OR com.hashicorp.cdktf.TerraformCount
+- *Type:* java.lang.Number|com.hashicorp.cdktf.TerraformCount
 
 ---
 
@@ -125,7 +120,7 @@ Must be unique amongst siblings in the same scope
 
 ##### `provisioners`<sup>Optional</sup> <a name="provisioners" id="@cdktf/provider-google.datastreamStream.DatastreamStream.Initializer.parameter.provisioners"></a>
 
-- *Type:* java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner>
+- *Type:* java.util.List<com.hashicorp.cdktf.FileProvisioner|com.hashicorp.cdktf.LocalExecProvisioner|com.hashicorp.cdktf.RemoteExecProvisioner>
 
 ---
 
@@ -201,7 +196,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `createWithoutValidation`<sup>Optional</sup> <a name="createWithoutValidation" id="@cdktf/provider-google.datastreamStream.DatastreamStream.Initializer.parameter.createWithoutValidation"></a>
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 Create the stream without validating it.
 
@@ -520,7 +515,7 @@ public java.util.Map<java.lang.String, java.lang.String> getStringMapAttribute(j
 ##### `hasResourceMove` <a name="hasResourceMove" id="@cdktf/provider-google.datastreamStream.DatastreamStream.hasResourceMove"></a>
 
 ```java
-public TerraformResourceMoveByTarget OR TerraformResourceMoveById hasResourceMove()
+public TerraformResourceMoveByTarget|TerraformResourceMoveById hasResourceMove()
 ```
 
 ##### `importFrom` <a name="importFrom" id="@cdktf/provider-google.datastreamStream.DatastreamStream.importFrom"></a>
@@ -576,7 +571,7 @@ Full id of resource being moved from, e.g. "aws_s3_bucket.example".
 
 ```java
 public void moveTo(java.lang.String moveTarget)
-public void moveTo(java.lang.String moveTarget, java.lang.String OR java.lang.Number index)
+public void moveTo(java.lang.String moveTarget, java.lang.String|java.lang.Number index)
 ```
 
 Moves this resource to the target resource given by moveTarget.
@@ -591,7 +586,7 @@ The previously set user defined string set by .addMoveTarget() corresponding to 
 
 ###### `index`<sup>Optional</sup> <a name="index" id="@cdktf/provider-google.datastreamStream.DatastreamStream.moveTo.parameter.index"></a>
 
-- *Type:* java.lang.String OR java.lang.Number
+- *Type:* java.lang.String|java.lang.Number
 
 Optional The index corresponding to the key the resource is to appear in the foreach of a resource to move to.
 
@@ -853,13 +848,13 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.5
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStream.property.terraformMetaArguments">terraformMetaArguments</a></code> | <code>java.util.Map<java.lang.String, java.lang.Object></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStream.property.terraformResourceType">terraformResourceType</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStream.property.terraformGeneratorMetadata">terraformGeneratorMetadata</a></code> | <code>com.hashicorp.cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStream.property.connection">connection</a></code> | <code>com.hashicorp.cdktf.SSHProvisionerConnection OR com.hashicorp.cdktf.WinrmProvisionerConnection</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStream.property.count">count</a></code> | <code>java.lang.Number OR com.hashicorp.cdktf.TerraformCount</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStream.property.connection">connection</a></code> | <code>com.hashicorp.cdktf.SSHProvisionerConnection\|com.hashicorp.cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStream.property.count">count</a></code> | <code>java.lang.Number\|com.hashicorp.cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStream.property.dependsOn">dependsOn</a></code> | <code>java.util.List<java.lang.String></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStream.property.forEach">forEach</a></code> | <code>com.hashicorp.cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStream.property.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStream.property.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStream.property.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStream.property.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner\|com.hashicorp.cdktf.LocalExecProvisioner\|com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStream.property.backfillAll">backfillAll</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOutputReference">DatastreamStreamBackfillAllOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStream.property.backfillNone">backfillNone</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillNoneOutputReference">DatastreamStreamBackfillNoneOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStream.property.destinationConfig">destinationConfig</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamDestinationConfigOutputReference">DatastreamStreamDestinationConfigOutputReference</a></code> | *No description.* |
@@ -871,7 +866,7 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.5
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStream.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamTimeoutsOutputReference">DatastreamStreamTimeoutsOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStream.property.backfillAllInput">backfillAllInput</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAll">DatastreamStreamBackfillAll</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStream.property.backfillNoneInput">backfillNoneInput</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillNone">DatastreamStreamBackfillNone</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStream.property.createWithoutValidationInput">createWithoutValidationInput</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStream.property.createWithoutValidationInput">createWithoutValidationInput</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStream.property.customerManagedEncryptionKeyInput">customerManagedEncryptionKeyInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStream.property.desiredStateInput">desiredStateInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStream.property.destinationConfigInput">destinationConfigInput</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamDestinationConfig">DatastreamStreamDestinationConfig</a></code> | *No description.* |
@@ -882,8 +877,8 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.5
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStream.property.projectInput">projectInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStream.property.sourceConfigInput">sourceConfigInput</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfig">DatastreamStreamSourceConfig</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStream.property.streamIdInput">streamIdInput</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStream.property.timeoutsInput">timeoutsInput</a></code> | <code>com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamTimeouts">DatastreamStreamTimeouts</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStream.property.createWithoutValidation">createWithoutValidation</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStream.property.timeoutsInput">timeoutsInput</a></code> | <code>com.hashicorp.cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamTimeouts">DatastreamStreamTimeouts</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStream.property.createWithoutValidation">createWithoutValidation</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStream.property.customerManagedEncryptionKey">customerManagedEncryptionKey</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStream.property.desiredState">desiredState</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStream.property.displayName">displayName</a></code> | <code>java.lang.String</code> | *No description.* |
@@ -970,20 +965,20 @@ public TerraformProviderGeneratorMetadata getTerraformGeneratorMetadata();
 ##### `connection`<sup>Optional</sup> <a name="connection" id="@cdktf/provider-google.datastreamStream.DatastreamStream.property.connection"></a>
 
 ```java
-public java.lang.Object getConnection();
+public SSHProvisionerConnection|WinrmProvisionerConnection getConnection();
 ```
 
-- *Type:* com.hashicorp.cdktf.SSHProvisionerConnection OR com.hashicorp.cdktf.WinrmProvisionerConnection
+- *Type:* com.hashicorp.cdktf.SSHProvisionerConnection|com.hashicorp.cdktf.WinrmProvisionerConnection
 
 ---
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.datastreamStream.DatastreamStream.property.count"></a>
 
 ```java
-public java.lang.Object getCount();
+public java.lang.Number|TerraformCount getCount();
 ```
 
-- *Type:* java.lang.Number OR com.hashicorp.cdktf.TerraformCount
+- *Type:* java.lang.Number|com.hashicorp.cdktf.TerraformCount
 
 ---
 
@@ -1030,10 +1025,10 @@ public TerraformProvider getProvider();
 ##### `provisioners`<sup>Optional</sup> <a name="provisioners" id="@cdktf/provider-google.datastreamStream.DatastreamStream.property.provisioners"></a>
 
 ```java
-public java.lang.Object getProvisioners();
+public java.util.List<FileProvisioner|LocalExecProvisioner|RemoteExecProvisioner> getProvisioners();
 ```
 
-- *Type:* java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner>
+- *Type:* java.util.List<com.hashicorp.cdktf.FileProvisioner|com.hashicorp.cdktf.LocalExecProvisioner|com.hashicorp.cdktf.RemoteExecProvisioner>
 
 ---
 
@@ -1150,10 +1145,10 @@ public DatastreamStreamBackfillNone getBackfillNoneInput();
 ##### `createWithoutValidationInput`<sup>Optional</sup> <a name="createWithoutValidationInput" id="@cdktf/provider-google.datastreamStream.DatastreamStream.property.createWithoutValidationInput"></a>
 
 ```java
-public java.lang.Object getCreateWithoutValidationInput();
+public java.lang.Boolean|IResolvable getCreateWithoutValidationInput();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
@@ -1260,20 +1255,20 @@ public java.lang.String getStreamIdInput();
 ##### `timeoutsInput`<sup>Optional</sup> <a name="timeoutsInput" id="@cdktf/provider-google.datastreamStream.DatastreamStream.property.timeoutsInput"></a>
 
 ```java
-public java.lang.Object getTimeoutsInput();
+public IResolvable|DatastreamStreamTimeouts getTimeoutsInput();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamTimeouts">DatastreamStreamTimeouts</a>
+- *Type:* com.hashicorp.cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamTimeouts">DatastreamStreamTimeouts</a>
 
 ---
 
 ##### `createWithoutValidation`<sup>Required</sup> <a name="createWithoutValidation" id="@cdktf/provider-google.datastreamStream.DatastreamStream.property.createWithoutValidation"></a>
 
 ```java
-public java.lang.Object getCreateWithoutValidation();
+public java.lang.Boolean|IResolvable getCreateWithoutValidation();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
@@ -1483,8 +1478,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 import com.hashicorp.cdktf.providers.google.datastream_stream.DatastreamStreamBackfillAllMysqlExcludedObjects;
 
 DatastreamStreamBackfillAllMysqlExcludedObjects.builder()
-    .mysqlDatabases(IResolvable)
-    .mysqlDatabases(java.util.List<DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabases>)
+    .mysqlDatabases(IResolvable|java.util.List<DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabases>)
     .build();
 ```
 
@@ -1492,17 +1486,17 @@ DatastreamStreamBackfillAllMysqlExcludedObjects.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjects.property.mysqlDatabases">mysqlDatabases</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabases">DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabases</a>></code> | mysql_databases block. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjects.property.mysqlDatabases">mysqlDatabases</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabases">DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabases</a>></code> | mysql_databases block. |
 
 ---
 
 ##### `mysqlDatabases`<sup>Required</sup> <a name="mysqlDatabases" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjects.property.mysqlDatabases"></a>
 
 ```java
-public java.lang.Object getMysqlDatabases();
+public IResolvable|java.util.List<DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabases> getMysqlDatabases();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabases">DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabases</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabases">DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabases</a>>
 
 mysql_databases block.
 
@@ -1519,8 +1513,7 @@ import com.hashicorp.cdktf.providers.google.datastream_stream.DatastreamStreamBa
 
 DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabases.builder()
     .database(java.lang.String)
-//  .mysqlTables(IResolvable)
-//  .mysqlTables(java.util.List<DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTables>)
+//  .mysqlTables(IResolvable|java.util.List<DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTables>)
     .build();
 ```
 
@@ -1529,7 +1522,7 @@ DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabases.builder()
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabases.property.database">database</a></code> | <code>java.lang.String</code> | Database name. |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabases.property.mysqlTables">mysqlTables</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTables">DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTables</a>></code> | mysql_tables block. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabases.property.mysqlTables">mysqlTables</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTables">DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTables</a>></code> | mysql_tables block. |
 
 ---
 
@@ -1550,10 +1543,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `mysqlTables`<sup>Optional</sup> <a name="mysqlTables" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabases.property.mysqlTables"></a>
 
 ```java
-public java.lang.Object getMysqlTables();
+public IResolvable|java.util.List<DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTables> getMysqlTables();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTables">DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTables</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTables">DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTables</a>>
 
 mysql_tables block.
 
@@ -1570,8 +1563,7 @@ import com.hashicorp.cdktf.providers.google.datastream_stream.DatastreamStreamBa
 
 DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTables.builder()
     .table(java.lang.String)
-//  .mysqlColumns(IResolvable)
-//  .mysqlColumns(java.util.List<DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns>)
+//  .mysqlColumns(IResolvable|java.util.List<DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns>)
     .build();
 ```
 
@@ -1580,7 +1572,7 @@ DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTables.builder
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTables.property.table">table</a></code> | <code>java.lang.String</code> | Table name. |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTables.property.mysqlColumns">mysqlColumns</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns">DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns</a>></code> | mysql_columns block. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTables.property.mysqlColumns">mysqlColumns</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns">DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns</a>></code> | mysql_columns block. |
 
 ---
 
@@ -1601,10 +1593,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `mysqlColumns`<sup>Optional</sup> <a name="mysqlColumns" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTables.property.mysqlColumns"></a>
 
 ```java
-public java.lang.Object getMysqlColumns();
+public IResolvable|java.util.List<DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns> getMysqlColumns();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns">DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns">DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns</a>>
 
 mysql_columns block.
 
@@ -1623,11 +1615,9 @@ DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlCol
 //  .collation(java.lang.String)
 //  .column(java.lang.String)
 //  .dataType(java.lang.String)
-//  .nullable(java.lang.Boolean)
-//  .nullable(IResolvable)
+//  .nullable(java.lang.Boolean|IResolvable)
 //  .ordinalPosition(java.lang.Number)
-//  .primaryKey(java.lang.Boolean)
-//  .primaryKey(IResolvable)
+//  .primaryKey(java.lang.Boolean|IResolvable)
     .build();
 ```
 
@@ -1638,9 +1628,9 @@ DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlCol
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns.property.collation">collation</a></code> | <code>java.lang.String</code> | Column collation. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns.property.column">column</a></code> | <code>java.lang.String</code> | Column name. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns.property.dataType">dataType</a></code> | <code>java.lang.String</code> | The MySQL data type. Full data types list can be found here: https://dev.mysql.com/doc/refman/8.0/en/data-types.html. |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns.property.nullable">nullable</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Whether or not the column can accept a null value. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns.property.nullable">nullable</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Whether or not the column can accept a null value. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns.property.ordinalPosition">ordinalPosition</a></code> | <code>java.lang.Number</code> | The ordinal position of the column in the table. |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns.property.primaryKey">primaryKey</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Whether or not the column represents a primary key. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns.property.primaryKey">primaryKey</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Whether or not the column represents a primary key. |
 
 ---
 
@@ -1689,10 +1679,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `nullable`<sup>Optional</sup> <a name="nullable" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns.property.nullable"></a>
 
 ```java
-public java.lang.Object getNullable();
+public java.lang.Boolean|IResolvable getNullable();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 Whether or not the column can accept a null value.
 
@@ -1717,10 +1707,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `primaryKey`<sup>Optional</sup> <a name="primaryKey" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns.property.primaryKey"></a>
 
 ```java
-public java.lang.Object getPrimaryKey();
+public java.lang.Boolean|IResolvable getPrimaryKey();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 Whether or not the column represents a primary key.
 
@@ -1736,8 +1726,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 import com.hashicorp.cdktf.providers.google.datastream_stream.DatastreamStreamBackfillAllOracleExcludedObjects;
 
 DatastreamStreamBackfillAllOracleExcludedObjects.builder()
-    .oracleSchemas(IResolvable)
-    .oracleSchemas(java.util.List<DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemas>)
+    .oracleSchemas(IResolvable|java.util.List<DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemas>)
     .build();
 ```
 
@@ -1745,17 +1734,17 @@ DatastreamStreamBackfillAllOracleExcludedObjects.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjects.property.oracleSchemas">oracleSchemas</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemas">DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemas</a>></code> | oracle_schemas block. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjects.property.oracleSchemas">oracleSchemas</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemas">DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemas</a>></code> | oracle_schemas block. |
 
 ---
 
 ##### `oracleSchemas`<sup>Required</sup> <a name="oracleSchemas" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjects.property.oracleSchemas"></a>
 
 ```java
-public java.lang.Object getOracleSchemas();
+public IResolvable|java.util.List<DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemas> getOracleSchemas();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemas">DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemas</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemas">DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemas</a>>
 
 oracle_schemas block.
 
@@ -1772,8 +1761,7 @@ import com.hashicorp.cdktf.providers.google.datastream_stream.DatastreamStreamBa
 
 DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemas.builder()
     .schema(java.lang.String)
-//  .oracleTables(IResolvable)
-//  .oracleTables(java.util.List<DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTables>)
+//  .oracleTables(IResolvable|java.util.List<DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTables>)
     .build();
 ```
 
@@ -1782,7 +1770,7 @@ DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemas.builder()
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemas.property.schema">schema</a></code> | <code>java.lang.String</code> | Schema name. |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemas.property.oracleTables">oracleTables</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTables">DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTables</a>></code> | oracle_tables block. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemas.property.oracleTables">oracleTables</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTables">DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTables</a>></code> | oracle_tables block. |
 
 ---
 
@@ -1803,10 +1791,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `oracleTables`<sup>Optional</sup> <a name="oracleTables" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemas.property.oracleTables"></a>
 
 ```java
-public java.lang.Object getOracleTables();
+public IResolvable|java.util.List<DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTables> getOracleTables();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTables">DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTables</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTables">DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTables</a>>
 
 oracle_tables block.
 
@@ -1823,8 +1811,7 @@ import com.hashicorp.cdktf.providers.google.datastream_stream.DatastreamStreamBa
 
 DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTables.builder()
     .table(java.lang.String)
-//  .oracleColumns(IResolvable)
-//  .oracleColumns(java.util.List<DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumns>)
+//  .oracleColumns(IResolvable|java.util.List<DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumns>)
     .build();
 ```
 
@@ -1833,7 +1820,7 @@ DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTables.builde
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTables.property.table">table</a></code> | <code>java.lang.String</code> | Table name. |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTables.property.oracleColumns">oracleColumns</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumns">DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumns</a>></code> | oracle_columns block. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTables.property.oracleColumns">oracleColumns</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumns">DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumns</a>></code> | oracle_columns block. |
 
 ---
 
@@ -1854,10 +1841,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `oracleColumns`<sup>Optional</sup> <a name="oracleColumns" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTables.property.oracleColumns"></a>
 
 ```java
-public java.lang.Object getOracleColumns();
+public IResolvable|java.util.List<DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumns> getOracleColumns();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumns">DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumns</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumns">DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumns</a>>
 
 oracle_columns block.
 
@@ -1923,8 +1910,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 import com.hashicorp.cdktf.providers.google.datastream_stream.DatastreamStreamBackfillAllPostgresqlExcludedObjects;
 
 DatastreamStreamBackfillAllPostgresqlExcludedObjects.builder()
-    .postgresqlSchemas(IResolvable)
-    .postgresqlSchemas(java.util.List<DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas>)
+    .postgresqlSchemas(IResolvable|java.util.List<DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas>)
     .build();
 ```
 
@@ -1932,17 +1918,17 @@ DatastreamStreamBackfillAllPostgresqlExcludedObjects.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjects.property.postgresqlSchemas">postgresqlSchemas</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas">DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas</a>></code> | postgresql_schemas block. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjects.property.postgresqlSchemas">postgresqlSchemas</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas">DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas</a>></code> | postgresql_schemas block. |
 
 ---
 
 ##### `postgresqlSchemas`<sup>Required</sup> <a name="postgresqlSchemas" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjects.property.postgresqlSchemas"></a>
 
 ```java
-public java.lang.Object getPostgresqlSchemas();
+public IResolvable|java.util.List<DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas> getPostgresqlSchemas();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas">DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas">DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas</a>>
 
 postgresql_schemas block.
 
@@ -1959,8 +1945,7 @@ import com.hashicorp.cdktf.providers.google.datastream_stream.DatastreamStreamBa
 
 DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas.builder()
     .schema(java.lang.String)
-//  .postgresqlTables(IResolvable)
-//  .postgresqlTables(java.util.List<DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTables>)
+//  .postgresqlTables(IResolvable|java.util.List<DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTables>)
     .build();
 ```
 
@@ -1969,7 +1954,7 @@ DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas.builder()
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas.property.schema">schema</a></code> | <code>java.lang.String</code> | Database name. |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas.property.postgresqlTables">postgresqlTables</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTables">DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTables</a>></code> | postgresql_tables block. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas.property.postgresqlTables">postgresqlTables</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTables">DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTables</a>></code> | postgresql_tables block. |
 
 ---
 
@@ -1990,10 +1975,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `postgresqlTables`<sup>Optional</sup> <a name="postgresqlTables" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas.property.postgresqlTables"></a>
 
 ```java
-public java.lang.Object getPostgresqlTables();
+public IResolvable|java.util.List<DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTables> getPostgresqlTables();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTables">DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTables</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTables">DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTables</a>>
 
 postgresql_tables block.
 
@@ -2010,8 +1995,7 @@ import com.hashicorp.cdktf.providers.google.datastream_stream.DatastreamStreamBa
 
 DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTables.builder()
     .table(java.lang.String)
-//  .postgresqlColumns(IResolvable)
-//  .postgresqlColumns(java.util.List<DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns>)
+//  .postgresqlColumns(IResolvable|java.util.List<DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns>)
     .build();
 ```
 
@@ -2020,7 +2004,7 @@ DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlT
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTables.property.table">table</a></code> | <code>java.lang.String</code> | Table name. |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTables.property.postgresqlColumns">postgresqlColumns</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns">DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns</a>></code> | postgresql_columns block. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTables.property.postgresqlColumns">postgresqlColumns</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns">DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns</a>></code> | postgresql_columns block. |
 
 ---
 
@@ -2041,10 +2025,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `postgresqlColumns`<sup>Optional</sup> <a name="postgresqlColumns" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTables.property.postgresqlColumns"></a>
 
 ```java
-public java.lang.Object getPostgresqlColumns();
+public IResolvable|java.util.List<DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns> getPostgresqlColumns();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns">DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns">DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns</a>>
 
 postgresql_columns block.
 
@@ -2062,11 +2046,9 @@ import com.hashicorp.cdktf.providers.google.datastream_stream.DatastreamStreamBa
 DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns.builder()
 //  .column(java.lang.String)
 //  .dataType(java.lang.String)
-//  .nullable(java.lang.Boolean)
-//  .nullable(IResolvable)
+//  .nullable(java.lang.Boolean|IResolvable)
 //  .ordinalPosition(java.lang.Number)
-//  .primaryKey(java.lang.Boolean)
-//  .primaryKey(IResolvable)
+//  .primaryKey(java.lang.Boolean|IResolvable)
     .build();
 ```
 
@@ -2076,9 +2058,9 @@ DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlT
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns.property.column">column</a></code> | <code>java.lang.String</code> | Column name. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns.property.dataType">dataType</a></code> | <code>java.lang.String</code> | The PostgreSQL data type. Full data types list can be found here: https://www.postgresql.org/docs/current/datatype.html. |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns.property.nullable">nullable</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Whether or not the column can accept a null value. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns.property.nullable">nullable</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Whether or not the column can accept a null value. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns.property.ordinalPosition">ordinalPosition</a></code> | <code>java.lang.Number</code> | The ordinal position of the column in the table. |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns.property.primaryKey">primaryKey</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Whether or not the column represents a primary key. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns.property.primaryKey">primaryKey</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Whether or not the column represents a primary key. |
 
 ---
 
@@ -2113,10 +2095,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `nullable`<sup>Optional</sup> <a name="nullable" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns.property.nullable"></a>
 
 ```java
-public java.lang.Object getNullable();
+public java.lang.Boolean|IResolvable getNullable();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 Whether or not the column can accept a null value.
 
@@ -2141,10 +2123,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `primaryKey`<sup>Optional</sup> <a name="primaryKey" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns.property.primaryKey"></a>
 
 ```java
-public java.lang.Object getPrimaryKey();
+public java.lang.Boolean|IResolvable getPrimaryKey();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 Whether or not the column represents a primary key.
 
@@ -2160,8 +2142,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 import com.hashicorp.cdktf.providers.google.datastream_stream.DatastreamStreamBackfillAllSalesforceExcludedObjects;
 
 DatastreamStreamBackfillAllSalesforceExcludedObjects.builder()
-    .objects(IResolvable)
-    .objects(java.util.List<DatastreamStreamBackfillAllSalesforceExcludedObjectsObjects>)
+    .objects(IResolvable|java.util.List<DatastreamStreamBackfillAllSalesforceExcludedObjectsObjects>)
     .build();
 ```
 
@@ -2169,17 +2150,17 @@ DatastreamStreamBackfillAllSalesforceExcludedObjects.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjects.property.objects">objects</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjects">DatastreamStreamBackfillAllSalesforceExcludedObjectsObjects</a>></code> | objects block. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjects.property.objects">objects</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjects">DatastreamStreamBackfillAllSalesforceExcludedObjectsObjects</a>></code> | objects block. |
 
 ---
 
 ##### `objects`<sup>Required</sup> <a name="objects" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjects.property.objects"></a>
 
 ```java
-public java.lang.Object getObjects();
+public IResolvable|java.util.List<DatastreamStreamBackfillAllSalesforceExcludedObjectsObjects> getObjects();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjects">DatastreamStreamBackfillAllSalesforceExcludedObjectsObjects</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjects">DatastreamStreamBackfillAllSalesforceExcludedObjectsObjects</a>>
 
 objects block.
 
@@ -2195,8 +2176,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 import com.hashicorp.cdktf.providers.google.datastream_stream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjects;
 
 DatastreamStreamBackfillAllSalesforceExcludedObjectsObjects.builder()
-//  .fields(IResolvable)
-//  .fields(java.util.List<DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFields>)
+//  .fields(IResolvable|java.util.List<DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFields>)
 //  .objectName(java.lang.String)
     .build();
 ```
@@ -2205,7 +2185,7 @@ DatastreamStreamBackfillAllSalesforceExcludedObjectsObjects.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjects.property.fields">fields</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFields">DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFields</a>></code> | fields block. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjects.property.fields">fields</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFields">DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFields</a>></code> | fields block. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjects.property.objectName">objectName</a></code> | <code>java.lang.String</code> | Name of object in Salesforce Org. |
 
 ---
@@ -2213,10 +2193,10 @@ DatastreamStreamBackfillAllSalesforceExcludedObjectsObjects.builder()
 ##### `fields`<sup>Optional</sup> <a name="fields" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjects.property.fields"></a>
 
 ```java
-public java.lang.Object getFields();
+public IResolvable|java.util.List<DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFields> getFields();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFields">DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFields</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFields">DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFields</a>>
 
 fields block.
 
@@ -2280,8 +2260,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 import com.hashicorp.cdktf.providers.google.datastream_stream.DatastreamStreamBackfillAllSqlServerExcludedObjects;
 
 DatastreamStreamBackfillAllSqlServerExcludedObjects.builder()
-    .schemas(IResolvable)
-    .schemas(java.util.List<DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemas>)
+    .schemas(IResolvable|java.util.List<DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemas>)
     .build();
 ```
 
@@ -2289,17 +2268,17 @@ DatastreamStreamBackfillAllSqlServerExcludedObjects.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjects.property.schemas">schemas</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemas">DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemas</a>></code> | schemas block. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjects.property.schemas">schemas</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemas">DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemas</a>></code> | schemas block. |
 
 ---
 
 ##### `schemas`<sup>Required</sup> <a name="schemas" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjects.property.schemas"></a>
 
 ```java
-public java.lang.Object getSchemas();
+public IResolvable|java.util.List<DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemas> getSchemas();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemas">DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemas</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemas">DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemas</a>>
 
 schemas block.
 
@@ -2316,8 +2295,7 @@ import com.hashicorp.cdktf.providers.google.datastream_stream.DatastreamStreamBa
 
 DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemas.builder()
     .schema(java.lang.String)
-//  .tables(IResolvable)
-//  .tables(java.util.List<DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTables>)
+//  .tables(IResolvable|java.util.List<DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTables>)
     .build();
 ```
 
@@ -2326,7 +2304,7 @@ DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemas.builder()
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemas.property.schema">schema</a></code> | <code>java.lang.String</code> | Schema name. |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemas.property.tables">tables</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTables">DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTables</a>></code> | tables block. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemas.property.tables">tables</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTables">DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTables</a>></code> | tables block. |
 
 ---
 
@@ -2347,10 +2325,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `tables`<sup>Optional</sup> <a name="tables" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemas.property.tables"></a>
 
 ```java
-public java.lang.Object getTables();
+public IResolvable|java.util.List<DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTables> getTables();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTables">DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTables</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTables">DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTables</a>>
 
 tables block.
 
@@ -2367,8 +2345,7 @@ import com.hashicorp.cdktf.providers.google.datastream_stream.DatastreamStreamBa
 
 DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTables.builder()
     .table(java.lang.String)
-//  .columns(IResolvable)
-//  .columns(java.util.List<DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumns>)
+//  .columns(IResolvable|java.util.List<DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumns>)
     .build();
 ```
 
@@ -2377,7 +2354,7 @@ DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTables.builder()
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTables.property.table">table</a></code> | <code>java.lang.String</code> | Table name. |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTables.property.columns">columns</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumns">DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumns</a>></code> | columns block. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTables.property.columns">columns</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumns">DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumns</a>></code> | columns block. |
 
 ---
 
@@ -2398,10 +2375,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `columns`<sup>Optional</sup> <a name="columns" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTables.property.columns"></a>
 
 ```java
-public java.lang.Object getColumns();
+public IResolvable|java.util.List<DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumns> getColumns();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumns">DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumns</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumns">DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumns</a>>
 
 columns block.
 
@@ -2479,17 +2456,13 @@ DatastreamStreamBackfillNone.builder()
 import com.hashicorp.cdktf.providers.google.datastream_stream.DatastreamStreamConfig;
 
 DatastreamStreamConfig.builder()
-//  .connection(SSHProvisionerConnection)
-//  .connection(WinrmProvisionerConnection)
-//  .count(java.lang.Number)
-//  .count(TerraformCount)
+//  .connection(SSHProvisionerConnection|WinrmProvisionerConnection)
+//  .count(java.lang.Number|TerraformCount)
 //  .dependsOn(java.util.List<ITerraformDependable>)
 //  .forEach(ITerraformIterator)
 //  .lifecycle(TerraformResourceLifecycle)
 //  .provider(TerraformProvider)
-//  .provisioners(java.util.List<FileProvisioner)
-//  .provisioners(LocalExecProvisioner)
-//  .provisioners(RemoteExecProvisioner>)
+//  .provisioners(java.util.List<FileProvisioner|LocalExecProvisioner|RemoteExecProvisioner>)
     .destinationConfig(DatastreamStreamDestinationConfig)
     .displayName(java.lang.String)
     .location(java.lang.String)
@@ -2497,8 +2470,7 @@ DatastreamStreamConfig.builder()
     .streamId(java.lang.String)
 //  .backfillAll(DatastreamStreamBackfillAll)
 //  .backfillNone(DatastreamStreamBackfillNone)
-//  .createWithoutValidation(java.lang.Boolean)
-//  .createWithoutValidation(IResolvable)
+//  .createWithoutValidation(java.lang.Boolean|IResolvable)
 //  .customerManagedEncryptionKey(java.lang.String)
 //  .desiredState(java.lang.String)
 //  .id(java.lang.String)
@@ -2512,13 +2484,13 @@ DatastreamStreamConfig.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamConfig.property.connection">connection</a></code> | <code>com.hashicorp.cdktf.SSHProvisionerConnection OR com.hashicorp.cdktf.WinrmProvisionerConnection</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamConfig.property.count">count</a></code> | <code>java.lang.Number OR com.hashicorp.cdktf.TerraformCount</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamConfig.property.connection">connection</a></code> | <code>com.hashicorp.cdktf.SSHProvisionerConnection\|com.hashicorp.cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamConfig.property.count">count</a></code> | <code>java.lang.Number\|com.hashicorp.cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamConfig.property.dependsOn">dependsOn</a></code> | <code>java.util.List<com.hashicorp.cdktf.ITerraformDependable></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamConfig.property.forEach">forEach</a></code> | <code>com.hashicorp.cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamConfig.property.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamConfig.property.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamConfig.property.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamConfig.property.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner\|com.hashicorp.cdktf.LocalExecProvisioner\|com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamConfig.property.destinationConfig">destinationConfig</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamDestinationConfig">DatastreamStreamDestinationConfig</a></code> | destination_config block. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamConfig.property.displayName">displayName</a></code> | <code>java.lang.String</code> | Display name. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamConfig.property.location">location</a></code> | <code>java.lang.String</code> | The name of the location this stream is located in. |
@@ -2526,7 +2498,7 @@ DatastreamStreamConfig.builder()
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamConfig.property.streamId">streamId</a></code> | <code>java.lang.String</code> | The stream identifier. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamConfig.property.backfillAll">backfillAll</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAll">DatastreamStreamBackfillAll</a></code> | backfill_all block. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamConfig.property.backfillNone">backfillNone</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillNone">DatastreamStreamBackfillNone</a></code> | backfill_none block. |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamConfig.property.createWithoutValidation">createWithoutValidation</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Create the stream without validating it. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamConfig.property.createWithoutValidation">createWithoutValidation</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Create the stream without validating it. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamConfig.property.customerManagedEncryptionKey">customerManagedEncryptionKey</a></code> | <code>java.lang.String</code> | A reference to a KMS encryption key. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamConfig.property.desiredState">desiredState</a></code> | <code>java.lang.String</code> | Desired state of the Stream. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/datastream_stream#id DatastreamStream#id}. |
@@ -2539,20 +2511,20 @@ DatastreamStreamConfig.builder()
 ##### `connection`<sup>Optional</sup> <a name="connection" id="@cdktf/provider-google.datastreamStream.DatastreamStreamConfig.property.connection"></a>
 
 ```java
-public java.lang.Object getConnection();
+public SSHProvisionerConnection|WinrmProvisionerConnection getConnection();
 ```
 
-- *Type:* com.hashicorp.cdktf.SSHProvisionerConnection OR com.hashicorp.cdktf.WinrmProvisionerConnection
+- *Type:* com.hashicorp.cdktf.SSHProvisionerConnection|com.hashicorp.cdktf.WinrmProvisionerConnection
 
 ---
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.datastreamStream.DatastreamStreamConfig.property.count"></a>
 
 ```java
-public java.lang.Object getCount();
+public java.lang.Number|TerraformCount getCount();
 ```
 
-- *Type:* java.lang.Number OR com.hashicorp.cdktf.TerraformCount
+- *Type:* java.lang.Number|com.hashicorp.cdktf.TerraformCount
 
 ---
 
@@ -2599,10 +2571,10 @@ public TerraformProvider getProvider();
 ##### `provisioners`<sup>Optional</sup> <a name="provisioners" id="@cdktf/provider-google.datastreamStream.DatastreamStreamConfig.property.provisioners"></a>
 
 ```java
-public java.lang.Object getProvisioners();
+public java.util.List<FileProvisioner|LocalExecProvisioner|RemoteExecProvisioner> getProvisioners();
 ```
 
-- *Type:* java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner>
+- *Type:* java.util.List<com.hashicorp.cdktf.FileProvisioner|com.hashicorp.cdktf.LocalExecProvisioner|com.hashicorp.cdktf.RemoteExecProvisioner>
 
 ---
 
@@ -2707,10 +2679,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `createWithoutValidation`<sup>Optional</sup> <a name="createWithoutValidation" id="@cdktf/provider-google.datastreamStream.DatastreamStreamConfig.property.createWithoutValidation"></a>
 
 ```java
-public java.lang.Object getCreateWithoutValidation();
+public java.lang.Boolean|IResolvable getCreateWithoutValidation();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 Create the stream without validating it.
 
@@ -3674,8 +3646,7 @@ DatastreamStreamSourceConfigMysqlSourceConfigBinaryLogPosition.builder()
 import com.hashicorp.cdktf.providers.google.datastream_stream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjects;
 
 DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjects.builder()
-    .mysqlDatabases(IResolvable)
-    .mysqlDatabases(java.util.List<DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases>)
+    .mysqlDatabases(IResolvable|java.util.List<DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases>)
     .build();
 ```
 
@@ -3683,17 +3654,17 @@ DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjects.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjects.property.mysqlDatabases">mysqlDatabases</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases">DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases</a>></code> | mysql_databases block. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjects.property.mysqlDatabases">mysqlDatabases</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases">DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases</a>></code> | mysql_databases block. |
 
 ---
 
 ##### `mysqlDatabases`<sup>Required</sup> <a name="mysqlDatabases" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjects.property.mysqlDatabases"></a>
 
 ```java
-public java.lang.Object getMysqlDatabases();
+public IResolvable|java.util.List<DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases> getMysqlDatabases();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases">DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases">DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases</a>>
 
 mysql_databases block.
 
@@ -3710,8 +3681,7 @@ import com.hashicorp.cdktf.providers.google.datastream_stream.DatastreamStreamSo
 
 DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases.builder()
     .database(java.lang.String)
-//  .mysqlTables(IResolvable)
-//  .mysqlTables(java.util.List<DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTables>)
+//  .mysqlTables(IResolvable|java.util.List<DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTables>)
     .build();
 ```
 
@@ -3720,7 +3690,7 @@ DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases.builde
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases.property.database">database</a></code> | <code>java.lang.String</code> | Database name. |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases.property.mysqlTables">mysqlTables</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTables">DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTables</a>></code> | mysql_tables block. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases.property.mysqlTables">mysqlTables</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTables">DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTables</a>></code> | mysql_tables block. |
 
 ---
 
@@ -3741,10 +3711,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `mysqlTables`<sup>Optional</sup> <a name="mysqlTables" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases.property.mysqlTables"></a>
 
 ```java
-public java.lang.Object getMysqlTables();
+public IResolvable|java.util.List<DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTables> getMysqlTables();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTables">DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTables</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTables">DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTables</a>>
 
 mysql_tables block.
 
@@ -3761,8 +3731,7 @@ import com.hashicorp.cdktf.providers.google.datastream_stream.DatastreamStreamSo
 
 DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTables.builder()
     .table(java.lang.String)
-//  .mysqlColumns(IResolvable)
-//  .mysqlColumns(java.util.List<DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns>)
+//  .mysqlColumns(IResolvable|java.util.List<DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns>)
     .build();
 ```
 
@@ -3771,7 +3740,7 @@ DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTa
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTables.property.table">table</a></code> | <code>java.lang.String</code> | Table name. |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTables.property.mysqlColumns">mysqlColumns</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns">DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns</a>></code> | mysql_columns block. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTables.property.mysqlColumns">mysqlColumns</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns">DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns</a>></code> | mysql_columns block. |
 
 ---
 
@@ -3792,10 +3761,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `mysqlColumns`<sup>Optional</sup> <a name="mysqlColumns" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTables.property.mysqlColumns"></a>
 
 ```java
-public java.lang.Object getMysqlColumns();
+public IResolvable|java.util.List<DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns> getMysqlColumns();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns">DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns">DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns</a>>
 
 mysql_columns block.
 
@@ -3814,11 +3783,9 @@ DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTa
 //  .collation(java.lang.String)
 //  .column(java.lang.String)
 //  .dataType(java.lang.String)
-//  .nullable(java.lang.Boolean)
-//  .nullable(IResolvable)
+//  .nullable(java.lang.Boolean|IResolvable)
 //  .ordinalPosition(java.lang.Number)
-//  .primaryKey(java.lang.Boolean)
-//  .primaryKey(IResolvable)
+//  .primaryKey(java.lang.Boolean|IResolvable)
     .build();
 ```
 
@@ -3829,9 +3796,9 @@ DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTa
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns.property.collation">collation</a></code> | <code>java.lang.String</code> | Column collation. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns.property.column">column</a></code> | <code>java.lang.String</code> | Column name. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns.property.dataType">dataType</a></code> | <code>java.lang.String</code> | The MySQL data type. Full data types list can be found here: https://dev.mysql.com/doc/refman/8.0/en/data-types.html. |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns.property.nullable">nullable</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Whether or not the column can accept a null value. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns.property.nullable">nullable</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Whether or not the column can accept a null value. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns.property.ordinalPosition">ordinalPosition</a></code> | <code>java.lang.Number</code> | The ordinal position of the column in the table. |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns.property.primaryKey">primaryKey</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Whether or not the column represents a primary key. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns.property.primaryKey">primaryKey</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Whether or not the column represents a primary key. |
 
 ---
 
@@ -3880,10 +3847,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `nullable`<sup>Optional</sup> <a name="nullable" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns.property.nullable"></a>
 
 ```java
-public java.lang.Object getNullable();
+public java.lang.Boolean|IResolvable getNullable();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 Whether or not the column can accept a null value.
 
@@ -3908,10 +3875,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `primaryKey`<sup>Optional</sup> <a name="primaryKey" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns.property.primaryKey"></a>
 
 ```java
-public java.lang.Object getPrimaryKey();
+public java.lang.Boolean|IResolvable getPrimaryKey();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 Whether or not the column represents a primary key.
 
@@ -3939,8 +3906,7 @@ DatastreamStreamSourceConfigMysqlSourceConfigGtid.builder()
 import com.hashicorp.cdktf.providers.google.datastream_stream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjects;
 
 DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjects.builder()
-    .mysqlDatabases(IResolvable)
-    .mysqlDatabases(java.util.List<DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases>)
+    .mysqlDatabases(IResolvable|java.util.List<DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases>)
     .build();
 ```
 
@@ -3948,17 +3914,17 @@ DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjects.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjects.property.mysqlDatabases">mysqlDatabases</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases">DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases</a>></code> | mysql_databases block. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjects.property.mysqlDatabases">mysqlDatabases</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases">DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases</a>></code> | mysql_databases block. |
 
 ---
 
 ##### `mysqlDatabases`<sup>Required</sup> <a name="mysqlDatabases" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjects.property.mysqlDatabases"></a>
 
 ```java
-public java.lang.Object getMysqlDatabases();
+public IResolvable|java.util.List<DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases> getMysqlDatabases();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases">DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases">DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases</a>>
 
 mysql_databases block.
 
@@ -3975,8 +3941,7 @@ import com.hashicorp.cdktf.providers.google.datastream_stream.DatastreamStreamSo
 
 DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases.builder()
     .database(java.lang.String)
-//  .mysqlTables(IResolvable)
-//  .mysqlTables(java.util.List<DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTables>)
+//  .mysqlTables(IResolvable|java.util.List<DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTables>)
     .build();
 ```
 
@@ -3985,7 +3950,7 @@ DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases.builde
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases.property.database">database</a></code> | <code>java.lang.String</code> | Database name. |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases.property.mysqlTables">mysqlTables</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTables">DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTables</a>></code> | mysql_tables block. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases.property.mysqlTables">mysqlTables</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTables">DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTables</a>></code> | mysql_tables block. |
 
 ---
 
@@ -4006,10 +3971,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `mysqlTables`<sup>Optional</sup> <a name="mysqlTables" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases.property.mysqlTables"></a>
 
 ```java
-public java.lang.Object getMysqlTables();
+public IResolvable|java.util.List<DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTables> getMysqlTables();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTables">DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTables</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTables">DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTables</a>>
 
 mysql_tables block.
 
@@ -4026,8 +3991,7 @@ import com.hashicorp.cdktf.providers.google.datastream_stream.DatastreamStreamSo
 
 DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTables.builder()
     .table(java.lang.String)
-//  .mysqlColumns(IResolvable)
-//  .mysqlColumns(java.util.List<DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns>)
+//  .mysqlColumns(IResolvable|java.util.List<DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns>)
     .build();
 ```
 
@@ -4036,7 +4000,7 @@ DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTa
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTables.property.table">table</a></code> | <code>java.lang.String</code> | Table name. |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTables.property.mysqlColumns">mysqlColumns</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns">DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns</a>></code> | mysql_columns block. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTables.property.mysqlColumns">mysqlColumns</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns">DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns</a>></code> | mysql_columns block. |
 
 ---
 
@@ -4057,10 +4021,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `mysqlColumns`<sup>Optional</sup> <a name="mysqlColumns" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTables.property.mysqlColumns"></a>
 
 ```java
-public java.lang.Object getMysqlColumns();
+public IResolvable|java.util.List<DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns> getMysqlColumns();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns">DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns">DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns</a>>
 
 mysql_columns block.
 
@@ -4079,11 +4043,9 @@ DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTa
 //  .collation(java.lang.String)
 //  .column(java.lang.String)
 //  .dataType(java.lang.String)
-//  .nullable(java.lang.Boolean)
-//  .nullable(IResolvable)
+//  .nullable(java.lang.Boolean|IResolvable)
 //  .ordinalPosition(java.lang.Number)
-//  .primaryKey(java.lang.Boolean)
-//  .primaryKey(IResolvable)
+//  .primaryKey(java.lang.Boolean|IResolvable)
     .build();
 ```
 
@@ -4094,9 +4056,9 @@ DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTa
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns.property.collation">collation</a></code> | <code>java.lang.String</code> | Column collation. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns.property.column">column</a></code> | <code>java.lang.String</code> | Column name. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns.property.dataType">dataType</a></code> | <code>java.lang.String</code> | The MySQL data type. Full data types list can be found here: https://dev.mysql.com/doc/refman/8.0/en/data-types.html. |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns.property.nullable">nullable</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Whether or not the column can accept a null value. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns.property.nullable">nullable</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Whether or not the column can accept a null value. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns.property.ordinalPosition">ordinalPosition</a></code> | <code>java.lang.Number</code> | The ordinal position of the column in the table. |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns.property.primaryKey">primaryKey</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Whether or not the column represents a primary key. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns.property.primaryKey">primaryKey</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Whether or not the column represents a primary key. |
 
 ---
 
@@ -4145,10 +4107,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `nullable`<sup>Optional</sup> <a name="nullable" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns.property.nullable"></a>
 
 ```java
-public java.lang.Object getNullable();
+public java.lang.Boolean|IResolvable getNullable();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 Whether or not the column can accept a null value.
 
@@ -4173,10 +4135,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `primaryKey`<sup>Optional</sup> <a name="primaryKey" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns.property.primaryKey"></a>
 
 ```java
-public java.lang.Object getPrimaryKey();
+public java.lang.Boolean|IResolvable getPrimaryKey();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 Whether or not the column represents a primary key.
 
@@ -4324,8 +4286,7 @@ DatastreamStreamSourceConfigOracleSourceConfigDropLargeObjects.builder()
 import com.hashicorp.cdktf.providers.google.datastream_stream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjects;
 
 DatastreamStreamSourceConfigOracleSourceConfigExcludeObjects.builder()
-    .oracleSchemas(IResolvable)
-    .oracleSchemas(java.util.List<DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas>)
+    .oracleSchemas(IResolvable|java.util.List<DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas>)
     .build();
 ```
 
@@ -4333,17 +4294,17 @@ DatastreamStreamSourceConfigOracleSourceConfigExcludeObjects.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjects.property.oracleSchemas">oracleSchemas</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas">DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas</a>></code> | oracle_schemas block. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjects.property.oracleSchemas">oracleSchemas</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas">DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas</a>></code> | oracle_schemas block. |
 
 ---
 
 ##### `oracleSchemas`<sup>Required</sup> <a name="oracleSchemas" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjects.property.oracleSchemas"></a>
 
 ```java
-public java.lang.Object getOracleSchemas();
+public IResolvable|java.util.List<DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas> getOracleSchemas();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas">DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas">DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas</a>>
 
 oracle_schemas block.
 
@@ -4360,8 +4321,7 @@ import com.hashicorp.cdktf.providers.google.datastream_stream.DatastreamStreamSo
 
 DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas.builder()
     .schema(java.lang.String)
-//  .oracleTables(IResolvable)
-//  .oracleTables(java.util.List<DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTables>)
+//  .oracleTables(IResolvable|java.util.List<DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTables>)
     .build();
 ```
 
@@ -4370,7 +4330,7 @@ DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas.builde
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas.property.schema">schema</a></code> | <code>java.lang.String</code> | Schema name. |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas.property.oracleTables">oracleTables</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTables">DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTables</a>></code> | oracle_tables block. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas.property.oracleTables">oracleTables</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTables">DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTables</a>></code> | oracle_tables block. |
 
 ---
 
@@ -4391,10 +4351,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `oracleTables`<sup>Optional</sup> <a name="oracleTables" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas.property.oracleTables"></a>
 
 ```java
-public java.lang.Object getOracleTables();
+public IResolvable|java.util.List<DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTables> getOracleTables();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTables">DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTables</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTables">DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTables</a>>
 
 oracle_tables block.
 
@@ -4411,8 +4371,7 @@ import com.hashicorp.cdktf.providers.google.datastream_stream.DatastreamStreamSo
 
 DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTables.builder()
     .table(java.lang.String)
-//  .oracleColumns(IResolvable)
-//  .oracleColumns(java.util.List<DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumns>)
+//  .oracleColumns(IResolvable|java.util.List<DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumns>)
     .build();
 ```
 
@@ -4421,7 +4380,7 @@ DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleT
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTables.property.table">table</a></code> | <code>java.lang.String</code> | Table name. |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTables.property.oracleColumns">oracleColumns</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumns">DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumns</a>></code> | oracle_columns block. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTables.property.oracleColumns">oracleColumns</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumns">DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumns</a>></code> | oracle_columns block. |
 
 ---
 
@@ -4442,10 +4401,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `oracleColumns`<sup>Optional</sup> <a name="oracleColumns" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTables.property.oracleColumns"></a>
 
 ```java
-public java.lang.Object getOracleColumns();
+public IResolvable|java.util.List<DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumns> getOracleColumns();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumns">DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumns</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumns">DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumns</a>>
 
 oracle_columns block.
 
@@ -4511,8 +4470,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 import com.hashicorp.cdktf.providers.google.datastream_stream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjects;
 
 DatastreamStreamSourceConfigOracleSourceConfigIncludeObjects.builder()
-    .oracleSchemas(IResolvable)
-    .oracleSchemas(java.util.List<DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas>)
+    .oracleSchemas(IResolvable|java.util.List<DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas>)
     .build();
 ```
 
@@ -4520,17 +4478,17 @@ DatastreamStreamSourceConfigOracleSourceConfigIncludeObjects.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjects.property.oracleSchemas">oracleSchemas</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas">DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas</a>></code> | oracle_schemas block. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjects.property.oracleSchemas">oracleSchemas</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas">DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas</a>></code> | oracle_schemas block. |
 
 ---
 
 ##### `oracleSchemas`<sup>Required</sup> <a name="oracleSchemas" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjects.property.oracleSchemas"></a>
 
 ```java
-public java.lang.Object getOracleSchemas();
+public IResolvable|java.util.List<DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas> getOracleSchemas();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas">DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas">DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas</a>>
 
 oracle_schemas block.
 
@@ -4547,8 +4505,7 @@ import com.hashicorp.cdktf.providers.google.datastream_stream.DatastreamStreamSo
 
 DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas.builder()
     .schema(java.lang.String)
-//  .oracleTables(IResolvable)
-//  .oracleTables(java.util.List<DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTables>)
+//  .oracleTables(IResolvable|java.util.List<DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTables>)
     .build();
 ```
 
@@ -4557,7 +4514,7 @@ DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas.builde
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas.property.schema">schema</a></code> | <code>java.lang.String</code> | Schema name. |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas.property.oracleTables">oracleTables</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTables">DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTables</a>></code> | oracle_tables block. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas.property.oracleTables">oracleTables</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTables">DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTables</a>></code> | oracle_tables block. |
 
 ---
 
@@ -4578,10 +4535,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `oracleTables`<sup>Optional</sup> <a name="oracleTables" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas.property.oracleTables"></a>
 
 ```java
-public java.lang.Object getOracleTables();
+public IResolvable|java.util.List<DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTables> getOracleTables();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTables">DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTables</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTables">DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTables</a>>
 
 oracle_tables block.
 
@@ -4598,8 +4555,7 @@ import com.hashicorp.cdktf.providers.google.datastream_stream.DatastreamStreamSo
 
 DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTables.builder()
     .table(java.lang.String)
-//  .oracleColumns(IResolvable)
-//  .oracleColumns(java.util.List<DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumns>)
+//  .oracleColumns(IResolvable|java.util.List<DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumns>)
     .build();
 ```
 
@@ -4608,7 +4564,7 @@ DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleT
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTables.property.table">table</a></code> | <code>java.lang.String</code> | Table name. |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTables.property.oracleColumns">oracleColumns</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumns">DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumns</a>></code> | oracle_columns block. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTables.property.oracleColumns">oracleColumns</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumns">DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumns</a>></code> | oracle_columns block. |
 
 ---
 
@@ -4629,10 +4585,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `oracleColumns`<sup>Optional</sup> <a name="oracleColumns" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTables.property.oracleColumns"></a>
 
 ```java
-public java.lang.Object getOracleColumns();
+public IResolvable|java.util.List<DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumns> getOracleColumns();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumns">DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumns</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumns">DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumns</a>>
 
 oracle_columns block.
 
@@ -4811,8 +4767,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 import com.hashicorp.cdktf.providers.google.datastream_stream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjects;
 
 DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjects.builder()
-    .postgresqlSchemas(IResolvable)
-    .postgresqlSchemas(java.util.List<DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas>)
+    .postgresqlSchemas(IResolvable|java.util.List<DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas>)
     .build();
 ```
 
@@ -4820,17 +4775,17 @@ DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjects.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjects.property.postgresqlSchemas">postgresqlSchemas</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas">DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas</a>></code> | postgresql_schemas block. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjects.property.postgresqlSchemas">postgresqlSchemas</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas">DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas</a>></code> | postgresql_schemas block. |
 
 ---
 
 ##### `postgresqlSchemas`<sup>Required</sup> <a name="postgresqlSchemas" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjects.property.postgresqlSchemas"></a>
 
 ```java
-public java.lang.Object getPostgresqlSchemas();
+public IResolvable|java.util.List<DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas> getPostgresqlSchemas();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas">DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas">DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas</a>>
 
 postgresql_schemas block.
 
@@ -4847,8 +4802,7 @@ import com.hashicorp.cdktf.providers.google.datastream_stream.DatastreamStreamSo
 
 DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas.builder()
     .schema(java.lang.String)
-//  .postgresqlTables(IResolvable)
-//  .postgresqlTables(java.util.List<DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTables>)
+//  .postgresqlTables(IResolvable|java.util.List<DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTables>)
     .build();
 ```
 
@@ -4857,7 +4811,7 @@ DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchema
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas.property.schema">schema</a></code> | <code>java.lang.String</code> | Database name. |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas.property.postgresqlTables">postgresqlTables</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTables">DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTables</a>></code> | postgresql_tables block. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas.property.postgresqlTables">postgresqlTables</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTables">DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTables</a>></code> | postgresql_tables block. |
 
 ---
 
@@ -4878,10 +4832,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `postgresqlTables`<sup>Optional</sup> <a name="postgresqlTables" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas.property.postgresqlTables"></a>
 
 ```java
-public java.lang.Object getPostgresqlTables();
+public IResolvable|java.util.List<DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTables> getPostgresqlTables();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTables">DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTables</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTables">DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTables</a>>
 
 postgresql_tables block.
 
@@ -4898,8 +4852,7 @@ import com.hashicorp.cdktf.providers.google.datastream_stream.DatastreamStreamSo
 
 DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTables.builder()
     .table(java.lang.String)
-//  .postgresqlColumns(IResolvable)
-//  .postgresqlColumns(java.util.List<DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns>)
+//  .postgresqlColumns(IResolvable|java.util.List<DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns>)
     .build();
 ```
 
@@ -4908,7 +4861,7 @@ DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchema
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTables.property.table">table</a></code> | <code>java.lang.String</code> | Table name. |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTables.property.postgresqlColumns">postgresqlColumns</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns">DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns</a>></code> | postgresql_columns block. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTables.property.postgresqlColumns">postgresqlColumns</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns">DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns</a>></code> | postgresql_columns block. |
 
 ---
 
@@ -4929,10 +4882,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `postgresqlColumns`<sup>Optional</sup> <a name="postgresqlColumns" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTables.property.postgresqlColumns"></a>
 
 ```java
-public java.lang.Object getPostgresqlColumns();
+public IResolvable|java.util.List<DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns> getPostgresqlColumns();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns">DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns">DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns</a>>
 
 postgresql_columns block.
 
@@ -4950,11 +4903,9 @@ import com.hashicorp.cdktf.providers.google.datastream_stream.DatastreamStreamSo
 DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns.builder()
 //  .column(java.lang.String)
 //  .dataType(java.lang.String)
-//  .nullable(java.lang.Boolean)
-//  .nullable(IResolvable)
+//  .nullable(java.lang.Boolean|IResolvable)
 //  .ordinalPosition(java.lang.Number)
-//  .primaryKey(java.lang.Boolean)
-//  .primaryKey(IResolvable)
+//  .primaryKey(java.lang.Boolean|IResolvable)
     .build();
 ```
 
@@ -4964,9 +4915,9 @@ DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchema
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns.property.column">column</a></code> | <code>java.lang.String</code> | Column name. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns.property.dataType">dataType</a></code> | <code>java.lang.String</code> | The PostgreSQL data type. Full data types list can be found here: https://www.postgresql.org/docs/current/datatype.html. |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns.property.nullable">nullable</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Whether or not the column can accept a null value. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns.property.nullable">nullable</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Whether or not the column can accept a null value. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns.property.ordinalPosition">ordinalPosition</a></code> | <code>java.lang.Number</code> | The ordinal position of the column in the table. |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns.property.primaryKey">primaryKey</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Whether or not the column represents a primary key. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns.property.primaryKey">primaryKey</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Whether or not the column represents a primary key. |
 
 ---
 
@@ -5001,10 +4952,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `nullable`<sup>Optional</sup> <a name="nullable" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns.property.nullable"></a>
 
 ```java
-public java.lang.Object getNullable();
+public java.lang.Boolean|IResolvable getNullable();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 Whether or not the column can accept a null value.
 
@@ -5029,10 +4980,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `primaryKey`<sup>Optional</sup> <a name="primaryKey" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns.property.primaryKey"></a>
 
 ```java
-public java.lang.Object getPrimaryKey();
+public java.lang.Boolean|IResolvable getPrimaryKey();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 Whether or not the column represents a primary key.
 
@@ -5048,8 +4999,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 import com.hashicorp.cdktf.providers.google.datastream_stream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjects;
 
 DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjects.builder()
-    .postgresqlSchemas(IResolvable)
-    .postgresqlSchemas(java.util.List<DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas>)
+    .postgresqlSchemas(IResolvable|java.util.List<DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas>)
     .build();
 ```
 
@@ -5057,17 +5007,17 @@ DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjects.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjects.property.postgresqlSchemas">postgresqlSchemas</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas">DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas</a>></code> | postgresql_schemas block. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjects.property.postgresqlSchemas">postgresqlSchemas</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas">DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas</a>></code> | postgresql_schemas block. |
 
 ---
 
 ##### `postgresqlSchemas`<sup>Required</sup> <a name="postgresqlSchemas" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjects.property.postgresqlSchemas"></a>
 
 ```java
-public java.lang.Object getPostgresqlSchemas();
+public IResolvable|java.util.List<DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas> getPostgresqlSchemas();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas">DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas">DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas</a>>
 
 postgresql_schemas block.
 
@@ -5084,8 +5034,7 @@ import com.hashicorp.cdktf.providers.google.datastream_stream.DatastreamStreamSo
 
 DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas.builder()
     .schema(java.lang.String)
-//  .postgresqlTables(IResolvable)
-//  .postgresqlTables(java.util.List<DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTables>)
+//  .postgresqlTables(IResolvable|java.util.List<DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTables>)
     .build();
 ```
 
@@ -5094,7 +5043,7 @@ DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchema
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas.property.schema">schema</a></code> | <code>java.lang.String</code> | Database name. |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas.property.postgresqlTables">postgresqlTables</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTables">DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTables</a>></code> | postgresql_tables block. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas.property.postgresqlTables">postgresqlTables</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTables">DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTables</a>></code> | postgresql_tables block. |
 
 ---
 
@@ -5115,10 +5064,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `postgresqlTables`<sup>Optional</sup> <a name="postgresqlTables" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas.property.postgresqlTables"></a>
 
 ```java
-public java.lang.Object getPostgresqlTables();
+public IResolvable|java.util.List<DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTables> getPostgresqlTables();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTables">DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTables</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTables">DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTables</a>>
 
 postgresql_tables block.
 
@@ -5135,8 +5084,7 @@ import com.hashicorp.cdktf.providers.google.datastream_stream.DatastreamStreamSo
 
 DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTables.builder()
     .table(java.lang.String)
-//  .postgresqlColumns(IResolvable)
-//  .postgresqlColumns(java.util.List<DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns>)
+//  .postgresqlColumns(IResolvable|java.util.List<DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns>)
     .build();
 ```
 
@@ -5145,7 +5093,7 @@ DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchema
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTables.property.table">table</a></code> | <code>java.lang.String</code> | Table name. |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTables.property.postgresqlColumns">postgresqlColumns</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns">DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns</a>></code> | postgresql_columns block. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTables.property.postgresqlColumns">postgresqlColumns</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns">DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns</a>></code> | postgresql_columns block. |
 
 ---
 
@@ -5166,10 +5114,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `postgresqlColumns`<sup>Optional</sup> <a name="postgresqlColumns" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTables.property.postgresqlColumns"></a>
 
 ```java
-public java.lang.Object getPostgresqlColumns();
+public IResolvable|java.util.List<DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns> getPostgresqlColumns();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns">DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns">DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns</a>>
 
 postgresql_columns block.
 
@@ -5187,11 +5135,9 @@ import com.hashicorp.cdktf.providers.google.datastream_stream.DatastreamStreamSo
 DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns.builder()
 //  .column(java.lang.String)
 //  .dataType(java.lang.String)
-//  .nullable(java.lang.Boolean)
-//  .nullable(IResolvable)
+//  .nullable(java.lang.Boolean|IResolvable)
 //  .ordinalPosition(java.lang.Number)
-//  .primaryKey(java.lang.Boolean)
-//  .primaryKey(IResolvable)
+//  .primaryKey(java.lang.Boolean|IResolvable)
     .build();
 ```
 
@@ -5201,9 +5147,9 @@ DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchema
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns.property.column">column</a></code> | <code>java.lang.String</code> | Column name. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns.property.dataType">dataType</a></code> | <code>java.lang.String</code> | The PostgreSQL data type. Full data types list can be found here: https://www.postgresql.org/docs/current/datatype.html. |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns.property.nullable">nullable</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Whether or not the column can accept a null value. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns.property.nullable">nullable</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Whether or not the column can accept a null value. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns.property.ordinalPosition">ordinalPosition</a></code> | <code>java.lang.Number</code> | The ordinal position of the column in the table. |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns.property.primaryKey">primaryKey</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Whether or not the column represents a primary key. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns.property.primaryKey">primaryKey</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Whether or not the column represents a primary key. |
 
 ---
 
@@ -5238,10 +5184,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `nullable`<sup>Optional</sup> <a name="nullable" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns.property.nullable"></a>
 
 ```java
-public java.lang.Object getNullable();
+public java.lang.Boolean|IResolvable getNullable();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 Whether or not the column can accept a null value.
 
@@ -5266,10 +5212,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `primaryKey`<sup>Optional</sup> <a name="primaryKey" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns.property.primaryKey"></a>
 
 ```java
-public java.lang.Object getPrimaryKey();
+public java.lang.Boolean|IResolvable getPrimaryKey();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 Whether or not the column represents a primary key.
 
@@ -5353,8 +5299,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 import com.hashicorp.cdktf.providers.google.datastream_stream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjects;
 
 DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjects.builder()
-    .objects(IResolvable)
-    .objects(java.util.List<DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjects>)
+    .objects(IResolvable|java.util.List<DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjects>)
     .build();
 ```
 
@@ -5362,17 +5307,17 @@ DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjects.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjects.property.objects">objects</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjects">DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjects</a>></code> | objects block. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjects.property.objects">objects</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjects">DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjects</a>></code> | objects block. |
 
 ---
 
 ##### `objects`<sup>Required</sup> <a name="objects" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjects.property.objects"></a>
 
 ```java
-public java.lang.Object getObjects();
+public IResolvable|java.util.List<DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjects> getObjects();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjects">DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjects</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjects">DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjects</a>>
 
 objects block.
 
@@ -5388,8 +5333,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 import com.hashicorp.cdktf.providers.google.datastream_stream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjects;
 
 DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjects.builder()
-//  .fields(IResolvable)
-//  .fields(java.util.List<DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFields>)
+//  .fields(IResolvable|java.util.List<DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFields>)
 //  .objectName(java.lang.String)
     .build();
 ```
@@ -5398,7 +5342,7 @@ DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjects.builder(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjects.property.fields">fields</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFields">DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFields</a>></code> | fields block. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjects.property.fields">fields</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFields">DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFields</a>></code> | fields block. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjects.property.objectName">objectName</a></code> | <code>java.lang.String</code> | Name of object in Salesforce Org. |
 
 ---
@@ -5406,10 +5350,10 @@ DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjects.builder(
 ##### `fields`<sup>Optional</sup> <a name="fields" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjects.property.fields"></a>
 
 ```java
-public java.lang.Object getFields();
+public IResolvable|java.util.List<DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFields> getFields();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFields">DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFields</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFields">DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFields</a>>
 
 fields block.
 
@@ -5473,8 +5417,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 import com.hashicorp.cdktf.providers.google.datastream_stream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjects;
 
 DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjects.builder()
-    .objects(IResolvable)
-    .objects(java.util.List<DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjects>)
+    .objects(IResolvable|java.util.List<DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjects>)
     .build();
 ```
 
@@ -5482,17 +5425,17 @@ DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjects.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjects.property.objects">objects</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjects">DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjects</a>></code> | objects block. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjects.property.objects">objects</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjects">DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjects</a>></code> | objects block. |
 
 ---
 
 ##### `objects`<sup>Required</sup> <a name="objects" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjects.property.objects"></a>
 
 ```java
-public java.lang.Object getObjects();
+public IResolvable|java.util.List<DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjects> getObjects();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjects">DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjects</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjects">DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjects</a>>
 
 objects block.
 
@@ -5508,8 +5451,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 import com.hashicorp.cdktf.providers.google.datastream_stream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjects;
 
 DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjects.builder()
-//  .fields(IResolvable)
-//  .fields(java.util.List<DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFields>)
+//  .fields(IResolvable|java.util.List<DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFields>)
 //  .objectName(java.lang.String)
     .build();
 ```
@@ -5518,7 +5460,7 @@ DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjects.builder(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjects.property.fields">fields</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFields">DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFields</a>></code> | fields block. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjects.property.fields">fields</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFields">DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFields</a>></code> | fields block. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjects.property.objectName">objectName</a></code> | <code>java.lang.String</code> | Name of object in Salesforce Org. |
 
 ---
@@ -5526,10 +5468,10 @@ DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjects.builder(
 ##### `fields`<sup>Optional</sup> <a name="fields" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjects.property.fields"></a>
 
 ```java
-public java.lang.Object getFields();
+public IResolvable|java.util.List<DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFields> getFields();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFields">DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFields</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFields">DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFields</a>>
 
 fields block.
 
@@ -5719,8 +5661,7 @@ DatastreamStreamSourceConfigSqlServerSourceConfigChangeTables.builder()
 import com.hashicorp.cdktf.providers.google.datastream_stream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjects;
 
 DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjects.builder()
-    .schemas(IResolvable)
-    .schemas(java.util.List<DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemas>)
+    .schemas(IResolvable|java.util.List<DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemas>)
     .build();
 ```
 
@@ -5728,17 +5669,17 @@ DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjects.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjects.property.schemas">schemas</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemas">DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemas</a>></code> | schemas block. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjects.property.schemas">schemas</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemas">DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemas</a>></code> | schemas block. |
 
 ---
 
 ##### `schemas`<sup>Required</sup> <a name="schemas" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjects.property.schemas"></a>
 
 ```java
-public java.lang.Object getSchemas();
+public IResolvable|java.util.List<DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemas> getSchemas();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemas">DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemas</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemas">DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemas</a>>
 
 schemas block.
 
@@ -5755,8 +5696,7 @@ import com.hashicorp.cdktf.providers.google.datastream_stream.DatastreamStreamSo
 
 DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemas.builder()
     .schema(java.lang.String)
-//  .tables(IResolvable)
-//  .tables(java.util.List<DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTables>)
+//  .tables(IResolvable|java.util.List<DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTables>)
     .build();
 ```
 
@@ -5765,7 +5705,7 @@ DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemas.builder()
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemas.property.schema">schema</a></code> | <code>java.lang.String</code> | Schema name. |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemas.property.tables">tables</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTables">DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTables</a>></code> | tables block. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemas.property.tables">tables</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTables">DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTables</a>></code> | tables block. |
 
 ---
 
@@ -5786,10 +5726,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `tables`<sup>Optional</sup> <a name="tables" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemas.property.tables"></a>
 
 ```java
-public java.lang.Object getTables();
+public IResolvable|java.util.List<DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTables> getTables();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTables">DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTables</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTables">DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTables</a>>
 
 tables block.
 
@@ -5806,8 +5746,7 @@ import com.hashicorp.cdktf.providers.google.datastream_stream.DatastreamStreamSo
 
 DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTables.builder()
     .table(java.lang.String)
-//  .columns(IResolvable)
-//  .columns(java.util.List<DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumns>)
+//  .columns(IResolvable|java.util.List<DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumns>)
     .build();
 ```
 
@@ -5816,7 +5755,7 @@ DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTables.bui
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTables.property.table">table</a></code> | <code>java.lang.String</code> | Table name. |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTables.property.columns">columns</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumns">DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumns</a>></code> | columns block. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTables.property.columns">columns</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumns">DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumns</a>></code> | columns block. |
 
 ---
 
@@ -5837,10 +5776,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `columns`<sup>Optional</sup> <a name="columns" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTables.property.columns"></a>
 
 ```java
-public java.lang.Object getColumns();
+public IResolvable|java.util.List<DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumns> getColumns();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumns">DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumns</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumns">DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumns</a>>
 
 columns block.
 
@@ -5906,8 +5845,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 import com.hashicorp.cdktf.providers.google.datastream_stream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjects;
 
 DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjects.builder()
-    .schemas(IResolvable)
-    .schemas(java.util.List<DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemas>)
+    .schemas(IResolvable|java.util.List<DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemas>)
     .build();
 ```
 
@@ -5915,17 +5853,17 @@ DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjects.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjects.property.schemas">schemas</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemas">DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemas</a>></code> | schemas block. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjects.property.schemas">schemas</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemas">DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemas</a>></code> | schemas block. |
 
 ---
 
 ##### `schemas`<sup>Required</sup> <a name="schemas" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjects.property.schemas"></a>
 
 ```java
-public java.lang.Object getSchemas();
+public IResolvable|java.util.List<DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemas> getSchemas();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemas">DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemas</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemas">DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemas</a>>
 
 schemas block.
 
@@ -5942,8 +5880,7 @@ import com.hashicorp.cdktf.providers.google.datastream_stream.DatastreamStreamSo
 
 DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemas.builder()
     .schema(java.lang.String)
-//  .tables(IResolvable)
-//  .tables(java.util.List<DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTables>)
+//  .tables(IResolvable|java.util.List<DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTables>)
     .build();
 ```
 
@@ -5952,7 +5889,7 @@ DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemas.builder()
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemas.property.schema">schema</a></code> | <code>java.lang.String</code> | Schema name. |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemas.property.tables">tables</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTables">DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTables</a>></code> | tables block. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemas.property.tables">tables</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTables">DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTables</a>></code> | tables block. |
 
 ---
 
@@ -5973,10 +5910,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `tables`<sup>Optional</sup> <a name="tables" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemas.property.tables"></a>
 
 ```java
-public java.lang.Object getTables();
+public IResolvable|java.util.List<DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTables> getTables();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTables">DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTables</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTables">DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTables</a>>
 
 tables block.
 
@@ -5993,8 +5930,7 @@ import com.hashicorp.cdktf.providers.google.datastream_stream.DatastreamStreamSo
 
 DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTables.builder()
     .table(java.lang.String)
-//  .columns(IResolvable)
-//  .columns(java.util.List<DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumns>)
+//  .columns(IResolvable|java.util.List<DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumns>)
     .build();
 ```
 
@@ -6003,7 +5939,7 @@ DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTables.bui
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTables.property.table">table</a></code> | <code>java.lang.String</code> | Table name. |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTables.property.columns">columns</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumns">DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumns</a>></code> | columns block. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTables.property.columns">columns</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumns">DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumns</a>></code> | columns block. |
 
 ---
 
@@ -6024,10 +5960,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `columns`<sup>Optional</sup> <a name="columns" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTables.property.columns"></a>
 
 ```java
-public java.lang.Object getColumns();
+public IResolvable|java.util.List<DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumns> getColumns();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumns">DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumns</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumns">DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumns</a>>
 
 columns block.
 
@@ -6280,7 +6216,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesList.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesList.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabases">DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabases</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabases">DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabases</a>></code> | *No description.* |
 
 ---
 
@@ -6311,10 +6247,10 @@ public java.lang.String getFqn();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesList.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|java.util.List<DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabases> getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabases">DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabases</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabases">DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabases</a>>
 
 ---
 
@@ -6440,7 +6376,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesList.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesList.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTables">DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTables</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTables">DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTables</a>></code> | *No description.* |
 
 ---
 
@@ -6471,10 +6407,10 @@ public java.lang.String getFqn();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesList.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|java.util.List<DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTables> getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTables">DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTables</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTables">DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTables</a>>
 
 ---
 
@@ -6600,7 +6536,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumnsList.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumnsList.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumnsList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns">DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumnsList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns">DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns</a>></code> | *No description.* |
 
 ---
 
@@ -6631,10 +6567,10 @@ public java.lang.String getFqn();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumnsList.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|java.util.List<DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns> getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns">DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns">DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns</a>>
 
 ---
 
@@ -6913,16 +6849,16 @@ public void resetPrimaryKey()
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.collationInput">collationInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.columnInput">columnInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.dataTypeInput">dataTypeInput</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.nullableInput">nullableInput</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.nullableInput">nullableInput</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.ordinalPositionInput">ordinalPositionInput</a></code> | <code>java.lang.Number</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.primaryKeyInput">primaryKeyInput</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.primaryKeyInput">primaryKeyInput</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.collation">collation</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.column">column</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.dataType">dataType</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.nullable">nullable</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.nullable">nullable</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.ordinalPosition">ordinalPosition</a></code> | <code>java.lang.Number</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.primaryKey">primaryKey</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns">DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.primaryKey">primaryKey</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns">DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns</a></code> | *No description.* |
 
 ---
 
@@ -6993,10 +6929,10 @@ public java.lang.String getDataTypeInput();
 ##### `nullableInput`<sup>Optional</sup> <a name="nullableInput" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.nullableInput"></a>
 
 ```java
-public java.lang.Object getNullableInput();
+public java.lang.Boolean|IResolvable getNullableInput();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
@@ -7013,10 +6949,10 @@ public java.lang.Number getOrdinalPositionInput();
 ##### `primaryKeyInput`<sup>Optional</sup> <a name="primaryKeyInput" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.primaryKeyInput"></a>
 
 ```java
-public java.lang.Object getPrimaryKeyInput();
+public java.lang.Boolean|IResolvable getPrimaryKeyInput();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
@@ -7053,10 +6989,10 @@ public java.lang.String getDataType();
 ##### `nullable`<sup>Required</sup> <a name="nullable" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.nullable"></a>
 
 ```java
-public java.lang.Object getNullable();
+public java.lang.Boolean|IResolvable getNullable();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
@@ -7073,20 +7009,20 @@ public java.lang.Number getOrdinalPosition();
 ##### `primaryKey`<sup>Required</sup> <a name="primaryKey" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.primaryKey"></a>
 
 ```java
-public java.lang.Object getPrimaryKey();
+public java.lang.Boolean|IResolvable getPrimaryKey();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns">DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns</a>
+- *Type:* com.hashicorp.cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns">DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns</a>
 
 ---
 
@@ -7317,12 +7253,12 @@ Returns a reversible string representation.
 ##### `putMysqlColumns` <a name="putMysqlColumns" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesOutputReference.putMysqlColumns"></a>
 
 ```java
-public void putMysqlColumns(IResolvable OR java.util.List<DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns> value)
+public void putMysqlColumns(IResolvable|java.util.List<DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns> value)
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesOutputReference.putMysqlColumns.parameter.value"></a>
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns">DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns">DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns</a>>
 
 ---
 
@@ -7340,10 +7276,10 @@ public void resetMysqlColumns()
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesOutputReference.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesOutputReference.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesOutputReference.property.mysqlColumns">mysqlColumns</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumnsList">DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumnsList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesOutputReference.property.mysqlColumnsInput">mysqlColumnsInput</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns">DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesOutputReference.property.mysqlColumnsInput">mysqlColumnsInput</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns">DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns</a>></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesOutputReference.property.tableInput">tableInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesOutputReference.property.table">table</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTables">DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTables</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTables">DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTables</a></code> | *No description.* |
 
 ---
 
@@ -7384,10 +7320,10 @@ public DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesM
 ##### `mysqlColumnsInput`<sup>Optional</sup> <a name="mysqlColumnsInput" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesOutputReference.property.mysqlColumnsInput"></a>
 
 ```java
-public java.lang.Object getMysqlColumnsInput();
+public IResolvable|java.util.List<DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns> getMysqlColumnsInput();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns">DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns">DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns</a>>
 
 ---
 
@@ -7414,10 +7350,10 @@ public java.lang.String getTable();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesOutputReference.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTables getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTables">DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTables</a>
+- *Type:* com.hashicorp.cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTables">DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTables</a>
 
 ---
 
@@ -7648,12 +7584,12 @@ Returns a reversible string representation.
 ##### `putMysqlTables` <a name="putMysqlTables" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesOutputReference.putMysqlTables"></a>
 
 ```java
-public void putMysqlTables(IResolvable OR java.util.List<DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTables> value)
+public void putMysqlTables(IResolvable|java.util.List<DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTables> value)
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesOutputReference.putMysqlTables.parameter.value"></a>
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTables">DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTables</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTables">DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTables</a>>
 
 ---
 
@@ -7672,9 +7608,9 @@ public void resetMysqlTables()
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesOutputReference.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesOutputReference.property.mysqlTables">mysqlTables</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesList">DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesOutputReference.property.databaseInput">databaseInput</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesOutputReference.property.mysqlTablesInput">mysqlTablesInput</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTables">DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTables</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesOutputReference.property.mysqlTablesInput">mysqlTablesInput</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTables">DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTables</a>></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesOutputReference.property.database">database</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabases">DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabases</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabases">DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabases</a></code> | *No description.* |
 
 ---
 
@@ -7725,10 +7661,10 @@ public java.lang.String getDatabaseInput();
 ##### `mysqlTablesInput`<sup>Optional</sup> <a name="mysqlTablesInput" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesOutputReference.property.mysqlTablesInput"></a>
 
 ```java
-public java.lang.Object getMysqlTablesInput();
+public IResolvable|java.util.List<DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTables> getMysqlTablesInput();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTables">DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTables</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTables">DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTables</a>>
 
 ---
 
@@ -7745,10 +7681,10 @@ public java.lang.String getDatabase();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesOutputReference.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabases getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabases">DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabases</a>
+- *Type:* com.hashicorp.cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabases">DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabases</a>
 
 ---
 
@@ -7960,12 +7896,12 @@ Returns a reversible string representation.
 ##### `putMysqlDatabases` <a name="putMysqlDatabases" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsOutputReference.putMysqlDatabases"></a>
 
 ```java
-public void putMysqlDatabases(IResolvable OR java.util.List<DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabases> value)
+public void putMysqlDatabases(IResolvable|java.util.List<DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabases> value)
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsOutputReference.putMysqlDatabases.parameter.value"></a>
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabases">DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabases</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabases">DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabases</a>>
 
 ---
 
@@ -7977,7 +7913,7 @@ public void putMysqlDatabases(IResolvable OR java.util.List<DatastreamStreamBack
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsOutputReference.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsOutputReference.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsOutputReference.property.mysqlDatabases">mysqlDatabases</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesList">DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsOutputReference.property.mysqlDatabasesInput">mysqlDatabasesInput</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabases">DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabases</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsOutputReference.property.mysqlDatabasesInput">mysqlDatabasesInput</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabases">DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabases</a>></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjects">DatastreamStreamBackfillAllMysqlExcludedObjects</a></code> | *No description.* |
 
 ---
@@ -8019,10 +7955,10 @@ public DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesList getMysq
 ##### `mysqlDatabasesInput`<sup>Optional</sup> <a name="mysqlDatabasesInput" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsOutputReference.property.mysqlDatabasesInput"></a>
 
 ```java
-public java.lang.Object getMysqlDatabasesInput();
+public IResolvable|java.util.List<DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabases> getMysqlDatabasesInput();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabases">DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabases</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabases">DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabases</a>>
 
 ---
 
@@ -8158,7 +8094,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasList.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasList.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemas">DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemas</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemas">DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemas</a>></code> | *No description.* |
 
 ---
 
@@ -8189,10 +8125,10 @@ public java.lang.String getFqn();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasList.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|java.util.List<DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemas> getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemas">DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemas</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemas">DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemas</a>>
 
 ---
 
@@ -8318,7 +8254,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesList.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesList.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTables">DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTables</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTables">DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTables</a>></code> | *No description.* |
 
 ---
 
@@ -8349,10 +8285,10 @@ public java.lang.String getFqn();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesList.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|java.util.List<DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTables> getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTables">DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTables</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTables">DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTables</a>>
 
 ---
 
@@ -8478,7 +8414,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumnsList.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumnsList.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumnsList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumns">DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumns</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumnsList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumns">DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumns</a>></code> | *No description.* |
 
 ---
 
@@ -8509,10 +8445,10 @@ public java.lang.String getFqn();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumnsList.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|java.util.List<DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumns> getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumns">DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumns</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumns">DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumns</a>>
 
 ---
 
@@ -8770,7 +8706,7 @@ public void resetDataType()
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumnsOutputReference.property.dataTypeInput">dataTypeInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumnsOutputReference.property.column">column</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumnsOutputReference.property.dataType">dataType</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumnsOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumns">DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumns</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumnsOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumns">DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumns</a></code> | *No description.* |
 
 ---
 
@@ -8911,10 +8847,10 @@ public java.lang.String getDataType();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumnsOutputReference.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumns getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumns">DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumns</a>
+- *Type:* com.hashicorp.cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumns">DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumns</a>
 
 ---
 
@@ -9145,12 +9081,12 @@ Returns a reversible string representation.
 ##### `putOracleColumns` <a name="putOracleColumns" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOutputReference.putOracleColumns"></a>
 
 ```java
-public void putOracleColumns(IResolvable OR java.util.List<DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumns> value)
+public void putOracleColumns(IResolvable|java.util.List<DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumns> value)
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOutputReference.putOracleColumns.parameter.value"></a>
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumns">DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumns</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumns">DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumns</a>>
 
 ---
 
@@ -9168,10 +9104,10 @@ public void resetOracleColumns()
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOutputReference.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOutputReference.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOutputReference.property.oracleColumns">oracleColumns</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumnsList">DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumnsList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOutputReference.property.oracleColumnsInput">oracleColumnsInput</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumns">DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumns</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOutputReference.property.oracleColumnsInput">oracleColumnsInput</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumns">DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumns</a>></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOutputReference.property.tableInput">tableInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOutputReference.property.table">table</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTables">DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTables</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTables">DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTables</a></code> | *No description.* |
 
 ---
 
@@ -9212,10 +9148,10 @@ public DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTables
 ##### `oracleColumnsInput`<sup>Optional</sup> <a name="oracleColumnsInput" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOutputReference.property.oracleColumnsInput"></a>
 
 ```java
-public java.lang.Object getOracleColumnsInput();
+public IResolvable|java.util.List<DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumns> getOracleColumnsInput();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumns">DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumns</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumns">DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumns</a>>
 
 ---
 
@@ -9242,10 +9178,10 @@ public java.lang.String getTable();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOutputReference.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTables getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTables">DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTables</a>
+- *Type:* com.hashicorp.cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTables">DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTables</a>
 
 ---
 
@@ -9476,12 +9412,12 @@ Returns a reversible string representation.
 ##### `putOracleTables` <a name="putOracleTables" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOutputReference.putOracleTables"></a>
 
 ```java
-public void putOracleTables(IResolvable OR java.util.List<DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTables> value)
+public void putOracleTables(IResolvable|java.util.List<DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTables> value)
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOutputReference.putOracleTables.parameter.value"></a>
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTables">DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTables</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTables">DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTables</a>>
 
 ---
 
@@ -9499,10 +9435,10 @@ public void resetOracleTables()
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOutputReference.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOutputReference.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOutputReference.property.oracleTables">oracleTables</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesList">DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOutputReference.property.oracleTablesInput">oracleTablesInput</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTables">DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTables</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOutputReference.property.oracleTablesInput">oracleTablesInput</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTables">DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTables</a>></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOutputReference.property.schemaInput">schemaInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOutputReference.property.schema">schema</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemas">DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemas</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemas">DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemas</a></code> | *No description.* |
 
 ---
 
@@ -9543,10 +9479,10 @@ public DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTables
 ##### `oracleTablesInput`<sup>Optional</sup> <a name="oracleTablesInput" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOutputReference.property.oracleTablesInput"></a>
 
 ```java
-public java.lang.Object getOracleTablesInput();
+public IResolvable|java.util.List<DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTables> getOracleTablesInput();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTables">DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTables</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTables">DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTables</a>>
 
 ---
 
@@ -9573,10 +9509,10 @@ public java.lang.String getSchema();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOutputReference.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemas getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemas">DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemas</a>
+- *Type:* com.hashicorp.cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemas">DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemas</a>
 
 ---
 
@@ -9788,12 +9724,12 @@ Returns a reversible string representation.
 ##### `putOracleSchemas` <a name="putOracleSchemas" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOutputReference.putOracleSchemas"></a>
 
 ```java
-public void putOracleSchemas(IResolvable OR java.util.List<DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemas> value)
+public void putOracleSchemas(IResolvable|java.util.List<DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemas> value)
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOutputReference.putOracleSchemas.parameter.value"></a>
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemas">DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemas</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemas">DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemas</a>>
 
 ---
 
@@ -9805,7 +9741,7 @@ public void putOracleSchemas(IResolvable OR java.util.List<DatastreamStreamBackf
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOutputReference.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOutputReference.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOutputReference.property.oracleSchemas">oracleSchemas</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasList">DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOutputReference.property.oracleSchemasInput">oracleSchemasInput</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemas">DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemas</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOutputReference.property.oracleSchemasInput">oracleSchemasInput</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemas">DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemas</a>></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjects">DatastreamStreamBackfillAllOracleExcludedObjects</a></code> | *No description.* |
 
 ---
@@ -9847,10 +9783,10 @@ public DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasList getOrac
 ##### `oracleSchemasInput`<sup>Optional</sup> <a name="oracleSchemasInput" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOutputReference.property.oracleSchemasInput"></a>
 
 ```java
-public java.lang.Object getOracleSchemasInput();
+public IResolvable|java.util.List<DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemas> getOracleSchemasInput();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemas">DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemas</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemas">DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemas</a>>
 
 ---
 
@@ -10531,12 +10467,12 @@ Returns a reversible string representation.
 ##### `putPostgresqlSchemas` <a name="putPostgresqlSchemas" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsOutputReference.putPostgresqlSchemas"></a>
 
 ```java
-public void putPostgresqlSchemas(IResolvable OR java.util.List<DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas> value)
+public void putPostgresqlSchemas(IResolvable|java.util.List<DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas> value)
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsOutputReference.putPostgresqlSchemas.parameter.value"></a>
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas">DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas">DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas</a>>
 
 ---
 
@@ -10548,7 +10484,7 @@ public void putPostgresqlSchemas(IResolvable OR java.util.List<DatastreamStreamB
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsOutputReference.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsOutputReference.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsOutputReference.property.postgresqlSchemas">postgresqlSchemas</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasList">DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsOutputReference.property.postgresqlSchemasInput">postgresqlSchemasInput</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas">DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsOutputReference.property.postgresqlSchemasInput">postgresqlSchemasInput</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas">DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas</a>></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjects">DatastreamStreamBackfillAllPostgresqlExcludedObjects</a></code> | *No description.* |
 
 ---
@@ -10590,10 +10526,10 @@ public DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasList
 ##### `postgresqlSchemasInput`<sup>Optional</sup> <a name="postgresqlSchemasInput" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsOutputReference.property.postgresqlSchemasInput"></a>
 
 ```java
-public java.lang.Object getPostgresqlSchemasInput();
+public IResolvable|java.util.List<DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas> getPostgresqlSchemasInput();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas">DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas">DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas</a>>
 
 ---
 
@@ -10729,7 +10665,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasList.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasList.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas">DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas">DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas</a>></code> | *No description.* |
 
 ---
 
@@ -10760,10 +10696,10 @@ public java.lang.String getFqn();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasList.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|java.util.List<DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas> getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas">DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas">DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas</a>>
 
 ---
 
@@ -10994,12 +10930,12 @@ Returns a reversible string representation.
 ##### `putPostgresqlTables` <a name="putPostgresqlTables" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasOutputReference.putPostgresqlTables"></a>
 
 ```java
-public void putPostgresqlTables(IResolvable OR java.util.List<DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTables> value)
+public void putPostgresqlTables(IResolvable|java.util.List<DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTables> value)
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasOutputReference.putPostgresqlTables.parameter.value"></a>
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTables">DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTables</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTables">DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTables</a>>
 
 ---
 
@@ -11017,10 +10953,10 @@ public void resetPostgresqlTables()
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasOutputReference.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasOutputReference.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasOutputReference.property.postgresqlTables">postgresqlTables</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesList">DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasOutputReference.property.postgresqlTablesInput">postgresqlTablesInput</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTables">DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTables</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasOutputReference.property.postgresqlTablesInput">postgresqlTablesInput</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTables">DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTables</a>></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasOutputReference.property.schemaInput">schemaInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasOutputReference.property.schema">schema</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas">DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas">DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas</a></code> | *No description.* |
 
 ---
 
@@ -11061,10 +10997,10 @@ public DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPost
 ##### `postgresqlTablesInput`<sup>Optional</sup> <a name="postgresqlTablesInput" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasOutputReference.property.postgresqlTablesInput"></a>
 
 ```java
-public java.lang.Object getPostgresqlTablesInput();
+public IResolvable|java.util.List<DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTables> getPostgresqlTablesInput();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTables">DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTables</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTables">DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTables</a>>
 
 ---
 
@@ -11091,10 +11027,10 @@ public java.lang.String getSchema();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasOutputReference.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas">DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas</a>
+- *Type:* com.hashicorp.cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas">DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas</a>
 
 ---
 
@@ -11220,7 +11156,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesList.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesList.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTables">DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTables</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTables">DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTables</a>></code> | *No description.* |
 
 ---
 
@@ -11251,10 +11187,10 @@ public java.lang.String getFqn();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesList.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|java.util.List<DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTables> getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTables">DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTables</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTables">DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTables</a>>
 
 ---
 
@@ -11485,12 +11421,12 @@ Returns a reversible string representation.
 ##### `putPostgresqlColumns` <a name="putPostgresqlColumns" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesOutputReference.putPostgresqlColumns"></a>
 
 ```java
-public void putPostgresqlColumns(IResolvable OR java.util.List<DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns> value)
+public void putPostgresqlColumns(IResolvable|java.util.List<DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns> value)
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesOutputReference.putPostgresqlColumns.parameter.value"></a>
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns">DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns">DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns</a>>
 
 ---
 
@@ -11508,10 +11444,10 @@ public void resetPostgresqlColumns()
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesOutputReference.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesOutputReference.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesOutputReference.property.postgresqlColumns">postgresqlColumns</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsList">DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesOutputReference.property.postgresqlColumnsInput">postgresqlColumnsInput</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns">DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesOutputReference.property.postgresqlColumnsInput">postgresqlColumnsInput</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns">DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns</a>></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesOutputReference.property.tableInput">tableInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesOutputReference.property.table">table</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTables">DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTables</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTables">DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTables</a></code> | *No description.* |
 
 ---
 
@@ -11552,10 +11488,10 @@ public DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPost
 ##### `postgresqlColumnsInput`<sup>Optional</sup> <a name="postgresqlColumnsInput" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesOutputReference.property.postgresqlColumnsInput"></a>
 
 ```java
-public java.lang.Object getPostgresqlColumnsInput();
+public IResolvable|java.util.List<DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns> getPostgresqlColumnsInput();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns">DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns">DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns</a>>
 
 ---
 
@@ -11582,10 +11518,10 @@ public java.lang.String getTable();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesOutputReference.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTables getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTables">DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTables</a>
+- *Type:* com.hashicorp.cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTables">DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTables</a>
 
 ---
 
@@ -11711,7 +11647,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsList.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsList.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns">DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns">DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns</a>></code> | *No description.* |
 
 ---
 
@@ -11742,10 +11678,10 @@ public java.lang.String getFqn();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsList.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|java.util.List<DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns> getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns">DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns">DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns</a>>
 
 ---
 
@@ -12018,15 +11954,15 @@ public void resetPrimaryKey()
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.scale">scale</a></code> | <code>java.lang.Number</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.columnInput">columnInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.dataTypeInput">dataTypeInput</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.nullableInput">nullableInput</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.nullableInput">nullableInput</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.ordinalPositionInput">ordinalPositionInput</a></code> | <code>java.lang.Number</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.primaryKeyInput">primaryKeyInput</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.primaryKeyInput">primaryKeyInput</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.column">column</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.dataType">dataType</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.nullable">nullable</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.nullable">nullable</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.ordinalPosition">ordinalPosition</a></code> | <code>java.lang.Number</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.primaryKey">primaryKey</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns">DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.primaryKey">primaryKey</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns">DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns</a></code> | *No description.* |
 
 ---
 
@@ -12107,10 +12043,10 @@ public java.lang.String getDataTypeInput();
 ##### `nullableInput`<sup>Optional</sup> <a name="nullableInput" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.nullableInput"></a>
 
 ```java
-public java.lang.Object getNullableInput();
+public java.lang.Boolean|IResolvable getNullableInput();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
@@ -12127,10 +12063,10 @@ public java.lang.Number getOrdinalPositionInput();
 ##### `primaryKeyInput`<sup>Optional</sup> <a name="primaryKeyInput" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.primaryKeyInput"></a>
 
 ```java
-public java.lang.Object getPrimaryKeyInput();
+public java.lang.Boolean|IResolvable getPrimaryKeyInput();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
@@ -12157,10 +12093,10 @@ public java.lang.String getDataType();
 ##### `nullable`<sup>Required</sup> <a name="nullable" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.nullable"></a>
 
 ```java
-public java.lang.Object getNullable();
+public java.lang.Boolean|IResolvable getNullable();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
@@ -12177,20 +12113,20 @@ public java.lang.Number getOrdinalPosition();
 ##### `primaryKey`<sup>Required</sup> <a name="primaryKey" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.primaryKey"></a>
 
 ```java
-public java.lang.Object getPrimaryKey();
+public java.lang.Boolean|IResolvable getPrimaryKey();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns">DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns</a>
+- *Type:* com.hashicorp.cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns">DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns</a>
 
 ---
 
@@ -12316,7 +12252,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFieldsList.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFieldsList.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFieldsList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFields">DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFields</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFieldsList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFields">DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFields</a>></code> | *No description.* |
 
 ---
 
@@ -12347,10 +12283,10 @@ public java.lang.String getFqn();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFieldsList.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|java.util.List<DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFields> getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFields">DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFields</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFields">DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFields</a>>
 
 ---
 
@@ -12592,7 +12528,7 @@ public void resetName()
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFieldsOutputReference.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFieldsOutputReference.property.nameInput">nameInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFieldsOutputReference.property.name">name</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFieldsOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFields">DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFields</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFieldsOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFields">DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFields</a></code> | *No description.* |
 
 ---
 
@@ -12643,10 +12579,10 @@ public java.lang.String getName();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFieldsOutputReference.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFields getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFields">DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFields</a>
+- *Type:* com.hashicorp.cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFields">DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFields</a>
 
 ---
 
@@ -12772,7 +12708,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsList.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsList.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjects">DatastreamStreamBackfillAllSalesforceExcludedObjectsObjects</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjects">DatastreamStreamBackfillAllSalesforceExcludedObjectsObjects</a>></code> | *No description.* |
 
 ---
 
@@ -12803,10 +12739,10 @@ public java.lang.String getFqn();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsList.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|java.util.List<DatastreamStreamBackfillAllSalesforceExcludedObjectsObjects> getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjects">DatastreamStreamBackfillAllSalesforceExcludedObjectsObjects</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjects">DatastreamStreamBackfillAllSalesforceExcludedObjectsObjects</a>>
 
 ---
 
@@ -13038,12 +12974,12 @@ Returns a reversible string representation.
 ##### `putFields` <a name="putFields" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsOutputReference.putFields"></a>
 
 ```java
-public void putFields(IResolvable OR java.util.List<DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFields> value)
+public void putFields(IResolvable|java.util.List<DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFields> value)
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsOutputReference.putFields.parameter.value"></a>
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFields">DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFields</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFields">DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFields</a>>
 
 ---
 
@@ -13067,10 +13003,10 @@ public void resetObjectName()
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsOutputReference.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsOutputReference.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsOutputReference.property.fields">fields</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFieldsList">DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFieldsList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsOutputReference.property.fieldsInput">fieldsInput</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFields">DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFields</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsOutputReference.property.fieldsInput">fieldsInput</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFields">DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFields</a>></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsOutputReference.property.objectNameInput">objectNameInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsOutputReference.property.objectName">objectName</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjects">DatastreamStreamBackfillAllSalesforceExcludedObjectsObjects</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjects">DatastreamStreamBackfillAllSalesforceExcludedObjectsObjects</a></code> | *No description.* |
 
 ---
 
@@ -13111,10 +13047,10 @@ public DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFieldsList get
 ##### `fieldsInput`<sup>Optional</sup> <a name="fieldsInput" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsOutputReference.property.fieldsInput"></a>
 
 ```java
-public java.lang.Object getFieldsInput();
+public IResolvable|java.util.List<DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFields> getFieldsInput();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFields">DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFields</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFields">DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsFields</a>>
 
 ---
 
@@ -13141,10 +13077,10 @@ public java.lang.String getObjectName();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsOutputReference.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|DatastreamStreamBackfillAllSalesforceExcludedObjectsObjects getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjects">DatastreamStreamBackfillAllSalesforceExcludedObjectsObjects</a>
+- *Type:* com.hashicorp.cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjects">DatastreamStreamBackfillAllSalesforceExcludedObjectsObjects</a>
 
 ---
 
@@ -13356,12 +13292,12 @@ Returns a reversible string representation.
 ##### `putObjects` <a name="putObjects" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsOutputReference.putObjects"></a>
 
 ```java
-public void putObjects(IResolvable OR java.util.List<DatastreamStreamBackfillAllSalesforceExcludedObjectsObjects> value)
+public void putObjects(IResolvable|java.util.List<DatastreamStreamBackfillAllSalesforceExcludedObjectsObjects> value)
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsOutputReference.putObjects.parameter.value"></a>
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjects">DatastreamStreamBackfillAllSalesforceExcludedObjectsObjects</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjects">DatastreamStreamBackfillAllSalesforceExcludedObjectsObjects</a>>
 
 ---
 
@@ -13373,7 +13309,7 @@ public void putObjects(IResolvable OR java.util.List<DatastreamStreamBackfillAll
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsOutputReference.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsOutputReference.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsOutputReference.property.objects">objects</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsList">DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsOutputReference.property.objectsInput">objectsInput</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjects">DatastreamStreamBackfillAllSalesforceExcludedObjectsObjects</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsOutputReference.property.objectsInput">objectsInput</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjects">DatastreamStreamBackfillAllSalesforceExcludedObjectsObjects</a>></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjects">DatastreamStreamBackfillAllSalesforceExcludedObjects</a></code> | *No description.* |
 
 ---
@@ -13415,10 +13351,10 @@ public DatastreamStreamBackfillAllSalesforceExcludedObjectsObjectsList getObject
 ##### `objectsInput`<sup>Optional</sup> <a name="objectsInput" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsOutputReference.property.objectsInput"></a>
 
 ```java
-public java.lang.Object getObjectsInput();
+public IResolvable|java.util.List<DatastreamStreamBackfillAllSalesforceExcludedObjectsObjects> getObjectsInput();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjects">DatastreamStreamBackfillAllSalesforceExcludedObjectsObjects</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSalesforceExcludedObjectsObjects">DatastreamStreamBackfillAllSalesforceExcludedObjectsObjects</a>>
 
 ---
 
@@ -13640,12 +13576,12 @@ Returns a reversible string representation.
 ##### `putSchemas` <a name="putSchemas" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsOutputReference.putSchemas"></a>
 
 ```java
-public void putSchemas(IResolvable OR java.util.List<DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemas> value)
+public void putSchemas(IResolvable|java.util.List<DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemas> value)
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsOutputReference.putSchemas.parameter.value"></a>
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemas">DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemas</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemas">DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemas</a>>
 
 ---
 
@@ -13657,7 +13593,7 @@ public void putSchemas(IResolvable OR java.util.List<DatastreamStreamBackfillAll
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsOutputReference.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsOutputReference.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsOutputReference.property.schemas">schemas</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasList">DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsOutputReference.property.schemasInput">schemasInput</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemas">DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemas</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsOutputReference.property.schemasInput">schemasInput</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemas">DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemas</a>></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjects">DatastreamStreamBackfillAllSqlServerExcludedObjects</a></code> | *No description.* |
 
 ---
@@ -13699,10 +13635,10 @@ public DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasList getSchemas
 ##### `schemasInput`<sup>Optional</sup> <a name="schemasInput" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsOutputReference.property.schemasInput"></a>
 
 ```java
-public java.lang.Object getSchemasInput();
+public IResolvable|java.util.List<DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemas> getSchemasInput();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemas">DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemas</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemas">DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemas</a>>
 
 ---
 
@@ -13838,7 +13774,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasList.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasList.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemas">DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemas</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemas">DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemas</a>></code> | *No description.* |
 
 ---
 
@@ -13869,10 +13805,10 @@ public java.lang.String getFqn();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasList.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|java.util.List<DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemas> getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemas">DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemas</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemas">DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemas</a>>
 
 ---
 
@@ -14103,12 +14039,12 @@ Returns a reversible string representation.
 ##### `putTables` <a name="putTables" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasOutputReference.putTables"></a>
 
 ```java
-public void putTables(IResolvable OR java.util.List<DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTables> value)
+public void putTables(IResolvable|java.util.List<DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTables> value)
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasOutputReference.putTables.parameter.value"></a>
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTables">DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTables</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTables">DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTables</a>>
 
 ---
 
@@ -14127,9 +14063,9 @@ public void resetTables()
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasOutputReference.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasOutputReference.property.tables">tables</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesList">DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasOutputReference.property.schemaInput">schemaInput</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasOutputReference.property.tablesInput">tablesInput</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTables">DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTables</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasOutputReference.property.tablesInput">tablesInput</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTables">DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTables</a>></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasOutputReference.property.schema">schema</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemas">DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemas</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemas">DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemas</a></code> | *No description.* |
 
 ---
 
@@ -14180,10 +14116,10 @@ public java.lang.String getSchemaInput();
 ##### `tablesInput`<sup>Optional</sup> <a name="tablesInput" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasOutputReference.property.tablesInput"></a>
 
 ```java
-public java.lang.Object getTablesInput();
+public IResolvable|java.util.List<DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTables> getTablesInput();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTables">DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTables</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTables">DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTables</a>>
 
 ---
 
@@ -14200,10 +14136,10 @@ public java.lang.String getSchema();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasOutputReference.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemas getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemas">DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemas</a>
+- *Type:* com.hashicorp.cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemas">DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemas</a>
 
 ---
 
@@ -14329,7 +14265,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumnsList.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumnsList.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumnsList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumns">DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumns</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumnsList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumns">DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumns</a>></code> | *No description.* |
 
 ---
 
@@ -14360,10 +14296,10 @@ public java.lang.String getFqn();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumnsList.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|java.util.List<DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumns> getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumns">DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumns</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumns">DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumns</a>>
 
 ---
 
@@ -14620,7 +14556,7 @@ public void resetDataType()
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumnsOutputReference.property.dataTypeInput">dataTypeInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumnsOutputReference.property.column">column</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumnsOutputReference.property.dataType">dataType</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumnsOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumns">DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumns</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumnsOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumns">DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumns</a></code> | *No description.* |
 
 ---
 
@@ -14751,10 +14687,10 @@ public java.lang.String getDataType();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumnsOutputReference.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumns getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumns">DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumns</a>
+- *Type:* com.hashicorp.cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumns">DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumns</a>
 
 ---
 
@@ -14880,7 +14816,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesList.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesList.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTables">DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTables</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTables">DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTables</a>></code> | *No description.* |
 
 ---
 
@@ -14911,10 +14847,10 @@ public java.lang.String getFqn();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesList.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|java.util.List<DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTables> getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTables">DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTables</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTables">DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTables</a>>
 
 ---
 
@@ -15145,12 +15081,12 @@ Returns a reversible string representation.
 ##### `putColumns` <a name="putColumns" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesOutputReference.putColumns"></a>
 
 ```java
-public void putColumns(IResolvable OR java.util.List<DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumns> value)
+public void putColumns(IResolvable|java.util.List<DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumns> value)
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesOutputReference.putColumns.parameter.value"></a>
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumns">DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumns</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumns">DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumns</a>>
 
 ---
 
@@ -15168,10 +15104,10 @@ public void resetColumns()
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesOutputReference.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesOutputReference.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesOutputReference.property.columns">columns</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumnsList">DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumnsList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesOutputReference.property.columnsInput">columnsInput</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumns">DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumns</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesOutputReference.property.columnsInput">columnsInput</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumns">DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumns</a>></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesOutputReference.property.tableInput">tableInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesOutputReference.property.table">table</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTables">DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTables</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTables">DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTables</a></code> | *No description.* |
 
 ---
 
@@ -15212,10 +15148,10 @@ public DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumnsLi
 ##### `columnsInput`<sup>Optional</sup> <a name="columnsInput" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesOutputReference.property.columnsInput"></a>
 
 ```java
-public java.lang.Object getColumnsInput();
+public IResolvable|java.util.List<DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumns> getColumnsInput();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumns">DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumns</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumns">DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesColumns</a>>
 
 ---
 
@@ -15242,10 +15178,10 @@ public java.lang.String getTable();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTablesOutputReference.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTables getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTables">DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTables</a>
+- *Type:* com.hashicorp.cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTables">DatastreamStreamBackfillAllSqlServerExcludedObjectsSchemasTables</a>
 
 ---
 
@@ -19436,7 +19372,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesList.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesList.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases">DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases">DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases</a>></code> | *No description.* |
 
 ---
 
@@ -19467,10 +19403,10 @@ public java.lang.String getFqn();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesList.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|java.util.List<DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases> getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases">DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases">DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases</a>>
 
 ---
 
@@ -19596,7 +19532,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesList.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesList.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTables">DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTables</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTables">DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTables</a>></code> | *No description.* |
 
 ---
 
@@ -19627,10 +19563,10 @@ public java.lang.String getFqn();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesList.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|java.util.List<DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTables> getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTables">DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTables</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTables">DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTables</a>>
 
 ---
 
@@ -19756,7 +19692,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsList.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsList.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns">DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns">DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns</a>></code> | *No description.* |
 
 ---
 
@@ -19787,10 +19723,10 @@ public java.lang.String getFqn();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsList.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|java.util.List<DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns> getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns">DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns">DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns</a>>
 
 ---
 
@@ -20069,16 +20005,16 @@ public void resetPrimaryKey()
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.collationInput">collationInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.columnInput">columnInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.dataTypeInput">dataTypeInput</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.nullableInput">nullableInput</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.nullableInput">nullableInput</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.ordinalPositionInput">ordinalPositionInput</a></code> | <code>java.lang.Number</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.primaryKeyInput">primaryKeyInput</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.primaryKeyInput">primaryKeyInput</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.collation">collation</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.column">column</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.dataType">dataType</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.nullable">nullable</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.nullable">nullable</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.ordinalPosition">ordinalPosition</a></code> | <code>java.lang.Number</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.primaryKey">primaryKey</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns">DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.primaryKey">primaryKey</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns">DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns</a></code> | *No description.* |
 
 ---
 
@@ -20149,10 +20085,10 @@ public java.lang.String getDataTypeInput();
 ##### `nullableInput`<sup>Optional</sup> <a name="nullableInput" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.nullableInput"></a>
 
 ```java
-public java.lang.Object getNullableInput();
+public java.lang.Boolean|IResolvable getNullableInput();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
@@ -20169,10 +20105,10 @@ public java.lang.Number getOrdinalPositionInput();
 ##### `primaryKeyInput`<sup>Optional</sup> <a name="primaryKeyInput" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.primaryKeyInput"></a>
 
 ```java
-public java.lang.Object getPrimaryKeyInput();
+public java.lang.Boolean|IResolvable getPrimaryKeyInput();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
@@ -20209,10 +20145,10 @@ public java.lang.String getDataType();
 ##### `nullable`<sup>Required</sup> <a name="nullable" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.nullable"></a>
 
 ```java
-public java.lang.Object getNullable();
+public java.lang.Boolean|IResolvable getNullable();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
@@ -20229,20 +20165,20 @@ public java.lang.Number getOrdinalPosition();
 ##### `primaryKey`<sup>Required</sup> <a name="primaryKey" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.primaryKey"></a>
 
 ```java
-public java.lang.Object getPrimaryKey();
+public java.lang.Boolean|IResolvable getPrimaryKey();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns">DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns</a>
+- *Type:* com.hashicorp.cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns">DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns</a>
 
 ---
 
@@ -20473,12 +20409,12 @@ Returns a reversible string representation.
 ##### `putMysqlColumns` <a name="putMysqlColumns" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesOutputReference.putMysqlColumns"></a>
 
 ```java
-public void putMysqlColumns(IResolvable OR java.util.List<DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns> value)
+public void putMysqlColumns(IResolvable|java.util.List<DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns> value)
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesOutputReference.putMysqlColumns.parameter.value"></a>
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns">DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns">DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns</a>>
 
 ---
 
@@ -20496,10 +20432,10 @@ public void resetMysqlColumns()
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesOutputReference.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesOutputReference.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesOutputReference.property.mysqlColumns">mysqlColumns</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsList">DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesOutputReference.property.mysqlColumnsInput">mysqlColumnsInput</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns">DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesOutputReference.property.mysqlColumnsInput">mysqlColumnsInput</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns">DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns</a>></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesOutputReference.property.tableInput">tableInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesOutputReference.property.table">table</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTables">DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTables</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTables">DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTables</a></code> | *No description.* |
 
 ---
 
@@ -20540,10 +20476,10 @@ public DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases
 ##### `mysqlColumnsInput`<sup>Optional</sup> <a name="mysqlColumnsInput" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesOutputReference.property.mysqlColumnsInput"></a>
 
 ```java
-public java.lang.Object getMysqlColumnsInput();
+public IResolvable|java.util.List<DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns> getMysqlColumnsInput();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns">DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns">DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns</a>>
 
 ---
 
@@ -20570,10 +20506,10 @@ public java.lang.String getTable();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesOutputReference.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTables getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTables">DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTables</a>
+- *Type:* com.hashicorp.cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTables">DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTables</a>
 
 ---
 
@@ -20804,12 +20740,12 @@ Returns a reversible string representation.
 ##### `putMysqlTables` <a name="putMysqlTables" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesOutputReference.putMysqlTables"></a>
 
 ```java
-public void putMysqlTables(IResolvable OR java.util.List<DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTables> value)
+public void putMysqlTables(IResolvable|java.util.List<DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTables> value)
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesOutputReference.putMysqlTables.parameter.value"></a>
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTables">DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTables</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTables">DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTables</a>>
 
 ---
 
@@ -20828,9 +20764,9 @@ public void resetMysqlTables()
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesOutputReference.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesOutputReference.property.mysqlTables">mysqlTables</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesList">DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesOutputReference.property.databaseInput">databaseInput</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesOutputReference.property.mysqlTablesInput">mysqlTablesInput</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTables">DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTables</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesOutputReference.property.mysqlTablesInput">mysqlTablesInput</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTables">DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTables</a>></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesOutputReference.property.database">database</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases">DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases">DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases</a></code> | *No description.* |
 
 ---
 
@@ -20881,10 +20817,10 @@ public java.lang.String getDatabaseInput();
 ##### `mysqlTablesInput`<sup>Optional</sup> <a name="mysqlTablesInput" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesOutputReference.property.mysqlTablesInput"></a>
 
 ```java
-public java.lang.Object getMysqlTablesInput();
+public IResolvable|java.util.List<DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTables> getMysqlTablesInput();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTables">DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTables</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTables">DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTables</a>>
 
 ---
 
@@ -20901,10 +20837,10 @@ public java.lang.String getDatabase();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesOutputReference.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases">DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases</a>
+- *Type:* com.hashicorp.cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases">DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases</a>
 
 ---
 
@@ -21116,12 +21052,12 @@ Returns a reversible string representation.
 ##### `putMysqlDatabases` <a name="putMysqlDatabases" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsOutputReference.putMysqlDatabases"></a>
 
 ```java
-public void putMysqlDatabases(IResolvable OR java.util.List<DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases> value)
+public void putMysqlDatabases(IResolvable|java.util.List<DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases> value)
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsOutputReference.putMysqlDatabases.parameter.value"></a>
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases">DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases">DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases</a>>
 
 ---
 
@@ -21133,7 +21069,7 @@ public void putMysqlDatabases(IResolvable OR java.util.List<DatastreamStreamSour
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsOutputReference.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsOutputReference.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsOutputReference.property.mysqlDatabases">mysqlDatabases</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesList">DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsOutputReference.property.mysqlDatabasesInput">mysqlDatabasesInput</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases">DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsOutputReference.property.mysqlDatabasesInput">mysqlDatabasesInput</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases">DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases</a>></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjects">DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjects</a></code> | *No description.* |
 
 ---
@@ -21175,10 +21111,10 @@ public DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases
 ##### `mysqlDatabasesInput`<sup>Optional</sup> <a name="mysqlDatabasesInput" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsOutputReference.property.mysqlDatabasesInput"></a>
 
 ```java
-public java.lang.Object getMysqlDatabasesInput();
+public IResolvable|java.util.List<DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases> getMysqlDatabasesInput();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases">DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases">DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases</a>>
 
 ---
 
@@ -21563,7 +21499,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesList.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesList.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases">DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases">DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases</a>></code> | *No description.* |
 
 ---
 
@@ -21594,10 +21530,10 @@ public java.lang.String getFqn();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesList.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|java.util.List<DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases> getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases">DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases">DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases</a>>
 
 ---
 
@@ -21723,7 +21659,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesList.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesList.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTables">DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTables</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTables">DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTables</a>></code> | *No description.* |
 
 ---
 
@@ -21754,10 +21690,10 @@ public java.lang.String getFqn();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesList.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|java.util.List<DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTables> getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTables">DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTables</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTables">DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTables</a>>
 
 ---
 
@@ -21883,7 +21819,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsList.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsList.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns">DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns">DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns</a>></code> | *No description.* |
 
 ---
 
@@ -21914,10 +21850,10 @@ public java.lang.String getFqn();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsList.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|java.util.List<DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns> getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns">DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns">DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns</a>>
 
 ---
 
@@ -22196,16 +22132,16 @@ public void resetPrimaryKey()
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.collationInput">collationInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.columnInput">columnInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.dataTypeInput">dataTypeInput</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.nullableInput">nullableInput</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.nullableInput">nullableInput</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.ordinalPositionInput">ordinalPositionInput</a></code> | <code>java.lang.Number</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.primaryKeyInput">primaryKeyInput</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.primaryKeyInput">primaryKeyInput</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.collation">collation</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.column">column</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.dataType">dataType</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.nullable">nullable</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.nullable">nullable</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.ordinalPosition">ordinalPosition</a></code> | <code>java.lang.Number</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.primaryKey">primaryKey</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns">DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.primaryKey">primaryKey</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns">DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns</a></code> | *No description.* |
 
 ---
 
@@ -22276,10 +22212,10 @@ public java.lang.String getDataTypeInput();
 ##### `nullableInput`<sup>Optional</sup> <a name="nullableInput" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.nullableInput"></a>
 
 ```java
-public java.lang.Object getNullableInput();
+public java.lang.Boolean|IResolvable getNullableInput();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
@@ -22296,10 +22232,10 @@ public java.lang.Number getOrdinalPositionInput();
 ##### `primaryKeyInput`<sup>Optional</sup> <a name="primaryKeyInput" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.primaryKeyInput"></a>
 
 ```java
-public java.lang.Object getPrimaryKeyInput();
+public java.lang.Boolean|IResolvable getPrimaryKeyInput();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
@@ -22336,10 +22272,10 @@ public java.lang.String getDataType();
 ##### `nullable`<sup>Required</sup> <a name="nullable" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.nullable"></a>
 
 ```java
-public java.lang.Object getNullable();
+public java.lang.Boolean|IResolvable getNullable();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
@@ -22356,20 +22292,20 @@ public java.lang.Number getOrdinalPosition();
 ##### `primaryKey`<sup>Required</sup> <a name="primaryKey" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.primaryKey"></a>
 
 ```java
-public java.lang.Object getPrimaryKey();
+public java.lang.Boolean|IResolvable getPrimaryKey();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsOutputReference.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns">DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns</a>
+- *Type:* com.hashicorp.cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns">DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns</a>
 
 ---
 
@@ -22600,12 +22536,12 @@ Returns a reversible string representation.
 ##### `putMysqlColumns` <a name="putMysqlColumns" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesOutputReference.putMysqlColumns"></a>
 
 ```java
-public void putMysqlColumns(IResolvable OR java.util.List<DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns> value)
+public void putMysqlColumns(IResolvable|java.util.List<DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns> value)
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesOutputReference.putMysqlColumns.parameter.value"></a>
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns">DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns">DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns</a>>
 
 ---
 
@@ -22623,10 +22559,10 @@ public void resetMysqlColumns()
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesOutputReference.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesOutputReference.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesOutputReference.property.mysqlColumns">mysqlColumns</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsList">DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumnsList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesOutputReference.property.mysqlColumnsInput">mysqlColumnsInput</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns">DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesOutputReference.property.mysqlColumnsInput">mysqlColumnsInput</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns">DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns</a>></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesOutputReference.property.tableInput">tableInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesOutputReference.property.table">table</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTables">DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTables</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTables">DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTables</a></code> | *No description.* |
 
 ---
 
@@ -22667,10 +22603,10 @@ public DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases
 ##### `mysqlColumnsInput`<sup>Optional</sup> <a name="mysqlColumnsInput" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesOutputReference.property.mysqlColumnsInput"></a>
 
 ```java
-public java.lang.Object getMysqlColumnsInput();
+public IResolvable|java.util.List<DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns> getMysqlColumnsInput();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns">DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns">DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns</a>>
 
 ---
 
@@ -22697,10 +22633,10 @@ public java.lang.String getTable();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesOutputReference.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTables getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTables">DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTables</a>
+- *Type:* com.hashicorp.cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTables">DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTables</a>
 
 ---
 
@@ -22931,12 +22867,12 @@ Returns a reversible string representation.
 ##### `putMysqlTables` <a name="putMysqlTables" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesOutputReference.putMysqlTables"></a>
 
 ```java
-public void putMysqlTables(IResolvable OR java.util.List<DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTables> value)
+public void putMysqlTables(IResolvable|java.util.List<DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTables> value)
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesOutputReference.putMysqlTables.parameter.value"></a>
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTables">DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTables</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTables">DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTables</a>>
 
 ---
 
@@ -22955,9 +22891,9 @@ public void resetMysqlTables()
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesOutputReference.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesOutputReference.property.mysqlTables">mysqlTables</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesList">DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesOutputReference.property.databaseInput">databaseInput</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesOutputReference.property.mysqlTablesInput">mysqlTablesInput</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTables">DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTables</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesOutputReference.property.mysqlTablesInput">mysqlTablesInput</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTables">DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTables</a>></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesOutputReference.property.database">database</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases">DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases">DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases</a></code> | *No description.* |
 
 ---
 
@@ -23008,10 +22944,10 @@ public java.lang.String getDatabaseInput();
 ##### `mysqlTablesInput`<sup>Optional</sup> <a name="mysqlTablesInput" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesOutputReference.property.mysqlTablesInput"></a>
 
 ```java
-public java.lang.Object getMysqlTablesInput();
+public IResolvable|java.util.List<DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTables> getMysqlTablesInput();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTables">DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTables</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTables">DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTables</a>>
 
 ---
 
@@ -23028,10 +22964,10 @@ public java.lang.String getDatabase();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesOutputReference.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases">DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases</a>
+- *Type:* com.hashicorp.cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases">DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases</a>
 
 ---
 
@@ -23243,12 +23179,12 @@ Returns a reversible string representation.
 ##### `putMysqlDatabases` <a name="putMysqlDatabases" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsOutputReference.putMysqlDatabases"></a>
 
 ```java
-public void putMysqlDatabases(IResolvable OR java.util.List<DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases> value)
+public void putMysqlDatabases(IResolvable|java.util.List<DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases> value)
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsOutputReference.putMysqlDatabases.parameter.value"></a>
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases">DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases">DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases</a>>
 
 ---
 
@@ -23260,7 +23196,7 @@ public void putMysqlDatabases(IResolvable OR java.util.List<DatastreamStreamSour
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsOutputReference.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsOutputReference.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsOutputReference.property.mysqlDatabases">mysqlDatabases</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesList">DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsOutputReference.property.mysqlDatabasesInput">mysqlDatabasesInput</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases">DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsOutputReference.property.mysqlDatabasesInput">mysqlDatabasesInput</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases">DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases</a>></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjects">DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjects</a></code> | *No description.* |
 
 ---
@@ -23302,10 +23238,10 @@ public DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases
 ##### `mysqlDatabasesInput`<sup>Optional</sup> <a name="mysqlDatabasesInput" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsOutputReference.property.mysqlDatabasesInput"></a>
 
 ```java
-public java.lang.Object getMysqlDatabasesInput();
+public IResolvable|java.util.List<DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases> getMysqlDatabasesInput();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases">DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases">DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases</a>>
 
 ---
 
@@ -24165,7 +24101,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasList.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasList.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas">DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas">DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas</a>></code> | *No description.* |
 
 ---
 
@@ -24196,10 +24132,10 @@ public java.lang.String getFqn();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasList.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|java.util.List<DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas> getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas">DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas">DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas</a>>
 
 ---
 
@@ -24325,7 +24261,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesList.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesList.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTables">DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTables</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTables">DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTables</a>></code> | *No description.* |
 
 ---
 
@@ -24356,10 +24292,10 @@ public java.lang.String getFqn();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesList.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|java.util.List<DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTables> getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTables">DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTables</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTables">DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTables</a>>
 
 ---
 
@@ -24485,7 +24421,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumnsList.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumnsList.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumnsList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumns">DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumns</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumnsList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumns">DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumns</a>></code> | *No description.* |
 
 ---
 
@@ -24516,10 +24452,10 @@ public java.lang.String getFqn();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumnsList.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|java.util.List<DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumns> getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumns">DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumns</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumns">DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumns</a>>
 
 ---
 
@@ -24777,7 +24713,7 @@ public void resetDataType()
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumnsOutputReference.property.dataTypeInput">dataTypeInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumnsOutputReference.property.column">column</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumnsOutputReference.property.dataType">dataType</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumnsOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumns">DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumns</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumnsOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumns">DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumns</a></code> | *No description.* |
 
 ---
 
@@ -24918,10 +24854,10 @@ public java.lang.String getDataType();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumnsOutputReference.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumns getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumns">DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumns</a>
+- *Type:* com.hashicorp.cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumns">DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumns</a>
 
 ---
 
@@ -25152,12 +25088,12 @@ Returns a reversible string representation.
 ##### `putOracleColumns` <a name="putOracleColumns" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOutputReference.putOracleColumns"></a>
 
 ```java
-public void putOracleColumns(IResolvable OR java.util.List<DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumns> value)
+public void putOracleColumns(IResolvable|java.util.List<DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumns> value)
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOutputReference.putOracleColumns.parameter.value"></a>
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumns">DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumns</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumns">DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumns</a>>
 
 ---
 
@@ -25175,10 +25111,10 @@ public void resetOracleColumns()
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOutputReference.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOutputReference.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOutputReference.property.oracleColumns">oracleColumns</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumnsList">DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumnsList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOutputReference.property.oracleColumnsInput">oracleColumnsInput</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumns">DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumns</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOutputReference.property.oracleColumnsInput">oracleColumnsInput</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumns">DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumns</a>></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOutputReference.property.tableInput">tableInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOutputReference.property.table">table</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTables">DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTables</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTables">DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTables</a></code> | *No description.* |
 
 ---
 
@@ -25219,10 +25155,10 @@ public DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas
 ##### `oracleColumnsInput`<sup>Optional</sup> <a name="oracleColumnsInput" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOutputReference.property.oracleColumnsInput"></a>
 
 ```java
-public java.lang.Object getOracleColumnsInput();
+public IResolvable|java.util.List<DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumns> getOracleColumnsInput();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumns">DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumns</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumns">DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumns</a>>
 
 ---
 
@@ -25249,10 +25185,10 @@ public java.lang.String getTable();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOutputReference.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTables getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTables">DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTables</a>
+- *Type:* com.hashicorp.cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTables">DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTables</a>
 
 ---
 
@@ -25483,12 +25419,12 @@ Returns a reversible string representation.
 ##### `putOracleTables` <a name="putOracleTables" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOutputReference.putOracleTables"></a>
 
 ```java
-public void putOracleTables(IResolvable OR java.util.List<DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTables> value)
+public void putOracleTables(IResolvable|java.util.List<DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTables> value)
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOutputReference.putOracleTables.parameter.value"></a>
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTables">DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTables</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTables">DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTables</a>>
 
 ---
 
@@ -25506,10 +25442,10 @@ public void resetOracleTables()
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOutputReference.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOutputReference.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOutputReference.property.oracleTables">oracleTables</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesList">DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOutputReference.property.oracleTablesInput">oracleTablesInput</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTables">DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTables</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOutputReference.property.oracleTablesInput">oracleTablesInput</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTables">DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTables</a>></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOutputReference.property.schemaInput">schemaInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOutputReference.property.schema">schema</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas">DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas">DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas</a></code> | *No description.* |
 
 ---
 
@@ -25550,10 +25486,10 @@ public DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas
 ##### `oracleTablesInput`<sup>Optional</sup> <a name="oracleTablesInput" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOutputReference.property.oracleTablesInput"></a>
 
 ```java
-public java.lang.Object getOracleTablesInput();
+public IResolvable|java.util.List<DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTables> getOracleTablesInput();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTables">DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTables</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTables">DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTables</a>>
 
 ---
 
@@ -25580,10 +25516,10 @@ public java.lang.String getSchema();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOutputReference.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas">DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas</a>
+- *Type:* com.hashicorp.cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas">DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas</a>
 
 ---
 
@@ -25795,12 +25731,12 @@ Returns a reversible string representation.
 ##### `putOracleSchemas` <a name="putOracleSchemas" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOutputReference.putOracleSchemas"></a>
 
 ```java
-public void putOracleSchemas(IResolvable OR java.util.List<DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas> value)
+public void putOracleSchemas(IResolvable|java.util.List<DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas> value)
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOutputReference.putOracleSchemas.parameter.value"></a>
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas">DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas">DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas</a>>
 
 ---
 
@@ -25812,7 +25748,7 @@ public void putOracleSchemas(IResolvable OR java.util.List<DatastreamStreamSourc
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOutputReference.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOutputReference.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOutputReference.property.oracleSchemas">oracleSchemas</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasList">DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOutputReference.property.oracleSchemasInput">oracleSchemasInput</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas">DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOutputReference.property.oracleSchemasInput">oracleSchemasInput</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas">DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas</a>></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjects">DatastreamStreamSourceConfigOracleSourceConfigExcludeObjects</a></code> | *No description.* |
 
 ---
@@ -25854,10 +25790,10 @@ public DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas
 ##### `oracleSchemasInput`<sup>Optional</sup> <a name="oracleSchemasInput" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOutputReference.property.oracleSchemasInput"></a>
 
 ```java
-public java.lang.Object getOracleSchemasInput();
+public IResolvable|java.util.List<DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas> getOracleSchemasInput();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas">DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas">DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas</a>>
 
 ---
 
@@ -25993,7 +25929,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasList.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasList.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas">DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas">DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas</a>></code> | *No description.* |
 
 ---
 
@@ -26024,10 +25960,10 @@ public java.lang.String getFqn();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasList.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|java.util.List<DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas> getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas">DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas">DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas</a>>
 
 ---
 
@@ -26153,7 +26089,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesList.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesList.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTables">DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTables</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTables">DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTables</a>></code> | *No description.* |
 
 ---
 
@@ -26184,10 +26120,10 @@ public java.lang.String getFqn();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesList.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|java.util.List<DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTables> getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTables">DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTables</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTables">DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTables</a>>
 
 ---
 
@@ -26313,7 +26249,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumnsList.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumnsList.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumnsList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumns">DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumns</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumnsList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumns">DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumns</a>></code> | *No description.* |
 
 ---
 
@@ -26344,10 +26280,10 @@ public java.lang.String getFqn();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumnsList.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|java.util.List<DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumns> getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumns">DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumns</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumns">DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumns</a>>
 
 ---
 
@@ -26605,7 +26541,7 @@ public void resetDataType()
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumnsOutputReference.property.dataTypeInput">dataTypeInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumnsOutputReference.property.column">column</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumnsOutputReference.property.dataType">dataType</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumnsOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumns">DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumns</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumnsOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumns">DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumns</a></code> | *No description.* |
 
 ---
 
@@ -26746,10 +26682,10 @@ public java.lang.String getDataType();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumnsOutputReference.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumns getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumns">DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumns</a>
+- *Type:* com.hashicorp.cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumns">DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumns</a>
 
 ---
 
@@ -26980,12 +26916,12 @@ Returns a reversible string representation.
 ##### `putOracleColumns` <a name="putOracleColumns" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOutputReference.putOracleColumns"></a>
 
 ```java
-public void putOracleColumns(IResolvable OR java.util.List<DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumns> value)
+public void putOracleColumns(IResolvable|java.util.List<DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumns> value)
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOutputReference.putOracleColumns.parameter.value"></a>
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumns">DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumns</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumns">DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumns</a>>
 
 ---
 
@@ -27003,10 +26939,10 @@ public void resetOracleColumns()
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOutputReference.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOutputReference.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOutputReference.property.oracleColumns">oracleColumns</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumnsList">DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumnsList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOutputReference.property.oracleColumnsInput">oracleColumnsInput</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumns">DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumns</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOutputReference.property.oracleColumnsInput">oracleColumnsInput</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumns">DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumns</a>></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOutputReference.property.tableInput">tableInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOutputReference.property.table">table</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTables">DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTables</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTables">DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTables</a></code> | *No description.* |
 
 ---
 
@@ -27047,10 +26983,10 @@ public DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas
 ##### `oracleColumnsInput`<sup>Optional</sup> <a name="oracleColumnsInput" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOutputReference.property.oracleColumnsInput"></a>
 
 ```java
-public java.lang.Object getOracleColumnsInput();
+public IResolvable|java.util.List<DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumns> getOracleColumnsInput();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumns">DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumns</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumns">DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumns</a>>
 
 ---
 
@@ -27077,10 +27013,10 @@ public java.lang.String getTable();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOutputReference.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTables getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTables">DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTables</a>
+- *Type:* com.hashicorp.cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTables">DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTables</a>
 
 ---
 
@@ -27311,12 +27247,12 @@ Returns a reversible string representation.
 ##### `putOracleTables` <a name="putOracleTables" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOutputReference.putOracleTables"></a>
 
 ```java
-public void putOracleTables(IResolvable OR java.util.List<DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTables> value)
+public void putOracleTables(IResolvable|java.util.List<DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTables> value)
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOutputReference.putOracleTables.parameter.value"></a>
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTables">DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTables</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTables">DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTables</a>>
 
 ---
 
@@ -27334,10 +27270,10 @@ public void resetOracleTables()
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOutputReference.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOutputReference.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOutputReference.property.oracleTables">oracleTables</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesList">DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOutputReference.property.oracleTablesInput">oracleTablesInput</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTables">DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTables</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOutputReference.property.oracleTablesInput">oracleTablesInput</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTables">DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTables</a>></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOutputReference.property.schemaInput">schemaInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOutputReference.property.schema">schema</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas">DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas">DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas</a></code> | *No description.* |
 
 ---
 
@@ -27378,10 +27314,10 @@ public DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas
 ##### `oracleTablesInput`<sup>Optional</sup> <a name="oracleTablesInput" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOutputReference.property.oracleTablesInput"></a>
 
 ```java
-public java.lang.Object getOracleTablesInput();
+public IResolvable|java.util.List<DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTables> getOracleTablesInput();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTables">DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTables</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTables">DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTables</a>>
 
 ---
 
@@ -27408,10 +27344,10 @@ public java.lang.String getSchema();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOutputReference.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas">DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas</a>
+- *Type:* com.hashicorp.cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas">DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas</a>
 
 ---
 
@@ -27623,12 +27559,12 @@ Returns a reversible string representation.
 ##### `putOracleSchemas` <a name="putOracleSchemas" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOutputReference.putOracleSchemas"></a>
 
 ```java
-public void putOracleSchemas(IResolvable OR java.util.List<DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas> value)
+public void putOracleSchemas(IResolvable|java.util.List<DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas> value)
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOutputReference.putOracleSchemas.parameter.value"></a>
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas">DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas">DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas</a>>
 
 ---
 
@@ -27640,7 +27576,7 @@ public void putOracleSchemas(IResolvable OR java.util.List<DatastreamStreamSourc
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOutputReference.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOutputReference.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOutputReference.property.oracleSchemas">oracleSchemas</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasList">DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOutputReference.property.oracleSchemasInput">oracleSchemasInput</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas">DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOutputReference.property.oracleSchemasInput">oracleSchemasInput</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas">DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas</a>></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjects">DatastreamStreamSourceConfigOracleSourceConfigIncludeObjects</a></code> | *No description.* |
 
 ---
@@ -27682,10 +27618,10 @@ public DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas
 ##### `oracleSchemasInput`<sup>Optional</sup> <a name="oracleSchemasInput" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOutputReference.property.oracleSchemasInput"></a>
 
 ```java
-public java.lang.Object getOracleSchemasInput();
+public IResolvable|java.util.List<DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas> getOracleSchemasInput();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas">DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas">DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas</a>>
 
 ---
 
@@ -29112,12 +29048,12 @@ Returns a reversible string representation.
 ##### `putPostgresqlSchemas` <a name="putPostgresqlSchemas" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsOutputReference.putPostgresqlSchemas"></a>
 
 ```java
-public void putPostgresqlSchemas(IResolvable OR java.util.List<DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas> value)
+public void putPostgresqlSchemas(IResolvable|java.util.List<DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas> value)
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsOutputReference.putPostgresqlSchemas.parameter.value"></a>
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas">DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas">DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas</a>>
 
 ---
 
@@ -29129,7 +29065,7 @@ public void putPostgresqlSchemas(IResolvable OR java.util.List<DatastreamStreamS
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsOutputReference.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsOutputReference.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsOutputReference.property.postgresqlSchemas">postgresqlSchemas</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasList">DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsOutputReference.property.postgresqlSchemasInput">postgresqlSchemasInput</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas">DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsOutputReference.property.postgresqlSchemasInput">postgresqlSchemasInput</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas">DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas</a>></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjects">DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjects</a></code> | *No description.* |
 
 ---
@@ -29171,10 +29107,10 @@ public DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresq
 ##### `postgresqlSchemasInput`<sup>Optional</sup> <a name="postgresqlSchemasInput" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsOutputReference.property.postgresqlSchemasInput"></a>
 
 ```java
-public java.lang.Object getPostgresqlSchemasInput();
+public IResolvable|java.util.List<DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas> getPostgresqlSchemasInput();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas">DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas">DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas</a>>
 
 ---
 
@@ -29310,7 +29246,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasList.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasList.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas">DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas">DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas</a>></code> | *No description.* |
 
 ---
 
@@ -29341,10 +29277,10 @@ public java.lang.String getFqn();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasList.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|java.util.List<DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas> getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas">DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas">DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas</a>>
 
 ---
 
@@ -29575,12 +29511,12 @@ Returns a reversible string representation.
 ##### `putPostgresqlTables` <a name="putPostgresqlTables" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasOutputReference.putPostgresqlTables"></a>
 
 ```java
-public void putPostgresqlTables(IResolvable OR java.util.List<DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTables> value)
+public void putPostgresqlTables(IResolvable|java.util.List<DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTables> value)
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasOutputReference.putPostgresqlTables.parameter.value"></a>
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTables">DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTables</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTables">DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTables</a>>
 
 ---
 
@@ -29598,10 +29534,10 @@ public void resetPostgresqlTables()
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasOutputReference.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasOutputReference.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasOutputReference.property.postgresqlTables">postgresqlTables</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesList">DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasOutputReference.property.postgresqlTablesInput">postgresqlTablesInput</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTables">DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTables</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasOutputReference.property.postgresqlTablesInput">postgresqlTablesInput</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTables">DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTables</a>></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasOutputReference.property.schemaInput">schemaInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasOutputReference.property.schema">schema</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas">DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas">DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas</a></code> | *No description.* |
 
 ---
 
@@ -29642,10 +29578,10 @@ public DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresq
 ##### `postgresqlTablesInput`<sup>Optional</sup> <a name="postgresqlTablesInput" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasOutputReference.property.postgresqlTablesInput"></a>
 
 ```java
-public java.lang.Object getPostgresqlTablesInput();
+public IResolvable|java.util.List<DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTables> getPostgresqlTablesInput();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTables">DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTables</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTables">DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTables</a>>
 
 ---
 
@@ -29672,10 +29608,10 @@ public java.lang.String getSchema();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasOutputReference.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas">DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas</a>
+- *Type:* com.hashicorp.cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas">DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas</a>
 
 ---
 
@@ -29801,7 +29737,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesList.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesList.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTables">DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTables</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTables">DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTables</a>></code> | *No description.* |
 
 ---
 
@@ -29832,10 +29768,10 @@ public java.lang.String getFqn();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesList.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|java.util.List<DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTables> getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTables">DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTables</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTables">DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTables</a>>
 
 ---
 
@@ -30066,12 +30002,12 @@ Returns a reversible string representation.
 ##### `putPostgresqlColumns` <a name="putPostgresqlColumns" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesOutputReference.putPostgresqlColumns"></a>
 
 ```java
-public void putPostgresqlColumns(IResolvable OR java.util.List<DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns> value)
+public void putPostgresqlColumns(IResolvable|java.util.List<DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns> value)
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesOutputReference.putPostgresqlColumns.parameter.value"></a>
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns">DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns">DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns</a>>
 
 ---
 
@@ -30089,10 +30025,10 @@ public void resetPostgresqlColumns()
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesOutputReference.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesOutputReference.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesOutputReference.property.postgresqlColumns">postgresqlColumns</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsList">DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesOutputReference.property.postgresqlColumnsInput">postgresqlColumnsInput</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns">DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesOutputReference.property.postgresqlColumnsInput">postgresqlColumnsInput</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns">DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns</a>></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesOutputReference.property.tableInput">tableInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesOutputReference.property.table">table</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTables">DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTables</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTables">DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTables</a></code> | *No description.* |
 
 ---
 
@@ -30133,10 +30069,10 @@ public DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresq
 ##### `postgresqlColumnsInput`<sup>Optional</sup> <a name="postgresqlColumnsInput" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesOutputReference.property.postgresqlColumnsInput"></a>
 
 ```java
-public java.lang.Object getPostgresqlColumnsInput();
+public IResolvable|java.util.List<DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns> getPostgresqlColumnsInput();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns">DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns">DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns</a>>
 
 ---
 
@@ -30163,10 +30099,10 @@ public java.lang.String getTable();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesOutputReference.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTables getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTables">DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTables</a>
+- *Type:* com.hashicorp.cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTables">DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTables</a>
 
 ---
 
@@ -30292,7 +30228,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsList.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsList.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns">DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns">DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns</a>></code> | *No description.* |
 
 ---
 
@@ -30323,10 +30259,10 @@ public java.lang.String getFqn();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsList.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|java.util.List<DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns> getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns">DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns">DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns</a>>
 
 ---
 
@@ -30599,15 +30535,15 @@ public void resetPrimaryKey()
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.scale">scale</a></code> | <code>java.lang.Number</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.columnInput">columnInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.dataTypeInput">dataTypeInput</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.nullableInput">nullableInput</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.nullableInput">nullableInput</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.ordinalPositionInput">ordinalPositionInput</a></code> | <code>java.lang.Number</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.primaryKeyInput">primaryKeyInput</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.primaryKeyInput">primaryKeyInput</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.column">column</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.dataType">dataType</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.nullable">nullable</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.nullable">nullable</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.ordinalPosition">ordinalPosition</a></code> | <code>java.lang.Number</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.primaryKey">primaryKey</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns">DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.primaryKey">primaryKey</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns">DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns</a></code> | *No description.* |
 
 ---
 
@@ -30688,10 +30624,10 @@ public java.lang.String getDataTypeInput();
 ##### `nullableInput`<sup>Optional</sup> <a name="nullableInput" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.nullableInput"></a>
 
 ```java
-public java.lang.Object getNullableInput();
+public java.lang.Boolean|IResolvable getNullableInput();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
@@ -30708,10 +30644,10 @@ public java.lang.Number getOrdinalPositionInput();
 ##### `primaryKeyInput`<sup>Optional</sup> <a name="primaryKeyInput" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.primaryKeyInput"></a>
 
 ```java
-public java.lang.Object getPrimaryKeyInput();
+public java.lang.Boolean|IResolvable getPrimaryKeyInput();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
@@ -30738,10 +30674,10 @@ public java.lang.String getDataType();
 ##### `nullable`<sup>Required</sup> <a name="nullable" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.nullable"></a>
 
 ```java
-public java.lang.Object getNullable();
+public java.lang.Boolean|IResolvable getNullable();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
@@ -30758,20 +30694,20 @@ public java.lang.Number getOrdinalPosition();
 ##### `primaryKey`<sup>Required</sup> <a name="primaryKey" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.primaryKey"></a>
 
 ```java
-public java.lang.Object getPrimaryKey();
+public java.lang.Boolean|IResolvable getPrimaryKey();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns">DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns</a>
+- *Type:* com.hashicorp.cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns">DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns</a>
 
 ---
 
@@ -30983,12 +30919,12 @@ Returns a reversible string representation.
 ##### `putPostgresqlSchemas` <a name="putPostgresqlSchemas" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsOutputReference.putPostgresqlSchemas"></a>
 
 ```java
-public void putPostgresqlSchemas(IResolvable OR java.util.List<DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas> value)
+public void putPostgresqlSchemas(IResolvable|java.util.List<DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas> value)
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsOutputReference.putPostgresqlSchemas.parameter.value"></a>
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas">DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas">DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas</a>>
 
 ---
 
@@ -31000,7 +30936,7 @@ public void putPostgresqlSchemas(IResolvable OR java.util.List<DatastreamStreamS
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsOutputReference.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsOutputReference.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsOutputReference.property.postgresqlSchemas">postgresqlSchemas</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasList">DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsOutputReference.property.postgresqlSchemasInput">postgresqlSchemasInput</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas">DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsOutputReference.property.postgresqlSchemasInput">postgresqlSchemasInput</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas">DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas</a>></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjects">DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjects</a></code> | *No description.* |
 
 ---
@@ -31042,10 +30978,10 @@ public DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresq
 ##### `postgresqlSchemasInput`<sup>Optional</sup> <a name="postgresqlSchemasInput" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsOutputReference.property.postgresqlSchemasInput"></a>
 
 ```java
-public java.lang.Object getPostgresqlSchemasInput();
+public IResolvable|java.util.List<DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas> getPostgresqlSchemasInput();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas">DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas">DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas</a>>
 
 ---
 
@@ -31181,7 +31117,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasList.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasList.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas">DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas">DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas</a>></code> | *No description.* |
 
 ---
 
@@ -31212,10 +31148,10 @@ public java.lang.String getFqn();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasList.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|java.util.List<DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas> getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas">DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas">DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas</a>>
 
 ---
 
@@ -31446,12 +31382,12 @@ Returns a reversible string representation.
 ##### `putPostgresqlTables` <a name="putPostgresqlTables" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasOutputReference.putPostgresqlTables"></a>
 
 ```java
-public void putPostgresqlTables(IResolvable OR java.util.List<DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTables> value)
+public void putPostgresqlTables(IResolvable|java.util.List<DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTables> value)
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasOutputReference.putPostgresqlTables.parameter.value"></a>
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTables">DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTables</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTables">DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTables</a>>
 
 ---
 
@@ -31469,10 +31405,10 @@ public void resetPostgresqlTables()
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasOutputReference.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasOutputReference.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasOutputReference.property.postgresqlTables">postgresqlTables</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesList">DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasOutputReference.property.postgresqlTablesInput">postgresqlTablesInput</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTables">DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTables</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasOutputReference.property.postgresqlTablesInput">postgresqlTablesInput</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTables">DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTables</a>></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasOutputReference.property.schemaInput">schemaInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasOutputReference.property.schema">schema</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas">DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas">DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas</a></code> | *No description.* |
 
 ---
 
@@ -31513,10 +31449,10 @@ public DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresq
 ##### `postgresqlTablesInput`<sup>Optional</sup> <a name="postgresqlTablesInput" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasOutputReference.property.postgresqlTablesInput"></a>
 
 ```java
-public java.lang.Object getPostgresqlTablesInput();
+public IResolvable|java.util.List<DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTables> getPostgresqlTablesInput();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTables">DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTables</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTables">DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTables</a>>
 
 ---
 
@@ -31543,10 +31479,10 @@ public java.lang.String getSchema();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasOutputReference.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas">DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas</a>
+- *Type:* com.hashicorp.cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas">DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas</a>
 
 ---
 
@@ -31672,7 +31608,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesList.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesList.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTables">DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTables</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTables">DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTables</a>></code> | *No description.* |
 
 ---
 
@@ -31703,10 +31639,10 @@ public java.lang.String getFqn();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesList.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|java.util.List<DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTables> getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTables">DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTables</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTables">DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTables</a>>
 
 ---
 
@@ -31937,12 +31873,12 @@ Returns a reversible string representation.
 ##### `putPostgresqlColumns` <a name="putPostgresqlColumns" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesOutputReference.putPostgresqlColumns"></a>
 
 ```java
-public void putPostgresqlColumns(IResolvable OR java.util.List<DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns> value)
+public void putPostgresqlColumns(IResolvable|java.util.List<DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns> value)
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesOutputReference.putPostgresqlColumns.parameter.value"></a>
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns">DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns">DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns</a>>
 
 ---
 
@@ -31960,10 +31896,10 @@ public void resetPostgresqlColumns()
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesOutputReference.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesOutputReference.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesOutputReference.property.postgresqlColumns">postgresqlColumns</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsList">DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesOutputReference.property.postgresqlColumnsInput">postgresqlColumnsInput</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns">DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesOutputReference.property.postgresqlColumnsInput">postgresqlColumnsInput</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns">DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns</a>></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesOutputReference.property.tableInput">tableInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesOutputReference.property.table">table</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTables">DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTables</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTables">DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTables</a></code> | *No description.* |
 
 ---
 
@@ -32004,10 +31940,10 @@ public DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresq
 ##### `postgresqlColumnsInput`<sup>Optional</sup> <a name="postgresqlColumnsInput" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesOutputReference.property.postgresqlColumnsInput"></a>
 
 ```java
-public java.lang.Object getPostgresqlColumnsInput();
+public IResolvable|java.util.List<DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns> getPostgresqlColumnsInput();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns">DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns">DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns</a>>
 
 ---
 
@@ -32034,10 +31970,10 @@ public java.lang.String getTable();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesOutputReference.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTables getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTables">DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTables</a>
+- *Type:* com.hashicorp.cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTables">DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTables</a>
 
 ---
 
@@ -32163,7 +32099,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsList.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsList.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns">DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns">DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns</a>></code> | *No description.* |
 
 ---
 
@@ -32194,10 +32130,10 @@ public java.lang.String getFqn();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsList.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|java.util.List<DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns> getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns">DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns">DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns</a>>
 
 ---
 
@@ -32470,15 +32406,15 @@ public void resetPrimaryKey()
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.scale">scale</a></code> | <code>java.lang.Number</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.columnInput">columnInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.dataTypeInput">dataTypeInput</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.nullableInput">nullableInput</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.nullableInput">nullableInput</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.ordinalPositionInput">ordinalPositionInput</a></code> | <code>java.lang.Number</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.primaryKeyInput">primaryKeyInput</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.primaryKeyInput">primaryKeyInput</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.column">column</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.dataType">dataType</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.nullable">nullable</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.nullable">nullable</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.ordinalPosition">ordinalPosition</a></code> | <code>java.lang.Number</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.primaryKey">primaryKey</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns">DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.primaryKey">primaryKey</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns">DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns</a></code> | *No description.* |
 
 ---
 
@@ -32559,10 +32495,10 @@ public java.lang.String getDataTypeInput();
 ##### `nullableInput`<sup>Optional</sup> <a name="nullableInput" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.nullableInput"></a>
 
 ```java
-public java.lang.Object getNullableInput();
+public java.lang.Boolean|IResolvable getNullableInput();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
@@ -32579,10 +32515,10 @@ public java.lang.Number getOrdinalPositionInput();
 ##### `primaryKeyInput`<sup>Optional</sup> <a name="primaryKeyInput" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.primaryKeyInput"></a>
 
 ```java
-public java.lang.Object getPrimaryKeyInput();
+public java.lang.Boolean|IResolvable getPrimaryKeyInput();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
@@ -32609,10 +32545,10 @@ public java.lang.String getDataType();
 ##### `nullable`<sup>Required</sup> <a name="nullable" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.nullable"></a>
 
 ```java
-public java.lang.Object getNullable();
+public java.lang.Boolean|IResolvable getNullable();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
@@ -32629,20 +32565,20 @@ public java.lang.Number getOrdinalPosition();
 ##### `primaryKey`<sup>Required</sup> <a name="primaryKey" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.primaryKey"></a>
 
 ```java
-public java.lang.Object getPrimaryKey();
+public java.lang.Boolean|IResolvable getPrimaryKey();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns">DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns</a>
+- *Type:* com.hashicorp.cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns">DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns</a>
 
 ---
 
@@ -33174,7 +33110,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFieldsList.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFieldsList.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFieldsList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFields">DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFields</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFieldsList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFields">DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFields</a>></code> | *No description.* |
 
 ---
 
@@ -33205,10 +33141,10 @@ public java.lang.String getFqn();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFieldsList.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|java.util.List<DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFields> getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFields">DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFields</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFields">DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFields</a>>
 
 ---
 
@@ -33450,7 +33386,7 @@ public void resetName()
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFieldsOutputReference.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFieldsOutputReference.property.nameInput">nameInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFieldsOutputReference.property.name">name</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFieldsOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFields">DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFields</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFieldsOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFields">DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFields</a></code> | *No description.* |
 
 ---
 
@@ -33501,10 +33437,10 @@ public java.lang.String getName();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFieldsOutputReference.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFields getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFields">DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFields</a>
+- *Type:* com.hashicorp.cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFields">DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFields</a>
 
 ---
 
@@ -33630,7 +33566,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsList.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsList.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjects">DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjects</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjects">DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjects</a>></code> | *No description.* |
 
 ---
 
@@ -33661,10 +33597,10 @@ public java.lang.String getFqn();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsList.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|java.util.List<DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjects> getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjects">DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjects</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjects">DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjects</a>>
 
 ---
 
@@ -33896,12 +33832,12 @@ Returns a reversible string representation.
 ##### `putFields` <a name="putFields" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsOutputReference.putFields"></a>
 
 ```java
-public void putFields(IResolvable OR java.util.List<DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFields> value)
+public void putFields(IResolvable|java.util.List<DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFields> value)
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsOutputReference.putFields.parameter.value"></a>
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFields">DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFields</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFields">DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFields</a>>
 
 ---
 
@@ -33925,10 +33861,10 @@ public void resetObjectName()
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsOutputReference.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsOutputReference.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsOutputReference.property.fields">fields</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFieldsList">DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFieldsList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsOutputReference.property.fieldsInput">fieldsInput</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFields">DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFields</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsOutputReference.property.fieldsInput">fieldsInput</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFields">DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFields</a>></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsOutputReference.property.objectNameInput">objectNameInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsOutputReference.property.objectName">objectName</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjects">DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjects</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjects">DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjects</a></code> | *No description.* |
 
 ---
 
@@ -33969,10 +33905,10 @@ public DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFi
 ##### `fieldsInput`<sup>Optional</sup> <a name="fieldsInput" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsOutputReference.property.fieldsInput"></a>
 
 ```java
-public java.lang.Object getFieldsInput();
+public IResolvable|java.util.List<DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFields> getFieldsInput();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFields">DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFields</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFields">DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsFields</a>>
 
 ---
 
@@ -33999,10 +33935,10 @@ public java.lang.String getObjectName();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsOutputReference.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjects getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjects">DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjects</a>
+- *Type:* com.hashicorp.cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjects">DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjects</a>
 
 ---
 
@@ -34214,12 +34150,12 @@ Returns a reversible string representation.
 ##### `putObjects` <a name="putObjects" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsOutputReference.putObjects"></a>
 
 ```java
-public void putObjects(IResolvable OR java.util.List<DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjects> value)
+public void putObjects(IResolvable|java.util.List<DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjects> value)
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsOutputReference.putObjects.parameter.value"></a>
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjects">DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjects</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjects">DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjects</a>>
 
 ---
 
@@ -34231,7 +34167,7 @@ public void putObjects(IResolvable OR java.util.List<DatastreamStreamSourceConfi
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsOutputReference.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsOutputReference.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsOutputReference.property.objects">objects</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsList">DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsOutputReference.property.objectsInput">objectsInput</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjects">DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjects</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsOutputReference.property.objectsInput">objectsInput</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjects">DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjects</a>></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjects">DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjects</a></code> | *No description.* |
 
 ---
@@ -34273,10 +34209,10 @@ public DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjectsLi
 ##### `objectsInput`<sup>Optional</sup> <a name="objectsInput" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsOutputReference.property.objectsInput"></a>
 
 ```java
-public java.lang.Object getObjectsInput();
+public IResolvable|java.util.List<DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjects> getObjectsInput();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjects">DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjects</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjects">DatastreamStreamSourceConfigSalesforceSourceConfigExcludeObjectsObjects</a>>
 
 ---
 
@@ -34412,7 +34348,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFieldsList.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFieldsList.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFieldsList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFields">DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFields</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFieldsList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFields">DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFields</a>></code> | *No description.* |
 
 ---
 
@@ -34443,10 +34379,10 @@ public java.lang.String getFqn();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFieldsList.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|java.util.List<DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFields> getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFields">DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFields</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFields">DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFields</a>>
 
 ---
 
@@ -34688,7 +34624,7 @@ public void resetName()
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFieldsOutputReference.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFieldsOutputReference.property.nameInput">nameInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFieldsOutputReference.property.name">name</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFieldsOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFields">DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFields</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFieldsOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFields">DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFields</a></code> | *No description.* |
 
 ---
 
@@ -34739,10 +34675,10 @@ public java.lang.String getName();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFieldsOutputReference.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFields getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFields">DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFields</a>
+- *Type:* com.hashicorp.cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFields">DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFields</a>
 
 ---
 
@@ -34868,7 +34804,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsList.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsList.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjects">DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjects</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjects">DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjects</a>></code> | *No description.* |
 
 ---
 
@@ -34899,10 +34835,10 @@ public java.lang.String getFqn();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsList.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|java.util.List<DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjects> getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjects">DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjects</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjects">DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjects</a>>
 
 ---
 
@@ -35134,12 +35070,12 @@ Returns a reversible string representation.
 ##### `putFields` <a name="putFields" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsOutputReference.putFields"></a>
 
 ```java
-public void putFields(IResolvable OR java.util.List<DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFields> value)
+public void putFields(IResolvable|java.util.List<DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFields> value)
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsOutputReference.putFields.parameter.value"></a>
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFields">DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFields</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFields">DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFields</a>>
 
 ---
 
@@ -35163,10 +35099,10 @@ public void resetObjectName()
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsOutputReference.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsOutputReference.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsOutputReference.property.fields">fields</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFieldsList">DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFieldsList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsOutputReference.property.fieldsInput">fieldsInput</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFields">DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFields</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsOutputReference.property.fieldsInput">fieldsInput</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFields">DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFields</a>></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsOutputReference.property.objectNameInput">objectNameInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsOutputReference.property.objectName">objectName</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjects">DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjects</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjects">DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjects</a></code> | *No description.* |
 
 ---
 
@@ -35207,10 +35143,10 @@ public DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFi
 ##### `fieldsInput`<sup>Optional</sup> <a name="fieldsInput" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsOutputReference.property.fieldsInput"></a>
 
 ```java
-public java.lang.Object getFieldsInput();
+public IResolvable|java.util.List<DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFields> getFieldsInput();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFields">DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFields</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFields">DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsFields</a>>
 
 ---
 
@@ -35237,10 +35173,10 @@ public java.lang.String getObjectName();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsOutputReference.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjects getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjects">DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjects</a>
+- *Type:* com.hashicorp.cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjects">DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjects</a>
 
 ---
 
@@ -35452,12 +35388,12 @@ Returns a reversible string representation.
 ##### `putObjects` <a name="putObjects" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsOutputReference.putObjects"></a>
 
 ```java
-public void putObjects(IResolvable OR java.util.List<DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjects> value)
+public void putObjects(IResolvable|java.util.List<DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjects> value)
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsOutputReference.putObjects.parameter.value"></a>
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjects">DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjects</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjects">DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjects</a>>
 
 ---
 
@@ -35469,7 +35405,7 @@ public void putObjects(IResolvable OR java.util.List<DatastreamStreamSourceConfi
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsOutputReference.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsOutputReference.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsOutputReference.property.objects">objects</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsList">DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsOutputReference.property.objectsInput">objectsInput</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjects">DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjects</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsOutputReference.property.objectsInput">objectsInput</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjects">DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjects</a>></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjects">DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjects</a></code> | *No description.* |
 
 ---
@@ -35511,10 +35447,10 @@ public DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjectsLi
 ##### `objectsInput`<sup>Optional</sup> <a name="objectsInput" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsOutputReference.property.objectsInput"></a>
 
 ```java
-public java.lang.Object getObjectsInput();
+public IResolvable|java.util.List<DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjects> getObjectsInput();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjects">DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjects</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjects">DatastreamStreamSourceConfigSalesforceSourceConfigIncludeObjectsObjects</a>>
 
 ---
 
@@ -36340,12 +36276,12 @@ Returns a reversible string representation.
 ##### `putSchemas` <a name="putSchemas" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsOutputReference.putSchemas"></a>
 
 ```java
-public void putSchemas(IResolvable OR java.util.List<DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemas> value)
+public void putSchemas(IResolvable|java.util.List<DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemas> value)
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsOutputReference.putSchemas.parameter.value"></a>
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemas">DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemas</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemas">DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemas</a>>
 
 ---
 
@@ -36357,7 +36293,7 @@ public void putSchemas(IResolvable OR java.util.List<DatastreamStreamSourceConfi
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsOutputReference.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsOutputReference.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsOutputReference.property.schemas">schemas</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasList">DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsOutputReference.property.schemasInput">schemasInput</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemas">DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemas</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsOutputReference.property.schemasInput">schemasInput</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemas">DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemas</a>></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjects">DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjects</a></code> | *No description.* |
 
 ---
@@ -36399,10 +36335,10 @@ public DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasLis
 ##### `schemasInput`<sup>Optional</sup> <a name="schemasInput" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsOutputReference.property.schemasInput"></a>
 
 ```java
-public java.lang.Object getSchemasInput();
+public IResolvable|java.util.List<DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemas> getSchemasInput();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemas">DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemas</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemas">DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemas</a>>
 
 ---
 
@@ -36538,7 +36474,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasList.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasList.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemas">DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemas</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemas">DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemas</a>></code> | *No description.* |
 
 ---
 
@@ -36569,10 +36505,10 @@ public java.lang.String getFqn();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasList.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|java.util.List<DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemas> getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemas">DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemas</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemas">DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemas</a>>
 
 ---
 
@@ -36803,12 +36739,12 @@ Returns a reversible string representation.
 ##### `putTables` <a name="putTables" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasOutputReference.putTables"></a>
 
 ```java
-public void putTables(IResolvable OR java.util.List<DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTables> value)
+public void putTables(IResolvable|java.util.List<DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTables> value)
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasOutputReference.putTables.parameter.value"></a>
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTables">DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTables</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTables">DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTables</a>>
 
 ---
 
@@ -36827,9 +36763,9 @@ public void resetTables()
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasOutputReference.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasOutputReference.property.tables">tables</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesList">DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasOutputReference.property.schemaInput">schemaInput</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasOutputReference.property.tablesInput">tablesInput</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTables">DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTables</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasOutputReference.property.tablesInput">tablesInput</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTables">DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTables</a>></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasOutputReference.property.schema">schema</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemas">DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemas</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemas">DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemas</a></code> | *No description.* |
 
 ---
 
@@ -36880,10 +36816,10 @@ public java.lang.String getSchemaInput();
 ##### `tablesInput`<sup>Optional</sup> <a name="tablesInput" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasOutputReference.property.tablesInput"></a>
 
 ```java
-public java.lang.Object getTablesInput();
+public IResolvable|java.util.List<DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTables> getTablesInput();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTables">DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTables</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTables">DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTables</a>>
 
 ---
 
@@ -36900,10 +36836,10 @@ public java.lang.String getSchema();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasOutputReference.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemas getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemas">DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemas</a>
+- *Type:* com.hashicorp.cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemas">DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemas</a>
 
 ---
 
@@ -37029,7 +36965,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumnsList.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumnsList.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumnsList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumns">DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumns</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumnsList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumns">DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumns</a>></code> | *No description.* |
 
 ---
 
@@ -37060,10 +36996,10 @@ public java.lang.String getFqn();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumnsList.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|java.util.List<DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumns> getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumns">DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumns</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumns">DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumns</a>>
 
 ---
 
@@ -37320,7 +37256,7 @@ public void resetDataType()
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumnsOutputReference.property.dataTypeInput">dataTypeInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumnsOutputReference.property.column">column</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumnsOutputReference.property.dataType">dataType</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumnsOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumns">DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumns</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumnsOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumns">DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumns</a></code> | *No description.* |
 
 ---
 
@@ -37451,10 +37387,10 @@ public java.lang.String getDataType();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumnsOutputReference.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumns getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumns">DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumns</a>
+- *Type:* com.hashicorp.cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumns">DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumns</a>
 
 ---
 
@@ -37580,7 +37516,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesList.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesList.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTables">DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTables</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTables">DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTables</a>></code> | *No description.* |
 
 ---
 
@@ -37611,10 +37547,10 @@ public java.lang.String getFqn();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesList.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|java.util.List<DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTables> getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTables">DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTables</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTables">DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTables</a>>
 
 ---
 
@@ -37845,12 +37781,12 @@ Returns a reversible string representation.
 ##### `putColumns` <a name="putColumns" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesOutputReference.putColumns"></a>
 
 ```java
-public void putColumns(IResolvable OR java.util.List<DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumns> value)
+public void putColumns(IResolvable|java.util.List<DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumns> value)
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesOutputReference.putColumns.parameter.value"></a>
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumns">DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumns</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumns">DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumns</a>>
 
 ---
 
@@ -37868,10 +37804,10 @@ public void resetColumns()
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesOutputReference.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesOutputReference.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesOutputReference.property.columns">columns</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumnsList">DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumnsList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesOutputReference.property.columnsInput">columnsInput</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumns">DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumns</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesOutputReference.property.columnsInput">columnsInput</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumns">DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumns</a>></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesOutputReference.property.tableInput">tableInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesOutputReference.property.table">table</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTables">DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTables</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTables">DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTables</a></code> | *No description.* |
 
 ---
 
@@ -37912,10 +37848,10 @@ public DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTab
 ##### `columnsInput`<sup>Optional</sup> <a name="columnsInput" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesOutputReference.property.columnsInput"></a>
 
 ```java
-public java.lang.Object getColumnsInput();
+public IResolvable|java.util.List<DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumns> getColumnsInput();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumns">DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumns</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumns">DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumns</a>>
 
 ---
 
@@ -37942,10 +37878,10 @@ public java.lang.String getTable();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesOutputReference.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTables getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTables">DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTables</a>
+- *Type:* com.hashicorp.cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTables">DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTables</a>
 
 ---
 
@@ -38157,12 +38093,12 @@ Returns a reversible string representation.
 ##### `putSchemas` <a name="putSchemas" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsOutputReference.putSchemas"></a>
 
 ```java
-public void putSchemas(IResolvable OR java.util.List<DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemas> value)
+public void putSchemas(IResolvable|java.util.List<DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemas> value)
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsOutputReference.putSchemas.parameter.value"></a>
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemas">DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemas</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemas">DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemas</a>>
 
 ---
 
@@ -38174,7 +38110,7 @@ public void putSchemas(IResolvable OR java.util.List<DatastreamStreamSourceConfi
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsOutputReference.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsOutputReference.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsOutputReference.property.schemas">schemas</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasList">DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsOutputReference.property.schemasInput">schemasInput</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemas">DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemas</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsOutputReference.property.schemasInput">schemasInput</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemas">DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemas</a>></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjects">DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjects</a></code> | *No description.* |
 
 ---
@@ -38216,10 +38152,10 @@ public DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasLis
 ##### `schemasInput`<sup>Optional</sup> <a name="schemasInput" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsOutputReference.property.schemasInput"></a>
 
 ```java
-public java.lang.Object getSchemasInput();
+public IResolvable|java.util.List<DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemas> getSchemasInput();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemas">DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemas</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemas">DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemas</a>>
 
 ---
 
@@ -38355,7 +38291,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasList.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasList.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemas">DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemas</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemas">DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemas</a>></code> | *No description.* |
 
 ---
 
@@ -38386,10 +38322,10 @@ public java.lang.String getFqn();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasList.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|java.util.List<DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemas> getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemas">DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemas</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemas">DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemas</a>>
 
 ---
 
@@ -38620,12 +38556,12 @@ Returns a reversible string representation.
 ##### `putTables` <a name="putTables" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasOutputReference.putTables"></a>
 
 ```java
-public void putTables(IResolvable OR java.util.List<DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTables> value)
+public void putTables(IResolvable|java.util.List<DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTables> value)
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasOutputReference.putTables.parameter.value"></a>
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTables">DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTables</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTables">DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTables</a>>
 
 ---
 
@@ -38644,9 +38580,9 @@ public void resetTables()
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasOutputReference.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasOutputReference.property.tables">tables</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesList">DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasOutputReference.property.schemaInput">schemaInput</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasOutputReference.property.tablesInput">tablesInput</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTables">DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTables</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasOutputReference.property.tablesInput">tablesInput</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTables">DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTables</a>></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasOutputReference.property.schema">schema</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemas">DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemas</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemas">DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemas</a></code> | *No description.* |
 
 ---
 
@@ -38697,10 +38633,10 @@ public java.lang.String getSchemaInput();
 ##### `tablesInput`<sup>Optional</sup> <a name="tablesInput" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasOutputReference.property.tablesInput"></a>
 
 ```java
-public java.lang.Object getTablesInput();
+public IResolvable|java.util.List<DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTables> getTablesInput();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTables">DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTables</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTables">DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTables</a>>
 
 ---
 
@@ -38717,10 +38653,10 @@ public java.lang.String getSchema();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasOutputReference.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemas getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemas">DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemas</a>
+- *Type:* com.hashicorp.cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemas">DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemas</a>
 
 ---
 
@@ -38846,7 +38782,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumnsList.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumnsList.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumnsList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumns">DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumns</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumnsList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumns">DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumns</a>></code> | *No description.* |
 
 ---
 
@@ -38877,10 +38813,10 @@ public java.lang.String getFqn();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumnsList.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|java.util.List<DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumns> getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumns">DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumns</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumns">DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumns</a>>
 
 ---
 
@@ -39137,7 +39073,7 @@ public void resetDataType()
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumnsOutputReference.property.dataTypeInput">dataTypeInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumnsOutputReference.property.column">column</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumnsOutputReference.property.dataType">dataType</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumnsOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumns">DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumns</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumnsOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumns">DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumns</a></code> | *No description.* |
 
 ---
 
@@ -39268,10 +39204,10 @@ public java.lang.String getDataType();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumnsOutputReference.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumns getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumns">DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumns</a>
+- *Type:* com.hashicorp.cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumns">DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumns</a>
 
 ---
 
@@ -39397,7 +39333,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesList.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesList.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTables">DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTables</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTables">DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTables</a>></code> | *No description.* |
 
 ---
 
@@ -39428,10 +39364,10 @@ public java.lang.String getFqn();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesList.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|java.util.List<DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTables> getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTables">DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTables</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTables">DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTables</a>>
 
 ---
 
@@ -39662,12 +39598,12 @@ Returns a reversible string representation.
 ##### `putColumns` <a name="putColumns" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesOutputReference.putColumns"></a>
 
 ```java
-public void putColumns(IResolvable OR java.util.List<DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumns> value)
+public void putColumns(IResolvable|java.util.List<DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumns> value)
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesOutputReference.putColumns.parameter.value"></a>
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumns">DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumns</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumns">DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumns</a>>
 
 ---
 
@@ -39685,10 +39621,10 @@ public void resetColumns()
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesOutputReference.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesOutputReference.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesOutputReference.property.columns">columns</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumnsList">DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumnsList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesOutputReference.property.columnsInput">columnsInput</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumns">DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumns</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesOutputReference.property.columnsInput">columnsInput</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumns">DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumns</a>></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesOutputReference.property.tableInput">tableInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesOutputReference.property.table">table</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTables">DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTables</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTables">DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTables</a></code> | *No description.* |
 
 ---
 
@@ -39729,10 +39665,10 @@ public DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTab
 ##### `columnsInput`<sup>Optional</sup> <a name="columnsInput" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesOutputReference.property.columnsInput"></a>
 
 ```java
-public java.lang.Object getColumnsInput();
+public IResolvable|java.util.List<DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumns> getColumnsInput();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumns">DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumns</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumns">DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumns</a>>
 
 ---
 
@@ -39759,10 +39695,10 @@ public java.lang.String getTable();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesOutputReference.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTables getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTables">DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTables</a>
+- *Type:* com.hashicorp.cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTables">DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTables</a>
 
 ---
 
@@ -40728,7 +40664,7 @@ public void resetUpdate()
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamTimeoutsOutputReference.property.create">create</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamTimeoutsOutputReference.property.delete">delete</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamTimeoutsOutputReference.property.update">update</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamTimeouts">DatastreamStreamTimeouts</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamTimeouts">DatastreamStreamTimeouts</a></code> | *No description.* |
 
 ---
 
@@ -40819,10 +40755,10 @@ public java.lang.String getUpdate();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.datastreamStream.DatastreamStreamTimeoutsOutputReference.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|DatastreamStreamTimeouts getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamTimeouts">DatastreamStreamTimeouts</a>
+- *Type:* com.hashicorp.cdktf.IResolvable|<a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamTimeouts">DatastreamStreamTimeouts</a>
 
 ---
 

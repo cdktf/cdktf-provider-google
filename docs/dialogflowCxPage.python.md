@@ -14,17 +14,17 @@ from cdktf_cdktf_provider_google import dialogflow_cx_page
 dialogflowCxPage.DialogflowCxPage(
   scope: Construct,
   id: str,
-  connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection] = None,
-  count: typing.Union[typing.Union[int, float], TerraformCount] = None,
+  connection: SSHProvisionerConnection | WinrmProvisionerConnection = None,
+  count: typing.Union[int, float] | TerraformCount = None,
   depends_on: typing.List[ITerraformDependable] = None,
   for_each: ITerraformIterator = None,
   lifecycle: TerraformResourceLifecycle = None,
   provider: TerraformProvider = None,
-  provisioners: typing.List[typing.Union[FileProvisioner, LocalExecProvisioner, RemoteExecProvisioner]] = None,
+  provisioners: typing.List[FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner] = None,
   display_name: str,
   advanced_settings: DialogflowCxPageAdvancedSettings = None,
   entry_fulfillment: DialogflowCxPageEntryFulfillment = None,
-  event_handlers: typing.Union[IResolvable, typing.List[DialogflowCxPageEventHandlers]] = None,
+  event_handlers: IResolvable | typing.List[DialogflowCxPageEventHandlers] = None,
   form: DialogflowCxPageForm = None,
   id: str = None,
   knowledge_connector_settings: DialogflowCxPageKnowledgeConnectorSettings = None,
@@ -32,7 +32,7 @@ dialogflowCxPage.DialogflowCxPage(
   parent: str = None,
   timeouts: DialogflowCxPageTimeouts = None,
   transition_route_groups: typing.List[str] = None,
-  transition_routes: typing.Union[IResolvable, typing.List[DialogflowCxPageTransitionRoutes]] = None
+  transition_routes: IResolvable | typing.List[DialogflowCxPageTransitionRoutes] = None
 )
 ```
 
@@ -40,17 +40,17 @@ dialogflowCxPage.DialogflowCxPage(
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPage.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | The scope in which to define this construct. |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPage.Initializer.parameter.id">id</a></code> | <code>str</code> | The scoped construct ID. |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPage.Initializer.parameter.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPage.Initializer.parameter.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPage.Initializer.parameter.connection">connection</a></code> | <code>cdktf.SSHProvisionerConnection \| cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPage.Initializer.parameter.count">count</a></code> | <code>typing.Union[int, float] \| cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPage.Initializer.parameter.dependsOn">depends_on</a></code> | <code>typing.List[cdktf.ITerraformDependable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPage.Initializer.parameter.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPage.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPage.Initializer.parameter.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPage.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPage.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPage.Initializer.parameter.displayName">display_name</a></code> | <code>str</code> | The human-readable name of the page, unique within the agent. |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPage.Initializer.parameter.advancedSettings">advanced_settings</a></code> | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageAdvancedSettings">DialogflowCxPageAdvancedSettings</a></code> | advanced_settings block. |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPage.Initializer.parameter.entryFulfillment">entry_fulfillment</a></code> | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillment">DialogflowCxPageEntryFulfillment</a></code> | entry_fulfillment block. |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPage.Initializer.parameter.eventHandlers">event_handlers</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlers">DialogflowCxPageEventHandlers</a>]]</code> | event_handlers block. |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPage.Initializer.parameter.eventHandlers">event_handlers</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlers">DialogflowCxPageEventHandlers</a>]</code> | event_handlers block. |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPage.Initializer.parameter.form">form</a></code> | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageForm">DialogflowCxPageForm</a></code> | form block. |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPage.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/dialogflow_cx_page#id DialogflowCxPage#id}. |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPage.Initializer.parameter.knowledgeConnectorSettings">knowledge_connector_settings</a></code> | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettings">DialogflowCxPageKnowledgeConnectorSettings</a></code> | knowledge_connector_settings block. |
@@ -58,7 +58,7 @@ dialogflowCxPage.DialogflowCxPage(
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPage.Initializer.parameter.parent">parent</a></code> | <code>str</code> | The flow to create a page for. Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/flows/<Flow ID>. |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPage.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTimeouts">DialogflowCxPageTimeouts</a></code> | timeouts block. |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPage.Initializer.parameter.transitionRouteGroups">transition_route_groups</a></code> | <code>typing.List[str]</code> | Ordered list of TransitionRouteGroups associated with the page. |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPage.Initializer.parameter.transitionRoutes">transition_routes</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutes">DialogflowCxPageTransitionRoutes</a>]]</code> | transition_routes block. |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPage.Initializer.parameter.transitionRoutes">transition_routes</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutes">DialogflowCxPageTransitionRoutes</a>]</code> | transition_routes block. |
 
 ---
 
@@ -82,13 +82,13 @@ Must be unique amongst siblings in the same scope
 
 ##### `connection`<sup>Optional</sup> <a name="connection" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPage.Initializer.parameter.connection"></a>
 
-- *Type:* typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]
+- *Type:* cdktf.SSHProvisionerConnection | cdktf.WinrmProvisionerConnection
 
 ---
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPage.Initializer.parameter.count"></a>
 
-- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
+- *Type:* typing.Union[int, float] | cdktf.TerraformCount
 
 ---
 
@@ -118,7 +118,7 @@ Must be unique amongst siblings in the same scope
 
 ##### `provisioners`<sup>Optional</sup> <a name="provisioners" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPage.Initializer.parameter.provisioners"></a>
 
-- *Type:* typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]
+- *Type:* typing.List[cdktf.FileProvisioner | cdktf.LocalExecProvisioner | cdktf.RemoteExecProvisioner]
 
 ---
 
@@ -154,7 +154,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `event_handlers`<sup>Optional</sup> <a name="event_handlers" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPage.Initializer.parameter.eventHandlers"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlers">DialogflowCxPageEventHandlers</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlers">DialogflowCxPageEventHandlers</a>]
 
 event_handlers block.
 
@@ -252,7 +252,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `transition_routes`<sup>Optional</sup> <a name="transition_routes" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPage.Initializer.parameter.transitionRoutes"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutes">DialogflowCxPageTransitionRoutes</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutes">DialogflowCxPageTransitionRoutes</a>]
 
 transition_routes block.
 
@@ -530,7 +530,7 @@ def get_string_map_attribute(
 ##### `has_resource_move` <a name="has_resource_move" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPage.hasResourceMove"></a>
 
 ```python
-def has_resource_move() -> typing.Union[TerraformResourceMoveByTarget, TerraformResourceMoveById]
+def has_resource_move() -> TerraformResourceMoveByTarget | TerraformResourceMoveById
 ```
 
 ##### `import_from` <a name="import_from" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPage.importFrom"></a>
@@ -593,7 +593,7 @@ Full id of resource being moved from, e.g. "aws_s3_bucket.example".
 ```python
 def move_to(
   move_target: str,
-  index: typing.Union[str, typing.Union[int, float]] = None
+  index: str | typing.Union[int, float] = None
 ) -> None
 ```
 
@@ -609,7 +609,7 @@ The previously set user defined string set by .addMoveTarget() corresponding to 
 
 ###### `index`<sup>Optional</sup> <a name="index" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPage.moveTo.parameter.index"></a>
 
-- *Type:* typing.Union[str, typing.Union[int, float]]
+- *Type:* str | typing.Union[int, float]
 
 Optional The index corresponding to the key the resource is to appear in the foreach of a resource to move to.
 
@@ -655,10 +655,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ```python
 def put_entry_fulfillment(
-  conditional_cases: typing.Union[IResolvable, typing.List[DialogflowCxPageEntryFulfillmentConditionalCases]] = None,
-  messages: typing.Union[IResolvable, typing.List[DialogflowCxPageEntryFulfillmentMessages]] = None,
-  return_partial_responses: typing.Union[bool, IResolvable] = None,
-  set_parameter_actions: typing.Union[IResolvable, typing.List[DialogflowCxPageEntryFulfillmentSetParameterActions]] = None,
+  conditional_cases: IResolvable | typing.List[DialogflowCxPageEntryFulfillmentConditionalCases] = None,
+  messages: IResolvable | typing.List[DialogflowCxPageEntryFulfillmentMessages] = None,
+  return_partial_responses: bool | IResolvable = None,
+  set_parameter_actions: IResolvable | typing.List[DialogflowCxPageEntryFulfillmentSetParameterActions] = None,
   tag: str = None,
   webhook: str = None
 ) -> None
@@ -666,7 +666,7 @@ def put_entry_fulfillment(
 
 ###### `conditional_cases`<sup>Optional</sup> <a name="conditional_cases" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPage.putEntryFulfillment.parameter.conditionalCases"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillmentConditionalCases">DialogflowCxPageEntryFulfillmentConditionalCases</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillmentConditionalCases">DialogflowCxPageEntryFulfillmentConditionalCases</a>]
 
 conditional_cases block.
 
@@ -676,7 +676,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `messages`<sup>Optional</sup> <a name="messages" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPage.putEntryFulfillment.parameter.messages"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillmentMessages">DialogflowCxPageEntryFulfillmentMessages</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillmentMessages">DialogflowCxPageEntryFulfillmentMessages</a>]
 
 messages block.
 
@@ -686,7 +686,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `return_partial_responses`<sup>Optional</sup> <a name="return_partial_responses" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPage.putEntryFulfillment.parameter.returnPartialResponses"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Whether Dialogflow should return currently queued fulfillment response messages in streaming APIs.
 
@@ -698,7 +698,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `set_parameter_actions`<sup>Optional</sup> <a name="set_parameter_actions" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPage.putEntryFulfillment.parameter.setParameterActions"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillmentSetParameterActions">DialogflowCxPageEntryFulfillmentSetParameterActions</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillmentSetParameterActions">DialogflowCxPageEntryFulfillmentSetParameterActions</a>]
 
 set_parameter_actions block.
 
@@ -732,13 +732,13 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ```python
 def put_event_handlers(
-  value: typing.Union[IResolvable, typing.List[DialogflowCxPageEventHandlers]]
+  value: IResolvable | typing.List[DialogflowCxPageEventHandlers]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPage.putEventHandlers.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlers">DialogflowCxPageEventHandlers</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlers">DialogflowCxPageEventHandlers</a>]
 
 ---
 
@@ -746,13 +746,13 @@ def put_event_handlers(
 
 ```python
 def put_form(
-  parameters: typing.Union[IResolvable, typing.List[DialogflowCxPageFormParameters]] = None
+  parameters: IResolvable | typing.List[DialogflowCxPageFormParameters] = None
 ) -> None
 ```
 
 ###### `parameters`<sup>Optional</sup> <a name="parameters" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPage.putForm.parameter.parameters"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParameters">DialogflowCxPageFormParameters</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParameters">DialogflowCxPageFormParameters</a>]
 
 parameters block.
 
@@ -764,8 +764,8 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ```python
 def put_knowledge_connector_settings(
-  data_store_connections: typing.Union[IResolvable, typing.List[DialogflowCxPageKnowledgeConnectorSettingsDataStoreConnections]] = None,
-  enabled: typing.Union[bool, IResolvable] = None,
+  data_store_connections: IResolvable | typing.List[DialogflowCxPageKnowledgeConnectorSettingsDataStoreConnections] = None,
+  enabled: bool | IResolvable = None,
   target_flow: str = None,
   target_page: str = None,
   trigger_fulfillment: DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillment = None
@@ -774,7 +774,7 @@ def put_knowledge_connector_settings(
 
 ###### `data_store_connections`<sup>Optional</sup> <a name="data_store_connections" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPage.putKnowledgeConnectorSettings.parameter.dataStoreConnections"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsDataStoreConnections">DialogflowCxPageKnowledgeConnectorSettingsDataStoreConnections</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsDataStoreConnections">DialogflowCxPageKnowledgeConnectorSettingsDataStoreConnections</a>]
 
 data_store_connections block.
 
@@ -784,7 +784,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `enabled`<sup>Optional</sup> <a name="enabled" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPage.putKnowledgeConnectorSettings.parameter.enabled"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Whether Knowledge Connector is enabled or not.
 
@@ -867,13 +867,13 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ```python
 def put_transition_routes(
-  value: typing.Union[IResolvable, typing.List[DialogflowCxPageTransitionRoutes]]
+  value: IResolvable | typing.List[DialogflowCxPageTransitionRoutes]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPage.putTransitionRoutes.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutes">DialogflowCxPageTransitionRoutes</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutes">DialogflowCxPageTransitionRoutes</a>]
 
 ---
 
@@ -1080,13 +1080,13 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.5
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPage.property.terraformMetaArguments">terraform_meta_arguments</a></code> | <code>typing.Mapping[typing.Any]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPage.property.terraformResourceType">terraform_resource_type</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPage.property.terraformGeneratorMetadata">terraform_generator_metadata</a></code> | <code>cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPage.property.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPage.property.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPage.property.connection">connection</a></code> | <code>cdktf.SSHProvisionerConnection \| cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPage.property.count">count</a></code> | <code>typing.Union[int, float] \| cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPage.property.dependsOn">depends_on</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPage.property.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPage.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPage.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPage.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPage.property.provisioners">provisioners</a></code> | <code>typing.List[cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPage.property.advancedSettings">advanced_settings</a></code> | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageAdvancedSettingsOutputReference">DialogflowCxPageAdvancedSettingsOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPage.property.entryFulfillment">entry_fulfillment</a></code> | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillmentOutputReference">DialogflowCxPageEntryFulfillmentOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPage.property.eventHandlers">event_handlers</a></code> | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersList">DialogflowCxPageEventHandlersList</a></code> | *No description.* |
@@ -1098,15 +1098,15 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.5
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPage.property.advancedSettingsInput">advanced_settings_input</a></code> | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageAdvancedSettings">DialogflowCxPageAdvancedSettings</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPage.property.displayNameInput">display_name_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPage.property.entryFulfillmentInput">entry_fulfillment_input</a></code> | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillment">DialogflowCxPageEntryFulfillment</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPage.property.eventHandlersInput">event_handlers_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlers">DialogflowCxPageEventHandlers</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPage.property.eventHandlersInput">event_handlers_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlers">DialogflowCxPageEventHandlers</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPage.property.formInput">form_input</a></code> | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageForm">DialogflowCxPageForm</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPage.property.idInput">id_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPage.property.knowledgeConnectorSettingsInput">knowledge_connector_settings_input</a></code> | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettings">DialogflowCxPageKnowledgeConnectorSettings</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPage.property.languageCodeInput">language_code_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPage.property.parentInput">parent_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPage.property.timeoutsInput">timeouts_input</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTimeouts">DialogflowCxPageTimeouts</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPage.property.timeoutsInput">timeouts_input</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTimeouts">DialogflowCxPageTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPage.property.transitionRouteGroupsInput">transition_route_groups_input</a></code> | <code>typing.List[str]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPage.property.transitionRoutesInput">transition_routes_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutes">DialogflowCxPageTransitionRoutes</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPage.property.transitionRoutesInput">transition_routes_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutes">DialogflowCxPageTransitionRoutes</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPage.property.displayName">display_name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPage.property.id">id</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPage.property.languageCode">language_code</a></code> | <code>str</code> | *No description.* |
@@ -1190,20 +1190,20 @@ terraform_generator_metadata: TerraformProviderGeneratorMetadata
 ##### `connection`<sup>Optional</sup> <a name="connection" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPage.property.connection"></a>
 
 ```python
-connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection]
+connection: SSHProvisionerConnection | WinrmProvisionerConnection
 ```
 
-- *Type:* typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]
+- *Type:* cdktf.SSHProvisionerConnection | cdktf.WinrmProvisionerConnection
 
 ---
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPage.property.count"></a>
 
 ```python
-count: typing.Union[typing.Union[int, float], TerraformCount]
+count: typing.Union[int, float] | TerraformCount
 ```
 
-- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
+- *Type:* typing.Union[int, float] | cdktf.TerraformCount
 
 ---
 
@@ -1250,10 +1250,10 @@ provider: TerraformProvider
 ##### `provisioners`<sup>Optional</sup> <a name="provisioners" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPage.property.provisioners"></a>
 
 ```python
-provisioners: typing.List[typing.Union[FileProvisioner, LocalExecProvisioner, RemoteExecProvisioner]]
+provisioners: typing.List[FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner]
 ```
 
-- *Type:* typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]
+- *Type:* typing.List[cdktf.FileProvisioner | cdktf.LocalExecProvisioner | cdktf.RemoteExecProvisioner]
 
 ---
 
@@ -1370,10 +1370,10 @@ entry_fulfillment_input: DialogflowCxPageEntryFulfillment
 ##### `event_handlers_input`<sup>Optional</sup> <a name="event_handlers_input" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPage.property.eventHandlersInput"></a>
 
 ```python
-event_handlers_input: typing.Union[IResolvable, typing.List[DialogflowCxPageEventHandlers]]
+event_handlers_input: IResolvable | typing.List[DialogflowCxPageEventHandlers]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlers">DialogflowCxPageEventHandlers</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlers">DialogflowCxPageEventHandlers</a>]
 
 ---
 
@@ -1430,10 +1430,10 @@ parent_input: str
 ##### `timeouts_input`<sup>Optional</sup> <a name="timeouts_input" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPage.property.timeoutsInput"></a>
 
 ```python
-timeouts_input: typing.Union[IResolvable, DialogflowCxPageTimeouts]
+timeouts_input: IResolvable | DialogflowCxPageTimeouts
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTimeouts">DialogflowCxPageTimeouts</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTimeouts">DialogflowCxPageTimeouts</a>
 
 ---
 
@@ -1450,10 +1450,10 @@ transition_route_groups_input: typing.List[str]
 ##### `transition_routes_input`<sup>Optional</sup> <a name="transition_routes_input" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPage.property.transitionRoutesInput"></a>
 
 ```python
-transition_routes_input: typing.Union[IResolvable, typing.List[DialogflowCxPageTransitionRoutes]]
+transition_routes_input: IResolvable | typing.List[DialogflowCxPageTransitionRoutes]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutes">DialogflowCxPageTransitionRoutes</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutes">DialogflowCxPageTransitionRoutes</a>]
 
 ---
 
@@ -1569,7 +1569,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 from cdktf_cdktf_provider_google import dialogflow_cx_page
 
 dialogflowCxPage.DialogflowCxPageAdvancedSettingsDtmfSettings(
-  enabled: typing.Union[bool, IResolvable] = None,
+  enabled: bool | IResolvable = None,
   finish_digit: str = None,
   max_digits: typing.Union[int, float] = None
 )
@@ -1579,7 +1579,7 @@ dialogflowCxPage.DialogflowCxPageAdvancedSettingsDtmfSettings(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageAdvancedSettingsDtmfSettings.property.enabled">enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | If true, incoming audio is processed for DTMF (dual tone multi frequency) events. |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageAdvancedSettingsDtmfSettings.property.enabled">enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | If true, incoming audio is processed for DTMF (dual tone multi frequency) events. |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageAdvancedSettingsDtmfSettings.property.finishDigit">finish_digit</a></code> | <code>str</code> | The digit that terminates a DTMF digit sequence. |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageAdvancedSettingsDtmfSettings.property.maxDigits">max_digits</a></code> | <code>typing.Union[int, float]</code> | Max length of DTMF digits. |
 
@@ -1588,10 +1588,10 @@ dialogflowCxPage.DialogflowCxPageAdvancedSettingsDtmfSettings(
 ##### `enabled`<sup>Optional</sup> <a name="enabled" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageAdvancedSettingsDtmfSettings.property.enabled"></a>
 
 ```python
-enabled: typing.Union[bool, IResolvable]
+enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 If true, incoming audio is processed for DTMF (dual tone multi frequency) events.
 
@@ -1637,17 +1637,17 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 from cdktf_cdktf_provider_google import dialogflow_cx_page
 
 dialogflowCxPage.DialogflowCxPageConfig(
-  connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection] = None,
-  count: typing.Union[typing.Union[int, float], TerraformCount] = None,
+  connection: SSHProvisionerConnection | WinrmProvisionerConnection = None,
+  count: typing.Union[int, float] | TerraformCount = None,
   depends_on: typing.List[ITerraformDependable] = None,
   for_each: ITerraformIterator = None,
   lifecycle: TerraformResourceLifecycle = None,
   provider: TerraformProvider = None,
-  provisioners: typing.List[typing.Union[FileProvisioner, LocalExecProvisioner, RemoteExecProvisioner]] = None,
+  provisioners: typing.List[FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner] = None,
   display_name: str,
   advanced_settings: DialogflowCxPageAdvancedSettings = None,
   entry_fulfillment: DialogflowCxPageEntryFulfillment = None,
-  event_handlers: typing.Union[IResolvable, typing.List[DialogflowCxPageEventHandlers]] = None,
+  event_handlers: IResolvable | typing.List[DialogflowCxPageEventHandlers] = None,
   form: DialogflowCxPageForm = None,
   id: str = None,
   knowledge_connector_settings: DialogflowCxPageKnowledgeConnectorSettings = None,
@@ -1655,7 +1655,7 @@ dialogflowCxPage.DialogflowCxPageConfig(
   parent: str = None,
   timeouts: DialogflowCxPageTimeouts = None,
   transition_route_groups: typing.List[str] = None,
-  transition_routes: typing.Union[IResolvable, typing.List[DialogflowCxPageTransitionRoutes]] = None
+  transition_routes: IResolvable | typing.List[DialogflowCxPageTransitionRoutes] = None
 )
 ```
 
@@ -1663,17 +1663,17 @@ dialogflowCxPage.DialogflowCxPageConfig(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageConfig.property.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageConfig.property.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageConfig.property.connection">connection</a></code> | <code>cdktf.SSHProvisionerConnection \| cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageConfig.property.count">count</a></code> | <code>typing.Union[int, float] \| cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageConfig.property.dependsOn">depends_on</a></code> | <code>typing.List[cdktf.ITerraformDependable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageConfig.property.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageConfig.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageConfig.property.provisioners">provisioners</a></code> | <code>typing.List[cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageConfig.property.displayName">display_name</a></code> | <code>str</code> | The human-readable name of the page, unique within the agent. |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageConfig.property.advancedSettings">advanced_settings</a></code> | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageAdvancedSettings">DialogflowCxPageAdvancedSettings</a></code> | advanced_settings block. |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageConfig.property.entryFulfillment">entry_fulfillment</a></code> | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillment">DialogflowCxPageEntryFulfillment</a></code> | entry_fulfillment block. |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageConfig.property.eventHandlers">event_handlers</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlers">DialogflowCxPageEventHandlers</a>]]</code> | event_handlers block. |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageConfig.property.eventHandlers">event_handlers</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlers">DialogflowCxPageEventHandlers</a>]</code> | event_handlers block. |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageConfig.property.form">form</a></code> | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageForm">DialogflowCxPageForm</a></code> | form block. |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/dialogflow_cx_page#id DialogflowCxPage#id}. |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageConfig.property.knowledgeConnectorSettings">knowledge_connector_settings</a></code> | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettings">DialogflowCxPageKnowledgeConnectorSettings</a></code> | knowledge_connector_settings block. |
@@ -1681,27 +1681,27 @@ dialogflowCxPage.DialogflowCxPageConfig(
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageConfig.property.parent">parent</a></code> | <code>str</code> | The flow to create a page for. Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/flows/<Flow ID>. |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTimeouts">DialogflowCxPageTimeouts</a></code> | timeouts block. |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageConfig.property.transitionRouteGroups">transition_route_groups</a></code> | <code>typing.List[str]</code> | Ordered list of TransitionRouteGroups associated with the page. |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageConfig.property.transitionRoutes">transition_routes</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutes">DialogflowCxPageTransitionRoutes</a>]]</code> | transition_routes block. |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageConfig.property.transitionRoutes">transition_routes</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutes">DialogflowCxPageTransitionRoutes</a>]</code> | transition_routes block. |
 
 ---
 
 ##### `connection`<sup>Optional</sup> <a name="connection" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageConfig.property.connection"></a>
 
 ```python
-connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection]
+connection: SSHProvisionerConnection | WinrmProvisionerConnection
 ```
 
-- *Type:* typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]
+- *Type:* cdktf.SSHProvisionerConnection | cdktf.WinrmProvisionerConnection
 
 ---
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageConfig.property.count"></a>
 
 ```python
-count: typing.Union[typing.Union[int, float], TerraformCount]
+count: typing.Union[int, float] | TerraformCount
 ```
 
-- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
+- *Type:* typing.Union[int, float] | cdktf.TerraformCount
 
 ---
 
@@ -1748,10 +1748,10 @@ provider: TerraformProvider
 ##### `provisioners`<sup>Optional</sup> <a name="provisioners" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageConfig.property.provisioners"></a>
 
 ```python
-provisioners: typing.List[typing.Union[FileProvisioner, LocalExecProvisioner, RemoteExecProvisioner]]
+provisioners: typing.List[FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner]
 ```
 
-- *Type:* typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]
+- *Type:* typing.List[cdktf.FileProvisioner | cdktf.LocalExecProvisioner | cdktf.RemoteExecProvisioner]
 
 ---
 
@@ -1800,10 +1800,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `event_handlers`<sup>Optional</sup> <a name="event_handlers" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageConfig.property.eventHandlers"></a>
 
 ```python
-event_handlers: typing.Union[IResolvable, typing.List[DialogflowCxPageEventHandlers]]
+event_handlers: IResolvable | typing.List[DialogflowCxPageEventHandlers]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlers">DialogflowCxPageEventHandlers</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlers">DialogflowCxPageEventHandlers</a>]
 
 event_handlers block.
 
@@ -1930,10 +1930,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `transition_routes`<sup>Optional</sup> <a name="transition_routes" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageConfig.property.transitionRoutes"></a>
 
 ```python
-transition_routes: typing.Union[IResolvable, typing.List[DialogflowCxPageTransitionRoutes]]
+transition_routes: IResolvable | typing.List[DialogflowCxPageTransitionRoutes]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutes">DialogflowCxPageTransitionRoutes</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutes">DialogflowCxPageTransitionRoutes</a>]
 
 transition_routes block.
 
@@ -1949,10 +1949,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 from cdktf_cdktf_provider_google import dialogflow_cx_page
 
 dialogflowCxPage.DialogflowCxPageEntryFulfillment(
-  conditional_cases: typing.Union[IResolvable, typing.List[DialogflowCxPageEntryFulfillmentConditionalCases]] = None,
-  messages: typing.Union[IResolvable, typing.List[DialogflowCxPageEntryFulfillmentMessages]] = None,
-  return_partial_responses: typing.Union[bool, IResolvable] = None,
-  set_parameter_actions: typing.Union[IResolvable, typing.List[DialogflowCxPageEntryFulfillmentSetParameterActions]] = None,
+  conditional_cases: IResolvable | typing.List[DialogflowCxPageEntryFulfillmentConditionalCases] = None,
+  messages: IResolvable | typing.List[DialogflowCxPageEntryFulfillmentMessages] = None,
+  return_partial_responses: bool | IResolvable = None,
+  set_parameter_actions: IResolvable | typing.List[DialogflowCxPageEntryFulfillmentSetParameterActions] = None,
   tag: str = None,
   webhook: str = None
 )
@@ -1962,10 +1962,10 @@ dialogflowCxPage.DialogflowCxPageEntryFulfillment(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillment.property.conditionalCases">conditional_cases</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillmentConditionalCases">DialogflowCxPageEntryFulfillmentConditionalCases</a>]]</code> | conditional_cases block. |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillment.property.messages">messages</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillmentMessages">DialogflowCxPageEntryFulfillmentMessages</a>]]</code> | messages block. |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillment.property.returnPartialResponses">return_partial_responses</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Whether Dialogflow should return currently queued fulfillment response messages in streaming APIs. |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillment.property.setParameterActions">set_parameter_actions</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillmentSetParameterActions">DialogflowCxPageEntryFulfillmentSetParameterActions</a>]]</code> | set_parameter_actions block. |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillment.property.conditionalCases">conditional_cases</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillmentConditionalCases">DialogflowCxPageEntryFulfillmentConditionalCases</a>]</code> | conditional_cases block. |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillment.property.messages">messages</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillmentMessages">DialogflowCxPageEntryFulfillmentMessages</a>]</code> | messages block. |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillment.property.returnPartialResponses">return_partial_responses</a></code> | <code>bool \| cdktf.IResolvable</code> | Whether Dialogflow should return currently queued fulfillment response messages in streaming APIs. |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillment.property.setParameterActions">set_parameter_actions</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillmentSetParameterActions">DialogflowCxPageEntryFulfillmentSetParameterActions</a>]</code> | set_parameter_actions block. |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillment.property.tag">tag</a></code> | <code>str</code> | The tag used by the webhook to identify which fulfillment is being called. |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillment.property.webhook">webhook</a></code> | <code>str</code> | The webhook to call. Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/webhooks/<Webhook ID>. |
 
@@ -1974,10 +1974,10 @@ dialogflowCxPage.DialogflowCxPageEntryFulfillment(
 ##### `conditional_cases`<sup>Optional</sup> <a name="conditional_cases" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillment.property.conditionalCases"></a>
 
 ```python
-conditional_cases: typing.Union[IResolvable, typing.List[DialogflowCxPageEntryFulfillmentConditionalCases]]
+conditional_cases: IResolvable | typing.List[DialogflowCxPageEntryFulfillmentConditionalCases]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillmentConditionalCases">DialogflowCxPageEntryFulfillmentConditionalCases</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillmentConditionalCases">DialogflowCxPageEntryFulfillmentConditionalCases</a>]
 
 conditional_cases block.
 
@@ -1988,10 +1988,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `messages`<sup>Optional</sup> <a name="messages" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillment.property.messages"></a>
 
 ```python
-messages: typing.Union[IResolvable, typing.List[DialogflowCxPageEntryFulfillmentMessages]]
+messages: IResolvable | typing.List[DialogflowCxPageEntryFulfillmentMessages]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillmentMessages">DialogflowCxPageEntryFulfillmentMessages</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillmentMessages">DialogflowCxPageEntryFulfillmentMessages</a>]
 
 messages block.
 
@@ -2002,10 +2002,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `return_partial_responses`<sup>Optional</sup> <a name="return_partial_responses" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillment.property.returnPartialResponses"></a>
 
 ```python
-return_partial_responses: typing.Union[bool, IResolvable]
+return_partial_responses: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Whether Dialogflow should return currently queued fulfillment response messages in streaming APIs.
 
@@ -2018,10 +2018,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `set_parameter_actions`<sup>Optional</sup> <a name="set_parameter_actions" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillment.property.setParameterActions"></a>
 
 ```python
-set_parameter_actions: typing.Union[IResolvable, typing.List[DialogflowCxPageEntryFulfillmentSetParameterActions]]
+set_parameter_actions: IResolvable | typing.List[DialogflowCxPageEntryFulfillmentSetParameterActions]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillmentSetParameterActions">DialogflowCxPageEntryFulfillmentSetParameterActions</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillmentSetParameterActions">DialogflowCxPageEntryFulfillmentSetParameterActions</a>]
 
 set_parameter_actions block.
 
@@ -2606,10 +2606,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 from cdktf_cdktf_provider_google import dialogflow_cx_page
 
 dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillment(
-  conditional_cases: typing.Union[IResolvable, typing.List[DialogflowCxPageEventHandlersTriggerFulfillmentConditionalCases]] = None,
-  messages: typing.Union[IResolvable, typing.List[DialogflowCxPageEventHandlersTriggerFulfillmentMessages]] = None,
-  return_partial_responses: typing.Union[bool, IResolvable] = None,
-  set_parameter_actions: typing.Union[IResolvable, typing.List[DialogflowCxPageEventHandlersTriggerFulfillmentSetParameterActions]] = None,
+  conditional_cases: IResolvable | typing.List[DialogflowCxPageEventHandlersTriggerFulfillmentConditionalCases] = None,
+  messages: IResolvable | typing.List[DialogflowCxPageEventHandlersTriggerFulfillmentMessages] = None,
+  return_partial_responses: bool | IResolvable = None,
+  set_parameter_actions: IResolvable | typing.List[DialogflowCxPageEventHandlersTriggerFulfillmentSetParameterActions] = None,
   tag: str = None,
   webhook: str = None
 )
@@ -2619,10 +2619,10 @@ dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillment(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillment.property.conditionalCases">conditional_cases</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillmentConditionalCases">DialogflowCxPageEventHandlersTriggerFulfillmentConditionalCases</a>]]</code> | conditional_cases block. |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillment.property.messages">messages</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillmentMessages">DialogflowCxPageEventHandlersTriggerFulfillmentMessages</a>]]</code> | messages block. |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillment.property.returnPartialResponses">return_partial_responses</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Whether Dialogflow should return currently queued fulfillment response messages in streaming APIs. |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillment.property.setParameterActions">set_parameter_actions</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillmentSetParameterActions">DialogflowCxPageEventHandlersTriggerFulfillmentSetParameterActions</a>]]</code> | set_parameter_actions block. |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillment.property.conditionalCases">conditional_cases</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillmentConditionalCases">DialogflowCxPageEventHandlersTriggerFulfillmentConditionalCases</a>]</code> | conditional_cases block. |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillment.property.messages">messages</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillmentMessages">DialogflowCxPageEventHandlersTriggerFulfillmentMessages</a>]</code> | messages block. |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillment.property.returnPartialResponses">return_partial_responses</a></code> | <code>bool \| cdktf.IResolvable</code> | Whether Dialogflow should return currently queued fulfillment response messages in streaming APIs. |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillment.property.setParameterActions">set_parameter_actions</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillmentSetParameterActions">DialogflowCxPageEventHandlersTriggerFulfillmentSetParameterActions</a>]</code> | set_parameter_actions block. |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillment.property.tag">tag</a></code> | <code>str</code> | The tag used by the webhook to identify which fulfillment is being called. |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillment.property.webhook">webhook</a></code> | <code>str</code> | The webhook to call. Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/webhooks/<Webhook ID>. |
 
@@ -2631,10 +2631,10 @@ dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillment(
 ##### `conditional_cases`<sup>Optional</sup> <a name="conditional_cases" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillment.property.conditionalCases"></a>
 
 ```python
-conditional_cases: typing.Union[IResolvable, typing.List[DialogflowCxPageEventHandlersTriggerFulfillmentConditionalCases]]
+conditional_cases: IResolvable | typing.List[DialogflowCxPageEventHandlersTriggerFulfillmentConditionalCases]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillmentConditionalCases">DialogflowCxPageEventHandlersTriggerFulfillmentConditionalCases</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillmentConditionalCases">DialogflowCxPageEventHandlersTriggerFulfillmentConditionalCases</a>]
 
 conditional_cases block.
 
@@ -2645,10 +2645,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `messages`<sup>Optional</sup> <a name="messages" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillment.property.messages"></a>
 
 ```python
-messages: typing.Union[IResolvable, typing.List[DialogflowCxPageEventHandlersTriggerFulfillmentMessages]]
+messages: IResolvable | typing.List[DialogflowCxPageEventHandlersTriggerFulfillmentMessages]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillmentMessages">DialogflowCxPageEventHandlersTriggerFulfillmentMessages</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillmentMessages">DialogflowCxPageEventHandlersTriggerFulfillmentMessages</a>]
 
 messages block.
 
@@ -2659,10 +2659,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `return_partial_responses`<sup>Optional</sup> <a name="return_partial_responses" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillment.property.returnPartialResponses"></a>
 
 ```python
-return_partial_responses: typing.Union[bool, IResolvable]
+return_partial_responses: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Whether Dialogflow should return currently queued fulfillment response messages in streaming APIs.
 
@@ -2675,10 +2675,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `set_parameter_actions`<sup>Optional</sup> <a name="set_parameter_actions" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillment.property.setParameterActions"></a>
 
 ```python
-set_parameter_actions: typing.Union[IResolvable, typing.List[DialogflowCxPageEventHandlersTriggerFulfillmentSetParameterActions]]
+set_parameter_actions: IResolvable | typing.List[DialogflowCxPageEventHandlersTriggerFulfillmentSetParameterActions]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillmentSetParameterActions">DialogflowCxPageEventHandlersTriggerFulfillmentSetParameterActions</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillmentSetParameterActions">DialogflowCxPageEventHandlersTriggerFulfillmentSetParameterActions</a>]
 
 set_parameter_actions block.
 
@@ -3181,7 +3181,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 from cdktf_cdktf_provider_google import dialogflow_cx_page
 
 dialogflowCxPage.DialogflowCxPageForm(
-  parameters: typing.Union[IResolvable, typing.List[DialogflowCxPageFormParameters]] = None
+  parameters: IResolvable | typing.List[DialogflowCxPageFormParameters] = None
 )
 ```
 
@@ -3189,17 +3189,17 @@ dialogflowCxPage.DialogflowCxPageForm(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageForm.property.parameters">parameters</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParameters">DialogflowCxPageFormParameters</a>]]</code> | parameters block. |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageForm.property.parameters">parameters</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParameters">DialogflowCxPageFormParameters</a>]</code> | parameters block. |
 
 ---
 
 ##### `parameters`<sup>Optional</sup> <a name="parameters" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageForm.property.parameters"></a>
 
 ```python
-parameters: typing.Union[IResolvable, typing.List[DialogflowCxPageFormParameters]]
+parameters: IResolvable | typing.List[DialogflowCxPageFormParameters]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParameters">DialogflowCxPageFormParameters</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParameters">DialogflowCxPageFormParameters</a>]
 
 parameters block.
 
@@ -3220,9 +3220,9 @@ dialogflowCxPage.DialogflowCxPageFormParameters(
   display_name: str = None,
   entity_type: str = None,
   fill_behavior: DialogflowCxPageFormParametersFillBehavior = None,
-  is_list: typing.Union[bool, IResolvable] = None,
-  redact: typing.Union[bool, IResolvable] = None,
-  required: typing.Union[bool, IResolvable] = None
+  is_list: bool | IResolvable = None,
+  redact: bool | IResolvable = None,
+  required: bool | IResolvable = None
 )
 ```
 
@@ -3235,9 +3235,9 @@ dialogflowCxPage.DialogflowCxPageFormParameters(
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParameters.property.displayName">display_name</a></code> | <code>str</code> | The human-readable name of the parameter, unique within the form. |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParameters.property.entityType">entity_type</a></code> | <code>str</code> | The entity type of the parameter. |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParameters.property.fillBehavior">fill_behavior</a></code> | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehavior">DialogflowCxPageFormParametersFillBehavior</a></code> | fill_behavior block. |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParameters.property.isList">is_list</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Indicates whether the parameter represents a list of values. |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParameters.property.redact">redact</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Indicates whether the parameter content should be redacted in log. |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParameters.property.required">required</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Indicates whether the parameter is required. |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParameters.property.isList">is_list</a></code> | <code>bool \| cdktf.IResolvable</code> | Indicates whether the parameter represents a list of values. |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParameters.property.redact">redact</a></code> | <code>bool \| cdktf.IResolvable</code> | Indicates whether the parameter content should be redacted in log. |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParameters.property.required">required</a></code> | <code>bool \| cdktf.IResolvable</code> | Indicates whether the parameter is required. |
 
 ---
 
@@ -3316,10 +3316,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `is_list`<sup>Optional</sup> <a name="is_list" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParameters.property.isList"></a>
 
 ```python
-is_list: typing.Union[bool, IResolvable]
+is_list: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Indicates whether the parameter represents a list of values.
 
@@ -3330,10 +3330,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `redact`<sup>Optional</sup> <a name="redact" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParameters.property.redact"></a>
 
 ```python
-redact: typing.Union[bool, IResolvable]
+redact: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Indicates whether the parameter content should be redacted in log.
 
@@ -3346,10 +3346,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `required`<sup>Optional</sup> <a name="required" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParameters.property.required"></a>
 
 ```python
-required: typing.Union[bool, IResolvable]
+required: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Indicates whether the parameter is required.
 
@@ -3402,7 +3402,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 from cdktf_cdktf_provider_google import dialogflow_cx_page
 
 dialogflowCxPage.DialogflowCxPageFormParametersAdvancedSettingsDtmfSettings(
-  enabled: typing.Union[bool, IResolvable] = None,
+  enabled: bool | IResolvable = None,
   finish_digit: str = None,
   max_digits: typing.Union[int, float] = None
 )
@@ -3412,7 +3412,7 @@ dialogflowCxPage.DialogflowCxPageFormParametersAdvancedSettingsDtmfSettings(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersAdvancedSettingsDtmfSettings.property.enabled">enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | If true, incoming audio is processed for DTMF (dual tone multi frequency) events. |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersAdvancedSettingsDtmfSettings.property.enabled">enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | If true, incoming audio is processed for DTMF (dual tone multi frequency) events. |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersAdvancedSettingsDtmfSettings.property.finishDigit">finish_digit</a></code> | <code>str</code> | The digit that terminates a DTMF digit sequence. |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersAdvancedSettingsDtmfSettings.property.maxDigits">max_digits</a></code> | <code>typing.Union[int, float]</code> | Max length of DTMF digits. |
 
@@ -3421,10 +3421,10 @@ dialogflowCxPage.DialogflowCxPageFormParametersAdvancedSettingsDtmfSettings(
 ##### `enabled`<sup>Optional</sup> <a name="enabled" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersAdvancedSettingsDtmfSettings.property.enabled"></a>
 
 ```python
-enabled: typing.Union[bool, IResolvable]
+enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 If true, incoming audio is processed for DTMF (dual tone multi frequency) events.
 
@@ -3471,7 +3471,7 @@ from cdktf_cdktf_provider_google import dialogflow_cx_page
 
 dialogflowCxPage.DialogflowCxPageFormParametersFillBehavior(
   initial_prompt_fulfillment: DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillment = None,
-  reprompt_event_handlers: typing.Union[IResolvable, typing.List[DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlers]] = None
+  reprompt_event_handlers: IResolvable | typing.List[DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlers] = None
 )
 ```
 
@@ -3480,7 +3480,7 @@ dialogflowCxPage.DialogflowCxPageFormParametersFillBehavior(
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehavior.property.initialPromptFulfillment">initial_prompt_fulfillment</a></code> | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillment">DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillment</a></code> | initial_prompt_fulfillment block. |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehavior.property.repromptEventHandlers">reprompt_event_handlers</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlers">DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlers</a>]]</code> | reprompt_event_handlers block. |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehavior.property.repromptEventHandlers">reprompt_event_handlers</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlers">DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlers</a>]</code> | reprompt_event_handlers block. |
 
 ---
 
@@ -3501,10 +3501,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `reprompt_event_handlers`<sup>Optional</sup> <a name="reprompt_event_handlers" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehavior.property.repromptEventHandlers"></a>
 
 ```python
-reprompt_event_handlers: typing.Union[IResolvable, typing.List[DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlers]]
+reprompt_event_handlers: IResolvable | typing.List[DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlers]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlers">DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlers</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlers">DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlers</a>]
 
 reprompt_event_handlers block.
 
@@ -3520,10 +3520,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 from cdktf_cdktf_provider_google import dialogflow_cx_page
 
 dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillment(
-  conditional_cases: typing.Union[IResolvable, typing.List[DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentConditionalCases]] = None,
-  messages: typing.Union[IResolvable, typing.List[DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentMessages]] = None,
-  return_partial_responses: typing.Union[bool, IResolvable] = None,
-  set_parameter_actions: typing.Union[IResolvable, typing.List[DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentSetParameterActions]] = None,
+  conditional_cases: IResolvable | typing.List[DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentConditionalCases] = None,
+  messages: IResolvable | typing.List[DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentMessages] = None,
+  return_partial_responses: bool | IResolvable = None,
+  set_parameter_actions: IResolvable | typing.List[DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentSetParameterActions] = None,
   tag: str = None,
   webhook: str = None
 )
@@ -3533,10 +3533,10 @@ dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillm
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillment.property.conditionalCases">conditional_cases</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentConditionalCases">DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentConditionalCases</a>]]</code> | conditional_cases block. |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillment.property.messages">messages</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentMessages">DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentMessages</a>]]</code> | messages block. |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillment.property.returnPartialResponses">return_partial_responses</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Whether Dialogflow should return currently queued fulfillment response messages in streaming APIs. |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillment.property.setParameterActions">set_parameter_actions</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentSetParameterActions">DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentSetParameterActions</a>]]</code> | set_parameter_actions block. |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillment.property.conditionalCases">conditional_cases</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentConditionalCases">DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentConditionalCases</a>]</code> | conditional_cases block. |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillment.property.messages">messages</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentMessages">DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentMessages</a>]</code> | messages block. |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillment.property.returnPartialResponses">return_partial_responses</a></code> | <code>bool \| cdktf.IResolvable</code> | Whether Dialogflow should return currently queued fulfillment response messages in streaming APIs. |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillment.property.setParameterActions">set_parameter_actions</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentSetParameterActions">DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentSetParameterActions</a>]</code> | set_parameter_actions block. |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillment.property.tag">tag</a></code> | <code>str</code> | The tag used by the webhook to identify which fulfillment is being called. |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillment.property.webhook">webhook</a></code> | <code>str</code> | The webhook to call. Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/webhooks/<Webhook ID>. |
 
@@ -3545,10 +3545,10 @@ dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillm
 ##### `conditional_cases`<sup>Optional</sup> <a name="conditional_cases" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillment.property.conditionalCases"></a>
 
 ```python
-conditional_cases: typing.Union[IResolvable, typing.List[DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentConditionalCases]]
+conditional_cases: IResolvable | typing.List[DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentConditionalCases]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentConditionalCases">DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentConditionalCases</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentConditionalCases">DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentConditionalCases</a>]
 
 conditional_cases block.
 
@@ -3559,10 +3559,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `messages`<sup>Optional</sup> <a name="messages" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillment.property.messages"></a>
 
 ```python
-messages: typing.Union[IResolvable, typing.List[DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentMessages]]
+messages: IResolvable | typing.List[DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentMessages]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentMessages">DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentMessages</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentMessages">DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentMessages</a>]
 
 messages block.
 
@@ -3573,10 +3573,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `return_partial_responses`<sup>Optional</sup> <a name="return_partial_responses" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillment.property.returnPartialResponses"></a>
 
 ```python
-return_partial_responses: typing.Union[bool, IResolvable]
+return_partial_responses: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Whether Dialogflow should return currently queued fulfillment response messages in streaming APIs.
 
@@ -3589,10 +3589,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `set_parameter_actions`<sup>Optional</sup> <a name="set_parameter_actions" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillment.property.setParameterActions"></a>
 
 ```python
-set_parameter_actions: typing.Union[IResolvable, typing.List[DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentSetParameterActions]]
+set_parameter_actions: IResolvable | typing.List[DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentSetParameterActions]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentSetParameterActions">DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentSetParameterActions</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentSetParameterActions">DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentSetParameterActions</a>]
 
 set_parameter_actions block.
 
@@ -4177,10 +4177,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 from cdktf_cdktf_provider_google import dialogflow_cx_page
 
 dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillment(
-  conditional_cases: typing.Union[IResolvable, typing.List[DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentConditionalCases]] = None,
-  messages: typing.Union[IResolvable, typing.List[DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentMessages]] = None,
-  return_partial_responses: typing.Union[bool, IResolvable] = None,
-  set_parameter_actions: typing.Union[IResolvable, typing.List[DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentSetParameterActions]] = None,
+  conditional_cases: IResolvable | typing.List[DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentConditionalCases] = None,
+  messages: IResolvable | typing.List[DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentMessages] = None,
+  return_partial_responses: bool | IResolvable = None,
+  set_parameter_actions: IResolvable | typing.List[DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentSetParameterActions] = None,
   tag: str = None,
   webhook: str = None
 )
@@ -4190,10 +4190,10 @@ dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlers
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillment.property.conditionalCases">conditional_cases</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentConditionalCases">DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentConditionalCases</a>]]</code> | conditional_cases block. |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillment.property.messages">messages</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentMessages">DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentMessages</a>]]</code> | messages block. |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillment.property.returnPartialResponses">return_partial_responses</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Whether Dialogflow should return currently queued fulfillment response messages in streaming APIs. |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillment.property.setParameterActions">set_parameter_actions</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentSetParameterActions">DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentSetParameterActions</a>]]</code> | set_parameter_actions block. |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillment.property.conditionalCases">conditional_cases</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentConditionalCases">DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentConditionalCases</a>]</code> | conditional_cases block. |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillment.property.messages">messages</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentMessages">DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentMessages</a>]</code> | messages block. |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillment.property.returnPartialResponses">return_partial_responses</a></code> | <code>bool \| cdktf.IResolvable</code> | Whether Dialogflow should return currently queued fulfillment response messages in streaming APIs. |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillment.property.setParameterActions">set_parameter_actions</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentSetParameterActions">DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentSetParameterActions</a>]</code> | set_parameter_actions block. |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillment.property.tag">tag</a></code> | <code>str</code> | The tag used by the webhook to identify which fulfillment is being called. |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillment.property.webhook">webhook</a></code> | <code>str</code> | The webhook to call. Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/webhooks/<Webhook ID>. |
 
@@ -4202,10 +4202,10 @@ dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlers
 ##### `conditional_cases`<sup>Optional</sup> <a name="conditional_cases" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillment.property.conditionalCases"></a>
 
 ```python
-conditional_cases: typing.Union[IResolvable, typing.List[DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentConditionalCases]]
+conditional_cases: IResolvable | typing.List[DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentConditionalCases]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentConditionalCases">DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentConditionalCases</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentConditionalCases">DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentConditionalCases</a>]
 
 conditional_cases block.
 
@@ -4216,10 +4216,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `messages`<sup>Optional</sup> <a name="messages" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillment.property.messages"></a>
 
 ```python
-messages: typing.Union[IResolvable, typing.List[DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentMessages]]
+messages: IResolvable | typing.List[DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentMessages]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentMessages">DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentMessages</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentMessages">DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentMessages</a>]
 
 messages block.
 
@@ -4230,10 +4230,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `return_partial_responses`<sup>Optional</sup> <a name="return_partial_responses" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillment.property.returnPartialResponses"></a>
 
 ```python
-return_partial_responses: typing.Union[bool, IResolvable]
+return_partial_responses: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Whether Dialogflow should return currently queued fulfillment response messages in streaming APIs.
 
@@ -4246,10 +4246,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `set_parameter_actions`<sup>Optional</sup> <a name="set_parameter_actions" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillment.property.setParameterActions"></a>
 
 ```python
-set_parameter_actions: typing.Union[IResolvable, typing.List[DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentSetParameterActions]]
+set_parameter_actions: IResolvable | typing.List[DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentSetParameterActions]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentSetParameterActions">DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentSetParameterActions</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentSetParameterActions">DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentSetParameterActions</a>]
 
 set_parameter_actions block.
 
@@ -4752,8 +4752,8 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 from cdktf_cdktf_provider_google import dialogflow_cx_page
 
 dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettings(
-  data_store_connections: typing.Union[IResolvable, typing.List[DialogflowCxPageKnowledgeConnectorSettingsDataStoreConnections]] = None,
-  enabled: typing.Union[bool, IResolvable] = None,
+  data_store_connections: IResolvable | typing.List[DialogflowCxPageKnowledgeConnectorSettingsDataStoreConnections] = None,
+  enabled: bool | IResolvable = None,
   target_flow: str = None,
   target_page: str = None,
   trigger_fulfillment: DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillment = None
@@ -4764,8 +4764,8 @@ dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettings(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettings.property.dataStoreConnections">data_store_connections</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsDataStoreConnections">DialogflowCxPageKnowledgeConnectorSettingsDataStoreConnections</a>]]</code> | data_store_connections block. |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettings.property.enabled">enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Whether Knowledge Connector is enabled or not. |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettings.property.dataStoreConnections">data_store_connections</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsDataStoreConnections">DialogflowCxPageKnowledgeConnectorSettingsDataStoreConnections</a>]</code> | data_store_connections block. |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettings.property.enabled">enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | Whether Knowledge Connector is enabled or not. |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettings.property.targetFlow">target_flow</a></code> | <code>str</code> | The target flow to transition to. |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettings.property.targetPage">target_page</a></code> | <code>str</code> | The target page to transition to. |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettings.property.triggerFulfillment">trigger_fulfillment</a></code> | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillment">DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillment</a></code> | trigger_fulfillment block. |
@@ -4775,10 +4775,10 @@ dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettings(
 ##### `data_store_connections`<sup>Optional</sup> <a name="data_store_connections" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettings.property.dataStoreConnections"></a>
 
 ```python
-data_store_connections: typing.Union[IResolvable, typing.List[DialogflowCxPageKnowledgeConnectorSettingsDataStoreConnections]]
+data_store_connections: IResolvable | typing.List[DialogflowCxPageKnowledgeConnectorSettingsDataStoreConnections]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsDataStoreConnections">DialogflowCxPageKnowledgeConnectorSettingsDataStoreConnections</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsDataStoreConnections">DialogflowCxPageKnowledgeConnectorSettingsDataStoreConnections</a>]
 
 data_store_connections block.
 
@@ -4789,10 +4789,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `enabled`<sup>Optional</sup> <a name="enabled" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettings.property.enabled"></a>
 
 ```python
-enabled: typing.Union[bool, IResolvable]
+enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Whether Knowledge Connector is enabled or not.
 
@@ -4933,11 +4933,11 @@ from cdktf_cdktf_provider_google import dialogflow_cx_page
 
 dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillment(
   advanced_settings: DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettings = None,
-  conditional_cases: typing.Union[IResolvable, typing.List[DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentConditionalCases]] = None,
-  enable_generative_fallback: typing.Union[bool, IResolvable] = None,
-  messages: typing.Union[IResolvable, typing.List[DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessages]] = None,
-  return_partial_responses: typing.Union[bool, IResolvable] = None,
-  set_parameter_actions: typing.Union[IResolvable, typing.List[DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentSetParameterActions]] = None,
+  conditional_cases: IResolvable | typing.List[DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentConditionalCases] = None,
+  enable_generative_fallback: bool | IResolvable = None,
+  messages: IResolvable | typing.List[DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessages] = None,
+  return_partial_responses: bool | IResolvable = None,
+  set_parameter_actions: IResolvable | typing.List[DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentSetParameterActions] = None,
   tag: str = None,
   webhook: str = None
 )
@@ -4948,11 +4948,11 @@ dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillment(
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillment.property.advancedSettings">advanced_settings</a></code> | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettings">DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettings</a></code> | advanced_settings block. |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillment.property.conditionalCases">conditional_cases</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentConditionalCases">DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentConditionalCases</a>]]</code> | conditional_cases block. |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillment.property.enableGenerativeFallback">enable_generative_fallback</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | If the flag is true, the agent will utilize LLM to generate a text response. |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillment.property.messages">messages</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessages">DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessages</a>]]</code> | messages block. |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillment.property.returnPartialResponses">return_partial_responses</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Whether Dialogflow should return currently queued fulfillment response messages in streaming APIs. |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillment.property.setParameterActions">set_parameter_actions</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentSetParameterActions">DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentSetParameterActions</a>]]</code> | set_parameter_actions block. |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillment.property.conditionalCases">conditional_cases</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentConditionalCases">DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentConditionalCases</a>]</code> | conditional_cases block. |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillment.property.enableGenerativeFallback">enable_generative_fallback</a></code> | <code>bool \| cdktf.IResolvable</code> | If the flag is true, the agent will utilize LLM to generate a text response. |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillment.property.messages">messages</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessages">DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessages</a>]</code> | messages block. |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillment.property.returnPartialResponses">return_partial_responses</a></code> | <code>bool \| cdktf.IResolvable</code> | Whether Dialogflow should return currently queued fulfillment response messages in streaming APIs. |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillment.property.setParameterActions">set_parameter_actions</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentSetParameterActions">DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentSetParameterActions</a>]</code> | set_parameter_actions block. |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillment.property.tag">tag</a></code> | <code>str</code> | The tag used by the webhook to identify which fulfillment is being called. |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillment.property.webhook">webhook</a></code> | <code>str</code> | The webhook to call. Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/webhooks/<Webhook ID>. |
 
@@ -4975,10 +4975,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `conditional_cases`<sup>Optional</sup> <a name="conditional_cases" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillment.property.conditionalCases"></a>
 
 ```python
-conditional_cases: typing.Union[IResolvable, typing.List[DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentConditionalCases]]
+conditional_cases: IResolvable | typing.List[DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentConditionalCases]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentConditionalCases">DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentConditionalCases</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentConditionalCases">DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentConditionalCases</a>]
 
 conditional_cases block.
 
@@ -4989,10 +4989,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `enable_generative_fallback`<sup>Optional</sup> <a name="enable_generative_fallback" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillment.property.enableGenerativeFallback"></a>
 
 ```python
-enable_generative_fallback: typing.Union[bool, IResolvable]
+enable_generative_fallback: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 If the flag is true, the agent will utilize LLM to generate a text response.
 
@@ -5005,10 +5005,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `messages`<sup>Optional</sup> <a name="messages" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillment.property.messages"></a>
 
 ```python
-messages: typing.Union[IResolvable, typing.List[DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessages]]
+messages: IResolvable | typing.List[DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessages]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessages">DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessages</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessages">DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessages</a>]
 
 messages block.
 
@@ -5019,10 +5019,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `return_partial_responses`<sup>Optional</sup> <a name="return_partial_responses" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillment.property.returnPartialResponses"></a>
 
 ```python
-return_partial_responses: typing.Union[bool, IResolvable]
+return_partial_responses: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Whether Dialogflow should return currently queued fulfillment response messages in streaming APIs.
 
@@ -5035,10 +5035,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `set_parameter_actions`<sup>Optional</sup> <a name="set_parameter_actions" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillment.property.setParameterActions"></a>
 
 ```python
-set_parameter_actions: typing.Union[IResolvable, typing.List[DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentSetParameterActions]]
+set_parameter_actions: IResolvable | typing.List[DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentSetParameterActions]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentSetParameterActions">DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentSetParameterActions</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentSetParameterActions">DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentSetParameterActions</a>]
 
 set_parameter_actions block.
 
@@ -5150,7 +5150,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 from cdktf_cdktf_provider_google import dialogflow_cx_page
 
 dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsDtmfSettings(
-  enabled: typing.Union[bool, IResolvable] = None,
+  enabled: bool | IResolvable = None,
   endpointing_timeout_duration: str = None,
   finish_digit: str = None,
   interdigit_timeout_duration: str = None,
@@ -5162,7 +5162,7 @@ dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdv
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsDtmfSettings.property.enabled">enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | If true, incoming audio is processed for DTMF (dual tone multi frequtectency) events. |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsDtmfSettings.property.enabled">enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | If true, incoming audio is processed for DTMF (dual tone multi frequtectency) events. |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsDtmfSettings.property.endpointingTimeoutDuration">endpointing_timeout_duration</a></code> | <code>str</code> | Endpoint timeout setting for matching dtmf input to regex. |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsDtmfSettings.property.finishDigit">finish_digit</a></code> | <code>str</code> | The digit that terminates a DTMF digit sequence. |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsDtmfSettings.property.interdigitTimeoutDuration">interdigit_timeout_duration</a></code> | <code>str</code> | Interdigit timeout setting for matching dtmf input to regex. |
@@ -5173,10 +5173,10 @@ dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdv
 ##### `enabled`<sup>Optional</sup> <a name="enabled" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsDtmfSettings.property.enabled"></a>
 
 ```python
-enabled: typing.Union[bool, IResolvable]
+enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 If true, incoming audio is processed for DTMF (dual tone multi frequtectency) events.
 
@@ -5254,9 +5254,9 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 from cdktf_cdktf_provider_google import dialogflow_cx_page
 
 dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsLoggingSettings(
-  enable_consent_based_redaction: typing.Union[bool, IResolvable] = None,
-  enable_interaction_logging: typing.Union[bool, IResolvable] = None,
-  enable_stackdriver_logging: typing.Union[bool, IResolvable] = None
+  enable_consent_based_redaction: bool | IResolvable = None,
+  enable_interaction_logging: bool | IResolvable = None,
+  enable_stackdriver_logging: bool | IResolvable = None
 )
 ```
 
@@ -5264,19 +5264,19 @@ dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdv
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsLoggingSettings.property.enableConsentBasedRedaction">enable_consent_based_redaction</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Enables consent-based end-user input redaction, if true, a pre-defined session parameter **$session.params.conversation-redaction** will be used to determine if the utterance should be redacted. |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsLoggingSettings.property.enableInteractionLogging">enable_interaction_logging</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Enables DF Interaction logging. |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsLoggingSettings.property.enableStackdriverLogging">enable_stackdriver_logging</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Enables Google Cloud Logging. |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsLoggingSettings.property.enableConsentBasedRedaction">enable_consent_based_redaction</a></code> | <code>bool \| cdktf.IResolvable</code> | Enables consent-based end-user input redaction, if true, a pre-defined session parameter **$session.params.conversation-redaction** will be used to determine if the utterance should be redacted. |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsLoggingSettings.property.enableInteractionLogging">enable_interaction_logging</a></code> | <code>bool \| cdktf.IResolvable</code> | Enables DF Interaction logging. |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsLoggingSettings.property.enableStackdriverLogging">enable_stackdriver_logging</a></code> | <code>bool \| cdktf.IResolvable</code> | Enables Google Cloud Logging. |
 
 ---
 
 ##### `enable_consent_based_redaction`<sup>Optional</sup> <a name="enable_consent_based_redaction" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsLoggingSettings.property.enableConsentBasedRedaction"></a>
 
 ```python
-enable_consent_based_redaction: typing.Union[bool, IResolvable]
+enable_consent_based_redaction: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Enables consent-based end-user input redaction, if true, a pre-defined session parameter **$session.params.conversation-redaction** will be used to determine if the utterance should be redacted.
 
@@ -5287,10 +5287,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `enable_interaction_logging`<sup>Optional</sup> <a name="enable_interaction_logging" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsLoggingSettings.property.enableInteractionLogging"></a>
 
 ```python
-enable_interaction_logging: typing.Union[bool, IResolvable]
+enable_interaction_logging: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Enables DF Interaction logging.
 
@@ -5301,10 +5301,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `enable_stackdriver_logging`<sup>Optional</sup> <a name="enable_stackdriver_logging" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsLoggingSettings.property.enableStackdriverLogging"></a>
 
 ```python
-enable_stackdriver_logging: typing.Union[bool, IResolvable]
+enable_stackdriver_logging: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Enables Google Cloud Logging.
 
@@ -5323,7 +5323,7 @@ dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdv
   endpointer_sensitivity: typing.Union[int, float] = None,
   models: typing.Mapping[str] = None,
   no_speech_timeout: str = None,
-  use_timeout_based_endpointing: typing.Union[bool, IResolvable] = None
+  use_timeout_based_endpointing: bool | IResolvable = None
 )
 ```
 
@@ -5334,7 +5334,7 @@ dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdv
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsSpeechSettings.property.endpointerSensitivity">endpointer_sensitivity</a></code> | <code>typing.Union[int, float]</code> | Sensitivity of the speech model that detects the end of speech. Scale from 0 to 100. |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsSpeechSettings.property.models">models</a></code> | <code>typing.Mapping[str]</code> | Mapping from language to Speech-to-Text model. |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsSpeechSettings.property.noSpeechTimeout">no_speech_timeout</a></code> | <code>str</code> | Timeout before detecting no speech. A duration in seconds with up to nine fractional digits, ending with 's'. Example: "3.500s". |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsSpeechSettings.property.useTimeoutBasedEndpointing">use_timeout_based_endpointing</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Use timeout based endpointing, interpreting endpointer sensitivity as seconds of timeout value. |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsSpeechSettings.property.useTimeoutBasedEndpointing">use_timeout_based_endpointing</a></code> | <code>bool \| cdktf.IResolvable</code> | Use timeout based endpointing, interpreting endpointer sensitivity as seconds of timeout value. |
 
 ---
 
@@ -5386,10 +5386,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `use_timeout_based_endpointing`<sup>Optional</sup> <a name="use_timeout_based_endpointing" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsSpeechSettings.property.useTimeoutBasedEndpointing"></a>
 
 ```python
-use_timeout_based_endpointing: typing.Union[bool, IResolvable]
+use_timeout_based_endpointing: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Use timeout based endpointing, interpreting endpointer sensitivity as seconds of timeout value.
 
@@ -6094,10 +6094,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 from cdktf_cdktf_provider_google import dialogflow_cx_page
 
 dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillment(
-  conditional_cases: typing.Union[IResolvable, typing.List[DialogflowCxPageTransitionRoutesTriggerFulfillmentConditionalCases]] = None,
-  messages: typing.Union[IResolvable, typing.List[DialogflowCxPageTransitionRoutesTriggerFulfillmentMessages]] = None,
-  return_partial_responses: typing.Union[bool, IResolvable] = None,
-  set_parameter_actions: typing.Union[IResolvable, typing.List[DialogflowCxPageTransitionRoutesTriggerFulfillmentSetParameterActions]] = None,
+  conditional_cases: IResolvable | typing.List[DialogflowCxPageTransitionRoutesTriggerFulfillmentConditionalCases] = None,
+  messages: IResolvable | typing.List[DialogflowCxPageTransitionRoutesTriggerFulfillmentMessages] = None,
+  return_partial_responses: bool | IResolvable = None,
+  set_parameter_actions: IResolvable | typing.List[DialogflowCxPageTransitionRoutesTriggerFulfillmentSetParameterActions] = None,
   tag: str = None,
   webhook: str = None
 )
@@ -6107,10 +6107,10 @@ dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillment(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillment.property.conditionalCases">conditional_cases</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillmentConditionalCases">DialogflowCxPageTransitionRoutesTriggerFulfillmentConditionalCases</a>]]</code> | conditional_cases block. |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillment.property.messages">messages</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillmentMessages">DialogflowCxPageTransitionRoutesTriggerFulfillmentMessages</a>]]</code> | messages block. |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillment.property.returnPartialResponses">return_partial_responses</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Whether Dialogflow should return currently queued fulfillment response messages in streaming APIs. |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillment.property.setParameterActions">set_parameter_actions</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillmentSetParameterActions">DialogflowCxPageTransitionRoutesTriggerFulfillmentSetParameterActions</a>]]</code> | set_parameter_actions block. |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillment.property.conditionalCases">conditional_cases</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillmentConditionalCases">DialogflowCxPageTransitionRoutesTriggerFulfillmentConditionalCases</a>]</code> | conditional_cases block. |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillment.property.messages">messages</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillmentMessages">DialogflowCxPageTransitionRoutesTriggerFulfillmentMessages</a>]</code> | messages block. |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillment.property.returnPartialResponses">return_partial_responses</a></code> | <code>bool \| cdktf.IResolvable</code> | Whether Dialogflow should return currently queued fulfillment response messages in streaming APIs. |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillment.property.setParameterActions">set_parameter_actions</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillmentSetParameterActions">DialogflowCxPageTransitionRoutesTriggerFulfillmentSetParameterActions</a>]</code> | set_parameter_actions block. |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillment.property.tag">tag</a></code> | <code>str</code> | The tag used by the webhook to identify which fulfillment is being called. |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillment.property.webhook">webhook</a></code> | <code>str</code> | The webhook to call. Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/webhooks/<Webhook ID>. |
 
@@ -6119,10 +6119,10 @@ dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillment(
 ##### `conditional_cases`<sup>Optional</sup> <a name="conditional_cases" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillment.property.conditionalCases"></a>
 
 ```python
-conditional_cases: typing.Union[IResolvable, typing.List[DialogflowCxPageTransitionRoutesTriggerFulfillmentConditionalCases]]
+conditional_cases: IResolvable | typing.List[DialogflowCxPageTransitionRoutesTriggerFulfillmentConditionalCases]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillmentConditionalCases">DialogflowCxPageTransitionRoutesTriggerFulfillmentConditionalCases</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillmentConditionalCases">DialogflowCxPageTransitionRoutesTriggerFulfillmentConditionalCases</a>]
 
 conditional_cases block.
 
@@ -6133,10 +6133,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `messages`<sup>Optional</sup> <a name="messages" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillment.property.messages"></a>
 
 ```python
-messages: typing.Union[IResolvable, typing.List[DialogflowCxPageTransitionRoutesTriggerFulfillmentMessages]]
+messages: IResolvable | typing.List[DialogflowCxPageTransitionRoutesTriggerFulfillmentMessages]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillmentMessages">DialogflowCxPageTransitionRoutesTriggerFulfillmentMessages</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillmentMessages">DialogflowCxPageTransitionRoutesTriggerFulfillmentMessages</a>]
 
 messages block.
 
@@ -6147,10 +6147,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `return_partial_responses`<sup>Optional</sup> <a name="return_partial_responses" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillment.property.returnPartialResponses"></a>
 
 ```python
-return_partial_responses: typing.Union[bool, IResolvable]
+return_partial_responses: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Whether Dialogflow should return currently queued fulfillment response messages in streaming APIs.
 
@@ -6163,10 +6163,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `set_parameter_actions`<sup>Optional</sup> <a name="set_parameter_actions" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillment.property.setParameterActions"></a>
 
 ```python
-set_parameter_actions: typing.Union[IResolvable, typing.List[DialogflowCxPageTransitionRoutesTriggerFulfillmentSetParameterActions]]
+set_parameter_actions: IResolvable | typing.List[DialogflowCxPageTransitionRoutesTriggerFulfillmentSetParameterActions]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillmentSetParameterActions">DialogflowCxPageTransitionRoutesTriggerFulfillmentSetParameterActions</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillmentSetParameterActions">DialogflowCxPageTransitionRoutesTriggerFulfillmentSetParameterActions</a>]
 
 set_parameter_actions block.
 
@@ -6919,10 +6919,10 @@ def reset_max_digits() -> None
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageAdvancedSettingsDtmfSettingsOutputReference.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageAdvancedSettingsDtmfSettingsOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageAdvancedSettingsDtmfSettingsOutputReference.property.enabledInput">enabled_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageAdvancedSettingsDtmfSettingsOutputReference.property.enabledInput">enabled_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageAdvancedSettingsDtmfSettingsOutputReference.property.finishDigitInput">finish_digit_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageAdvancedSettingsDtmfSettingsOutputReference.property.maxDigitsInput">max_digits_input</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageAdvancedSettingsDtmfSettingsOutputReference.property.enabled">enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageAdvancedSettingsDtmfSettingsOutputReference.property.enabled">enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageAdvancedSettingsDtmfSettingsOutputReference.property.finishDigit">finish_digit</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageAdvancedSettingsDtmfSettingsOutputReference.property.maxDigits">max_digits</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageAdvancedSettingsDtmfSettingsOutputReference.property.internalValue">internal_value</a></code> | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageAdvancedSettingsDtmfSettings">DialogflowCxPageAdvancedSettingsDtmfSettings</a></code> | *No description.* |
@@ -6956,10 +6956,10 @@ fqn: str
 ##### `enabled_input`<sup>Optional</sup> <a name="enabled_input" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageAdvancedSettingsDtmfSettingsOutputReference.property.enabledInput"></a>
 
 ```python
-enabled_input: typing.Union[bool, IResolvable]
+enabled_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -6986,10 +6986,10 @@ max_digits_input: typing.Union[int, float]
 ##### `enabled`<sup>Required</sup> <a name="enabled" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageAdvancedSettingsDtmfSettingsOutputReference.property.enabled"></a>
 
 ```python
-enabled: typing.Union[bool, IResolvable]
+enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -7258,7 +7258,7 @@ Returns a reversible string representation.
 
 ```python
 def put_dtmf_settings(
-  enabled: typing.Union[bool, IResolvable] = None,
+  enabled: bool | IResolvable = None,
   finish_digit: str = None,
   max_digits: typing.Union[int, float] = None
 ) -> None
@@ -7266,7 +7266,7 @@ def put_dtmf_settings(
 
 ###### `enabled`<sup>Optional</sup> <a name="enabled" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageAdvancedSettingsOutputReference.putDtmfSettings.parameter.enabled"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 If true, incoming audio is processed for DTMF (dual tone multi frequency) events.
 
@@ -7501,7 +7501,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillmentConditionalCasesList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillmentConditionalCasesList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillmentConditionalCasesList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillmentConditionalCases">DialogflowCxPageEntryFulfillmentConditionalCases</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillmentConditionalCasesList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillmentConditionalCases">DialogflowCxPageEntryFulfillmentConditionalCases</a>]</code> | *No description.* |
 
 ---
 
@@ -7532,10 +7532,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillmentConditionalCasesList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[DialogflowCxPageEntryFulfillmentConditionalCases]]
+internal_value: IResolvable | typing.List[DialogflowCxPageEntryFulfillmentConditionalCases]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillmentConditionalCases">DialogflowCxPageEntryFulfillmentConditionalCases</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillmentConditionalCases">DialogflowCxPageEntryFulfillmentConditionalCases</a>]
 
 ---
 
@@ -7804,7 +7804,7 @@ def reset_cases() -> None
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillmentConditionalCasesOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillmentConditionalCasesOutputReference.property.casesInput">cases_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillmentConditionalCasesOutputReference.property.cases">cases</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillmentConditionalCasesOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillmentConditionalCases">DialogflowCxPageEntryFulfillmentConditionalCases</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillmentConditionalCasesOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillmentConditionalCases">DialogflowCxPageEntryFulfillmentConditionalCases</a></code> | *No description.* |
 
 ---
 
@@ -7855,10 +7855,10 @@ cases: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillmentConditionalCasesOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, DialogflowCxPageEntryFulfillmentConditionalCases]
+internal_value: IResolvable | DialogflowCxPageEntryFulfillmentConditionalCases
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillmentConditionalCases">DialogflowCxPageEntryFulfillmentConditionalCases</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillmentConditionalCases">DialogflowCxPageEntryFulfillmentConditionalCases</a>
 
 ---
 
@@ -8297,7 +8297,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillmentMessagesList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillmentMessagesList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillmentMessagesList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillmentMessages">DialogflowCxPageEntryFulfillmentMessages</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillmentMessagesList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillmentMessages">DialogflowCxPageEntryFulfillmentMessages</a>]</code> | *No description.* |
 
 ---
 
@@ -8328,10 +8328,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillmentMessagesList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[DialogflowCxPageEntryFulfillmentMessages]]
+internal_value: IResolvable | typing.List[DialogflowCxPageEntryFulfillmentMessages]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillmentMessages">DialogflowCxPageEntryFulfillmentMessages</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillmentMessages">DialogflowCxPageEntryFulfillmentMessages</a>]
 
 ---
 
@@ -9436,7 +9436,7 @@ def reset_text() -> None
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillmentMessagesOutputReference.property.textInput">text_input</a></code> | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillmentMessagesText">DialogflowCxPageEntryFulfillmentMessagesText</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillmentMessagesOutputReference.property.channel">channel</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillmentMessagesOutputReference.property.payload">payload</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillmentMessagesOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillmentMessages">DialogflowCxPageEntryFulfillmentMessages</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillmentMessagesOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillmentMessages">DialogflowCxPageEntryFulfillmentMessages</a></code> | *No description.* |
 
 ---
 
@@ -9627,10 +9627,10 @@ payload: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillmentMessagesOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, DialogflowCxPageEntryFulfillmentMessages]
+internal_value: IResolvable | DialogflowCxPageEntryFulfillmentMessages
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillmentMessages">DialogflowCxPageEntryFulfillmentMessages</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillmentMessages">DialogflowCxPageEntryFulfillmentMessages</a>
 
 ---
 
@@ -10793,13 +10793,13 @@ Returns a reversible string representation.
 
 ```python
 def put_conditional_cases(
-  value: typing.Union[IResolvable, typing.List[DialogflowCxPageEntryFulfillmentConditionalCases]]
+  value: IResolvable | typing.List[DialogflowCxPageEntryFulfillmentConditionalCases]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillmentOutputReference.putConditionalCases.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillmentConditionalCases">DialogflowCxPageEntryFulfillmentConditionalCases</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillmentConditionalCases">DialogflowCxPageEntryFulfillmentConditionalCases</a>]
 
 ---
 
@@ -10807,13 +10807,13 @@ def put_conditional_cases(
 
 ```python
 def put_messages(
-  value: typing.Union[IResolvable, typing.List[DialogflowCxPageEntryFulfillmentMessages]]
+  value: IResolvable | typing.List[DialogflowCxPageEntryFulfillmentMessages]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillmentOutputReference.putMessages.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillmentMessages">DialogflowCxPageEntryFulfillmentMessages</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillmentMessages">DialogflowCxPageEntryFulfillmentMessages</a>]
 
 ---
 
@@ -10821,13 +10821,13 @@ def put_messages(
 
 ```python
 def put_set_parameter_actions(
-  value: typing.Union[IResolvable, typing.List[DialogflowCxPageEntryFulfillmentSetParameterActions]]
+  value: IResolvable | typing.List[DialogflowCxPageEntryFulfillmentSetParameterActions]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillmentOutputReference.putSetParameterActions.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillmentSetParameterActions">DialogflowCxPageEntryFulfillmentSetParameterActions</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillmentSetParameterActions">DialogflowCxPageEntryFulfillmentSetParameterActions</a>]
 
 ---
 
@@ -10877,13 +10877,13 @@ def reset_webhook() -> None
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillmentOutputReference.property.conditionalCases">conditional_cases</a></code> | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillmentConditionalCasesList">DialogflowCxPageEntryFulfillmentConditionalCasesList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillmentOutputReference.property.messages">messages</a></code> | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillmentMessagesList">DialogflowCxPageEntryFulfillmentMessagesList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillmentOutputReference.property.setParameterActions">set_parameter_actions</a></code> | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillmentSetParameterActionsList">DialogflowCxPageEntryFulfillmentSetParameterActionsList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillmentOutputReference.property.conditionalCasesInput">conditional_cases_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillmentConditionalCases">DialogflowCxPageEntryFulfillmentConditionalCases</a>]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillmentOutputReference.property.messagesInput">messages_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillmentMessages">DialogflowCxPageEntryFulfillmentMessages</a>]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillmentOutputReference.property.returnPartialResponsesInput">return_partial_responses_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillmentOutputReference.property.setParameterActionsInput">set_parameter_actions_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillmentSetParameterActions">DialogflowCxPageEntryFulfillmentSetParameterActions</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillmentOutputReference.property.conditionalCasesInput">conditional_cases_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillmentConditionalCases">DialogflowCxPageEntryFulfillmentConditionalCases</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillmentOutputReference.property.messagesInput">messages_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillmentMessages">DialogflowCxPageEntryFulfillmentMessages</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillmentOutputReference.property.returnPartialResponsesInput">return_partial_responses_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillmentOutputReference.property.setParameterActionsInput">set_parameter_actions_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillmentSetParameterActions">DialogflowCxPageEntryFulfillmentSetParameterActions</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillmentOutputReference.property.tagInput">tag_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillmentOutputReference.property.webhookInput">webhook_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillmentOutputReference.property.returnPartialResponses">return_partial_responses</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillmentOutputReference.property.returnPartialResponses">return_partial_responses</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillmentOutputReference.property.tag">tag</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillmentOutputReference.property.webhook">webhook</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillmentOutputReference.property.internalValue">internal_value</a></code> | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillment">DialogflowCxPageEntryFulfillment</a></code> | *No description.* |
@@ -10947,40 +10947,40 @@ set_parameter_actions: DialogflowCxPageEntryFulfillmentSetParameterActionsList
 ##### `conditional_cases_input`<sup>Optional</sup> <a name="conditional_cases_input" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillmentOutputReference.property.conditionalCasesInput"></a>
 
 ```python
-conditional_cases_input: typing.Union[IResolvable, typing.List[DialogflowCxPageEntryFulfillmentConditionalCases]]
+conditional_cases_input: IResolvable | typing.List[DialogflowCxPageEntryFulfillmentConditionalCases]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillmentConditionalCases">DialogflowCxPageEntryFulfillmentConditionalCases</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillmentConditionalCases">DialogflowCxPageEntryFulfillmentConditionalCases</a>]
 
 ---
 
 ##### `messages_input`<sup>Optional</sup> <a name="messages_input" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillmentOutputReference.property.messagesInput"></a>
 
 ```python
-messages_input: typing.Union[IResolvable, typing.List[DialogflowCxPageEntryFulfillmentMessages]]
+messages_input: IResolvable | typing.List[DialogflowCxPageEntryFulfillmentMessages]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillmentMessages">DialogflowCxPageEntryFulfillmentMessages</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillmentMessages">DialogflowCxPageEntryFulfillmentMessages</a>]
 
 ---
 
 ##### `return_partial_responses_input`<sup>Optional</sup> <a name="return_partial_responses_input" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillmentOutputReference.property.returnPartialResponsesInput"></a>
 
 ```python
-return_partial_responses_input: typing.Union[bool, IResolvable]
+return_partial_responses_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `set_parameter_actions_input`<sup>Optional</sup> <a name="set_parameter_actions_input" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillmentOutputReference.property.setParameterActionsInput"></a>
 
 ```python
-set_parameter_actions_input: typing.Union[IResolvable, typing.List[DialogflowCxPageEntryFulfillmentSetParameterActions]]
+set_parameter_actions_input: IResolvable | typing.List[DialogflowCxPageEntryFulfillmentSetParameterActions]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillmentSetParameterActions">DialogflowCxPageEntryFulfillmentSetParameterActions</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillmentSetParameterActions">DialogflowCxPageEntryFulfillmentSetParameterActions</a>]
 
 ---
 
@@ -11007,10 +11007,10 @@ webhook_input: str
 ##### `return_partial_responses`<sup>Required</sup> <a name="return_partial_responses" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillmentOutputReference.property.returnPartialResponses"></a>
 
 ```python
-return_partial_responses: typing.Union[bool, IResolvable]
+return_partial_responses: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -11176,7 +11176,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillmentSetParameterActionsList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillmentSetParameterActionsList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillmentSetParameterActionsList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillmentSetParameterActions">DialogflowCxPageEntryFulfillmentSetParameterActions</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillmentSetParameterActionsList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillmentSetParameterActions">DialogflowCxPageEntryFulfillmentSetParameterActions</a>]</code> | *No description.* |
 
 ---
 
@@ -11207,10 +11207,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillmentSetParameterActionsList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[DialogflowCxPageEntryFulfillmentSetParameterActions]]
+internal_value: IResolvable | typing.List[DialogflowCxPageEntryFulfillmentSetParameterActions]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillmentSetParameterActions">DialogflowCxPageEntryFulfillmentSetParameterActions</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillmentSetParameterActions">DialogflowCxPageEntryFulfillmentSetParameterActions</a>]
 
 ---
 
@@ -11488,7 +11488,7 @@ def reset_value() -> None
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillmentSetParameterActionsOutputReference.property.valueInput">value_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillmentSetParameterActionsOutputReference.property.parameter">parameter</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillmentSetParameterActionsOutputReference.property.value">value</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillmentSetParameterActionsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillmentSetParameterActions">DialogflowCxPageEntryFulfillmentSetParameterActions</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillmentSetParameterActionsOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillmentSetParameterActions">DialogflowCxPageEntryFulfillmentSetParameterActions</a></code> | *No description.* |
 
 ---
 
@@ -11559,10 +11559,10 @@ value: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillmentSetParameterActionsOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, DialogflowCxPageEntryFulfillmentSetParameterActions]
+internal_value: IResolvable | DialogflowCxPageEntryFulfillmentSetParameterActions
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillmentSetParameterActions">DialogflowCxPageEntryFulfillmentSetParameterActions</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillmentSetParameterActions">DialogflowCxPageEntryFulfillmentSetParameterActions</a>
 
 ---
 
@@ -11698,7 +11698,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlers">DialogflowCxPageEventHandlers</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlers">DialogflowCxPageEventHandlers</a>]</code> | *No description.* |
 
 ---
 
@@ -11729,10 +11729,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[DialogflowCxPageEventHandlers]]
+internal_value: IResolvable | typing.List[DialogflowCxPageEventHandlers]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlers">DialogflowCxPageEventHandlers</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlers">DialogflowCxPageEventHandlers</a>]
 
 ---
 
@@ -11994,10 +11994,10 @@ Returns a reversible string representation.
 
 ```python
 def put_trigger_fulfillment(
-  conditional_cases: typing.Union[IResolvable, typing.List[DialogflowCxPageEventHandlersTriggerFulfillmentConditionalCases]] = None,
-  messages: typing.Union[IResolvable, typing.List[DialogflowCxPageEventHandlersTriggerFulfillmentMessages]] = None,
-  return_partial_responses: typing.Union[bool, IResolvable] = None,
-  set_parameter_actions: typing.Union[IResolvable, typing.List[DialogflowCxPageEventHandlersTriggerFulfillmentSetParameterActions]] = None,
+  conditional_cases: IResolvable | typing.List[DialogflowCxPageEventHandlersTriggerFulfillmentConditionalCases] = None,
+  messages: IResolvable | typing.List[DialogflowCxPageEventHandlersTriggerFulfillmentMessages] = None,
+  return_partial_responses: bool | IResolvable = None,
+  set_parameter_actions: IResolvable | typing.List[DialogflowCxPageEventHandlersTriggerFulfillmentSetParameterActions] = None,
   tag: str = None,
   webhook: str = None
 ) -> None
@@ -12005,7 +12005,7 @@ def put_trigger_fulfillment(
 
 ###### `conditional_cases`<sup>Optional</sup> <a name="conditional_cases" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersOutputReference.putTriggerFulfillment.parameter.conditionalCases"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillmentConditionalCases">DialogflowCxPageEventHandlersTriggerFulfillmentConditionalCases</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillmentConditionalCases">DialogflowCxPageEventHandlersTriggerFulfillmentConditionalCases</a>]
 
 conditional_cases block.
 
@@ -12015,7 +12015,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `messages`<sup>Optional</sup> <a name="messages" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersOutputReference.putTriggerFulfillment.parameter.messages"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillmentMessages">DialogflowCxPageEventHandlersTriggerFulfillmentMessages</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillmentMessages">DialogflowCxPageEventHandlersTriggerFulfillmentMessages</a>]
 
 messages block.
 
@@ -12025,7 +12025,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `return_partial_responses`<sup>Optional</sup> <a name="return_partial_responses" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersOutputReference.putTriggerFulfillment.parameter.returnPartialResponses"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Whether Dialogflow should return currently queued fulfillment response messages in streaming APIs.
 
@@ -12037,7 +12037,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `set_parameter_actions`<sup>Optional</sup> <a name="set_parameter_actions" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersOutputReference.putTriggerFulfillment.parameter.setParameterActions"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillmentSetParameterActions">DialogflowCxPageEventHandlersTriggerFulfillmentSetParameterActions</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillmentSetParameterActions">DialogflowCxPageEventHandlersTriggerFulfillmentSetParameterActions</a>]
 
 set_parameter_actions block.
 
@@ -12107,7 +12107,7 @@ def reset_trigger_fulfillment() -> None
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersOutputReference.property.event">event</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersOutputReference.property.targetFlow">target_flow</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersOutputReference.property.targetPage">target_page</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlers">DialogflowCxPageEventHandlers</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlers">DialogflowCxPageEventHandlers</a></code> | *No description.* |
 
 ---
 
@@ -12228,10 +12228,10 @@ target_page: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, DialogflowCxPageEventHandlers]
+internal_value: IResolvable | DialogflowCxPageEventHandlers
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlers">DialogflowCxPageEventHandlers</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlers">DialogflowCxPageEventHandlers</a>
 
 ---
 
@@ -12367,7 +12367,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillmentConditionalCasesList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillmentConditionalCasesList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillmentConditionalCasesList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillmentConditionalCases">DialogflowCxPageEventHandlersTriggerFulfillmentConditionalCases</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillmentConditionalCasesList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillmentConditionalCases">DialogflowCxPageEventHandlersTriggerFulfillmentConditionalCases</a>]</code> | *No description.* |
 
 ---
 
@@ -12398,10 +12398,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillmentConditionalCasesList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[DialogflowCxPageEventHandlersTriggerFulfillmentConditionalCases]]
+internal_value: IResolvable | typing.List[DialogflowCxPageEventHandlersTriggerFulfillmentConditionalCases]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillmentConditionalCases">DialogflowCxPageEventHandlersTriggerFulfillmentConditionalCases</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillmentConditionalCases">DialogflowCxPageEventHandlersTriggerFulfillmentConditionalCases</a>]
 
 ---
 
@@ -12670,7 +12670,7 @@ def reset_cases() -> None
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillmentConditionalCasesOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillmentConditionalCasesOutputReference.property.casesInput">cases_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillmentConditionalCasesOutputReference.property.cases">cases</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillmentConditionalCasesOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillmentConditionalCases">DialogflowCxPageEventHandlersTriggerFulfillmentConditionalCases</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillmentConditionalCasesOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillmentConditionalCases">DialogflowCxPageEventHandlersTriggerFulfillmentConditionalCases</a></code> | *No description.* |
 
 ---
 
@@ -12721,10 +12721,10 @@ cases: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillmentConditionalCasesOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, DialogflowCxPageEventHandlersTriggerFulfillmentConditionalCases]
+internal_value: IResolvable | DialogflowCxPageEventHandlersTriggerFulfillmentConditionalCases
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillmentConditionalCases">DialogflowCxPageEventHandlersTriggerFulfillmentConditionalCases</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillmentConditionalCases">DialogflowCxPageEventHandlersTriggerFulfillmentConditionalCases</a>
 
 ---
 
@@ -13163,7 +13163,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillmentMessagesList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillmentMessagesList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillmentMessagesList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillmentMessages">DialogflowCxPageEventHandlersTriggerFulfillmentMessages</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillmentMessagesList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillmentMessages">DialogflowCxPageEventHandlersTriggerFulfillmentMessages</a>]</code> | *No description.* |
 
 ---
 
@@ -13194,10 +13194,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillmentMessagesList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[DialogflowCxPageEventHandlersTriggerFulfillmentMessages]]
+internal_value: IResolvable | typing.List[DialogflowCxPageEventHandlersTriggerFulfillmentMessages]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillmentMessages">DialogflowCxPageEventHandlersTriggerFulfillmentMessages</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillmentMessages">DialogflowCxPageEventHandlersTriggerFulfillmentMessages</a>]
 
 ---
 
@@ -14302,7 +14302,7 @@ def reset_text() -> None
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillmentMessagesOutputReference.property.textInput">text_input</a></code> | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillmentMessagesText">DialogflowCxPageEventHandlersTriggerFulfillmentMessagesText</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillmentMessagesOutputReference.property.channel">channel</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillmentMessagesOutputReference.property.payload">payload</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillmentMessagesOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillmentMessages">DialogflowCxPageEventHandlersTriggerFulfillmentMessages</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillmentMessagesOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillmentMessages">DialogflowCxPageEventHandlersTriggerFulfillmentMessages</a></code> | *No description.* |
 
 ---
 
@@ -14493,10 +14493,10 @@ payload: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillmentMessagesOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, DialogflowCxPageEventHandlersTriggerFulfillmentMessages]
+internal_value: IResolvable | DialogflowCxPageEventHandlersTriggerFulfillmentMessages
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillmentMessages">DialogflowCxPageEventHandlersTriggerFulfillmentMessages</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillmentMessages">DialogflowCxPageEventHandlersTriggerFulfillmentMessages</a>
 
 ---
 
@@ -15659,13 +15659,13 @@ Returns a reversible string representation.
 
 ```python
 def put_conditional_cases(
-  value: typing.Union[IResolvable, typing.List[DialogflowCxPageEventHandlersTriggerFulfillmentConditionalCases]]
+  value: IResolvable | typing.List[DialogflowCxPageEventHandlersTriggerFulfillmentConditionalCases]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillmentOutputReference.putConditionalCases.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillmentConditionalCases">DialogflowCxPageEventHandlersTriggerFulfillmentConditionalCases</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillmentConditionalCases">DialogflowCxPageEventHandlersTriggerFulfillmentConditionalCases</a>]
 
 ---
 
@@ -15673,13 +15673,13 @@ def put_conditional_cases(
 
 ```python
 def put_messages(
-  value: typing.Union[IResolvable, typing.List[DialogflowCxPageEventHandlersTriggerFulfillmentMessages]]
+  value: IResolvable | typing.List[DialogflowCxPageEventHandlersTriggerFulfillmentMessages]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillmentOutputReference.putMessages.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillmentMessages">DialogflowCxPageEventHandlersTriggerFulfillmentMessages</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillmentMessages">DialogflowCxPageEventHandlersTriggerFulfillmentMessages</a>]
 
 ---
 
@@ -15687,13 +15687,13 @@ def put_messages(
 
 ```python
 def put_set_parameter_actions(
-  value: typing.Union[IResolvable, typing.List[DialogflowCxPageEventHandlersTriggerFulfillmentSetParameterActions]]
+  value: IResolvable | typing.List[DialogflowCxPageEventHandlersTriggerFulfillmentSetParameterActions]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillmentOutputReference.putSetParameterActions.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillmentSetParameterActions">DialogflowCxPageEventHandlersTriggerFulfillmentSetParameterActions</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillmentSetParameterActions">DialogflowCxPageEventHandlersTriggerFulfillmentSetParameterActions</a>]
 
 ---
 
@@ -15743,13 +15743,13 @@ def reset_webhook() -> None
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillmentOutputReference.property.conditionalCases">conditional_cases</a></code> | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillmentConditionalCasesList">DialogflowCxPageEventHandlersTriggerFulfillmentConditionalCasesList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillmentOutputReference.property.messages">messages</a></code> | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillmentMessagesList">DialogflowCxPageEventHandlersTriggerFulfillmentMessagesList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillmentOutputReference.property.setParameterActions">set_parameter_actions</a></code> | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillmentSetParameterActionsList">DialogflowCxPageEventHandlersTriggerFulfillmentSetParameterActionsList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillmentOutputReference.property.conditionalCasesInput">conditional_cases_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillmentConditionalCases">DialogflowCxPageEventHandlersTriggerFulfillmentConditionalCases</a>]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillmentOutputReference.property.messagesInput">messages_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillmentMessages">DialogflowCxPageEventHandlersTriggerFulfillmentMessages</a>]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillmentOutputReference.property.returnPartialResponsesInput">return_partial_responses_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillmentOutputReference.property.setParameterActionsInput">set_parameter_actions_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillmentSetParameterActions">DialogflowCxPageEventHandlersTriggerFulfillmentSetParameterActions</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillmentOutputReference.property.conditionalCasesInput">conditional_cases_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillmentConditionalCases">DialogflowCxPageEventHandlersTriggerFulfillmentConditionalCases</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillmentOutputReference.property.messagesInput">messages_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillmentMessages">DialogflowCxPageEventHandlersTriggerFulfillmentMessages</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillmentOutputReference.property.returnPartialResponsesInput">return_partial_responses_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillmentOutputReference.property.setParameterActionsInput">set_parameter_actions_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillmentSetParameterActions">DialogflowCxPageEventHandlersTriggerFulfillmentSetParameterActions</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillmentOutputReference.property.tagInput">tag_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillmentOutputReference.property.webhookInput">webhook_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillmentOutputReference.property.returnPartialResponses">return_partial_responses</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillmentOutputReference.property.returnPartialResponses">return_partial_responses</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillmentOutputReference.property.tag">tag</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillmentOutputReference.property.webhook">webhook</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillmentOutputReference.property.internalValue">internal_value</a></code> | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillment">DialogflowCxPageEventHandlersTriggerFulfillment</a></code> | *No description.* |
@@ -15813,40 +15813,40 @@ set_parameter_actions: DialogflowCxPageEventHandlersTriggerFulfillmentSetParamet
 ##### `conditional_cases_input`<sup>Optional</sup> <a name="conditional_cases_input" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillmentOutputReference.property.conditionalCasesInput"></a>
 
 ```python
-conditional_cases_input: typing.Union[IResolvable, typing.List[DialogflowCxPageEventHandlersTriggerFulfillmentConditionalCases]]
+conditional_cases_input: IResolvable | typing.List[DialogflowCxPageEventHandlersTriggerFulfillmentConditionalCases]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillmentConditionalCases">DialogflowCxPageEventHandlersTriggerFulfillmentConditionalCases</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillmentConditionalCases">DialogflowCxPageEventHandlersTriggerFulfillmentConditionalCases</a>]
 
 ---
 
 ##### `messages_input`<sup>Optional</sup> <a name="messages_input" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillmentOutputReference.property.messagesInput"></a>
 
 ```python
-messages_input: typing.Union[IResolvable, typing.List[DialogflowCxPageEventHandlersTriggerFulfillmentMessages]]
+messages_input: IResolvable | typing.List[DialogflowCxPageEventHandlersTriggerFulfillmentMessages]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillmentMessages">DialogflowCxPageEventHandlersTriggerFulfillmentMessages</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillmentMessages">DialogflowCxPageEventHandlersTriggerFulfillmentMessages</a>]
 
 ---
 
 ##### `return_partial_responses_input`<sup>Optional</sup> <a name="return_partial_responses_input" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillmentOutputReference.property.returnPartialResponsesInput"></a>
 
 ```python
-return_partial_responses_input: typing.Union[bool, IResolvable]
+return_partial_responses_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `set_parameter_actions_input`<sup>Optional</sup> <a name="set_parameter_actions_input" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillmentOutputReference.property.setParameterActionsInput"></a>
 
 ```python
-set_parameter_actions_input: typing.Union[IResolvable, typing.List[DialogflowCxPageEventHandlersTriggerFulfillmentSetParameterActions]]
+set_parameter_actions_input: IResolvable | typing.List[DialogflowCxPageEventHandlersTriggerFulfillmentSetParameterActions]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillmentSetParameterActions">DialogflowCxPageEventHandlersTriggerFulfillmentSetParameterActions</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillmentSetParameterActions">DialogflowCxPageEventHandlersTriggerFulfillmentSetParameterActions</a>]
 
 ---
 
@@ -15873,10 +15873,10 @@ webhook_input: str
 ##### `return_partial_responses`<sup>Required</sup> <a name="return_partial_responses" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillmentOutputReference.property.returnPartialResponses"></a>
 
 ```python
-return_partial_responses: typing.Union[bool, IResolvable]
+return_partial_responses: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -16042,7 +16042,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillmentSetParameterActionsList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillmentSetParameterActionsList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillmentSetParameterActionsList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillmentSetParameterActions">DialogflowCxPageEventHandlersTriggerFulfillmentSetParameterActions</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillmentSetParameterActionsList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillmentSetParameterActions">DialogflowCxPageEventHandlersTriggerFulfillmentSetParameterActions</a>]</code> | *No description.* |
 
 ---
 
@@ -16073,10 +16073,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillmentSetParameterActionsList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[DialogflowCxPageEventHandlersTriggerFulfillmentSetParameterActions]]
+internal_value: IResolvable | typing.List[DialogflowCxPageEventHandlersTriggerFulfillmentSetParameterActions]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillmentSetParameterActions">DialogflowCxPageEventHandlersTriggerFulfillmentSetParameterActions</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillmentSetParameterActions">DialogflowCxPageEventHandlersTriggerFulfillmentSetParameterActions</a>]
 
 ---
 
@@ -16354,7 +16354,7 @@ def reset_value() -> None
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillmentSetParameterActionsOutputReference.property.valueInput">value_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillmentSetParameterActionsOutputReference.property.parameter">parameter</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillmentSetParameterActionsOutputReference.property.value">value</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillmentSetParameterActionsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillmentSetParameterActions">DialogflowCxPageEventHandlersTriggerFulfillmentSetParameterActions</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillmentSetParameterActionsOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillmentSetParameterActions">DialogflowCxPageEventHandlersTriggerFulfillmentSetParameterActions</a></code> | *No description.* |
 
 ---
 
@@ -16425,10 +16425,10 @@ value: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillmentSetParameterActionsOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, DialogflowCxPageEventHandlersTriggerFulfillmentSetParameterActions]
+internal_value: IResolvable | DialogflowCxPageEventHandlersTriggerFulfillmentSetParameterActions
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillmentSetParameterActions">DialogflowCxPageEventHandlersTriggerFulfillmentSetParameterActions</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillmentSetParameterActions">DialogflowCxPageEventHandlersTriggerFulfillmentSetParameterActions</a>
 
 ---
 
@@ -16667,13 +16667,13 @@ Returns a reversible string representation.
 
 ```python
 def put_parameters(
-  value: typing.Union[IResolvable, typing.List[DialogflowCxPageFormParameters]]
+  value: IResolvable | typing.List[DialogflowCxPageFormParameters]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormOutputReference.putParameters.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParameters">DialogflowCxPageFormParameters</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParameters">DialogflowCxPageFormParameters</a>]
 
 ---
 
@@ -16691,7 +16691,7 @@ def reset_parameters() -> None
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormOutputReference.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormOutputReference.property.parameters">parameters</a></code> | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersList">DialogflowCxPageFormParametersList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormOutputReference.property.parametersInput">parameters_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParameters">DialogflowCxPageFormParameters</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormOutputReference.property.parametersInput">parameters_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParameters">DialogflowCxPageFormParameters</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormOutputReference.property.internalValue">internal_value</a></code> | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageForm">DialogflowCxPageForm</a></code> | *No description.* |
 
 ---
@@ -16733,10 +16733,10 @@ parameters: DialogflowCxPageFormParametersList
 ##### `parameters_input`<sup>Optional</sup> <a name="parameters_input" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormOutputReference.property.parametersInput"></a>
 
 ```python
-parameters_input: typing.Union[IResolvable, typing.List[DialogflowCxPageFormParameters]]
+parameters_input: IResolvable | typing.List[DialogflowCxPageFormParameters]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParameters">DialogflowCxPageFormParameters</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParameters">DialogflowCxPageFormParameters</a>]
 
 ---
 
@@ -17007,10 +17007,10 @@ def reset_max_digits() -> None
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersAdvancedSettingsDtmfSettingsOutputReference.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersAdvancedSettingsDtmfSettingsOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersAdvancedSettingsDtmfSettingsOutputReference.property.enabledInput">enabled_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersAdvancedSettingsDtmfSettingsOutputReference.property.enabledInput">enabled_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersAdvancedSettingsDtmfSettingsOutputReference.property.finishDigitInput">finish_digit_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersAdvancedSettingsDtmfSettingsOutputReference.property.maxDigitsInput">max_digits_input</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersAdvancedSettingsDtmfSettingsOutputReference.property.enabled">enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersAdvancedSettingsDtmfSettingsOutputReference.property.enabled">enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersAdvancedSettingsDtmfSettingsOutputReference.property.finishDigit">finish_digit</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersAdvancedSettingsDtmfSettingsOutputReference.property.maxDigits">max_digits</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersAdvancedSettingsDtmfSettingsOutputReference.property.internalValue">internal_value</a></code> | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersAdvancedSettingsDtmfSettings">DialogflowCxPageFormParametersAdvancedSettingsDtmfSettings</a></code> | *No description.* |
@@ -17044,10 +17044,10 @@ fqn: str
 ##### `enabled_input`<sup>Optional</sup> <a name="enabled_input" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersAdvancedSettingsDtmfSettingsOutputReference.property.enabledInput"></a>
 
 ```python
-enabled_input: typing.Union[bool, IResolvable]
+enabled_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -17074,10 +17074,10 @@ max_digits_input: typing.Union[int, float]
 ##### `enabled`<sup>Required</sup> <a name="enabled" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersAdvancedSettingsDtmfSettingsOutputReference.property.enabled"></a>
 
 ```python
-enabled: typing.Union[bool, IResolvable]
+enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -17346,7 +17346,7 @@ Returns a reversible string representation.
 
 ```python
 def put_dtmf_settings(
-  enabled: typing.Union[bool, IResolvable] = None,
+  enabled: bool | IResolvable = None,
   finish_digit: str = None,
   max_digits: typing.Union[int, float] = None
 ) -> None
@@ -17354,7 +17354,7 @@ def put_dtmf_settings(
 
 ###### `enabled`<sup>Optional</sup> <a name="enabled" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersAdvancedSettingsOutputReference.putDtmfSettings.parameter.enabled"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 If true, incoming audio is processed for DTMF (dual tone multi frequency) events.
 
@@ -17589,7 +17589,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentConditionalCasesList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentConditionalCasesList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentConditionalCasesList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentConditionalCases">DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentConditionalCases</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentConditionalCasesList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentConditionalCases">DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentConditionalCases</a>]</code> | *No description.* |
 
 ---
 
@@ -17620,10 +17620,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentConditionalCasesList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentConditionalCases]]
+internal_value: IResolvable | typing.List[DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentConditionalCases]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentConditionalCases">DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentConditionalCases</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentConditionalCases">DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentConditionalCases</a>]
 
 ---
 
@@ -17892,7 +17892,7 @@ def reset_cases() -> None
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentConditionalCasesOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentConditionalCasesOutputReference.property.casesInput">cases_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentConditionalCasesOutputReference.property.cases">cases</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentConditionalCasesOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentConditionalCases">DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentConditionalCases</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentConditionalCasesOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentConditionalCases">DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentConditionalCases</a></code> | *No description.* |
 
 ---
 
@@ -17943,10 +17943,10 @@ cases: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentConditionalCasesOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentConditionalCases]
+internal_value: IResolvable | DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentConditionalCases
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentConditionalCases">DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentConditionalCases</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentConditionalCases">DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentConditionalCases</a>
 
 ---
 
@@ -18385,7 +18385,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentMessagesList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentMessagesList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentMessagesList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentMessages">DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentMessages</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentMessagesList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentMessages">DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentMessages</a>]</code> | *No description.* |
 
 ---
 
@@ -18416,10 +18416,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentMessagesList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentMessages]]
+internal_value: IResolvable | typing.List[DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentMessages]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentMessages">DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentMessages</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentMessages">DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentMessages</a>]
 
 ---
 
@@ -19524,7 +19524,7 @@ def reset_text() -> None
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentMessagesOutputReference.property.textInput">text_input</a></code> | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentMessagesText">DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentMessagesText</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentMessagesOutputReference.property.channel">channel</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentMessagesOutputReference.property.payload">payload</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentMessagesOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentMessages">DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentMessages</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentMessagesOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentMessages">DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentMessages</a></code> | *No description.* |
 
 ---
 
@@ -19715,10 +19715,10 @@ payload: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentMessagesOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentMessages]
+internal_value: IResolvable | DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentMessages
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentMessages">DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentMessages</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentMessages">DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentMessages</a>
 
 ---
 
@@ -20881,13 +20881,13 @@ Returns a reversible string representation.
 
 ```python
 def put_conditional_cases(
-  value: typing.Union[IResolvable, typing.List[DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentConditionalCases]]
+  value: IResolvable | typing.List[DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentConditionalCases]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentOutputReference.putConditionalCases.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentConditionalCases">DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentConditionalCases</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentConditionalCases">DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentConditionalCases</a>]
 
 ---
 
@@ -20895,13 +20895,13 @@ def put_conditional_cases(
 
 ```python
 def put_messages(
-  value: typing.Union[IResolvable, typing.List[DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentMessages]]
+  value: IResolvable | typing.List[DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentMessages]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentOutputReference.putMessages.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentMessages">DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentMessages</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentMessages">DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentMessages</a>]
 
 ---
 
@@ -20909,13 +20909,13 @@ def put_messages(
 
 ```python
 def put_set_parameter_actions(
-  value: typing.Union[IResolvable, typing.List[DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentSetParameterActions]]
+  value: IResolvable | typing.List[DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentSetParameterActions]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentOutputReference.putSetParameterActions.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentSetParameterActions">DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentSetParameterActions</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentSetParameterActions">DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentSetParameterActions</a>]
 
 ---
 
@@ -20965,13 +20965,13 @@ def reset_webhook() -> None
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentOutputReference.property.conditionalCases">conditional_cases</a></code> | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentConditionalCasesList">DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentConditionalCasesList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentOutputReference.property.messages">messages</a></code> | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentMessagesList">DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentMessagesList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentOutputReference.property.setParameterActions">set_parameter_actions</a></code> | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentSetParameterActionsList">DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentSetParameterActionsList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentOutputReference.property.conditionalCasesInput">conditional_cases_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentConditionalCases">DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentConditionalCases</a>]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentOutputReference.property.messagesInput">messages_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentMessages">DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentMessages</a>]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentOutputReference.property.returnPartialResponsesInput">return_partial_responses_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentOutputReference.property.setParameterActionsInput">set_parameter_actions_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentSetParameterActions">DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentSetParameterActions</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentOutputReference.property.conditionalCasesInput">conditional_cases_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentConditionalCases">DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentConditionalCases</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentOutputReference.property.messagesInput">messages_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentMessages">DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentMessages</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentOutputReference.property.returnPartialResponsesInput">return_partial_responses_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentOutputReference.property.setParameterActionsInput">set_parameter_actions_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentSetParameterActions">DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentSetParameterActions</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentOutputReference.property.tagInput">tag_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentOutputReference.property.webhookInput">webhook_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentOutputReference.property.returnPartialResponses">return_partial_responses</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentOutputReference.property.returnPartialResponses">return_partial_responses</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentOutputReference.property.tag">tag</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentOutputReference.property.webhook">webhook</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentOutputReference.property.internalValue">internal_value</a></code> | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillment">DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillment</a></code> | *No description.* |
@@ -21035,40 +21035,40 @@ set_parameter_actions: DialogflowCxPageFormParametersFillBehaviorInitialPromptFu
 ##### `conditional_cases_input`<sup>Optional</sup> <a name="conditional_cases_input" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentOutputReference.property.conditionalCasesInput"></a>
 
 ```python
-conditional_cases_input: typing.Union[IResolvable, typing.List[DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentConditionalCases]]
+conditional_cases_input: IResolvable | typing.List[DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentConditionalCases]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentConditionalCases">DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentConditionalCases</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentConditionalCases">DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentConditionalCases</a>]
 
 ---
 
 ##### `messages_input`<sup>Optional</sup> <a name="messages_input" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentOutputReference.property.messagesInput"></a>
 
 ```python
-messages_input: typing.Union[IResolvable, typing.List[DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentMessages]]
+messages_input: IResolvable | typing.List[DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentMessages]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentMessages">DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentMessages</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentMessages">DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentMessages</a>]
 
 ---
 
 ##### `return_partial_responses_input`<sup>Optional</sup> <a name="return_partial_responses_input" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentOutputReference.property.returnPartialResponsesInput"></a>
 
 ```python
-return_partial_responses_input: typing.Union[bool, IResolvable]
+return_partial_responses_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `set_parameter_actions_input`<sup>Optional</sup> <a name="set_parameter_actions_input" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentOutputReference.property.setParameterActionsInput"></a>
 
 ```python
-set_parameter_actions_input: typing.Union[IResolvable, typing.List[DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentSetParameterActions]]
+set_parameter_actions_input: IResolvable | typing.List[DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentSetParameterActions]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentSetParameterActions">DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentSetParameterActions</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentSetParameterActions">DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentSetParameterActions</a>]
 
 ---
 
@@ -21095,10 +21095,10 @@ webhook_input: str
 ##### `return_partial_responses`<sup>Required</sup> <a name="return_partial_responses" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentOutputReference.property.returnPartialResponses"></a>
 
 ```python
-return_partial_responses: typing.Union[bool, IResolvable]
+return_partial_responses: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -21264,7 +21264,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentSetParameterActionsList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentSetParameterActionsList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentSetParameterActionsList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentSetParameterActions">DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentSetParameterActions</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentSetParameterActionsList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentSetParameterActions">DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentSetParameterActions</a>]</code> | *No description.* |
 
 ---
 
@@ -21295,10 +21295,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentSetParameterActionsList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentSetParameterActions]]
+internal_value: IResolvable | typing.List[DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentSetParameterActions]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentSetParameterActions">DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentSetParameterActions</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentSetParameterActions">DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentSetParameterActions</a>]
 
 ---
 
@@ -21576,7 +21576,7 @@ def reset_value() -> None
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentSetParameterActionsOutputReference.property.valueInput">value_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentSetParameterActionsOutputReference.property.parameter">parameter</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentSetParameterActionsOutputReference.property.value">value</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentSetParameterActionsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentSetParameterActions">DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentSetParameterActions</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentSetParameterActionsOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentSetParameterActions">DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentSetParameterActions</a></code> | *No description.* |
 
 ---
 
@@ -21647,10 +21647,10 @@ value: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentSetParameterActionsOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentSetParameterActions]
+internal_value: IResolvable | DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentSetParameterActions
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentSetParameterActions">DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentSetParameterActions</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentSetParameterActions">DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentSetParameterActions</a>
 
 ---
 
@@ -21891,10 +21891,10 @@ Returns a reversible string representation.
 
 ```python
 def put_initial_prompt_fulfillment(
-  conditional_cases: typing.Union[IResolvable, typing.List[DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentConditionalCases]] = None,
-  messages: typing.Union[IResolvable, typing.List[DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentMessages]] = None,
-  return_partial_responses: typing.Union[bool, IResolvable] = None,
-  set_parameter_actions: typing.Union[IResolvable, typing.List[DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentSetParameterActions]] = None,
+  conditional_cases: IResolvable | typing.List[DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentConditionalCases] = None,
+  messages: IResolvable | typing.List[DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentMessages] = None,
+  return_partial_responses: bool | IResolvable = None,
+  set_parameter_actions: IResolvable | typing.List[DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentSetParameterActions] = None,
   tag: str = None,
   webhook: str = None
 ) -> None
@@ -21902,7 +21902,7 @@ def put_initial_prompt_fulfillment(
 
 ###### `conditional_cases`<sup>Optional</sup> <a name="conditional_cases" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorOutputReference.putInitialPromptFulfillment.parameter.conditionalCases"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentConditionalCases">DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentConditionalCases</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentConditionalCases">DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentConditionalCases</a>]
 
 conditional_cases block.
 
@@ -21912,7 +21912,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `messages`<sup>Optional</sup> <a name="messages" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorOutputReference.putInitialPromptFulfillment.parameter.messages"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentMessages">DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentMessages</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentMessages">DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentMessages</a>]
 
 messages block.
 
@@ -21922,7 +21922,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `return_partial_responses`<sup>Optional</sup> <a name="return_partial_responses" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorOutputReference.putInitialPromptFulfillment.parameter.returnPartialResponses"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Whether Dialogflow should return currently queued fulfillment response messages in streaming APIs.
 
@@ -21934,7 +21934,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `set_parameter_actions`<sup>Optional</sup> <a name="set_parameter_actions" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorOutputReference.putInitialPromptFulfillment.parameter.setParameterActions"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentSetParameterActions">DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentSetParameterActions</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentSetParameterActions">DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentSetParameterActions</a>]
 
 set_parameter_actions block.
 
@@ -21968,13 +21968,13 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ```python
 def put_reprompt_event_handlers(
-  value: typing.Union[IResolvable, typing.List[DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlers]]
+  value: IResolvable | typing.List[DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlers]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorOutputReference.putRepromptEventHandlers.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlers">DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlers</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlers">DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlers</a>]
 
 ---
 
@@ -22000,7 +22000,7 @@ def reset_reprompt_event_handlers() -> None
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorOutputReference.property.initialPromptFulfillment">initial_prompt_fulfillment</a></code> | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentOutputReference">DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorOutputReference.property.repromptEventHandlers">reprompt_event_handlers</a></code> | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersList">DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorOutputReference.property.initialPromptFulfillmentInput">initial_prompt_fulfillment_input</a></code> | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillment">DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillment</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorOutputReference.property.repromptEventHandlersInput">reprompt_event_handlers_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlers">DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlers</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorOutputReference.property.repromptEventHandlersInput">reprompt_event_handlers_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlers">DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlers</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorOutputReference.property.internalValue">internal_value</a></code> | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehavior">DialogflowCxPageFormParametersFillBehavior</a></code> | *No description.* |
 
 ---
@@ -22062,10 +22062,10 @@ initial_prompt_fulfillment_input: DialogflowCxPageFormParametersFillBehaviorInit
 ##### `reprompt_event_handlers_input`<sup>Optional</sup> <a name="reprompt_event_handlers_input" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorOutputReference.property.repromptEventHandlersInput"></a>
 
 ```python
-reprompt_event_handlers_input: typing.Union[IResolvable, typing.List[DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlers]]
+reprompt_event_handlers_input: IResolvable | typing.List[DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlers]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlers">DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlers</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlers">DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlers</a>]
 
 ---
 
@@ -22211,7 +22211,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlers">DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlers</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlers">DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlers</a>]</code> | *No description.* |
 
 ---
 
@@ -22242,10 +22242,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlers]]
+internal_value: IResolvable | typing.List[DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlers]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlers">DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlers</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlers">DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlers</a>]
 
 ---
 
@@ -22507,10 +22507,10 @@ Returns a reversible string representation.
 
 ```python
 def put_trigger_fulfillment(
-  conditional_cases: typing.Union[IResolvable, typing.List[DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentConditionalCases]] = None,
-  messages: typing.Union[IResolvable, typing.List[DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentMessages]] = None,
-  return_partial_responses: typing.Union[bool, IResolvable] = None,
-  set_parameter_actions: typing.Union[IResolvable, typing.List[DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentSetParameterActions]] = None,
+  conditional_cases: IResolvable | typing.List[DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentConditionalCases] = None,
+  messages: IResolvable | typing.List[DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentMessages] = None,
+  return_partial_responses: bool | IResolvable = None,
+  set_parameter_actions: IResolvable | typing.List[DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentSetParameterActions] = None,
   tag: str = None,
   webhook: str = None
 ) -> None
@@ -22518,7 +22518,7 @@ def put_trigger_fulfillment(
 
 ###### `conditional_cases`<sup>Optional</sup> <a name="conditional_cases" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersOutputReference.putTriggerFulfillment.parameter.conditionalCases"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentConditionalCases">DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentConditionalCases</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentConditionalCases">DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentConditionalCases</a>]
 
 conditional_cases block.
 
@@ -22528,7 +22528,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `messages`<sup>Optional</sup> <a name="messages" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersOutputReference.putTriggerFulfillment.parameter.messages"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentMessages">DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentMessages</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentMessages">DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentMessages</a>]
 
 messages block.
 
@@ -22538,7 +22538,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `return_partial_responses`<sup>Optional</sup> <a name="return_partial_responses" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersOutputReference.putTriggerFulfillment.parameter.returnPartialResponses"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Whether Dialogflow should return currently queued fulfillment response messages in streaming APIs.
 
@@ -22550,7 +22550,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `set_parameter_actions`<sup>Optional</sup> <a name="set_parameter_actions" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersOutputReference.putTriggerFulfillment.parameter.setParameterActions"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentSetParameterActions">DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentSetParameterActions</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentSetParameterActions">DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentSetParameterActions</a>]
 
 set_parameter_actions block.
 
@@ -22620,7 +22620,7 @@ def reset_trigger_fulfillment() -> None
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersOutputReference.property.event">event</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersOutputReference.property.targetFlow">target_flow</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersOutputReference.property.targetPage">target_page</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlers">DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlers</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlers">DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlers</a></code> | *No description.* |
 
 ---
 
@@ -22741,10 +22741,10 @@ target_page: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlers]
+internal_value: IResolvable | DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlers
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlers">DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlers</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlers">DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlers</a>
 
 ---
 
@@ -22880,7 +22880,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentConditionalCasesList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentConditionalCasesList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentConditionalCasesList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentConditionalCases">DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentConditionalCases</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentConditionalCasesList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentConditionalCases">DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentConditionalCases</a>]</code> | *No description.* |
 
 ---
 
@@ -22911,10 +22911,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentConditionalCasesList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentConditionalCases]]
+internal_value: IResolvable | typing.List[DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentConditionalCases]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentConditionalCases">DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentConditionalCases</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentConditionalCases">DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentConditionalCases</a>]
 
 ---
 
@@ -23183,7 +23183,7 @@ def reset_cases() -> None
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentConditionalCasesOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentConditionalCasesOutputReference.property.casesInput">cases_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentConditionalCasesOutputReference.property.cases">cases</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentConditionalCasesOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentConditionalCases">DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentConditionalCases</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentConditionalCasesOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentConditionalCases">DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentConditionalCases</a></code> | *No description.* |
 
 ---
 
@@ -23234,10 +23234,10 @@ cases: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentConditionalCasesOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentConditionalCases]
+internal_value: IResolvable | DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentConditionalCases
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentConditionalCases">DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentConditionalCases</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentConditionalCases">DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentConditionalCases</a>
 
 ---
 
@@ -23676,7 +23676,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentMessagesList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentMessagesList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentMessagesList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentMessages">DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentMessages</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentMessagesList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentMessages">DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentMessages</a>]</code> | *No description.* |
 
 ---
 
@@ -23707,10 +23707,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentMessagesList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentMessages]]
+internal_value: IResolvable | typing.List[DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentMessages]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentMessages">DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentMessages</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentMessages">DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentMessages</a>]
 
 ---
 
@@ -24815,7 +24815,7 @@ def reset_text() -> None
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentMessagesOutputReference.property.textInput">text_input</a></code> | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentMessagesText">DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentMessagesText</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentMessagesOutputReference.property.channel">channel</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentMessagesOutputReference.property.payload">payload</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentMessagesOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentMessages">DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentMessages</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentMessagesOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentMessages">DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentMessages</a></code> | *No description.* |
 
 ---
 
@@ -25006,10 +25006,10 @@ payload: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentMessagesOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentMessages]
+internal_value: IResolvable | DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentMessages
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentMessages">DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentMessages</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentMessages">DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentMessages</a>
 
 ---
 
@@ -26172,13 +26172,13 @@ Returns a reversible string representation.
 
 ```python
 def put_conditional_cases(
-  value: typing.Union[IResolvable, typing.List[DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentConditionalCases]]
+  value: IResolvable | typing.List[DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentConditionalCases]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentOutputReference.putConditionalCases.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentConditionalCases">DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentConditionalCases</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentConditionalCases">DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentConditionalCases</a>]
 
 ---
 
@@ -26186,13 +26186,13 @@ def put_conditional_cases(
 
 ```python
 def put_messages(
-  value: typing.Union[IResolvable, typing.List[DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentMessages]]
+  value: IResolvable | typing.List[DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentMessages]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentOutputReference.putMessages.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentMessages">DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentMessages</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentMessages">DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentMessages</a>]
 
 ---
 
@@ -26200,13 +26200,13 @@ def put_messages(
 
 ```python
 def put_set_parameter_actions(
-  value: typing.Union[IResolvable, typing.List[DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentSetParameterActions]]
+  value: IResolvable | typing.List[DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentSetParameterActions]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentOutputReference.putSetParameterActions.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentSetParameterActions">DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentSetParameterActions</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentSetParameterActions">DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentSetParameterActions</a>]
 
 ---
 
@@ -26256,13 +26256,13 @@ def reset_webhook() -> None
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentOutputReference.property.conditionalCases">conditional_cases</a></code> | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentConditionalCasesList">DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentConditionalCasesList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentOutputReference.property.messages">messages</a></code> | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentMessagesList">DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentMessagesList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentOutputReference.property.setParameterActions">set_parameter_actions</a></code> | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentSetParameterActionsList">DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentSetParameterActionsList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentOutputReference.property.conditionalCasesInput">conditional_cases_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentConditionalCases">DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentConditionalCases</a>]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentOutputReference.property.messagesInput">messages_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentMessages">DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentMessages</a>]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentOutputReference.property.returnPartialResponsesInput">return_partial_responses_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentOutputReference.property.setParameterActionsInput">set_parameter_actions_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentSetParameterActions">DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentSetParameterActions</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentOutputReference.property.conditionalCasesInput">conditional_cases_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentConditionalCases">DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentConditionalCases</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentOutputReference.property.messagesInput">messages_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentMessages">DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentMessages</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentOutputReference.property.returnPartialResponsesInput">return_partial_responses_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentOutputReference.property.setParameterActionsInput">set_parameter_actions_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentSetParameterActions">DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentSetParameterActions</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentOutputReference.property.tagInput">tag_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentOutputReference.property.webhookInput">webhook_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentOutputReference.property.returnPartialResponses">return_partial_responses</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentOutputReference.property.returnPartialResponses">return_partial_responses</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentOutputReference.property.tag">tag</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentOutputReference.property.webhook">webhook</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentOutputReference.property.internalValue">internal_value</a></code> | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillment">DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillment</a></code> | *No description.* |
@@ -26326,40 +26326,40 @@ set_parameter_actions: DialogflowCxPageFormParametersFillBehaviorRepromptEventHa
 ##### `conditional_cases_input`<sup>Optional</sup> <a name="conditional_cases_input" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentOutputReference.property.conditionalCasesInput"></a>
 
 ```python
-conditional_cases_input: typing.Union[IResolvable, typing.List[DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentConditionalCases]]
+conditional_cases_input: IResolvable | typing.List[DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentConditionalCases]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentConditionalCases">DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentConditionalCases</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentConditionalCases">DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentConditionalCases</a>]
 
 ---
 
 ##### `messages_input`<sup>Optional</sup> <a name="messages_input" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentOutputReference.property.messagesInput"></a>
 
 ```python
-messages_input: typing.Union[IResolvable, typing.List[DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentMessages]]
+messages_input: IResolvable | typing.List[DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentMessages]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentMessages">DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentMessages</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentMessages">DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentMessages</a>]
 
 ---
 
 ##### `return_partial_responses_input`<sup>Optional</sup> <a name="return_partial_responses_input" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentOutputReference.property.returnPartialResponsesInput"></a>
 
 ```python
-return_partial_responses_input: typing.Union[bool, IResolvable]
+return_partial_responses_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `set_parameter_actions_input`<sup>Optional</sup> <a name="set_parameter_actions_input" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentOutputReference.property.setParameterActionsInput"></a>
 
 ```python
-set_parameter_actions_input: typing.Union[IResolvable, typing.List[DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentSetParameterActions]]
+set_parameter_actions_input: IResolvable | typing.List[DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentSetParameterActions]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentSetParameterActions">DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentSetParameterActions</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentSetParameterActions">DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentSetParameterActions</a>]
 
 ---
 
@@ -26386,10 +26386,10 @@ webhook_input: str
 ##### `return_partial_responses`<sup>Required</sup> <a name="return_partial_responses" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentOutputReference.property.returnPartialResponses"></a>
 
 ```python
-return_partial_responses: typing.Union[bool, IResolvable]
+return_partial_responses: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -26555,7 +26555,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentSetParameterActionsList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentSetParameterActionsList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentSetParameterActionsList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentSetParameterActions">DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentSetParameterActions</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentSetParameterActionsList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentSetParameterActions">DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentSetParameterActions</a>]</code> | *No description.* |
 
 ---
 
@@ -26586,10 +26586,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentSetParameterActionsList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentSetParameterActions]]
+internal_value: IResolvable | typing.List[DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentSetParameterActions]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentSetParameterActions">DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentSetParameterActions</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentSetParameterActions">DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentSetParameterActions</a>]
 
 ---
 
@@ -26867,7 +26867,7 @@ def reset_value() -> None
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentSetParameterActionsOutputReference.property.valueInput">value_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentSetParameterActionsOutputReference.property.parameter">parameter</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentSetParameterActionsOutputReference.property.value">value</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentSetParameterActionsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentSetParameterActions">DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentSetParameterActions</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentSetParameterActionsOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentSetParameterActions">DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentSetParameterActions</a></code> | *No description.* |
 
 ---
 
@@ -26938,10 +26938,10 @@ value: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentSetParameterActionsOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentSetParameterActions]
+internal_value: IResolvable | DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentSetParameterActions
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentSetParameterActions">DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentSetParameterActions</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentSetParameterActions">DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentSetParameterActions</a>
 
 ---
 
@@ -27077,7 +27077,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParameters">DialogflowCxPageFormParameters</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParameters">DialogflowCxPageFormParameters</a>]</code> | *No description.* |
 
 ---
 
@@ -27108,10 +27108,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[DialogflowCxPageFormParameters]]
+internal_value: IResolvable | typing.List[DialogflowCxPageFormParameters]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParameters">DialogflowCxPageFormParameters</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParameters">DialogflowCxPageFormParameters</a>]
 
 ---
 
@@ -27397,7 +27397,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ```python
 def put_fill_behavior(
   initial_prompt_fulfillment: DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillment = None,
-  reprompt_event_handlers: typing.Union[IResolvable, typing.List[DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlers]] = None
+  reprompt_event_handlers: IResolvable | typing.List[DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlers] = None
 ) -> None
 ```
 
@@ -27413,7 +27413,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `reprompt_event_handlers`<sup>Optional</sup> <a name="reprompt_event_handlers" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersOutputReference.putFillBehavior.parameter.repromptEventHandlers"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlers">DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlers</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlers">DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlers</a>]
 
 reprompt_event_handlers block.
 
@@ -27483,16 +27483,16 @@ def reset_required() -> None
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersOutputReference.property.displayNameInput">display_name_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersOutputReference.property.entityTypeInput">entity_type_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersOutputReference.property.fillBehaviorInput">fill_behavior_input</a></code> | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehavior">DialogflowCxPageFormParametersFillBehavior</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersOutputReference.property.isListInput">is_list_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersOutputReference.property.redactInput">redact_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersOutputReference.property.requiredInput">required_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersOutputReference.property.isListInput">is_list_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersOutputReference.property.redactInput">redact_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersOutputReference.property.requiredInput">required_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersOutputReference.property.defaultValue">default_value</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersOutputReference.property.displayName">display_name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersOutputReference.property.entityType">entity_type</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersOutputReference.property.isList">is_list</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersOutputReference.property.redact">redact</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersOutputReference.property.required">required</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParameters">DialogflowCxPageFormParameters</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersOutputReference.property.isList">is_list</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersOutputReference.property.redact">redact</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersOutputReference.property.required">required</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParameters">DialogflowCxPageFormParameters</a></code> | *No description.* |
 
 ---
 
@@ -27593,30 +27593,30 @@ fill_behavior_input: DialogflowCxPageFormParametersFillBehavior
 ##### `is_list_input`<sup>Optional</sup> <a name="is_list_input" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersOutputReference.property.isListInput"></a>
 
 ```python
-is_list_input: typing.Union[bool, IResolvable]
+is_list_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `redact_input`<sup>Optional</sup> <a name="redact_input" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersOutputReference.property.redactInput"></a>
 
 ```python
-redact_input: typing.Union[bool, IResolvable]
+redact_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `required_input`<sup>Optional</sup> <a name="required_input" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersOutputReference.property.requiredInput"></a>
 
 ```python
-required_input: typing.Union[bool, IResolvable]
+required_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -27653,40 +27653,40 @@ entity_type: str
 ##### `is_list`<sup>Required</sup> <a name="is_list" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersOutputReference.property.isList"></a>
 
 ```python
-is_list: typing.Union[bool, IResolvable]
+is_list: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `redact`<sup>Required</sup> <a name="redact" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersOutputReference.property.redact"></a>
 
 ```python
-redact: typing.Union[bool, IResolvable]
+redact: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `required`<sup>Required</sup> <a name="required" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersOutputReference.property.required"></a>
 
 ```python
-required: typing.Union[bool, IResolvable]
+required: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, DialogflowCxPageFormParameters]
+internal_value: IResolvable | DialogflowCxPageFormParameters
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParameters">DialogflowCxPageFormParameters</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParameters">DialogflowCxPageFormParameters</a>
 
 ---
 
@@ -27822,7 +27822,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsDataStoreConnectionsList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsDataStoreConnectionsList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsDataStoreConnectionsList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsDataStoreConnections">DialogflowCxPageKnowledgeConnectorSettingsDataStoreConnections</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsDataStoreConnectionsList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsDataStoreConnections">DialogflowCxPageKnowledgeConnectorSettingsDataStoreConnections</a>]</code> | *No description.* |
 
 ---
 
@@ -27853,10 +27853,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsDataStoreConnectionsList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[DialogflowCxPageKnowledgeConnectorSettingsDataStoreConnections]]
+internal_value: IResolvable | typing.List[DialogflowCxPageKnowledgeConnectorSettingsDataStoreConnections]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsDataStoreConnections">DialogflowCxPageKnowledgeConnectorSettingsDataStoreConnections</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsDataStoreConnections">DialogflowCxPageKnowledgeConnectorSettingsDataStoreConnections</a>]
 
 ---
 
@@ -28143,7 +28143,7 @@ def reset_document_processing_mode() -> None
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsDataStoreConnectionsOutputReference.property.dataStore">data_store</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsDataStoreConnectionsOutputReference.property.dataStoreType">data_store_type</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsDataStoreConnectionsOutputReference.property.documentProcessingMode">document_processing_mode</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsDataStoreConnectionsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsDataStoreConnections">DialogflowCxPageKnowledgeConnectorSettingsDataStoreConnections</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsDataStoreConnectionsOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsDataStoreConnections">DialogflowCxPageKnowledgeConnectorSettingsDataStoreConnections</a></code> | *No description.* |
 
 ---
 
@@ -28234,10 +28234,10 @@ document_processing_mode: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsDataStoreConnectionsOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, DialogflowCxPageKnowledgeConnectorSettingsDataStoreConnections]
+internal_value: IResolvable | DialogflowCxPageKnowledgeConnectorSettingsDataStoreConnections
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsDataStoreConnections">DialogflowCxPageKnowledgeConnectorSettingsDataStoreConnections</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsDataStoreConnections">DialogflowCxPageKnowledgeConnectorSettingsDataStoreConnections</a>
 
 ---
 
@@ -28481,13 +28481,13 @@ Returns a reversible string representation.
 
 ```python
 def put_data_store_connections(
-  value: typing.Union[IResolvable, typing.List[DialogflowCxPageKnowledgeConnectorSettingsDataStoreConnections]]
+  value: IResolvable | typing.List[DialogflowCxPageKnowledgeConnectorSettingsDataStoreConnections]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsOutputReference.putDataStoreConnections.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsDataStoreConnections">DialogflowCxPageKnowledgeConnectorSettingsDataStoreConnections</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsDataStoreConnections">DialogflowCxPageKnowledgeConnectorSettingsDataStoreConnections</a>]
 
 ---
 
@@ -28496,11 +28496,11 @@ def put_data_store_connections(
 ```python
 def put_trigger_fulfillment(
   advanced_settings: DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettings = None,
-  conditional_cases: typing.Union[IResolvable, typing.List[DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentConditionalCases]] = None,
-  enable_generative_fallback: typing.Union[bool, IResolvable] = None,
-  messages: typing.Union[IResolvable, typing.List[DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessages]] = None,
-  return_partial_responses: typing.Union[bool, IResolvable] = None,
-  set_parameter_actions: typing.Union[IResolvable, typing.List[DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentSetParameterActions]] = None,
+  conditional_cases: IResolvable | typing.List[DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentConditionalCases] = None,
+  enable_generative_fallback: bool | IResolvable = None,
+  messages: IResolvable | typing.List[DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessages] = None,
+  return_partial_responses: bool | IResolvable = None,
+  set_parameter_actions: IResolvable | typing.List[DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentSetParameterActions] = None,
   tag: str = None,
   webhook: str = None
 ) -> None
@@ -28518,7 +28518,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `conditional_cases`<sup>Optional</sup> <a name="conditional_cases" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsOutputReference.putTriggerFulfillment.parameter.conditionalCases"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentConditionalCases">DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentConditionalCases</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentConditionalCases">DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentConditionalCases</a>]
 
 conditional_cases block.
 
@@ -28528,7 +28528,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `enable_generative_fallback`<sup>Optional</sup> <a name="enable_generative_fallback" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsOutputReference.putTriggerFulfillment.parameter.enableGenerativeFallback"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 If the flag is true, the agent will utilize LLM to generate a text response.
 
@@ -28540,7 +28540,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `messages`<sup>Optional</sup> <a name="messages" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsOutputReference.putTriggerFulfillment.parameter.messages"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessages">DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessages</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessages">DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessages</a>]
 
 messages block.
 
@@ -28550,7 +28550,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `return_partial_responses`<sup>Optional</sup> <a name="return_partial_responses" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsOutputReference.putTriggerFulfillment.parameter.returnPartialResponses"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Whether Dialogflow should return currently queued fulfillment response messages in streaming APIs.
 
@@ -28562,7 +28562,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `set_parameter_actions`<sup>Optional</sup> <a name="set_parameter_actions" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsOutputReference.putTriggerFulfillment.parameter.setParameterActions"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentSetParameterActions">DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentSetParameterActions</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentSetParameterActions">DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentSetParameterActions</a>]
 
 set_parameter_actions block.
 
@@ -28631,12 +28631,12 @@ def reset_trigger_fulfillment() -> None
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsOutputReference.property.dataStoreConnections">data_store_connections</a></code> | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsDataStoreConnectionsList">DialogflowCxPageKnowledgeConnectorSettingsDataStoreConnectionsList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsOutputReference.property.triggerFulfillment">trigger_fulfillment</a></code> | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentOutputReference">DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentOutputReference</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsOutputReference.property.dataStoreConnectionsInput">data_store_connections_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsDataStoreConnections">DialogflowCxPageKnowledgeConnectorSettingsDataStoreConnections</a>]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsOutputReference.property.enabledInput">enabled_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsOutputReference.property.dataStoreConnectionsInput">data_store_connections_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsDataStoreConnections">DialogflowCxPageKnowledgeConnectorSettingsDataStoreConnections</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsOutputReference.property.enabledInput">enabled_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsOutputReference.property.targetFlowInput">target_flow_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsOutputReference.property.targetPageInput">target_page_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsOutputReference.property.triggerFulfillmentInput">trigger_fulfillment_input</a></code> | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillment">DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillment</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsOutputReference.property.enabled">enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsOutputReference.property.enabled">enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsOutputReference.property.targetFlow">target_flow</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsOutputReference.property.targetPage">target_page</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsOutputReference.property.internalValue">internal_value</a></code> | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettings">DialogflowCxPageKnowledgeConnectorSettings</a></code> | *No description.* |
@@ -28690,20 +28690,20 @@ trigger_fulfillment: DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmen
 ##### `data_store_connections_input`<sup>Optional</sup> <a name="data_store_connections_input" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsOutputReference.property.dataStoreConnectionsInput"></a>
 
 ```python
-data_store_connections_input: typing.Union[IResolvable, typing.List[DialogflowCxPageKnowledgeConnectorSettingsDataStoreConnections]]
+data_store_connections_input: IResolvable | typing.List[DialogflowCxPageKnowledgeConnectorSettingsDataStoreConnections]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsDataStoreConnections">DialogflowCxPageKnowledgeConnectorSettingsDataStoreConnections</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsDataStoreConnections">DialogflowCxPageKnowledgeConnectorSettingsDataStoreConnections</a>]
 
 ---
 
 ##### `enabled_input`<sup>Optional</sup> <a name="enabled_input" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsOutputReference.property.enabledInput"></a>
 
 ```python
-enabled_input: typing.Union[bool, IResolvable]
+enabled_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -28740,10 +28740,10 @@ trigger_fulfillment_input: DialogflowCxPageKnowledgeConnectorSettingsTriggerFulf
 ##### `enabled`<sup>Required</sup> <a name="enabled" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsOutputReference.property.enabled"></a>
 
 ```python
-enabled: typing.Union[bool, IResolvable]
+enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -29048,12 +29048,12 @@ def reset_max_digits() -> None
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsDtmfSettingsOutputReference.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsDtmfSettingsOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsDtmfSettingsOutputReference.property.enabledInput">enabled_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsDtmfSettingsOutputReference.property.enabledInput">enabled_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsDtmfSettingsOutputReference.property.endpointingTimeoutDurationInput">endpointing_timeout_duration_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsDtmfSettingsOutputReference.property.finishDigitInput">finish_digit_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsDtmfSettingsOutputReference.property.interdigitTimeoutDurationInput">interdigit_timeout_duration_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsDtmfSettingsOutputReference.property.maxDigitsInput">max_digits_input</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsDtmfSettingsOutputReference.property.enabled">enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsDtmfSettingsOutputReference.property.enabled">enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsDtmfSettingsOutputReference.property.endpointingTimeoutDuration">endpointing_timeout_duration</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsDtmfSettingsOutputReference.property.finishDigit">finish_digit</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsDtmfSettingsOutputReference.property.interdigitTimeoutDuration">interdigit_timeout_duration</a></code> | <code>str</code> | *No description.* |
@@ -29089,10 +29089,10 @@ fqn: str
 ##### `enabled_input`<sup>Optional</sup> <a name="enabled_input" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsDtmfSettingsOutputReference.property.enabledInput"></a>
 
 ```python
-enabled_input: typing.Union[bool, IResolvable]
+enabled_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -29139,10 +29139,10 @@ max_digits_input: typing.Union[int, float]
 ##### `enabled`<sup>Required</sup> <a name="enabled" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsDtmfSettingsOutputReference.property.enabled"></a>
 
 ```python
-enabled: typing.Union[bool, IResolvable]
+enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -29453,12 +29453,12 @@ def reset_enable_stackdriver_logging() -> None
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsLoggingSettingsOutputReference.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsLoggingSettingsOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsLoggingSettingsOutputReference.property.enableConsentBasedRedactionInput">enable_consent_based_redaction_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsLoggingSettingsOutputReference.property.enableInteractionLoggingInput">enable_interaction_logging_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsLoggingSettingsOutputReference.property.enableStackdriverLoggingInput">enable_stackdriver_logging_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsLoggingSettingsOutputReference.property.enableConsentBasedRedaction">enable_consent_based_redaction</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsLoggingSettingsOutputReference.property.enableInteractionLogging">enable_interaction_logging</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsLoggingSettingsOutputReference.property.enableStackdriverLogging">enable_stackdriver_logging</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsLoggingSettingsOutputReference.property.enableConsentBasedRedactionInput">enable_consent_based_redaction_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsLoggingSettingsOutputReference.property.enableInteractionLoggingInput">enable_interaction_logging_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsLoggingSettingsOutputReference.property.enableStackdriverLoggingInput">enable_stackdriver_logging_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsLoggingSettingsOutputReference.property.enableConsentBasedRedaction">enable_consent_based_redaction</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsLoggingSettingsOutputReference.property.enableInteractionLogging">enable_interaction_logging</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsLoggingSettingsOutputReference.property.enableStackdriverLogging">enable_stackdriver_logging</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsLoggingSettingsOutputReference.property.internalValue">internal_value</a></code> | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsLoggingSettings">DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsLoggingSettings</a></code> | *No description.* |
 
 ---
@@ -29490,60 +29490,60 @@ fqn: str
 ##### `enable_consent_based_redaction_input`<sup>Optional</sup> <a name="enable_consent_based_redaction_input" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsLoggingSettingsOutputReference.property.enableConsentBasedRedactionInput"></a>
 
 ```python
-enable_consent_based_redaction_input: typing.Union[bool, IResolvable]
+enable_consent_based_redaction_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `enable_interaction_logging_input`<sup>Optional</sup> <a name="enable_interaction_logging_input" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsLoggingSettingsOutputReference.property.enableInteractionLoggingInput"></a>
 
 ```python
-enable_interaction_logging_input: typing.Union[bool, IResolvable]
+enable_interaction_logging_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `enable_stackdriver_logging_input`<sup>Optional</sup> <a name="enable_stackdriver_logging_input" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsLoggingSettingsOutputReference.property.enableStackdriverLoggingInput"></a>
 
 ```python
-enable_stackdriver_logging_input: typing.Union[bool, IResolvable]
+enable_stackdriver_logging_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `enable_consent_based_redaction`<sup>Required</sup> <a name="enable_consent_based_redaction" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsLoggingSettingsOutputReference.property.enableConsentBasedRedaction"></a>
 
 ```python
-enable_consent_based_redaction: typing.Union[bool, IResolvable]
+enable_consent_based_redaction: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `enable_interaction_logging`<sup>Required</sup> <a name="enable_interaction_logging" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsLoggingSettingsOutputReference.property.enableInteractionLogging"></a>
 
 ```python
-enable_interaction_logging: typing.Union[bool, IResolvable]
+enable_interaction_logging: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `enable_stackdriver_logging`<sup>Required</sup> <a name="enable_stackdriver_logging" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsLoggingSettingsOutputReference.property.enableStackdriverLogging"></a>
 
 ```python
-enable_stackdriver_logging: typing.Union[bool, IResolvable]
+enable_stackdriver_logging: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -29796,7 +29796,7 @@ Returns a reversible string representation.
 
 ```python
 def put_dtmf_settings(
-  enabled: typing.Union[bool, IResolvable] = None,
+  enabled: bool | IResolvable = None,
   endpointing_timeout_duration: str = None,
   finish_digit: str = None,
   interdigit_timeout_duration: str = None,
@@ -29806,7 +29806,7 @@ def put_dtmf_settings(
 
 ###### `enabled`<sup>Optional</sup> <a name="enabled" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsOutputReference.putDtmfSettings.parameter.enabled"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 If true, incoming audio is processed for DTMF (dual tone multi frequtectency) events.
 
@@ -29864,15 +29864,15 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ```python
 def put_logging_settings(
-  enable_consent_based_redaction: typing.Union[bool, IResolvable] = None,
-  enable_interaction_logging: typing.Union[bool, IResolvable] = None,
-  enable_stackdriver_logging: typing.Union[bool, IResolvable] = None
+  enable_consent_based_redaction: bool | IResolvable = None,
+  enable_interaction_logging: bool | IResolvable = None,
+  enable_stackdriver_logging: bool | IResolvable = None
 ) -> None
 ```
 
 ###### `enable_consent_based_redaction`<sup>Optional</sup> <a name="enable_consent_based_redaction" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsOutputReference.putLoggingSettings.parameter.enableConsentBasedRedaction"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Enables consent-based end-user input redaction, if true, a pre-defined session parameter **$session.params.conversation-redaction** will be used to determine if the utterance should be redacted.
 
@@ -29882,7 +29882,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `enable_interaction_logging`<sup>Optional</sup> <a name="enable_interaction_logging" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsOutputReference.putLoggingSettings.parameter.enableInteractionLogging"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Enables DF Interaction logging.
 
@@ -29892,7 +29892,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `enable_stackdriver_logging`<sup>Optional</sup> <a name="enable_stackdriver_logging" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsOutputReference.putLoggingSettings.parameter.enableStackdriverLogging"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Enables Google Cloud Logging.
 
@@ -29907,7 +29907,7 @@ def put_speech_settings(
   endpointer_sensitivity: typing.Union[int, float] = None,
   models: typing.Mapping[str] = None,
   no_speech_timeout: str = None,
-  use_timeout_based_endpointing: typing.Union[bool, IResolvable] = None
+  use_timeout_based_endpointing: bool | IResolvable = None
 ) -> None
 ```
 
@@ -29946,7 +29946,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `use_timeout_based_endpointing`<sup>Optional</sup> <a name="use_timeout_based_endpointing" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsOutputReference.putSpeechSettings.parameter.useTimeoutBasedEndpointing"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Use timeout based endpointing, interpreting endpointer sensitivity as seconds of timeout value.
 
@@ -30350,11 +30350,11 @@ def reset_use_timeout_based_endpointing() -> None
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsSpeechSettingsOutputReference.property.endpointerSensitivityInput">endpointer_sensitivity_input</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsSpeechSettingsOutputReference.property.modelsInput">models_input</a></code> | <code>typing.Mapping[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsSpeechSettingsOutputReference.property.noSpeechTimeoutInput">no_speech_timeout_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsSpeechSettingsOutputReference.property.useTimeoutBasedEndpointingInput">use_timeout_based_endpointing_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsSpeechSettingsOutputReference.property.useTimeoutBasedEndpointingInput">use_timeout_based_endpointing_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsSpeechSettingsOutputReference.property.endpointerSensitivity">endpointer_sensitivity</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsSpeechSettingsOutputReference.property.models">models</a></code> | <code>typing.Mapping[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsSpeechSettingsOutputReference.property.noSpeechTimeout">no_speech_timeout</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsSpeechSettingsOutputReference.property.useTimeoutBasedEndpointing">use_timeout_based_endpointing</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsSpeechSettingsOutputReference.property.useTimeoutBasedEndpointing">use_timeout_based_endpointing</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsSpeechSettingsOutputReference.property.internalValue">internal_value</a></code> | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsSpeechSettings">DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsSpeechSettings</a></code> | *No description.* |
 
 ---
@@ -30416,10 +30416,10 @@ no_speech_timeout_input: str
 ##### `use_timeout_based_endpointing_input`<sup>Optional</sup> <a name="use_timeout_based_endpointing_input" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsSpeechSettingsOutputReference.property.useTimeoutBasedEndpointingInput"></a>
 
 ```python
-use_timeout_based_endpointing_input: typing.Union[bool, IResolvable]
+use_timeout_based_endpointing_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -30456,10 +30456,10 @@ no_speech_timeout: str
 ##### `use_timeout_based_endpointing`<sup>Required</sup> <a name="use_timeout_based_endpointing" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsSpeechSettingsOutputReference.property.useTimeoutBasedEndpointing"></a>
 
 ```python
-use_timeout_based_endpointing: typing.Union[bool, IResolvable]
+use_timeout_based_endpointing: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -30605,7 +30605,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentConditionalCasesList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentConditionalCasesList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentConditionalCasesList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentConditionalCases">DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentConditionalCases</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentConditionalCasesList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentConditionalCases">DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentConditionalCases</a>]</code> | *No description.* |
 
 ---
 
@@ -30636,10 +30636,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentConditionalCasesList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentConditionalCases]]
+internal_value: IResolvable | typing.List[DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentConditionalCases]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentConditionalCases">DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentConditionalCases</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentConditionalCases">DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentConditionalCases</a>]
 
 ---
 
@@ -30908,7 +30908,7 @@ def reset_cases() -> None
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentConditionalCasesOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentConditionalCasesOutputReference.property.casesInput">cases_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentConditionalCasesOutputReference.property.cases">cases</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentConditionalCasesOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentConditionalCases">DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentConditionalCases</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentConditionalCasesOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentConditionalCases">DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentConditionalCases</a></code> | *No description.* |
 
 ---
 
@@ -30959,10 +30959,10 @@ cases: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentConditionalCasesOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentConditionalCases]
+internal_value: IResolvable | DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentConditionalCases
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentConditionalCases">DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentConditionalCases</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentConditionalCases">DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentConditionalCases</a>
 
 ---
 
@@ -32128,7 +32128,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessages">DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessages</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessages">DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessages</a>]</code> | *No description.* |
 
 ---
 
@@ -32159,10 +32159,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessages]]
+internal_value: IResolvable | typing.List[DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessages]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessages">DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessages</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessages">DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessages</a>]
 
 ---
 
@@ -34243,7 +34243,7 @@ def reset_text() -> None
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesOutputReference.property.textInput">text_input</a></code> | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesText">DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesText</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesOutputReference.property.channel">channel</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesOutputReference.property.payload">payload</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessages">DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessages</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessages">DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessages</a></code> | *No description.* |
 
 ---
 
@@ -34474,10 +34474,10 @@ payload: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessages]
+internal_value: IResolvable | DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessages
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessages">DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessages</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessages">DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessages</a>
 
 ---
 
@@ -35683,13 +35683,13 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ```python
 def put_conditional_cases(
-  value: typing.Union[IResolvable, typing.List[DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentConditionalCases]]
+  value: IResolvable | typing.List[DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentConditionalCases]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentOutputReference.putConditionalCases.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentConditionalCases">DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentConditionalCases</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentConditionalCases">DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentConditionalCases</a>]
 
 ---
 
@@ -35697,13 +35697,13 @@ def put_conditional_cases(
 
 ```python
 def put_messages(
-  value: typing.Union[IResolvable, typing.List[DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessages]]
+  value: IResolvable | typing.List[DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessages]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentOutputReference.putMessages.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessages">DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessages</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessages">DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessages</a>]
 
 ---
 
@@ -35711,13 +35711,13 @@ def put_messages(
 
 ```python
 def put_set_parameter_actions(
-  value: typing.Union[IResolvable, typing.List[DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentSetParameterActions]]
+  value: IResolvable | typing.List[DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentSetParameterActions]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentOutputReference.putSetParameterActions.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentSetParameterActions">DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentSetParameterActions</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentSetParameterActions">DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentSetParameterActions</a>]
 
 ---
 
@@ -35781,15 +35781,15 @@ def reset_webhook() -> None
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentOutputReference.property.messages">messages</a></code> | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesList">DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentOutputReference.property.setParameterActions">set_parameter_actions</a></code> | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentSetParameterActionsList">DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentSetParameterActionsList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentOutputReference.property.advancedSettingsInput">advanced_settings_input</a></code> | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettings">DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettings</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentOutputReference.property.conditionalCasesInput">conditional_cases_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentConditionalCases">DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentConditionalCases</a>]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentOutputReference.property.enableGenerativeFallbackInput">enable_generative_fallback_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentOutputReference.property.messagesInput">messages_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessages">DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessages</a>]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentOutputReference.property.returnPartialResponsesInput">return_partial_responses_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentOutputReference.property.setParameterActionsInput">set_parameter_actions_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentSetParameterActions">DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentSetParameterActions</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentOutputReference.property.conditionalCasesInput">conditional_cases_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentConditionalCases">DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentConditionalCases</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentOutputReference.property.enableGenerativeFallbackInput">enable_generative_fallback_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentOutputReference.property.messagesInput">messages_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessages">DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessages</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentOutputReference.property.returnPartialResponsesInput">return_partial_responses_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentOutputReference.property.setParameterActionsInput">set_parameter_actions_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentSetParameterActions">DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentSetParameterActions</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentOutputReference.property.tagInput">tag_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentOutputReference.property.webhookInput">webhook_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentOutputReference.property.enableGenerativeFallback">enable_generative_fallback</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentOutputReference.property.returnPartialResponses">return_partial_responses</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentOutputReference.property.enableGenerativeFallback">enable_generative_fallback</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentOutputReference.property.returnPartialResponses">return_partial_responses</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentOutputReference.property.tag">tag</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentOutputReference.property.webhook">webhook</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentOutputReference.property.internalValue">internal_value</a></code> | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillment">DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillment</a></code> | *No description.* |
@@ -35873,50 +35873,50 @@ advanced_settings_input: DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfil
 ##### `conditional_cases_input`<sup>Optional</sup> <a name="conditional_cases_input" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentOutputReference.property.conditionalCasesInput"></a>
 
 ```python
-conditional_cases_input: typing.Union[IResolvable, typing.List[DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentConditionalCases]]
+conditional_cases_input: IResolvable | typing.List[DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentConditionalCases]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentConditionalCases">DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentConditionalCases</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentConditionalCases">DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentConditionalCases</a>]
 
 ---
 
 ##### `enable_generative_fallback_input`<sup>Optional</sup> <a name="enable_generative_fallback_input" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentOutputReference.property.enableGenerativeFallbackInput"></a>
 
 ```python
-enable_generative_fallback_input: typing.Union[bool, IResolvable]
+enable_generative_fallback_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `messages_input`<sup>Optional</sup> <a name="messages_input" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentOutputReference.property.messagesInput"></a>
 
 ```python
-messages_input: typing.Union[IResolvable, typing.List[DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessages]]
+messages_input: IResolvable | typing.List[DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessages]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessages">DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessages</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessages">DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessages</a>]
 
 ---
 
 ##### `return_partial_responses_input`<sup>Optional</sup> <a name="return_partial_responses_input" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentOutputReference.property.returnPartialResponsesInput"></a>
 
 ```python
-return_partial_responses_input: typing.Union[bool, IResolvable]
+return_partial_responses_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `set_parameter_actions_input`<sup>Optional</sup> <a name="set_parameter_actions_input" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentOutputReference.property.setParameterActionsInput"></a>
 
 ```python
-set_parameter_actions_input: typing.Union[IResolvable, typing.List[DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentSetParameterActions]]
+set_parameter_actions_input: IResolvable | typing.List[DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentSetParameterActions]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentSetParameterActions">DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentSetParameterActions</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentSetParameterActions">DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentSetParameterActions</a>]
 
 ---
 
@@ -35943,20 +35943,20 @@ webhook_input: str
 ##### `enable_generative_fallback`<sup>Required</sup> <a name="enable_generative_fallback" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentOutputReference.property.enableGenerativeFallback"></a>
 
 ```python
-enable_generative_fallback: typing.Union[bool, IResolvable]
+enable_generative_fallback: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `return_partial_responses`<sup>Required</sup> <a name="return_partial_responses" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentOutputReference.property.returnPartialResponses"></a>
 
 ```python
-return_partial_responses: typing.Union[bool, IResolvable]
+return_partial_responses: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -36122,7 +36122,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentSetParameterActionsList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentSetParameterActionsList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentSetParameterActionsList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentSetParameterActions">DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentSetParameterActions</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentSetParameterActionsList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentSetParameterActions">DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentSetParameterActions</a>]</code> | *No description.* |
 
 ---
 
@@ -36153,10 +36153,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentSetParameterActionsList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentSetParameterActions]]
+internal_value: IResolvable | typing.List[DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentSetParameterActions]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentSetParameterActions">DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentSetParameterActions</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentSetParameterActions">DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentSetParameterActions</a>]
 
 ---
 
@@ -36434,7 +36434,7 @@ def reset_value() -> None
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentSetParameterActionsOutputReference.property.valueInput">value_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentSetParameterActionsOutputReference.property.parameter">parameter</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentSetParameterActionsOutputReference.property.value">value</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentSetParameterActionsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentSetParameterActions">DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentSetParameterActions</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentSetParameterActionsOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentSetParameterActions">DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentSetParameterActions</a></code> | *No description.* |
 
 ---
 
@@ -36505,10 +36505,10 @@ value: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentSetParameterActionsOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentSetParameterActions]
+internal_value: IResolvable | DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentSetParameterActions
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentSetParameterActions">DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentSetParameterActions</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentSetParameterActions">DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentSetParameterActions</a>
 
 ---
 
@@ -36775,7 +36775,7 @@ def reset_update() -> None
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTimeoutsOutputReference.property.create">create</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTimeoutsOutputReference.property.delete">delete</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTimeoutsOutputReference.property.update">update</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTimeouts">DialogflowCxPageTimeouts</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTimeouts">DialogflowCxPageTimeouts</a></code> | *No description.* |
 
 ---
 
@@ -36866,10 +36866,10 @@ update: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTimeoutsOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, DialogflowCxPageTimeouts]
+internal_value: IResolvable | DialogflowCxPageTimeouts
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTimeouts">DialogflowCxPageTimeouts</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTimeouts">DialogflowCxPageTimeouts</a>
 
 ---
 
@@ -37005,7 +37005,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutes">DialogflowCxPageTransitionRoutes</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutes">DialogflowCxPageTransitionRoutes</a>]</code> | *No description.* |
 
 ---
 
@@ -37036,10 +37036,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[DialogflowCxPageTransitionRoutes]]
+internal_value: IResolvable | typing.List[DialogflowCxPageTransitionRoutes]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutes">DialogflowCxPageTransitionRoutes</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutes">DialogflowCxPageTransitionRoutes</a>]
 
 ---
 
@@ -37302,10 +37302,10 @@ Returns a reversible string representation.
 
 ```python
 def put_trigger_fulfillment(
-  conditional_cases: typing.Union[IResolvable, typing.List[DialogflowCxPageTransitionRoutesTriggerFulfillmentConditionalCases]] = None,
-  messages: typing.Union[IResolvable, typing.List[DialogflowCxPageTransitionRoutesTriggerFulfillmentMessages]] = None,
-  return_partial_responses: typing.Union[bool, IResolvable] = None,
-  set_parameter_actions: typing.Union[IResolvable, typing.List[DialogflowCxPageTransitionRoutesTriggerFulfillmentSetParameterActions]] = None,
+  conditional_cases: IResolvable | typing.List[DialogflowCxPageTransitionRoutesTriggerFulfillmentConditionalCases] = None,
+  messages: IResolvable | typing.List[DialogflowCxPageTransitionRoutesTriggerFulfillmentMessages] = None,
+  return_partial_responses: bool | IResolvable = None,
+  set_parameter_actions: IResolvable | typing.List[DialogflowCxPageTransitionRoutesTriggerFulfillmentSetParameterActions] = None,
   tag: str = None,
   webhook: str = None
 ) -> None
@@ -37313,7 +37313,7 @@ def put_trigger_fulfillment(
 
 ###### `conditional_cases`<sup>Optional</sup> <a name="conditional_cases" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesOutputReference.putTriggerFulfillment.parameter.conditionalCases"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillmentConditionalCases">DialogflowCxPageTransitionRoutesTriggerFulfillmentConditionalCases</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillmentConditionalCases">DialogflowCxPageTransitionRoutesTriggerFulfillmentConditionalCases</a>]
 
 conditional_cases block.
 
@@ -37323,7 +37323,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `messages`<sup>Optional</sup> <a name="messages" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesOutputReference.putTriggerFulfillment.parameter.messages"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillmentMessages">DialogflowCxPageTransitionRoutesTriggerFulfillmentMessages</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillmentMessages">DialogflowCxPageTransitionRoutesTriggerFulfillmentMessages</a>]
 
 messages block.
 
@@ -37333,7 +37333,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `return_partial_responses`<sup>Optional</sup> <a name="return_partial_responses" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesOutputReference.putTriggerFulfillment.parameter.returnPartialResponses"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Whether Dialogflow should return currently queued fulfillment response messages in streaming APIs.
 
@@ -37345,7 +37345,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `set_parameter_actions`<sup>Optional</sup> <a name="set_parameter_actions" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesOutputReference.putTriggerFulfillment.parameter.setParameterActions"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillmentSetParameterActions">DialogflowCxPageTransitionRoutesTriggerFulfillmentSetParameterActions</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillmentSetParameterActions">DialogflowCxPageTransitionRoutesTriggerFulfillmentSetParameterActions</a>]
 
 set_parameter_actions block.
 
@@ -37423,7 +37423,7 @@ def reset_trigger_fulfillment() -> None
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesOutputReference.property.intent">intent</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesOutputReference.property.targetFlow">target_flow</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesOutputReference.property.targetPage">target_page</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutes">DialogflowCxPageTransitionRoutes</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutes">DialogflowCxPageTransitionRoutes</a></code> | *No description.* |
 
 ---
 
@@ -37564,10 +37564,10 @@ target_page: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, DialogflowCxPageTransitionRoutes]
+internal_value: IResolvable | DialogflowCxPageTransitionRoutes
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutes">DialogflowCxPageTransitionRoutes</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutes">DialogflowCxPageTransitionRoutes</a>
 
 ---
 
@@ -37703,7 +37703,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillmentConditionalCasesList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillmentConditionalCasesList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillmentConditionalCasesList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillmentConditionalCases">DialogflowCxPageTransitionRoutesTriggerFulfillmentConditionalCases</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillmentConditionalCasesList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillmentConditionalCases">DialogflowCxPageTransitionRoutesTriggerFulfillmentConditionalCases</a>]</code> | *No description.* |
 
 ---
 
@@ -37734,10 +37734,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillmentConditionalCasesList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[DialogflowCxPageTransitionRoutesTriggerFulfillmentConditionalCases]]
+internal_value: IResolvable | typing.List[DialogflowCxPageTransitionRoutesTriggerFulfillmentConditionalCases]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillmentConditionalCases">DialogflowCxPageTransitionRoutesTriggerFulfillmentConditionalCases</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillmentConditionalCases">DialogflowCxPageTransitionRoutesTriggerFulfillmentConditionalCases</a>]
 
 ---
 
@@ -38006,7 +38006,7 @@ def reset_cases() -> None
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillmentConditionalCasesOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillmentConditionalCasesOutputReference.property.casesInput">cases_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillmentConditionalCasesOutputReference.property.cases">cases</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillmentConditionalCasesOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillmentConditionalCases">DialogflowCxPageTransitionRoutesTriggerFulfillmentConditionalCases</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillmentConditionalCasesOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillmentConditionalCases">DialogflowCxPageTransitionRoutesTriggerFulfillmentConditionalCases</a></code> | *No description.* |
 
 ---
 
@@ -38057,10 +38057,10 @@ cases: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillmentConditionalCasesOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, DialogflowCxPageTransitionRoutesTriggerFulfillmentConditionalCases]
+internal_value: IResolvable | DialogflowCxPageTransitionRoutesTriggerFulfillmentConditionalCases
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillmentConditionalCases">DialogflowCxPageTransitionRoutesTriggerFulfillmentConditionalCases</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillmentConditionalCases">DialogflowCxPageTransitionRoutesTriggerFulfillmentConditionalCases</a>
 
 ---
 
@@ -38499,7 +38499,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillmentMessagesList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillmentMessagesList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillmentMessagesList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillmentMessages">DialogflowCxPageTransitionRoutesTriggerFulfillmentMessages</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillmentMessagesList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillmentMessages">DialogflowCxPageTransitionRoutesTriggerFulfillmentMessages</a>]</code> | *No description.* |
 
 ---
 
@@ -38530,10 +38530,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillmentMessagesList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[DialogflowCxPageTransitionRoutesTriggerFulfillmentMessages]]
+internal_value: IResolvable | typing.List[DialogflowCxPageTransitionRoutesTriggerFulfillmentMessages]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillmentMessages">DialogflowCxPageTransitionRoutesTriggerFulfillmentMessages</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillmentMessages">DialogflowCxPageTransitionRoutesTriggerFulfillmentMessages</a>]
 
 ---
 
@@ -39638,7 +39638,7 @@ def reset_text() -> None
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillmentMessagesOutputReference.property.textInput">text_input</a></code> | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillmentMessagesText">DialogflowCxPageTransitionRoutesTriggerFulfillmentMessagesText</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillmentMessagesOutputReference.property.channel">channel</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillmentMessagesOutputReference.property.payload">payload</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillmentMessagesOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillmentMessages">DialogflowCxPageTransitionRoutesTriggerFulfillmentMessages</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillmentMessagesOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillmentMessages">DialogflowCxPageTransitionRoutesTriggerFulfillmentMessages</a></code> | *No description.* |
 
 ---
 
@@ -39829,10 +39829,10 @@ payload: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillmentMessagesOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, DialogflowCxPageTransitionRoutesTriggerFulfillmentMessages]
+internal_value: IResolvable | DialogflowCxPageTransitionRoutesTriggerFulfillmentMessages
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillmentMessages">DialogflowCxPageTransitionRoutesTriggerFulfillmentMessages</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillmentMessages">DialogflowCxPageTransitionRoutesTriggerFulfillmentMessages</a>
 
 ---
 
@@ -40995,13 +40995,13 @@ Returns a reversible string representation.
 
 ```python
 def put_conditional_cases(
-  value: typing.Union[IResolvable, typing.List[DialogflowCxPageTransitionRoutesTriggerFulfillmentConditionalCases]]
+  value: IResolvable | typing.List[DialogflowCxPageTransitionRoutesTriggerFulfillmentConditionalCases]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillmentOutputReference.putConditionalCases.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillmentConditionalCases">DialogflowCxPageTransitionRoutesTriggerFulfillmentConditionalCases</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillmentConditionalCases">DialogflowCxPageTransitionRoutesTriggerFulfillmentConditionalCases</a>]
 
 ---
 
@@ -41009,13 +41009,13 @@ def put_conditional_cases(
 
 ```python
 def put_messages(
-  value: typing.Union[IResolvable, typing.List[DialogflowCxPageTransitionRoutesTriggerFulfillmentMessages]]
+  value: IResolvable | typing.List[DialogflowCxPageTransitionRoutesTriggerFulfillmentMessages]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillmentOutputReference.putMessages.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillmentMessages">DialogflowCxPageTransitionRoutesTriggerFulfillmentMessages</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillmentMessages">DialogflowCxPageTransitionRoutesTriggerFulfillmentMessages</a>]
 
 ---
 
@@ -41023,13 +41023,13 @@ def put_messages(
 
 ```python
 def put_set_parameter_actions(
-  value: typing.Union[IResolvable, typing.List[DialogflowCxPageTransitionRoutesTriggerFulfillmentSetParameterActions]]
+  value: IResolvable | typing.List[DialogflowCxPageTransitionRoutesTriggerFulfillmentSetParameterActions]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillmentOutputReference.putSetParameterActions.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillmentSetParameterActions">DialogflowCxPageTransitionRoutesTriggerFulfillmentSetParameterActions</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillmentSetParameterActions">DialogflowCxPageTransitionRoutesTriggerFulfillmentSetParameterActions</a>]
 
 ---
 
@@ -41079,13 +41079,13 @@ def reset_webhook() -> None
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillmentOutputReference.property.conditionalCases">conditional_cases</a></code> | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillmentConditionalCasesList">DialogflowCxPageTransitionRoutesTriggerFulfillmentConditionalCasesList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillmentOutputReference.property.messages">messages</a></code> | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillmentMessagesList">DialogflowCxPageTransitionRoutesTriggerFulfillmentMessagesList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillmentOutputReference.property.setParameterActions">set_parameter_actions</a></code> | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillmentSetParameterActionsList">DialogflowCxPageTransitionRoutesTriggerFulfillmentSetParameterActionsList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillmentOutputReference.property.conditionalCasesInput">conditional_cases_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillmentConditionalCases">DialogflowCxPageTransitionRoutesTriggerFulfillmentConditionalCases</a>]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillmentOutputReference.property.messagesInput">messages_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillmentMessages">DialogflowCxPageTransitionRoutesTriggerFulfillmentMessages</a>]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillmentOutputReference.property.returnPartialResponsesInput">return_partial_responses_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillmentOutputReference.property.setParameterActionsInput">set_parameter_actions_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillmentSetParameterActions">DialogflowCxPageTransitionRoutesTriggerFulfillmentSetParameterActions</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillmentOutputReference.property.conditionalCasesInput">conditional_cases_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillmentConditionalCases">DialogflowCxPageTransitionRoutesTriggerFulfillmentConditionalCases</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillmentOutputReference.property.messagesInput">messages_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillmentMessages">DialogflowCxPageTransitionRoutesTriggerFulfillmentMessages</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillmentOutputReference.property.returnPartialResponsesInput">return_partial_responses_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillmentOutputReference.property.setParameterActionsInput">set_parameter_actions_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillmentSetParameterActions">DialogflowCxPageTransitionRoutesTriggerFulfillmentSetParameterActions</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillmentOutputReference.property.tagInput">tag_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillmentOutputReference.property.webhookInput">webhook_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillmentOutputReference.property.returnPartialResponses">return_partial_responses</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillmentOutputReference.property.returnPartialResponses">return_partial_responses</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillmentOutputReference.property.tag">tag</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillmentOutputReference.property.webhook">webhook</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillmentOutputReference.property.internalValue">internal_value</a></code> | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillment">DialogflowCxPageTransitionRoutesTriggerFulfillment</a></code> | *No description.* |
@@ -41149,40 +41149,40 @@ set_parameter_actions: DialogflowCxPageTransitionRoutesTriggerFulfillmentSetPara
 ##### `conditional_cases_input`<sup>Optional</sup> <a name="conditional_cases_input" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillmentOutputReference.property.conditionalCasesInput"></a>
 
 ```python
-conditional_cases_input: typing.Union[IResolvable, typing.List[DialogflowCxPageTransitionRoutesTriggerFulfillmentConditionalCases]]
+conditional_cases_input: IResolvable | typing.List[DialogflowCxPageTransitionRoutesTriggerFulfillmentConditionalCases]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillmentConditionalCases">DialogflowCxPageTransitionRoutesTriggerFulfillmentConditionalCases</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillmentConditionalCases">DialogflowCxPageTransitionRoutesTriggerFulfillmentConditionalCases</a>]
 
 ---
 
 ##### `messages_input`<sup>Optional</sup> <a name="messages_input" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillmentOutputReference.property.messagesInput"></a>
 
 ```python
-messages_input: typing.Union[IResolvable, typing.List[DialogflowCxPageTransitionRoutesTriggerFulfillmentMessages]]
+messages_input: IResolvable | typing.List[DialogflowCxPageTransitionRoutesTriggerFulfillmentMessages]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillmentMessages">DialogflowCxPageTransitionRoutesTriggerFulfillmentMessages</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillmentMessages">DialogflowCxPageTransitionRoutesTriggerFulfillmentMessages</a>]
 
 ---
 
 ##### `return_partial_responses_input`<sup>Optional</sup> <a name="return_partial_responses_input" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillmentOutputReference.property.returnPartialResponsesInput"></a>
 
 ```python
-return_partial_responses_input: typing.Union[bool, IResolvable]
+return_partial_responses_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `set_parameter_actions_input`<sup>Optional</sup> <a name="set_parameter_actions_input" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillmentOutputReference.property.setParameterActionsInput"></a>
 
 ```python
-set_parameter_actions_input: typing.Union[IResolvable, typing.List[DialogflowCxPageTransitionRoutesTriggerFulfillmentSetParameterActions]]
+set_parameter_actions_input: IResolvable | typing.List[DialogflowCxPageTransitionRoutesTriggerFulfillmentSetParameterActions]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillmentSetParameterActions">DialogflowCxPageTransitionRoutesTriggerFulfillmentSetParameterActions</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillmentSetParameterActions">DialogflowCxPageTransitionRoutesTriggerFulfillmentSetParameterActions</a>]
 
 ---
 
@@ -41209,10 +41209,10 @@ webhook_input: str
 ##### `return_partial_responses`<sup>Required</sup> <a name="return_partial_responses" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillmentOutputReference.property.returnPartialResponses"></a>
 
 ```python
-return_partial_responses: typing.Union[bool, IResolvable]
+return_partial_responses: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -41378,7 +41378,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillmentSetParameterActionsList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillmentSetParameterActionsList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillmentSetParameterActionsList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillmentSetParameterActions">DialogflowCxPageTransitionRoutesTriggerFulfillmentSetParameterActions</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillmentSetParameterActionsList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillmentSetParameterActions">DialogflowCxPageTransitionRoutesTriggerFulfillmentSetParameterActions</a>]</code> | *No description.* |
 
 ---
 
@@ -41409,10 +41409,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillmentSetParameterActionsList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[DialogflowCxPageTransitionRoutesTriggerFulfillmentSetParameterActions]]
+internal_value: IResolvable | typing.List[DialogflowCxPageTransitionRoutesTriggerFulfillmentSetParameterActions]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillmentSetParameterActions">DialogflowCxPageTransitionRoutesTriggerFulfillmentSetParameterActions</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillmentSetParameterActions">DialogflowCxPageTransitionRoutesTriggerFulfillmentSetParameterActions</a>]
 
 ---
 
@@ -41690,7 +41690,7 @@ def reset_value() -> None
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillmentSetParameterActionsOutputReference.property.valueInput">value_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillmentSetParameterActionsOutputReference.property.parameter">parameter</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillmentSetParameterActionsOutputReference.property.value">value</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillmentSetParameterActionsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillmentSetParameterActions">DialogflowCxPageTransitionRoutesTriggerFulfillmentSetParameterActions</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillmentSetParameterActionsOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillmentSetParameterActions">DialogflowCxPageTransitionRoutesTriggerFulfillmentSetParameterActions</a></code> | *No description.* |
 
 ---
 
@@ -41761,10 +41761,10 @@ value: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillmentSetParameterActionsOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, DialogflowCxPageTransitionRoutesTriggerFulfillmentSetParameterActions]
+internal_value: IResolvable | DialogflowCxPageTransitionRoutesTriggerFulfillmentSetParameterActions
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillmentSetParameterActions">DialogflowCxPageTransitionRoutesTriggerFulfillmentSetParameterActions</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillmentSetParameterActions">DialogflowCxPageTransitionRoutesTriggerFulfillmentSetParameterActions</a>
 
 ---
 

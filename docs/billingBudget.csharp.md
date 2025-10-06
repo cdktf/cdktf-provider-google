@@ -285,7 +285,7 @@ private System.Collections.Generic.IDictionary<string, string> GetStringMapAttri
 ##### `HasResourceMove` <a name="HasResourceMove" id="@cdktf/provider-google.billingBudget.BillingBudget.hasResourceMove"></a>
 
 ```csharp
-private object HasResourceMove()
+private TerraformResourceMoveByTarget|TerraformResourceMoveById HasResourceMove()
 ```
 
 ##### `ImportFrom` <a name="ImportFrom" id="@cdktf/provider-google.billingBudget.BillingBudget.importFrom"></a>
@@ -339,7 +339,7 @@ Full id of resource being moved from, e.g. "aws_s3_bucket.example".
 ##### `MoveTo` <a name="MoveTo" id="@cdktf/provider-google.billingBudget.BillingBudget.moveTo"></a>
 
 ```csharp
-private void MoveTo(string MoveTarget, object Index = null)
+private void MoveTo(string MoveTarget, string|double Index = null)
 ```
 
 Moves this resource to the target resource given by moveTarget.
@@ -354,7 +354,7 @@ The previously set user defined string set by .addMoveTarget() corresponding to 
 
 ###### `Index`<sup>Optional</sup> <a name="Index" id="@cdktf/provider-google.billingBudget.BillingBudget.moveTo.parameter.index"></a>
 
-- *Type:* object
+- *Type:* string|double
 
 Optional The index corresponding to the key the resource is to appear in the foreach of a resource to move to.
 
@@ -415,12 +415,12 @@ private void PutBudgetFilter(BillingBudgetBudgetFilter Value)
 ##### `PutThresholdRules` <a name="PutThresholdRules" id="@cdktf/provider-google.billingBudget.BillingBudget.putThresholdRules"></a>
 
 ```csharp
-private void PutThresholdRules(object Value)
+private void PutThresholdRules(IResolvable|BillingBudgetThresholdRules[] Value)
 ```
 
 ###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-google.billingBudget.BillingBudget.putThresholdRules.parameter.value"></a>
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.billingBudget.BillingBudgetThresholdRules">BillingBudgetThresholdRules</a>[]
 
 ---
 
@@ -604,13 +604,13 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.5
 | <code><a href="#@cdktf/provider-google.billingBudget.BillingBudget.property.terraformMetaArguments">TerraformMetaArguments</a></code> | <code>System.Collections.Generic.IDictionary<string, object></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.billingBudget.BillingBudget.property.terraformResourceType">TerraformResourceType</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.billingBudget.BillingBudget.property.terraformGeneratorMetadata">TerraformGeneratorMetadata</a></code> | <code>HashiCorp.Cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.billingBudget.BillingBudget.property.connection">Connection</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.billingBudget.BillingBudget.property.count">Count</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.billingBudget.BillingBudget.property.connection">Connection</a></code> | <code>HashiCorp.Cdktf.SSHProvisionerConnection\|HashiCorp.Cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.billingBudget.BillingBudget.property.count">Count</a></code> | <code>double\|HashiCorp.Cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.billingBudget.BillingBudget.property.dependsOn">DependsOn</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.billingBudget.BillingBudget.property.forEach">ForEach</a></code> | <code>HashiCorp.Cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.billingBudget.BillingBudget.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.billingBudget.BillingBudget.property.provider">Provider</a></code> | <code>HashiCorp.Cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.billingBudget.BillingBudget.property.provisioners">Provisioners</a></code> | <code>object[]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.billingBudget.BillingBudget.property.provisioners">Provisioners</a></code> | <code>HashiCorp.Cdktf.FileProvisioner\|HashiCorp.Cdktf.LocalExecProvisioner\|HashiCorp.Cdktf.RemoteExecProvisioner[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.billingBudget.BillingBudget.property.allUpdatesRule">AllUpdatesRule</a></code> | <code><a href="#@cdktf/provider-google.billingBudget.BillingBudgetAllUpdatesRuleOutputReference">BillingBudgetAllUpdatesRuleOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.billingBudget.BillingBudget.property.amount">Amount</a></code> | <code><a href="#@cdktf/provider-google.billingBudget.BillingBudgetAmountOutputReference">BillingBudgetAmountOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.billingBudget.BillingBudget.property.budgetFilter">BudgetFilter</a></code> | <code><a href="#@cdktf/provider-google.billingBudget.BillingBudgetBudgetFilterOutputReference">BillingBudgetBudgetFilterOutputReference</a></code> | *No description.* |
@@ -624,8 +624,8 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.5
 | <code><a href="#@cdktf/provider-google.billingBudget.BillingBudget.property.displayNameInput">DisplayNameInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.billingBudget.BillingBudget.property.idInput">IdInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.billingBudget.BillingBudget.property.ownershipScopeInput">OwnershipScopeInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.billingBudget.BillingBudget.property.thresholdRulesInput">ThresholdRulesInput</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.billingBudget.BillingBudget.property.timeoutsInput">TimeoutsInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.billingBudget.BillingBudget.property.thresholdRulesInput">ThresholdRulesInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.billingBudget.BillingBudgetThresholdRules">BillingBudgetThresholdRules</a>[]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.billingBudget.BillingBudget.property.timeoutsInput">TimeoutsInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.billingBudget.BillingBudgetTimeouts">BillingBudgetTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.billingBudget.BillingBudget.property.billingAccount">BillingAccount</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.billingBudget.BillingBudget.property.displayName">DisplayName</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.billingBudget.BillingBudget.property.id">Id</a></code> | <code>string</code> | *No description.* |
@@ -708,20 +708,20 @@ public TerraformProviderGeneratorMetadata TerraformGeneratorMetadata { get; }
 ##### `Connection`<sup>Optional</sup> <a name="Connection" id="@cdktf/provider-google.billingBudget.BillingBudget.property.connection"></a>
 
 ```csharp
-public object Connection { get; }
+public SSHProvisionerConnection|WinrmProvisionerConnection Connection { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.SSHProvisionerConnection|HashiCorp.Cdktf.WinrmProvisionerConnection
 
 ---
 
 ##### `Count`<sup>Optional</sup> <a name="Count" id="@cdktf/provider-google.billingBudget.BillingBudget.property.count"></a>
 
 ```csharp
-public object Count { get; }
+public double|TerraformCount Count { get; }
 ```
 
-- *Type:* object
+- *Type:* double|HashiCorp.Cdktf.TerraformCount
 
 ---
 
@@ -768,10 +768,10 @@ public TerraformProvider Provider { get; }
 ##### `Provisioners`<sup>Optional</sup> <a name="Provisioners" id="@cdktf/provider-google.billingBudget.BillingBudget.property.provisioners"></a>
 
 ```csharp
-public object[] Provisioners { get; }
+public (FileProvisioner|LocalExecProvisioner|RemoteExecProvisioner)[] Provisioners { get; }
 ```
 
-- *Type:* object[]
+- *Type:* HashiCorp.Cdktf.FileProvisioner|HashiCorp.Cdktf.LocalExecProvisioner|HashiCorp.Cdktf.RemoteExecProvisioner[]
 
 ---
 
@@ -908,20 +908,20 @@ public string OwnershipScopeInput { get; }
 ##### `ThresholdRulesInput`<sup>Optional</sup> <a name="ThresholdRulesInput" id="@cdktf/provider-google.billingBudget.BillingBudget.property.thresholdRulesInput"></a>
 
 ```csharp
-public object ThresholdRulesInput { get; }
+public IResolvable|BillingBudgetThresholdRules[] ThresholdRulesInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.billingBudget.BillingBudgetThresholdRules">BillingBudgetThresholdRules</a>[]
 
 ---
 
 ##### `TimeoutsInput`<sup>Optional</sup> <a name="TimeoutsInput" id="@cdktf/provider-google.billingBudget.BillingBudget.property.timeoutsInput"></a>
 
 ```csharp
-public object TimeoutsInput { get; }
+public IResolvable|BillingBudgetTimeouts TimeoutsInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.billingBudget.BillingBudgetTimeouts">BillingBudgetTimeouts</a>
 
 ---
 
@@ -993,8 +993,8 @@ public string TfResourceType { get; }
 using HashiCorp.Cdktf.Providers.Google;
 
 new BillingBudgetAllUpdatesRule {
-    object DisableDefaultIamRecipients = null,
-    object EnableProjectLevelRecipients = null,
+    bool|IResolvable DisableDefaultIamRecipients = null,
+    bool|IResolvable EnableProjectLevelRecipients = null,
     string[] MonitoringNotificationChannels = null,
     string PubsubTopic = null,
     string SchemaVersion = null
@@ -1005,8 +1005,8 @@ new BillingBudgetAllUpdatesRule {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.billingBudget.BillingBudgetAllUpdatesRule.property.disableDefaultIamRecipients">DisableDefaultIamRecipients</a></code> | <code>object</code> | Boolean. |
-| <code><a href="#@cdktf/provider-google.billingBudget.BillingBudgetAllUpdatesRule.property.enableProjectLevelRecipients">EnableProjectLevelRecipients</a></code> | <code>object</code> | When set to true, and when the budget has a single project configured, notifications will be sent to project level recipients of that project. |
+| <code><a href="#@cdktf/provider-google.billingBudget.BillingBudgetAllUpdatesRule.property.disableDefaultIamRecipients">DisableDefaultIamRecipients</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Boolean. |
+| <code><a href="#@cdktf/provider-google.billingBudget.BillingBudgetAllUpdatesRule.property.enableProjectLevelRecipients">EnableProjectLevelRecipients</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | When set to true, and when the budget has a single project configured, notifications will be sent to project level recipients of that project. |
 | <code><a href="#@cdktf/provider-google.billingBudget.BillingBudgetAllUpdatesRule.property.monitoringNotificationChannels">MonitoringNotificationChannels</a></code> | <code>string[]</code> | The full resource name of a monitoring notification channel in the form projects/{project_id}/notificationChannels/{channel_id}. A maximum of 5 channels are allowed. |
 | <code><a href="#@cdktf/provider-google.billingBudget.BillingBudgetAllUpdatesRule.property.pubsubTopic">PubsubTopic</a></code> | <code>string</code> | The name of the Cloud Pub/Sub topic where budget related messages will be published, in the form projects/{project_id}/topics/{topic_id}. |
 | <code><a href="#@cdktf/provider-google.billingBudget.BillingBudgetAllUpdatesRule.property.schemaVersion">SchemaVersion</a></code> | <code>string</code> | The schema version of the notification. Only "1.0" is accepted. It represents the JSON schema as defined in https://cloud.google.com/billing/docs/how-to/budgets#notification_format. |
@@ -1016,10 +1016,10 @@ new BillingBudgetAllUpdatesRule {
 ##### `DisableDefaultIamRecipients`<sup>Optional</sup> <a name="DisableDefaultIamRecipients" id="@cdktf/provider-google.billingBudget.BillingBudgetAllUpdatesRule.property.disableDefaultIamRecipients"></a>
 
 ```csharp
-public object DisableDefaultIamRecipients { get; set; }
+public bool|IResolvable DisableDefaultIamRecipients { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Boolean.
 
@@ -1035,10 +1035,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `EnableProjectLevelRecipients`<sup>Optional</sup> <a name="EnableProjectLevelRecipients" id="@cdktf/provider-google.billingBudget.BillingBudgetAllUpdatesRule.property.enableProjectLevelRecipients"></a>
 
 ```csharp
-public object EnableProjectLevelRecipients { get; set; }
+public bool|IResolvable EnableProjectLevelRecipients { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 When set to true, and when the budget has a single project configured, notifications will be sent to project level recipients of that project.
 
@@ -1103,7 +1103,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 using HashiCorp.Cdktf.Providers.Google;
 
 new BillingBudgetAmount {
-    object LastPeriodAmount = null,
+    bool|IResolvable LastPeriodAmount = null,
     BillingBudgetAmountSpecifiedAmount SpecifiedAmount = null
 };
 ```
@@ -1112,7 +1112,7 @@ new BillingBudgetAmount {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.billingBudget.BillingBudgetAmount.property.lastPeriodAmount">LastPeriodAmount</a></code> | <code>object</code> | Configures a budget amount that is automatically set to 100% of last period's spend. |
+| <code><a href="#@cdktf/provider-google.billingBudget.BillingBudgetAmount.property.lastPeriodAmount">LastPeriodAmount</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Configures a budget amount that is automatically set to 100% of last period's spend. |
 | <code><a href="#@cdktf/provider-google.billingBudget.BillingBudgetAmount.property.specifiedAmount">SpecifiedAmount</a></code> | <code><a href="#@cdktf/provider-google.billingBudget.BillingBudgetAmountSpecifiedAmount">BillingBudgetAmountSpecifiedAmount</a></code> | specified_amount block. |
 
 ---
@@ -1120,10 +1120,10 @@ new BillingBudgetAmount {
 ##### `LastPeriodAmount`<sup>Optional</sup> <a name="LastPeriodAmount" id="@cdktf/provider-google.billingBudget.BillingBudgetAmount.property.lastPeriodAmount"></a>
 
 ```csharp
-public object LastPeriodAmount { get; set; }
+public bool|IResolvable LastPeriodAmount { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Configures a budget amount that is automatically set to 100% of last period's spend.
 
@@ -1603,13 +1603,13 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 using HashiCorp.Cdktf.Providers.Google;
 
 new BillingBudgetConfig {
-    object Connection = null,
-    object Count = null,
+    SSHProvisionerConnection|WinrmProvisionerConnection Connection = null,
+    double|TerraformCount Count = null,
     ITerraformDependable[] DependsOn = null,
     ITerraformIterator ForEach = null,
     TerraformResourceLifecycle Lifecycle = null,
     TerraformProvider Provider = null,
-    object[] Provisioners = null,
+    (FileProvisioner|LocalExecProvisioner|RemoteExecProvisioner)[] Provisioners = null,
     BillingBudgetAmount Amount,
     string BillingAccount,
     BillingBudgetAllUpdatesRule AllUpdatesRule = null,
@@ -1617,7 +1617,7 @@ new BillingBudgetConfig {
     string DisplayName = null,
     string Id = null,
     string OwnershipScope = null,
-    object ThresholdRules = null,
+    IResolvable|BillingBudgetThresholdRules[] ThresholdRules = null,
     BillingBudgetTimeouts Timeouts = null
 };
 ```
@@ -1626,13 +1626,13 @@ new BillingBudgetConfig {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.billingBudget.BillingBudgetConfig.property.connection">Connection</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.billingBudget.BillingBudgetConfig.property.count">Count</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.billingBudget.BillingBudgetConfig.property.connection">Connection</a></code> | <code>HashiCorp.Cdktf.SSHProvisionerConnection\|HashiCorp.Cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.billingBudget.BillingBudgetConfig.property.count">Count</a></code> | <code>double\|HashiCorp.Cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.billingBudget.BillingBudgetConfig.property.dependsOn">DependsOn</a></code> | <code>HashiCorp.Cdktf.ITerraformDependable[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.billingBudget.BillingBudgetConfig.property.forEach">ForEach</a></code> | <code>HashiCorp.Cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.billingBudget.BillingBudgetConfig.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.billingBudget.BillingBudgetConfig.property.provider">Provider</a></code> | <code>HashiCorp.Cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.billingBudget.BillingBudgetConfig.property.provisioners">Provisioners</a></code> | <code>object[]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.billingBudget.BillingBudgetConfig.property.provisioners">Provisioners</a></code> | <code>HashiCorp.Cdktf.FileProvisioner\|HashiCorp.Cdktf.LocalExecProvisioner\|HashiCorp.Cdktf.RemoteExecProvisioner[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.billingBudget.BillingBudgetConfig.property.amount">Amount</a></code> | <code><a href="#@cdktf/provider-google.billingBudget.BillingBudgetAmount">BillingBudgetAmount</a></code> | amount block. |
 | <code><a href="#@cdktf/provider-google.billingBudget.BillingBudgetConfig.property.billingAccount">BillingAccount</a></code> | <code>string</code> | ID of the billing account to set a budget on. |
 | <code><a href="#@cdktf/provider-google.billingBudget.BillingBudgetConfig.property.allUpdatesRule">AllUpdatesRule</a></code> | <code><a href="#@cdktf/provider-google.billingBudget.BillingBudgetAllUpdatesRule">BillingBudgetAllUpdatesRule</a></code> | all_updates_rule block. |
@@ -1640,7 +1640,7 @@ new BillingBudgetConfig {
 | <code><a href="#@cdktf/provider-google.billingBudget.BillingBudgetConfig.property.displayName">DisplayName</a></code> | <code>string</code> | User data for display name in UI. Must be <= 60 chars. |
 | <code><a href="#@cdktf/provider-google.billingBudget.BillingBudgetConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs/resources/billing_budget#id BillingBudget#id}. |
 | <code><a href="#@cdktf/provider-google.billingBudget.BillingBudgetConfig.property.ownershipScope">OwnershipScope</a></code> | <code>string</code> | The ownership scope of the budget. |
-| <code><a href="#@cdktf/provider-google.billingBudget.BillingBudgetConfig.property.thresholdRules">ThresholdRules</a></code> | <code>object</code> | threshold_rules block. |
+| <code><a href="#@cdktf/provider-google.billingBudget.BillingBudgetConfig.property.thresholdRules">ThresholdRules</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.billingBudget.BillingBudgetThresholdRules">BillingBudgetThresholdRules</a>[]</code> | threshold_rules block. |
 | <code><a href="#@cdktf/provider-google.billingBudget.BillingBudgetConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-google.billingBudget.BillingBudgetTimeouts">BillingBudgetTimeouts</a></code> | timeouts block. |
 
 ---
@@ -1648,20 +1648,20 @@ new BillingBudgetConfig {
 ##### `Connection`<sup>Optional</sup> <a name="Connection" id="@cdktf/provider-google.billingBudget.BillingBudgetConfig.property.connection"></a>
 
 ```csharp
-public object Connection { get; set; }
+public SSHProvisionerConnection|WinrmProvisionerConnection Connection { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.SSHProvisionerConnection|HashiCorp.Cdktf.WinrmProvisionerConnection
 
 ---
 
 ##### `Count`<sup>Optional</sup> <a name="Count" id="@cdktf/provider-google.billingBudget.BillingBudgetConfig.property.count"></a>
 
 ```csharp
-public object Count { get; set; }
+public double|TerraformCount Count { get; set; }
 ```
 
-- *Type:* object
+- *Type:* double|HashiCorp.Cdktf.TerraformCount
 
 ---
 
@@ -1708,10 +1708,10 @@ public TerraformProvider Provider { get; set; }
 ##### `Provisioners`<sup>Optional</sup> <a name="Provisioners" id="@cdktf/provider-google.billingBudget.BillingBudgetConfig.property.provisioners"></a>
 
 ```csharp
-public object[] Provisioners { get; set; }
+public (FileProvisioner|LocalExecProvisioner|RemoteExecProvisioner)[] Provisioners { get; set; }
 ```
 
-- *Type:* object[]
+- *Type:* HashiCorp.Cdktf.FileProvisioner|HashiCorp.Cdktf.LocalExecProvisioner|HashiCorp.Cdktf.RemoteExecProvisioner[]
 
 ---
 
@@ -1820,10 +1820,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `ThresholdRules`<sup>Optional</sup> <a name="ThresholdRules" id="@cdktf/provider-google.billingBudget.BillingBudgetConfig.property.thresholdRules"></a>
 
 ```csharp
-public object ThresholdRules { get; set; }
+public IResolvable|BillingBudgetThresholdRules[] ThresholdRules { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.billingBudget.BillingBudgetThresholdRules">BillingBudgetThresholdRules</a>[]
 
 threshold_rules block.
 
@@ -2205,13 +2205,13 @@ private void ResetSchemaVersion()
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.billingBudget.BillingBudgetAllUpdatesRuleOutputReference.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.billingBudget.BillingBudgetAllUpdatesRuleOutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.billingBudget.BillingBudgetAllUpdatesRuleOutputReference.property.disableDefaultIamRecipientsInput">DisableDefaultIamRecipientsInput</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.billingBudget.BillingBudgetAllUpdatesRuleOutputReference.property.enableProjectLevelRecipientsInput">EnableProjectLevelRecipientsInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.billingBudget.BillingBudgetAllUpdatesRuleOutputReference.property.disableDefaultIamRecipientsInput">DisableDefaultIamRecipientsInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.billingBudget.BillingBudgetAllUpdatesRuleOutputReference.property.enableProjectLevelRecipientsInput">EnableProjectLevelRecipientsInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.billingBudget.BillingBudgetAllUpdatesRuleOutputReference.property.monitoringNotificationChannelsInput">MonitoringNotificationChannelsInput</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.billingBudget.BillingBudgetAllUpdatesRuleOutputReference.property.pubsubTopicInput">PubsubTopicInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.billingBudget.BillingBudgetAllUpdatesRuleOutputReference.property.schemaVersionInput">SchemaVersionInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.billingBudget.BillingBudgetAllUpdatesRuleOutputReference.property.disableDefaultIamRecipients">DisableDefaultIamRecipients</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.billingBudget.BillingBudgetAllUpdatesRuleOutputReference.property.enableProjectLevelRecipients">EnableProjectLevelRecipients</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.billingBudget.BillingBudgetAllUpdatesRuleOutputReference.property.disableDefaultIamRecipients">DisableDefaultIamRecipients</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.billingBudget.BillingBudgetAllUpdatesRuleOutputReference.property.enableProjectLevelRecipients">EnableProjectLevelRecipients</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.billingBudget.BillingBudgetAllUpdatesRuleOutputReference.property.monitoringNotificationChannels">MonitoringNotificationChannels</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.billingBudget.BillingBudgetAllUpdatesRuleOutputReference.property.pubsubTopic">PubsubTopic</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.billingBudget.BillingBudgetAllUpdatesRuleOutputReference.property.schemaVersion">SchemaVersion</a></code> | <code>string</code> | *No description.* |
@@ -2246,20 +2246,20 @@ public string Fqn { get; }
 ##### `DisableDefaultIamRecipientsInput`<sup>Optional</sup> <a name="DisableDefaultIamRecipientsInput" id="@cdktf/provider-google.billingBudget.BillingBudgetAllUpdatesRuleOutputReference.property.disableDefaultIamRecipientsInput"></a>
 
 ```csharp
-public object DisableDefaultIamRecipientsInput { get; }
+public bool|IResolvable DisableDefaultIamRecipientsInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
 ##### `EnableProjectLevelRecipientsInput`<sup>Optional</sup> <a name="EnableProjectLevelRecipientsInput" id="@cdktf/provider-google.billingBudget.BillingBudgetAllUpdatesRuleOutputReference.property.enableProjectLevelRecipientsInput"></a>
 
 ```csharp
-public object EnableProjectLevelRecipientsInput { get; }
+public bool|IResolvable EnableProjectLevelRecipientsInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -2296,20 +2296,20 @@ public string SchemaVersionInput { get; }
 ##### `DisableDefaultIamRecipients`<sup>Required</sup> <a name="DisableDefaultIamRecipients" id="@cdktf/provider-google.billingBudget.BillingBudgetAllUpdatesRuleOutputReference.property.disableDefaultIamRecipients"></a>
 
 ```csharp
-public object DisableDefaultIamRecipients { get; }
+public bool|IResolvable DisableDefaultIamRecipients { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
 ##### `EnableProjectLevelRecipients`<sup>Required</sup> <a name="EnableProjectLevelRecipients" id="@cdktf/provider-google.billingBudget.BillingBudgetAllUpdatesRuleOutputReference.property.enableProjectLevelRecipients"></a>
 
 ```csharp
-public object EnableProjectLevelRecipients { get; }
+public bool|IResolvable EnableProjectLevelRecipients { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -2592,9 +2592,9 @@ private void ResetSpecifiedAmount()
 | <code><a href="#@cdktf/provider-google.billingBudget.BillingBudgetAmountOutputReference.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.billingBudget.BillingBudgetAmountOutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.billingBudget.BillingBudgetAmountOutputReference.property.specifiedAmount">SpecifiedAmount</a></code> | <code><a href="#@cdktf/provider-google.billingBudget.BillingBudgetAmountSpecifiedAmountOutputReference">BillingBudgetAmountSpecifiedAmountOutputReference</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.billingBudget.BillingBudgetAmountOutputReference.property.lastPeriodAmountInput">LastPeriodAmountInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.billingBudget.BillingBudgetAmountOutputReference.property.lastPeriodAmountInput">LastPeriodAmountInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.billingBudget.BillingBudgetAmountOutputReference.property.specifiedAmountInput">SpecifiedAmountInput</a></code> | <code><a href="#@cdktf/provider-google.billingBudget.BillingBudgetAmountSpecifiedAmount">BillingBudgetAmountSpecifiedAmount</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.billingBudget.BillingBudgetAmountOutputReference.property.lastPeriodAmount">LastPeriodAmount</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.billingBudget.BillingBudgetAmountOutputReference.property.lastPeriodAmount">LastPeriodAmount</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.billingBudget.BillingBudgetAmountOutputReference.property.internalValue">InternalValue</a></code> | <code><a href="#@cdktf/provider-google.billingBudget.BillingBudgetAmount">BillingBudgetAmount</a></code> | *No description.* |
 
 ---
@@ -2636,10 +2636,10 @@ public BillingBudgetAmountSpecifiedAmountOutputReference SpecifiedAmount { get; 
 ##### `LastPeriodAmountInput`<sup>Optional</sup> <a name="LastPeriodAmountInput" id="@cdktf/provider-google.billingBudget.BillingBudgetAmountOutputReference.property.lastPeriodAmountInput"></a>
 
 ```csharp
-public object LastPeriodAmountInput { get; }
+public bool|IResolvable LastPeriodAmountInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -2656,10 +2656,10 @@ public BillingBudgetAmountSpecifiedAmount SpecifiedAmountInput { get; }
 ##### `LastPeriodAmount`<sup>Required</sup> <a name="LastPeriodAmount" id="@cdktf/provider-google.billingBudget.BillingBudgetAmountOutputReference.property.lastPeriodAmount"></a>
 
 ```csharp
-public object LastPeriodAmount { get; }
+public bool|IResolvable LastPeriodAmount { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -4610,7 +4610,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.billingBudget.BillingBudgetThresholdRulesList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.billingBudget.BillingBudgetThresholdRulesList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.billingBudget.BillingBudgetThresholdRulesList.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.billingBudget.BillingBudgetThresholdRulesList.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.billingBudget.BillingBudgetThresholdRules">BillingBudgetThresholdRules</a>[]</code> | *No description.* |
 
 ---
 
@@ -4641,10 +4641,10 @@ public string Fqn { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.billingBudget.BillingBudgetThresholdRulesList.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|BillingBudgetThresholdRules[] InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.billingBudget.BillingBudgetThresholdRules">BillingBudgetThresholdRules</a>[]
 
 ---
 
@@ -4888,7 +4888,7 @@ private void ResetSpendBasis()
 | <code><a href="#@cdktf/provider-google.billingBudget.BillingBudgetThresholdRulesOutputReference.property.thresholdPercentInput">ThresholdPercentInput</a></code> | <code>double</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.billingBudget.BillingBudgetThresholdRulesOutputReference.property.spendBasis">SpendBasis</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.billingBudget.BillingBudgetThresholdRulesOutputReference.property.thresholdPercent">ThresholdPercent</a></code> | <code>double</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.billingBudget.BillingBudgetThresholdRulesOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.billingBudget.BillingBudgetThresholdRulesOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.billingBudget.BillingBudgetThresholdRules">BillingBudgetThresholdRules</a></code> | *No description.* |
 
 ---
 
@@ -4959,10 +4959,10 @@ public double ThresholdPercent { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.billingBudget.BillingBudgetThresholdRulesOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|BillingBudgetThresholdRules InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.billingBudget.BillingBudgetThresholdRules">BillingBudgetThresholdRules</a>
 
 ---
 
@@ -5204,7 +5204,7 @@ private void ResetUpdate()
 | <code><a href="#@cdktf/provider-google.billingBudget.BillingBudgetTimeoutsOutputReference.property.create">Create</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.billingBudget.BillingBudgetTimeoutsOutputReference.property.delete">Delete</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.billingBudget.BillingBudgetTimeoutsOutputReference.property.update">Update</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.billingBudget.BillingBudgetTimeoutsOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.billingBudget.BillingBudgetTimeoutsOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.billingBudget.BillingBudgetTimeouts">BillingBudgetTimeouts</a></code> | *No description.* |
 
 ---
 
@@ -5295,10 +5295,10 @@ public string Update { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.billingBudget.BillingBudgetTimeoutsOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|BillingBudgetTimeouts InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.billingBudget.BillingBudgetTimeouts">BillingBudgetTimeouts</a>
 
 ---
 

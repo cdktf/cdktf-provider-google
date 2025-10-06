@@ -14,13 +14,13 @@ from cdktf_cdktf_provider_google import chronicle_data_access_label
 chronicleDataAccessLabel.ChronicleDataAccessLabel(
   scope: Construct,
   id: str,
-  connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection] = None,
-  count: typing.Union[typing.Union[int, float], TerraformCount] = None,
+  connection: SSHProvisionerConnection | WinrmProvisionerConnection = None,
+  count: typing.Union[int, float] | TerraformCount = None,
   depends_on: typing.List[ITerraformDependable] = None,
   for_each: ITerraformIterator = None,
   lifecycle: TerraformResourceLifecycle = None,
   provider: TerraformProvider = None,
-  provisioners: typing.List[typing.Union[FileProvisioner, LocalExecProvisioner, RemoteExecProvisioner]] = None,
+  provisioners: typing.List[FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner] = None,
   data_access_label_id: str,
   instance: str,
   location: str,
@@ -36,13 +36,13 @@ chronicleDataAccessLabel.ChronicleDataAccessLabel(
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.chronicleDataAccessLabel.ChronicleDataAccessLabel.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | The scope in which to define this construct. |
 | <code><a href="#@cdktf/provider-google.chronicleDataAccessLabel.ChronicleDataAccessLabel.Initializer.parameter.id">id</a></code> | <code>str</code> | The scoped construct ID. |
-| <code><a href="#@cdktf/provider-google.chronicleDataAccessLabel.ChronicleDataAccessLabel.Initializer.parameter.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.chronicleDataAccessLabel.ChronicleDataAccessLabel.Initializer.parameter.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.chronicleDataAccessLabel.ChronicleDataAccessLabel.Initializer.parameter.connection">connection</a></code> | <code>cdktf.SSHProvisionerConnection \| cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.chronicleDataAccessLabel.ChronicleDataAccessLabel.Initializer.parameter.count">count</a></code> | <code>typing.Union[int, float] \| cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.chronicleDataAccessLabel.ChronicleDataAccessLabel.Initializer.parameter.dependsOn">depends_on</a></code> | <code>typing.List[cdktf.ITerraformDependable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.chronicleDataAccessLabel.ChronicleDataAccessLabel.Initializer.parameter.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.chronicleDataAccessLabel.ChronicleDataAccessLabel.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.chronicleDataAccessLabel.ChronicleDataAccessLabel.Initializer.parameter.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.chronicleDataAccessLabel.ChronicleDataAccessLabel.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.chronicleDataAccessLabel.ChronicleDataAccessLabel.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.chronicleDataAccessLabel.ChronicleDataAccessLabel.Initializer.parameter.dataAccessLabelId">data_access_label_id</a></code> | <code>str</code> | Required. |
 | <code><a href="#@cdktf/provider-google.chronicleDataAccessLabel.ChronicleDataAccessLabel.Initializer.parameter.instance">instance</a></code> | <code>str</code> | The unique identifier for the Chronicle instance, which is the same as the customer ID. |
 | <code><a href="#@cdktf/provider-google.chronicleDataAccessLabel.ChronicleDataAccessLabel.Initializer.parameter.location">location</a></code> | <code>str</code> | The location of the resource. |
@@ -74,13 +74,13 @@ Must be unique amongst siblings in the same scope
 
 ##### `connection`<sup>Optional</sup> <a name="connection" id="@cdktf/provider-google.chronicleDataAccessLabel.ChronicleDataAccessLabel.Initializer.parameter.connection"></a>
 
-- *Type:* typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]
+- *Type:* cdktf.SSHProvisionerConnection | cdktf.WinrmProvisionerConnection
 
 ---
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.chronicleDataAccessLabel.ChronicleDataAccessLabel.Initializer.parameter.count"></a>
 
-- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
+- *Type:* typing.Union[int, float] | cdktf.TerraformCount
 
 ---
 
@@ -110,7 +110,7 @@ Must be unique amongst siblings in the same scope
 
 ##### `provisioners`<sup>Optional</sup> <a name="provisioners" id="@cdktf/provider-google.chronicleDataAccessLabel.ChronicleDataAccessLabel.Initializer.parameter.provisioners"></a>
 
-- *Type:* typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]
+- *Type:* typing.List[cdktf.FileProvisioner | cdktf.LocalExecProvisioner | cdktf.RemoteExecProvisioner]
 
 ---
 
@@ -457,7 +457,7 @@ def get_string_map_attribute(
 ##### `has_resource_move` <a name="has_resource_move" id="@cdktf/provider-google.chronicleDataAccessLabel.ChronicleDataAccessLabel.hasResourceMove"></a>
 
 ```python
-def has_resource_move() -> typing.Union[TerraformResourceMoveByTarget, TerraformResourceMoveById]
+def has_resource_move() -> TerraformResourceMoveByTarget | TerraformResourceMoveById
 ```
 
 ##### `import_from` <a name="import_from" id="@cdktf/provider-google.chronicleDataAccessLabel.ChronicleDataAccessLabel.importFrom"></a>
@@ -520,7 +520,7 @@ Full id of resource being moved from, e.g. "aws_s3_bucket.example".
 ```python
 def move_to(
   move_target: str,
-  index: typing.Union[str, typing.Union[int, float]] = None
+  index: str | typing.Union[int, float] = None
 ) -> None
 ```
 
@@ -536,7 +536,7 @@ The previously set user defined string set by .addMoveTarget() corresponding to 
 
 ###### `index`<sup>Optional</sup> <a name="index" id="@cdktf/provider-google.chronicleDataAccessLabel.ChronicleDataAccessLabel.moveTo.parameter.index"></a>
 
-- *Type:* typing.Union[str, typing.Union[int, float]]
+- *Type:* str | typing.Union[int, float]
 
 Optional The index corresponding to the key the resource is to appear in the foreach of a resource to move to.
 
@@ -755,13 +755,13 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.5
 | <code><a href="#@cdktf/provider-google.chronicleDataAccessLabel.ChronicleDataAccessLabel.property.terraformMetaArguments">terraform_meta_arguments</a></code> | <code>typing.Mapping[typing.Any]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.chronicleDataAccessLabel.ChronicleDataAccessLabel.property.terraformResourceType">terraform_resource_type</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.chronicleDataAccessLabel.ChronicleDataAccessLabel.property.terraformGeneratorMetadata">terraform_generator_metadata</a></code> | <code>cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.chronicleDataAccessLabel.ChronicleDataAccessLabel.property.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.chronicleDataAccessLabel.ChronicleDataAccessLabel.property.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.chronicleDataAccessLabel.ChronicleDataAccessLabel.property.connection">connection</a></code> | <code>cdktf.SSHProvisionerConnection \| cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.chronicleDataAccessLabel.ChronicleDataAccessLabel.property.count">count</a></code> | <code>typing.Union[int, float] \| cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.chronicleDataAccessLabel.ChronicleDataAccessLabel.property.dependsOn">depends_on</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.chronicleDataAccessLabel.ChronicleDataAccessLabel.property.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.chronicleDataAccessLabel.ChronicleDataAccessLabel.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.chronicleDataAccessLabel.ChronicleDataAccessLabel.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.chronicleDataAccessLabel.ChronicleDataAccessLabel.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.chronicleDataAccessLabel.ChronicleDataAccessLabel.property.provisioners">provisioners</a></code> | <code>typing.List[cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.chronicleDataAccessLabel.ChronicleDataAccessLabel.property.author">author</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.chronicleDataAccessLabel.ChronicleDataAccessLabel.property.createTime">create_time</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.chronicleDataAccessLabel.ChronicleDataAccessLabel.property.displayName">display_name</a></code> | <code>str</code> | *No description.* |
@@ -775,7 +775,7 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.5
 | <code><a href="#@cdktf/provider-google.chronicleDataAccessLabel.ChronicleDataAccessLabel.property.instanceInput">instance_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.chronicleDataAccessLabel.ChronicleDataAccessLabel.property.locationInput">location_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.chronicleDataAccessLabel.ChronicleDataAccessLabel.property.projectInput">project_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.chronicleDataAccessLabel.ChronicleDataAccessLabel.property.timeoutsInput">timeouts_input</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.chronicleDataAccessLabel.ChronicleDataAccessLabelTimeouts">ChronicleDataAccessLabelTimeouts</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.chronicleDataAccessLabel.ChronicleDataAccessLabel.property.timeoutsInput">timeouts_input</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.chronicleDataAccessLabel.ChronicleDataAccessLabelTimeouts">ChronicleDataAccessLabelTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.chronicleDataAccessLabel.ChronicleDataAccessLabel.property.udmQueryInput">udm_query_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.chronicleDataAccessLabel.ChronicleDataAccessLabel.property.dataAccessLabelId">data_access_label_id</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.chronicleDataAccessLabel.ChronicleDataAccessLabel.property.description">description</a></code> | <code>str</code> | *No description.* |
@@ -862,20 +862,20 @@ terraform_generator_metadata: TerraformProviderGeneratorMetadata
 ##### `connection`<sup>Optional</sup> <a name="connection" id="@cdktf/provider-google.chronicleDataAccessLabel.ChronicleDataAccessLabel.property.connection"></a>
 
 ```python
-connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection]
+connection: SSHProvisionerConnection | WinrmProvisionerConnection
 ```
 
-- *Type:* typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]
+- *Type:* cdktf.SSHProvisionerConnection | cdktf.WinrmProvisionerConnection
 
 ---
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.chronicleDataAccessLabel.ChronicleDataAccessLabel.property.count"></a>
 
 ```python
-count: typing.Union[typing.Union[int, float], TerraformCount]
+count: typing.Union[int, float] | TerraformCount
 ```
 
-- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
+- *Type:* typing.Union[int, float] | cdktf.TerraformCount
 
 ---
 
@@ -922,10 +922,10 @@ provider: TerraformProvider
 ##### `provisioners`<sup>Optional</sup> <a name="provisioners" id="@cdktf/provider-google.chronicleDataAccessLabel.ChronicleDataAccessLabel.property.provisioners"></a>
 
 ```python
-provisioners: typing.List[typing.Union[FileProvisioner, LocalExecProvisioner, RemoteExecProvisioner]]
+provisioners: typing.List[FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner]
 ```
 
-- *Type:* typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]
+- *Type:* typing.List[cdktf.FileProvisioner | cdktf.LocalExecProvisioner | cdktf.RemoteExecProvisioner]
 
 ---
 
@@ -1062,10 +1062,10 @@ project_input: str
 ##### `timeouts_input`<sup>Optional</sup> <a name="timeouts_input" id="@cdktf/provider-google.chronicleDataAccessLabel.ChronicleDataAccessLabel.property.timeoutsInput"></a>
 
 ```python
-timeouts_input: typing.Union[IResolvable, ChronicleDataAccessLabelTimeouts]
+timeouts_input: IResolvable | ChronicleDataAccessLabelTimeouts
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.chronicleDataAccessLabel.ChronicleDataAccessLabelTimeouts">ChronicleDataAccessLabelTimeouts</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.chronicleDataAccessLabel.ChronicleDataAccessLabelTimeouts">ChronicleDataAccessLabelTimeouts</a>
 
 ---
 
@@ -1177,13 +1177,13 @@ tfResourceType: str
 from cdktf_cdktf_provider_google import chronicle_data_access_label
 
 chronicleDataAccessLabel.ChronicleDataAccessLabelConfig(
-  connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection] = None,
-  count: typing.Union[typing.Union[int, float], TerraformCount] = None,
+  connection: SSHProvisionerConnection | WinrmProvisionerConnection = None,
+  count: typing.Union[int, float] | TerraformCount = None,
   depends_on: typing.List[ITerraformDependable] = None,
   for_each: ITerraformIterator = None,
   lifecycle: TerraformResourceLifecycle = None,
   provider: TerraformProvider = None,
-  provisioners: typing.List[typing.Union[FileProvisioner, LocalExecProvisioner, RemoteExecProvisioner]] = None,
+  provisioners: typing.List[FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner] = None,
   data_access_label_id: str,
   instance: str,
   location: str,
@@ -1199,13 +1199,13 @@ chronicleDataAccessLabel.ChronicleDataAccessLabelConfig(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.chronicleDataAccessLabel.ChronicleDataAccessLabelConfig.property.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.chronicleDataAccessLabel.ChronicleDataAccessLabelConfig.property.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.chronicleDataAccessLabel.ChronicleDataAccessLabelConfig.property.connection">connection</a></code> | <code>cdktf.SSHProvisionerConnection \| cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.chronicleDataAccessLabel.ChronicleDataAccessLabelConfig.property.count">count</a></code> | <code>typing.Union[int, float] \| cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.chronicleDataAccessLabel.ChronicleDataAccessLabelConfig.property.dependsOn">depends_on</a></code> | <code>typing.List[cdktf.ITerraformDependable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.chronicleDataAccessLabel.ChronicleDataAccessLabelConfig.property.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.chronicleDataAccessLabel.ChronicleDataAccessLabelConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.chronicleDataAccessLabel.ChronicleDataAccessLabelConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.chronicleDataAccessLabel.ChronicleDataAccessLabelConfig.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.chronicleDataAccessLabel.ChronicleDataAccessLabelConfig.property.provisioners">provisioners</a></code> | <code>typing.List[cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.chronicleDataAccessLabel.ChronicleDataAccessLabelConfig.property.dataAccessLabelId">data_access_label_id</a></code> | <code>str</code> | Required. |
 | <code><a href="#@cdktf/provider-google.chronicleDataAccessLabel.ChronicleDataAccessLabelConfig.property.instance">instance</a></code> | <code>str</code> | The unique identifier for the Chronicle instance, which is the same as the customer ID. |
 | <code><a href="#@cdktf/provider-google.chronicleDataAccessLabel.ChronicleDataAccessLabelConfig.property.location">location</a></code> | <code>str</code> | The location of the resource. |
@@ -1220,20 +1220,20 @@ chronicleDataAccessLabel.ChronicleDataAccessLabelConfig(
 ##### `connection`<sup>Optional</sup> <a name="connection" id="@cdktf/provider-google.chronicleDataAccessLabel.ChronicleDataAccessLabelConfig.property.connection"></a>
 
 ```python
-connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection]
+connection: SSHProvisionerConnection | WinrmProvisionerConnection
 ```
 
-- *Type:* typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]
+- *Type:* cdktf.SSHProvisionerConnection | cdktf.WinrmProvisionerConnection
 
 ---
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.chronicleDataAccessLabel.ChronicleDataAccessLabelConfig.property.count"></a>
 
 ```python
-count: typing.Union[typing.Union[int, float], TerraformCount]
+count: typing.Union[int, float] | TerraformCount
 ```
 
-- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
+- *Type:* typing.Union[int, float] | cdktf.TerraformCount
 
 ---
 
@@ -1280,10 +1280,10 @@ provider: TerraformProvider
 ##### `provisioners`<sup>Optional</sup> <a name="provisioners" id="@cdktf/provider-google.chronicleDataAccessLabel.ChronicleDataAccessLabelConfig.property.provisioners"></a>
 
 ```python
-provisioners: typing.List[typing.Union[FileProvisioner, LocalExecProvisioner, RemoteExecProvisioner]]
+provisioners: typing.List[FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner]
 ```
 
-- *Type:* typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]
+- *Type:* typing.List[cdktf.FileProvisioner | cdktf.LocalExecProvisioner | cdktf.RemoteExecProvisioner]
 
 ---
 
@@ -1729,7 +1729,7 @@ def reset_update() -> None
 | <code><a href="#@cdktf/provider-google.chronicleDataAccessLabel.ChronicleDataAccessLabelTimeoutsOutputReference.property.create">create</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.chronicleDataAccessLabel.ChronicleDataAccessLabelTimeoutsOutputReference.property.delete">delete</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.chronicleDataAccessLabel.ChronicleDataAccessLabelTimeoutsOutputReference.property.update">update</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.chronicleDataAccessLabel.ChronicleDataAccessLabelTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.chronicleDataAccessLabel.ChronicleDataAccessLabelTimeouts">ChronicleDataAccessLabelTimeouts</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.chronicleDataAccessLabel.ChronicleDataAccessLabelTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.chronicleDataAccessLabel.ChronicleDataAccessLabelTimeouts">ChronicleDataAccessLabelTimeouts</a></code> | *No description.* |
 
 ---
 
@@ -1820,10 +1820,10 @@ update: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.chronicleDataAccessLabel.ChronicleDataAccessLabelTimeoutsOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, ChronicleDataAccessLabelTimeouts]
+internal_value: IResolvable | ChronicleDataAccessLabelTimeouts
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.chronicleDataAccessLabel.ChronicleDataAccessLabelTimeouts">ChronicleDataAccessLabelTimeouts</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.chronicleDataAccessLabel.ChronicleDataAccessLabelTimeouts">ChronicleDataAccessLabelTimeouts</a>
 
 ---
 

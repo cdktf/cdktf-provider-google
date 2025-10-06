@@ -16,8 +16,7 @@ GoogleProvider.Builder.create(Construct scope, java.lang.String id)
 //  .accessContextManagerCustomEndpoint(java.lang.String)
 //  .accessToken(java.lang.String)
 //  .activeDirectoryCustomEndpoint(java.lang.String)
-//  .addTerraformAttributionLabel(java.lang.Boolean)
-//  .addTerraformAttributionLabel(IResolvable)
+//  .addTerraformAttributionLabel(java.lang.Boolean|IResolvable)
 //  .alias(java.lang.String)
 //  .alloydbCustomEndpoint(java.lang.String)
 //  .apigeeCustomEndpoint(java.lang.String)
@@ -28,8 +27,7 @@ GoogleProvider.Builder.create(Construct scope, java.lang.String id)
 //  .artifactRegistryCustomEndpoint(java.lang.String)
 //  .assuredWorkloadsCustomEndpoint(java.lang.String)
 //  .backupDrCustomEndpoint(java.lang.String)
-//  .batching(IResolvable)
-//  .batching(java.util.List<GoogleProviderBatching>)
+//  .batching(IResolvable|java.util.List<GoogleProviderBatching>)
 //  .beyondcorpCustomEndpoint(java.lang.String)
 //  .biglakeCustomEndpoint(java.lang.String)
 //  .bigqueryAnalyticsHubCustomEndpoint(java.lang.String)
@@ -96,8 +94,7 @@ GoogleProvider.Builder.create(Construct scope, java.lang.String id)
 //  .edgenetworkCustomEndpoint(java.lang.String)
 //  .essentialContactsCustomEndpoint(java.lang.String)
 //  .eventarcCustomEndpoint(java.lang.String)
-//  .externalCredentials(IResolvable)
-//  .externalCredentials(java.util.List<GoogleProviderExternalCredentials>)
+//  .externalCredentials(IResolvable|java.util.List<GoogleProviderExternalCredentials>)
 //  .filestoreCustomEndpoint(java.lang.String)
 //  .firebaseAppCheckCustomEndpoint(java.lang.String)
 //  .firebaseAppHostingCustomEndpoint(java.lang.String)
@@ -187,8 +184,7 @@ GoogleProvider.Builder.create(Construct scope, java.lang.String id)
 //  .tpuCustomEndpoint(java.lang.String)
 //  .transcoderCustomEndpoint(java.lang.String)
 //  .universeDomain(java.lang.String)
-//  .userProjectOverride(java.lang.Boolean)
-//  .userProjectOverride(IResolvable)
+//  .userProjectOverride(java.lang.Boolean|IResolvable)
 //  .vertexAiCustomEndpoint(java.lang.String)
 //  .vmwareengineCustomEndpoint(java.lang.String)
 //  .vpcAccessCustomEndpoint(java.lang.String)
@@ -206,7 +202,7 @@ GoogleProvider.Builder.create(Construct scope, java.lang.String id)
 | <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.accessContextManagerCustomEndpoint">accessContextManagerCustomEndpoint</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs#access_context_manager_custom_endpoint GoogleProvider#access_context_manager_custom_endpoint}. |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.accessToken">accessToken</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs#access_token GoogleProvider#access_token}. |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.activeDirectoryCustomEndpoint">activeDirectoryCustomEndpoint</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs#active_directory_custom_endpoint GoogleProvider#active_directory_custom_endpoint}. |
-| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.addTerraformAttributionLabel">addTerraformAttributionLabel</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs#add_terraform_attribution_label GoogleProvider#add_terraform_attribution_label}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.addTerraformAttributionLabel">addTerraformAttributionLabel</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs#add_terraform_attribution_label GoogleProvider#add_terraform_attribution_label}. |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.alias">alias</a></code> | <code>java.lang.String</code> | Alias name. |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.alloydbCustomEndpoint">alloydbCustomEndpoint</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs#alloydb_custom_endpoint GoogleProvider#alloydb_custom_endpoint}. |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.apigeeCustomEndpoint">apigeeCustomEndpoint</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs#apigee_custom_endpoint GoogleProvider#apigee_custom_endpoint}. |
@@ -217,7 +213,7 @@ GoogleProvider.Builder.create(Construct scope, java.lang.String id)
 | <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.artifactRegistryCustomEndpoint">artifactRegistryCustomEndpoint</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs#artifact_registry_custom_endpoint GoogleProvider#artifact_registry_custom_endpoint}. |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.assuredWorkloadsCustomEndpoint">assuredWorkloadsCustomEndpoint</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs#assured_workloads_custom_endpoint GoogleProvider#assured_workloads_custom_endpoint}. |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.backupDrCustomEndpoint">backupDrCustomEndpoint</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs#backup_dr_custom_endpoint GoogleProvider#backup_dr_custom_endpoint}. |
-| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.batching">batching</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.provider.GoogleProviderBatching">GoogleProviderBatching</a>></code> | batching block. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.batching">batching</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.provider.GoogleProviderBatching">GoogleProviderBatching</a>></code> | batching block. |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.beyondcorpCustomEndpoint">beyondcorpCustomEndpoint</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs#beyondcorp_custom_endpoint GoogleProvider#beyondcorp_custom_endpoint}. |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.biglakeCustomEndpoint">biglakeCustomEndpoint</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs#biglake_custom_endpoint GoogleProvider#biglake_custom_endpoint}. |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.bigqueryAnalyticsHubCustomEndpoint">bigqueryAnalyticsHubCustomEndpoint</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs#bigquery_analytics_hub_custom_endpoint GoogleProvider#bigquery_analytics_hub_custom_endpoint}. |
@@ -284,7 +280,7 @@ GoogleProvider.Builder.create(Construct scope, java.lang.String id)
 | <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.edgenetworkCustomEndpoint">edgenetworkCustomEndpoint</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs#edgenetwork_custom_endpoint GoogleProvider#edgenetwork_custom_endpoint}. |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.essentialContactsCustomEndpoint">essentialContactsCustomEndpoint</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs#essential_contacts_custom_endpoint GoogleProvider#essential_contacts_custom_endpoint}. |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.eventarcCustomEndpoint">eventarcCustomEndpoint</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs#eventarc_custom_endpoint GoogleProvider#eventarc_custom_endpoint}. |
-| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.externalCredentials">externalCredentials</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.provider.GoogleProviderExternalCredentials">GoogleProviderExternalCredentials</a>></code> | external_credentials block. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.externalCredentials">externalCredentials</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.provider.GoogleProviderExternalCredentials">GoogleProviderExternalCredentials</a>></code> | external_credentials block. |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.filestoreCustomEndpoint">filestoreCustomEndpoint</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs#filestore_custom_endpoint GoogleProvider#filestore_custom_endpoint}. |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.firebaseAppCheckCustomEndpoint">firebaseAppCheckCustomEndpoint</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs#firebase_app_check_custom_endpoint GoogleProvider#firebase_app_check_custom_endpoint}. |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.firebaseAppHostingCustomEndpoint">firebaseAppHostingCustomEndpoint</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs#firebase_app_hosting_custom_endpoint GoogleProvider#firebase_app_hosting_custom_endpoint}. |
@@ -374,7 +370,7 @@ GoogleProvider.Builder.create(Construct scope, java.lang.String id)
 | <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.tpuCustomEndpoint">tpuCustomEndpoint</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs#tpu_custom_endpoint GoogleProvider#tpu_custom_endpoint}. |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.transcoderCustomEndpoint">transcoderCustomEndpoint</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs#transcoder_custom_endpoint GoogleProvider#transcoder_custom_endpoint}. |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.universeDomain">universeDomain</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs#universe_domain GoogleProvider#universe_domain}. |
-| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.userProjectOverride">userProjectOverride</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs#user_project_override GoogleProvider#user_project_override}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.userProjectOverride">userProjectOverride</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs#user_project_override GoogleProvider#user_project_override}. |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.vertexAiCustomEndpoint">vertexAiCustomEndpoint</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs#vertex_ai_custom_endpoint GoogleProvider#vertex_ai_custom_endpoint}. |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.vmwareengineCustomEndpoint">vmwareengineCustomEndpoint</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs#vmwareengine_custom_endpoint GoogleProvider#vmwareengine_custom_endpoint}. |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.vpcAccessCustomEndpoint">vpcAccessCustomEndpoint</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs#vpc_access_custom_endpoint GoogleProvider#vpc_access_custom_endpoint}. |
@@ -436,7 +432,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `addTerraformAttributionLabel`<sup>Optional</sup> <a name="addTerraformAttributionLabel" id="@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.addTerraformAttributionLabel"></a>
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs#add_terraform_attribution_label GoogleProvider#add_terraform_attribution_label}.
 
@@ -526,7 +522,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `batching`<sup>Optional</sup> <a name="batching" id="@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.batching"></a>
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.provider.GoogleProviderBatching">GoogleProviderBatching</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.provider.GoogleProviderBatching">GoogleProviderBatching</a>>
 
 batching block.
 
@@ -1064,7 +1060,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `externalCredentials`<sup>Optional</sup> <a name="externalCredentials" id="@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.externalCredentials"></a>
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.provider.GoogleProviderExternalCredentials">GoogleProviderExternalCredentials</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.provider.GoogleProviderExternalCredentials">GoogleProviderExternalCredentials</a>>
 
 external_credentials block.
 
@@ -1786,7 +1782,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `userProjectOverride`<sup>Optional</sup> <a name="userProjectOverride" id="@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.userProjectOverride"></a>
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs#user_project_override GoogleProvider#user_project_override}.
 
@@ -3309,7 +3305,7 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.5
 | <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.accessContextManagerCustomEndpointInput">accessContextManagerCustomEndpointInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.accessTokenInput">accessTokenInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.activeDirectoryCustomEndpointInput">activeDirectoryCustomEndpointInput</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.addTerraformAttributionLabelInput">addTerraformAttributionLabelInput</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.addTerraformAttributionLabelInput">addTerraformAttributionLabelInput</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.aliasInput">aliasInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.alloydbCustomEndpointInput">alloydbCustomEndpointInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.apigeeCustomEndpointInput">apigeeCustomEndpointInput</a></code> | <code>java.lang.String</code> | *No description.* |
@@ -3320,7 +3316,7 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.5
 | <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.artifactRegistryCustomEndpointInput">artifactRegistryCustomEndpointInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.assuredWorkloadsCustomEndpointInput">assuredWorkloadsCustomEndpointInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.backupDrCustomEndpointInput">backupDrCustomEndpointInput</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.batchingInput">batchingInput</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.provider.GoogleProviderBatching">GoogleProviderBatching</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.batchingInput">batchingInput</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.provider.GoogleProviderBatching">GoogleProviderBatching</a>></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.beyondcorpCustomEndpointInput">beyondcorpCustomEndpointInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.biglakeCustomEndpointInput">biglakeCustomEndpointInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.bigqueryAnalyticsHubCustomEndpointInput">bigqueryAnalyticsHubCustomEndpointInput</a></code> | <code>java.lang.String</code> | *No description.* |
@@ -3387,7 +3383,7 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.5
 | <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.edgenetworkCustomEndpointInput">edgenetworkCustomEndpointInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.essentialContactsCustomEndpointInput">essentialContactsCustomEndpointInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.eventarcCustomEndpointInput">eventarcCustomEndpointInput</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.externalCredentialsInput">externalCredentialsInput</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.provider.GoogleProviderExternalCredentials">GoogleProviderExternalCredentials</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.externalCredentialsInput">externalCredentialsInput</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.provider.GoogleProviderExternalCredentials">GoogleProviderExternalCredentials</a>></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.filestoreCustomEndpointInput">filestoreCustomEndpointInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.firebaseAppCheckCustomEndpointInput">firebaseAppCheckCustomEndpointInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.firebaseAppHostingCustomEndpointInput">firebaseAppHostingCustomEndpointInput</a></code> | <code>java.lang.String</code> | *No description.* |
@@ -3477,7 +3473,7 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.5
 | <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.tpuCustomEndpointInput">tpuCustomEndpointInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.transcoderCustomEndpointInput">transcoderCustomEndpointInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.universeDomainInput">universeDomainInput</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.userProjectOverrideInput">userProjectOverrideInput</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.userProjectOverrideInput">userProjectOverrideInput</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.vertexAiCustomEndpointInput">vertexAiCustomEndpointInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.vmwareengineCustomEndpointInput">vmwareengineCustomEndpointInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.vpcAccessCustomEndpointInput">vpcAccessCustomEndpointInput</a></code> | <code>java.lang.String</code> | *No description.* |
@@ -3488,7 +3484,7 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.5
 | <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.accessContextManagerCustomEndpoint">accessContextManagerCustomEndpoint</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.accessToken">accessToken</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.activeDirectoryCustomEndpoint">activeDirectoryCustomEndpoint</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.addTerraformAttributionLabel">addTerraformAttributionLabel</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.addTerraformAttributionLabel">addTerraformAttributionLabel</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.alloydbCustomEndpoint">alloydbCustomEndpoint</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.apigeeCustomEndpoint">apigeeCustomEndpoint</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.apihubCustomEndpoint">apihubCustomEndpoint</a></code> | <code>java.lang.String</code> | *No description.* |
@@ -3498,7 +3494,7 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.5
 | <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.artifactRegistryCustomEndpoint">artifactRegistryCustomEndpoint</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.assuredWorkloadsCustomEndpoint">assuredWorkloadsCustomEndpoint</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.backupDrCustomEndpoint">backupDrCustomEndpoint</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.batching">batching</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.provider.GoogleProviderBatching">GoogleProviderBatching</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.batching">batching</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.provider.GoogleProviderBatching">GoogleProviderBatching</a>></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.beyondcorpCustomEndpoint">beyondcorpCustomEndpoint</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.biglakeCustomEndpoint">biglakeCustomEndpoint</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.bigqueryAnalyticsHubCustomEndpoint">bigqueryAnalyticsHubCustomEndpoint</a></code> | <code>java.lang.String</code> | *No description.* |
@@ -3565,7 +3561,7 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.5
 | <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.edgenetworkCustomEndpoint">edgenetworkCustomEndpoint</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.essentialContactsCustomEndpoint">essentialContactsCustomEndpoint</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.eventarcCustomEndpoint">eventarcCustomEndpoint</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.externalCredentials">externalCredentials</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.provider.GoogleProviderExternalCredentials">GoogleProviderExternalCredentials</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.externalCredentials">externalCredentials</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.provider.GoogleProviderExternalCredentials">GoogleProviderExternalCredentials</a>></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.filestoreCustomEndpoint">filestoreCustomEndpoint</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.firebaseAppCheckCustomEndpoint">firebaseAppCheckCustomEndpoint</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.firebaseAppHostingCustomEndpoint">firebaseAppHostingCustomEndpoint</a></code> | <code>java.lang.String</code> | *No description.* |
@@ -3655,7 +3651,7 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.5
 | <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.tpuCustomEndpoint">tpuCustomEndpoint</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.transcoderCustomEndpoint">transcoderCustomEndpoint</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.universeDomain">universeDomain</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.userProjectOverride">userProjectOverride</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.userProjectOverride">userProjectOverride</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.vertexAiCustomEndpoint">vertexAiCustomEndpoint</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.vmwareengineCustomEndpoint">vmwareengineCustomEndpoint</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.vpcAccessCustomEndpoint">vpcAccessCustomEndpoint</a></code> | <code>java.lang.String</code> | *No description.* |
@@ -3800,10 +3796,10 @@ public java.lang.String getActiveDirectoryCustomEndpointInput();
 ##### `addTerraformAttributionLabelInput`<sup>Optional</sup> <a name="addTerraformAttributionLabelInput" id="@cdktf/provider-google.provider.GoogleProvider.property.addTerraformAttributionLabelInput"></a>
 
 ```java
-public java.lang.Object getAddTerraformAttributionLabelInput();
+public java.lang.Boolean|IResolvable getAddTerraformAttributionLabelInput();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
@@ -3910,10 +3906,10 @@ public java.lang.String getBackupDrCustomEndpointInput();
 ##### `batchingInput`<sup>Optional</sup> <a name="batchingInput" id="@cdktf/provider-google.provider.GoogleProvider.property.batchingInput"></a>
 
 ```java
-public java.lang.Object getBatchingInput();
+public IResolvable|java.util.List<GoogleProviderBatching> getBatchingInput();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.provider.GoogleProviderBatching">GoogleProviderBatching</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.provider.GoogleProviderBatching">GoogleProviderBatching</a>>
 
 ---
 
@@ -4580,10 +4576,10 @@ public java.lang.String getEventarcCustomEndpointInput();
 ##### `externalCredentialsInput`<sup>Optional</sup> <a name="externalCredentialsInput" id="@cdktf/provider-google.provider.GoogleProvider.property.externalCredentialsInput"></a>
 
 ```java
-public java.lang.Object getExternalCredentialsInput();
+public IResolvable|java.util.List<GoogleProviderExternalCredentials> getExternalCredentialsInput();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.provider.GoogleProviderExternalCredentials">GoogleProviderExternalCredentials</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.provider.GoogleProviderExternalCredentials">GoogleProviderExternalCredentials</a>>
 
 ---
 
@@ -5480,10 +5476,10 @@ public java.lang.String getUniverseDomainInput();
 ##### `userProjectOverrideInput`<sup>Optional</sup> <a name="userProjectOverrideInput" id="@cdktf/provider-google.provider.GoogleProvider.property.userProjectOverrideInput"></a>
 
 ```java
-public java.lang.Object getUserProjectOverrideInput();
+public java.lang.Boolean|IResolvable getUserProjectOverrideInput();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
@@ -5590,10 +5586,10 @@ public java.lang.String getActiveDirectoryCustomEndpoint();
 ##### `addTerraformAttributionLabel`<sup>Optional</sup> <a name="addTerraformAttributionLabel" id="@cdktf/provider-google.provider.GoogleProvider.property.addTerraformAttributionLabel"></a>
 
 ```java
-public java.lang.Object getAddTerraformAttributionLabel();
+public java.lang.Boolean|IResolvable getAddTerraformAttributionLabel();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
@@ -5690,10 +5686,10 @@ public java.lang.String getBackupDrCustomEndpoint();
 ##### `batching`<sup>Optional</sup> <a name="batching" id="@cdktf/provider-google.provider.GoogleProvider.property.batching"></a>
 
 ```java
-public java.lang.Object getBatching();
+public IResolvable|java.util.List<GoogleProviderBatching> getBatching();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.provider.GoogleProviderBatching">GoogleProviderBatching</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.provider.GoogleProviderBatching">GoogleProviderBatching</a>>
 
 ---
 
@@ -6360,10 +6356,10 @@ public java.lang.String getEventarcCustomEndpoint();
 ##### `externalCredentials`<sup>Optional</sup> <a name="externalCredentials" id="@cdktf/provider-google.provider.GoogleProvider.property.externalCredentials"></a>
 
 ```java
-public java.lang.Object getExternalCredentials();
+public IResolvable|java.util.List<GoogleProviderExternalCredentials> getExternalCredentials();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.provider.GoogleProviderExternalCredentials">GoogleProviderExternalCredentials</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.provider.GoogleProviderExternalCredentials">GoogleProviderExternalCredentials</a>>
 
 ---
 
@@ -7260,10 +7256,10 @@ public java.lang.String getUniverseDomain();
 ##### `userProjectOverride`<sup>Optional</sup> <a name="userProjectOverride" id="@cdktf/provider-google.provider.GoogleProvider.property.userProjectOverride"></a>
 
 ```java
-public java.lang.Object getUserProjectOverride();
+public java.lang.Boolean|IResolvable getUserProjectOverride();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
@@ -7355,8 +7351,7 @@ public java.lang.String getTfResourceType();
 import com.hashicorp.cdktf.providers.google.provider.GoogleProviderBatching;
 
 GoogleProviderBatching.builder()
-//  .enableBatching(java.lang.Boolean)
-//  .enableBatching(IResolvable)
+//  .enableBatching(java.lang.Boolean|IResolvable)
 //  .sendAfter(java.lang.String)
     .build();
 ```
@@ -7365,7 +7360,7 @@ GoogleProviderBatching.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.provider.GoogleProviderBatching.property.enableBatching">enableBatching</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs#enable_batching GoogleProvider#enable_batching}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProviderBatching.property.enableBatching">enableBatching</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs#enable_batching GoogleProvider#enable_batching}. |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProviderBatching.property.sendAfter">sendAfter</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs#send_after GoogleProvider#send_after}. |
 
 ---
@@ -7373,10 +7368,10 @@ GoogleProviderBatching.builder()
 ##### `enableBatching`<sup>Optional</sup> <a name="enableBatching" id="@cdktf/provider-google.provider.GoogleProviderBatching.property.enableBatching"></a>
 
 ```java
-public java.lang.Object getEnableBatching();
+public java.lang.Boolean|IResolvable getEnableBatching();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs#enable_batching GoogleProvider#enable_batching}.
 
@@ -7406,8 +7401,7 @@ GoogleProviderConfig.builder()
 //  .accessContextManagerCustomEndpoint(java.lang.String)
 //  .accessToken(java.lang.String)
 //  .activeDirectoryCustomEndpoint(java.lang.String)
-//  .addTerraformAttributionLabel(java.lang.Boolean)
-//  .addTerraformAttributionLabel(IResolvable)
+//  .addTerraformAttributionLabel(java.lang.Boolean|IResolvable)
 //  .alias(java.lang.String)
 //  .alloydbCustomEndpoint(java.lang.String)
 //  .apigeeCustomEndpoint(java.lang.String)
@@ -7418,8 +7412,7 @@ GoogleProviderConfig.builder()
 //  .artifactRegistryCustomEndpoint(java.lang.String)
 //  .assuredWorkloadsCustomEndpoint(java.lang.String)
 //  .backupDrCustomEndpoint(java.lang.String)
-//  .batching(IResolvable)
-//  .batching(java.util.List<GoogleProviderBatching>)
+//  .batching(IResolvable|java.util.List<GoogleProviderBatching>)
 //  .beyondcorpCustomEndpoint(java.lang.String)
 //  .biglakeCustomEndpoint(java.lang.String)
 //  .bigqueryAnalyticsHubCustomEndpoint(java.lang.String)
@@ -7486,8 +7479,7 @@ GoogleProviderConfig.builder()
 //  .edgenetworkCustomEndpoint(java.lang.String)
 //  .essentialContactsCustomEndpoint(java.lang.String)
 //  .eventarcCustomEndpoint(java.lang.String)
-//  .externalCredentials(IResolvable)
-//  .externalCredentials(java.util.List<GoogleProviderExternalCredentials>)
+//  .externalCredentials(IResolvable|java.util.List<GoogleProviderExternalCredentials>)
 //  .filestoreCustomEndpoint(java.lang.String)
 //  .firebaseAppCheckCustomEndpoint(java.lang.String)
 //  .firebaseAppHostingCustomEndpoint(java.lang.String)
@@ -7577,8 +7569,7 @@ GoogleProviderConfig.builder()
 //  .tpuCustomEndpoint(java.lang.String)
 //  .transcoderCustomEndpoint(java.lang.String)
 //  .universeDomain(java.lang.String)
-//  .userProjectOverride(java.lang.Boolean)
-//  .userProjectOverride(IResolvable)
+//  .userProjectOverride(java.lang.Boolean|IResolvable)
 //  .vertexAiCustomEndpoint(java.lang.String)
 //  .vmwareengineCustomEndpoint(java.lang.String)
 //  .vpcAccessCustomEndpoint(java.lang.String)
@@ -7596,7 +7587,7 @@ GoogleProviderConfig.builder()
 | <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.accessContextManagerCustomEndpoint">accessContextManagerCustomEndpoint</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs#access_context_manager_custom_endpoint GoogleProvider#access_context_manager_custom_endpoint}. |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.accessToken">accessToken</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs#access_token GoogleProvider#access_token}. |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.activeDirectoryCustomEndpoint">activeDirectoryCustomEndpoint</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs#active_directory_custom_endpoint GoogleProvider#active_directory_custom_endpoint}. |
-| <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.addTerraformAttributionLabel">addTerraformAttributionLabel</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs#add_terraform_attribution_label GoogleProvider#add_terraform_attribution_label}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.addTerraformAttributionLabel">addTerraformAttributionLabel</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs#add_terraform_attribution_label GoogleProvider#add_terraform_attribution_label}. |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.alias">alias</a></code> | <code>java.lang.String</code> | Alias name. |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.alloydbCustomEndpoint">alloydbCustomEndpoint</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs#alloydb_custom_endpoint GoogleProvider#alloydb_custom_endpoint}. |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.apigeeCustomEndpoint">apigeeCustomEndpoint</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs#apigee_custom_endpoint GoogleProvider#apigee_custom_endpoint}. |
@@ -7607,7 +7598,7 @@ GoogleProviderConfig.builder()
 | <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.artifactRegistryCustomEndpoint">artifactRegistryCustomEndpoint</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs#artifact_registry_custom_endpoint GoogleProvider#artifact_registry_custom_endpoint}. |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.assuredWorkloadsCustomEndpoint">assuredWorkloadsCustomEndpoint</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs#assured_workloads_custom_endpoint GoogleProvider#assured_workloads_custom_endpoint}. |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.backupDrCustomEndpoint">backupDrCustomEndpoint</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs#backup_dr_custom_endpoint GoogleProvider#backup_dr_custom_endpoint}. |
-| <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.batching">batching</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.provider.GoogleProviderBatching">GoogleProviderBatching</a>></code> | batching block. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.batching">batching</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.provider.GoogleProviderBatching">GoogleProviderBatching</a>></code> | batching block. |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.beyondcorpCustomEndpoint">beyondcorpCustomEndpoint</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs#beyondcorp_custom_endpoint GoogleProvider#beyondcorp_custom_endpoint}. |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.biglakeCustomEndpoint">biglakeCustomEndpoint</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs#biglake_custom_endpoint GoogleProvider#biglake_custom_endpoint}. |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.bigqueryAnalyticsHubCustomEndpoint">bigqueryAnalyticsHubCustomEndpoint</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs#bigquery_analytics_hub_custom_endpoint GoogleProvider#bigquery_analytics_hub_custom_endpoint}. |
@@ -7674,7 +7665,7 @@ GoogleProviderConfig.builder()
 | <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.edgenetworkCustomEndpoint">edgenetworkCustomEndpoint</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs#edgenetwork_custom_endpoint GoogleProvider#edgenetwork_custom_endpoint}. |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.essentialContactsCustomEndpoint">essentialContactsCustomEndpoint</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs#essential_contacts_custom_endpoint GoogleProvider#essential_contacts_custom_endpoint}. |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.eventarcCustomEndpoint">eventarcCustomEndpoint</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs#eventarc_custom_endpoint GoogleProvider#eventarc_custom_endpoint}. |
-| <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.externalCredentials">externalCredentials</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.provider.GoogleProviderExternalCredentials">GoogleProviderExternalCredentials</a>></code> | external_credentials block. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.externalCredentials">externalCredentials</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-google.provider.GoogleProviderExternalCredentials">GoogleProviderExternalCredentials</a>></code> | external_credentials block. |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.filestoreCustomEndpoint">filestoreCustomEndpoint</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs#filestore_custom_endpoint GoogleProvider#filestore_custom_endpoint}. |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.firebaseAppCheckCustomEndpoint">firebaseAppCheckCustomEndpoint</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs#firebase_app_check_custom_endpoint GoogleProvider#firebase_app_check_custom_endpoint}. |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.firebaseAppHostingCustomEndpoint">firebaseAppHostingCustomEndpoint</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs#firebase_app_hosting_custom_endpoint GoogleProvider#firebase_app_hosting_custom_endpoint}. |
@@ -7764,7 +7755,7 @@ GoogleProviderConfig.builder()
 | <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.tpuCustomEndpoint">tpuCustomEndpoint</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs#tpu_custom_endpoint GoogleProvider#tpu_custom_endpoint}. |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.transcoderCustomEndpoint">transcoderCustomEndpoint</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs#transcoder_custom_endpoint GoogleProvider#transcoder_custom_endpoint}. |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.universeDomain">universeDomain</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs#universe_domain GoogleProvider#universe_domain}. |
-| <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.userProjectOverride">userProjectOverride</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs#user_project_override GoogleProvider#user_project_override}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.userProjectOverride">userProjectOverride</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs#user_project_override GoogleProvider#user_project_override}. |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.vertexAiCustomEndpoint">vertexAiCustomEndpoint</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs#vertex_ai_custom_endpoint GoogleProvider#vertex_ai_custom_endpoint}. |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.vmwareengineCustomEndpoint">vmwareengineCustomEndpoint</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs#vmwareengine_custom_endpoint GoogleProvider#vmwareengine_custom_endpoint}. |
 | <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.vpcAccessCustomEndpoint">vpcAccessCustomEndpoint</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs#vpc_access_custom_endpoint GoogleProvider#vpc_access_custom_endpoint}. |
@@ -7825,10 +7816,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `addTerraformAttributionLabel`<sup>Optional</sup> <a name="addTerraformAttributionLabel" id="@cdktf/provider-google.provider.GoogleProviderConfig.property.addTerraformAttributionLabel"></a>
 
 ```java
-public java.lang.Object getAddTerraformAttributionLabel();
+public java.lang.Boolean|IResolvable getAddTerraformAttributionLabel();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs#add_terraform_attribution_label GoogleProvider#add_terraform_attribution_label}.
 
@@ -7959,10 +7950,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `batching`<sup>Optional</sup> <a name="batching" id="@cdktf/provider-google.provider.GoogleProviderConfig.property.batching"></a>
 
 ```java
-public java.lang.Object getBatching();
+public IResolvable|java.util.List<GoogleProviderBatching> getBatching();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.provider.GoogleProviderBatching">GoogleProviderBatching</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.provider.GoogleProviderBatching">GoogleProviderBatching</a>>
 
 batching block.
 
@@ -8765,10 +8756,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `externalCredentials`<sup>Optional</sup> <a name="externalCredentials" id="@cdktf/provider-google.provider.GoogleProviderConfig.property.externalCredentials"></a>
 
 ```java
-public java.lang.Object getExternalCredentials();
+public IResolvable|java.util.List<GoogleProviderExternalCredentials> getExternalCredentials();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.provider.GoogleProviderExternalCredentials">GoogleProviderExternalCredentials</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-google.provider.GoogleProviderExternalCredentials">GoogleProviderExternalCredentials</a>>
 
 external_credentials block.
 
@@ -9847,10 +9838,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `userProjectOverride`<sup>Optional</sup> <a name="userProjectOverride" id="@cdktf/provider-google.provider.GoogleProviderConfig.property.userProjectOverride"></a>
 
 ```java
-public java.lang.Object getUserProjectOverride();
+public java.lang.Boolean|IResolvable getUserProjectOverride();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.50.0/docs#user_project_override GoogleProvider#user_project_override}.
 

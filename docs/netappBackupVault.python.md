@@ -14,13 +14,13 @@ from cdktf_cdktf_provider_google import netapp_backup_vault
 netappBackupVault.NetappBackupVault(
   scope: Construct,
   id: str,
-  connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection] = None,
-  count: typing.Union[typing.Union[int, float], TerraformCount] = None,
+  connection: SSHProvisionerConnection | WinrmProvisionerConnection = None,
+  count: typing.Union[int, float] | TerraformCount = None,
   depends_on: typing.List[ITerraformDependable] = None,
   for_each: ITerraformIterator = None,
   lifecycle: TerraformResourceLifecycle = None,
   provider: TerraformProvider = None,
-  provisioners: typing.List[typing.Union[FileProvisioner, LocalExecProvisioner, RemoteExecProvisioner]] = None,
+  provisioners: typing.List[FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner] = None,
   location: str,
   name: str,
   backup_region: str = None,
@@ -38,13 +38,13 @@ netappBackupVault.NetappBackupVault(
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVault.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | The scope in which to define this construct. |
 | <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVault.Initializer.parameter.id">id</a></code> | <code>str</code> | The scoped construct ID. |
-| <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVault.Initializer.parameter.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVault.Initializer.parameter.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVault.Initializer.parameter.connection">connection</a></code> | <code>cdktf.SSHProvisionerConnection \| cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVault.Initializer.parameter.count">count</a></code> | <code>typing.Union[int, float] \| cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVault.Initializer.parameter.dependsOn">depends_on</a></code> | <code>typing.List[cdktf.ITerraformDependable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVault.Initializer.parameter.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVault.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVault.Initializer.parameter.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVault.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVault.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVault.Initializer.parameter.location">location</a></code> | <code>str</code> | Location (region) of the backup vault. |
 | <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVault.Initializer.parameter.name">name</a></code> | <code>str</code> | The resource name of the backup vault. Needs to be unique per location. |
 | <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVault.Initializer.parameter.backupRegion">backup_region</a></code> | <code>str</code> | Region in which backup is stored. |
@@ -78,13 +78,13 @@ Must be unique amongst siblings in the same scope
 
 ##### `connection`<sup>Optional</sup> <a name="connection" id="@cdktf/provider-google.netappBackupVault.NetappBackupVault.Initializer.parameter.connection"></a>
 
-- *Type:* typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]
+- *Type:* cdktf.SSHProvisionerConnection | cdktf.WinrmProvisionerConnection
 
 ---
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.netappBackupVault.NetappBackupVault.Initializer.parameter.count"></a>
 
-- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
+- *Type:* typing.Union[int, float] | cdktf.TerraformCount
 
 ---
 
@@ -114,7 +114,7 @@ Must be unique amongst siblings in the same scope
 
 ##### `provisioners`<sup>Optional</sup> <a name="provisioners" id="@cdktf/provider-google.netappBackupVault.NetappBackupVault.Initializer.parameter.provisioners"></a>
 
-- *Type:* typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]
+- *Type:* typing.List[cdktf.FileProvisioner | cdktf.LocalExecProvisioner | cdktf.RemoteExecProvisioner]
 
 ---
 
@@ -482,7 +482,7 @@ def get_string_map_attribute(
 ##### `has_resource_move` <a name="has_resource_move" id="@cdktf/provider-google.netappBackupVault.NetappBackupVault.hasResourceMove"></a>
 
 ```python
-def has_resource_move() -> typing.Union[TerraformResourceMoveByTarget, TerraformResourceMoveById]
+def has_resource_move() -> TerraformResourceMoveByTarget | TerraformResourceMoveById
 ```
 
 ##### `import_from` <a name="import_from" id="@cdktf/provider-google.netappBackupVault.NetappBackupVault.importFrom"></a>
@@ -545,7 +545,7 @@ Full id of resource being moved from, e.g. "aws_s3_bucket.example".
 ```python
 def move_to(
   move_target: str,
-  index: typing.Union[str, typing.Union[int, float]] = None
+  index: str | typing.Union[int, float] = None
 ) -> None
 ```
 
@@ -561,7 +561,7 @@ The previously set user defined string set by .addMoveTarget() corresponding to 
 
 ###### `index`<sup>Optional</sup> <a name="index" id="@cdktf/provider-google.netappBackupVault.NetappBackupVault.moveTo.parameter.index"></a>
 
-- *Type:* typing.Union[str, typing.Union[int, float]]
+- *Type:* str | typing.Union[int, float]
 
 Optional The index corresponding to the key the resource is to appear in the foreach of a resource to move to.
 
@@ -590,10 +590,10 @@ Full id of resource to move to, e.g. "aws_s3_bucket.example".
 ```python
 def put_backup_retention_policy(
   backup_minimum_enforced_retention_days: typing.Union[int, float],
-  daily_backup_immutable: typing.Union[bool, IResolvable] = None,
-  manual_backup_immutable: typing.Union[bool, IResolvable] = None,
-  monthly_backup_immutable: typing.Union[bool, IResolvable] = None,
-  weekly_backup_immutable: typing.Union[bool, IResolvable] = None
+  daily_backup_immutable: bool | IResolvable = None,
+  manual_backup_immutable: bool | IResolvable = None,
+  monthly_backup_immutable: bool | IResolvable = None,
+  weekly_backup_immutable: bool | IResolvable = None
 ) -> None
 ```
 
@@ -609,7 +609,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `daily_backup_immutable`<sup>Optional</sup> <a name="daily_backup_immutable" id="@cdktf/provider-google.netappBackupVault.NetappBackupVault.putBackupRetentionPolicy.parameter.dailyBackupImmutable"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Indicates if the daily backups are immutable. At least one of daily_backup_immutable, weekly_backup_immutable, monthly_backup_immutable and manual_backup_immutable must be true.
 
@@ -619,7 +619,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `manual_backup_immutable`<sup>Optional</sup> <a name="manual_backup_immutable" id="@cdktf/provider-google.netappBackupVault.NetappBackupVault.putBackupRetentionPolicy.parameter.manualBackupImmutable"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Indicates if the manual backups are immutable. At least one of daily_backup_immutable, weekly_backup_immutable, monthly_backup_immutable and manual_backup_immutable must be true.
 
@@ -629,7 +629,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `monthly_backup_immutable`<sup>Optional</sup> <a name="monthly_backup_immutable" id="@cdktf/provider-google.netappBackupVault.NetappBackupVault.putBackupRetentionPolicy.parameter.monthlyBackupImmutable"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Indicates if the monthly backups are immutable. At least one of daily_backup_immutable, weekly_backup_immutable, monthly_backup_immutable and manual_backup_immutable must be true.
 
@@ -639,7 +639,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `weekly_backup_immutable`<sup>Optional</sup> <a name="weekly_backup_immutable" id="@cdktf/provider-google.netappBackupVault.NetappBackupVault.putBackupRetentionPolicy.parameter.weeklyBackupImmutable"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Indicates if the weekly backups are immutable. At least one of daily_backup_immutable, weekly_backup_immutable, monthly_backup_immutable and manual_backup_immutable must be true.
 
@@ -866,13 +866,13 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.5
 | <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVault.property.terraformMetaArguments">terraform_meta_arguments</a></code> | <code>typing.Mapping[typing.Any]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVault.property.terraformResourceType">terraform_resource_type</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVault.property.terraformGeneratorMetadata">terraform_generator_metadata</a></code> | <code>cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVault.property.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVault.property.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVault.property.connection">connection</a></code> | <code>cdktf.SSHProvisionerConnection \| cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVault.property.count">count</a></code> | <code>typing.Union[int, float] \| cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVault.property.dependsOn">depends_on</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVault.property.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVault.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVault.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVault.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVault.property.provisioners">provisioners</a></code> | <code>typing.List[cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVault.property.backupRetentionPolicy">backup_retention_policy</a></code> | <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVaultBackupRetentionPolicyOutputReference">NetappBackupVaultBackupRetentionPolicyOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVault.property.createTime">create_time</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVault.property.destinationBackupVault">destination_backup_vault</a></code> | <code>str</code> | *No description.* |
@@ -891,7 +891,7 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.5
 | <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVault.property.locationInput">location_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVault.property.nameInput">name_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVault.property.projectInput">project_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVault.property.timeoutsInput">timeouts_input</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVaultTimeouts">NetappBackupVaultTimeouts</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVault.property.timeoutsInput">timeouts_input</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVaultTimeouts">NetappBackupVaultTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVault.property.backupRegion">backup_region</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVault.property.backupVaultType">backup_vault_type</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVault.property.description">description</a></code> | <code>str</code> | *No description.* |
@@ -978,20 +978,20 @@ terraform_generator_metadata: TerraformProviderGeneratorMetadata
 ##### `connection`<sup>Optional</sup> <a name="connection" id="@cdktf/provider-google.netappBackupVault.NetappBackupVault.property.connection"></a>
 
 ```python
-connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection]
+connection: SSHProvisionerConnection | WinrmProvisionerConnection
 ```
 
-- *Type:* typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]
+- *Type:* cdktf.SSHProvisionerConnection | cdktf.WinrmProvisionerConnection
 
 ---
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.netappBackupVault.NetappBackupVault.property.count"></a>
 
 ```python
-count: typing.Union[typing.Union[int, float], TerraformCount]
+count: typing.Union[int, float] | TerraformCount
 ```
 
-- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
+- *Type:* typing.Union[int, float] | cdktf.TerraformCount
 
 ---
 
@@ -1038,10 +1038,10 @@ provider: TerraformProvider
 ##### `provisioners`<sup>Optional</sup> <a name="provisioners" id="@cdktf/provider-google.netappBackupVault.NetappBackupVault.property.provisioners"></a>
 
 ```python
-provisioners: typing.List[typing.Union[FileProvisioner, LocalExecProvisioner, RemoteExecProvisioner]]
+provisioners: typing.List[FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner]
 ```
 
-- *Type:* typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]
+- *Type:* typing.List[cdktf.FileProvisioner | cdktf.LocalExecProvisioner | cdktf.RemoteExecProvisioner]
 
 ---
 
@@ -1228,10 +1228,10 @@ project_input: str
 ##### `timeouts_input`<sup>Optional</sup> <a name="timeouts_input" id="@cdktf/provider-google.netappBackupVault.NetappBackupVault.property.timeoutsInput"></a>
 
 ```python
-timeouts_input: typing.Union[IResolvable, NetappBackupVaultTimeouts]
+timeouts_input: IResolvable | NetappBackupVaultTimeouts
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVaultTimeouts">NetappBackupVaultTimeouts</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVaultTimeouts">NetappBackupVaultTimeouts</a>
 
 ---
 
@@ -1344,10 +1344,10 @@ from cdktf_cdktf_provider_google import netapp_backup_vault
 
 netappBackupVault.NetappBackupVaultBackupRetentionPolicy(
   backup_minimum_enforced_retention_days: typing.Union[int, float],
-  daily_backup_immutable: typing.Union[bool, IResolvable] = None,
-  manual_backup_immutable: typing.Union[bool, IResolvable] = None,
-  monthly_backup_immutable: typing.Union[bool, IResolvable] = None,
-  weekly_backup_immutable: typing.Union[bool, IResolvable] = None
+  daily_backup_immutable: bool | IResolvable = None,
+  manual_backup_immutable: bool | IResolvable = None,
+  monthly_backup_immutable: bool | IResolvable = None,
+  weekly_backup_immutable: bool | IResolvable = None
 )
 ```
 
@@ -1356,10 +1356,10 @@ netappBackupVault.NetappBackupVaultBackupRetentionPolicy(
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVaultBackupRetentionPolicy.property.backupMinimumEnforcedRetentionDays">backup_minimum_enforced_retention_days</a></code> | <code>typing.Union[int, float]</code> | Minimum retention duration in days for backups in the backup vault. |
-| <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVaultBackupRetentionPolicy.property.dailyBackupImmutable">daily_backup_immutable</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Indicates if the daily backups are immutable. At least one of daily_backup_immutable, weekly_backup_immutable, monthly_backup_immutable and manual_backup_immutable must be true. |
-| <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVaultBackupRetentionPolicy.property.manualBackupImmutable">manual_backup_immutable</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Indicates if the manual backups are immutable. At least one of daily_backup_immutable, weekly_backup_immutable, monthly_backup_immutable and manual_backup_immutable must be true. |
-| <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVaultBackupRetentionPolicy.property.monthlyBackupImmutable">monthly_backup_immutable</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Indicates if the monthly backups are immutable. At least one of daily_backup_immutable, weekly_backup_immutable, monthly_backup_immutable and manual_backup_immutable must be true. |
-| <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVaultBackupRetentionPolicy.property.weeklyBackupImmutable">weekly_backup_immutable</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Indicates if the weekly backups are immutable. At least one of daily_backup_immutable, weekly_backup_immutable, monthly_backup_immutable and manual_backup_immutable must be true. |
+| <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVaultBackupRetentionPolicy.property.dailyBackupImmutable">daily_backup_immutable</a></code> | <code>bool \| cdktf.IResolvable</code> | Indicates if the daily backups are immutable. At least one of daily_backup_immutable, weekly_backup_immutable, monthly_backup_immutable and manual_backup_immutable must be true. |
+| <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVaultBackupRetentionPolicy.property.manualBackupImmutable">manual_backup_immutable</a></code> | <code>bool \| cdktf.IResolvable</code> | Indicates if the manual backups are immutable. At least one of daily_backup_immutable, weekly_backup_immutable, monthly_backup_immutable and manual_backup_immutable must be true. |
+| <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVaultBackupRetentionPolicy.property.monthlyBackupImmutable">monthly_backup_immutable</a></code> | <code>bool \| cdktf.IResolvable</code> | Indicates if the monthly backups are immutable. At least one of daily_backup_immutable, weekly_backup_immutable, monthly_backup_immutable and manual_backup_immutable must be true. |
+| <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVaultBackupRetentionPolicy.property.weeklyBackupImmutable">weekly_backup_immutable</a></code> | <code>bool \| cdktf.IResolvable</code> | Indicates if the weekly backups are immutable. At least one of daily_backup_immutable, weekly_backup_immutable, monthly_backup_immutable and manual_backup_immutable must be true. |
 
 ---
 
@@ -1380,10 +1380,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `daily_backup_immutable`<sup>Optional</sup> <a name="daily_backup_immutable" id="@cdktf/provider-google.netappBackupVault.NetappBackupVaultBackupRetentionPolicy.property.dailyBackupImmutable"></a>
 
 ```python
-daily_backup_immutable: typing.Union[bool, IResolvable]
+daily_backup_immutable: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Indicates if the daily backups are immutable. At least one of daily_backup_immutable, weekly_backup_immutable, monthly_backup_immutable and manual_backup_immutable must be true.
 
@@ -1394,10 +1394,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `manual_backup_immutable`<sup>Optional</sup> <a name="manual_backup_immutable" id="@cdktf/provider-google.netappBackupVault.NetappBackupVaultBackupRetentionPolicy.property.manualBackupImmutable"></a>
 
 ```python
-manual_backup_immutable: typing.Union[bool, IResolvable]
+manual_backup_immutable: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Indicates if the manual backups are immutable. At least one of daily_backup_immutable, weekly_backup_immutable, monthly_backup_immutable and manual_backup_immutable must be true.
 
@@ -1408,10 +1408,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `monthly_backup_immutable`<sup>Optional</sup> <a name="monthly_backup_immutable" id="@cdktf/provider-google.netappBackupVault.NetappBackupVaultBackupRetentionPolicy.property.monthlyBackupImmutable"></a>
 
 ```python
-monthly_backup_immutable: typing.Union[bool, IResolvable]
+monthly_backup_immutable: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Indicates if the monthly backups are immutable. At least one of daily_backup_immutable, weekly_backup_immutable, monthly_backup_immutable and manual_backup_immutable must be true.
 
@@ -1422,10 +1422,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `weekly_backup_immutable`<sup>Optional</sup> <a name="weekly_backup_immutable" id="@cdktf/provider-google.netappBackupVault.NetappBackupVaultBackupRetentionPolicy.property.weeklyBackupImmutable"></a>
 
 ```python
-weekly_backup_immutable: typing.Union[bool, IResolvable]
+weekly_backup_immutable: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Indicates if the weekly backups are immutable. At least one of daily_backup_immutable, weekly_backup_immutable, monthly_backup_immutable and manual_backup_immutable must be true.
 
@@ -1441,13 +1441,13 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 from cdktf_cdktf_provider_google import netapp_backup_vault
 
 netappBackupVault.NetappBackupVaultConfig(
-  connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection] = None,
-  count: typing.Union[typing.Union[int, float], TerraformCount] = None,
+  connection: SSHProvisionerConnection | WinrmProvisionerConnection = None,
+  count: typing.Union[int, float] | TerraformCount = None,
   depends_on: typing.List[ITerraformDependable] = None,
   for_each: ITerraformIterator = None,
   lifecycle: TerraformResourceLifecycle = None,
   provider: TerraformProvider = None,
-  provisioners: typing.List[typing.Union[FileProvisioner, LocalExecProvisioner, RemoteExecProvisioner]] = None,
+  provisioners: typing.List[FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner] = None,
   location: str,
   name: str,
   backup_region: str = None,
@@ -1465,13 +1465,13 @@ netappBackupVault.NetappBackupVaultConfig(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVaultConfig.property.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVaultConfig.property.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVaultConfig.property.connection">connection</a></code> | <code>cdktf.SSHProvisionerConnection \| cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVaultConfig.property.count">count</a></code> | <code>typing.Union[int, float] \| cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVaultConfig.property.dependsOn">depends_on</a></code> | <code>typing.List[cdktf.ITerraformDependable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVaultConfig.property.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVaultConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVaultConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVaultConfig.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVaultConfig.property.provisioners">provisioners</a></code> | <code>typing.List[cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVaultConfig.property.location">location</a></code> | <code>str</code> | Location (region) of the backup vault. |
 | <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVaultConfig.property.name">name</a></code> | <code>str</code> | The resource name of the backup vault. Needs to be unique per location. |
 | <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVaultConfig.property.backupRegion">backup_region</a></code> | <code>str</code> | Region in which backup is stored. |
@@ -1488,20 +1488,20 @@ netappBackupVault.NetappBackupVaultConfig(
 ##### `connection`<sup>Optional</sup> <a name="connection" id="@cdktf/provider-google.netappBackupVault.NetappBackupVaultConfig.property.connection"></a>
 
 ```python
-connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection]
+connection: SSHProvisionerConnection | WinrmProvisionerConnection
 ```
 
-- *Type:* typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]
+- *Type:* cdktf.SSHProvisionerConnection | cdktf.WinrmProvisionerConnection
 
 ---
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.netappBackupVault.NetappBackupVaultConfig.property.count"></a>
 
 ```python
-count: typing.Union[typing.Union[int, float], TerraformCount]
+count: typing.Union[int, float] | TerraformCount
 ```
 
-- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
+- *Type:* typing.Union[int, float] | cdktf.TerraformCount
 
 ---
 
@@ -1548,10 +1548,10 @@ provider: TerraformProvider
 ##### `provisioners`<sup>Optional</sup> <a name="provisioners" id="@cdktf/provider-google.netappBackupVault.NetappBackupVaultConfig.property.provisioners"></a>
 
 ```python
-provisioners: typing.List[typing.Union[FileProvisioner, LocalExecProvisioner, RemoteExecProvisioner]]
+provisioners: typing.List[FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner]
 ```
 
-- *Type:* typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]
+- *Type:* typing.List[cdktf.FileProvisioner | cdktf.LocalExecProvisioner | cdktf.RemoteExecProvisioner]
 
 ---
 
@@ -2023,15 +2023,15 @@ def reset_weekly_backup_immutable() -> None
 | <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVaultBackupRetentionPolicyOutputReference.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVaultBackupRetentionPolicyOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVaultBackupRetentionPolicyOutputReference.property.backupMinimumEnforcedRetentionDaysInput">backup_minimum_enforced_retention_days_input</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVaultBackupRetentionPolicyOutputReference.property.dailyBackupImmutableInput">daily_backup_immutable_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVaultBackupRetentionPolicyOutputReference.property.manualBackupImmutableInput">manual_backup_immutable_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVaultBackupRetentionPolicyOutputReference.property.monthlyBackupImmutableInput">monthly_backup_immutable_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVaultBackupRetentionPolicyOutputReference.property.weeklyBackupImmutableInput">weekly_backup_immutable_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVaultBackupRetentionPolicyOutputReference.property.dailyBackupImmutableInput">daily_backup_immutable_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVaultBackupRetentionPolicyOutputReference.property.manualBackupImmutableInput">manual_backup_immutable_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVaultBackupRetentionPolicyOutputReference.property.monthlyBackupImmutableInput">monthly_backup_immutable_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVaultBackupRetentionPolicyOutputReference.property.weeklyBackupImmutableInput">weekly_backup_immutable_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVaultBackupRetentionPolicyOutputReference.property.backupMinimumEnforcedRetentionDays">backup_minimum_enforced_retention_days</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVaultBackupRetentionPolicyOutputReference.property.dailyBackupImmutable">daily_backup_immutable</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVaultBackupRetentionPolicyOutputReference.property.manualBackupImmutable">manual_backup_immutable</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVaultBackupRetentionPolicyOutputReference.property.monthlyBackupImmutable">monthly_backup_immutable</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVaultBackupRetentionPolicyOutputReference.property.weeklyBackupImmutable">weekly_backup_immutable</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVaultBackupRetentionPolicyOutputReference.property.dailyBackupImmutable">daily_backup_immutable</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVaultBackupRetentionPolicyOutputReference.property.manualBackupImmutable">manual_backup_immutable</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVaultBackupRetentionPolicyOutputReference.property.monthlyBackupImmutable">monthly_backup_immutable</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVaultBackupRetentionPolicyOutputReference.property.weeklyBackupImmutable">weekly_backup_immutable</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVaultBackupRetentionPolicyOutputReference.property.internalValue">internal_value</a></code> | <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVaultBackupRetentionPolicy">NetappBackupVaultBackupRetentionPolicy</a></code> | *No description.* |
 
 ---
@@ -2073,40 +2073,40 @@ backup_minimum_enforced_retention_days_input: typing.Union[int, float]
 ##### `daily_backup_immutable_input`<sup>Optional</sup> <a name="daily_backup_immutable_input" id="@cdktf/provider-google.netappBackupVault.NetappBackupVaultBackupRetentionPolicyOutputReference.property.dailyBackupImmutableInput"></a>
 
 ```python
-daily_backup_immutable_input: typing.Union[bool, IResolvable]
+daily_backup_immutable_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `manual_backup_immutable_input`<sup>Optional</sup> <a name="manual_backup_immutable_input" id="@cdktf/provider-google.netappBackupVault.NetappBackupVaultBackupRetentionPolicyOutputReference.property.manualBackupImmutableInput"></a>
 
 ```python
-manual_backup_immutable_input: typing.Union[bool, IResolvable]
+manual_backup_immutable_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `monthly_backup_immutable_input`<sup>Optional</sup> <a name="monthly_backup_immutable_input" id="@cdktf/provider-google.netappBackupVault.NetappBackupVaultBackupRetentionPolicyOutputReference.property.monthlyBackupImmutableInput"></a>
 
 ```python
-monthly_backup_immutable_input: typing.Union[bool, IResolvable]
+monthly_backup_immutable_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `weekly_backup_immutable_input`<sup>Optional</sup> <a name="weekly_backup_immutable_input" id="@cdktf/provider-google.netappBackupVault.NetappBackupVaultBackupRetentionPolicyOutputReference.property.weeklyBackupImmutableInput"></a>
 
 ```python
-weekly_backup_immutable_input: typing.Union[bool, IResolvable]
+weekly_backup_immutable_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -2123,40 +2123,40 @@ backup_minimum_enforced_retention_days: typing.Union[int, float]
 ##### `daily_backup_immutable`<sup>Required</sup> <a name="daily_backup_immutable" id="@cdktf/provider-google.netappBackupVault.NetappBackupVaultBackupRetentionPolicyOutputReference.property.dailyBackupImmutable"></a>
 
 ```python
-daily_backup_immutable: typing.Union[bool, IResolvable]
+daily_backup_immutable: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `manual_backup_immutable`<sup>Required</sup> <a name="manual_backup_immutable" id="@cdktf/provider-google.netappBackupVault.NetappBackupVaultBackupRetentionPolicyOutputReference.property.manualBackupImmutable"></a>
 
 ```python
-manual_backup_immutable: typing.Union[bool, IResolvable]
+manual_backup_immutable: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `monthly_backup_immutable`<sup>Required</sup> <a name="monthly_backup_immutable" id="@cdktf/provider-google.netappBackupVault.NetappBackupVaultBackupRetentionPolicyOutputReference.property.monthlyBackupImmutable"></a>
 
 ```python
-monthly_backup_immutable: typing.Union[bool, IResolvable]
+monthly_backup_immutable: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `weekly_backup_immutable`<sup>Required</sup> <a name="weekly_backup_immutable" id="@cdktf/provider-google.netappBackupVault.NetappBackupVaultBackupRetentionPolicyOutputReference.property.weeklyBackupImmutable"></a>
 
 ```python
-weekly_backup_immutable: typing.Union[bool, IResolvable]
+weekly_backup_immutable: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -2433,7 +2433,7 @@ def reset_update() -> None
 | <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVaultTimeoutsOutputReference.property.create">create</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVaultTimeoutsOutputReference.property.delete">delete</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVaultTimeoutsOutputReference.property.update">update</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVaultTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVaultTimeouts">NetappBackupVaultTimeouts</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVaultTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVaultTimeouts">NetappBackupVaultTimeouts</a></code> | *No description.* |
 
 ---
 
@@ -2524,10 +2524,10 @@ update: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.netappBackupVault.NetappBackupVaultTimeoutsOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, NetappBackupVaultTimeouts]
+internal_value: IResolvable | NetappBackupVaultTimeouts
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVaultTimeouts">NetappBackupVaultTimeouts</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.netappBackupVault.NetappBackupVaultTimeouts">NetappBackupVaultTimeouts</a>
 
 ---
 

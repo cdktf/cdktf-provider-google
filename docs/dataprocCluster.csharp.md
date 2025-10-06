@@ -284,7 +284,7 @@ private System.Collections.Generic.IDictionary<string, string> GetStringMapAttri
 ##### `HasResourceMove` <a name="HasResourceMove" id="@cdktf/provider-google.dataprocCluster.DataprocCluster.hasResourceMove"></a>
 
 ```csharp
-private object HasResourceMove()
+private TerraformResourceMoveByTarget|TerraformResourceMoveById HasResourceMove()
 ```
 
 ##### `ImportFrom` <a name="ImportFrom" id="@cdktf/provider-google.dataprocCluster.DataprocCluster.importFrom"></a>
@@ -338,7 +338,7 @@ Full id of resource being moved from, e.g. "aws_s3_bucket.example".
 ##### `MoveTo` <a name="MoveTo" id="@cdktf/provider-google.dataprocCluster.DataprocCluster.moveTo"></a>
 
 ```csharp
-private void MoveTo(string MoveTarget, object Index = null)
+private void MoveTo(string MoveTarget, string|double Index = null)
 ```
 
 Moves this resource to the target resource given by moveTarget.
@@ -353,7 +353,7 @@ The previously set user defined string set by .addMoveTarget() corresponding to 
 
 ###### `Index`<sup>Optional</sup> <a name="Index" id="@cdktf/provider-google.dataprocCluster.DataprocCluster.moveTo.parameter.index"></a>
 
-- *Type:* object
+- *Type:* string|double
 
 Optional The index corresponding to the key the resource is to appear in the foreach of a resource to move to.
 
@@ -585,13 +585,13 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.5
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocCluster.property.terraformMetaArguments">TerraformMetaArguments</a></code> | <code>System.Collections.Generic.IDictionary<string, object></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocCluster.property.terraformResourceType">TerraformResourceType</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocCluster.property.terraformGeneratorMetadata">TerraformGeneratorMetadata</a></code> | <code>HashiCorp.Cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocCluster.property.connection">Connection</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocCluster.property.count">Count</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocCluster.property.connection">Connection</a></code> | <code>HashiCorp.Cdktf.SSHProvisionerConnection\|HashiCorp.Cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocCluster.property.count">Count</a></code> | <code>double\|HashiCorp.Cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocCluster.property.dependsOn">DependsOn</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocCluster.property.forEach">ForEach</a></code> | <code>HashiCorp.Cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocCluster.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocCluster.property.provider">Provider</a></code> | <code>HashiCorp.Cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocCluster.property.provisioners">Provisioners</a></code> | <code>object[]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocCluster.property.provisioners">Provisioners</a></code> | <code>HashiCorp.Cdktf.FileProvisioner\|HashiCorp.Cdktf.LocalExecProvisioner\|HashiCorp.Cdktf.RemoteExecProvisioner[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocCluster.property.clusterConfig">ClusterConfig</a></code> | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigOutputReference">DataprocClusterClusterConfigOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocCluster.property.effectiveLabels">EffectiveLabels</a></code> | <code>HashiCorp.Cdktf.StringMap</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocCluster.property.terraformLabels">TerraformLabels</a></code> | <code>HashiCorp.Cdktf.StringMap</code> | *No description.* |
@@ -604,7 +604,7 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.5
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocCluster.property.nameInput">NameInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocCluster.property.projectInput">ProjectInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocCluster.property.regionInput">RegionInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocCluster.property.timeoutsInput">TimeoutsInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocCluster.property.timeoutsInput">TimeoutsInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterTimeouts">DataprocClusterTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocCluster.property.virtualClusterConfigInput">VirtualClusterConfigInput</a></code> | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterVirtualClusterConfig">DataprocClusterVirtualClusterConfig</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocCluster.property.gracefulDecommissionTimeout">GracefulDecommissionTimeout</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocCluster.property.id">Id</a></code> | <code>string</code> | *No description.* |
@@ -690,20 +690,20 @@ public TerraformProviderGeneratorMetadata TerraformGeneratorMetadata { get; }
 ##### `Connection`<sup>Optional</sup> <a name="Connection" id="@cdktf/provider-google.dataprocCluster.DataprocCluster.property.connection"></a>
 
 ```csharp
-public object Connection { get; }
+public SSHProvisionerConnection|WinrmProvisionerConnection Connection { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.SSHProvisionerConnection|HashiCorp.Cdktf.WinrmProvisionerConnection
 
 ---
 
 ##### `Count`<sup>Optional</sup> <a name="Count" id="@cdktf/provider-google.dataprocCluster.DataprocCluster.property.count"></a>
 
 ```csharp
-public object Count { get; }
+public double|TerraformCount Count { get; }
 ```
 
-- *Type:* object
+- *Type:* double|HashiCorp.Cdktf.TerraformCount
 
 ---
 
@@ -750,10 +750,10 @@ public TerraformProvider Provider { get; }
 ##### `Provisioners`<sup>Optional</sup> <a name="Provisioners" id="@cdktf/provider-google.dataprocCluster.DataprocCluster.property.provisioners"></a>
 
 ```csharp
-public object[] Provisioners { get; }
+public (FileProvisioner|LocalExecProvisioner|RemoteExecProvisioner)[] Provisioners { get; }
 ```
 
-- *Type:* object[]
+- *Type:* HashiCorp.Cdktf.FileProvisioner|HashiCorp.Cdktf.LocalExecProvisioner|HashiCorp.Cdktf.RemoteExecProvisioner[]
 
 ---
 
@@ -880,10 +880,10 @@ public string RegionInput { get; }
 ##### `TimeoutsInput`<sup>Optional</sup> <a name="TimeoutsInput" id="@cdktf/provider-google.dataprocCluster.DataprocCluster.property.timeoutsInput"></a>
 
 ```csharp
-public object TimeoutsInput { get; }
+public IResolvable|DataprocClusterTimeouts TimeoutsInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterTimeouts">DataprocClusterTimeouts</a>
 
 ---
 
@@ -986,13 +986,13 @@ using HashiCorp.Cdktf.Providers.Google;
 
 new DataprocClusterClusterConfig {
     DataprocClusterClusterConfigAutoscalingConfig AutoscalingConfig = null,
-    object AuxiliaryNodeGroups = null,
+    IResolvable|DataprocClusterClusterConfigAuxiliaryNodeGroups[] AuxiliaryNodeGroups = null,
     string ClusterTier = null,
     DataprocClusterClusterConfigDataprocMetricConfig DataprocMetricConfig = null,
     DataprocClusterClusterConfigEncryptionConfig EncryptionConfig = null,
     DataprocClusterClusterConfigEndpointConfig EndpointConfig = null,
     DataprocClusterClusterConfigGceClusterConfig GceClusterConfig = null,
-    object InitializationAction = null,
+    IResolvable|DataprocClusterClusterConfigInitializationAction[] InitializationAction = null,
     DataprocClusterClusterConfigLifecycleConfig LifecycleConfig = null,
     DataprocClusterClusterConfigMasterConfig MasterConfig = null,
     DataprocClusterClusterConfigMetastoreConfig MetastoreConfig = null,
@@ -1010,13 +1010,13 @@ new DataprocClusterClusterConfig {
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfig.property.autoscalingConfig">AutoscalingConfig</a></code> | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigAutoscalingConfig">DataprocClusterClusterConfigAutoscalingConfig</a></code> | autoscaling_config block. |
-| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfig.property.auxiliaryNodeGroups">AuxiliaryNodeGroups</a></code> | <code>object</code> | auxiliary_node_groups block. |
+| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfig.property.auxiliaryNodeGroups">AuxiliaryNodeGroups</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigAuxiliaryNodeGroups">DataprocClusterClusterConfigAuxiliaryNodeGroups</a>[]</code> | auxiliary_node_groups block. |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfig.property.clusterTier">ClusterTier</a></code> | <code>string</code> | Specifies the tier of the cluster created. |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfig.property.dataprocMetricConfig">DataprocMetricConfig</a></code> | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigDataprocMetricConfig">DataprocClusterClusterConfigDataprocMetricConfig</a></code> | dataproc_metric_config block. |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfig.property.encryptionConfig">EncryptionConfig</a></code> | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigEncryptionConfig">DataprocClusterClusterConfigEncryptionConfig</a></code> | encryption_config block. |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfig.property.endpointConfig">EndpointConfig</a></code> | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigEndpointConfig">DataprocClusterClusterConfigEndpointConfig</a></code> | endpoint_config block. |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfig.property.gceClusterConfig">GceClusterConfig</a></code> | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigGceClusterConfig">DataprocClusterClusterConfigGceClusterConfig</a></code> | gce_cluster_config block. |
-| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfig.property.initializationAction">InitializationAction</a></code> | <code>object</code> | initialization_action block. |
+| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfig.property.initializationAction">InitializationAction</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigInitializationAction">DataprocClusterClusterConfigInitializationAction</a>[]</code> | initialization_action block. |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfig.property.lifecycleConfig">LifecycleConfig</a></code> | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigLifecycleConfig">DataprocClusterClusterConfigLifecycleConfig</a></code> | lifecycle_config block. |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfig.property.masterConfig">MasterConfig</a></code> | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigMasterConfig">DataprocClusterClusterConfigMasterConfig</a></code> | master_config block. |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfig.property.metastoreConfig">MetastoreConfig</a></code> | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigMetastoreConfig">DataprocClusterClusterConfigMetastoreConfig</a></code> | metastore_config block. |
@@ -1046,10 +1046,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `AuxiliaryNodeGroups`<sup>Optional</sup> <a name="AuxiliaryNodeGroups" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfig.property.auxiliaryNodeGroups"></a>
 
 ```csharp
-public object AuxiliaryNodeGroups { get; set; }
+public IResolvable|DataprocClusterClusterConfigAuxiliaryNodeGroups[] AuxiliaryNodeGroups { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigAuxiliaryNodeGroups">DataprocClusterClusterConfigAuxiliaryNodeGroups</a>[]
 
 auxiliary_node_groups block.
 
@@ -1130,10 +1130,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `InitializationAction`<sup>Optional</sup> <a name="InitializationAction" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfig.property.initializationAction"></a>
 
 ```csharp
-public object InitializationAction { get; set; }
+public IResolvable|DataprocClusterClusterConfigInitializationAction[] InitializationAction { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigInitializationAction">DataprocClusterClusterConfigInitializationAction</a>[]
 
 initialization_action block.
 
@@ -1313,7 +1313,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 using HashiCorp.Cdktf.Providers.Google;
 
 new DataprocClusterClusterConfigAuxiliaryNodeGroups {
-    object NodeGroup,
+    IResolvable|DataprocClusterClusterConfigAuxiliaryNodeGroupsNodeGroup[] NodeGroup,
     string NodeGroupId = null
 };
 ```
@@ -1322,7 +1322,7 @@ new DataprocClusterClusterConfigAuxiliaryNodeGroups {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigAuxiliaryNodeGroups.property.nodeGroup">NodeGroup</a></code> | <code>object</code> | node_group block. |
+| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigAuxiliaryNodeGroups.property.nodeGroup">NodeGroup</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigAuxiliaryNodeGroupsNodeGroup">DataprocClusterClusterConfigAuxiliaryNodeGroupsNodeGroup</a>[]</code> | node_group block. |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigAuxiliaryNodeGroups.property.nodeGroupId">NodeGroupId</a></code> | <code>string</code> | A node group ID. |
 
 ---
@@ -1330,10 +1330,10 @@ new DataprocClusterClusterConfigAuxiliaryNodeGroups {
 ##### `NodeGroup`<sup>Required</sup> <a name="NodeGroup" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigAuxiliaryNodeGroups.property.nodeGroup"></a>
 
 ```csharp
-public object NodeGroup { get; set; }
+public IResolvable|DataprocClusterClusterConfigAuxiliaryNodeGroupsNodeGroup[] NodeGroup { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigAuxiliaryNodeGroupsNodeGroup">DataprocClusterClusterConfigAuxiliaryNodeGroupsNodeGroup</a>[]
 
 node_group block.
 
@@ -1415,7 +1415,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 using HashiCorp.Cdktf.Providers.Google;
 
 new DataprocClusterClusterConfigAuxiliaryNodeGroupsNodeGroupNodeGroupConfig {
-    object Accelerators = null,
+    IResolvable|DataprocClusterClusterConfigAuxiliaryNodeGroupsNodeGroupNodeGroupConfigAccelerators[] Accelerators = null,
     DataprocClusterClusterConfigAuxiliaryNodeGroupsNodeGroupNodeGroupConfigDiskConfig DiskConfig = null,
     string MachineType = null,
     string MinCpuPlatform = null,
@@ -1427,7 +1427,7 @@ new DataprocClusterClusterConfigAuxiliaryNodeGroupsNodeGroupNodeGroupConfig {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigAuxiliaryNodeGroupsNodeGroupNodeGroupConfig.property.accelerators">Accelerators</a></code> | <code>object</code> | accelerators block. |
+| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigAuxiliaryNodeGroupsNodeGroupNodeGroupConfig.property.accelerators">Accelerators</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigAuxiliaryNodeGroupsNodeGroupNodeGroupConfigAccelerators">DataprocClusterClusterConfigAuxiliaryNodeGroupsNodeGroupNodeGroupConfigAccelerators</a>[]</code> | accelerators block. |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigAuxiliaryNodeGroupsNodeGroupNodeGroupConfig.property.diskConfig">DiskConfig</a></code> | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigAuxiliaryNodeGroupsNodeGroupNodeGroupConfigDiskConfig">DataprocClusterClusterConfigAuxiliaryNodeGroupsNodeGroupNodeGroupConfigDiskConfig</a></code> | disk_config block. |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigAuxiliaryNodeGroupsNodeGroupNodeGroupConfig.property.machineType">MachineType</a></code> | <code>string</code> | The name of a Google Compute Engine machine type to create for the master. |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigAuxiliaryNodeGroupsNodeGroupNodeGroupConfig.property.minCpuPlatform">MinCpuPlatform</a></code> | <code>string</code> | The name of a minimum generation of CPU family for the auxiliary node group. |
@@ -1438,10 +1438,10 @@ new DataprocClusterClusterConfigAuxiliaryNodeGroupsNodeGroupNodeGroupConfig {
 ##### `Accelerators`<sup>Optional</sup> <a name="Accelerators" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigAuxiliaryNodeGroupsNodeGroupNodeGroupConfig.property.accelerators"></a>
 
 ```csharp
-public object Accelerators { get; set; }
+public IResolvable|DataprocClusterClusterConfigAuxiliaryNodeGroupsNodeGroupNodeGroupConfigAccelerators[] Accelerators { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigAuxiliaryNodeGroupsNodeGroupNodeGroupConfigAccelerators">DataprocClusterClusterConfigAuxiliaryNodeGroupsNodeGroupNodeGroupConfigAccelerators</a>[]
 
 accelerators block.
 
@@ -1651,7 +1651,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 using HashiCorp.Cdktf.Providers.Google;
 
 new DataprocClusterClusterConfigDataprocMetricConfig {
-    object Metrics
+    IResolvable|DataprocClusterClusterConfigDataprocMetricConfigMetrics[] Metrics
 };
 ```
 
@@ -1659,17 +1659,17 @@ new DataprocClusterClusterConfigDataprocMetricConfig {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigDataprocMetricConfig.property.metrics">Metrics</a></code> | <code>object</code> | metrics block. |
+| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigDataprocMetricConfig.property.metrics">Metrics</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigDataprocMetricConfigMetrics">DataprocClusterClusterConfigDataprocMetricConfigMetrics</a>[]</code> | metrics block. |
 
 ---
 
 ##### `Metrics`<sup>Required</sup> <a name="Metrics" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigDataprocMetricConfig.property.metrics"></a>
 
 ```csharp
-public object Metrics { get; set; }
+public IResolvable|DataprocClusterClusterConfigDataprocMetricConfigMetrics[] Metrics { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigDataprocMetricConfigMetrics">DataprocClusterClusterConfigDataprocMetricConfigMetrics</a>[]
 
 metrics block.
 
@@ -1769,7 +1769,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 using HashiCorp.Cdktf.Providers.Google;
 
 new DataprocClusterClusterConfigEndpointConfig {
-    object EnableHttpPortAccess
+    bool|IResolvable EnableHttpPortAccess
 };
 ```
 
@@ -1777,17 +1777,17 @@ new DataprocClusterClusterConfigEndpointConfig {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigEndpointConfig.property.enableHttpPortAccess">EnableHttpPortAccess</a></code> | <code>object</code> | The flag to enable http access to specific ports on the cluster from external sources (aka Component Gateway). |
+| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigEndpointConfig.property.enableHttpPortAccess">EnableHttpPortAccess</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | The flag to enable http access to specific ports on the cluster from external sources (aka Component Gateway). |
 
 ---
 
 ##### `EnableHttpPortAccess`<sup>Required</sup> <a name="EnableHttpPortAccess" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigEndpointConfig.property.enableHttpPortAccess"></a>
 
 ```csharp
-public object EnableHttpPortAccess { get; set; }
+public bool|IResolvable EnableHttpPortAccess { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 The flag to enable http access to specific ports on the cluster from external sources (aka Component Gateway).
 
@@ -1806,7 +1806,7 @@ using HashiCorp.Cdktf.Providers.Google;
 
 new DataprocClusterClusterConfigGceClusterConfig {
     DataprocClusterClusterConfigGceClusterConfigConfidentialInstanceConfig ConfidentialInstanceConfig = null,
-    object InternalIpOnly = null,
+    bool|IResolvable InternalIpOnly = null,
     System.Collections.Generic.IDictionary<string, string> Metadata = null,
     string Network = null,
     DataprocClusterClusterConfigGceClusterConfigNodeGroupAffinity NodeGroupAffinity = null,
@@ -1825,7 +1825,7 @@ new DataprocClusterClusterConfigGceClusterConfig {
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigGceClusterConfig.property.confidentialInstanceConfig">ConfidentialInstanceConfig</a></code> | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigGceClusterConfigConfidentialInstanceConfig">DataprocClusterClusterConfigGceClusterConfigConfidentialInstanceConfig</a></code> | confidential_instance_config block. |
-| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigGceClusterConfig.property.internalIpOnly">InternalIpOnly</a></code> | <code>object</code> | By default, clusters are not restricted to internal IP addresses, and will have ephemeral external IP addresses assigned to each instance. |
+| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigGceClusterConfig.property.internalIpOnly">InternalIpOnly</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | By default, clusters are not restricted to internal IP addresses, and will have ephemeral external IP addresses assigned to each instance. |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigGceClusterConfig.property.metadata">Metadata</a></code> | <code>System.Collections.Generic.IDictionary<string, string></code> | A map of the Compute Engine metadata entries to add to all instances. |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigGceClusterConfig.property.network">Network</a></code> | <code>string</code> | The name or self_link of the Google Compute Engine network to the cluster will be part of. |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigGceClusterConfig.property.nodeGroupAffinity">NodeGroupAffinity</a></code> | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigGceClusterConfigNodeGroupAffinity">DataprocClusterClusterConfigGceClusterConfigNodeGroupAffinity</a></code> | node_group_affinity block. |
@@ -1856,10 +1856,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `InternalIpOnly`<sup>Optional</sup> <a name="InternalIpOnly" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigGceClusterConfig.property.internalIpOnly"></a>
 
 ```csharp
-public object InternalIpOnly { get; set; }
+public bool|IResolvable InternalIpOnly { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 By default, clusters are not restricted to internal IP addresses, and will have ephemeral external IP addresses assigned to each instance.
 
@@ -2023,7 +2023,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 using HashiCorp.Cdktf.Providers.Google;
 
 new DataprocClusterClusterConfigGceClusterConfigConfidentialInstanceConfig {
-    object EnableConfidentialCompute = null
+    bool|IResolvable EnableConfidentialCompute = null
 };
 ```
 
@@ -2031,17 +2031,17 @@ new DataprocClusterClusterConfigGceClusterConfigConfidentialInstanceConfig {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigGceClusterConfigConfidentialInstanceConfig.property.enableConfidentialCompute">EnableConfidentialCompute</a></code> | <code>object</code> | Defines whether the instance should have confidential compute enabled. |
+| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigGceClusterConfigConfidentialInstanceConfig.property.enableConfidentialCompute">EnableConfidentialCompute</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Defines whether the instance should have confidential compute enabled. |
 
 ---
 
 ##### `EnableConfidentialCompute`<sup>Optional</sup> <a name="EnableConfidentialCompute" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigGceClusterConfigConfidentialInstanceConfig.property.enableConfidentialCompute"></a>
 
 ```csharp
-public object EnableConfidentialCompute { get; set; }
+public bool|IResolvable EnableConfidentialCompute { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Defines whether the instance should have confidential compute enabled.
 
@@ -2157,9 +2157,9 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 using HashiCorp.Cdktf.Providers.Google;
 
 new DataprocClusterClusterConfigGceClusterConfigShieldedInstanceConfig {
-    object EnableIntegrityMonitoring = null,
-    object EnableSecureBoot = null,
-    object EnableVtpm = null
+    bool|IResolvable EnableIntegrityMonitoring = null,
+    bool|IResolvable EnableSecureBoot = null,
+    bool|IResolvable EnableVtpm = null
 };
 ```
 
@@ -2167,19 +2167,19 @@ new DataprocClusterClusterConfigGceClusterConfigShieldedInstanceConfig {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigGceClusterConfigShieldedInstanceConfig.property.enableIntegrityMonitoring">EnableIntegrityMonitoring</a></code> | <code>object</code> | Defines whether instances have integrity monitoring enabled. |
-| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigGceClusterConfigShieldedInstanceConfig.property.enableSecureBoot">EnableSecureBoot</a></code> | <code>object</code> | Defines whether instances have Secure Boot enabled. |
-| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigGceClusterConfigShieldedInstanceConfig.property.enableVtpm">EnableVtpm</a></code> | <code>object</code> | Defines whether instances have the vTPM enabled. |
+| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigGceClusterConfigShieldedInstanceConfig.property.enableIntegrityMonitoring">EnableIntegrityMonitoring</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Defines whether instances have integrity monitoring enabled. |
+| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigGceClusterConfigShieldedInstanceConfig.property.enableSecureBoot">EnableSecureBoot</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Defines whether instances have Secure Boot enabled. |
+| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigGceClusterConfigShieldedInstanceConfig.property.enableVtpm">EnableVtpm</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Defines whether instances have the vTPM enabled. |
 
 ---
 
 ##### `EnableIntegrityMonitoring`<sup>Optional</sup> <a name="EnableIntegrityMonitoring" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigGceClusterConfigShieldedInstanceConfig.property.enableIntegrityMonitoring"></a>
 
 ```csharp
-public object EnableIntegrityMonitoring { get; set; }
+public bool|IResolvable EnableIntegrityMonitoring { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Defines whether instances have integrity monitoring enabled.
 
@@ -2190,10 +2190,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `EnableSecureBoot`<sup>Optional</sup> <a name="EnableSecureBoot" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigGceClusterConfigShieldedInstanceConfig.property.enableSecureBoot"></a>
 
 ```csharp
-public object EnableSecureBoot { get; set; }
+public bool|IResolvable EnableSecureBoot { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Defines whether instances have Secure Boot enabled.
 
@@ -2204,10 +2204,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `EnableVtpm`<sup>Optional</sup> <a name="EnableVtpm" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigGceClusterConfigShieldedInstanceConfig.property.enableVtpm"></a>
 
 ```csharp
-public object EnableVtpm { get; set; }
+public bool|IResolvable EnableVtpm { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Defines whether instances have the vTPM enabled.
 
@@ -2329,7 +2329,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 using HashiCorp.Cdktf.Providers.Google;
 
 new DataprocClusterClusterConfigMasterConfig {
-    object Accelerators = null,
+    IResolvable|DataprocClusterClusterConfigMasterConfigAccelerators[] Accelerators = null,
     DataprocClusterClusterConfigMasterConfigDiskConfig DiskConfig = null,
     string ImageUri = null,
     string MachineType = null,
@@ -2342,7 +2342,7 @@ new DataprocClusterClusterConfigMasterConfig {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigMasterConfig.property.accelerators">Accelerators</a></code> | <code>object</code> | accelerators block. |
+| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigMasterConfig.property.accelerators">Accelerators</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigMasterConfigAccelerators">DataprocClusterClusterConfigMasterConfigAccelerators</a>[]</code> | accelerators block. |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigMasterConfig.property.diskConfig">DiskConfig</a></code> | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigMasterConfigDiskConfig">DataprocClusterClusterConfigMasterConfigDiskConfig</a></code> | disk_config block. |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigMasterConfig.property.imageUri">ImageUri</a></code> | <code>string</code> | The URI for the image to use for this master. |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigMasterConfig.property.machineType">MachineType</a></code> | <code>string</code> | The name of a Google Compute Engine machine type to create for the master. |
@@ -2354,10 +2354,10 @@ new DataprocClusterClusterConfigMasterConfig {
 ##### `Accelerators`<sup>Optional</sup> <a name="Accelerators" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigMasterConfig.property.accelerators"></a>
 
 ```csharp
-public object Accelerators { get; set; }
+public IResolvable|DataprocClusterClusterConfigMasterConfigAccelerators[] Accelerators { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigMasterConfigAccelerators">DataprocClusterClusterConfigMasterConfigAccelerators</a>[]
 
 accelerators block.
 
@@ -2783,7 +2783,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 using HashiCorp.Cdktf.Providers.Google;
 
 new DataprocClusterClusterConfigPreemptibleWorkerConfigInstanceFlexibilityPolicy {
-    object InstanceSelectionList = null,
+    IResolvable|DataprocClusterClusterConfigPreemptibleWorkerConfigInstanceFlexibilityPolicyInstanceSelectionListStruct[] InstanceSelectionList = null,
     DataprocClusterClusterConfigPreemptibleWorkerConfigInstanceFlexibilityPolicyProvisioningModelMix ProvisioningModelMix = null
 };
 ```
@@ -2792,7 +2792,7 @@ new DataprocClusterClusterConfigPreemptibleWorkerConfigInstanceFlexibilityPolicy
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigPreemptibleWorkerConfigInstanceFlexibilityPolicy.property.instanceSelectionList">InstanceSelectionList</a></code> | <code>object</code> | instance_selection_list block. |
+| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigPreemptibleWorkerConfigInstanceFlexibilityPolicy.property.instanceSelectionList">InstanceSelectionList</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigPreemptibleWorkerConfigInstanceFlexibilityPolicyInstanceSelectionListStruct">DataprocClusterClusterConfigPreemptibleWorkerConfigInstanceFlexibilityPolicyInstanceSelectionListStruct</a>[]</code> | instance_selection_list block. |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigPreemptibleWorkerConfigInstanceFlexibilityPolicy.property.provisioningModelMix">ProvisioningModelMix</a></code> | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigPreemptibleWorkerConfigInstanceFlexibilityPolicyProvisioningModelMix">DataprocClusterClusterConfigPreemptibleWorkerConfigInstanceFlexibilityPolicyProvisioningModelMix</a></code> | provisioning_model_mix block. |
 
 ---
@@ -2800,10 +2800,10 @@ new DataprocClusterClusterConfigPreemptibleWorkerConfigInstanceFlexibilityPolicy
 ##### `InstanceSelectionList`<sup>Optional</sup> <a name="InstanceSelectionList" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigPreemptibleWorkerConfigInstanceFlexibilityPolicy.property.instanceSelectionList"></a>
 
 ```csharp
-public object InstanceSelectionList { get; set; }
+public IResolvable|DataprocClusterClusterConfigPreemptibleWorkerConfigInstanceFlexibilityPolicyInstanceSelectionListStruct[] InstanceSelectionList { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigPreemptibleWorkerConfigInstanceFlexibilityPolicyInstanceSelectionListStruct">DataprocClusterClusterConfigPreemptibleWorkerConfigInstanceFlexibilityPolicyInstanceSelectionListStruct</a>[]
 
 instance_selection_list block.
 
@@ -3038,7 +3038,7 @@ new DataprocClusterClusterConfigSecurityConfigKerberosConfig {
     string CrossRealmTrustKdc = null,
     string CrossRealmTrustRealm = null,
     string CrossRealmTrustSharedPasswordUri = null,
-    object EnableKerberos = null,
+    bool|IResolvable EnableKerberos = null,
     string KdcDbKeyUri = null,
     string KeyPasswordUri = null,
     string KeystorePasswordUri = null,
@@ -3060,7 +3060,7 @@ new DataprocClusterClusterConfigSecurityConfigKerberosConfig {
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigSecurityConfigKerberosConfig.property.crossRealmTrustKdc">CrossRealmTrustKdc</a></code> | <code>string</code> | The KDC (IP or hostname) for the remote trusted realm in a cross realm trust relationship. |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigSecurityConfigKerberosConfig.property.crossRealmTrustRealm">CrossRealmTrustRealm</a></code> | <code>string</code> | The remote realm the Dataproc on-cluster KDC will trust, should the user enable cross realm trust. |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigSecurityConfigKerberosConfig.property.crossRealmTrustSharedPasswordUri">CrossRealmTrustSharedPasswordUri</a></code> | <code>string</code> | The Cloud Storage URI of a KMS encrypted file containing the shared password between the on-cluster Kerberos realm and the remote trusted realm, in a cross realm trust relationship. |
-| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigSecurityConfigKerberosConfig.property.enableKerberos">EnableKerberos</a></code> | <code>object</code> | Flag to indicate whether to Kerberize the cluster. |
+| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigSecurityConfigKerberosConfig.property.enableKerberos">EnableKerberos</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Flag to indicate whether to Kerberize the cluster. |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigSecurityConfigKerberosConfig.property.kdcDbKeyUri">KdcDbKeyUri</a></code> | <code>string</code> | The Cloud Storage URI of a KMS encrypted file containing the master key of the KDC database. |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigSecurityConfigKerberosConfig.property.keyPasswordUri">KeyPasswordUri</a></code> | <code>string</code> | The Cloud Storage URI of a KMS encrypted file containing the password to the user provided key. |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigSecurityConfigKerberosConfig.property.keystorePasswordUri">KeystorePasswordUri</a></code> | <code>string</code> | The Cloud Storage URI of a KMS encrypted file containing the password to the user provided keystore. |
@@ -3159,10 +3159,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `EnableKerberos`<sup>Optional</sup> <a name="EnableKerberos" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigSecurityConfigKerberosConfig.property.enableKerberos"></a>
 
 ```csharp
-public object EnableKerberos { get; set; }
+public bool|IResolvable EnableKerberos { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Flag to indicate whether to Kerberize the cluster.
 
@@ -3369,7 +3369,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 using HashiCorp.Cdktf.Providers.Google;
 
 new DataprocClusterClusterConfigWorkerConfig {
-    object Accelerators = null,
+    IResolvable|DataprocClusterClusterConfigWorkerConfigAccelerators[] Accelerators = null,
     DataprocClusterClusterConfigWorkerConfigDiskConfig DiskConfig = null,
     string ImageUri = null,
     string MachineType = null,
@@ -3383,7 +3383,7 @@ new DataprocClusterClusterConfigWorkerConfig {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigWorkerConfig.property.accelerators">Accelerators</a></code> | <code>object</code> | accelerators block. |
+| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigWorkerConfig.property.accelerators">Accelerators</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigWorkerConfigAccelerators">DataprocClusterClusterConfigWorkerConfigAccelerators</a>[]</code> | accelerators block. |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigWorkerConfig.property.diskConfig">DiskConfig</a></code> | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigWorkerConfigDiskConfig">DataprocClusterClusterConfigWorkerConfigDiskConfig</a></code> | disk_config block. |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigWorkerConfig.property.imageUri">ImageUri</a></code> | <code>string</code> | The URI for the image to use for this master/worker. |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigWorkerConfig.property.machineType">MachineType</a></code> | <code>string</code> | The name of a Google Compute Engine machine type to create for the master/worker. |
@@ -3396,10 +3396,10 @@ new DataprocClusterClusterConfigWorkerConfig {
 ##### `Accelerators`<sup>Optional</sup> <a name="Accelerators" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigWorkerConfig.property.accelerators"></a>
 
 ```csharp
-public object Accelerators { get; set; }
+public IResolvable|DataprocClusterClusterConfigWorkerConfigAccelerators[] Accelerators { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigWorkerConfigAccelerators">DataprocClusterClusterConfigWorkerConfigAccelerators</a>[]
 
 accelerators block.
 
@@ -3637,13 +3637,13 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 using HashiCorp.Cdktf.Providers.Google;
 
 new DataprocClusterConfig {
-    object Connection = null,
-    object Count = null,
+    SSHProvisionerConnection|WinrmProvisionerConnection Connection = null,
+    double|TerraformCount Count = null,
     ITerraformDependable[] DependsOn = null,
     ITerraformIterator ForEach = null,
     TerraformResourceLifecycle Lifecycle = null,
     TerraformProvider Provider = null,
-    object[] Provisioners = null,
+    (FileProvisioner|LocalExecProvisioner|RemoteExecProvisioner)[] Provisioners = null,
     string Name,
     DataprocClusterClusterConfig ClusterConfig = null,
     string GracefulDecommissionTimeout = null,
@@ -3660,13 +3660,13 @@ new DataprocClusterConfig {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterConfig.property.connection">Connection</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterConfig.property.count">Count</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterConfig.property.connection">Connection</a></code> | <code>HashiCorp.Cdktf.SSHProvisionerConnection\|HashiCorp.Cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterConfig.property.count">Count</a></code> | <code>double\|HashiCorp.Cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterConfig.property.dependsOn">DependsOn</a></code> | <code>HashiCorp.Cdktf.ITerraformDependable[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterConfig.property.forEach">ForEach</a></code> | <code>HashiCorp.Cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterConfig.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterConfig.property.provider">Provider</a></code> | <code>HashiCorp.Cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterConfig.property.provisioners">Provisioners</a></code> | <code>object[]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterConfig.property.provisioners">Provisioners</a></code> | <code>HashiCorp.Cdktf.FileProvisioner\|HashiCorp.Cdktf.LocalExecProvisioner\|HashiCorp.Cdktf.RemoteExecProvisioner[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterConfig.property.name">Name</a></code> | <code>string</code> | The name of the cluster, unique within the project and zone. |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterConfig.property.clusterConfig">ClusterConfig</a></code> | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfig">DataprocClusterClusterConfig</a></code> | cluster_config block. |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterConfig.property.gracefulDecommissionTimeout">GracefulDecommissionTimeout</a></code> | <code>string</code> | The timeout duration which allows graceful decomissioning when you change the number of worker nodes directly through a terraform apply. |
@@ -3682,20 +3682,20 @@ new DataprocClusterConfig {
 ##### `Connection`<sup>Optional</sup> <a name="Connection" id="@cdktf/provider-google.dataprocCluster.DataprocClusterConfig.property.connection"></a>
 
 ```csharp
-public object Connection { get; set; }
+public SSHProvisionerConnection|WinrmProvisionerConnection Connection { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.SSHProvisionerConnection|HashiCorp.Cdktf.WinrmProvisionerConnection
 
 ---
 
 ##### `Count`<sup>Optional</sup> <a name="Count" id="@cdktf/provider-google.dataprocCluster.DataprocClusterConfig.property.count"></a>
 
 ```csharp
-public object Count { get; set; }
+public double|TerraformCount Count { get; set; }
 ```
 
-- *Type:* object
+- *Type:* double|HashiCorp.Cdktf.TerraformCount
 
 ---
 
@@ -3742,10 +3742,10 @@ public TerraformProvider Provider { get; set; }
 ##### `Provisioners`<sup>Optional</sup> <a name="Provisioners" id="@cdktf/provider-google.dataprocCluster.DataprocClusterConfig.property.provisioners"></a>
 
 ```csharp
-public object[] Provisioners { get; set; }
+public (FileProvisioner|LocalExecProvisioner|RemoteExecProvisioner)[] Provisioners { get; set; }
 ```
 
-- *Type:* object[]
+- *Type:* HashiCorp.Cdktf.FileProvisioner|HashiCorp.Cdktf.LocalExecProvisioner|HashiCorp.Cdktf.RemoteExecProvisioner[]
 
 ---
 
@@ -4204,7 +4204,7 @@ using HashiCorp.Cdktf.Providers.Google;
 
 new DataprocClusterVirtualClusterConfigKubernetesClusterConfigGkeClusterConfig {
     string GkeClusterTarget = null,
-    object NodePoolTarget = null
+    IResolvable|DataprocClusterVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTarget[] NodePoolTarget = null
 };
 ```
 
@@ -4213,7 +4213,7 @@ new DataprocClusterVirtualClusterConfigKubernetesClusterConfigGkeClusterConfig {
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterVirtualClusterConfigKubernetesClusterConfigGkeClusterConfig.property.gkeClusterTarget">GkeClusterTarget</a></code> | <code>string</code> | A target GKE cluster to deploy to. |
-| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterVirtualClusterConfigKubernetesClusterConfigGkeClusterConfig.property.nodePoolTarget">NodePoolTarget</a></code> | <code>object</code> | node_pool_target block. |
+| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterVirtualClusterConfigKubernetesClusterConfigGkeClusterConfig.property.nodePoolTarget">NodePoolTarget</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTarget">DataprocClusterVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTarget</a>[]</code> | node_pool_target block. |
 
 ---
 
@@ -4236,10 +4236,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `NodePoolTarget`<sup>Optional</sup> <a name="NodePoolTarget" id="@cdktf/provider-google.dataprocCluster.DataprocClusterVirtualClusterConfigKubernetesClusterConfigGkeClusterConfig.property.nodePoolTarget"></a>
 
 ```csharp
-public object NodePoolTarget { get; set; }
+public IResolvable|DataprocClusterVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTarget[] NodePoolTarget { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTarget">DataprocClusterVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTarget</a>[]
 
 node_pool_target block.
 
@@ -4440,8 +4440,8 @@ new DataprocClusterVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNo
     double LocalSsdCount = null,
     string MachineType = null,
     string MinCpuPlatform = null,
-    object Preemptible = null,
-    object Spot = null
+    bool|IResolvable Preemptible = null,
+    bool|IResolvable Spot = null
 };
 ```
 
@@ -4452,8 +4452,8 @@ new DataprocClusterVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNo
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTargetNodePoolConfigConfig.property.localSsdCount">LocalSsdCount</a></code> | <code>double</code> | The minimum number of nodes in the node pool. Must be >= 0 and <= maxNodeCount. |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTargetNodePoolConfigConfig.property.machineType">MachineType</a></code> | <code>string</code> | The name of a Compute Engine machine type. |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTargetNodePoolConfigConfig.property.minCpuPlatform">MinCpuPlatform</a></code> | <code>string</code> | Minimum CPU platform to be used by this instance. |
-| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTargetNodePoolConfigConfig.property.preemptible">Preemptible</a></code> | <code>object</code> | Whether the nodes are created as preemptible VM instances. |
-| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTargetNodePoolConfigConfig.property.spot">Spot</a></code> | <code>object</code> | Spot flag for enabling Spot VM, which is a rebrand of the existing preemptible flag. |
+| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTargetNodePoolConfigConfig.property.preemptible">Preemptible</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Whether the nodes are created as preemptible VM instances. |
+| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTargetNodePoolConfigConfig.property.spot">Spot</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Spot flag for enabling Spot VM, which is a rebrand of the existing preemptible flag. |
 
 ---
 
@@ -4504,10 +4504,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `Preemptible`<sup>Optional</sup> <a name="Preemptible" id="@cdktf/provider-google.dataprocCluster.DataprocClusterVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTargetNodePoolConfigConfig.property.preemptible"></a>
 
 ```csharp
-public object Preemptible { get; set; }
+public bool|IResolvable Preemptible { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Whether the nodes are created as preemptible VM instances.
 
@@ -4520,10 +4520,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `Spot`<sup>Optional</sup> <a name="Spot" id="@cdktf/provider-google.dataprocCluster.DataprocClusterVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTargetNodePoolConfigConfig.property.spot"></a>
 
 ```csharp
-public object Spot { get; set; }
+public bool|IResolvable Spot { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Spot flag for enabling Spot VM, which is a rebrand of the existing preemptible flag.
 
@@ -4977,7 +4977,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigAuxiliaryNodeGroupsList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigAuxiliaryNodeGroupsList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigAuxiliaryNodeGroupsList.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigAuxiliaryNodeGroupsList.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigAuxiliaryNodeGroups">DataprocClusterClusterConfigAuxiliaryNodeGroups</a>[]</code> | *No description.* |
 
 ---
 
@@ -5008,10 +5008,10 @@ public string Fqn { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigAuxiliaryNodeGroupsList.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|DataprocClusterClusterConfigAuxiliaryNodeGroups[] InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigAuxiliaryNodeGroups">DataprocClusterClusterConfigAuxiliaryNodeGroups</a>[]
 
 ---
 
@@ -5137,7 +5137,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigAuxiliaryNodeGroupsNodeGroupList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigAuxiliaryNodeGroupsNodeGroupList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigAuxiliaryNodeGroupsNodeGroupList.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigAuxiliaryNodeGroupsNodeGroupList.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigAuxiliaryNodeGroupsNodeGroup">DataprocClusterClusterConfigAuxiliaryNodeGroupsNodeGroup</a>[]</code> | *No description.* |
 
 ---
 
@@ -5168,10 +5168,10 @@ public string Fqn { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigAuxiliaryNodeGroupsNodeGroupList.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|DataprocClusterClusterConfigAuxiliaryNodeGroupsNodeGroup[] InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigAuxiliaryNodeGroupsNodeGroup">DataprocClusterClusterConfigAuxiliaryNodeGroupsNodeGroup</a>[]
 
 ---
 
@@ -5297,7 +5297,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigAuxiliaryNodeGroupsNodeGroupNodeGroupConfigAcceleratorsList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigAuxiliaryNodeGroupsNodeGroupNodeGroupConfigAcceleratorsList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigAuxiliaryNodeGroupsNodeGroupNodeGroupConfigAcceleratorsList.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigAuxiliaryNodeGroupsNodeGroupNodeGroupConfigAcceleratorsList.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigAuxiliaryNodeGroupsNodeGroupNodeGroupConfigAccelerators">DataprocClusterClusterConfigAuxiliaryNodeGroupsNodeGroupNodeGroupConfigAccelerators</a>[]</code> | *No description.* |
 
 ---
 
@@ -5328,10 +5328,10 @@ public string Fqn { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigAuxiliaryNodeGroupsNodeGroupNodeGroupConfigAcceleratorsList.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|DataprocClusterClusterConfigAuxiliaryNodeGroupsNodeGroupNodeGroupConfigAccelerators[] InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigAuxiliaryNodeGroupsNodeGroupNodeGroupConfigAccelerators">DataprocClusterClusterConfigAuxiliaryNodeGroupsNodeGroupNodeGroupConfigAccelerators</a>[]
 
 ---
 
@@ -5568,7 +5568,7 @@ Returns a reversible string representation.
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigAuxiliaryNodeGroupsNodeGroupNodeGroupConfigAcceleratorsOutputReference.property.acceleratorTypeInput">AcceleratorTypeInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigAuxiliaryNodeGroupsNodeGroupNodeGroupConfigAcceleratorsOutputReference.property.acceleratorCount">AcceleratorCount</a></code> | <code>double</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigAuxiliaryNodeGroupsNodeGroupNodeGroupConfigAcceleratorsOutputReference.property.acceleratorType">AcceleratorType</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigAuxiliaryNodeGroupsNodeGroupNodeGroupConfigAcceleratorsOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigAuxiliaryNodeGroupsNodeGroupNodeGroupConfigAcceleratorsOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigAuxiliaryNodeGroupsNodeGroupNodeGroupConfigAccelerators">DataprocClusterClusterConfigAuxiliaryNodeGroupsNodeGroupNodeGroupConfigAccelerators</a></code> | *No description.* |
 
 ---
 
@@ -5639,10 +5639,10 @@ public string AcceleratorType { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigAuxiliaryNodeGroupsNodeGroupNodeGroupConfigAcceleratorsOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|DataprocClusterClusterConfigAuxiliaryNodeGroupsNodeGroupNodeGroupConfigAccelerators InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigAuxiliaryNodeGroupsNodeGroupNodeGroupConfigAccelerators">DataprocClusterClusterConfigAuxiliaryNodeGroupsNodeGroupNodeGroupConfigAccelerators</a>
 
 ---
 
@@ -6225,12 +6225,12 @@ Returns a reversible string representation.
 ##### `PutAccelerators` <a name="PutAccelerators" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigAuxiliaryNodeGroupsNodeGroupNodeGroupConfigOutputReference.putAccelerators"></a>
 
 ```csharp
-private void PutAccelerators(object Value)
+private void PutAccelerators(IResolvable|DataprocClusterClusterConfigAuxiliaryNodeGroupsNodeGroupNodeGroupConfigAccelerators[] Value)
 ```
 
 ###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigAuxiliaryNodeGroupsNodeGroupNodeGroupConfigOutputReference.putAccelerators.parameter.value"></a>
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigAuxiliaryNodeGroupsNodeGroupNodeGroupConfigAccelerators">DataprocClusterClusterConfigAuxiliaryNodeGroupsNodeGroupNodeGroupConfigAccelerators</a>[]
 
 ---
 
@@ -6286,7 +6286,7 @@ private void ResetNumInstances()
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigAuxiliaryNodeGroupsNodeGroupNodeGroupConfigOutputReference.property.accelerators">Accelerators</a></code> | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigAuxiliaryNodeGroupsNodeGroupNodeGroupConfigAcceleratorsList">DataprocClusterClusterConfigAuxiliaryNodeGroupsNodeGroupNodeGroupConfigAcceleratorsList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigAuxiliaryNodeGroupsNodeGroupNodeGroupConfigOutputReference.property.diskConfig">DiskConfig</a></code> | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigAuxiliaryNodeGroupsNodeGroupNodeGroupConfigDiskConfigOutputReference">DataprocClusterClusterConfigAuxiliaryNodeGroupsNodeGroupNodeGroupConfigDiskConfigOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigAuxiliaryNodeGroupsNodeGroupNodeGroupConfigOutputReference.property.instanceNames">InstanceNames</a></code> | <code>string[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigAuxiliaryNodeGroupsNodeGroupNodeGroupConfigOutputReference.property.acceleratorsInput">AcceleratorsInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigAuxiliaryNodeGroupsNodeGroupNodeGroupConfigOutputReference.property.acceleratorsInput">AcceleratorsInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigAuxiliaryNodeGroupsNodeGroupNodeGroupConfigAccelerators">DataprocClusterClusterConfigAuxiliaryNodeGroupsNodeGroupNodeGroupConfigAccelerators</a>[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigAuxiliaryNodeGroupsNodeGroupNodeGroupConfigOutputReference.property.diskConfigInput">DiskConfigInput</a></code> | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigAuxiliaryNodeGroupsNodeGroupNodeGroupConfigDiskConfig">DataprocClusterClusterConfigAuxiliaryNodeGroupsNodeGroupNodeGroupConfigDiskConfig</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigAuxiliaryNodeGroupsNodeGroupNodeGroupConfigOutputReference.property.machineTypeInput">MachineTypeInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigAuxiliaryNodeGroupsNodeGroupNodeGroupConfigOutputReference.property.minCpuPlatformInput">MinCpuPlatformInput</a></code> | <code>string</code> | *No description.* |
@@ -6355,10 +6355,10 @@ public string[] InstanceNames { get; }
 ##### `AcceleratorsInput`<sup>Optional</sup> <a name="AcceleratorsInput" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigAuxiliaryNodeGroupsNodeGroupNodeGroupConfigOutputReference.property.acceleratorsInput"></a>
 
 ```csharp
-public object AcceleratorsInput { get; }
+public IResolvable|DataprocClusterClusterConfigAuxiliaryNodeGroupsNodeGroupNodeGroupConfigAccelerators[] AcceleratorsInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigAuxiliaryNodeGroupsNodeGroupNodeGroupConfigAccelerators">DataprocClusterClusterConfigAuxiliaryNodeGroupsNodeGroupNodeGroupConfigAccelerators</a>[]
 
 ---
 
@@ -6696,7 +6696,7 @@ private void ResetNodeGroupConfig()
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigAuxiliaryNodeGroupsNodeGroupOutputReference.property.nodeGroupConfigInput">NodeGroupConfigInput</a></code> | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigAuxiliaryNodeGroupsNodeGroupNodeGroupConfig">DataprocClusterClusterConfigAuxiliaryNodeGroupsNodeGroupNodeGroupConfig</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigAuxiliaryNodeGroupsNodeGroupOutputReference.property.rolesInput">RolesInput</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigAuxiliaryNodeGroupsNodeGroupOutputReference.property.roles">Roles</a></code> | <code>string[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigAuxiliaryNodeGroupsNodeGroupOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigAuxiliaryNodeGroupsNodeGroupOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigAuxiliaryNodeGroupsNodeGroup">DataprocClusterClusterConfigAuxiliaryNodeGroupsNodeGroup</a></code> | *No description.* |
 
 ---
 
@@ -6777,10 +6777,10 @@ public string[] Roles { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigAuxiliaryNodeGroupsNodeGroupOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|DataprocClusterClusterConfigAuxiliaryNodeGroupsNodeGroup InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigAuxiliaryNodeGroupsNodeGroup">DataprocClusterClusterConfigAuxiliaryNodeGroupsNodeGroup</a>
 
 ---
 
@@ -7011,12 +7011,12 @@ Returns a reversible string representation.
 ##### `PutNodeGroup` <a name="PutNodeGroup" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigAuxiliaryNodeGroupsOutputReference.putNodeGroup"></a>
 
 ```csharp
-private void PutNodeGroup(object Value)
+private void PutNodeGroup(IResolvable|DataprocClusterClusterConfigAuxiliaryNodeGroupsNodeGroup[] Value)
 ```
 
 ###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigAuxiliaryNodeGroupsOutputReference.putNodeGroup.parameter.value"></a>
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigAuxiliaryNodeGroupsNodeGroup">DataprocClusterClusterConfigAuxiliaryNodeGroupsNodeGroup</a>[]
 
 ---
 
@@ -7035,9 +7035,9 @@ private void ResetNodeGroupId()
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigAuxiliaryNodeGroupsOutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigAuxiliaryNodeGroupsOutputReference.property.nodeGroup">NodeGroup</a></code> | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigAuxiliaryNodeGroupsNodeGroupList">DataprocClusterClusterConfigAuxiliaryNodeGroupsNodeGroupList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigAuxiliaryNodeGroupsOutputReference.property.nodeGroupIdInput">NodeGroupIdInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigAuxiliaryNodeGroupsOutputReference.property.nodeGroupInput">NodeGroupInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigAuxiliaryNodeGroupsOutputReference.property.nodeGroupInput">NodeGroupInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigAuxiliaryNodeGroupsNodeGroup">DataprocClusterClusterConfigAuxiliaryNodeGroupsNodeGroup</a>[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigAuxiliaryNodeGroupsOutputReference.property.nodeGroupId">NodeGroupId</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigAuxiliaryNodeGroupsOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigAuxiliaryNodeGroupsOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigAuxiliaryNodeGroups">DataprocClusterClusterConfigAuxiliaryNodeGroups</a></code> | *No description.* |
 
 ---
 
@@ -7088,10 +7088,10 @@ public string NodeGroupIdInput { get; }
 ##### `NodeGroupInput`<sup>Optional</sup> <a name="NodeGroupInput" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigAuxiliaryNodeGroupsOutputReference.property.nodeGroupInput"></a>
 
 ```csharp
-public object NodeGroupInput { get; }
+public IResolvable|DataprocClusterClusterConfigAuxiliaryNodeGroupsNodeGroup[] NodeGroupInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigAuxiliaryNodeGroupsNodeGroup">DataprocClusterClusterConfigAuxiliaryNodeGroupsNodeGroup</a>[]
 
 ---
 
@@ -7108,10 +7108,10 @@ public string NodeGroupId { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigAuxiliaryNodeGroupsOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|DataprocClusterClusterConfigAuxiliaryNodeGroups InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigAuxiliaryNodeGroups">DataprocClusterClusterConfigAuxiliaryNodeGroups</a>
 
 ---
 
@@ -7237,7 +7237,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigDataprocMetricConfigMetricsList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigDataprocMetricConfigMetricsList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigDataprocMetricConfigMetricsList.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigDataprocMetricConfigMetricsList.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigDataprocMetricConfigMetrics">DataprocClusterClusterConfigDataprocMetricConfigMetrics</a>[]</code> | *No description.* |
 
 ---
 
@@ -7268,10 +7268,10 @@ public string Fqn { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigDataprocMetricConfigMetricsList.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|DataprocClusterClusterConfigDataprocMetricConfigMetrics[] InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigDataprocMetricConfigMetrics">DataprocClusterClusterConfigDataprocMetricConfigMetrics</a>[]
 
 ---
 
@@ -7515,7 +7515,7 @@ private void ResetMetricOverrides()
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigDataprocMetricConfigMetricsOutputReference.property.metricSourceInput">MetricSourceInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigDataprocMetricConfigMetricsOutputReference.property.metricOverrides">MetricOverrides</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigDataprocMetricConfigMetricsOutputReference.property.metricSource">MetricSource</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigDataprocMetricConfigMetricsOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigDataprocMetricConfigMetricsOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigDataprocMetricConfigMetrics">DataprocClusterClusterConfigDataprocMetricConfigMetrics</a></code> | *No description.* |
 
 ---
 
@@ -7586,10 +7586,10 @@ public string MetricSource { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigDataprocMetricConfigMetricsOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|DataprocClusterClusterConfigDataprocMetricConfigMetrics InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigDataprocMetricConfigMetrics">DataprocClusterClusterConfigDataprocMetricConfigMetrics</a>
 
 ---
 
@@ -7801,12 +7801,12 @@ Returns a reversible string representation.
 ##### `PutMetrics` <a name="PutMetrics" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigDataprocMetricConfigOutputReference.putMetrics"></a>
 
 ```csharp
-private void PutMetrics(object Value)
+private void PutMetrics(IResolvable|DataprocClusterClusterConfigDataprocMetricConfigMetrics[] Value)
 ```
 
 ###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigDataprocMetricConfigOutputReference.putMetrics.parameter.value"></a>
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigDataprocMetricConfigMetrics">DataprocClusterClusterConfigDataprocMetricConfigMetrics</a>[]
 
 ---
 
@@ -7818,7 +7818,7 @@ private void PutMetrics(object Value)
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigDataprocMetricConfigOutputReference.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigDataprocMetricConfigOutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigDataprocMetricConfigOutputReference.property.metrics">Metrics</a></code> | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigDataprocMetricConfigMetricsList">DataprocClusterClusterConfigDataprocMetricConfigMetricsList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigDataprocMetricConfigOutputReference.property.metricsInput">MetricsInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigDataprocMetricConfigOutputReference.property.metricsInput">MetricsInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigDataprocMetricConfigMetrics">DataprocClusterClusterConfigDataprocMetricConfigMetrics</a>[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigDataprocMetricConfigOutputReference.property.internalValue">InternalValue</a></code> | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigDataprocMetricConfig">DataprocClusterClusterConfigDataprocMetricConfig</a></code> | *No description.* |
 
 ---
@@ -7860,10 +7860,10 @@ public DataprocClusterClusterConfigDataprocMetricConfigMetricsList Metrics { get
 ##### `MetricsInput`<sup>Optional</sup> <a name="MetricsInput" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigDataprocMetricConfigOutputReference.property.metricsInput"></a>
 
 ```csharp
-public object MetricsInput { get; }
+public IResolvable|DataprocClusterClusterConfigDataprocMetricConfigMetrics[] MetricsInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigDataprocMetricConfigMetrics">DataprocClusterClusterConfigDataprocMetricConfigMetrics</a>[]
 
 ---
 
@@ -8360,8 +8360,8 @@ Returns a reversible string representation.
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigEndpointConfigOutputReference.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigEndpointConfigOutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigEndpointConfigOutputReference.property.httpPorts">HttpPorts</a></code> | <code>HashiCorp.Cdktf.StringMap</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigEndpointConfigOutputReference.property.enableHttpPortAccessInput">EnableHttpPortAccessInput</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigEndpointConfigOutputReference.property.enableHttpPortAccess">EnableHttpPortAccess</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigEndpointConfigOutputReference.property.enableHttpPortAccessInput">EnableHttpPortAccessInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigEndpointConfigOutputReference.property.enableHttpPortAccess">EnableHttpPortAccess</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigEndpointConfigOutputReference.property.internalValue">InternalValue</a></code> | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigEndpointConfig">DataprocClusterClusterConfigEndpointConfig</a></code> | *No description.* |
 
 ---
@@ -8403,20 +8403,20 @@ public StringMap HttpPorts { get; }
 ##### `EnableHttpPortAccessInput`<sup>Optional</sup> <a name="EnableHttpPortAccessInput" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigEndpointConfigOutputReference.property.enableHttpPortAccessInput"></a>
 
 ```csharp
-public object EnableHttpPortAccessInput { get; }
+public bool|IResolvable EnableHttpPortAccessInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
 ##### `EnableHttpPortAccess`<sup>Required</sup> <a name="EnableHttpPortAccess" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigEndpointConfigOutputReference.property.enableHttpPortAccess"></a>
 
 ```csharp
-public object EnableHttpPortAccess { get; }
+public bool|IResolvable EnableHttpPortAccess { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -8648,8 +8648,8 @@ private void ResetEnableConfidentialCompute()
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigGceClusterConfigConfidentialInstanceConfigOutputReference.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigGceClusterConfigConfidentialInstanceConfigOutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigGceClusterConfigConfidentialInstanceConfigOutputReference.property.enableConfidentialComputeInput">EnableConfidentialComputeInput</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigGceClusterConfigConfidentialInstanceConfigOutputReference.property.enableConfidentialCompute">EnableConfidentialCompute</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigGceClusterConfigConfidentialInstanceConfigOutputReference.property.enableConfidentialComputeInput">EnableConfidentialComputeInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigGceClusterConfigConfidentialInstanceConfigOutputReference.property.enableConfidentialCompute">EnableConfidentialCompute</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigGceClusterConfigConfidentialInstanceConfigOutputReference.property.internalValue">InternalValue</a></code> | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigGceClusterConfigConfidentialInstanceConfig">DataprocClusterClusterConfigGceClusterConfigConfidentialInstanceConfig</a></code> | *No description.* |
 
 ---
@@ -8681,20 +8681,20 @@ public string Fqn { get; }
 ##### `EnableConfidentialComputeInput`<sup>Optional</sup> <a name="EnableConfidentialComputeInput" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigGceClusterConfigConfidentialInstanceConfigOutputReference.property.enableConfidentialComputeInput"></a>
 
 ```csharp
-public object EnableConfidentialComputeInput { get; }
+public bool|IResolvable EnableConfidentialComputeInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
 ##### `EnableConfidentialCompute`<sup>Required</sup> <a name="EnableConfidentialCompute" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigGceClusterConfigConfidentialInstanceConfigOutputReference.property.enableConfidentialCompute"></a>
 
 ```csharp
-public object EnableConfidentialCompute { get; }
+public bool|IResolvable EnableConfidentialCompute { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -9331,7 +9331,7 @@ private void ResetZone()
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigGceClusterConfigOutputReference.property.reservationAffinity">ReservationAffinity</a></code> | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigGceClusterConfigReservationAffinityOutputReference">DataprocClusterClusterConfigGceClusterConfigReservationAffinityOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigGceClusterConfigOutputReference.property.shieldedInstanceConfig">ShieldedInstanceConfig</a></code> | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigGceClusterConfigShieldedInstanceConfigOutputReference">DataprocClusterClusterConfigGceClusterConfigShieldedInstanceConfigOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigGceClusterConfigOutputReference.property.confidentialInstanceConfigInput">ConfidentialInstanceConfigInput</a></code> | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigGceClusterConfigConfidentialInstanceConfig">DataprocClusterClusterConfigGceClusterConfigConfidentialInstanceConfig</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigGceClusterConfigOutputReference.property.internalIpOnlyInput">InternalIpOnlyInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigGceClusterConfigOutputReference.property.internalIpOnlyInput">InternalIpOnlyInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigGceClusterConfigOutputReference.property.metadataInput">MetadataInput</a></code> | <code>System.Collections.Generic.IDictionary<string, string></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigGceClusterConfigOutputReference.property.networkInput">NetworkInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigGceClusterConfigOutputReference.property.nodeGroupAffinityInput">NodeGroupAffinityInput</a></code> | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigGceClusterConfigNodeGroupAffinity">DataprocClusterClusterConfigGceClusterConfigNodeGroupAffinity</a></code> | *No description.* |
@@ -9342,7 +9342,7 @@ private void ResetZone()
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigGceClusterConfigOutputReference.property.subnetworkInput">SubnetworkInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigGceClusterConfigOutputReference.property.tagsInput">TagsInput</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigGceClusterConfigOutputReference.property.zoneInput">ZoneInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigGceClusterConfigOutputReference.property.internalIpOnly">InternalIpOnly</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigGceClusterConfigOutputReference.property.internalIpOnly">InternalIpOnly</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigGceClusterConfigOutputReference.property.metadata">Metadata</a></code> | <code>System.Collections.Generic.IDictionary<string, string></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigGceClusterConfigOutputReference.property.network">Network</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigGceClusterConfigOutputReference.property.serviceAccount">ServiceAccount</a></code> | <code>string</code> | *No description.* |
@@ -9431,10 +9431,10 @@ public DataprocClusterClusterConfigGceClusterConfigConfidentialInstanceConfig Co
 ##### `InternalIpOnlyInput`<sup>Optional</sup> <a name="InternalIpOnlyInput" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigGceClusterConfigOutputReference.property.internalIpOnlyInput"></a>
 
 ```csharp
-public object InternalIpOnlyInput { get; }
+public bool|IResolvable InternalIpOnlyInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -9541,10 +9541,10 @@ public string ZoneInput { get; }
 ##### `InternalIpOnly`<sup>Required</sup> <a name="InternalIpOnly" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigGceClusterConfigOutputReference.property.internalIpOnly"></a>
 
 ```csharp
-public object InternalIpOnly { get; }
+public bool|IResolvable InternalIpOnly { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -10196,12 +10196,12 @@ private void ResetEnableVtpm()
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigGceClusterConfigShieldedInstanceConfigOutputReference.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigGceClusterConfigShieldedInstanceConfigOutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigGceClusterConfigShieldedInstanceConfigOutputReference.property.enableIntegrityMonitoringInput">EnableIntegrityMonitoringInput</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigGceClusterConfigShieldedInstanceConfigOutputReference.property.enableSecureBootInput">EnableSecureBootInput</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigGceClusterConfigShieldedInstanceConfigOutputReference.property.enableVtpmInput">EnableVtpmInput</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigGceClusterConfigShieldedInstanceConfigOutputReference.property.enableIntegrityMonitoring">EnableIntegrityMonitoring</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigGceClusterConfigShieldedInstanceConfigOutputReference.property.enableSecureBoot">EnableSecureBoot</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigGceClusterConfigShieldedInstanceConfigOutputReference.property.enableVtpm">EnableVtpm</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigGceClusterConfigShieldedInstanceConfigOutputReference.property.enableIntegrityMonitoringInput">EnableIntegrityMonitoringInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigGceClusterConfigShieldedInstanceConfigOutputReference.property.enableSecureBootInput">EnableSecureBootInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigGceClusterConfigShieldedInstanceConfigOutputReference.property.enableVtpmInput">EnableVtpmInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigGceClusterConfigShieldedInstanceConfigOutputReference.property.enableIntegrityMonitoring">EnableIntegrityMonitoring</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigGceClusterConfigShieldedInstanceConfigOutputReference.property.enableSecureBoot">EnableSecureBoot</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigGceClusterConfigShieldedInstanceConfigOutputReference.property.enableVtpm">EnableVtpm</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigGceClusterConfigShieldedInstanceConfigOutputReference.property.internalValue">InternalValue</a></code> | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigGceClusterConfigShieldedInstanceConfig">DataprocClusterClusterConfigGceClusterConfigShieldedInstanceConfig</a></code> | *No description.* |
 
 ---
@@ -10233,60 +10233,60 @@ public string Fqn { get; }
 ##### `EnableIntegrityMonitoringInput`<sup>Optional</sup> <a name="EnableIntegrityMonitoringInput" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigGceClusterConfigShieldedInstanceConfigOutputReference.property.enableIntegrityMonitoringInput"></a>
 
 ```csharp
-public object EnableIntegrityMonitoringInput { get; }
+public bool|IResolvable EnableIntegrityMonitoringInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
 ##### `EnableSecureBootInput`<sup>Optional</sup> <a name="EnableSecureBootInput" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigGceClusterConfigShieldedInstanceConfigOutputReference.property.enableSecureBootInput"></a>
 
 ```csharp
-public object EnableSecureBootInput { get; }
+public bool|IResolvable EnableSecureBootInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
 ##### `EnableVtpmInput`<sup>Optional</sup> <a name="EnableVtpmInput" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigGceClusterConfigShieldedInstanceConfigOutputReference.property.enableVtpmInput"></a>
 
 ```csharp
-public object EnableVtpmInput { get; }
+public bool|IResolvable EnableVtpmInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
 ##### `EnableIntegrityMonitoring`<sup>Required</sup> <a name="EnableIntegrityMonitoring" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigGceClusterConfigShieldedInstanceConfigOutputReference.property.enableIntegrityMonitoring"></a>
 
 ```csharp
-public object EnableIntegrityMonitoring { get; }
+public bool|IResolvable EnableIntegrityMonitoring { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
 ##### `EnableSecureBoot`<sup>Required</sup> <a name="EnableSecureBoot" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigGceClusterConfigShieldedInstanceConfigOutputReference.property.enableSecureBoot"></a>
 
 ```csharp
-public object EnableSecureBoot { get; }
+public bool|IResolvable EnableSecureBoot { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
 ##### `EnableVtpm`<sup>Required</sup> <a name="EnableVtpm" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigGceClusterConfigShieldedInstanceConfigOutputReference.property.enableVtpm"></a>
 
 ```csharp
-public object EnableVtpm { get; }
+public bool|IResolvable EnableVtpm { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -10422,7 +10422,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigInitializationActionList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigInitializationActionList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigInitializationActionList.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigInitializationActionList.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigInitializationAction">DataprocClusterClusterConfigInitializationAction</a>[]</code> | *No description.* |
 
 ---
 
@@ -10453,10 +10453,10 @@ public string Fqn { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigInitializationActionList.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|DataprocClusterClusterConfigInitializationAction[] InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigInitializationAction">DataprocClusterClusterConfigInitializationAction</a>[]
 
 ---
 
@@ -10700,7 +10700,7 @@ private void ResetTimeoutSec()
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigInitializationActionOutputReference.property.timeoutSecInput">TimeoutSecInput</a></code> | <code>double</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigInitializationActionOutputReference.property.script">Script</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigInitializationActionOutputReference.property.timeoutSec">TimeoutSec</a></code> | <code>double</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigInitializationActionOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigInitializationActionOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigInitializationAction">DataprocClusterClusterConfigInitializationAction</a></code> | *No description.* |
 
 ---
 
@@ -10771,10 +10771,10 @@ public double TimeoutSec { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigInitializationActionOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|DataprocClusterClusterConfigInitializationAction InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigInitializationAction">DataprocClusterClusterConfigInitializationAction</a>
 
 ---
 
@@ -11218,7 +11218,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigMasterConfigAcceleratorsList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigMasterConfigAcceleratorsList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigMasterConfigAcceleratorsList.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigMasterConfigAcceleratorsList.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigMasterConfigAccelerators">DataprocClusterClusterConfigMasterConfigAccelerators</a>[]</code> | *No description.* |
 
 ---
 
@@ -11249,10 +11249,10 @@ public string Fqn { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigMasterConfigAcceleratorsList.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|DataprocClusterClusterConfigMasterConfigAccelerators[] InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigMasterConfigAccelerators">DataprocClusterClusterConfigMasterConfigAccelerators</a>[]
 
 ---
 
@@ -11489,7 +11489,7 @@ Returns a reversible string representation.
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigMasterConfigAcceleratorsOutputReference.property.acceleratorTypeInput">AcceleratorTypeInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigMasterConfigAcceleratorsOutputReference.property.acceleratorCount">AcceleratorCount</a></code> | <code>double</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigMasterConfigAcceleratorsOutputReference.property.acceleratorType">AcceleratorType</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigMasterConfigAcceleratorsOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigMasterConfigAcceleratorsOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigMasterConfigAccelerators">DataprocClusterClusterConfigMasterConfigAccelerators</a></code> | *No description.* |
 
 ---
 
@@ -11560,10 +11560,10 @@ public string AcceleratorType { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigMasterConfigAcceleratorsOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|DataprocClusterClusterConfigMasterConfigAccelerators InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigMasterConfigAccelerators">DataprocClusterClusterConfigMasterConfigAccelerators</a>
 
 ---
 
@@ -12147,12 +12147,12 @@ Returns a reversible string representation.
 ##### `PutAccelerators` <a name="PutAccelerators" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigMasterConfigOutputReference.putAccelerators"></a>
 
 ```csharp
-private void PutAccelerators(object Value)
+private void PutAccelerators(IResolvable|DataprocClusterClusterConfigMasterConfigAccelerators[] Value)
 ```
 
 ###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigMasterConfigOutputReference.putAccelerators.parameter.value"></a>
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigMasterConfigAccelerators">DataprocClusterClusterConfigMasterConfigAccelerators</a>[]
 
 ---
 
@@ -12214,7 +12214,7 @@ private void ResetNumInstances()
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigMasterConfigOutputReference.property.accelerators">Accelerators</a></code> | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigMasterConfigAcceleratorsList">DataprocClusterClusterConfigMasterConfigAcceleratorsList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigMasterConfigOutputReference.property.diskConfig">DiskConfig</a></code> | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigMasterConfigDiskConfigOutputReference">DataprocClusterClusterConfigMasterConfigDiskConfigOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigMasterConfigOutputReference.property.instanceNames">InstanceNames</a></code> | <code>string[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigMasterConfigOutputReference.property.acceleratorsInput">AcceleratorsInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigMasterConfigOutputReference.property.acceleratorsInput">AcceleratorsInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigMasterConfigAccelerators">DataprocClusterClusterConfigMasterConfigAccelerators</a>[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigMasterConfigOutputReference.property.diskConfigInput">DiskConfigInput</a></code> | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigMasterConfigDiskConfig">DataprocClusterClusterConfigMasterConfigDiskConfig</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigMasterConfigOutputReference.property.imageUriInput">ImageUriInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigMasterConfigOutputReference.property.machineTypeInput">MachineTypeInput</a></code> | <code>string</code> | *No description.* |
@@ -12285,10 +12285,10 @@ public string[] InstanceNames { get; }
 ##### `AcceleratorsInput`<sup>Optional</sup> <a name="AcceleratorsInput" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigMasterConfigOutputReference.property.acceleratorsInput"></a>
 
 ```csharp
-public object AcceleratorsInput { get; }
+public IResolvable|DataprocClusterClusterConfigMasterConfigAccelerators[] AcceleratorsInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigMasterConfigAccelerators">DataprocClusterClusterConfigMasterConfigAccelerators</a>[]
 
 ---
 
@@ -12913,12 +12913,12 @@ private void PutAutoscalingConfig(DataprocClusterClusterConfigAutoscalingConfig 
 ##### `PutAuxiliaryNodeGroups` <a name="PutAuxiliaryNodeGroups" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigOutputReference.putAuxiliaryNodeGroups"></a>
 
 ```csharp
-private void PutAuxiliaryNodeGroups(object Value)
+private void PutAuxiliaryNodeGroups(IResolvable|DataprocClusterClusterConfigAuxiliaryNodeGroups[] Value)
 ```
 
 ###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigOutputReference.putAuxiliaryNodeGroups.parameter.value"></a>
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigAuxiliaryNodeGroups">DataprocClusterClusterConfigAuxiliaryNodeGroups</a>[]
 
 ---
 
@@ -12973,12 +12973,12 @@ private void PutGceClusterConfig(DataprocClusterClusterConfigGceClusterConfig Va
 ##### `PutInitializationAction` <a name="PutInitializationAction" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigOutputReference.putInitializationAction"></a>
 
 ```csharp
-private void PutInitializationAction(object Value)
+private void PutInitializationAction(IResolvable|DataprocClusterClusterConfigInitializationAction[] Value)
 ```
 
 ###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigOutputReference.putInitializationAction.parameter.value"></a>
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigInitializationAction">DataprocClusterClusterConfigInitializationAction</a>[]
 
 ---
 
@@ -13191,13 +13191,13 @@ private void ResetWorkerConfig()
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigOutputReference.property.softwareConfig">SoftwareConfig</a></code> | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigSoftwareConfigOutputReference">DataprocClusterClusterConfigSoftwareConfigOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigOutputReference.property.workerConfig">WorkerConfig</a></code> | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigWorkerConfigOutputReference">DataprocClusterClusterConfigWorkerConfigOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigOutputReference.property.autoscalingConfigInput">AutoscalingConfigInput</a></code> | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigAutoscalingConfig">DataprocClusterClusterConfigAutoscalingConfig</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigOutputReference.property.auxiliaryNodeGroupsInput">AuxiliaryNodeGroupsInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigOutputReference.property.auxiliaryNodeGroupsInput">AuxiliaryNodeGroupsInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigAuxiliaryNodeGroups">DataprocClusterClusterConfigAuxiliaryNodeGroups</a>[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigOutputReference.property.clusterTierInput">ClusterTierInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigOutputReference.property.dataprocMetricConfigInput">DataprocMetricConfigInput</a></code> | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigDataprocMetricConfig">DataprocClusterClusterConfigDataprocMetricConfig</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigOutputReference.property.encryptionConfigInput">EncryptionConfigInput</a></code> | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigEncryptionConfig">DataprocClusterClusterConfigEncryptionConfig</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigOutputReference.property.endpointConfigInput">EndpointConfigInput</a></code> | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigEndpointConfig">DataprocClusterClusterConfigEndpointConfig</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigOutputReference.property.gceClusterConfigInput">GceClusterConfigInput</a></code> | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigGceClusterConfig">DataprocClusterClusterConfigGceClusterConfig</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigOutputReference.property.initializationActionInput">InitializationActionInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigOutputReference.property.initializationActionInput">InitializationActionInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigInitializationAction">DataprocClusterClusterConfigInitializationAction</a>[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigOutputReference.property.lifecycleConfigInput">LifecycleConfigInput</a></code> | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigLifecycleConfig">DataprocClusterClusterConfigLifecycleConfig</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigOutputReference.property.masterConfigInput">MasterConfigInput</a></code> | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigMasterConfig">DataprocClusterClusterConfigMasterConfig</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigOutputReference.property.metastoreConfigInput">MetastoreConfigInput</a></code> | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigMetastoreConfig">DataprocClusterClusterConfigMetastoreConfig</a></code> | *No description.* |
@@ -13401,10 +13401,10 @@ public DataprocClusterClusterConfigAutoscalingConfig AutoscalingConfigInput { ge
 ##### `AuxiliaryNodeGroupsInput`<sup>Optional</sup> <a name="AuxiliaryNodeGroupsInput" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigOutputReference.property.auxiliaryNodeGroupsInput"></a>
 
 ```csharp
-public object AuxiliaryNodeGroupsInput { get; }
+public IResolvable|DataprocClusterClusterConfigAuxiliaryNodeGroups[] AuxiliaryNodeGroupsInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigAuxiliaryNodeGroups">DataprocClusterClusterConfigAuxiliaryNodeGroups</a>[]
 
 ---
 
@@ -13461,10 +13461,10 @@ public DataprocClusterClusterConfigGceClusterConfig GceClusterConfigInput { get;
 ##### `InitializationActionInput`<sup>Optional</sup> <a name="InitializationActionInput" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigOutputReference.property.initializationActionInput"></a>
 
 ```csharp
-public object InitializationActionInput { get; }
+public IResolvable|DataprocClusterClusterConfigInitializationAction[] InitializationActionInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigInitializationAction">DataprocClusterClusterConfigInitializationAction</a>[]
 
 ---
 
@@ -14085,7 +14085,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigPreemptibleWorkerConfigInstanceFlexibilityPolicyInstanceSelectionListStructList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigPreemptibleWorkerConfigInstanceFlexibilityPolicyInstanceSelectionListStructList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigPreemptibleWorkerConfigInstanceFlexibilityPolicyInstanceSelectionListStructList.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigPreemptibleWorkerConfigInstanceFlexibilityPolicyInstanceSelectionListStructList.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigPreemptibleWorkerConfigInstanceFlexibilityPolicyInstanceSelectionListStruct">DataprocClusterClusterConfigPreemptibleWorkerConfigInstanceFlexibilityPolicyInstanceSelectionListStruct</a>[]</code> | *No description.* |
 
 ---
 
@@ -14116,10 +14116,10 @@ public string Fqn { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigPreemptibleWorkerConfigInstanceFlexibilityPolicyInstanceSelectionListStructList.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|DataprocClusterClusterConfigPreemptibleWorkerConfigInstanceFlexibilityPolicyInstanceSelectionListStruct[] InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigPreemptibleWorkerConfigInstanceFlexibilityPolicyInstanceSelectionListStruct">DataprocClusterClusterConfigPreemptibleWorkerConfigInstanceFlexibilityPolicyInstanceSelectionListStruct</a>[]
 
 ---
 
@@ -14370,7 +14370,7 @@ private void ResetRank()
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigPreemptibleWorkerConfigInstanceFlexibilityPolicyInstanceSelectionListStructOutputReference.property.rankInput">RankInput</a></code> | <code>double</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigPreemptibleWorkerConfigInstanceFlexibilityPolicyInstanceSelectionListStructOutputReference.property.machineTypes">MachineTypes</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigPreemptibleWorkerConfigInstanceFlexibilityPolicyInstanceSelectionListStructOutputReference.property.rank">Rank</a></code> | <code>double</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigPreemptibleWorkerConfigInstanceFlexibilityPolicyInstanceSelectionListStructOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigPreemptibleWorkerConfigInstanceFlexibilityPolicyInstanceSelectionListStructOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigPreemptibleWorkerConfigInstanceFlexibilityPolicyInstanceSelectionListStruct">DataprocClusterClusterConfigPreemptibleWorkerConfigInstanceFlexibilityPolicyInstanceSelectionListStruct</a></code> | *No description.* |
 
 ---
 
@@ -14441,10 +14441,10 @@ public double Rank { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigPreemptibleWorkerConfigInstanceFlexibilityPolicyInstanceSelectionListStructOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|DataprocClusterClusterConfigPreemptibleWorkerConfigInstanceFlexibilityPolicyInstanceSelectionListStruct InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigPreemptibleWorkerConfigInstanceFlexibilityPolicyInstanceSelectionListStruct">DataprocClusterClusterConfigPreemptibleWorkerConfigInstanceFlexibilityPolicyInstanceSelectionListStruct</a>
 
 ---
 
@@ -15097,12 +15097,12 @@ Returns a reversible string representation.
 ##### `PutInstanceSelectionList` <a name="PutInstanceSelectionList" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigPreemptibleWorkerConfigInstanceFlexibilityPolicyOutputReference.putInstanceSelectionList"></a>
 
 ```csharp
-private void PutInstanceSelectionList(object Value)
+private void PutInstanceSelectionList(IResolvable|DataprocClusterClusterConfigPreemptibleWorkerConfigInstanceFlexibilityPolicyInstanceSelectionListStruct[] Value)
 ```
 
 ###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigPreemptibleWorkerConfigInstanceFlexibilityPolicyOutputReference.putInstanceSelectionList.parameter.value"></a>
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigPreemptibleWorkerConfigInstanceFlexibilityPolicyInstanceSelectionListStruct">DataprocClusterClusterConfigPreemptibleWorkerConfigInstanceFlexibilityPolicyInstanceSelectionListStruct</a>[]
 
 ---
 
@@ -15140,7 +15140,7 @@ private void ResetProvisioningModelMix()
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigPreemptibleWorkerConfigInstanceFlexibilityPolicyOutputReference.property.instanceSelectionList">InstanceSelectionList</a></code> | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigPreemptibleWorkerConfigInstanceFlexibilityPolicyInstanceSelectionListStructList">DataprocClusterClusterConfigPreemptibleWorkerConfigInstanceFlexibilityPolicyInstanceSelectionListStructList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigPreemptibleWorkerConfigInstanceFlexibilityPolicyOutputReference.property.instanceSelectionResults">InstanceSelectionResults</a></code> | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigPreemptibleWorkerConfigInstanceFlexibilityPolicyInstanceSelectionResultsList">DataprocClusterClusterConfigPreemptibleWorkerConfigInstanceFlexibilityPolicyInstanceSelectionResultsList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigPreemptibleWorkerConfigInstanceFlexibilityPolicyOutputReference.property.provisioningModelMix">ProvisioningModelMix</a></code> | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigPreemptibleWorkerConfigInstanceFlexibilityPolicyProvisioningModelMixOutputReference">DataprocClusterClusterConfigPreemptibleWorkerConfigInstanceFlexibilityPolicyProvisioningModelMixOutputReference</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigPreemptibleWorkerConfigInstanceFlexibilityPolicyOutputReference.property.instanceSelectionListInput">InstanceSelectionListInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigPreemptibleWorkerConfigInstanceFlexibilityPolicyOutputReference.property.instanceSelectionListInput">InstanceSelectionListInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigPreemptibleWorkerConfigInstanceFlexibilityPolicyInstanceSelectionListStruct">DataprocClusterClusterConfigPreemptibleWorkerConfigInstanceFlexibilityPolicyInstanceSelectionListStruct</a>[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigPreemptibleWorkerConfigInstanceFlexibilityPolicyOutputReference.property.provisioningModelMixInput">ProvisioningModelMixInput</a></code> | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigPreemptibleWorkerConfigInstanceFlexibilityPolicyProvisioningModelMix">DataprocClusterClusterConfigPreemptibleWorkerConfigInstanceFlexibilityPolicyProvisioningModelMix</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigPreemptibleWorkerConfigInstanceFlexibilityPolicyOutputReference.property.internalValue">InternalValue</a></code> | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigPreemptibleWorkerConfigInstanceFlexibilityPolicy">DataprocClusterClusterConfigPreemptibleWorkerConfigInstanceFlexibilityPolicy</a></code> | *No description.* |
 
@@ -15203,10 +15203,10 @@ public DataprocClusterClusterConfigPreemptibleWorkerConfigInstanceFlexibilityPol
 ##### `InstanceSelectionListInput`<sup>Optional</sup> <a name="InstanceSelectionListInput" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigPreemptibleWorkerConfigInstanceFlexibilityPolicyOutputReference.property.instanceSelectionListInput"></a>
 
 ```csharp
-public object InstanceSelectionListInput { get; }
+public IResolvable|DataprocClusterClusterConfigPreemptibleWorkerConfigInstanceFlexibilityPolicyInstanceSelectionListStruct[] InstanceSelectionListInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigPreemptibleWorkerConfigInstanceFlexibilityPolicyInstanceSelectionListStruct">DataprocClusterClusterConfigPreemptibleWorkerConfigInstanceFlexibilityPolicyInstanceSelectionListStruct</a>[]
 
 ---
 
@@ -16516,7 +16516,7 @@ private void ResetTruststoreUri()
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigSecurityConfigKerberosConfigOutputReference.property.crossRealmTrustKdcInput">CrossRealmTrustKdcInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigSecurityConfigKerberosConfigOutputReference.property.crossRealmTrustRealmInput">CrossRealmTrustRealmInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigSecurityConfigKerberosConfigOutputReference.property.crossRealmTrustSharedPasswordUriInput">CrossRealmTrustSharedPasswordUriInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigSecurityConfigKerberosConfigOutputReference.property.enableKerberosInput">EnableKerberosInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigSecurityConfigKerberosConfigOutputReference.property.enableKerberosInput">EnableKerberosInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigSecurityConfigKerberosConfigOutputReference.property.kdcDbKeyUriInput">KdcDbKeyUriInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigSecurityConfigKerberosConfigOutputReference.property.keyPasswordUriInput">KeyPasswordUriInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigSecurityConfigKerberosConfigOutputReference.property.keystorePasswordUriInput">KeystorePasswordUriInput</a></code> | <code>string</code> | *No description.* |
@@ -16531,7 +16531,7 @@ private void ResetTruststoreUri()
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigSecurityConfigKerberosConfigOutputReference.property.crossRealmTrustKdc">CrossRealmTrustKdc</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigSecurityConfigKerberosConfigOutputReference.property.crossRealmTrustRealm">CrossRealmTrustRealm</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigSecurityConfigKerberosConfigOutputReference.property.crossRealmTrustSharedPasswordUri">CrossRealmTrustSharedPasswordUri</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigSecurityConfigKerberosConfigOutputReference.property.enableKerberos">EnableKerberos</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigSecurityConfigKerberosConfigOutputReference.property.enableKerberos">EnableKerberos</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigSecurityConfigKerberosConfigOutputReference.property.kdcDbKeyUri">KdcDbKeyUri</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigSecurityConfigKerberosConfigOutputReference.property.keyPasswordUri">KeyPasswordUri</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigSecurityConfigKerberosConfigOutputReference.property.keystorePasswordUri">KeystorePasswordUri</a></code> | <code>string</code> | *No description.* |
@@ -16613,10 +16613,10 @@ public string CrossRealmTrustSharedPasswordUriInput { get; }
 ##### `EnableKerberosInput`<sup>Optional</sup> <a name="EnableKerberosInput" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigSecurityConfigKerberosConfigOutputReference.property.enableKerberosInput"></a>
 
 ```csharp
-public object EnableKerberosInput { get; }
+public bool|IResolvable EnableKerberosInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -16763,10 +16763,10 @@ public string CrossRealmTrustSharedPasswordUri { get; }
 ##### `EnableKerberos`<sup>Required</sup> <a name="EnableKerberos" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigSecurityConfigKerberosConfigOutputReference.property.enableKerberos"></a>
 
 ```csharp
-public object EnableKerberos { get; }
+public bool|IResolvable EnableKerberos { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -17682,7 +17682,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigWorkerConfigAcceleratorsList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigWorkerConfigAcceleratorsList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigWorkerConfigAcceleratorsList.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigWorkerConfigAcceleratorsList.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigWorkerConfigAccelerators">DataprocClusterClusterConfigWorkerConfigAccelerators</a>[]</code> | *No description.* |
 
 ---
 
@@ -17713,10 +17713,10 @@ public string Fqn { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigWorkerConfigAcceleratorsList.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|DataprocClusterClusterConfigWorkerConfigAccelerators[] InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigWorkerConfigAccelerators">DataprocClusterClusterConfigWorkerConfigAccelerators</a>[]
 
 ---
 
@@ -17953,7 +17953,7 @@ Returns a reversible string representation.
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigWorkerConfigAcceleratorsOutputReference.property.acceleratorTypeInput">AcceleratorTypeInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigWorkerConfigAcceleratorsOutputReference.property.acceleratorCount">AcceleratorCount</a></code> | <code>double</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigWorkerConfigAcceleratorsOutputReference.property.acceleratorType">AcceleratorType</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigWorkerConfigAcceleratorsOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigWorkerConfigAcceleratorsOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigWorkerConfigAccelerators">DataprocClusterClusterConfigWorkerConfigAccelerators</a></code> | *No description.* |
 
 ---
 
@@ -18024,10 +18024,10 @@ public string AcceleratorType { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigWorkerConfigAcceleratorsOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|DataprocClusterClusterConfigWorkerConfigAccelerators InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigWorkerConfigAccelerators">DataprocClusterClusterConfigWorkerConfigAccelerators</a>
 
 ---
 
@@ -18612,12 +18612,12 @@ Returns a reversible string representation.
 ##### `PutAccelerators` <a name="PutAccelerators" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigWorkerConfigOutputReference.putAccelerators"></a>
 
 ```csharp
-private void PutAccelerators(object Value)
+private void PutAccelerators(IResolvable|DataprocClusterClusterConfigWorkerConfigAccelerators[] Value)
 ```
 
 ###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigWorkerConfigOutputReference.putAccelerators.parameter.value"></a>
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigWorkerConfigAccelerators">DataprocClusterClusterConfigWorkerConfigAccelerators</a>[]
 
 ---
 
@@ -18685,7 +18685,7 @@ private void ResetNumInstances()
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigWorkerConfigOutputReference.property.accelerators">Accelerators</a></code> | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigWorkerConfigAcceleratorsList">DataprocClusterClusterConfigWorkerConfigAcceleratorsList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigWorkerConfigOutputReference.property.diskConfig">DiskConfig</a></code> | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigWorkerConfigDiskConfigOutputReference">DataprocClusterClusterConfigWorkerConfigDiskConfigOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigWorkerConfigOutputReference.property.instanceNames">InstanceNames</a></code> | <code>string[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigWorkerConfigOutputReference.property.acceleratorsInput">AcceleratorsInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigWorkerConfigOutputReference.property.acceleratorsInput">AcceleratorsInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigWorkerConfigAccelerators">DataprocClusterClusterConfigWorkerConfigAccelerators</a>[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigWorkerConfigOutputReference.property.diskConfigInput">DiskConfigInput</a></code> | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigWorkerConfigDiskConfig">DataprocClusterClusterConfigWorkerConfigDiskConfig</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigWorkerConfigOutputReference.property.imageUriInput">ImageUriInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigWorkerConfigOutputReference.property.machineTypeInput">MachineTypeInput</a></code> | <code>string</code> | *No description.* |
@@ -18758,10 +18758,10 @@ public string[] InstanceNames { get; }
 ##### `AcceleratorsInput`<sup>Optional</sup> <a name="AcceleratorsInput" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigWorkerConfigOutputReference.property.acceleratorsInput"></a>
 
 ```csharp
-public object AcceleratorsInput { get; }
+public IResolvable|DataprocClusterClusterConfigWorkerConfigAccelerators[] AcceleratorsInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigWorkerConfigAccelerators">DataprocClusterClusterConfigWorkerConfigAccelerators</a>[]
 
 ---
 
@@ -19123,7 +19123,7 @@ private void ResetUpdate()
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterTimeoutsOutputReference.property.create">Create</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterTimeoutsOutputReference.property.delete">Delete</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterTimeoutsOutputReference.property.update">Update</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterTimeoutsOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterTimeoutsOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterTimeouts">DataprocClusterTimeouts</a></code> | *No description.* |
 
 ---
 
@@ -19214,10 +19214,10 @@ public string Update { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.dataprocCluster.DataprocClusterTimeoutsOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|DataprocClusterTimeouts InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterTimeouts">DataprocClusterTimeouts</a>
 
 ---
 
@@ -20232,7 +20232,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTargetList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTargetList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTargetList.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTargetList.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTarget">DataprocClusterVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTarget</a>[]</code> | *No description.* |
 
 ---
 
@@ -20263,10 +20263,10 @@ public string Fqn { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.dataprocCluster.DataprocClusterVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTargetList.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|DataprocClusterVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTarget[] InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTarget">DataprocClusterVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTarget</a>[]
 
 ---
 
@@ -20826,13 +20826,13 @@ private void ResetSpot()
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTargetNodePoolConfigConfigOutputReference.property.localSsdCountInput">LocalSsdCountInput</a></code> | <code>double</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTargetNodePoolConfigConfigOutputReference.property.machineTypeInput">MachineTypeInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTargetNodePoolConfigConfigOutputReference.property.minCpuPlatformInput">MinCpuPlatformInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTargetNodePoolConfigConfigOutputReference.property.preemptibleInput">PreemptibleInput</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTargetNodePoolConfigConfigOutputReference.property.spotInput">SpotInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTargetNodePoolConfigConfigOutputReference.property.preemptibleInput">PreemptibleInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTargetNodePoolConfigConfigOutputReference.property.spotInput">SpotInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTargetNodePoolConfigConfigOutputReference.property.localSsdCount">LocalSsdCount</a></code> | <code>double</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTargetNodePoolConfigConfigOutputReference.property.machineType">MachineType</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTargetNodePoolConfigConfigOutputReference.property.minCpuPlatform">MinCpuPlatform</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTargetNodePoolConfigConfigOutputReference.property.preemptible">Preemptible</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTargetNodePoolConfigConfigOutputReference.property.spot">Spot</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTargetNodePoolConfigConfigOutputReference.property.preemptible">Preemptible</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTargetNodePoolConfigConfigOutputReference.property.spot">Spot</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTargetNodePoolConfigConfigOutputReference.property.internalValue">InternalValue</a></code> | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTargetNodePoolConfigConfig">DataprocClusterVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTargetNodePoolConfigConfig</a></code> | *No description.* |
 
 ---
@@ -20894,20 +20894,20 @@ public string MinCpuPlatformInput { get; }
 ##### `PreemptibleInput`<sup>Optional</sup> <a name="PreemptibleInput" id="@cdktf/provider-google.dataprocCluster.DataprocClusterVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTargetNodePoolConfigConfigOutputReference.property.preemptibleInput"></a>
 
 ```csharp
-public object PreemptibleInput { get; }
+public bool|IResolvable PreemptibleInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
 ##### `SpotInput`<sup>Optional</sup> <a name="SpotInput" id="@cdktf/provider-google.dataprocCluster.DataprocClusterVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTargetNodePoolConfigConfigOutputReference.property.spotInput"></a>
 
 ```csharp
-public object SpotInput { get; }
+public bool|IResolvable SpotInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -20944,20 +20944,20 @@ public string MinCpuPlatform { get; }
 ##### `Preemptible`<sup>Required</sup> <a name="Preemptible" id="@cdktf/provider-google.dataprocCluster.DataprocClusterVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTargetNodePoolConfigConfigOutputReference.property.preemptible"></a>
 
 ```csharp
-public object Preemptible { get; }
+public bool|IResolvable Preemptible { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
 ##### `Spot`<sup>Required</sup> <a name="Spot" id="@cdktf/provider-google.dataprocCluster.DataprocClusterVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTargetNodePoolConfigConfigOutputReference.property.spot"></a>
 
 ```csharp
-public object Spot { get; }
+public bool|IResolvable Spot { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -21581,7 +21581,7 @@ private void ResetNodePoolConfig()
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTargetOutputReference.property.rolesInput">RolesInput</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTargetOutputReference.property.nodePool">NodePool</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTargetOutputReference.property.roles">Roles</a></code> | <code>string[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTargetOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTargetOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTarget">DataprocClusterVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTarget</a></code> | *No description.* |
 
 ---
 
@@ -21672,10 +21672,10 @@ public string[] Roles { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.dataprocCluster.DataprocClusterVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTargetOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|DataprocClusterVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTarget InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTarget">DataprocClusterVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTarget</a>
 
 ---
 
@@ -21889,12 +21889,12 @@ Returns a reversible string representation.
 ##### `PutNodePoolTarget` <a name="PutNodePoolTarget" id="@cdktf/provider-google.dataprocCluster.DataprocClusterVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigOutputReference.putNodePoolTarget"></a>
 
 ```csharp
-private void PutNodePoolTarget(object Value)
+private void PutNodePoolTarget(IResolvable|DataprocClusterVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTarget[] Value)
 ```
 
 ###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-google.dataprocCluster.DataprocClusterVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigOutputReference.putNodePoolTarget.parameter.value"></a>
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTarget">DataprocClusterVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTarget</a>[]
 
 ---
 
@@ -21919,7 +21919,7 @@ private void ResetNodePoolTarget()
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigOutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigOutputReference.property.nodePoolTarget">NodePoolTarget</a></code> | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTargetList">DataprocClusterVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTargetList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigOutputReference.property.gkeClusterTargetInput">GkeClusterTargetInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigOutputReference.property.nodePoolTargetInput">NodePoolTargetInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigOutputReference.property.nodePoolTargetInput">NodePoolTargetInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTarget">DataprocClusterVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTarget</a>[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigOutputReference.property.gkeClusterTarget">GkeClusterTarget</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigOutputReference.property.internalValue">InternalValue</a></code> | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterVirtualClusterConfigKubernetesClusterConfigGkeClusterConfig">DataprocClusterVirtualClusterConfigKubernetesClusterConfigGkeClusterConfig</a></code> | *No description.* |
 
@@ -21972,10 +21972,10 @@ public string GkeClusterTargetInput { get; }
 ##### `NodePoolTargetInput`<sup>Optional</sup> <a name="NodePoolTargetInput" id="@cdktf/provider-google.dataprocCluster.DataprocClusterVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigOutputReference.property.nodePoolTargetInput"></a>
 
 ```csharp
-public object NodePoolTargetInput { get; }
+public IResolvable|DataprocClusterVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTarget[] NodePoolTargetInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTarget">DataprocClusterVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTarget</a>[]
 
 ---
 
